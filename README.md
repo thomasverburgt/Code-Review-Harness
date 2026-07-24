@@ -1,11 +1,20 @@
 # Code Review Harness
 
-The Code Review Harness is documented as a versioned architecture library.
+This repository is the working architecture library for the Code Review Harness. Its directory structure follows the architecture’s working domains—not the eventual Volume I–IX written-package outline.
 
-## Architecture library
+## Library map
 
-The authoritative package is in [docs/architecture](docs/architecture/README.md). It is organized into nine volumes and appendices, following the burn-down roadmap in [Volume IX](docs/architecture/volume-ix-implementation-roadmap/architecture-package-roadmap.md).
+| Area | Purpose |
+|---|---|
+| [agents](agents/README.md) | Agent registry, hierarchy, capability coverage, and specialist definitions |
+| [contracts](contracts/README.md) | Shared machine and human artifact contracts |
+| [diagrams](diagrams/README.md) | Architecture views and interface matrices |
+| [governance](governance/README.md) | Decisions, maturity, review gates, and integration boundaries |
+| [orchestration](orchestration/README.md) | Workflow, policy, and execution design |
+| [requirements](requirements/README.md) | Requirements traceability and evidence graph design |
+| [integrations](integrations/README.md) | External-system integration designs, including GitLab CI/CD |
+| [deployment](deployment/README.md) | Runtime and platform deployment designs, including DGX H100 |
+| [planning](planning/README.md) | Architecture-package burn-down and implementation planning |
+| [appendices](appendices/README.md) | Reusable schemas, prompts, workflows, policies, and metrics |
 
-## Status
-
-This repository contains Architecture Baseline v0.1. The existing agent contracts, evidence model, governance material, orchestration model, and initial architecture views have been placed in their permanent volume locations; the remaining volumes have structured entry points for incremental completion.
+The [architecture package roadmap](planning/architecture-package-roadmap.md) tracks the eventual written Volume I–IX package. It does not prescribe the repository’s file layout.
