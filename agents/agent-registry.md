@@ -33,4 +33,6 @@ Each ID is stable. `baseline` means the contract was fully discussed; `seed` mea
 | `CAP-MISSION` | Mission thread analysis agent | baseline | Can the end-to-end mission thread execute across participating products? |
 | `CAP-HCD` | Human-centered design evaluator | baseline | Does the end-to-end capability support operators with acceptable effort and resilience? |
 | `CAP-SYNTH` | Capability synthesis lead | planned | Do products collectively deliver the intended capability? |
-| `ENT-SYNTH` | Enterprise synthesis lead | planned | What strategic posture and decisions follow from capability evidence? |
+| `ENT-SYNTH` | Enterprise synthesis agent | baseline | What coherent enterprise posture follows from all capability assessments and unresolved disagreements? |
+| `ENT-SYSRISK` | Systemic risk reviewer | baseline | What systemic risks emerge across capabilities that could threaten enterprise outcomes? |
+| `ENT-GOV` | Enterprise governance reviewer | baseline | Are governance obligations consistently satisfied across capabilities, and where do gaps or conflicts require human action? |
