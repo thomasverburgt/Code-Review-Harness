@@ -1,6 +1,6 @@
 # Agent Registry
 
-Each ID is stable. `baseline` means the contract was fully discussed; `seed` means it was named but needs a later domain-design increment.
+Each ID is stable. `baseline` means the contract was fully discussed; `seed` means it was named but needs a later domain-design increment; `planned` means the role exists in the architecture but does not yet have a complete contract.
 
 | Agent ID | Agent | Status | Authoritative question |
 |---|---|---|---|
@@ -27,5 +27,10 @@ Each ID is stable. `baseline` means the contract was fully discussed; `seed` mea
 | `SPC-DIAGRAM` | Diagram and design-model reviewer | seed | Do diagrams faithfully represent implemented structure? |
 | `SPC-RESEARCH` | Research/product-store updater | seed | What vetted external knowledge should enter the product store? |
 | `PRD-SYNTH` | Product synthesis lead | planned | What is the coherent engineering state of this product? |
+| `CAP-REQ` | Requirements traceability reviewer | baseline | Do implementation evidence and product assessments satisfy declared requirements? |
+| `CAP-XPROD` | Cross-product reviewer | baseline | Do products operate coherently across interfaces and shared assumptions? |
+| `CAP-RISK` | Capability risk reviewer | baseline | What capability-level risks emerge from correlated product evidence? |
+| `CAP-MISSION` | Mission thread analysis agent | baseline | Can the end-to-end mission thread execute across participating products? |
+| `CAP-HCD` | Human-centered design evaluator | baseline | Does the end-to-end capability support operators with acceptable effort and resilience? |
 | `CAP-SYNTH` | Capability synthesis lead | planned | Do products collectively deliver the intended capability? |
 | `ENT-SYNTH` | Enterprise synthesis lead | planned | What strategic posture and decisions follow from capability evidence? |
