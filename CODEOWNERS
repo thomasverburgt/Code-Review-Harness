@@ -1,0 +1,23 @@
+# Default ownership
+* @thomasverburgt
+
+# Architecture and contracts
+/agents/ @thomasverburgt
+/contracts/ @thomasverburgt
+/diagrams/ @thomasverburgt
+/orchestration/ @thomasverburgt
+/requirements/ @thomasverburgt
+
+# Governance, licensing, and security
+/GOVERNANCE.md @thomasverburgt
+/LICENSE @thomasverburgt
+/LICENSING.md @thomasverburgt
+/NOTICE @thomasverburgt
+/SECURITY.md @thomasverburgt
+/CODE_OF_CONDUCT.md @thomasverburgt
+/CONTRIBUTING.md @thomasverburgt
+/governance/ @thomasverburgt
+/adr/ @thomasverburgt
+
+# Repository automation
+/.github/ @thomasverburgt
