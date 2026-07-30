@@ -2,7 +2,7 @@
 
 ## Product ecosystem
 
-Specialists collect and assess evidence within a product boundary. Product synthesis integrates their results without overwriting them. The baseline specialists are listed in the registry and cover secrets, composition, dependencies, secure coding, containers, Kubernetes workload/platform/communications, IaC, pipelines, observability, performance, FMECA, architecture, interoperability, information management, risk, linting, I/O, diagrams, and research.
+`SPEC-*` agents collect and assess evidence within a bounded product domain. `PROD-*` agents integrate their immutable results without overwriting them. The catalog covers secrets, composition, dependencies, secure coding, containers, Kubernetes workload/platform/communications, IaC, pipelines, observability, performance, FMECA, architecture, interoperability, information management, risk, linting, I/O, diagrams, research, and product-level security, architecture, quality, and synthesis.
 
 Product-level UI/UX evaluation belongs here: workflow quality, accessibility, consistency, error handling, and application usability.
 
@@ -26,24 +26,27 @@ This layer answers end-to-end questions across products:
 
 Enterprise agents consume immutable capability assessments and produce strategic decision support, not code-level verdicts or approvals. They preserve capability evidence and findings, expose disagreement, and declare `decision_authority: human` on every output.
 
-Initial baseline enterprise agents:
+The baseline framework contains:
 
-- **`ENT-SYNTH` Enterprise Synthesis Agent:** produces a coherent, traceable enterprise posture and decision-ready handoff across capabilities.
-- **`ENT-SYSRISK` Systemic Risk Reviewer:** identifies cross-capability concentration, common-mode, cascading, and systemic mission risks.
-- **`ENT-GOV` Enterprise Governance Reviewer:** assesses governance consistency, obligations, approvals, exceptions, conflicts, and traceability.
+- **`ENT-EVIDENCE`** for input fitness and reproducibility;
+- **`ENT-ARCH`** for system-of-systems architecture;
+- **`ENT-SYSRISK`** for cascading, common-mode, concentration, and systemic risk;
+- **`ENT-GOV`** for obligations, approvals, exceptions, and governance consistency;
+- **`ENT-STRAT`** for transparent strategic confidence;
+- **`ENT-PORTFOLIO`** for duplication, gaps, and dependency concentration;
+- **`ENT-ARCHSTRAT`** for target-state and trajectory alignment;
+- **`ENT-MATURITY`** for evidence-supported maturity;
+- **`ENT-TECHDEBT`** for debt trajectory and prioritization;
+- **`ENT-MODERNIZE`** for investment and modernization options;
+- **`ENT-LEARN`** for calibration, drift, reproducibility, and outcome metrics; and
+- **`ENT-SYNTH`** for coherent posture and human decision handoff.
 
-Planned enterprise agents:
-
-- **Systems architecture reviewer** — system-of-systems architecture coherence.
-- **Strategic scoring agent** — strategic confidence, target-state alignment, and readiness.
-- **Evidence validation gate** — provenance, completeness, conflict handling, and traceability validation.
-- **Portfolio analysis agent** — duplication, consolidation, and dependency concentration.
-- **Architecture strategy agent** — roadmap and target-state alignment with trajectory forecasting.
-- **Maturity evaluator** — configuration-driven product, capability, and enterprise maturity measures.
-- **Technical debt prioritizer** — enterprise debt trajectory and investment options.
-- **Investment and modernization advisor** — options, tradeoffs, and modernization sequencing.
-- **Learning and metrics agent** — human/AI agreement, false positives, cycle time, and feedback-loop measurements.
+The [Enterprise Agent Framework](enterprise/enterprise-agent-framework.md) defines their dependency and fan-in model.
 
 Enterprise agents do not approve capabilities, accept risk, establish strategy, grant exceptions, approve investments or releases, rewrite capability findings, or silently settle conflicts. Derived assertions cite contributing capability artifact IDs, evidence references, rubric versions, and confidence provenance. Scores require explicit normalization, weighting, reconciliation logic, uncertainty, and unresolved disagreement.
 
 Enterprise-level UX is not rescored; the layer consumes capability-level human-centered systems trends as workforce-experience and mission-effectiveness signals.
+
+## Work and orchestration
+
+`WORK-*` roles provide bounded review, analysis, and summarization services without becoming authoritative reviewers. `ORCH-*` roles schedule, dispatch, validate, aggregate, and route immutable artifacts without altering their meaning or waiving gates.

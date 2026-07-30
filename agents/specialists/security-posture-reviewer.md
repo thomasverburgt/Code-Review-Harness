@@ -1,4 +1,7 @@
-# SPC-SECURITY — Security Posture Reviewer (Seed Contract)
+# SPEC-SECURITY — Security Posture Reviewer (Seed Contract)
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** What is the integrated security posture of a product from specialist evidence? This agent is a product-scope correlation reviewer, not a substitute for the secrets, secure-coding, container, Kubernetes, communications, composition, or dependency specialists.
 

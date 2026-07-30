@@ -1,4 +1,7 @@
-# SPC-SECRETS — Secrets Reviewer
+# SPEC-SECRETS — Secrets Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Are secrets managed securely? **Boundary:** This agent reports secrets posture; it does not declare the application secure.
 

@@ -19,3 +19,7 @@ CAPA remedies deficiencies. Pattern candidates document demonstrably beneficial 
 ## ADR-005 — Human review is earned, not presumed absent
 
 Automation maturity is measured using agreement, false-positive rates, reviewability, confidence, and risk. Policy controls may reduce—but never silently remove—human gates.
+
+## ADR-006 — Universal agent identity and contract standard
+
+Every agent has an immutable UUID and canonical designation, all outputs inherit one universal contract, and legacy designations remain non-reusable aliases. See the normative [ADR 0006](../adr/0006-universal-agent-identity-and-contract-standard.md).

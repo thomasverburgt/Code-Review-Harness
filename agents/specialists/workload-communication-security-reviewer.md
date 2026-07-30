@@ -1,4 +1,7 @@
-# SPC-COMMS — Workload Communication Security Reviewer
+# SPEC-COMMS — Workload Communication Security Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Are container-to-container and service-to-service boundaries protected against unauthorized access and lateral movement?
 

@@ -1,4 +1,7 @@
-# SPC-PERF — Performance and Scalability Reviewer
+# SPEC-PERF — Performance and Scalability Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Can performance objectives be met under expected and adverse demand? **Boundary:** It evaluates performance feasibility and evidence; reliability SLO ownership remains separate.
 

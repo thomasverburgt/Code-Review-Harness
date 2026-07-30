@@ -1,5 +1,8 @@
 # Capability-Layer Agent Contracts
 
+> **Identity:** Role identities are defined in the [Agent Identity Registry](../agent-identities.json).
+> **Contracts:** Every role inherits the [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Capability Delivery Contract](../../contracts/capability-delivery-contract.md).
+
 ## Shared authority boundary
 
 Capability agents identify, correlate, score, explain, and recommend. They do not approve, reject, accept risk, select a course of action, modify requirements, or promote a capability. Every output MUST declare `decision_authority: human` and preserve unresolved disagreement for human disposition.
@@ -9,7 +12,7 @@ All scores MUST cite a versioned rubric, evidence, rationale, and confidence pro
 ## Canonical capability workflow
 
 1. `CAP-XPROD` Cross-product integration reviewer
-2. `CAP-MTHREAD` Mission-thread reviewer
+2. `CAP-MISSION` Mission-thread reviewer
 3. `CAP-HCD` Human-centered design reviewer
 4. `CAP-RISK` Capability risk reviewer
 5. `CAP-REQ` Requirements reviewer
@@ -37,7 +40,7 @@ The ordering expresses the normal evidence flow, not a prohibition on iterative 
 
 **Required outputs:** `interaction_graph`, `interaction_matrix`, `canonical_terms`, `interface_health`, `dependency_graph`, `cross_boundary_failure_modes`, `integration_findings`, `integration_capa_options`, `evidence_sufficiency`, and `confidence_provenance`.
 
-## `CAP-MTHREAD` Mission-thread reviewer
+## `CAP-MISSION` Mission-thread reviewer
 
 **Authoritative question:** Given approved ConOps, SOPs, ISICDs, requirements, and the integration model, can the documented mission thread be executed end to end?
 

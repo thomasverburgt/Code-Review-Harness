@@ -1,4 +1,7 @@
-# SPC-CONTAINER — Container and Image Security Reviewer
+# SPEC-CONTAINER — Container and Image Security Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Is the deployable image trustworthy, hardened, and ready for its declared deployment? **Boundary:** It evaluates image and artifact posture, not live cluster control-plane state.
 

@@ -1,4 +1,7 @@
-# SPC-DATA — Data Architecture and Information Management Reviewer
+# SPEC-DATA — Data Architecture and Information Management Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Is information structured, governed, and fit to support the mission and decisions? **Boundary:** It assesses data/information architecture; it does not make enterprise strategy decisions.
 

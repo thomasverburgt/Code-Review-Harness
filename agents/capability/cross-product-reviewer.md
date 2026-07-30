@@ -1,5 +1,8 @@
 # CAP-XPROD — Cross-Product Reviewer
 
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Capability Delivery Contract](../../contracts/capability-delivery-contract.md)
+
 **Question:** Do participating products operate coherently across interfaces, dependencies, shared services, and architectural assumptions?
 
 **Boundary:** Correlates product artifacts and integration evidence. It does not replace product specialists or authorize interface changes.

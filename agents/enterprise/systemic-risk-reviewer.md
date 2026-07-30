@@ -1,5 +1,8 @@
 # ENT-SYSRISK — Systemic Risk Reviewer
 
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Enterprise Agent Contract](../../contracts/enterprise-agent-contract.md)
+
 ## North Star
 
 Identify enterprise risks that emerge from interaction, concentration, shared dependencies, correlated weaknesses, and cascading effects across capabilities.

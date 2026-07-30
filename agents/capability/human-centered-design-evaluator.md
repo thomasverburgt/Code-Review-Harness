@@ -1,5 +1,8 @@
 # CAP-HCD — Human-Centered Design Evaluator
 
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Capability Delivery Contract](../../contracts/capability-delivery-contract.md)
+
 **Question:** Does the end-to-end capability support operators in accomplishing the mission with acceptable clarity, effort, accessibility, and resilience?
 
 **Boundary:** Evaluates capability-level human factors across product boundaries. Product-level UI/UX specialists retain responsibility for individual application interfaces.

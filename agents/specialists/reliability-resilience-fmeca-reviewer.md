@@ -1,4 +1,7 @@
-# SPC-FMECA — Reliability, Resilience, and FMECA Reviewer
+# SPEC-FMECA — Reliability, Resilience, and FMECA Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Can the system continue operating through credible failures? **Boundary:** Uses FMECA-aligned terminology and assesses continuity; it does not make mission-risk decisions.
 

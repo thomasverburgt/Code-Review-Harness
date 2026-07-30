@@ -1,4 +1,7 @@
-# SPC-OBS — Observability Reviewer
+# SPEC-OBS — Observability Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Can operators understand and explain system behavior in production? **Boundary:** It measures decision support, not performance or reliability outcomes.
 

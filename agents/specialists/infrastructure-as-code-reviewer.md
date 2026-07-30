@@ -1,4 +1,7 @@
-# SPC-IAC — Infrastructure-as-Code Reviewer
+# SPEC-IAC — Infrastructure-as-Code Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Is desired infrastructure correctly, securely, and recoverably defined? **Boundary:** Reviews design and desired state; it does not substitute for runtime-health monitoring.
 

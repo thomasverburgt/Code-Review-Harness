@@ -1,4 +1,7 @@
-# SPC-K8S-WORKLOAD — Kubernetes Workload Security Reviewer
+# SPEC-K8S-WORKLOAD — Kubernetes Workload Security Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Is the workload securely operated on the platform? **Boundary:** Distinguish workload/Helm configuration defects from shared platform defects.
 

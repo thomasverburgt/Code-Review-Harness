@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/universal-agent-artifact.schema.json",
+  "title": "Universal Agent Artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "identity", "artifact", "execution", "scope", "inputs", "methodology",
+    "coverage", "observations", "assessments", "findings", "patterns",
+    "insights", "conflicts", "confidence", "decisions_requested",
+    "consumers", "decision_authority", "integrity"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agent_uuid", "designation", "display_name", "agent_version", "contract_version"],
+      "properties": {
+        "agent_uuid": {"type": "string", "format": "uuid"},
+        "designation": {"type": "string", "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$"},
+        "display_name": {"type": "string", "minLength": 1},
+        "agent_version": {"type": "string", "minLength": 1},
+        "contract_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["artifact_id", "artifact_type", "created_at", "lifecycle_state", "links"],
+      "properties": {
+        "artifact_id": {"type": "string", "format": "uuid"},
+        "artifact_type": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "lifecycle_state": {"enum": ["complete", "incomplete_input", "failed", "superseded"]},
+        "links": {
+          "type": "object",
+          "properties": {
+            "parents": {"type": "array", "items": {"type": "string"}},
+            "children": {"type": "array", "items": {"type": "string"}},
+            "peers": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "execution": {"type": "object"},
+    "scope": {"type": "object"},
+    "inputs": {"type": "array", "items": {"type": "object"}},
+    "methodology": {"type": "object"},
+    "coverage": {"type": "object"},
+    "observations": {"type": "array", "items": {"type": "object"}},
+    "assessments": {"type": "array", "items": {"type": "object"}},
+    "findings": {"type": "array", "items": {"type": "object"}},
+    "patterns": {"type": "array", "items": {"type": "object"}},
+    "insights": {"type": "array", "items": {"type": "object"}},
+    "conflicts": {"type": "array", "items": {"type": "object"}},
+    "confidence": {
+      "type": "object",
+      "required": ["evidence", "assessment", "review", "decision", "provenance"],
+      "properties": {
+        "evidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "assessment": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "review": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "decision": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "provenance": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "decisions_requested": {"type": "array", "items": {"type": "object"}},
+    "consumers": {"type": "array", "items": {"type": "string"}},
+    "decision_authority": {"const": "human"},
+    "integrity": {
+      "type": "object",
+      "required": ["input_hash", "output_hash", "retention_class", "schema_validation"],
+      "properties": {
+        "input_hash": {"type": "string", "minLength": 1},
+        "output_hash": {"type": "string", "minLength": 1},
+        "attestation_ref": {"type": ["string", "null"]},
+        "retention_class": {"type": "string", "minLength": 1},
+        "schema_validation": {"enum": ["passed", "failed"]}
+      }
+    },
+    "extensions": {"type": "object"}
+  }
+}

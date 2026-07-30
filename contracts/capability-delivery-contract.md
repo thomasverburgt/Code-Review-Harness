@@ -1,5 +1,9 @@
 # Capability Delivery Contract
 
+- **Contract designation:** `CONTRACT-AGENT-CAPABILITY`
+- **Version:** `1.0.0`
+- **Extends:** [Universal Agent Contract](universal-agent-contract.md)
+
 Capability delivery agents consume product synthesis artifacts and answer cross-product questions that no individual product can answer.
 
 Required extension fields: `capability_id`, `participating_products`, `mission_thread`, `requirement_traceability`, `cross_product_interface_state`, `human_centered_systems_evaluation`, `mission_effectiveness_evidence`, `operational_readiness`, `capability_risk_posture`, `technical_confidence_rollup`, `capability_confidence_score`, `decision_conflicts`, and `enterprise_escalations`.

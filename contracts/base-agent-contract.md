@@ -1,5 +1,7 @@
 # Base Agent Contract
 
+> Compatibility name: superseded by the [Universal Agent Contract](universal-agent-contract.md) at version `1.0.0`. Existing references to “base agent contract” resolve to that normative contract.
+
 All agents publish a human-readable Markdown report and a schema-valid JSON payload. The JSON is the machine contract; Markdown is the immutable review record. A parent may aggregate or correlate a child artifact but may not edit its evidence, observations, or assessment.
 
 ## Required envelope
@@ -8,7 +10,7 @@ All agents publish a human-readable Markdown report and a schema-valid JSON payl
 |---|---|
 | `contract_version` | Semantic version of the contract. |
 | `artifact_id` | Stable, globally unique artifact identifier. |
-| `agent_id` / `agent_version` | Producing agent and implementation version. |
+| `agent_uuid` / `designation` / `agent_version` | Registered producer identity and implementation version. |
 | `review_scope` | Repositories, paths, services, environments, and exclusions. |
 | `source_revision` | Git commit SHA, pipeline ID, image digest, and relevant configuration revision. |
 | `created_at` / `evidence_freshness` | UTC creation time and age classification of the evidence. |

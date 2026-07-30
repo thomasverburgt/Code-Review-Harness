@@ -1,4 +1,7 @@
-# SPC-DEPS — Dependency Reviewer
+# SPEC-DEPS — Dependency Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Is the dependency graph healthy and sustainable? **Boundary:** Does not declare vulnerabilities or approve a release.
 

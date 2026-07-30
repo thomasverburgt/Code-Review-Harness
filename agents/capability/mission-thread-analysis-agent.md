@@ -1,5 +1,8 @@
 # CAP-MISSION — Mission Thread Analysis Agent
 
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Capability Delivery Contract](../../contracts/capability-delivery-contract.md)
+
 **Question:** Can the end-to-end mission thread execute successfully across people, products, services, data, infrastructure, and controls?
 
 **Boundary:** Evaluates the complete operational thread and its evidence. It does not substitute for product tests or make mission-acceptance decisions.

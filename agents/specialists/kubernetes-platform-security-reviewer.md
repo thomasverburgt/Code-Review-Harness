@@ -1,4 +1,7 @@
-# SPC-K8S-PLATFORM — Kubernetes Platform Security Reviewer
+# SPEC-K8S-PLATFORM — Kubernetes Platform Security Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Is the shared Kubernetes platform and control-plane configuration secure for hosted workloads? **Boundary:** It reports shared-service and control-plane posture, not workload-specific business logic.
 

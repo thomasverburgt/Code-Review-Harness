@@ -1,4 +1,7 @@
-# SPC-SBOM — Software Composition and SBOM Reviewer
+# SPEC-SBOM — Software Composition and SBOM Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Is the software inventory trustworthy and complete? **Boundary:** It supplies inventory evidence; vulnerability, release, and governance decisions belong to consumers.
 

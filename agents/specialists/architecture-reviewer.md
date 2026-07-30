@@ -1,4 +1,7 @@
-# SPC-ARCH — Architecture Reviewer
+# SPEC-ARCH — Architecture Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Does implemented structure realize intended architecture and quality attributes? **Boundary:** Consumes specialist evidence and assesses structure; it does not redo domain analyses or make enterprise architecture decisions.
 

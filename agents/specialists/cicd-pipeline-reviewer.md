@@ -1,4 +1,7 @@
-# SPC-CICD — CI/CD Pipeline Reviewer
+# SPEC-CICD — CI/CD Pipeline Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Does the delivery pipeline produce trustworthy, repeatable, and governable releases? **Boundary:** It reports pipeline evidence; authorized release authorities make release decisions.
 

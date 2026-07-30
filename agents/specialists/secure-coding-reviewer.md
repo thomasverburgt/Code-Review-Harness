@@ -1,4 +1,7 @@
-# SPC-SECURE-CODE — Secure Coding Reviewer
+# SPEC-SECURE-CODE — Secure Coding Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Does code implement secure coding practices? **Boundary:** It assesses implementation quality, not supply-chain health or architectural approval.
 

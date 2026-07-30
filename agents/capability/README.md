@@ -10,4 +10,4 @@ Capability agents consume immutable product-level review artifacts and evaluate 
 | `CAP-MISSION` | Mission Thread Analysis Agent | Can the end-to-end mission thread execute successfully across participating products? |
 | `CAP-HCD` | Human-Centered Design Evaluator | Does the end-to-end capability support the operator's mission with acceptable effort, clarity, and resilience? |
 
-All capability agents inherit the base agent contract, capability-delivery contract, evidence contract, CAPA rules, confidence semantics, and the sandboxed evolution contract.
+All capability agents inherit the [Universal Agent Contract](../../contracts/universal-agent-contract.md), capability-delivery contract, evidence contract, CAPA rules, confidence semantics, and the sandboxed evolution contract. Canonical identities are registered in [agent-identities.json](../agent-identities.json).

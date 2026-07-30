@@ -32,6 +32,8 @@ This repository is the working architecture library for the Code Review Harness.
 
 The [architecture package roadmap](planning/architecture-package-roadmap.md) tracks the eventual written Volume I–IX package. It does not prescribe the repository’s file layout.
 
+The agent platform baseline is governed by the [Agent Naming and Identity Standard](agents/agent-naming-and-identity-standard.md), the machine-readable [identity registry](agents/agent-identities.json), the [Universal Agent Contract](contracts/universal-agent-contract.md), and layer-specific contracts. Enterprise behavior is defined by the [Enterprise Agent Framework](agents/enterprise/enterprise-agent-framework.md).
+
 ## Project principles
 
 The project's governing principles are documented in [Project Philosophy](docs/philosophy.md): evidence over opinion, immutable artifacts, human decision authority, traceability by default, explainable assessment, CAPA discipline, explicit confidence, bounded automation, and reviewability.

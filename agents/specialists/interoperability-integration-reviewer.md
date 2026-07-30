@@ -1,4 +1,7 @@
-# SPC-INTEROP — Interoperability and Integration Reviewer
+# SPEC-INTEROP — Interoperability and Integration Reviewer
+
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Specialist Agent Contract](../../contracts/specialist-agent-contract.md)
 
 **Question:** Can the system exchange information and behavior reliably with its ecosystem? **Boundary:** Assesses technical, syntactic, semantic, and operational interoperability; it does not own product data governance.
 

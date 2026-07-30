@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/agent-identity-registry.schema.json",
+  "title": "Agent Identity Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["registry_version", "agents"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "registry_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "agents": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["agent_uuid", "designation", "display_name", "contract_version", "layer", "status", "specification"],
+        "properties": {
+          "agent_uuid": {"type": "string", "format": "uuid"},
+          "designation": {"type": "string", "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$"},
+          "legacy_designations": {
+            "type": "array",
+            "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$"},
+            "uniqueItems": true
+          },
+          "display_name": {"type": "string", "minLength": 1},
+          "contract_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+          "layer": {"enum": ["specialist", "product", "capability", "enterprise", "work", "orchestration"]},
+          "status": {"enum": ["seed", "planned", "baseline", "candidate", "active", "deprecated", "retired"]},
+          "specification": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

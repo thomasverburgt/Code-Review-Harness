@@ -1,5 +1,8 @@
 # ENT-GOV — Enterprise Governance Reviewer
 
+> **Identity:** [Agent Identity Registry](../agent-identities.json)
+> **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Enterprise Agent Contract](../../contracts/enterprise-agent-contract.md)
+
 ## North Star
 
 Ensure leadership can see whether governance obligations are applied consistently, traceably, and lawfully across capabilities, including where policies conflict, exceptions are stale, or approvals are missing.
