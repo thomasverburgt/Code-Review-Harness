@@ -1,0 +1,45 @@
+{
+  "identity": {"agent_uuid": "a085d5d0-3431-46a7-8edc-097280a83a48", "designation": "PROD-SEC", "display_name": "Product Security Synthesizer", "agent_version": "design-0.1.0", "contract_version": "1.0.0"},
+  "artifact": {"artifact_id": "22222222-2222-4222-8222-222222222222", "artifact_type": "product-security-posture", "created_at": "2026-07-31T14:05:00Z", "lifecycle_state": "complete", "links": {"parents": ["33333333-3333-4333-8333-333333333333"], "children": ["11111111-1111-4111-8111-111111111111"], "peers": []}},
+  "execution": {"execution_id": "a2222222-2222-4222-8222-222222222222", "model": "deterministic-reference-agent", "prompt_version": "design-0.1.0", "rubric_version": "fixture-0.1.0", "toolchain_version": "0.1.0", "settings": {"temperature": 0}},
+  "scope": {"product_id": "PRODUCT-ALPHA", "source_revision": "fixture-rev-001", "included": ["SPEC-SECRETS artifact"], "excluded": ["other security domains by fixture policy"], "decision_context": "implementation"},
+  "inputs": [{"artifact_id": "11111111-1111-4111-8111-111111111111", "hash": "sha256:fixture-output-spec-secrets", "compatibility": "compatible", "freshness": "fresh"}],
+  "methodology": {"method": "fixture product-security correlation", "limitations": ["Policy intentionally requires only SPEC-SECRETS for this narrow fixture"]},
+  "coverage": {"eligible": 1, "reviewed": 1, "omitted": 0, "inaccessible": 0, "unknown": 0, "negative_evidence": 0},
+  "observations": [{"observation_id": "OBS-PRODSEC-001", "fact": "SPEC-SECRETS reported FINDING-SECRET-001.", "evidence_refs": ["11111111-1111-4111-8111-111111111111", "FINDING-SECRET-001"]}],
+  "assessments": [{"assessment_id": "ASM-PRODSEC-001", "rationale": "The confirmed exposure creates a product attack-path hypothesis through the shared identity service.", "confidence": 0.92}],
+  "findings": [{"finding_id": "FINDING-PRODSEC-001", "statement": "PRODUCT-ALPHA depends on exposed synthetic credential material for a shared identity service.", "evidence_refs": ["FINDING-SECRET-001"], "root_cause": "configuration_error", "impact": "The product identity boundary could be compromised.", "capa": {"corrective_action": "Rotate and remove the credential reference.", "preventive_action": "Enforce approved secret references in product pipelines.", "owner_role": "product-security-owner", "target_horizon": "before promotion", "implementation_level": "product", "validation_method": "Rerun SPEC-SECRETS and exercise identity controls"}}],
+  "patterns": [],
+  "insights": [{"insight_id": "INSIGHT-PRODSEC-001", "statement": "The affected identity service is shared beyond the product boundary."}],
+  "conflicts": [],
+  "confidence": {"evidence": 0.99, "assessment": 0.92, "review": 1.0, "decision": null, "provenance": [{"artifact_id": "11111111-1111-4111-8111-111111111111", "confidence": 0.98}]},
+  "decisions_requested": [{"decision_context_id": "DECISION-PRODSEC-001", "question": "Authorize coordinated rotation before product promotion.", "required_authority": "product-security-owner"}],
+  "consumers": ["CAP-RISK"],
+  "decision_authority": "human",
+  "integrity": {"input_hash": "sha256:fixture-output-spec-secrets", "output_hash": "sha256:fixture-output-prod-sec", "attestation_ref": null, "retention_class": "fixture", "schema_validation": "passed"},
+  "extensions": {
+    "product": {
+      "product_id": "PRODUCT-ALPHA",
+      "specialist_artifact_inventory": [{"artifact_id": "11111111-1111-4111-8111-111111111111", "designation": "SPEC-SECRETS", "state": "valid_present"}],
+      "input_completeness": {"required": 1, "valid": 1, "fraction": 1.0},
+      "cross_domain_correlations": [],
+      "unresolved_conflicts": [],
+      "product_findings": [{"finding_id": "FINDING-PRODSEC-001"}],
+      "product_patterns": [],
+      "product_risk_posture": {"state": "elevated", "decision_authority": "human"},
+      "technical_confidence": 0.92,
+      "coverage": {"required_domains": 1, "reviewed_domains": 1},
+      "evidence_quality": {"state": "high", "score": 0.99},
+      "release_readiness_input": {"state": "blocked_pending_human_decision", "is_release_decision": false},
+      "escalations": [{"escalation_id": "ESC-PRODSEC-001", "authority": "product-security-owner"}],
+      "role": {
+        "designation": "PROD-SEC",
+        "security_domain_correlations": [{"record_id": "CORR-PRODSEC-001", "contributing_artifact_ids": ["11111111-1111-4111-8111-111111111111"], "contributing_evidence_ids": ["FINDING-SECRET-001"], "rationale": "The secret finding affects the product identity boundary.", "confidence": 0.92, "uncertainty": ["No runtime exploitation evidence"]}],
+        "attack_path_hypotheses": [{"record_id": "PATH-PRODSEC-001", "contributing_artifact_ids": ["11111111-1111-4111-8111-111111111111"], "contributing_evidence_ids": ["FINDING-SECRET-001"], "rationale": "Credential retrieval could permit identity-service authentication.", "confidence": 0.85, "uncertainty": ["Synthetic fixture; exploit not attempted"], "path_steps": [{"step": 1, "state": "supported", "description": "Retrieve exposed synthetic credential reference"}, {"step": 2, "state": "hypothesized", "description": "Authenticate to shared identity service"}], "missing_links": ["Runtime authentication proof"], "validation_needed": ["Rotate credential and verify old credential rejection"]}],
+        "control_coverage": {"secret_storage": "failed", "rotation": "not_verified"},
+        "evidence_gaps": [{"gap_id": "GAP-PRODSEC-001", "description": "No runtime authentication test"}],
+        "security_posture": {"state": "elevated", "rationale": "Confirmed secret-control failure with shared-service implications"}
+      }
+    }
+  }
+}

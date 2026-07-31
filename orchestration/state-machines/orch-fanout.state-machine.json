@@ -1,0 +1,21 @@
+{
+  "$schema": "../../appendices/schemas/orchestration-state-machine.schema.json",
+  "controller": "ORCH-FANOUT",
+  "version": "0.1.0",
+  "initial_state": "ready",
+  "terminal_states": ["dispatched", "failed"],
+  "states": ["ready", "checking_prerequisites", "building_envelopes", "dispatching", "retry_wait", "dispatched", "failed"],
+  "transitions": [
+    {"from": "ready", "event": "schedule_received", "guard": "schedule_valid", "to": "checking_prerequisites", "audit_reason": "SCHEDULE_RECEIVED"},
+    {"from": "checking_prerequisites", "event": "prerequisites_checked", "guard": "all_required_inputs_valid_or_authorized_partial", "to": "building_envelopes", "audit_reason": "PREREQUISITES_READY"},
+    {"from": "building_envelopes", "event": "envelopes_built", "guard": "all_envelopes_schema_valid_and_least_privilege", "to": "dispatching", "audit_reason": "ENVELOPES_READY"},
+    {"from": "dispatching", "event": "dispatch_acknowledged", "guard": "all_selected_nodes_acknowledged", "to": "dispatched", "audit_reason": "DISPATCH_COMPLETE"},
+    {"from": "dispatching", "event": "timeout", "guard": "retry_budget_remaining", "to": "retry_wait", "audit_reason": "DISPATCH_RETRY_SCHEDULED"},
+    {"from": "retry_wait", "event": "retry_due", "guard": "retry_budget_remaining", "to": "dispatching", "audit_reason": "DISPATCH_RETRY_STARTED"},
+    {"from": "retry_wait", "event": "retry_exhausted", "guard": "retry_budget_exhausted", "to": "failed", "audit_reason": "DISPATCH_TIMEOUT"},
+    {"from": "ready", "event": "dispatch_failed", "guard": "always", "to": "failed", "audit_reason": "SCHEDULE_INVALID"},
+    {"from": "checking_prerequisites", "event": "dispatch_failed", "guard": "always", "to": "failed", "audit_reason": "PREREQUISITE_INVALID"},
+    {"from": "building_envelopes", "event": "dispatch_failed", "guard": "always", "to": "failed", "audit_reason": "ENVELOPE_INVALID"},
+    {"from": "dispatching", "event": "dispatch_failed", "guard": "always", "to": "failed", "audit_reason": "DISPATCH_ERROR"}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/supersession-record.schema.json",
+  "title": "Immutable Artifact Supersession Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["supersession_id", "previous_artifact_id", "previous_object_hash", "successor_artifact_id", "successor_object_hash", "authority_role", "decided_at", "reason"],
+  "properties": {
+    "supersession_id": {"type": "string", "format": "uuid"},
+    "previous_artifact_id": {"type": "string", "minLength": 1},
+    "previous_object_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "successor_artifact_id": {"type": "string", "minLength": 1},
+    "successor_object_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "authority_role": {"type": "string", "minLength": 1},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "reason": {"type": "string", "minLength": 1}
+  }
+}

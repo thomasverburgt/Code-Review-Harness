@@ -1,0 +1,15 @@
+{
+  "fixture_id": "FIXTURE-VERTICAL-RISK-GOLD-001",
+  "fixture_version": "0.1.0",
+  "workflow_id": "WF-VERTICAL-RISK-001",
+  "expected_outcome": "passed",
+  "source_revision": "fixture-rev-001",
+  "artifacts": [
+    "spec-secrets.artifact.json",
+    "prod-sec.artifact.json",
+    "cap-risk.artifact.json",
+    "ent-evidence.artifact.json",
+    "ent-sysrisk.artifact.json",
+    "human-decision-request.json"
+  ]
+}

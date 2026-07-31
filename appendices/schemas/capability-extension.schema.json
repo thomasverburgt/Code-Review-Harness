@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/capability-extension.schema.json",
+  "title": "Capability Artifact Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "capability_id", "participating_products", "mission_thread", "requirement_traceability",
+    "cross_product_interface_state", "human_centered_systems_evaluation",
+    "mission_effectiveness_evidence", "operational_readiness", "capability_risk_posture",
+    "technical_confidence_rollup", "capability_confidence_score", "decision_conflicts",
+    "enterprise_escalations", "role"
+  ],
+  "properties": {
+    "capability_id": {"type": "string", "minLength": 1},
+    "participating_products": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "mission_thread": {"type": "object"},
+    "requirement_traceability": {"type": "object"},
+    "cross_product_interface_state": {"type": "object"},
+    "human_centered_systems_evaluation": {"type": "object"},
+    "mission_effectiveness_evidence": {"type": "array", "items": {"type": "object"}},
+    "operational_readiness": {"type": "object"},
+    "capability_risk_posture": {"type": "object"},
+    "technical_confidence_rollup": {"type": "object"},
+    "capability_confidence_score": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "decision_conflicts": {"type": "array", "items": {"type": "object"}},
+    "enterprise_escalations": {"type": "array", "items": {"type": "object"}},
+    "role": {"type": "object", "minProperties": 1}
+  }
+}

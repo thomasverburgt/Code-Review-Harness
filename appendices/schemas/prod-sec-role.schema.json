@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/prod-sec-role.schema.json",
+  "title": "PROD-SEC Role Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["designation", "security_domain_correlations", "attack_path_hypotheses", "control_coverage", "evidence_gaps", "security_posture"],
+  "properties": {
+    "designation": {"const": "PROD-SEC"},
+    "security_domain_correlations": {"type": "array", "items": {"$ref": "#/$defs/derivedRecord"}},
+    "attack_path_hypotheses": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {"$ref": "#/$defs/derivedRecord"},
+          {"type": "object", "required": ["path_steps", "missing_links", "validation_needed"], "properties": {
+            "path_steps": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+            "missing_links": {"type": "array", "items": {"type": "string"}},
+            "validation_needed": {"type": "array", "items": {"type": "string"}}
+          }}
+        ]
+      }
+    },
+    "control_coverage": {"type": "object"},
+    "evidence_gaps": {"type": "array", "items": {"type": "object"}},
+    "security_posture": {"type": "object"}
+  },
+  "$defs": {
+    "derivedRecord": {
+      "type": "object",
+      "required": ["record_id", "contributing_artifact_ids", "contributing_evidence_ids", "rationale", "confidence", "uncertainty"],
+      "properties": {
+        "record_id": {"type": "string", "minLength": 1},
+        "contributing_artifact_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "contributing_evidence_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+        "rationale": {"type": "string", "minLength": 1},
+        "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "uncertainty": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

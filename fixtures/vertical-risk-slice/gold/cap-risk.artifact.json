@@ -1,0 +1,49 @@
+{
+  "identity": {"agent_uuid": "147e73eb-9d41-429e-9b63-81a3fe895ec7", "designation": "CAP-RISK", "display_name": "Capability Risk Reviewer", "agent_version": "design-0.1.0", "contract_version": "1.0.0"},
+  "artifact": {"artifact_id": "33333333-3333-4333-8333-333333333333", "artifact_type": "capability-risk-posture", "created_at": "2026-07-31T14:10:00Z", "lifecycle_state": "complete", "links": {"parents": ["44444444-4444-4444-8444-444444444444", "55555555-5555-4555-8555-555555555555"], "children": ["22222222-2222-4222-8222-222222222222"], "peers": []}},
+  "execution": {"execution_id": "a3333333-3333-4333-8333-333333333333", "model": "deterministic-reference-agent", "prompt_version": "design-0.1.0", "rubric_version": "fixture-0.1.0", "toolchain_version": "0.1.0", "settings": {"temperature": 0}},
+  "scope": {"capability_id": "CAPABILITY-IDENTITY-ACCESS", "participating_products": ["PRODUCT-ALPHA"], "source_revision": "fixture-rev-001", "decision_context": "governance"},
+  "inputs": [{"artifact_id": "22222222-2222-4222-8222-222222222222", "hash": "sha256:fixture-output-prod-sec", "compatibility": "compatible", "freshness": "fresh"}],
+  "methodology": {"method": "RIO-FIXTURE-0.1.0", "limitations": ["One-product fixture uses an explicitly declared shared-service dependency"]},
+  "coverage": {"eligible": 1, "reviewed": 1, "omitted": 0, "inaccessible": 0, "unknown": 0, "negative_evidence": 0},
+  "observations": [{"observation_id": "OBS-CAPRISK-001", "fact": "PRODUCT-ALPHA uses IDENTITY-SERVICE in mission thread MT-AUTH-001.", "evidence_refs": ["22222222-2222-4222-8222-222222222222"]}],
+  "assessments": [{"assessment_id": "ASM-CAPRISK-001", "rationale": "Credential compromise can interrupt the capability authentication step and propagate through the shared service.", "confidence": 0.88}],
+  "findings": [],
+  "patterns": [],
+  "insights": [{"insight_id": "INSIGHT-CAPRISK-001", "statement": "The shared identity dependency requires enterprise concentration review."}],
+  "conflicts": [],
+  "confidence": {"evidence": 0.96, "assessment": 0.88, "review": 1.0, "decision": null, "provenance": [{"artifact_id": "22222222-2222-4222-8222-222222222222", "confidence": 0.92}]},
+  "decisions_requested": [{"decision_context_id": "DECISION-CAPRISK-001", "question": "Authorize coordinated capability treatment and enterprise escalation.", "required_authority": "capability-risk-authority"}],
+  "consumers": ["ENT-EVIDENCE", "ENT-SYSRISK"],
+  "decision_authority": "human",
+  "integrity": {"input_hash": "sha256:fixture-output-prod-sec", "output_hash": "sha256:fixture-output-cap-risk", "attestation_ref": null, "retention_class": "fixture", "schema_validation": "passed"},
+  "extensions": {
+    "capability": {
+      "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+      "participating_products": ["PRODUCT-ALPHA"],
+      "mission_thread": {"mission_thread_id": "MT-AUTH-001", "affected_step": "authenticate operator"},
+      "requirement_traceability": {"requirement_ids": ["REQ-AUTH-001"], "state": "traced"},
+      "cross_product_interface_state": {"shared_service": "IDENTITY-SERVICE", "state": "at_risk"},
+      "human_centered_systems_evaluation": {"state": "not_reviewed", "reason": "Not required by narrow fixture policy"},
+      "mission_effectiveness_evidence": [{"evidence_id": "MISSION-EVIDENCE-001", "effect": "Authentication failure prevents mission-thread start"}],
+      "operational_readiness": {"state": "conditional"},
+      "capability_risk_posture": {"state": "elevated", "risk_ids": ["CAP-RISK-001"]},
+      "technical_confidence_rollup": {"method": "preserve_minimum_with_rationale", "inputs": [0.92], "result": 0.88},
+      "capability_confidence_score": 0.88,
+      "decision_conflicts": [],
+      "enterprise_escalations": [{"escalation_id": "ESC-CAPRISK-001", "reason": "shared identity service"}],
+      "role": {
+        "designation": "CAP-RISK",
+        "risk_register": [{"risk_id": "CAP-RISK-001", "capability_id": "CAPABILITY-IDENTITY-ACCESS", "record_type": "emergent", "risk_statement": "If the shared synthetic credential is compromised, authentication for MT-AUTH-001 may fail or be subverted, preventing capability initiation.", "risk_category": "systemic_cyber", "contributing_artifacts": ["22222222-2222-4222-8222-222222222222"], "dependency_chain": ["PRODUCT-ALPHA", "IDENTITY-SERVICE", "MT-AUTH-001"], "mission_effect": "Capability authentication is unavailable or untrusted.", "likelihood_basis": "Confirmed synthetic exposure and shared-service dependency.", "impact_basis": "Mission thread cannot start without trusted authentication.", "probability": "fixture-medium", "consequence": "fixture-high", "priority": "fixture-high", "confidence": 0.88, "aggregation_method": "RIO-FIXTURE-0.1.0; no averaging", "residual_risk": null, "treatment_options": [{"option_id": "COA-CAP-001", "description": "Rotate credential and validate service-wide revocation"}], "escalation_state": "enterprise_review_required", "decision_owner": "capability-risk-authority"}],
+        "risk_provenance": [{"risk_id": "CAP-RISK-001", "artifact_ids": ["22222222-2222-4222-8222-222222222222"], "finding_ids": ["FINDING-PRODSEC-001"]}],
+        "emergent_risk_analysis": [{"risk_id": "CAP-RISK-001", "mechanism": "Product credential exposure affects a mission-thread shared service"}],
+        "rio_method_version": "RIO-FIXTURE-0.1.0",
+        "systemic_relationships": [{"source": "FINDING-PRODSEC-001", "relationship": "propagates_to", "target": "MT-AUTH-001"}],
+        "recommended_coas": [{"option_id": "COA-CAP-001", "decision_authority": "human"}],
+        "capa_options": [{"capa_id": "CAPA-CAP-001", "validation_method": "Verify old credential rejection across capability"}],
+        "escalation_flags": [{"trigger": "shared_enterprise_service", "authority": "enterprise-risk-acceptance-authority"}],
+        "decision_authority": "human"
+      }
+    }
+  }
+}

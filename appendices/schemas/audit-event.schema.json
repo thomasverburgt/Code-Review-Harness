@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/audit-event.schema.json",
+  "title": "Deterministic Orchestration Audit Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "sequence", "workflow_id", "execution_id", "controller", "event_type", "subject_id", "state_before", "state_after", "reason_code", "input_refs", "timestamp"],
+  "properties": {
+    "event_id": {"type": "string", "format": "uuid"},
+    "sequence": {"type": "integer", "minimum": 0},
+    "workflow_id": {"type": "string"},
+    "execution_id": {"type": "string", "format": "uuid"},
+    "controller": {"enum": ["ORCH-SCHED", "ORCH-FANOUT", "ORCH-FANIN"]},
+    "event_type": {"type": "string", "minLength": 1},
+    "subject_id": {"type": "string", "minLength": 1},
+    "state_before": {"type": ["string", "null"]},
+    "state_after": {"type": "string"},
+    "reason_code": {"type": "string", "minLength": 1},
+    "input_refs": {"type": "array", "items": {"type": "string"}},
+    "timestamp": {"type": "string", "format": "date-time"}
+  }
+}

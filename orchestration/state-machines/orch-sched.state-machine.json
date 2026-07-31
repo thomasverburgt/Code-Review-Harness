@@ -1,0 +1,18 @@
+{
+  "$schema": "../../appendices/schemas/orchestration-state-machine.schema.json",
+  "controller": "ORCH-SCHED",
+  "version": "0.1.0",
+  "initial_state": "received",
+  "terminal_states": ["scheduled", "failed"],
+  "states": ["received", "validating_identity", "pinning_versions", "validating_graph", "scheduled", "failed"],
+  "transitions": [
+    {"from": "received", "event": "workflow_loaded", "guard": "workflow_schema_valid", "to": "validating_identity", "audit_reason": "WORKFLOW_ACCEPTED"},
+    {"from": "validating_identity", "event": "identity_checked", "guard": "all_uuid_designation_pairs_registered", "to": "pinning_versions", "audit_reason": "IDENTITY_VALID"},
+    {"from": "pinning_versions", "event": "versions_resolved", "guard": "all_versions_pinned_and_compatible", "to": "validating_graph", "audit_reason": "VERSIONS_PINNED"},
+    {"from": "validating_graph", "event": "graph_checked", "guard": "acyclic_and_all_dependencies_declared", "to": "scheduled", "audit_reason": "SCHEDULE_READY"},
+    {"from": "received", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "WORKFLOW_INVALID"},
+    {"from": "validating_identity", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "IDENTITY_INVALID"},
+    {"from": "pinning_versions", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "VERSION_INVALID"},
+    {"from": "validating_graph", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "GRAPH_INVALID"}
+  ]
+}

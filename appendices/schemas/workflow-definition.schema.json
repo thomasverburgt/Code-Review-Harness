@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/workflow-definition.schema.json",
+  "title": "Versioned Workflow Definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["workflow_id", "workflow_version", "policy_version", "registry_version", "trigger", "version_pins", "nodes", "edges", "human_gates"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "workflow_id": {"type": "string", "minLength": 1},
+    "workflow_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "policy_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "registry_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "trigger": {"type": "object", "required": ["type", "reference"], "properties": {"type": {"type": "string"}, "reference": {"type": "string"}}},
+    "version_pins": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contracts", "prompts", "rubrics", "schemas", "model", "toolchain"],
+      "properties": {
+        "contracts": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string"}},
+        "prompts": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string"}},
+        "rubrics": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string"}},
+        "schemas": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string"}},
+        "model": {"type": "object", "required": ["provider", "model_id", "version"], "properties": {"provider": {"type": "string"}, "model_id": {"type": "string"}, "version": {"type": "string"}}},
+        "toolchain": {"type": "object", "required": ["version"], "properties": {"version": {"type": "string"}}}
+      }
+    },
+    "nodes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/node"}},
+    "edges": {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+    "human_gates": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/humanGate"}}
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "agent_uuid", "designation", "layer", "required_inputs", "output_schema", "role_schema", "partial_input_policy", "consumers"],
+      "properties": {
+        "node_id": {"type": "string", "minLength": 1},
+        "agent_uuid": {"type": "string", "format": "uuid"},
+        "designation": {"type": "string", "pattern": "^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$"},
+        "layer": {"enum": ["specialist", "product", "capability", "enterprise"]},
+        "required_inputs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "output_schema": {"type": "string", "minLength": 1},
+        "role_schema": {"type": "string", "minLength": 1},
+        "partial_input_policy": {"enum": ["prohibited", "explicit_authorization_required"]},
+        "consumers": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to", "artifact_type", "required"],
+      "properties": {
+        "from": {"type": "string"},
+        "to": {"type": "string"},
+        "artifact_type": {"type": "string"},
+        "required": {"type": "boolean"}
+      }
+    },
+    "humanGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gate_id", "after_node", "authority_role", "decision_types"],
+      "properties": {
+        "gate_id": {"type": "string"},
+        "after_node": {"type": "string"},
+        "authority_role": {"type": "string", "minLength": 1},
+        "decision_types": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    }
+  }
+}

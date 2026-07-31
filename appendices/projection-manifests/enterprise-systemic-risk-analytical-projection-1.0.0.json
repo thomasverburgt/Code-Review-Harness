@@ -1,0 +1,33 @@
+{
+  "projection_version": "enterprise-systemic-risk-analytical-projection-1.0.0",
+  "designation": "ENT-SYSRISK",
+  "source_contract": "canonical-enterprise-systemic-risk-payload-1.0.0",
+  "target_layer_schema": "enterprise-extension.schema.json",
+  "policy": "deterministic_no_enterprise_risk_disposition",
+  "mappings": {
+    "enterprise_scope": "canonical layer_context",
+    "participating_capabilities": "immutable CAP-RISK scope",
+    "capability_input_manifest": "immutable CAP-RISK and ENT-EVIDENCE identities",
+    "cross_capability_correlations": "canonical layer_context",
+    "enterprise_assertions": "canonical layer_context",
+    "systemic_dependencies": "canonical layer_context",
+    "enterprise_unknowns": "role systemic-risk unknowns",
+    "unresolved_disagreements": "conflicts projected from tagged secondary_records",
+    "confidence_reconciliation": "preserved upstream assessment confidences plus canonical assessment confidence",
+    "human_decision_requests": "canonical decisions_requested",
+    "enterprise_traceability_manifest": "immutable input artifact IDs and role risk IDs",
+    "role": "canonical role_payload"
+  },
+  "universal_projection": {
+    "observations": "role systemic_risk_register statements and evidence references",
+    "assessments": "role probability and consequence bases",
+    "patterns_insights_conflicts": "tagged secondary_records"
+  },
+  "prohibited": [
+    "model or projection risk acceptance, treatment authorization, exception grant, or CAPA closure",
+    "model generation or replacement of ENT-EVIDENCE gate results",
+    "projection-time creation of risk records, scores, decisions, or confidence",
+    "loss or substitution of CAP-RISK and ENT-EVIDENCE artifact identifiers",
+    "silent omission or truncation"
+  ]
+}

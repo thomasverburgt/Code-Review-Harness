@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/assembly-record.schema.json",
+  "title": "Deterministic Artifact Assembly Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assembly_id", "job_id", "designation", "generation_mode", "generation_contract_version", "generation_contract_sha256", "assembler_version", "payload_hash", "artifact_id", "artifact_hash", "generation_disclosure", "assembled_at"],
+  "properties": {
+    "assembly_id": {"type": "string", "format": "uuid"},
+    "job_id": {"type": "string", "format": "uuid"},
+    "designation": {"type": "string", "minLength": 1},
+    "generation_mode": {"enum": ["role_payload_v1", "canonical_payload_v1"]},
+    "generation_contract_version": {"type": "string", "minLength": 1},
+    "generation_contract_sha256": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "assembler_version": {"type": "string", "minLength": 1},
+    "projection_version": {"type": "string", "minLength": 1},
+    "projection_sha256": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "payload_hash": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "artifact_id": {"type": "string", "format": "uuid"},
+    "artifact_hash": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+    "generation_disclosure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["array_max_items", "string_max_length", "limit_applied", "omitted_item_estimate", "truncated_string_estimate"],
+      "properties": {
+        "array_max_items": {"type": "integer", "minimum": 1},
+        "string_max_length": {"type": "integer", "minimum": 1},
+        "limit_applied": {"type": "boolean"},
+        "omitted_item_estimate": {"type": ["integer", "null"], "minimum": 0},
+        "truncated_string_estimate": {"type": ["integer", "null"], "minimum": 0}
+      }
+    },
+    "assembled_at": {"type": "string", "format": "date-time"}
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../appendices/schemas/human-decision-request.schema.json",
+  "decision_context_id": "DECISION-ENTRISK-001",
+  "decision_question": "Which coordinated treatment should be authorized for the shared identity concentration and credential exposure?",
+  "decision_type": "risk_disposition_and_treatment_authorization",
+  "triggering_artifacts": ["55555555-5555-4555-8555-555555555555"],
+  "available_options": [{"option_id": "ENT-COA-001", "description": "Coordinate enterprise-wide rotation, revocation verification, and resilience testing."}],
+  "known_constraints": ["Treatment must complete before promotion"],
+  "uncertainties": ["Service substitutability", "Enterprise recovery time"],
+  "required_decision_authority": "enterprise-risk-acceptance-authority",
+  "decision_due_context": "before promotion",
+  "evidence_refs": ["ENT-RISK-001", "CAP-RISK-001", "FINDING-PRODSEC-001", "FINDING-SECRET-001"],
+  "decision_authority": "human"
+}

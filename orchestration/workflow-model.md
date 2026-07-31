@@ -8,7 +8,7 @@ The control roles are `ORCH-SCHED`, `ORCH-FANOUT`, and `ORCH-FANIN`. They implem
 
 1. Ingest source revision and immutable evidence.
 2. Calculate review-risk signals: changed critical paths, authentication/control-plane changes, dependency/SBOM deltas, complexity, historical defects, and mission criticality.
-3. `ORCH-SCHED` resolves registered UUID/designation pairs, pins effective contract versions, and selects required agents through versioned policy.
+3. `ORCH-SCHED` resolves registered UUID/designation pairs, pins effective contract versions and the execution-environment policy, validates the mode/platform pairing, and selects required agents through versioned policy.
 4. `ORCH-FANOUT` dispatches independent bounded work with immutable, least-privilege inputs.
 5. `ORCH-FANIN` validates identity, schema, integrity, provenance, freshness, confidence, conflict objects, and CAPA completeness.
 6. Fan in through product and capability; run `ENT-EVIDENCE` before the remaining enterprise framework.
@@ -18,6 +18,8 @@ The control roles are `ORCH-SCHED`, `ORCH-FANOUT`, and `ORCH-FANIN`. They implem
 ## Identity and version pinning
 
 Schedules store `agent_uuid`, canonical `designation`, agent version, contract version, prompt version, rubric version, policy version, and registry version. Legacy aliases may be resolved at ingestion but are normalized before dispatch. An unregistered identity, alias collision, version incompatibility, or UUID/designation mismatch fails closed.
+
+Schedules also store `execution_mode`, platform designation, accelerator/runtime configuration, container image, model or workload scale, environment-policy version, and limitations. Production schedules target the NVIDIA A100 large cluster. All test schedules target NVIDIA DGX Spark or an approved equivalent. Mode/platform mismatches fail closed, and promotion preserves the signed test evidence plus the environment-specific configuration delta.
 
 ## Enterprise fan-in
 

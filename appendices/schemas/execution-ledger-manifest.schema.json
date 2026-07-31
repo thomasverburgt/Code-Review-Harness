@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/execution-ledger-manifest.schema.json",
+  "title": "Persistent Execution Ledger Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "execution_id", "workflow_id", "scenario", "records", "audit_ledger_hash", "audit_chain_head", "attestation"],
+  "properties": {
+    "manifest_version": {"const": "1.0.0"},
+    "execution_id": {"type": "string", "format": "uuid"},
+    "workflow_id": {"type": "string", "minLength": 1},
+    "scenario": {"type": "string", "minLength": 1},
+    "records": {"type": "array", "items": {"$ref": "#/$defs/record"}},
+    "audit_ledger_hash": {"$ref": "#/$defs/hash"},
+    "audit_chain_head": {"$ref": "#/$defs/hash"},
+    "attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "hash_algorithm", "attesting_component"],
+      "properties": {
+        "type": {"const": "content-addressed-self-attestation"},
+        "hash_algorithm": {"const": "sha256"},
+        "attesting_component": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["logical_path", "family", "record_id", "object_hash", "classification", "retention_class"],
+      "properties": {
+        "logical_path": {"type": "string", "minLength": 1},
+        "family": {"type": "string", "minLength": 1},
+        "record_id": {"type": "string", "minLength": 1},
+        "object_hash": {"$ref": "#/$defs/hash"},
+        "classification": {"type": "string", "minLength": 1},
+        "retention_class": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "policy_id": "POLICY-VERTICAL-RISK-001",
+  "policy_version": "0.1.0",
+  "workflow_id": "WF-VERTICAL-RISK-001",
+  "required_nodes": ["spec-secrets", "prod-sec", "cap-risk", "ent-evidence", "ent-sysrisk"],
+  "partial_input": {
+    "default": "prohibited",
+    "authorization_required": true,
+    "required_fields": ["authorization_id", "authority_role", "missing_inputs", "limitations", "expires_at"]
+  },
+  "fail_closed_on": [
+    "unregistered_identity", "uuid_designation_mismatch", "contract_incompatibility",
+    "schema_failure", "integrity_failure", "undeclared_dependency", "dependency_cycle",
+    "missing_required_input", "expired_partial_authorization", "authority_violation"
+  ],
+  "freshness": {"default_max_age_hours": 24},
+  "human_gate": "human-risk-authority"
+}

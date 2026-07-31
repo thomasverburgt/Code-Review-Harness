@@ -1,0 +1,13 @@
+{
+  "toolchain_id": "TOOLCHAIN-VERTICAL-RISK-REFERENCE",
+  "version": "0.1.0",
+  "status": "conformance-only",
+  "tools": [
+    {
+      "tool_id": "fixture-evidence-reader",
+      "version": "0.1.0",
+      "access": "allowlisted-repository-paths",
+      "mutating": false
+    }
+  ]
+}

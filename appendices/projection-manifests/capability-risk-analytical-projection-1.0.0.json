@@ -1,0 +1,29 @@
+{
+  "projection_version": "capability-risk-analytical-projection-1.0.0",
+  "designation": "CAP-RISK",
+  "source_contract": "canonical-capability-risk-payload-1.0.0",
+  "target_layer_schema": "capability-extension.schema.json",
+  "policy": "deterministic_no_risk_disposition",
+  "mappings": {
+    "capability_id": "dispatch.scope.capability_id",
+    "participating_products": "dispatch scope or immutable input product scopes",
+    "mission_and_operational_context": "canonical layer_context",
+    "capability_risk_posture": "role risk identifiers plus operational-readiness state and fixed human authority",
+    "technical_confidence_rollup": "preserved upstream assessment confidence values plus canonical assessment confidence",
+    "capability_confidence_score": "canonical assessment confidence",
+    "decision_conflicts": "conflicts projected from tagged secondary_records",
+    "enterprise_escalations": "role escalation_flags",
+    "role": "canonical role_payload"
+  },
+  "universal_projection": {
+    "observations": "role risk_register statements and contributing artifacts",
+    "assessments": "role risk_register likelihood and impact bases",
+    "patterns_insights_conflicts": "tagged secondary_records"
+  },
+  "prohibited": [
+    "model or projection risk acceptance, release approval, exception grant, or CAPA closure",
+    "projection-time creation of risk records, scores, decisions, or confidence",
+    "loss or substitution of contributing artifact identifiers",
+    "silent omission or truncation"
+  ]
+}

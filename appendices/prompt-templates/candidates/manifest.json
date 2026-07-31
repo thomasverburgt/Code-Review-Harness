@@ -1,0 +1,30 @@
+{
+  "manifest_version": "1.0.0",
+  "prompt_version": "design-0.1.0",
+  "prompts": {
+    "CAP-RISK": {
+      "path": "appendices/prompt-templates/candidates/cap-risk/design-0.1.0.prompt.txt",
+      "sha256": "216331082a8c3e3eb22a88ceeafaf0a9ab37659e184280a705c4359b7d541e07",
+      "source": "deliverables/CAP-RISK-Prompt-Design-and-Methodology.docx",
+      "status": "candidate"
+    },
+    "ENT-SYSRISK": {
+      "path": "appendices/prompt-templates/candidates/ent-sysrisk/design-0.1.0.prompt.txt",
+      "sha256": "0c3d200a312b7cb268b2f810784f20481866c8fe208304b0d696e2ef28eed6cc",
+      "source": "deliverables/ENT-SYSRISK-Prompt-Design-and-Methodology.docx",
+      "status": "candidate"
+    },
+    "PROD-SEC": {
+      "path": "appendices/prompt-templates/candidates/prod-sec/design-0.1.0.prompt.txt",
+      "sha256": "10a1c20979c2e9ebf51725499ef95894c63e6f96ad9ac2e1b86f776fa9c5444e",
+      "source": "deliverables/PROD-SEC-Prompt-Design-and-Methodology.docx",
+      "status": "candidate"
+    },
+    "SPEC-SECRETS": {
+      "path": "appendices/prompt-templates/candidates/spec-secrets/design-0.1.0.prompt.txt",
+      "sha256": "17ca304344bc932c34d4628306a79d860d0ec7ac4e3ae52f0b0962b724137192",
+      "source": "deliverables/SPEC-SECRETS-Prompt-Design-and-Methodology.docx",
+      "status": "candidate"
+    }
+  }
+}
