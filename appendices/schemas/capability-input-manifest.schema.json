@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/capability-input-manifest.schema.json",
+  "title": "Validated Capability Input Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_id", "manifest_version", "generated_at", "coordinator", "capability_id", "calibration_scope", "fitness_claim", "expected_designations", "received_inputs", "missing_designations", "extra_designations", "validation", "review_completeness", "preserved_conflicts", "traceability", "partial_input_authorization", "routing", "decision_authority", "effect", "integrity"],
+  "properties": {
+    "manifest_id": {"type": "string", "format": "uuid"},
+    "manifest_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "coordinator": {
+      "type": "object", "additionalProperties": false, "required": ["agent_uuid", "designation", "implementation"],
+      "properties": {"agent_uuid": {"const": "38d55885-5785-4da7-b4a7-94ca65e652e5"}, "designation": {"const": "CAP-COORD"}, "implementation": {"const": "deterministic"}}
+    },
+    "capability_id": {"type": "string", "minLength": 1},
+    "calibration_scope": {"enum": ["single_domain_mechanical_calibration", "declared_multi_domain"]},
+    "fitness_claim": {"const": "mechanical_coordination_only"},
+    "expected_designations": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"pattern": "^CAP-[A-Z0-9-]+$"}},
+    "received_inputs": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["designation", "artifact_id", "artifact_type", "output_hash", "lifecycle_state", "freshness", "compatibility"],
+        "properties": {
+          "designation": {"pattern": "^CAP-[A-Z0-9-]+$"}, "artifact_id": {"type": "string", "format": "uuid"},
+          "artifact_type": {"type": "string", "minLength": 1}, "output_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+          "lifecycle_state": {"type": "string"}, "freshness": {"enum": ["fresh", "stale"]}, "compatibility": {"enum": ["compatible", "incompatible"]}
+        }
+      }
+    },
+    "missing_designations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "extra_designations": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "validation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["identity", "schema", "integrity", "freshness", "compatibility", "conflict_preservation"],
+      "properties": {
+        "identity": {"enum": ["passed", "failed"]}, "schema": {"enum": ["passed", "failed"]},
+        "integrity": {"enum": ["passed", "failed"]}, "freshness": {"enum": ["passed", "failed"]},
+        "compatibility": {"enum": ["passed", "failed"]}, "conflict_preservation": {"enum": ["passed", "failed"]}
+      }
+    },
+    "review_completeness": {
+      "type": "object", "additionalProperties": false, "required": ["expected", "valid", "fraction"],
+      "properties": {"expected": {"type": "integer", "minimum": 1}, "valid": {"type": "integer", "minimum": 0}, "fraction": {"type": "number", "minimum": 0, "maximum": 1}}
+    },
+    "preserved_conflicts": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["source_artifact_id", "conflict_id", "statement", "evidence_refs"],
+        "properties": {
+          "source_artifact_id": {"type": "string", "format": "uuid"}, "conflict_id": {"type": "string"},
+          "statement": {"type": "string"}, "evidence_refs": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "traceability": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["source_artifact_id", "record_kind", "record_id", "evidence_refs"],
+        "properties": {
+          "source_artifact_id": {"type": "string", "format": "uuid"},
+          "record_kind": {"enum": ["finding", "risk", "conflict", "decision_request"]},
+          "record_id": {"type": "string"}, "evidence_refs": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "partial_input_authorization": {"oneOf": [{"type": "null"}, {"type": "object", "additionalProperties": false, "required": ["authorization_id", "missing_designations", "authority_role", "limitations", "expires_at"], "properties": {"authorization_id": {"type": "string"}, "missing_designations": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "authority_role": {"type": "string"}, "limitations": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "expires_at": {"type": "string", "format": "date-time"}}}]},
+    "routing": {"type": "object", "additionalProperties": false, "required": ["state", "synthesis_dispatch_permitted", "consumer"], "properties": {"state": {"enum": ["ready_for_cap_synth", "blocked", "incomplete_authorized"]}, "synthesis_dispatch_permitted": {"type": "boolean"}, "consumer": {"const": "CAP-SYNTH"}}},
+    "decision_authority": {"const": "human"},
+    "effect": {"const": "validation_and_routing_only"},
+    "integrity": {"type": "object", "additionalProperties": false, "required": ["input_hash", "manifest_hash"], "properties": {"input_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "manifest_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}}
+  }
+}

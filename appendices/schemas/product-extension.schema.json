@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/product-extension.schema.json",
+  "title": "Product Artifact Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "product_id", "specialist_artifact_inventory", "input_completeness",
+    "cross_domain_correlations", "unresolved_conflicts", "product_findings",
+    "product_patterns", "product_risk_posture", "technical_confidence", "coverage",
+    "evidence_quality", "release_readiness_input", "escalations", "role"
+  ],
+  "properties": {
+    "product_id": {"type": "string", "minLength": 1},
+    "specialist_artifact_inventory": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "input_completeness": {"type": "object"},
+    "cross_domain_correlations": {"type": "array", "items": {"type": "object"}},
+    "unresolved_conflicts": {"type": "array", "items": {"type": "object"}},
+    "product_findings": {"type": "array", "items": {"type": "object"}},
+    "product_patterns": {"type": "array", "items": {"type": "object"}},
+    "product_risk_posture": {"type": "object"},
+    "technical_confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "coverage": {"type": "object"},
+    "evidence_quality": {"type": "object"},
+    "release_readiness_input": {"type": "object"},
+    "escalations": {"type": "array", "items": {"type": "object"}},
+    "role": {"type": "object", "minProperties": 1}
+  }
+}

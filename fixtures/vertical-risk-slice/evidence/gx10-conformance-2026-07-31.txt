@@ -1,0 +1,23 @@
+TEST_PLATFORM=GX-10_DGX-Spark-equivalent
+HOST=cluster1
+UTC_STARTED=2026-07-31T13:59:24Z
+GPU=NVIDIA GB10, 580.173.02
+SOURCE_HASHES_BEGIN
+c394e26a84813f26a9ab8d3ba3c89e79fd6e8458ca972c310cb0fe51e797a35a  tools/validate_vertical_slice.py
+6d43e644aabae906de257fff95cb57c789a46250c5d1f0d4f9328486f17b5556  tools/test_vertical_slice.py
+022ca0c2d15293424a527188b7f5be695b3ba87ca367993560340ca9a04453b5  tools/artifact_ledger.py
+51fe4860d4548ed710d25f6116018e7af1575683dc1701737538399d3b68ba1e  tools/test_artifact_ledger.py
+a1c325c2a1fd905487eeac425328b895b6021dd45b591ffcad6976b1fd9e1e7d  appendices/schemas/execution-ledger-manifest.schema.json
+d0e70385cb6663444f527a5d29e0c7b0e83e215077426424e9b056e28ecd9b02  appendices/schemas/supersession-record.schema.json
+SOURCE_HASHES_END
+=== tools/validate_vertical_slice.py ===
+vertical slice validation passed: workflow=1; nodes=5; state_machines=3; gold_artifacts=5; human_decision_requests=1
+EXIT=0
+=== tools/test_vertical_slice.py ===
+{"deterministic_replay": "passed", "gold": "passed", "negative_cases": 15, "negative_cases_passed": 15, "runtime_scenarios": 5, "suite": "FIXTURE-VERTICAL-RISK-NEGATIVE-001"}
+EXIT=0
+=== tools/test_artifact_ledger.py ===
+{"access_control": "passed", "audit_chain": "passed", "idempotency": "passed", "integrity": "passed", "persistence": "passed", "replay": "passed", "suite": "artifact-ledger-conformance", "supersession": "passed"}
+EXIT=0
+UTC_FINISHED=2026-07-31T13:59:25Z
+OVERALL_EXIT=0

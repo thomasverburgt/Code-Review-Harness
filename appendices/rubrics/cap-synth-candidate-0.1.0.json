@@ -1,0 +1,6 @@
+{
+  "rubric_id": "RUBRIC-CAP-SYNTH-CANDIDATE",
+  "version": "0.1.0",
+  "status": "candidate-conformance-only",
+  "required_controls": ["exact_coordinator_manifest_binding", "evidence_tier_honesty", "child_assertion_preservation", "cross_domain_source_binding", "conflict_and_unknown_preservation", "confidence_provenance", "comparison_only_enterprise_handoff", "human_authority", "unscheduled_baseline"]
+}

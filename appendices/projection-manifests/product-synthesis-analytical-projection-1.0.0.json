@@ -1,0 +1,16 @@
+{
+  "projection_version": "product-synthesis-analytical-projection-1.0.0",
+  "designation": "PROD-SYNTH",
+  "source_contract": "canonical-product-synthesis-payload-1.0.0",
+  "target_layer_schema": "product-extension.schema.json",
+  "policy": "deterministic_lineage_and_authority_projection",
+  "model_owned": ["methodology", "findings", "secondary_records", "preserved_child_assertions", "derived_product_assertions", "engineering_posture", "decisions_requested", "confidence", "generation_disclosure"],
+  "harness_owned": ["identity", "artifact", "execution", "scope", "inputs", "child_inventory", "synthesis_basis", "capability_handoff.artifact_id", "capability_handoff.product_id", "capability_handoff.intended_consumers", "decision_authority", "integrity", "routing"],
+  "lineage_rules": [
+    "preserved assertions must cite an immutable declared child and an actual child record",
+    "preserved evidence references must be a subset of the cited child record references",
+    "derived assertions may cite only declared children and preserved record IDs",
+    "capability handoff finding and evidence IDs are deterministically projected from preserved assertions"
+  ],
+  "prohibited": ["model-created input IDs", "model-created artifact ID", "release decision", "risk acceptance", "baseline workflow scheduling", "silent lineage omission"]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/expert-review-packet.schema.json",
+  "title": "Expert Review Evidence Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["packet_id", "packet_version", "report_package_id", "report_package_hash", "binding_manifest_id", "binding_manifest_hash", "generated_at", "reviewability_state", "actionable_items", "locators", "blocking_issues", "authority_effect", "packet_hash"],
+  "properties": {
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_version": {"type": "string", "minLength": 1},
+    "report_package_id": {"type": "string", "format": "uuid"},
+    "report_package_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "binding_manifest_id": {"type": "string", "format": "uuid"},
+    "binding_manifest_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "reviewability_state": {"enum": ["ready_for_expert_review", "blocked_missing_locator", "blocked_unverified_locator"]},
+    "actionable_items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/item"}},
+    "locators": {"type": "array", "items": {"$ref": "#/$defs/locatorSummary"}},
+    "blocking_issues": {"type": "array", "items": {"type": "string"}},
+    "authority_effect": {"const": "review_support_only"},
+    "packet_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "item": {"type": "object", "additionalProperties": false, "required": ["report_item_id", "kind", "statement", "evidence_refs", "locator_ids", "reviewability"], "properties": {"report_item_id": {"type": "string"}, "kind": {"enum": ["finding", "risk", "capa", "recommendation"]}, "statement": {"type": "string"}, "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "locator_ids": {"type": "array", "items": {"type": "string"}}, "reviewability": {"enum": ["ready", "blocked_missing_locator", "blocked_unverified_locator"]}}},
+    "locatorSummary": {"type": "object", "additionalProperties": false, "required": ["locator_id", "evidence_id", "repository_uri", "immutable_revision", "path", "line_start", "line_end", "symbol_or_section", "safe_excerpt", "line_fingerprint", "access", "reproduction_steps", "locator_state", "locator_hash"], "properties": {"locator_id": {"type": "string"}, "evidence_id": {"type": "string"}, "repository_uri": {"type": "string"}, "immutable_revision": {"type": "string"}, "path": {"type": "string"}, "line_start": {"type": ["integer", "null"]}, "line_end": {"type": ["integer", "null"]}, "symbol_or_section": {"type": ["string", "null"]}, "safe_excerpt": {"type": "string"}, "line_fingerprint": {"type": "string"}, "access": {"type": "object"}, "reproduction_steps": {"type": "array"}, "locator_state": {"type": "string"}, "locator_hash": {"type": "string"}}}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "accepted_response_allowed": false,
+  "current_evidence": {
+    "content_hash": "sha256:3b5c579221ada5939558456844d8c23530edf97d2e332313b4ce38725169532b",
+    "evidence_tier": "protocol_smoke_only",
+    "path": "fixtures/enterprise-synthesis-admission/evidence/2026-08-01/adr0024/gx10-live-calibration.tar.gz"
+  },
+  "decision_authority": "human",
+  "designation": "ENT-SYNTH",
+  "effect": "evidence_gap_notice_only",
+  "generated_at": "2026-08-02T00:45:00Z",
+  "missing_requirements": [
+    "accepted-live multi-domain input set",
+    "independent human semantic evaluation",
+    "exact accepted evidence and evaluator-authority bindings"
+  ],
+  "packet_hash": "sha256:7ae9dee3348f029abb355260dacfb2d619c9a935bc6041b35e414d5c95db0f59",
+  "packet_id": "b45725c6-9367-55ea-95c8-cb417ac9ad59",
+  "packet_version": "1.0.0",
+  "prerequisite_id": "ENT-SYNTH-LIVE-MULTI-DOMAIN",
+  "readiness_manifest_hash": "sha256:5ef502c38df724f8e7e12e2a4280b73ed2198b876c06a13a09a6e5b805d50fcc",
+  "readiness_manifest_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "required_authority": "enterprise-synthesis-acceptance-authority",
+  "review_state": "not_ready_for_review"
+}

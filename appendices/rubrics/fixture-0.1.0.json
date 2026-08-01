@@ -1,0 +1,14 @@
+{
+  "rubric_id": "RUBRIC-VERTICAL-RISK-FIXTURE",
+  "version": "fixture-0.1.0",
+  "status": "conformance-only",
+  "required_controls": [
+    "schema_validity",
+    "identity_and_version_pins",
+    "evidence_lineage",
+    "coverage_honesty",
+    "confidence_provenance",
+    "capa_completeness",
+    "human_authority"
+  ]
+}

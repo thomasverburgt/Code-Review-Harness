@@ -1,0 +1,359 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/0jspec",
+    "id": "0jspec",
+    "slide": 7,
+    "layoutId": "50c6060d-9436-46a8-bdd0-aeb6e45a0706",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "8caa091b-293f-4e31-9ef6-c34ce5ad6f13",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#111827",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "50c6060d-9436-46a8-bdd0-aeb6e45a0706",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "8caa091b-293f-4e31-9ef6-c34ce5ad6f13",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "8caa091b-293f-4e31-9ef6-c34ce5ad6f13",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hw7ylcf2",
+      "id": "1",
+      "bbox": [
+        52,
+        50,
+        600,
+        30
+      ],
+      "geometry": "rect",
+      "text": "SESSION 04  •  EXIT TICKET",
+      "textPreview": "SESSION 04  •  EXIT TICKET",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#8EC5E5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SESSION 04  •  EXIT TICKET"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SESSION 04  •  EXIT TICKET",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#8EC5E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SESSION 04  •  EXIT TICKET",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#8EC5E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9wzaxwb",
+      "id": "2",
+      "bbox": [
+        52,
+        160,
+        1070,
+        245
+      ],
+      "geometry": "rect",
+      "text": "Explain why a role prompt cannot override the universal contract.",
+      "textPreview": "Explain why a role prompt cannot override the universal contract.",
+      "resolvedFontSize": 43,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 43,
+        "typeface": "Aptos",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Explain why a role prompt cannot override the"
+          },
+          {
+            "index": 2,
+            "text": "universal contract."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Explain why a role prompt cannot override the universal contract.",
+          "resolvedTextStyle": {
+            "fontSize": 43,
+            "typeface": "Aptos",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Explain why a role prompt cannot override the universal contract.",
+              "fontSize": 43,
+              "typeface": "Aptos",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/va5gj2xw",
+      "id": "3",
+      "bbox": [
+        52,
+        460,
+        1120,
+        3
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E74B5",
+      "lineColor": "#2E74B5",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87eh87el",
+      "id": "4",
+      "bbox": [
+        52,
+        500,
+        1040,
+        74
+      ],
+      "geometry": "rect",
+      "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+      "textPreview": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Aptos",
+        "color": "#D8E2EC",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Answer with evidence. Name the contract, state, or authority boundary you used."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Aptos",
+            "color": "#D8E2EC",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+              "fontSize": 23,
+              "typeface": "Aptos",
+              "color": "#D8E2EC",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/98nyhcf6",
+      "id": "5",
+      "bbox": [
+        52,
+        640,
+        600,
+        28
+      ],
+      "geometry": "rect",
+      "text": "NEXT: SESSION 05",
+      "textPreview": "NEXT: SESSION 05",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#8EC5E5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "NEXT: SESSION 05"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "NEXT: SESSION 05",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#8EC5E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "NEXT: SESSION 05",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#8EC5E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

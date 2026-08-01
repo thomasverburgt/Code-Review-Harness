@@ -1,0 +1,36 @@
+{
+  "attestation_state": "recorded_pending_verification",
+  "conditions": [
+    "Track the associated CAPA."
+  ],
+  "decided_at": "2026-07-31T17:00:00Z",
+  "decided_by": {
+    "authority_name": "Enterprise Risk Board",
+    "authority_role": "enterprise-risk-acceptance-authority"
+  },
+  "decision_source": {
+    "source_hash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+    "source_reference": "ERB-DECISION-001",
+    "source_type": "signed_expert_decision"
+  },
+  "decision_type": "risk_disposition",
+  "disposition": "accepted",
+  "effect": "record_only",
+  "external_decision_record_id": "606cdf5a-7448-5f9f-bf65-6599d05e9342",
+  "original_report_mutated": false,
+  "rationale_summary": "External experts accepted the documented risk.",
+  "recorded_at": "2026-07-31T17:05:00Z",
+  "recorded_by": {
+    "actor_type": "human",
+    "assurance_level": "fixture-mfa",
+    "authentication_provider": "fixture-idp",
+    "authority_role": "governance-records-administrator",
+    "session_id": "SESSION-ADMIN-GOVERNANCE-001",
+    "subject_id": "ADMIN-GOVERNANCE-001"
+  },
+  "report_item_ids": [
+    "RISK:RISK-001"
+  ],
+  "report_package_hash": "sha256:430233c423d65642bdebde1d9217517d7023bc2ddcc5dbbf89ebe361d9ceeb4a",
+  "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f"
+}

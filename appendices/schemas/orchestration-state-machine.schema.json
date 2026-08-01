@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/orchestration-state-machine.schema.json",
+  "title": "Orchestration Controller State Machine",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["controller", "version", "initial_state", "terminal_states", "states", "transitions"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "controller": {"enum": ["ORCH-SCHED", "ORCH-FANOUT", "ORCH-FANIN"]},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "initial_state": {"type": "string"},
+    "terminal_states": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "states": {"type": "array", "minItems": 2, "items": {"type": "string"}, "uniqueItems": true},
+    "transitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "event", "guard", "to", "audit_reason"],
+        "properties": {
+          "from": {"type": "string"},
+          "event": {"type": "string"},
+          "guard": {"type": "string"},
+          "to": {"type": "string"},
+          "audit_reason": {"type": "string"}
+        }
+      }
+    }
+  }
+}

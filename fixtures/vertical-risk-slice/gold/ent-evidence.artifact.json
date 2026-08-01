@@ -1,0 +1,51 @@
+{
+  "identity": {"agent_uuid": "f0b5a16b-4075-4f6f-830e-bbd4069e21e4", "designation": "ENT-EVIDENCE", "display_name": "Evidence Validation Gate", "agent_version": "role-spec-1.0.0", "contract_version": "1.0.0"},
+  "artifact": {"artifact_id": "44444444-4444-4444-8444-444444444444", "artifact_type": "validated-enterprise-input-manifest", "created_at": "2026-07-31T14:15:00Z", "lifecycle_state": "complete", "links": {"parents": ["55555555-5555-4555-8555-555555555555"], "children": ["33333333-3333-4333-8333-333333333333"], "peers": []}},
+  "execution": {"execution_id": "a4444444-4444-4444-8444-444444444444", "model": "deterministic-reference-agent", "prompt_version": "role-spec-1.0.0", "rubric_version": "fixture-0.1.0", "toolchain_version": "0.1.0", "settings": {"temperature": 0}},
+  "scope": {"enterprise_scope_id": "ENTERPRISE-FIXTURE-001", "participating_capabilities": ["CAPABILITY-IDENTITY-ACCESS"], "assessment_period": "2026-07-31", "decision_context": "governance"},
+  "inputs": [{"artifact_id": "33333333-3333-4333-8333-333333333333", "hash": "sha256:fixture-output-cap-risk", "compatibility": "compatible", "freshness": "fresh"}],
+  "methodology": {"method": "enterprise input validation fixture", "limitations": []},
+  "coverage": {"eligible": 1, "reviewed": 1, "omitted": 0, "inaccessible": 0, "unknown": 0, "negative_evidence": 0},
+  "observations": [{"observation_id": "OBS-ENTEVID-001", "fact": "The declared CAP-RISK artifact is present, traceable, fresh, and compatible.", "evidence_refs": ["33333333-3333-4333-8333-333333333333"]}],
+  "assessments": [{"assessment_id": "ASM-ENTEVID-001", "rationale": "The enterprise input set is reviewable for the narrow fixture scope.", "confidence": 1.0}],
+  "findings": [],
+  "patterns": [],
+  "insights": [],
+  "conflicts": [],
+  "confidence": {"evidence": 1.0, "assessment": 1.0, "review": 1.0, "decision": null, "provenance": [{"source": "deterministic gate checks", "version": "0.1.0"}]},
+  "decisions_requested": [],
+  "consumers": ["ENT-SYSRISK"],
+  "decision_authority": "human",
+  "integrity": {"input_hash": "sha256:fixture-output-cap-risk", "output_hash": "sha256:fixture-output-ent-evidence", "attestation_ref": null, "retention_class": "fixture", "schema_validation": "passed"},
+  "extensions": {
+    "enterprise": {
+      "enterprise_scope": {"enterprise_scope_id": "ENTERPRISE-FIXTURE-001", "assessment_period": "2026-07-31"},
+      "participating_capabilities": ["CAPABILITY-IDENTITY-ACCESS"],
+      "capability_input_manifest": [{"artifact_id": "33333333-3333-4333-8333-333333333333", "state": "valid"}],
+      "cross_capability_correlations": [],
+      "enterprise_assertions": [{"assertion_id": "ASSERT-ENTEVID-001", "statement": "The declared capability input is reviewable."}],
+      "systemic_dependencies": [],
+      "enterprise_unknowns": [],
+      "unresolved_disagreements": [],
+      "confidence_reconciliation": {"method": "gate_check_conjunction", "result": 1.0},
+      "human_decision_requests": [],
+      "enterprise_traceability_manifest": {"artifact_ids": ["33333333-3333-4333-8333-333333333333"]},
+      "role": {
+        "designation": "ENT-EVIDENCE",
+        "validated_input_manifest": [{"artifact_id": "33333333-3333-4333-8333-333333333333", "state": "valid"}],
+        "identity_validation": {"state": "passed"},
+        "schema_compatibility": {"state": "passed"},
+        "integrity_results": {"state": "passed"},
+        "lineage_results": {"state": "passed"},
+        "freshness_results": {"state": "passed"},
+        "completeness": {"required": 1, "valid": 1, "fraction": 1.0},
+        "duplicate_or_superseded_inputs": [],
+        "conflict_preservation": {"state": "passed", "count": 0},
+        "reviewability": 1.0,
+        "confidence_effect": {"delta": 0.0},
+        "gate_state": "passed",
+        "escalations": []
+      }
+    }
+  }
+}

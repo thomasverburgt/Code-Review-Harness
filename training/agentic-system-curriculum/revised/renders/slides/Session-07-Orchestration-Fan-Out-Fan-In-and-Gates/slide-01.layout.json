@@ -1,0 +1,616 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/rfi99v",
+    "id": "rfi99v",
+    "slide": 1,
+    "layoutId": "ec838470-b74b-4fe6-b6b1-ad051a1f4aa8",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "484f7478-1f91-4dad-969d-d40b4666f1b7",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "ec838470-b74b-4fe6-b6b1-ad051a1f4aa8",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "484f7478-1f91-4dad-969d-d40b4666f1b7",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "484f7478-1f91-4dad-969d-d40b4666f1b7",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x03ip4vm",
+      "id": "1",
+      "bbox": [
+        780,
+        0,
+        500,
+        720
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#EAF5FB",
+      "lineColor": "#EAF5FB",
+      "lineWidth": 1
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/axcjepwv",
+      "id": "2",
+      "bbox": [
+        780,
+        0,
+        12,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E74B5",
+      "lineColor": "#2E74B5",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/byl0nudg",
+      "id": "3",
+      "bbox": [
+        52,
+        52,
+        300,
+        30
+      ],
+      "geometry": "rect",
+      "text": "SESSION 07",
+      "textPreview": "SESSION 07",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SESSION 07"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SESSION 07",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#2E74B5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SESSION 07",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#2E74B5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ova1czep",
+      "id": "4",
+      "bbox": [
+        52,
+        150,
+        660,
+        220
+      ],
+      "geometry": "rect",
+      "text": "Orchestration: Fan-Out, Fan-In, and Gates",
+      "textPreview": "Orchestration: Fan-Out, Fan-In, and Gates",
+      "resolvedFontSize": 52,
+      "resolvedTextStyle": {
+        "anchor": 3,
+        "fontSize": 52,
+        "typeface": "Aptos",
+        "color": "#111827",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "bottom",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Orchestration: Fan-Out,"
+          },
+          {
+            "index": 2,
+            "text": "Fan-In, and Gates"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Orchestration: Fan-Out, Fan-In, and Gates",
+          "resolvedTextStyle": {
+            "fontSize": 52,
+            "typeface": "Aptos",
+            "color": "#111827",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Orchestration: Fan-Out, Fan-In, and Gates",
+              "fontSize": 52,
+              "typeface": "Aptos",
+              "color": "#111827",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pw3il4va",
+      "id": "5",
+      "bbox": [
+        52,
+        415,
+        620,
+        115
+      ],
+      "geometry": "rect",
+      "text": "How do we coordinate many agents without hiding causality?",
+      "textPreview": "How do we coordinate many agents without hiding causality?",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "Aptos",
+        "color": "#52606D",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "How do we coordinate many agents without hiding"
+          },
+          {
+            "index": 2,
+            "text": "causality?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "How do we coordinate many agents without hiding causality?",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "typeface": "Aptos",
+            "color": "#52606D",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "How do we coordinate many agents without hiding causality?",
+              "fontSize": 25,
+              "typeface": "Aptos",
+              "color": "#52606D",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2tsjapwz",
+      "id": "6",
+      "bbox": [
+        850,
+        150,
+        330,
+        330
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#CBD5E1",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nu10judk",
+      "id": "7",
+      "bbox": [
+        885,
+        185,
+        260,
+        150
+      ],
+      "geometry": "rect",
+      "text": "07",
+      "textPreview": "07",
+      "resolvedFontSize": 94,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 94,
+        "typeface": "Aptos",
+        "color": "#2E74B5",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "07"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "07",
+          "resolvedTextStyle": {
+            "fontSize": 94,
+            "typeface": "Aptos",
+            "color": "#2E74B5",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "07",
+              "fontSize": 94,
+              "typeface": "Aptos",
+              "color": "#2E74B5",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8re1oju9",
+      "id": "8",
+      "bbox": [
+        885,
+        352,
+        260,
+        100
+      ],
+      "geometry": "rect",
+      "text": "EVIDENCE\nCONTRACTS\nSTATE\nHUMAN AUTHORITY",
+      "textPreview": "EVIDENCE | CONTRACTS | STATE | HUMAN AUTHORITY",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "Aptos",
+        "color": "#1F4D78",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "EVIDENCE"
+          },
+          {
+            "index": 2,
+            "text": "CONTRACTS"
+          },
+          {
+            "index": 3,
+            "text": "STATE"
+          },
+          {
+            "index": 4,
+            "text": "HUMAN AUTHORITY"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "EVIDENCE",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Aptos",
+            "color": "#1F4D78",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "EVIDENCE",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#1F4D78",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "CONTRACTS",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Aptos",
+            "color": "#1F4D78",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CONTRACTS",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#1F4D78",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "STATE",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Aptos",
+            "color": "#1F4D78",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "STATE",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#1F4D78",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "HUMAN AUTHORITY",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Aptos",
+            "color": "#1F4D78",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "HUMAN AUTHORITY",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#1F4D78",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9sn2xovu",
+      "id": "9",
+      "bbox": [
+        52,
+        640,
+        500,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Young Engineer Training Series",
+      "textPreview": "Young Engineer Training Series",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Aptos",
+        "color": "#52606D",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Young Engineer Training Series"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Young Engineer Training Series",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos",
+            "color": "#52606D",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Young Engineer Training Series",
+              "fontSize": 15,
+              "typeface": "Aptos",
+              "color": "#52606D",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

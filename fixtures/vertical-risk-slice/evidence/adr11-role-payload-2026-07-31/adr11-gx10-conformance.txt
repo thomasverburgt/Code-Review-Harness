@@ -1,0 +1,14 @@
+TEST_PLATFORM=GX-10_DGX-Spark-equivalent
+UTC_STARTED=2026-07-31T17:22:07Z
+NVIDIA GB10, 580.173.02
+d29ff849e2398e05911597200209b1bd0d8beef756cd47b5cb8bee3468b5fe11  tools/worker_runtime.py
+114e8b86d9dca9a2bbfc3870bee1357f9a586235fb049ec394ac83851c225b06  tools/test_worker_runtime.py
+070aa350066c0ca4ec627af09875aaca0938a7f2e16c8e55446b5d4c5e37b79f  tools/calibrate_live_prompts.py
+7bf4d1e6a1cbbd77ae2e5a19ed725c07e01b4cf94da19d3e8aecfc6f5394df38  appendices/schemas/assembly-record.schema.json
+459a229497d63c0762d8228d4d307f816647fd71a017c0a5448de6b97ed3b17c  appendices/model-manifests/gx10-qwen3-32b-calibration-0.1.0.json
+vertical slice validation passed: workflow=1; nodes=5; state_machines=3; gold_artifacts=5; human_decision_requests=1
+{"deterministic_replay": "passed", "gold": "passed", "negative_cases": 15, "negative_cases_passed": 15, "runtime_scenarios": 5, "suite": "FIXTURE-VERTICAL-RISK-NEGATIVE-001"}
+{"access_control": "passed", "audit_chain": "passed", "idempotency": "passed", "integrity": "passed", "persistence": "passed", "replay": "passed", "suite": "artifact-ledger-conformance", "supersession": "passed"}
+{"assembled_one_node_replacements": ["SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"], "cancellation": "passed", "cardinality_truncation_failed_closed": true, "deterministic_assembly_replay": "passed", "fan_in_bypass_rejected": true, "harness_field_override_rejected": true, "least_privilege_tools": "passed", "one_node_replacements": ["SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"], "retry_idempotency": "passed", "suite": "worker-runtime-conformance", "telemetry_lineage": "passed", "timeout": "passed", "vllm_auth_gate": "passed", "vllm_protocol": "passed"}
+UTC_FINISHED=2026-07-31T17:22:08Z
+OVERALL_EXIT=0

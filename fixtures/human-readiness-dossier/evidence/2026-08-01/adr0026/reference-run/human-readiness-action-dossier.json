@@ -1,0 +1,92 @@
+{
+  "baseline_unchanged": true,
+  "decision_authority": "separate_named_human_authority_per_entry",
+  "dossier_approval_allowed": false,
+  "dossier_hash": "sha256:22c92d4fb5e893f6866a70a740c321b73d525db2d913669d9e98a2c88a294144",
+  "dossier_id": "a1294c0d-82db-5d1d-94bc-adf6f7f27a3f",
+  "dossier_version": "1.0.0",
+  "entries": [
+    {
+      "action_state": "awaiting_external_response",
+      "independent_verification_required": true,
+      "packet_hash": "sha256:3d87fb628ee30a280c60fc564ba9b365b6225a02119654c1059ef300fa5e9810",
+      "packet_id": "047813b4-5125-56f0-9e5c-81803cd078e2",
+      "packet_path": "fixtures/product-synth-admission/evidence/2026-08-01/semantic-adjudication-adr0016/reference-run/semantic-adjudication-packet.json",
+      "packet_type": "existing_review_packet",
+      "prerequisite_id": "ADR0016-SEMANTIC-ADJUDICATION",
+      "required_authority": "enterprise-risk-acceptance-authority",
+      "response_must_be_atomic": true,
+      "satisfies_readiness": false
+    },
+    {
+      "action_state": "awaiting_external_response",
+      "independent_verification_required": true,
+      "packet_hash": "sha256:56d6d8cf8f5d651666ecbac424f42c02882c13acb02c427cda8e81fb248d013e",
+      "packet_id": "f7ff7c64-51e8-5a7f-8acf-d5d5c5f504e8",
+      "packet_path": "fixtures/cap-req-admission/evidence/2026-08-01/adr0020/reference-run/requirements-acceptance-packet.json",
+      "packet_type": "existing_review_packet",
+      "prerequisite_id": "ADR0020-REQUIREMENTS-ACCEPTANCE",
+      "required_authority": "requirements-acceptance-authority",
+      "response_must_be_atomic": true,
+      "satisfies_readiness": false
+    },
+    {
+      "action_state": "not_ready_for_review",
+      "independent_verification_required": true,
+      "packet_hash": "sha256:02a236c29c1b65985a9db700be965284b1b8dbbcce3f0eae7fa7ee1a22109c55",
+      "packet_id": "6d9e6b22-fce7-5deb-9e0a-eda5450cd4ae",
+      "packet_path": "domain-packets/ent-arch-live-multi-domain.json",
+      "packet_type": "domain_evidence_gap_packet",
+      "prerequisite_id": "ENT-ARCH-LIVE-MULTI-DOMAIN",
+      "required_authority": "architecture-domain-acceptance-authority",
+      "response_must_be_atomic": true,
+      "satisfies_readiness": false
+    },
+    {
+      "action_state": "not_ready_for_review",
+      "independent_verification_required": true,
+      "packet_hash": "sha256:cc822813c16258d755e41ca7bc821a3e68fc132b50aba2edf833da7acaa3daef",
+      "packet_id": "c1a0aafb-3273-5bb1-8963-65ef95477ef8",
+      "packet_path": "domain-packets/ent-gov-live-multi-domain.json",
+      "packet_type": "domain_evidence_gap_packet",
+      "prerequisite_id": "ENT-GOV-LIVE-MULTI-DOMAIN",
+      "required_authority": "governance-source-owner",
+      "response_must_be_atomic": true,
+      "satisfies_readiness": false
+    },
+    {
+      "action_state": "not_ready_for_review",
+      "independent_verification_required": true,
+      "packet_hash": "sha256:666b771f137c8f1644b2e5cbb074824644c1879a62177c1cf122b2d96152106e",
+      "packet_id": "b8e430cd-59d6-58ec-9f7f-346e37a6fd29",
+      "packet_path": "domain-packets/ent-strat-live-multi-domain.json",
+      "packet_type": "domain_evidence_gap_packet",
+      "prerequisite_id": "ENT-STRAT-LIVE-MULTI-DOMAIN",
+      "required_authority": "enterprise-strategy-authority",
+      "response_must_be_atomic": true,
+      "satisfies_readiness": false
+    },
+    {
+      "action_state": "not_ready_for_review",
+      "independent_verification_required": true,
+      "packet_hash": "sha256:7ae9dee3348f029abb355260dacfb2d619c9a935bc6041b35e414d5c95db0f59",
+      "packet_id": "b45725c6-9367-55ea-95c8-cb417ac9ad59",
+      "packet_path": "domain-packets/ent-synth-live-multi-domain.json",
+      "packet_type": "domain_evidence_gap_packet",
+      "prerequisite_id": "ENT-SYNTH-LIVE-MULTI-DOMAIN",
+      "required_authority": "enterprise-synthesis-acceptance-authority",
+      "response_must_be_atomic": true,
+      "satisfies_readiness": false
+    }
+  ],
+  "generated_at": "2026-08-02T00:45:00Z",
+  "readiness_manifest_hash": "sha256:5ef502c38df724f8e7e12e2a4280b73ed2198b876c06a13a09a6e5b805d50fcc",
+  "readiness_manifest_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "shadow_scheduled": false,
+  "summary": {
+    "awaiting_external_response": 2,
+    "not_ready_for_review": 4,
+    "satisfied": 0,
+    "total": 6
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "acceptance_state": "pending_human_requirements_acceptance",
+  "artifact_hash": "sha256:5fc3756ac1e5a5ebc067e2e14a67839b4d8c3f5c120744810bb36ea5299a0727",
+  "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+  "candidate_status": "candidate",
+  "cap_synth_scheduled": false,
+  "declared_requirements": 0,
+  "designation": "CAP-REQ",
+  "passed": true,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "150c0044af52deb47be2545c7190c082963b849edc1a9543340f64c2eaaf68c4",
+  "report_changed": false,
+  "requirement_records": 0,
+  "scheduled": false,
+  "status": "complete",
+  "suite": "cap-req-live-zero-declared-population-calibration",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 2312,
+    "output_tokens": 363
+  }
+}

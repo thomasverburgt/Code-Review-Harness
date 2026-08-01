@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/cap-synth-role.schema.json",
+  "title": "CAP-SYNTH Role Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["designation", "evidence_tier", "fitness_claim", "synthesis_basis", "preserved_child_assertions", "derived_capability_assertions", "capability_posture", "confidence_reconciliation", "enterprise_handoff", "decision_authority"],
+  "properties": {
+    "designation": {"const": "CAP-SYNTH"},
+    "evidence_tier": {"enum": ["adjudicated_multi_domain_contract_fixture", "accepted_live_input_calibration"]},
+    "fitness_claim": {"enum": ["contract_fixture_only", "protocol_lineage_smoke_only", "multi_domain_candidate_calibration"]},
+    "synthesis_basis": {
+      "type": "object", "additionalProperties": false,
+      "required": ["coordinator_manifest_id", "coordinator_manifest_hash", "expected_designations", "received_artifact_ids", "completeness_state"],
+      "properties": {
+        "coordinator_manifest_id": {"type": "string", "format": "uuid"},
+        "coordinator_manifest_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "expected_designations": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "received_artifact_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "format": "uuid"}},
+        "completeness_state": {"const": "complete"}
+      }
+    },
+    "preserved_child_assertions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/preservedAssertion"}},
+    "derived_capability_assertions": {"type": "array", "items": {"$ref": "#/$defs/derivedAssertion"}},
+    "capability_posture": {"type": "object", "additionalProperties": false, "required": ["state", "rationale", "limitations", "advisory_only"], "properties": {"state": {"type": "string", "minLength": 1}, "rationale": {"type": "string", "minLength": 1}, "limitations": {"type": "array", "items": {"type": "string"}}, "advisory_only": {"const": true}}},
+    "confidence_reconciliation": {"type": "object", "additionalProperties": false, "required": ["method", "inputs", "result", "uncertainty"], "properties": {"method": {"type": "string", "minLength": 1}, "inputs": {"type": "array", "items": {"type": ["number", "null"], "minimum": 0, "maximum": 1}}, "result": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "uncertainty": {"type": "array", "items": {"type": "string"}}}},
+    "enterprise_handoff": {"type": "object", "additionalProperties": false, "required": ["capability_id", "artifact_id", "preserved_record_ids", "derived_assertion_ids", "unresolved_conflict_ids", "decision_request_ids", "intended_consumers", "handoff_state"], "properties": {"capability_id": {"type": "string"}, "artifact_id": {"type": "string", "format": "uuid"}, "preserved_record_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}, "derived_assertion_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}, "unresolved_conflict_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}, "decision_request_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}, "intended_consumers": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}, "handoff_state": {"const": "comparison_only"}}},
+    "decision_authority": {"const": "human"}
+  },
+  "$defs": {
+    "preservedAssertion": {"type": "object", "additionalProperties": false, "required": ["source_artifact_id", "source_record_id", "record_kind", "evidence_refs", "preservation_state"], "properties": {"source_artifact_id": {"type": "string", "format": "uuid"}, "source_record_id": {"type": "string"}, "record_kind": {"enum": ["observation", "assessment", "finding", "risk", "pattern", "insight", "conflict", "decision_request"]}, "evidence_refs": {"type": "array", "items": {"type": "string"}}, "preservation_state": {"const": "preserved_without_rewrite"}}},
+    "derivedAssertion": {"type": "object", "additionalProperties": false, "required": ["assertion_id", "statement", "contributing_artifact_ids", "contributing_record_ids", "derivation_logic", "assumptions", "alternatives", "confidence", "uncertainty"], "properties": {"assertion_id": {"type": "string"}, "statement": {"type": "string"}, "contributing_artifact_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "format": "uuid"}}, "contributing_record_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string"}}, "derivation_logic": {"type": "string"}, "assumptions": {"type": "array", "items": {"type": "string"}}, "alternatives": {"type": "array", "items": {"type": "string"}}, "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "uncertainty": {"type": "array", "items": {"type": "string"}}}}
+  }
+}

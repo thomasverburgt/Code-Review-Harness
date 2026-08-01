@@ -1,0 +1,30 @@
+[
+  {
+    "age_days": 2,
+    "decision_context_id": "DC-001",
+    "decision_record_id": null,
+    "decision_type": "evidence_classification",
+    "due_at": "2026-08-02T00:00:00Z",
+    "inbox_item_id": "4c7a6c19-46be-5be3-8d64-88f566afb279",
+    "overdue": true,
+    "partial_input_visible": false,
+    "received_at": "2026-07-31T20:00:00Z",
+    "required_authority": "security_engineer",
+    "routing_state": "blocked_authority_mismatch",
+    "state": "blocked"
+  },
+  {
+    "age_days": 2,
+    "decision_context_id": "DECISION-ENTRISK-001",
+    "decision_record_id": "fecefd65-8152-541e-b851-ef5c54281bb0",
+    "decision_type": "risk_disposition_and_treatment_authorization",
+    "due_at": "2026-08-05T00:00:00Z",
+    "inbox_item_id": "767d2d59-ec10-56c7-8ec3-79848acb4e9b",
+    "overdue": false,
+    "partial_input_visible": false,
+    "received_at": "2026-07-31T15:00:00Z",
+    "required_authority": "enterprise-risk-acceptance-authority",
+    "routing_state": "pending_human_review",
+    "state": "decided"
+  }
+]

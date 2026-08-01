@@ -1,0 +1,153 @@
+{"kind":"deck","id":"pr/hx058w","name":"Deck"}
+{"kind":"layout","layoutId":"e313e57e-ba80-4e96-add6-4d9eacd78768","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"6a1486bd-264b-46d9-950e-97210c775164","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ktgvff","slide":1,"title":"SESSION 03","textShapes":6}
+{"kind":"shape","id":"sh/kzuxovud","slide":1,"bbox":[780,0,500,720]}
+{"kind":"shape","id":"sh/jylwfqds","slide":1,"bbox":[780,0,12,720]}
+{"kind":"textbox","id":"sh/yxcvm5c7","slide":1,"text":"SESSION 03","textPreview":"SESSION 03","textChars":10,"textLines":1,"bbox":[52,52,300,30]}
+{"kind":"textbox","id":"sh/t4nelkvu","slide":1,"text":"Evidence, Provenance, and Traceability","textPreview":"Evidence, Provenance, and Traceability","textChars":38,"textLines":1,"bbox":[52,150,660,220]}
+{"kind":"textbox","id":"sh/83excfu9","slide":1,"text":"Can another engineer reproduce why this finding exists?","textPreview":"Can another engineer reproduce why this finding exists?","textChars":55,"textLines":1,"bbox":[52,415,620,115]}
+{"kind":"shape","id":"sh/72lwjad4","slide":1,"bbox":[850,150,330,330]}
+{"kind":"textbox","id":"sh/61cfq5cj","slide":1,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[885,185,260,150]}
+{"kind":"textbox","id":"sh/h8nepkv6","slide":1,"text":"EVIDENCE\nCONTRACTS\nSTATE\nHUMAN AUTHORITY","textPreview":"EVIDENCE | CONTRACTS | STATE | HUMAN AUTHORITY","textChars":40,"textLines":4,"bbox":[885,352,260,100]}
+{"kind":"textbox","id":"sh/g7exgful","slide":1,"text":"Young Engineer Training Series","textPreview":"Young Engineer Training Series","textChars":30,"textLines":1,"bbox":[52,640,500,28]}
+{"kind":"notes","id":"nt/ktgvff","slide":1,"text":"Welcome learners and read the driving question aloud. Ask for a quick show of hands: who has used an AI assistant, who has relied on an automated code-review tool, and who has had to explain why an automated finding was correct? Frame this session as engineering a trustworthy system around model capability. Preview that every claim in the course will be tied to evidence, a contract, a workflow state, or a human authority boundary. Do not teach the whole session from the title slide; use it to establish the problem and invite one concrete experience from the room.\n\n[Sources]\n- Code Review Harness repository: contracts/evidence-contract.md; contracts/evidence-flow-model.md; contracts/universal-agent-contract.md"}
+{"kind":"slide","id":"sl/rnlcf6","slide":2,"title":"SESSION 3 OUTCOMES","textShapes":16}
+{"kind":"textbox","id":"sh/d0vy1wne","slide":2,"text":"SESSION 3 OUTCOMES","textPreview":"SESSION 3 OUTCOMES","textChars":18,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/qdkzq1o3","slide":2,"text":"By the end, learners can do three observable things","textPreview":"By the end, learners can do three observable things","textChars":51,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/rytgzm58","slide":2,"bbox":[42,205,690,105]}
+{"kind":"textbox","id":"sh/03mhwbm5","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[66,228,70,54]}
+{"kind":"textbox","id":"sh/14vy5gnq","slide":2,"text":"Build a complete evidence chain","textPreview":"Build a complete evidence chain","textChars":31,"textLines":1,"bbox":[150,222,545,62]}
+{"kind":"shape","id":"sh/e14zu1oz","slide":2,"bbox":[42,337,690,105]}
+{"kind":"textbox","id":"sh/z2dg365k","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[66,360,70,54]}
+{"kind":"textbox","id":"sh/o76h0bm1","slide":2,"text":"Use provenance, coverage, and confidence correctly","textPreview":"Use provenance, coverage, and confidence correctly","textChars":50,"textLines":1,"bbox":[150,354,545,62]}
+{"kind":"shape","id":"sh/98fy9gnm","slide":2,"bbox":[42,469,690,105]}
+{"kind":"textbox","id":"sh/dkjqt4fy","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[66,492,70,54]}
+{"kind":"textbox","id":"sh/sja90zed","slide":2,"text":"Handle missing, stale, and conflicting evidence","textPreview":"Handle missing, stale, and conflicting evidence","textChars":47,"textLines":1,"bbox":[150,486,545,62]}
+{"kind":"textbox","id":"sh/rih8ruxs","slide":2,"text":"RUN OF SHOW","textPreview":"RUN OF SHOW","textChars":11,"textLines":1,"bbox":[805,205,330,30]}
+{"kind":"shape","id":"sh/qh8rypw7","slide":2,"bbox":[824,263,3,52]}
+{"kind":"shape","id":"sh/1ojax4fu","slide":2,"bbox":[813,277,24,24]}
+{"kind":"textbox","id":"sh/0na94zep","slide":2,"text":"Mental model","textPreview":"Mental model","textChars":12,"textLines":1,"bbox":[858,270,300,38]}
+{"kind":"shape","id":"sh/zm1svux4","slide":2,"bbox":[824,335,3,52]}
+{"kind":"shape","id":"sh/elsr2pwj","slide":2,"bbox":[813,349,24,24]}
+{"kind":"textbox","id":"sh/hszqlkfq","slide":2,"text":"Worked example","textPreview":"Worked example","textChars":14,"textLines":1,"bbox":[858,342,300,38]}
+{"kind":"shape","id":"sh/gr69sfe5","slide":2,"bbox":[824,407,3,52]}
+{"kind":"shape","id":"sh/8va98f61","slide":2,"bbox":[813,421,24,24]}
+{"kind":"textbox","id":"sh/9wja1knm","slide":2,"text":"Guided lab","textPreview":"Guided lab","textChars":10,"textLines":1,"bbox":[858,414,300,38]}
+{"kind":"shape","id":"sh/m9sr65ov","slide":2,"bbox":[824,479,3,52]}
+{"kind":"shape","id":"sh/7a18za5g","slide":2,"bbox":[813,493,24,24]}
+{"kind":"textbox","id":"sh/wzu9cfmd","slide":2,"text":"Prompt lab","textPreview":"Prompt lab","textChars":10,"textLines":1,"bbox":[858,486,300,38]}
+{"kind":"shape","id":"sh/h03a5kni","slide":2,"bbox":[824,551,3,52]}
+{"kind":"shape","id":"sh/uxcrap47","slide":2,"bbox":[813,565,24,24]}
+{"kind":"textbox","id":"sh/vyls3u5s","slide":2,"text":"Exit ticket","textPreview":"Exit ticket","textChars":11,"textLines":1,"bbox":[858,558,300,38]}
+{"kind":"shape","id":"sh/43u9gzm9","slide":2,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/54na94nu","slide":2,"text":"SESSION 03  •  CODE REVIEW HARNESS","textPreview":"SESSION 03  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/fypcfypw","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/rnlcf6","slide":2,"text":"Walk through the outcomes as performance statements, not topics. Tell learners what evidence they will create for each outcome. Preview the rhythm: a small amount of instruction followed by a worked example, a team lab, a prompt-writing task, and a short exit ticket. Ask each learner to choose the outcome that feels least familiar and write it at the top of their notes. Revisit that choice at the end. Keep this slide under five minutes; its purpose is to make success inspectable.\n\n[Sources]\n- Code Review Harness repository: contracts/evidence-contract.md; contracts/evidence-flow-model.md; contracts/universal-agent-contract.md"}
+{"kind":"slide","id":"sl/dh29sj","slide":3,"title":"MENTAL MODEL","textShapes":12}
+{"kind":"textbox","id":"sh/6tk3q5or","slide":3,"text":"MENTAL MODEL","textPreview":"MENTAL MODEL","textChars":12,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/twbm1kn2","slide":3,"text":"One system, four distinct ideas","textPreview":"One system, four distinct ideas","textChars":31,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/sv2lsf6h","slide":3,"bbox":[42,205,565,165]}
+{"kind":"textbox","id":"sh/j69kva50","slide":3,"text":"PROVENANCE","textPreview":"PROVENANCE","textChars":10,"textLines":1,"bbox":[70,233,235,38]}
+{"kind":"textbox","id":"sh/i503m5of","slide":3,"text":"Origin + acquisition","textPreview":"Origin + acquisition","textChars":20,"textLines":1,"bbox":[70,283,500,54]}
+{"kind":"shape","id":"sh/5sb2x0n6","slide":3,"bbox":[648,205,565,165]}
+{"kind":"textbox","id":"sh/krilof6l","slide":3,"text":"COVERAGE","textPreview":"COVERAGE","textChars":8,"textLines":1,"bbox":[676,233,235,38]}
+{"kind":"textbox","id":"sh/3md47u54","slide":3,"text":"Inspected + omitted","textPreview":"Inspected + omitted","textChars":19,"textLines":1,"bbox":[676,283,500,54]}
+{"kind":"shape","id":"sh/2143ypoj","slide":3,"bbox":[42,420,565,165]}
+{"kind":"textbox","id":"sh/0z21kfep","slide":3,"text":"TRACEABILITY","textPreview":"TRACEABILITY","textChars":12,"textLines":1,"bbox":[70,448,235,38]}
+{"kind":"textbox","id":"sh/10b2dkfa","slide":3,"text":"Stable links","textPreview":"Stable links","textChars":12,"textLines":1,"bbox":[70,498,500,54]}
+{"kind":"shape","id":"sh/exkji5wj","slide":3,"bbox":[648,420,565,165]}
+{"kind":"textbox","id":"sh/fytkbax4","slide":3,"text":"CONFIDENCE","textPreview":"CONFIDENCE","textChars":10,"textLines":1,"bbox":[676,448,235,38]}
+{"kind":"textbox","id":"sh/svi1gfed","slide":3,"text":"Support, not certainty","textPreview":"Support, not certainty","textChars":22,"textLines":1,"bbox":[676,498,500,54]}
+{"kind":"shape","id":"sh/dwb29kfy","slide":3,"bbox":[615,268,25,4]}
+{"kind":"shape","id":"sh/690je5wn","slide":3,"bbox":[615,483,25,4]}
+{"kind":"shape","id":"sh/ru9k7axs","slide":3,"bbox":[315,378,4,34]}
+{"kind":"shape","id":"sh/47i1cveh","slide":3,"bbox":[921,378,4,34]}
+{"kind":"shape","id":"sh/58r250f2","slide":3,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/loji9w7q","slide":3,"text":"SESSION 03  •  CODE REVIEW HARNESS","textPreview":"SESSION 03  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/knahgrq5","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/dh29sj","slide":3,"text":"Teach the four terms by asking learners to compare responsibilities, not definitions. For each card, ask: what can this thing guarantee, and what can it only attempt? Use the connecting marks to emphasize that the concepts cooperate but are not interchangeable. Invite learners to supply an example from familiar CI/CD tooling. Correct any answer that treats fluent language as proof of evidence, treats a workflow as a simple checklist, or treats the harness as merely a place to store prompts. End by having pairs explain the full mental model in sixty seconds without using the word “AI.”\n\n[Sources]\n- Code Review Harness repository: contracts/evidence-contract.md; contracts/evidence-flow-model.md; contracts/universal-agent-contract.md"}
+{"kind":"slide","id":"sl/vy1jhx","slide":4,"title":"WORKED EXAMPLE","textShapes":15}
+{"kind":"textbox","id":"sh/o3694bqt","slide":4,"text":"WORKED EXAMPLE","textPreview":"WORKED EXAMPLE","textChars":14,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/n2dsb698","slide":4,"text":"A trustworthy result is a chain—not a clever paragraph","textPreview":"A trustworthy result is a chain—not a clever paragraph","textChars":54,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/214r218n","slide":4,"bbox":[42,260,208,165]}
+{"kind":"textbox","id":"sh/xsfah0ra","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[60,278,38,32]}
+{"kind":"textbox","id":"sh/cr698vq5","slide":4,"text":"Lockfile line","textPreview":"Lockfile line","textChars":13,"textLines":1,"bbox":[62,328,168,70]}
+{"kind":"shape","id":"sh/bqxsfq9k","slide":4,"bbox":[256,340,19,4]}
+{"kind":"shape","id":"sh/apor6l8z","slide":4,"bbox":[275,333,14,18]}
+{"kind":"shape","id":"sh/dwva5wr6","slide":4,"bbox":[289,260,208,165]}
+{"kind":"textbox","id":"sh/sv29wrql","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[307,278,38,32]}
+{"kind":"textbox","id":"sh/ix8vi98r","slide":4,"text":"Evidence item","textPreview":"Evidence item","textChars":13,"textLines":1,"bbox":[309,328,168,70]}
+{"kind":"shape","id":"sh/jyhwrepc","slide":4,"bbox":[503,340,19,4]}
+{"kind":"shape","id":"sh/kzqdkjqx","slide":4,"bbox":[522,333,14,18]}
+{"kind":"shape","id":"sh/50zeto7i","slide":4,"bbox":[536,260,208,165]}
+{"kind":"textbox","id":"sh/618vmt83","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[554,278,38,32]}
+{"kind":"textbox","id":"sh/r21wvyp8","slide":4,"text":"Finding","textPreview":"Finding","textChars":7,"textLines":1,"bbox":[556,328,168,70]}
+{"kind":"shape","id":"sh/snado3qt","slide":4,"bbox":[750,340,19,4]}
+{"kind":"shape","id":"sh/tojex87e","slide":4,"bbox":[769,333,14,18]}
+{"kind":"shape","id":"sh/epsvqt8z","slide":4,"bbox":[783,260,208,165]}
+{"kind":"textbox","id":"sh/fq1wzypk","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[801,278,38,32]}
+{"kind":"textbox","id":"sh/bulcni5s","slide":4,"text":"CAPA","textPreview":"CAPA","textChars":4,"textLines":1,"bbox":[803,328,168,70]}
+{"kind":"shape","id":"sh/qtcved47","slide":4,"bbox":[997,340,19,4]}
+{"kind":"shape","id":"sh/dw3up8ni","slide":4,"bbox":[1016,333,14,18]}
+{"kind":"shape","id":"sh/cvudg3mx","slide":4,"bbox":[1030,260,208,165]}
+{"kind":"textbox","id":"sh/3q1cjy5g","slide":4,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1048,278,38,32]}
+{"kind":"textbox","id":"sh/2psbat4v","slide":4,"text":"Decision request","textPreview":"Decision request","textChars":16,"textLines":1,"bbox":[1050,328,168,70]}
+{"kind":"textbox","id":"sh/psjul8nm","slide":4,"text":"At every handoff: preserve identity, provenance, coverage, confidence, and consumer intent.","textPreview":"At every handoff: preserve identity, provenance, coverage, confidence, and consumer intent.","textChars":91,"textLines":1,"bbox":[100,486,1080,64]}
+{"kind":"shape","id":"sh/oradc3m1","slide":4,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/f21cfy5k","slide":4,"text":"SESSION 03  •  CODE REVIEW HARNESS","textPreview":"SESSION 03  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/e18b6t4z","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/vy1jhx","slide":4,"text":"Walk the example from left to right. At each handoff ask the room to name the producer, artifact, contract, validation condition, and consumer. Pause before the final box and ask who has authority to act. If the session includes failure branches, show that a safe system records why progress stopped instead of hiding the gap or guessing. Use one concrete repository example—such as a dependency, a secret, or a release artifact—but keep the technical details secondary to the control flow. The goal is for learners to see causality and traceability, not memorize labels.\n\n[Sources]\n- Code Review Harness repository: contracts/evidence-contract.md; contracts/evidence-flow-model.md; contracts/universal-agent-contract.md"}
+{"kind":"slide","id":"sl/agka8t","slide":5,"title":"GUIDED TEAM LAB","textShapes":13}
+{"kind":"textbox","id":"sh/6xw7upoz","slide":5,"text":"GUIDED TEAM LAB","textPreview":"GUIDED TEAM LAB","textChars":15,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/tk7q547a","slide":5,"text":"Build an artifact the room can inspect","textPreview":"Build an artifact the room can inspect","textChars":38,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/szepwz6p","slide":5,"bbox":[42,190,1196,180]}
+{"kind":"textbox","id":"sh/fmp87u5g","slide":5,"text":"TEAM TASK","textPreview":"TEAM TASK","textChars":9,"textLines":1,"bbox":[76,220,180,28]}
+{"kind":"textbox","id":"sh/elg7y9ov","slide":5,"text":"Build and then deliberately break a finding’s traceability chain.","textPreview":"Build and then deliberately break a finding’s traceability chain.","textChars":65,"textLines":1,"bbox":[76,265,1110,76]}
+{"kind":"shape","id":"sh/1o7q94nm","slide":5,"bbox":[42,410,374,165]}
+{"kind":"textbox","id":"sh/gnyp0z61","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[66,434,45,34]}
+{"kind":"textbox","id":"sh/3qp8be5s","slide":5,"text":"Map identifiers","textPreview":"Map identifiers","textChars":15,"textLines":1,"bbox":[66,486,320,55]}
+{"kind":"shape","id":"sh/2pg729o7","slide":5,"bbox":[453,410,374,165]}
+{"kind":"textbox","id":"sh/wj2187yh","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[477,434,45,34]}
+{"kind":"textbox","id":"sh/xkb2hcz2","slide":5,"text":"Remove one link","textPreview":"Remove one link","textChars":15,"textLines":1,"bbox":[477,486,320,55]}
+{"kind":"shape","id":"sh/ahkj6xgr","slide":5,"bbox":[864,410,374,165]}
+{"kind":"textbox","id":"sh/bitkf2hc","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[888,434,45,34]}
+{"kind":"textbox","id":"sh/k7mlc7yt","slide":5,"text":"Explain the failure","textPreview":"Explain the failure","textChars":19,"textLines":1,"bbox":[888,486,320,55]}
+{"kind":"textbox","id":"sh/58v2lcze","slide":5,"text":"Suggested timing: 5 min brief • 20 min work • 10 min critique • 5 min repair","textPreview":"Suggested timing: 5 min brief • 20 min work • 10 min critique • 5 min repair","textChars":76,"textLines":1,"bbox":[42,616,1000,28]}
+{"kind":"shape","id":"sh/ylkjahgn","slide":5,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/j6dkj2h8","slide":5,"text":"SESSION 03  •  CODE REVIEW HARNESS","textPreview":"SESSION 03  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/sbmlgryp","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/agka8t","slide":5,"text":"Form teams of three or four and assign one recorder. Read the task exactly once, then ask teams to restate the acceptance condition in their own words. During work time, circulate and ask evidence questions rather than supplying answers. At the critique, require another team to identify one strength, one contract gap, and one unsafe assumption. Give teams five minutes to repair the artifact before debrief. Collect the final artifact as course evidence; it will become input to the capstone. If time compresses, protect the critique and repair steps—the learning comes from validation, not only drafting.\n\n[Sources]\n- Code Review Harness repository: contracts/evidence-contract.md; contracts/evidence-flow-model.md; contracts/universal-agent-contract.md"}
+{"kind":"slide","id":"sl/9wk30e","slide":6,"title":"PROMPT ENGINEERING LAB","textShapes":17}
+{"kind":"textbox","id":"sh/h8vepo3u","slide":6,"text":"PROMPT ENGINEERING LAB","textPreview":"PROMPT ENGINEERING LAB","textChars":22,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/u5kvut4j","slide":6,"text":"Turn the contract into executable prompt behavior","textPreview":"Turn the contract into executable prompt behavior","textChars":49,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"textbox","id":"sh/v6twnyl4","slide":6,"text":"Write evidence admission and citation rules that prevent unsupported findings.","textPreview":"Write evidence admission and citation rules that prevent unsupported findings.","textChars":78,"textLines":1,"bbox":[42,175,1196,64]}
+{"kind":"shape","id":"sh/832dsjmd","slide":6,"bbox":[42,280,374,115]}
+{"kind":"textbox","id":"sh/t4belo3y","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,300,44,28]}
+{"kind":"textbox","id":"sh/61kvq947","slide":6,"text":"Admissibility","textPreview":"Admissibility","textChars":13,"textLines":1,"bbox":[116,299,270,70]}
+{"kind":"shape","id":"sh/72twjels","slide":6,"bbox":[453,280,374,115]}
+{"kind":"textbox","id":"sh/sz6x4nmh","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[475,300,44,28]}
+{"kind":"textbox","id":"sh/d0fex832","slide":6,"text":"Freshness","textPreview":"Freshness","textChars":9,"textLines":1,"bbox":[527,299,270,70]}
+{"kind":"shape","id":"sh/l8b2pkfq","slide":6,"bbox":[864,280,374,115]}
+{"kind":"textbox","id":"sh/0721wfyl","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[886,300,44,28]}
+{"kind":"textbox","id":"sh/z6tknax0","slide":6,"text":"Evidence IDs","textPreview":"Evidence IDs","textChars":12,"textLines":1,"bbox":[938,299,270,70]}
+{"kind":"shape","id":"sh/y5kju5gf","slide":6,"bbox":[42,425,374,115]}
+{"kind":"textbox","id":"sh/d4r2l0fu","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[64,445,44,28]}
+{"kind":"textbox","id":"sh/c3i1svy9","slide":6,"text":"Coverage","textPreview":"Coverage","textChars":8,"textLines":1,"bbox":[116,444,270,70]}
+{"kind":"shape","id":"sh/b29kjaxo","slide":6,"bbox":[453,425,374,115]}
+{"kind":"textbox","id":"sh/q10jq5g3","slide":6,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[475,445,44,28]}
+{"kind":"textbox","id":"sh/x0v2x4fy","slide":6,"text":"Conflicts","textPreview":"Conflicts","textChars":9,"textLines":1,"bbox":[527,444,270,70]}
+{"kind":"shape","id":"sh/wzml4zyt","slide":6,"bbox":[864,425,374,115]}
+{"kind":"textbox","id":"sh/gfedg7a1","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[886,445,44,28]}
+{"kind":"textbox","id":"sh/1gnupcrm","slide":6,"text":"Incomplete input","textPreview":"Incomplete input","textChars":16,"textLines":1,"bbox":[938,444,270,70]}
+{"kind":"shape","id":"sh/edwvexsv","slide":6,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/fe5cn29g","slide":6,"text":"SESSION 03  •  CODE REVIEW HARNESS","textPreview":"SESSION 03  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/sbudcnap","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/9wk30e","slide":6,"text":"Require learners to draft in the six visible blocks rather than writing a long narrative prompt. For each block, they must cite the contract or role specification that justifies it. Pair reviewers should look for contradictions across blocks: a scope that exceeds the authoritative question, a method that admits evidence the input rules reject, or an output that implies decision authority. Ask reviewers to propose the smallest repair that restores the invariant. End by selecting one clause and testing it verbally with a hostile input. Remind the class that prompt quality is demonstrated by behavior across cases, not by how polished the wording sounds.\n\n[Sources]\n- Code Review Harness repository: contracts/evidence-contract.md; contracts/evidence-flow-model.md; contracts/universal-agent-contract.md"}
+{"kind":"slide","id":"sl/env5uw","slide":7,"title":"SESSION 03  •  EXIT TICKET","textShapes":4}
+{"kind":"textbox","id":"sh/cbmdsz2x","slide":7,"text":"SESSION 03  •  EXIT TICKET","textPreview":"SESSION 03  •  EXIT TICKET","textChars":26,"textLines":1,"bbox":[52,50,600,30]}
+{"kind":"textbox","id":"sh/badwzulc","slide":7,"text":"Show a reproducible chain and state its coverage limit.","textPreview":"Show a reproducible chain and state its coverage limit.","textChars":55,"textLines":1,"bbox":[52,160,1070,245]}
+{"kind":"shape","id":"sh/q94vqpk7","slide":7,"bbox":[52,460,1120,3]}
+{"kind":"textbox","id":"sh/p8vexk3m","slide":7,"text":"Answer with evidence. Name the contract, state, or authority boundary you used.","textPreview":"Answer with evidence. Name the contract, state, or authority boundary you used.","textChars":79,"textLines":1,"bbox":[52,500,1040,74]}
+{"kind":"textbox","id":"sh/o7mdof21","slide":7,"text":"NEXT: SESSION 04","textPreview":"NEXT: SESSION 04","textChars":16,"textLines":1,"bbox":[52,640,600,28]}
+{"kind":"notes","id":"nt/env5uw","slide":7,"text":"Give learners two quiet minutes to answer the exit ticket individually. Require an evidence-backed response, not a slogan. Invite two contrasting answers and ask the group which is more reproducible and why. Collect responses or have learners commit them to the course workspace. Close by connecting today’s artifact to the next session and by restating the invariant: evidence is observable, assessment is bounded, recommendations inform, and humans decide. If misconceptions remain, record them as input to the next session rather than extending the lecture.\n\n[Sources]\n- Code Review Harness repository: contracts/evidence-contract.md; contracts/evidence-flow-model.md; contracts/universal-agent-contract.md"}

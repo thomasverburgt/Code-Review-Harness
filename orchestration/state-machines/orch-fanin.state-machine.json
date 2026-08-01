@@ -1,0 +1,26 @@
+{
+  "$schema": "../../appendices/schemas/orchestration-state-machine.schema.json",
+  "controller": "ORCH-FANIN",
+  "version": "0.1.0",
+  "initial_state": "awaiting_artifact",
+  "terminal_states": ["routed", "failed"],
+  "states": ["awaiting_artifact", "validating_identity", "checking_supersession", "validating_schema", "validating_integrity", "validating_semantics", "evaluating_partial_input", "routing", "routed", "failed"],
+  "transitions": [
+    {"from": "awaiting_artifact", "event": "artifact_received", "guard": "artifact_declared_for_node", "to": "validating_identity", "audit_reason": "ARTIFACT_RECEIVED"},
+    {"from": "validating_identity", "event": "identity_valid", "guard": "uuid_designation_and_versions_match_dispatch", "to": "checking_supersession", "audit_reason": "IDENTITY_VALID"},
+    {"from": "checking_supersession", "event": "supersession_checked", "guard": "artifact_current_or_authorized_replacement_linked", "to": "validating_schema", "audit_reason": "SUPERSESSION_VALID"},
+    {"from": "checking_supersession", "event": "validation_failed", "guard": "superseded_without_authorized_replacement", "to": "failed", "audit_reason": "SUPERSESSION_INVALID"},
+    {"from": "validating_schema", "event": "schema_valid", "guard": "universal_layer_and_role_schemas_pass", "to": "validating_integrity", "audit_reason": "SCHEMA_VALID"},
+    {"from": "validating_integrity", "event": "integrity_valid", "guard": "input_and_output_hashes_verified", "to": "validating_semantics", "audit_reason": "INTEGRITY_VALID"},
+    {"from": "validating_semantics", "event": "semantics_valid", "guard": "lineage_freshness_conflicts_capa_authority_and_routing_valid", "to": "evaluating_partial_input", "audit_reason": "SEMANTICS_VALID"},
+    {"from": "evaluating_partial_input", "event": "partial_input_checked", "guard": "complete_or_valid_unexpired_authorization", "to": "routing", "audit_reason": "PARTIAL_INPUT_VALID"},
+    {"from": "routing", "event": "routing_complete", "guard": "only_declared_consumers_received_immutable_reference", "to": "routed", "audit_reason": "ROUTING_COMPLETE"},
+    {"from": "awaiting_artifact", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "ARTIFACT_UNDECLARED"},
+    {"from": "validating_identity", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "IDENTITY_INVALID"},
+    {"from": "validating_schema", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "SCHEMA_INVALID"},
+    {"from": "validating_integrity", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "INTEGRITY_INVALID"},
+    {"from": "validating_semantics", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "SEMANTICS_INVALID"},
+    {"from": "evaluating_partial_input", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "PARTIAL_INPUT_UNAUTHORIZED"},
+    {"from": "routing", "event": "validation_failed", "guard": "always", "to": "failed", "audit_reason": "ROUTING_INVALID"}
+  ]
+}

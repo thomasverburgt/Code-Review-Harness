@@ -1,0 +1,21 @@
+{
+  "fixture_suite_id": "FIXTURE-VERTICAL-RISK-NEGATIVE-001",
+  "fixture_suite_version": "0.1.0",
+  "cases": [
+    {"case_id": "workflow_uuid_mismatch", "target": "workflow", "expected_result": "failed", "expected_reason": "identity mismatch"},
+    {"case_id": "workflow_cycle", "target": "workflow", "expected_result": "failed", "expected_reason": "cycle"},
+    {"case_id": "undeclared_dependency", "target": "workflow", "expected_result": "failed", "expected_reason": "required_inputs/edge mismatch"},
+    {"case_id": "missing_required_artifact", "target": "artifact_set", "expected_result": "failed", "expected_reason": "artifact set mismatch"},
+    {"case_id": "bad_lineage_hash", "target": "artifact_set", "expected_result": "failed", "expected_reason": "lineage/hash mismatch"},
+    {"case_id": "missing_layer_field", "target": "artifact_set", "expected_result": "failed", "expected_reason": "missing required property"},
+    {"case_id": "stale_input", "target": "artifact_set", "expected_result": "failed", "expected_reason": "stale input"},
+    {"case_id": "unauthorized_incomplete_input", "target": "artifact_set", "expected_result": "failed", "expected_reason": "requires complete lifecycle"},
+    {"case_id": "contract_version_mismatch", "target": "artifact_set", "expected_result": "failed", "expected_reason": "contract version"},
+    {"case_id": "artifact_uuid_mismatch", "target": "artifact_set", "expected_result": "failed", "expected_reason": "identity does not match registry"},
+    {"case_id": "decision_authority_violation", "target": "decision_request", "expected_result": "failed", "expected_reason": "expected constant"},
+    {"case_id": "incomplete_capa", "target": "artifact_set", "expected_result": "failed", "expected_reason": "incomplete CAPA"},
+    {"case_id": "restricted_secret_leakage", "target": "artifact_set", "expected_result": "failed", "expected_reason": "restricted secret material"},
+    {"case_id": "unlinked_final_decision", "target": "decision_request", "expected_result": "failed", "expected_reason": "does not reference final"},
+    {"case_id": "role_designation_mismatch", "target": "artifact_set", "expected_result": "failed", "expected_reason": "expected constant"}
+  ]
+}

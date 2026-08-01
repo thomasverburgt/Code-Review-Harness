@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "report-export",
+  "logical_path": "report-exports/c4fd2c8d-8419-54f2-aca9-24f4fe2b1ee3.json",
+  "object_hash": "sha256:64f9dbcf301b916e505bd23e62d68ee2251f299f718fd3c0f0d73e3179167c3e",
+  "record_id": "c4fd2c8d-8419-54f2-aca9-24f4fe2b1ee3",
+  "retention_class": "governance-report"
+}

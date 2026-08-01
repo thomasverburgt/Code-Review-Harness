@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/shadow-path-comparison.schema.json",
+  "title": "Shadow Path Comparison",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["comparison_id", "workflow_id", "generated_at", "baseline_cap_risk", "shadow_prod_synth", "shadow_cap_risk", "isolation", "lineage", "semantics", "telemetry", "overall_state", "blocking_issues", "authority_effect", "comparison_hash"],
+  "properties": {
+    "comparison_id": {"type": "string", "format": "uuid"},
+    "workflow_id": {"const": "WF-PROD-SYNTH-CAP-RISK-SHADOW-001"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "baseline_cap_risk": {"$ref": "#/$defs/artifactRef"},
+    "shadow_prod_synth": {"$ref": "#/$defs/artifactRef"},
+    "shadow_cap_risk": {"$ref": "#/$defs/artifactRef"},
+    "isolation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ledger_namespace", "baseline_workflow_changed", "report_package_changed", "publication_enabled", "governance_effect", "deployment_effect"],
+      "properties": {
+        "ledger_namespace": {"const": "shadow/adr-0015"},
+        "baseline_workflow_changed": {"const": false},
+        "report_package_changed": {"const": false},
+        "publication_enabled": {"const": false},
+        "governance_effect": {"const": "none"},
+        "deployment_effect": {"const": "none"}
+      }
+    },
+    "lineage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["exact_child_binding", "preserved_finding_ids", "preserved_evidence_refs", "dropped_refs", "invented_refs"],
+      "properties": {
+        "exact_child_binding": {"type": "boolean"},
+        "preserved_finding_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "preserved_evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "dropped_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "invented_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "semantics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["equivalent", "dimensions", "explained_deltas"],
+      "properties": {
+        "equivalent": {"type": "boolean"},
+        "dimensions": {"type": "object", "additionalProperties": {"enum": ["equivalent", "different"]}},
+        "explained_deltas": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "telemetry": {
+      "type": "object", "additionalProperties": false,
+      "required": ["baseline_wall_duration_ms", "shadow_prod_synth_wall_duration_ms", "shadow_cap_risk_wall_duration_ms", "platform"],
+      "properties": {
+        "baseline_wall_duration_ms": {"type": ["integer", "null"], "minimum": 0},
+        "shadow_prod_synth_wall_duration_ms": {"type": ["integer", "null"], "minimum": 0},
+        "shadow_cap_risk_wall_duration_ms": {"type": ["integer", "null"], "minimum": 0},
+        "platform": {"type": "string", "minLength": 1}
+      }
+    },
+    "overall_state": {"enum": ["equivalent", "explained_delta", "blocked"]},
+    "blocking_issues": {"type": "array", "items": {"type": "string"}},
+    "authority_effect": {"const": "comparison_only"},
+    "comparison_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "artifactRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["artifact_id", "content_hash"],
+      "properties": {
+        "artifact_id": {"type": "string", "format": "uuid"},
+        "content_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

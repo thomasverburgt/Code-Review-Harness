@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/dispatch-envelope.schema.json",
+  "title": "Agent Dispatch Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["dispatch_id", "workflow_id", "workflow_version", "execution_id", "node_id", "agent", "scope", "input_manifest", "version_pins", "execution_environment", "expected_output", "partial_input_authorization", "created_at"],
+  "properties": {
+    "dispatch_id": {"type": "string", "format": "uuid"},
+    "workflow_id": {"type": "string"},
+    "workflow_version": {"type": "string"},
+    "execution_id": {"type": "string", "format": "uuid"},
+    "node_id": {"type": "string"},
+    "agent": {"type": "object", "additionalProperties": false, "required": ["agent_uuid", "designation", "contract_version"], "properties": {"agent_uuid": {"type": "string", "format": "uuid"}, "designation": {"type": "string"}, "contract_version": {"type": "string"}}},
+    "scope": {"type": "object"},
+    "input_manifest": {"type": "array", "items": {"$ref": "#/$defs/input"}},
+    "version_pins": {"type": "object"},
+    "execution_environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["execution_mode", "platform_designation", "platform_class", "approval_reference", "accelerator_runtime", "container_image", "model_or_workload_scale", "limitations", "environment_policy_version"],
+      "properties": {
+        "execution_mode": {"enum": ["test", "production"]},
+        "platform_designation": {"type": "string", "minLength": 1},
+        "platform_class": {"enum": ["a100-large-cluster", "dgx-spark", "approved-equivalent"]},
+        "approval_reference": {"type": ["string", "null"]},
+        "accelerator_runtime": {"type": "string", "minLength": 1},
+        "container_image": {"type": "string", "minLength": 1},
+        "model_or_workload_scale": {"type": "string", "minLength": 1},
+        "limitations": {"type": "array", "items": {"type": "string"}},
+        "environment_policy_version": {"const": "ADR-0008"}
+      }
+    },
+    "expected_output": {"type": "object", "required": ["universal_schema", "layer", "layer_schema", "role_schema", "consumers"], "properties": {"universal_schema": {"type": "string"}, "layer": {"type": "string"}, "layer_schema": {"type": "string"}, "role_schema": {"type": "string"}, "consumers": {"type": "array", "items": {"type": "string"}}}},
+    "partial_input_authorization": {"type": ["object", "null"], "properties": {"authorization_id": {"type": "string"}, "authority_role": {"type": "string"}, "missing_inputs": {"type": "array", "items": {"type": "string"}}, "limitations": {"type": "array", "items": {"type": "string"}}, "expires_at": {"type": "string", "format": "date-time"}}, "required": ["authorization_id", "authority_role", "missing_inputs", "limitations", "expires_at"]},
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_id", "artifact_type", "hash", "schema", "producer_designation", "lifecycle_state", "freshness_state", "required"],
+      "properties": {
+        "artifact_id": {"type": "string"},
+        "artifact_type": {"type": "string"},
+        "hash": {"type": "string"},
+        "schema": {"type": "string"},
+        "producer_designation": {"type": "string"},
+        "lifecycle_state": {"enum": ["complete", "incomplete_input", "failed", "superseded"]},
+        "freshness_state": {"enum": ["fresh", "stale", "unknown"]},
+        "required": {"type": "boolean"}
+      }
+    }
+  }
+}

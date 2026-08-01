@@ -1,0 +1,153 @@
+{"kind":"deck","id":"pr/qs060w","name":"Deck"}
+{"kind":"layout","layoutId":"3e46aef1-77ba-4258-bf53-9ca63cc5753b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"b6a1968f-8e1d-44f5-9c30-5295ac7b8a1d","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ymzhay","slide":1,"title":"SESSION 05","textShapes":6}
+{"kind":"shape","id":"sh/oja9c3u5","slide":1,"bbox":[780,0,500,720]}
+{"kind":"shape","id":"sh/3i1s3ytk","slide":1,"bbox":[780,0,12,720]}
+{"kind":"textbox","id":"sh/2hsratcz","slide":1,"text":"SESSION 05","textPreview":"SESSION 05","textChars":10,"textLines":1,"bbox":[52,52,300,30]}
+{"kind":"textbox","id":"sh/d83a98bm","slide":1,"text":"Prompt Engineering Deep Dive","textPreview":"Prompt Engineering Deep Dive","textChars":28,"textLines":1,"bbox":[52,150,660,220]}
+{"kind":"textbox","id":"sh/c7u9gna1","slide":1,"text":"How do we make 55 prompts coherent, specialized, and safe under pressure?","textPreview":"How do we make 55 prompts coherent, specialized, and safe under pressure?","textChars":73,"textLines":1,"bbox":[52,415,620,115]}
+{"kind":"shape","id":"sh/b6ls7itw","slide":1,"bbox":[850,150,330,330]}
+{"kind":"textbox","id":"sh/qlcredsb","slide":1,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[885,185,260,150]}
+{"kind":"textbox","id":"sh/tczqxobi","slide":1,"text":"EVIDENCE\nCONTRACTS\nSTATE\nHUMAN AUTHORITY","textPreview":"EVIDENCE | CONTRACTS | STATE | HUMAN AUTHORITY","textChars":40,"textLines":4,"bbox":[885,352,260,100]}
+{"kind":"textbox","id":"sh/sbq94jux","slide":1,"text":"Condensed Young Engineer Training Series • 55 minutes","textPreview":"Condensed Young Engineer Training Series • 55 minutes","textChars":53,"textLines":1,"bbox":[52,640,650,28]}
+{"kind":"notes","id":"nt/ymzhay","slide":1,"text":"Welcome learners and read the driving question aloud. Ask for a quick show of hands: who has used an AI assistant, who has relied on an automated code-review tool, and who has had to explain why an automated finding was correct? Frame this session as engineering a trustworthy system around model capability. Preview that every claim in the course will be tied to evidence, a contract, a workflow state, or a human authority boundary. Do not teach the whole session from the title slide; use it to establish the problem and invite one concrete experience from the room.\n\n[Sources]\n- Code Review Harness repository: contracts/universal-agent-contract.md; contracts/specialist-agent-contract.md; contracts/sandboxed-contract-evolution.md"}
+{"kind":"slide","id":"sl/jb9nl1","slide":2,"title":"SESSION 5 OUTCOMES","textShapes":16}
+{"kind":"textbox","id":"sh/yhoze5g3","slide":2,"text":"SESSION 5 OUTCOMES","textPreview":"SESSION 5 OUTCOMES","textChars":18,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/lkfypkze","slide":2,"text":"By the end, learners can do three observable things","textPreview":"By the end, learners can do three observable things","textChars":51,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/kj6hgfyt","slide":2,"bbox":[42,205,690,105]}
+{"kind":"textbox","id":"sh/bedgjahc","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[66,228,70,54]}
+{"kind":"textbox","id":"sh/ad4za5gr","slide":2,"text":"Separate shared modules from role specialization","textPreview":"Separate shared modules from role specialization","textChars":48,"textLines":1,"bbox":[150,222,545,62]}
+{"kind":"shape","id":"sh/xgfyl0zi","slide":2,"bbox":[42,337,690,105]}
+{"kind":"textbox","id":"sh/cf6hcfyx","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[66,360,70,54]}
+{"kind":"textbox","id":"sh/nadgfqhg","slide":2,"text":"Trace each clause to a governing requirement","textPreview":"Trace each clause to a governing requirement","textChars":44,"textLines":1,"bbox":[150,354,545,62]}
+{"kind":"shape","id":"sh/294z6lgv","slide":2,"bbox":[42,469,690,105]}
+{"kind":"textbox","id":"sh/s365wz2l","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[66,492,70,54]}
+{"kind":"textbox","id":"sh/t4fmp4j6","slide":2,"text":"Design fail-closed behavior for adversarial inputs","textPreview":"Design fail-closed behavior for adversarial inputs","textChars":50,"textLines":1,"bbox":[150,486,545,62]}
+{"kind":"textbox","id":"sh/61o3upkv","slide":2,"text":"RUN OF SHOW","textPreview":"RUN OF SHOW","textChars":11,"textLines":1,"bbox":[805,205,330,30]}
+{"kind":"shape","id":"sh/72x4nu10","slide":2,"bbox":[824,263,3,52]}
+{"kind":"shape","id":"sh/kzmlsf2p","slide":2,"bbox":[813,277,24,24]}
+{"kind":"textbox","id":"sh/50vmlkja","slide":2,"text":"Mental model","textPreview":"Mental model","textChars":12,"textLines":1,"bbox":[858,270,300,38]}
+{"kind":"shape","id":"sh/ix43qpkj","slide":2,"bbox":[824,335,3,52]}
+{"kind":"shape","id":"sh/jyd4ja14","slide":2,"bbox":[813,349,24,24]}
+{"kind":"textbox","id":"sh/ovq54j2t","slide":2,"text":"Worked example","textPreview":"Worked example","textChars":14,"textLines":1,"bbox":[858,342,300,38]}
+{"kind":"shape","id":"sh/pwzmxoje","slide":2,"bbox":[824,407,3,52]}
+{"kind":"shape","id":"sh/xcvmhobi","slide":2,"bbox":[813,421,24,24]}
+{"kind":"textbox","id":"sh/cbml8jux","slide":2,"text":"Instructor demo","textPreview":"Instructor demo","textChars":15,"textLines":1,"bbox":[858,414,300,38]}
+{"kind":"shape","id":"sh/bqd4fetc","slide":2,"bbox":[824,479,3,52]}
+{"kind":"shape","id":"sh/ap4369c7","slide":2,"bbox":[813,493,24,24]}
+{"kind":"textbox","id":"sh/povmd4bm","slide":2,"text":"Prompt walkthrough","textPreview":"Prompt walkthrough","textChars":18,"textLines":1,"bbox":[858,486,300,38]}
+{"kind":"shape","id":"sh/onml4zu1","slide":2,"bbox":[824,551,3,52]}
+{"kind":"shape","id":"sh/nmt4butg","slide":2,"bbox":[813,565,24,24]}
+{"kind":"textbox","id":"sh/2lk32pcv","slide":2,"text":"Knowledge check","textPreview":"Knowledge check","textChars":15,"textLines":1,"bbox":[858,558,300,38]}
+{"kind":"shape","id":"sh/1kbm94ba","slide":2,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/gj2l0zup","slide":2,"text":"SESSION 05  •  CODE REVIEW HARNESS","textPreview":"SESSION 05  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/6dgbu1ob","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/jb9nl1","slide":2,"text":"Walk through the outcomes as observable capabilities. Preview the 55-minute rhythm: mental model, worked example, instructor demonstration, prompt walkthrough, and knowledge check. Keep participation conversational and spend no more than four minutes here.\n\n[Sources]\n- Code Review Harness repository: contracts/universal-agent-contract.md; contracts/specialist-agent-contract.md; contracts/sandboxed-contract-evolution.md"}
+{"kind":"slide","id":"sl/ywyrss","slide":3,"title":"MENTAL MODEL","textShapes":12}
+{"kind":"textbox","id":"sh/pkzu1wf2","slide":3,"text":"MENTAL MODEL","textPreview":"MENTAL MODEL","textChars":12,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/2h8bq1wr","slide":3,"text":"One system, four distinct ideas","textPreview":"One system, four distinct ideas","textChars":31,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/3ihcz6xc","slide":3,"bbox":[42,205,565,165]}
+{"kind":"textbox","id":"sh/cnatwbet","slide":3,"text":"SHARED MODULE","textPreview":"SHARED MODULE","textChars":13,"textLines":1,"bbox":[70,233,235,38]}
+{"kind":"textbox","id":"sh/xoju5gfe","slide":3,"text":"Stable inherited behavior","textPreview":"Stable inherited behavior","textChars":25,"textLines":1,"bbox":[70,283,500,54]}
+{"kind":"shape","id":"sh/ql8bu1wn","slide":3,"bbox":[648,205,565,165]}
+{"kind":"textbox","id":"sh/bmhc36x8","slide":3,"text":"ROLE BLOCK","textPreview":"ROLE BLOCK","textChars":10,"textLines":1,"bbox":[676,233,235,38]}
+{"kind":"textbox","id":"sh/sr6tk7ep","slide":3,"text":"Owned method + exclusions","textPreview":"Owned method + exclusions","textChars":25,"textLines":1,"bbox":[676,283,500,54]}
+{"kind":"shape","id":"sh/tsfutcfa","slide":3,"bbox":[42,420,565,165]}
+{"kind":"textbox","id":"sh/lsvy18fa","slide":3,"text":"TRACE MATRIX","textPreview":"TRACE MATRIX","textChars":12,"textLines":1,"bbox":[70,448,235,38]}
+{"kind":"textbox","id":"sh/krmx83yp","slide":3,"text":"Requirement coverage","textPreview":"Requirement coverage","textChars":20,"textLines":1,"bbox":[70,498,500,54]}
+{"kind":"shape","id":"sh/zqdwzyxk","slide":3,"bbox":[648,420,565,165]}
+{"kind":"textbox","id":"sh/ypkf6dgz","slide":3,"text":"ADVERSARIAL CASE","textPreview":"ADVERSARIAL CASE","textChars":16,"textLines":1,"bbox":[676,448,235,38]}
+{"kind":"textbox","id":"sh/9wvy5sfm","slide":3,"text":"Invariant under pressure","textPreview":"Invariant under pressure","textChars":24,"textLines":1,"bbox":[676,498,500,54]}
+{"kind":"shape","id":"sh/8vmxcny1","slide":3,"bbox":[615,268,25,4]}
+{"kind":"shape","id":"sh/7udg3ixg","slide":3,"bbox":[615,483,25,4]}
+{"kind":"shape","id":"sh/mt4fadgv","slide":3,"bbox":[315,378,4,34]}
+{"kind":"shape","id":"sh/hkfy9sfi","slide":3,"bbox":[921,378,4,34]}
+{"kind":"shape","id":"sh/wz6xgnyx","slide":3,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/g3ehcbm9","slide":3,"text":"SESSION 05  •  CODE REVIEW HARNESS","textPreview":"SESSION 05  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/h4nilgnu","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/ywyrss","slide":3,"text":"Teach the four terms by asking learners to compare responsibilities, not definitions. For each card, ask: what can this thing guarantee, and what can it only attempt? Use the connecting marks to emphasize that the concepts cooperate but are not interchangeable. Invite learners to supply an example from familiar CI/CD tooling. Correct any answer that treats fluent language as proof of evidence, treats a workflow as a simple checklist, or treats the harness as merely a place to store prompts. End by having pairs explain the full mental model in sixty seconds without using the word “AI.”\n\n[Sources]\n- Code Review Harness repository: contracts/universal-agent-contract.md; contracts/specialist-agent-contract.md; contracts/sandboxed-contract-evolution.md"}
+{"kind":"slide","id":"sl/ge12gk","slide":4,"title":"WORKED EXAMPLE","textShapes":15}
+{"kind":"textbox","id":"sh/t036hcri","slide":4,"text":"WORKED EXAMPLE","textPreview":"WORKED EXAMPLE","textChars":14,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/mxc76hsr","slide":4,"text":"A trustworthy result is a chain—not a clever paragraph","textPreview":"A trustworthy result is a chain—not a clever paragraph","textChars":54,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/7ylof29c","slide":4,"bbox":[42,260,208,165]}
+{"kind":"textbox","id":"sh/g3epcrat","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[60,278,38,32]}
+{"kind":"textbox","id":"sh/h4n6lwre","slide":4,"text":"Contract rule","textPreview":"Contract rule","textChars":13,"textLines":1,"bbox":[62,328,168,70]}
+{"kind":"shape","id":"sh/u1c7ahsn","slide":4,"bbox":[256,340,19,4]}
+{"kind":"shape","id":"sh/v2lojm98","slide":4,"bbox":[275,333,14,18]}
+{"kind":"shape","id":"sh/c7a50nap","slide":4,"bbox":[289,260,208,165]}
+{"kind":"textbox","id":"sh/x8j69sra","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[307,278,38,32]}
+{"kind":"textbox","id":"sh/5g7ihsnu","slide":4,"text":"Prompt clause","textPreview":"Prompt clause","textChars":13,"textLines":1,"bbox":[309,328,168,70]}
+{"kind":"shape","id":"sh/4fy18nm9","slide":4,"bbox":[503,340,19,4]}
+{"kind":"shape","id":"sh/jep0fi5o","slide":4,"bbox":[522,333,14,18]}
+{"kind":"shape","id":"sh/idgj6d43","slide":4,"bbox":[536,260,208,165]}
+{"kind":"textbox","id":"sh/t4rilsnq","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[554,278,38,32]}
+{"kind":"textbox","id":"sh/s3i1cnm5","slide":4,"text":"Output field","textPreview":"Output field","textChars":12,"textLines":1,"bbox":[556,328,168,70]}
+{"kind":"shape","id":"sh/rip0ji5k","slide":4,"bbox":[750,340,19,4]}
+{"kind":"shape","id":"sh/6hgjad4f","slide":4,"bbox":[769,333,14,18]}
+{"kind":"shape","id":"sh/18r2pcn2","slide":4,"bbox":[783,260,208,165]}
+{"kind":"textbox","id":"sh/07i1g7mh","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[801,278,38,32]}
+{"kind":"textbox","id":"sh/knat8fyp","slide":4,"text":"Test case","textPreview":"Test case","textChars":9,"textLines":1,"bbox":[803,328,168,70]}
+{"kind":"shape","id":"sh/loju10za","slide":4,"bbox":[997,340,19,4]}
+{"kind":"shape","id":"sh/ylsb65gj","slide":4,"bbox":[1016,333,14,18]}
+{"kind":"shape","id":"sh/zm1czah4","slide":4,"bbox":[1030,260,208,165]}
+{"kind":"textbox","id":"sh/8rudcfy1","slide":4,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1048,278,38,32]}
+{"kind":"textbox","id":"sh/9s3u5kf6","slide":4,"text":"Pass invariant","textPreview":"Pass invariant","textChars":14,"textLines":1,"bbox":[1050,328,168,70]}
+{"kind":"textbox","id":"sh/mpsba5gv","slide":4,"text":"At every handoff: preserve identity, provenance, coverage, confidence, and consumer intent.","textPreview":"At every handoff: preserve identity, provenance, coverage, confidence, and consumer intent.","textChars":91,"textLines":1,"bbox":[100,486,1080,64]}
+{"kind":"shape","id":"sh/7q1c3ahg","slide":4,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/ovqt0vyh","slide":4,"text":"SESSION 05  •  CODE REVIEW HARNESS","textPreview":"SESSION 05  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/pwzutgz2","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/ge12gk","slide":4,"text":"Walk the example from left to right. At each handoff ask the room to name the producer, artifact, contract, validation condition, and consumer. Pause before the final box and ask who has authority to act. If the session includes failure branches, show that a safe system records why progress stopped instead of hiding the gap or guessing. Use one concrete repository example—such as a dependency, a secret, or a release artifact—but keep the technical details secondary to the control flow. The goal is for learners to see causality and traceability, not memorize labels.\n\n[Sources]\n- Code Review Harness repository: contracts/universal-agent-contract.md; contracts/specialist-agent-contract.md; contracts/sandboxed-contract-evolution.md"}
+{"kind":"slide","id":"sl/8lf1qi","slide":5,"title":"INSTRUCTOR DEMONSTRATION","textShapes":13}
+{"kind":"textbox","id":"sh/vu5oj6dw","slide":5,"text":"INSTRUCTOR DEMONSTRATION","textPreview":"INSTRUCTOR DEMONSTRATION","textChars":24,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/wvypsbuh","slide":5,"text":"See the control in action","textPreview":"See the control in action","textChars":25,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"shape","id":"sh/hw76lgv2","slide":5,"bbox":[42,190,1196,180]}
+{"kind":"textbox","id":"sh/ixg7ulcn","slide":5,"text":"LIVE WALKTHROUGH","textPreview":"LIVE WALKTHROUGH","textChars":16,"textLines":1,"bbox":[76,220,220,28]}
+{"kind":"textbox","id":"sh/jyponqds","slide":5,"text":"Decompose one specialist prompt, trace its clauses, and test it against a malicious repository instruction.","textPreview":"Decompose one specialist prompt, trace its clauses, and test it against a malicious repository instruction.","textChars":107,"textLines":1,"bbox":[76,265,1110,76]}
+{"kind":"shape","id":"sh/4zypgbud","slide":5,"bbox":[42,410,374,165]}
+{"kind":"textbox","id":"sh/5k76pgvy","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[66,434,45,34]}
+{"kind":"textbox","id":"sh/y1cnihw3","slide":5,"text":"Extract obligations","textPreview":"Extract obligations","textChars":19,"textLines":1,"bbox":[66,486,320,55]}
+{"kind":"shape","id":"sh/z2lobmdo","slide":5,"bbox":[453,410,374,165]}
+{"kind":"textbox","id":"sh/ve18nupk","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[477,434,45,34]}
+{"kind":"textbox","id":"sh/ud87upoz","slide":5,"text":"Draft modules","textPreview":"Draft modules","textChars":13,"textLines":1,"bbox":[477,486,320,55]}
+{"kind":"shape","id":"sh/hgjqp47q","slide":5,"bbox":[864,410,374,165]}
+{"kind":"textbox","id":"sh/wfapwz65","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[888,434,45,34]}
+{"kind":"textbox","id":"sh/7ah8jup8","slide":5,"text":"Attack invariants","textPreview":"Attack invariants","textChars":17,"textLines":1,"bbox":[888,486,320,55]}
+{"kind":"textbox","id":"sh/m987qpon","slide":5,"text":"Suggested timing: 2 min setup • 7 min walkthrough • 3 min questions","textPreview":"Suggested timing: 2 min setup • 7 min walkthrough • 3 min questions","textChars":67,"textLines":1,"bbox":[42,616,1000,28]}
+{"kind":"shape","id":"sh/9czqlk7e","slide":5,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/8bqpsz6t","slide":5,"text":"SESSION 05  •  CODE REVIEW HARNESS","textPreview":"SESSION 05  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/zmhofapc","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/8lf1qi","slide":5,"text":"Run this as a live instructor demonstration, not a learner exercise. Use one prepared repository example and narrate each decision shown on screen. Pause after each step for one evidence question from the room. Keep the demonstration to twelve minutes and preserve the before-and-after artifact for reference.\n\n[Sources]\n- Code Review Harness repository: contracts/universal-agent-contract.md; contracts/specialist-agent-contract.md; contracts/sandboxed-contract-evolution.md"}
+{"kind":"slide","id":"sl/er9b9l","slide":6,"title":"PROMPT DESIGN WALKTHROUGH","textShapes":17}
+{"kind":"textbox","id":"sh/90f61wbi","slide":6,"text":"PROMPT DESIGN WALKTHROUGH","textPreview":"PROMPT DESIGN WALKTHROUGH","textChars":25,"textLines":1,"bbox":[42,35,500,28]}
+{"kind":"textbox","id":"sh/md476hcr","slide":6,"text":"Turn the contract into executable prompt behavior","textPreview":"Turn the contract into executable prompt behavior","textChars":49,"textLines":1,"bbox":[42,78,1195,82]}
+{"kind":"textbox","id":"sh/nydozmtc","slide":6,"text":"Use the platform’s six-block core to draft a bounded specialist prompt.","textPreview":"Use the platform’s six-block core to draft a bounded specialist prompt.","textChars":71,"textLines":1,"bbox":[42,175,1196,64]}
+{"kind":"shape","id":"sh/w36pcrut","slide":6,"bbox":[42,280,374,115]}
+{"kind":"textbox","id":"sh/x4f65wbe","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,300,44,28]}
+{"kind":"textbox","id":"sh/a1o7a1c3","slide":6,"text":"Identity","textPreview":"Identity","textChars":8,"textLines":1,"bbox":[116,299,270,70]}
+{"kind":"shape","id":"sh/v2xo36t8","slide":6,"bbox":[453,280,374,115]}
+{"kind":"textbox","id":"sh/c72507up","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[475,300,44,28]}
+{"kind":"textbox","id":"sh/d8v6tcva","slide":6,"text":"Authority","textPreview":"Authority","textChars":9,"textLines":1,"bbox":[527,299,270,70]}
+{"kind":"shape","id":"sh/xkn2h8ze","slide":6,"bbox":[864,280,374,115]}
+{"kind":"textbox","id":"sh/wjelo3it","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[886,300,44,28]}
+{"kind":"textbox","id":"sh/bi5kfyho","slide":6,"text":"Inputs","textPreview":"Inputs","textChars":6,"textLines":1,"bbox":[938,299,270,70]}
+{"kind":"shape","id":"sh/ahw3mt03","slide":6,"bbox":[42,425,374,115]}
+{"kind":"textbox","id":"sh/l872l8zq","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[64,445,44,28]}
+{"kind":"textbox","id":"sh/k7els3i5","slide":6,"text":"Method","textPreview":"Method","textChars":6,"textLines":1,"bbox":[116,444,270,70]}
+{"kind":"shape","id":"sh/j65kjyhk","slide":6,"bbox":[453,425,374,115]}
+{"kind":"textbox","id":"sh/ylw3qd0z","slide":6,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[475,445,44,28]}
+{"kind":"textbox","id":"sh/tc72pszm","slide":6,"text":"Output","textPreview":"Output","textChars":6,"textLines":1,"bbox":[527,444,270,70]}
+{"kind":"shape","id":"sh/8bylwni1","slide":6,"bbox":[864,425,374,115]}
+{"kind":"textbox","id":"sh/crqd8vap","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[886,445,44,28]}
+{"kind":"textbox","id":"sh/dszeh0ba","slide":6,"text":"Failure behavior","textPreview":"Failure behavior","textChars":16,"textLines":1,"bbox":[938,444,270,70]}
+{"kind":"shape","id":"sh/qp8v6lsj","slide":6,"bbox":[42,672,1196,1]}
+{"kind":"textbox","id":"sh/rqhwfqt4","slide":6,"text":"SESSION 05  •  CODE REVIEW HARNESS","textPreview":"SESSION 05  •  CODE REVIEW HARNESS","textChars":34,"textLines":1,"bbox":[42,682,500,22]}
+{"kind":"textbox","id":"sh/0vqdcval","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1165,682,72,22]}
+{"kind":"notes","id":"nt/er9b9l","slide":6,"text":"Walk through the six blocks using a prepared prompt fragment. For each block, cite the contract or role specification that justifies it, then show one unsafe omission and its smallest repair. Invite verbal predictions before revealing the corrected clause. Keep this instructor-led and finish in ten minutes.\n\n[Sources]\n- Code Review Harness repository: contracts/universal-agent-contract.md; contracts/specialist-agent-contract.md; contracts/sandboxed-contract-evolution.md"}
+{"kind":"slide","id":"sl/hp7o8r","slide":7,"title":"SESSION 05  •  EXIT TICKET","textShapes":4}
+{"kind":"textbox","id":"sh/6tgzmdoj","slide":7,"text":"SESSION 05  •  EXIT TICKET","textPreview":"SESSION 05  •  EXIT TICKET","textChars":26,"textLines":1,"bbox":[52,50,600,30]}
+{"kind":"textbox","id":"sh/tw7ih8nu","slide":7,"text":"Defend one prompt clause with its source and demonstrate its fail-closed behavior.","textPreview":"Defend one prompt clause with its source and demonstrate its fail-closed behavior.","textChars":82,"textLines":1,"bbox":[52,160,1070,245]}
+{"kind":"shape","id":"sh/svyhon69","slide":7,"bbox":[52,460,1120,3]}
+{"kind":"textbox","id":"sh/fi90ji50","slide":7,"text":"Answer with evidence. Name the contract, state, or authority boundary you used.","textPreview":"Answer with evidence. Name the contract, state, or authority boundary you used.","textChars":79,"textLines":1,"bbox":[52,500,1040,74]}
+{"kind":"textbox","id":"sh/eh0zqdof","slide":7,"text":"NEXT: SESSION 06","textPreview":"NEXT: SESSION 06","textChars":16,"textLines":1,"bbox":[52,640,760,28]}
+{"kind":"notes","id":"nt/hp7o8r","slide":7,"text":"Use this as a two-minute knowledge check. Ask for one evidence-backed answer and one correction or refinement from the room. Close by connecting the session to the next topic. Do not assign a graded deliverable.\n\n[Sources]\n- Code Review Harness repository: contracts/universal-agent-contract.md; contracts/specialist-agent-contract.md; contracts/sandboxed-contract-evolution.md"}

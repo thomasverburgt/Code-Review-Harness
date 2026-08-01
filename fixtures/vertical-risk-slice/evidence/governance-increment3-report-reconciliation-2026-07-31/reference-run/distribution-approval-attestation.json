@@ -1,0 +1,33 @@
+{
+  "approval_source": {
+    "source_hash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "source_reference": "MEMO-DIST-001",
+    "source_type": "signed_leadership_memorandum"
+  },
+  "approved_at": "2026-07-31T16:05:00Z",
+  "approved_by": {
+    "authority_name": "Senior Leadership Review Board",
+    "authority_role": "senior-leadership-distribution-authority"
+  },
+  "attestation_state": "recorded_pending_verification",
+  "distribution_approval_record_id": "dc7a19b0-27ff-5e62-b47c-c06a94ada8f8",
+  "distribution_limitations": [
+    "controlled distribution"
+  ],
+  "effect": "record_only",
+  "intended_recipients": [
+    "authorized human experts"
+  ],
+  "recorded_at": "2026-07-31T16:06:00Z",
+  "recorded_by": {
+    "actor_type": "human",
+    "assurance_level": "fixture-mfa",
+    "authentication_provider": "fixture-idp",
+    "authority_role": "governance-records-administrator",
+    "session_id": "SESSION-ADMIN-GOVERNANCE-001",
+    "subject_id": "ADMIN-GOVERNANCE-001"
+  },
+  "report_package_hash": "sha256:430233c423d65642bdebde1d9217517d7023bc2ddcc5dbbf89ebe361d9ceeb4a",
+  "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f",
+  "review_export_id": "c4fd2c8d-8419-54f2-aca9-24f4fe2b1ee3"
+}

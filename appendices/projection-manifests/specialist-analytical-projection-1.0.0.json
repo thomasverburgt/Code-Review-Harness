@@ -1,0 +1,26 @@
+{
+  "projection_version": "specialist-analytical-projection-1.0.0",
+  "designation": "SPEC-SECRETS",
+  "source_contract": "canonical-role-payload-1.2.0",
+  "target_layer_schema": "specialist-extension.schema.json",
+  "policy": "deterministic_no_semantic_invention",
+  "mappings": {
+    "product_id": "dispatch.scope.product_id",
+    "domain_scope": "fixed domain plus dispatch.scope.source_revision",
+    "eligible_population": "canonical review_counts",
+    "domain_observations": "references derived from role secret_observations",
+    "domain_assessments": "classification restatements derived from role secret_observations",
+    "domain_findings": "finding_id references",
+    "domain_patterns": "pattern references projected from tagged secondary_records",
+    "domain_unknowns": "conflicts projected from tagged secondary_records",
+    "domain_coverage": "canonical review_counts",
+    "domain_confidence": "canonical evidence, assessment, and review confidence",
+    "product_consumers": "resolved workflow consumers",
+    "role": "canonical role_payload"
+  },
+  "prohibited": [
+    "model control of envelope, routing, identity, integrity, or lineage",
+    "projection-time creation of findings, assessments, decisions, or confidence",
+    "silent omission or truncation"
+  ]
+}

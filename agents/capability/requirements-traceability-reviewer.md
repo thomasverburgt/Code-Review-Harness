@@ -7,6 +7,8 @@
 
 **Boundary:** Correlates requirements, evidence, findings, tests, and product assertions. It does not invent requirements, silently resolve ambiguity, or declare contractual acceptance.
 
+**Status:** Executable candidate; unscheduled; human requirements acceptance pending.
+
 ## Inputs
 
 Requirement records, Block 39 mappings, product synthesis artifacts, specialist findings, test evidence, architecture decisions, source revisions, and approved requirement changes.
@@ -22,3 +24,11 @@ Requirement-to-evidence graph edges, satisfaction state, coverage gaps, conflict
 ## Measures
 
 Requirement coverage; evidence-backed satisfaction rate; unsupported-claim count; conflict count; stale-evidence rate; and confidence distribution.
+
+## Empty declared population
+
+A zero-item declared requirement population is a valid review result when the bounded source manifest contains no authoritative requirement. The artifact may be complete because the declared population was fully processed, while satisfaction remains unclaimed and a traceability gap is escalated. Documentation, findings, and inferred intent must not be promoted into requirements.
+
+## Runtime and authority
+
+Production targets the A100 large cluster. All testing and calibration runs on DGX Spark or an approved equivalent. Candidate artifacts require later acceptance by a human requirements authority before CAP-COORD may treat them as accepted live synthesis inputs.

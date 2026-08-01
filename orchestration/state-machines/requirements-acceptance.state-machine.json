@@ -1,0 +1,17 @@
+{
+  "$schema":"../../appendices/schemas/requirements-acceptance-state-machine.schema.json",
+  "machine_id":"requirements-acceptance","version":"1.0.0","initial_state":"candidate_validated",
+  "states":["candidate_validated","packet_materialized","external_review_pending","response_recorded","response_verified","eligible_for_accepted_capability_input","not_eligible","revoked"],
+  "terminal_states":["eligible_for_accepted_capability_input","not_eligible","revoked"],
+  "transitions":[
+    {"from":"candidate_validated","event":"packet_generated","to":"packet_materialized","authority":"system"},
+    {"from":"packet_materialized","event":"delivered_for_review","to":"external_review_pending","authority":"system"},
+    {"from":"external_review_pending","event":"response_recorded","to":"response_recorded","authority":"requirements-acceptance-authority"},
+    {"from":"response_recorded","event":"record_verified","to":"response_verified","authority":"governance-records-verifier"},
+    {"from":"response_recorded","event":"record_rejected","to":"not_eligible","authority":"governance-records-verifier"},
+    {"from":"response_verified","event":"accepted_review_derived","to":"eligible_for_accepted_capability_input","authority":"system"},
+    {"from":"response_verified","event":"nonacceptance_derived","to":"not_eligible","authority":"system"},
+    {"from":"eligible_for_accepted_capability_input","event":"eligibility_revoked","to":"revoked","authority":"project-maintainer"}
+  ],
+  "effects":{"acceptance":"eligibility_only_after_verified_human_acceptance","satisfaction":"none","readiness":"none","risk":"none","scheduling":"none","report_distribution":"none","deployment":"none"}
+}

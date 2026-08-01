@@ -1,0 +1,23 @@
+{
+  "adr": "ADR-0017",
+  "baseline_workflow_changed": false,
+  "calibration_scope": "single_domain_mechanical_calibration",
+  "cap_synth_dispatch_contract_valid": true,
+  "cap_synth_scheduled": false,
+  "coordinator": "CAP-COORD",
+  "decision_authority": "human",
+  "fitness_claim": "mechanical_coordination_only",
+  "implementation": "deterministic",
+  "input_hash": "sha256:9ea90fb95dadc4617e8dab696819edf71d30c828d64e9b607f2a9ed8a1ae2be1",
+  "ledger_object_hash": "sha256:ba163f6773c29762130a4fd4655103a7c66e5d17d79903ef8c75aba0aac242ee",
+  "manifest_hash": "sha256:f3b575341961036adfebe25e8467ab0053ef916005e9516277846e9922e7a263",
+  "manifest_id": "fb399392-2368-543f-9eec-d5f8f8c529ae",
+  "production_target": "A100 large cluster",
+  "received_designations": [
+    "CAP-RISK"
+  ],
+  "report_changed": false,
+  "routing_state": "ready_for_cap_synth",
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

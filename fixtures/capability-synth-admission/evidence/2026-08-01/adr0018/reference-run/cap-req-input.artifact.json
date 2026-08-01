@@ -1,0 +1,189 @@
+{
+  "artifact": {
+    "artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b",
+    "artifact_type": "capability-requirements-posture",
+    "created_at": "2026-08-01T20:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-REQ-001",
+      "confidence": 0.9,
+      "rationale": "Requirement closure depends on the unresolved classification."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.9,
+    "decision": null,
+    "evidence": 0.95,
+    "provenance": [
+      {
+        "source": "adjudicated fixture",
+        "version": "0.1.0"
+      }
+    ],
+    "review": 1.0
+  },
+  "conflicts": [],
+  "consumers": [
+    "CAP-SYNTH-CANDIDATE"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "generation_limit": {
+      "array_max_items": 3,
+      "limit_applied": false,
+      "omitted_item_estimate": 0,
+      "string_max_length": 256,
+      "truncated_string_estimate": 0
+    },
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DC-REQ-001",
+      "question": "Is the requirement satisfied after authoritative classification?",
+      "required_authority": "requirements-acceptance-authority"
+    }
+  ],
+  "execution": {
+    "assembler_version": "deterministic-envelope-1.1.0",
+    "execution_id": "90000000-0000-4000-8000-000000000001",
+    "generation_contract_version": "canonical-capability-risk-payload-1.0.0",
+    "generation_mode": "canonical_payload_v1",
+    "model": "qwen3-32b",
+    "projection_version": "capability-risk-analytical-projection-1.0.0",
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "fixture-0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "capability": {
+      "capability_confidence_score": 0.85,
+      "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+      "capability_risk_posture": {
+        "decision_authority": "human",
+        "risk_ids": [
+          "RISK-001"
+        ],
+        "state": "unknown"
+      },
+      "cross_product_interface_state": {},
+      "decision_conflicts": [],
+      "enterprise_escalations": [
+        {
+          "authority": "security_engineer",
+          "escalation_id": "DC-001",
+          "question": "Should the redacted credential-like value be classified as a confirmed secret, likely secret, or benign/nonsecret?",
+          "required_authority": "security_engineer"
+        }
+      ],
+      "human_centered_systems_evaluation": {},
+      "mission_effectiveness_evidence": [],
+      "mission_thread": {},
+      "operational_readiness": {},
+      "participating_products": [
+        "PRODUCT-ALPHA"
+      ],
+      "requirement_traceability": {
+        "requirement_ids": [
+          "REQ-001"
+        ],
+        "state": "incomplete"
+      },
+      "role": {
+        "designation": "CAP-REQ",
+        "fixture_status": "adjudicated_multi_domain_contract_fixture",
+        "requirement_ids": [
+          "REQ-001"
+        ]
+      },
+      "technical_confidence_rollup": {
+        "inputs": [
+          0.85
+        ],
+        "method": "preserve_inputs_and_canonical_assessment",
+        "result": 0.85
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Record the authoritative classification.",
+        "implementation_level": "process_level",
+        "owner_role": "requirements_engineer",
+        "preventive_action": "Bind classification records to requirement verification.",
+        "target_horizon": "short_term",
+        "validation_method": "independent requirements review"
+      },
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "finding_id": "FINDING-REQ-001",
+      "impact": "Requirement closure cannot be demonstrated.",
+      "root_cause": "process_or_governance_gap",
+      "statement": "Requirement verification is incomplete while the credential-like value remains unclassified."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "9a82a407-38f6-4abe-9ef8-49f0fd256e67",
+    "agent_version": "fixture-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "CAP-REQ",
+    "display_name": "Requirements Traceability Reviewer"
+  },
+  "inputs": [
+    {
+      "artifact_id": "1e27ed34-d9a5-5309-a876-ab02af8b7d13",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:073d9b9112933f0f482e80e9be57c34ea610759ac909260be1d176648a35c6e3"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:3706c13a5f7f4bf789bee0a7faf14cd79edee0e33bccf58e23f69865a858855b",
+    "output_hash": "sha256:e819c373eb9d5d7020b3ea48de6b773f13698953b9251750fbd03083f1aa56f0",
+    "retention_class": "fixture",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "Not accepted live operational evidence"
+    ],
+    "method": "adjudicated contract fixture"
+  },
+  "observations": [
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "fact": "The security classification decision remains a requirement dependency.",
+      "observation_id": "OBS-REQ-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+    "decision_context": "governance",
+    "participating_products": [
+      "PRODUCT-ALPHA"
+    ],
+    "source_revision": "fixture-rev-001"
+  }
+}

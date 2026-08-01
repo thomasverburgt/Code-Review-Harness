@@ -1,0 +1,29 @@
+{
+  "$schema": "../schemas/workflow-definition.schema.json",
+  "workflow_id": "WF-PROD-SYNTH-CALIBRATION-001",
+  "workflow_version": "0.1.0",
+  "policy_version": "0.1.0",
+  "registry_version": "1.0.0",
+  "trigger": {"type": "candidate_calibration", "reference": "ADR-0014"},
+  "version_pins": {
+    "contracts": {"universal": "1.0.0", "product": "1.0.0", "product-synthesis": "1.0.0"},
+    "prompts": {"PROD-SYNTH": "design-0.1.0"},
+    "rubrics": {"PROD-SYNTH": "fixture-0.1.0"},
+    "schemas": {"universal": "universal-agent-artifact.schema.json", "product": "product-extension.schema.json", "role": "prod-synth-role.schema.json"},
+    "model": {"provider": "fixture", "model_id": "deterministic-reference-agent", "version": "0.1.0"},
+    "toolchain": {"version": "0.1.0"}
+  },
+  "nodes": [{
+    "node_id": "prod-synth-candidate",
+    "agent_uuid": "723b566e-224b-4e73-bb83-887c21f53a02",
+    "designation": "PROD-SYNTH",
+    "layer": "product",
+    "required_inputs": ["PROD-SEC-ARTIFACT"],
+    "output_schema": "product-extension.schema.json",
+    "role_schema": "prod-synth-role.schema.json",
+    "partial_input_policy": "prohibited",
+    "consumers": ["CAP-RISK"]
+  }],
+  "edges": [],
+  "human_gates": [{"gate_id": "candidate-promotion-decision", "after_node": "prod-synth-candidate", "authority_role": "project-maintainer", "decision_types": ["candidate_promotion_and_scheduling"]}]
+}

@@ -1,0 +1,359 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/a55t5j",
+    "id": "a55t5j",
+    "slide": 7,
+    "layoutId": "29b43a66-621d-4eef-af60-20d20d346cef",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "72cc8a6e-9cd1-4ac4-a8d5-326dd0be38d8",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#111827",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "29b43a66-621d-4eef-af60-20d20d346cef",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "72cc8a6e-9cd1-4ac4-a8d5-326dd0be38d8",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "72cc8a6e-9cd1-4ac4-a8d5-326dd0be38d8",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ihknupcz",
+      "id": "1",
+      "bbox": [
+        52,
+        50,
+        600,
+        30
+      ],
+      "geometry": "rect",
+      "text": "SESSION 02  •  EXIT TICKET",
+      "textPreview": "SESSION 02  •  EXIT TICKET",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#8EC5E5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SESSION 02  •  EXIT TICKET"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SESSION 02  •  EXIT TICKET",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#8EC5E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SESSION 02  •  EXIT TICKET",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#8EC5E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kbmp4ba",
+      "id": "2",
+      "bbox": [
+        52,
+        160,
+        1070,
+        245
+      ],
+      "geometry": "rect",
+      "text": "Trace one assessment to evidence, contract, consumer, and decision request.",
+      "textPreview": "Trace one assessment to evidence, contract, consumer, and decision request.",
+      "resolvedFontSize": 43,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 43,
+        "typeface": "Aptos",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Trace one assessment to evidence, contract,"
+          },
+          {
+            "index": 2,
+            "text": "consumer, and decision request."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Trace one assessment to evidence, contract, consumer, and decision request.",
+          "resolvedTextStyle": {
+            "fontSize": 43,
+            "typeface": "Aptos",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Trace one assessment to evidence, contract, consumer, and decision request.",
+              "fontSize": 43,
+              "typeface": "Aptos",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kj25wzup",
+      "id": "3",
+      "bbox": [
+        52,
+        460,
+        1120,
+        3
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E74B5",
+      "lineColor": "#2E74B5",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mt4retg",
+      "id": "4",
+      "bbox": [
+        52,
+        500,
+        1040,
+        74
+      ],
+      "geometry": "rect",
+      "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+      "textPreview": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Aptos",
+        "color": "#D8E2EC",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Answer with evidence. Name the contract, state, or authority boundary you used."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Aptos",
+            "color": "#D8E2EC",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+              "fontSize": 23,
+              "typeface": "Aptos",
+              "color": "#D8E2EC",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6lkny9cv",
+      "id": "5",
+      "bbox": [
+        52,
+        640,
+        760,
+        28
+      ],
+      "geometry": "rect",
+      "text": "NEXT: SESSION 03",
+      "textPreview": "NEXT: SESSION 03",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#8EC5E5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "NEXT: SESSION 03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "NEXT: SESSION 03",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#8EC5E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "NEXT: SESSION 03",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#8EC5E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

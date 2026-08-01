@@ -1,0 +1,359 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/n5zq0x",
+    "id": "n5zq0x",
+    "slide": 7,
+    "layoutId": "35e0be7b-dfd7-475b-adba-b00d4a5e6f71",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "a44d4afb-e607-4ea0-83d8-f33f1ea10fb5",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#111827",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "35e0be7b-dfd7-475b-adba-b00d4a5e6f71",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "a44d4afb-e607-4ea0-83d8-f33f1ea10fb5",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "a44d4afb-e607-4ea0-83d8-f33f1ea10fb5",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u90f6l4z",
+      "id": "1",
+      "bbox": [
+        52,
+        50,
+        600,
+        30
+      ],
+      "geometry": "rect",
+      "text": "SESSION 12  •  EXIT TICKET",
+      "textPreview": "SESSION 12  •  EXIT TICKET",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#8EC5E5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SESSION 12  •  EXIT TICKET"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SESSION 12  •  EXIT TICKET",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#8EC5E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SESSION 12  •  EXIT TICKET",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#8EC5E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hcre10nq",
+      "id": "2",
+      "bbox": [
+        52,
+        160,
+        1070,
+        245
+      ],
+      "geometry": "rect",
+      "text": "Request one disposition: baseline, seed, return for change, or reject as duplicate.",
+      "textPreview": "Request one disposition: baseline, seed, return for change, or reject as duplicate.",
+      "resolvedFontSize": 43,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 43,
+        "typeface": "Aptos",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Request one disposition: baseline, seed, return for"
+          },
+          {
+            "index": 2,
+            "text": "change, or reject as duplicate."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Request one disposition: baseline, seed, return for change, or reject as duplicate.",
+          "resolvedTextStyle": {
+            "fontSize": 43,
+            "typeface": "Aptos",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Request one disposition: baseline, seed, return for change, or reject as duplicate.",
+              "fontSize": 43,
+              "typeface": "Aptos",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wbix8vm5",
+      "id": "3",
+      "bbox": [
+        52,
+        460,
+        1120,
+        3
+      ],
+      "geometry": "rect",
+      "fillColor": "#2E74B5",
+      "lineColor": "#2E74B5",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/76pwvq5o",
+      "id": "4",
+      "bbox": [
+        52,
+        500,
+        1040,
+        74
+      ],
+      "geometry": "rect",
+      "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+      "textPreview": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Aptos",
+        "color": "#D8E2EC",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Answer with evidence. Name the contract, state, or authority boundary you used."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Aptos",
+            "color": "#D8E2EC",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Answer with evidence. Name the contract, state, or authority boundary you used.",
+              "fontSize": 23,
+              "typeface": "Aptos",
+              "color": "#D8E2EC",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m5gf2l43",
+      "id": "5",
+      "bbox": [
+        52,
+        640,
+        600,
+        28
+      ],
+      "geometry": "rect",
+      "text": "CAPSTONE COMPLETE  •  HUMAN REVIEW REQUIRED",
+      "textPreview": "CAPSTONE COMPLETE  •  HUMAN REVIEW REQUIRED",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos",
+        "color": "#8EC5E5",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CAPSTONE COMPLETE  •  HUMAN REVIEW REQUIRED"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CAPSTONE COMPLETE  •  HUMAN REVIEW REQUIRED",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos",
+            "color": "#8EC5E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CAPSTONE COMPLETE  •  HUMAN REVIEW REQUIRED",
+              "fontSize": 14,
+              "typeface": "Aptos",
+              "color": "#8EC5E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

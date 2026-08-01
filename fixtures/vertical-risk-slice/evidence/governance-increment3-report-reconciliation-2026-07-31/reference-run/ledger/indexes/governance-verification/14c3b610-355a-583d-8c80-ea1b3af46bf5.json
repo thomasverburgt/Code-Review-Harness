@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "governance-verification",
+  "logical_path": "governance-verification/14c3b610-355a-583d-8c80-ea1b3af46bf5.json",
+  "object_hash": "sha256:a315d0857424b001ed531b3e548b5b8691f83690280c2cb99161575d40a16a05",
+  "record_id": "14c3b610-355a-583d-8c80-ea1b3af46bf5",
+  "retention_class": "governance-record"
+}

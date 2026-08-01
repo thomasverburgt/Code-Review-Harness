@@ -1,0 +1,8 @@
+{
+  "projection_version": "capability-synthesis-analytical-projection-1.0.0",
+  "designation": "CAP-SYNTH",
+  "policy": "deterministic_manifest_lineage_authority_and_evidence_tier_projection",
+  "model_owned": ["preserved_child_assertions", "derived_capability_assertions", "capability_posture", "confidence_reconciliation"],
+  "harness_owned": ["identity", "artifact", "execution", "scope", "inputs", "synthesis_basis", "evidence_tier", "fitness_claim", "enterprise_handoff", "decision_authority", "integrity", "routing"],
+  "prohibited": ["raw input admission", "invented lineage", "evidence tier promotion", "risk acceptance", "readiness approval", "baseline scheduling", "report mutation", "deployment authority"]
+}

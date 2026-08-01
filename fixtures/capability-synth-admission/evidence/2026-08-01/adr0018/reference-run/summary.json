@@ -1,0 +1,23 @@
+{
+  "adr": "ADR-0018",
+  "baseline_workflow_changed": false,
+  "candidate_artifact_id": "f4c6873d-a91b-5dfb-83a7-5742c5b13c10",
+  "candidate_ledger_hash": "sha256:f9b930512c61deee467b3467c0a1140c2e7d3a505b8073aab785dc49e3edb37b",
+  "candidate_output_hash": "sha256:a1972d33092076cdd87b79658c8853fb5f05d892b5ca2816c701271fee997d7b",
+  "candidate_status": "candidate",
+  "decision_authority": "human",
+  "derived_assertions": 1,
+  "designation": "CAP-SYNTH",
+  "enterprise_handoff_state": "comparison_only",
+  "evidence_tier": "adjudicated_multi_domain_contract_fixture",
+  "fitness_claim": "contract_fixture_only",
+  "manifest_hash": "sha256:bda18fed0d3bfb0bfcbcca7baa49f7be24cd1ff45c0269758b41e04d8fa10001",
+  "manifest_id": "02ac63d7-a092-532e-a7bf-18bc2381bf0b",
+  "manifest_ledger_hash": "sha256:209597056f32559ce5fc3303e4b611378f6a3c725a0d85799edb8db44d991cd7",
+  "preserved_records": 5,
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "scheduled": false,
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

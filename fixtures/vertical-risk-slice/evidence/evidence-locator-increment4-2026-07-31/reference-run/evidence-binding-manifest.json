@@ -1,0 +1,57 @@
+{
+  "bindings": [
+    {
+      "binding_basis": "explicit_derived_item_binding",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "report_item_id": "CAPA:a5d58ea0-6ce4-5b93-967a-7de957ce0655"
+    },
+    {
+      "binding_basis": "direct_report_reference",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "report_item_id": "FINDING:CAP-RISK:FINDING-001"
+    },
+    {
+      "binding_basis": "direct_report_reference",
+      "evidence_refs": [
+        "OBS-RISK-001"
+      ],
+      "report_item_id": "FINDING:ENT-SYSRISK:FINDING-001"
+    },
+    {
+      "binding_basis": "direct_report_reference",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "report_item_id": "FINDING:PROD-SEC:FINDING-001"
+    },
+    {
+      "binding_basis": "direct_report_reference",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "report_item_id": "FINDING:SPEC-SECRETS:FINDING-001"
+    },
+    {
+      "binding_basis": "explicit_derived_item_binding",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "report_item_id": "RECOMMENDATION:487ad1d4-9f67-56aa-a0b6-91e41f9f3664"
+    },
+    {
+      "binding_basis": "direct_report_reference",
+      "evidence_refs": [
+        "OBS-RISK-001"
+      ],
+      "report_item_id": "RISK:RISK-001"
+    }
+  ],
+  "manifest_hash": "sha256:0175a2e144526f73fedc27db25bfd7fbdfa6eeb672886ff51447190a345cbf45",
+  "manifest_id": "5dd53e58-18ee-53f2-a8da-6f7e5dd2c037",
+  "report_package_hash": "sha256:430233c423d65642bdebde1d9217517d7023bc2ddcc5dbbf89ebe361d9ceeb4a",
+  "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f"
+}

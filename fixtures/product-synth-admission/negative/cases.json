@@ -1,0 +1,12 @@
+{
+  "suite": "PROD-SYNTH-CANDIDATE-NEGATIVE-001",
+  "cases": [
+    {"case_id": "wrong-identity", "expected": "reject"},
+    {"case_id": "missing-required-child", "expected": "reject"},
+    {"case_id": "invented-lineage", "expected": "reject"},
+    {"case_id": "release-authority-claim", "expected": "reject"},
+    {"case_id": "agent-decision-authority", "expected": "reject"},
+    {"case_id": "prompt-hash-mismatch", "expected": "reject"},
+    {"case_id": "premature-workflow-scheduling", "expected": "reject"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "adr": "ADR-0022",
+  "artifact_hash": "sha256:36ba30c3a2ceb9fec5e84d1464f0165e12ec832655dc252516366ecb0c7e9f70",
+  "artifact_id": "b786a897-591c-58cf-a606-8d4b9f9c458f",
+  "baseline_changed": false,
+  "candidate_status": "candidate",
+  "cap_req_gate_bypassed": false,
+  "capability_inputs": 2,
+  "designation": "ENT-GOV",
+  "ent_arch_schedule_changed": false,
+  "evidence_tier": "adjudicated_multi_capability_governance_fixture",
+  "fitness_claim": "contract_matrix_mechanics_only",
+  "governance_sources": 1,
+  "ledger_hash": "sha256:d20b88c0362b6206cc731588df8c0a5c17a008ab618a697829b277c99f71eb24",
+  "matrix_rows": 2,
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "scheduled": false,
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

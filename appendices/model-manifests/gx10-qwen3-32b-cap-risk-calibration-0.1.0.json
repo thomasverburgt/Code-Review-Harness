@@ -1,0 +1,21 @@
+{
+  "manifest_version": "0.1.0",
+  "purpose": "DGX Spark-equivalent targeted CAP-RISK live calibration",
+  "scope_designations": ["CAP-RISK"],
+  "provider": "vllm-openai-compatible",
+  "model_id": "qwen3-32b",
+  "upstream_model": "Qwen/Qwen3-32B-FP8",
+  "upstream_revision": "aa55da1ecc13d006e8b8e4f54579b1ea8c3db2df",
+  "container_image": "nvcr.io/nvidia/vllm:26.06-py3@sha256:63b808804826a028e38f559747a9e4d5985cf676616fbaa70c1937c58f83e13e",
+  "temperature": 0,
+  "thinking_mode": "disabled",
+  "max_output_tokens": 3072,
+  "structured_output": "canonical capability-risk analytical payload strict JSON Schema",
+  "generation_mode": "canonical_payload_v1",
+  "generation_contract_version": "canonical-capability-risk-payload-1.0.0",
+  "assembler_version": "deterministic-envelope-1.1.0",
+  "projection_version": "capability-risk-analytical-projection-1.0.0",
+  "guided_array_max_items": 3,
+  "guided_string_max_length": 256,
+  "credential_policy": "environment-injected; never persisted in evidence"
+}

@@ -41,6 +41,14 @@ Every execution publishes schema-valid JSON as the machine contract and a human-
 - `consumers`: declared downstream roles and contexts.
 - `integrity`: input hash, output hash, signing/attestation reference, retention class, and schema validation result.
 
+## Execution environment contract
+
+The signed `execution.environment` record identifies `execution_mode`, platform designation, accelerator and runtime configuration, container image, model or workload scale, environment-specific limitations, and applicable environment-policy version.
+
+Large-cluster production execution targets NVIDIA A100 GPU infrastructure. Development, regression, calibration, integration, security, resilience, rollback, and performance test execution targets NVIDIA DGX Spark or an approved equivalent. An agent MUST treat this record as orchestration input, MUST NOT infer the platform, and MUST fail closed or escalate when the declared execution mode and platform violate the pinned policy.
+
+The prompt, contract, schema, rubric, policy, model configuration, tool, container, and audit interfaces remain pinned across promotion. Hardware-sensitive configuration differences are explicit inputs. A scaled DGX Spark-equivalent result MUST identify its scale and limitations and MUST NOT be represented as measured A100 production capacity.
+
 ## Universal semantics
 
 1. Source evidence and child artifacts are immutable.

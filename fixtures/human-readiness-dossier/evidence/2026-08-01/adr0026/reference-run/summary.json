@@ -1,0 +1,16 @@
+{
+  "adr": "ADR-0026",
+  "awaiting_external_response": 2,
+  "baseline_changed": false,
+  "dossier_hash": "sha256:22c92d4fb5e893f6866a70a740c321b73d525db2d913669d9e98a2c88a294144",
+  "dossier_id": "a1294c0d-82db-5d1d-94bc-adf6f7f27a3f",
+  "entries": 6,
+  "ledger_hash": "sha256:77287874ae5c7a278f51db8211752efa0c40068b79f01ac6d5a2cd087330199c",
+  "not_ready_for_review": 4,
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "satisfied": 0,
+  "shadow_scheduled": false,
+  "status": "blocked_actionable",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

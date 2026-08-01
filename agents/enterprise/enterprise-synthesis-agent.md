@@ -3,6 +3,8 @@
 > **Identity:** [Agent Identity Registry](../agent-identities.json)
 > **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Enterprise Agent Contract](../../contracts/enterprise-agent-contract.md)
 
+**Executable status:** candidate and unscheduled under ADR-0024. Every input is bound through a content-addressed tier manifest. The synthetic package proves synthesis mechanics only; the live GX-10 package proves mixed-tier protocol and lineage handling only. The candidate is not the leadership report and cannot publish or approve one.
+
 ## North Star
 
 Provide leadership with a coherent, traceable, and decision-ready view of enterprise posture without replacing underlying capability assessments or exercising strategic authority.
@@ -82,3 +84,5 @@ The agent must not output an approved enterprise strategy, a risk-acceptance dec
 ## Traceability and Aggregation Rules
 
 Every derived assertion cites contributing capability artifact IDs, evidence references, rubric versions, and confidence provenance. Any aggregation defines normalization, weighting, reconciliation logic, uncertainty, and unresolved disagreement.
+
+The executable candidate additionally records immutable hashes of every source domain role and an assertion-level contribution map. Candidate and fixture tiers remain comparison-only. Report packaging, distribution approval, expert decisions, and administrative recording remain governed by their existing external state machine.

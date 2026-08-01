@@ -1,0 +1,18 @@
+{
+  "artifact_hash": "sha256:bbb642801216bc347892d212440e5b23ec36a3863c83dea8e91a359e62693196",
+  "baseline_workflow_changed": false,
+  "candidate_status": "candidate",
+  "credential_exported": false,
+  "designation": "PROD-SYNTH",
+  "error": null,
+  "input_tokens": 8642,
+  "model_manifest": "appendices/model-manifests/gx10-qwen3-32b-prod-synth-calibration-0.1.0.json",
+  "model_manifest_sha256": "676e2cd7337b0cefac45184804923c689fdd07d01df514dc306422d11844f5b6",
+  "output_tokens": 1754,
+  "passed": true,
+  "raw_response_sha256": "837bfcc2b98a5b0b2a96f7e84ca15685bc6fbf681aaf1cf90c1b3e7921e1cd3b",
+  "scheduled": false,
+  "status": "complete",
+  "suite": "prod-synth-live-candidate-calibration",
+  "wall_duration_ms": 264198
+}

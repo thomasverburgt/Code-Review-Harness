@@ -4,6 +4,8 @@
 
 Reviewer quality is a first-class system concern. Production reviewers remain deterministic and immutable within a released version. Calibration, prompt improvement, contract evolution, and candidate model changes occur only in an isolated validation environment.
 
+All calibration, benchmark, regression, adversarial, integration, security, resilience, rollback, and performance test execution occurs on NVIDIA DGX Spark or an approved equivalent platform. The NVIDIA A100 large cluster is the production target and is not used as the general test environment. Test records must identify the platform, accelerator/runtime configuration, container, model or workload scale, and limitations; scaled results may inform planning but may not be represented as measured A100 capacity.
+
 ## Calibration and QA service
 
 The cross-cutting calibration service SHALL:
@@ -76,6 +78,7 @@ Every candidate and released reviewer version MUST retain:
 - downstream compatibility and regression-impact assessment;
 - human disposition, approver identity, timestamp, and decision record;
 - release and rollback instructions.
+- test-platform identity, model or workload scale, environment limitations, and the signed configuration delta for A100 production promotion.
 
 ## Non-negotiable controls
 

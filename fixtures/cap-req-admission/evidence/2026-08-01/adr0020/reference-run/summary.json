@@ -1,0 +1,22 @@
+{
+  "adr": "ADR-0020",
+  "artifact_hash": "sha256:99fb774a8754350835a8a7b663f5b755780d19ef83a8907fc8e6ec77400c0cff",
+  "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+  "cap_synth_scheduled": false,
+  "effect": "review_request_only",
+  "eligibility_state": "blocked_pending_human_requirements_acceptance",
+  "ledger_ref": {
+    "classification": "internal",
+    "family": "requirements-acceptance-request",
+    "logical_path": "requirements-acceptance/f7ff7c64-51e8-5a7f-8acf-d5d5c5f504e8.json",
+    "object_hash": "sha256:bac88f611c4b80a5c64959229a18a6f1a81f43aba7d6437cb5a8fa204e81b0e6",
+    "record_id": "f7ff7c64-51e8-5a7f-8acf-d5d5c5f504e8",
+    "retention_class": "architecture-evidence"
+  },
+  "packet_hash": "sha256:56d6d8cf8f5d651666ecbac424f42c02882c13acb02c427cda8e81fb248d013e",
+  "packet_id": "f7ff7c64-51e8-5a7f-8acf-d5d5c5f504e8",
+  "production_target": "A100 large cluster",
+  "required_authority": "requirements-acceptance-authority",
+  "status": "awaiting_external_requirements_acceptance",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

@@ -1,0 +1,19 @@
+{
+  "declared_requirement_population": [],
+  "evidence_locator": {
+    "evidence_id": "UDS-0001",
+    "line_end": 153,
+    "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+    "line_start": 153,
+    "locator_hash": "sha256:ed501145d15e655829ff084208b3d35daa95752c088d73f5fdbb79bd46c9bcca",
+    "locator_id": "LOCATOR-UDS-0001",
+    "path": "docs/getting-started/local-demo/integrate-your-package.mdx"
+  },
+  "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+  "interpretation_boundary": "Documentation and findings are evidence, not authoritative requirement declarations.",
+  "manifest_version": "1.0.0",
+  "mutation_performed": false,
+  "repository": "https://github.com/defenseunicorns/uds-core.git",
+  "scope_id": "UDS-CORE-IDENTITY-ACCESS-CALIBRATION",
+  "source_classification": "internal-test-redacted"
+}

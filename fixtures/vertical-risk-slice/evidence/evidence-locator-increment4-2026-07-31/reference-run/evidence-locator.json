@@ -1,0 +1,76 @@
+[
+  {
+    "access": {
+      "classification": "internal-test-redacted",
+      "constraints": [
+        "authorized reviewers only"
+      ],
+      "reviewer_instructions": [
+        "Obtain an authorized read-only clone; do not copy restricted values into the review packet."
+      ]
+    },
+    "collected_at": "2026-07-31T13:00:00Z",
+    "collection_method": "read-only shallow clone plus offline redacted heuristic scan",
+    "collector": "SPEC-SECRETS calibration collector",
+    "evidence_id": "UDS-0001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 153,
+    "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+    "line_start": 153,
+    "locator_hash": "sha256:ed501145d15e655829ff084208b3d35daa95752c088d73f5fdbb79bd46c9bcca",
+    "locator_id": "LOCATOR-UDS-0001",
+    "locator_state": "source_located",
+    "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+    "redaction": {
+      "applied": true,
+      "method": "matched value omitted",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Check out commit 329ade01852f9e570d31cb7b19d9979152938c17 from https://github.com/defenseunicorns/uds-core.git.",
+      "Open docs/getting-started/local-demo/integrate-your-package.mdx at line 153.",
+      "Run the approved redacted credential-assignment check and compare the line fingerprint."
+    ],
+    "safe_excerpt": "Credential-like assignment detected; matched value omitted.",
+    "source_type": "git_source",
+    "symbol_or_section": null
+  },
+  {
+    "access": {
+      "classification": "internal-test-redacted",
+      "constraints": [
+        "authorized reviewers only"
+      ],
+      "reviewer_instructions": [
+        "Obtain an authorized read-only clone; do not copy restricted values into the review packet."
+      ]
+    },
+    "collected_at": "2026-07-31T13:00:00Z",
+    "collection_method": "read-only shallow clone plus offline redacted heuristic scan",
+    "collector": "SPEC-SECRETS calibration collector",
+    "evidence_id": "OBS-RISK-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 153,
+    "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+    "line_start": 153,
+    "locator_hash": "sha256:28dbfcdc9f73550959ee25b02442e865e719b3eef9d8127eaee15d0e23961e77",
+    "locator_id": "LOCATOR-OBS-RISK-001",
+    "locator_state": "source_located",
+    "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+    "redaction": {
+      "applied": true,
+      "method": "matched value omitted",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Check out commit 329ade01852f9e570d31cb7b19d9979152938c17 from https://github.com/defenseunicorns/uds-core.git.",
+      "Open docs/getting-started/local-demo/integrate-your-package.mdx at line 153.",
+      "Run the approved redacted credential-assignment check and compare the line fingerprint."
+    ],
+    "safe_excerpt": "Credential-like assignment detected; matched value omitted.",
+    "source_type": "git_source",
+    "symbol_or_section": null
+  }
+]

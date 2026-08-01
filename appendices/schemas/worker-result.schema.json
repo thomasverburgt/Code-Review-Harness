@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/worker-result.schema.json",
+  "title": "Worker Execution Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["job_id", "execution_id", "node_id", "designation", "status", "attempt_count", "artifact_path", "artifact_hash", "gate_path", "telemetry_path", "error"],
+  "properties": {
+    "job_id": {"type": "string", "format": "uuid"},
+    "execution_id": {"type": "string", "format": "uuid"},
+    "node_id": {"type": "string"},
+    "designation": {"type": "string"},
+    "status": {"enum": ["complete", "failed", "cancelled"]},
+    "attempt_count": {"type": "integer", "minimum": 0},
+    "artifact_path": {"type": ["string", "null"]},
+    "artifact_hash": {"type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$"},
+    "gate_path": {"type": ["string", "null"]},
+    "telemetry_path": {"const": "telemetry.json"},
+    "payload_path": {"type": ["string", "null"]},
+    "assembly_path": {"type": ["string", "null"]},
+    "error": {"type": ["string", "null"]}
+  }
+}

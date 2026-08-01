@@ -1,0 +1,15 @@
+{
+  "adr": "ADR-0025",
+  "baseline_changed": false,
+  "ledger_hash": "sha256:a073a6c6beb3ebe2dcb4b49304b94c0c3a4ac61d6a30d6b56b2cc515b8a7381c",
+  "manifest_hash": "sha256:5ef502c38df724f8e7e12e2a4280b73ed2198b876c06a13a09a6e5b805d50fcc",
+  "manifest_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "overall_state": "blocked",
+  "prerequisites": 6,
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "satisfied": 0,
+  "shadow_scheduled": false,
+  "status": "blocked_as_designed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

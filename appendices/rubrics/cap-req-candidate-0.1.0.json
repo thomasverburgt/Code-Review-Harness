@@ -1,0 +1,1 @@
+{"rubric_id":"RUBRIC-CAP-REQ-CANDIDATE","version":"0.1.0","status":"candidate-conformance-only","required_controls":["declared_population_integrity","no_invented_requirements","exact_evidence_locator","honest_zero_denominator","unknown_and_gap_preservation","human_requirements_acceptance","cap_coord_compatibility","unscheduled_cap_synth"]}

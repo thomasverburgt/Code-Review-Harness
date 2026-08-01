@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-07-31T16:08:00Z",
+  "distribution_approval_record_id": "dc7a19b0-27ff-5e62-b47c-c06a94ada8f8",
+  "distribution_state": "approved_for_distribution",
+  "export_id": "3b5bdbf6-9863-5ce0-b009-71e39a1694e4",
+  "export_purpose": "approved_distribution",
+  "file_hash": "sha256:d696810e8b2d0fe8cd0a0569668ff5743bfac44560cbdb282ce99a242d242345",
+  "file_name": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f-approved-distribution.json",
+  "media_type": "application/json",
+  "report_package_hash": "sha256:430233c423d65642bdebde1d9217517d7023bc2ddcc5dbbf89ebe361d9ceeb4a",
+  "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f"
+}

@@ -1,0 +1,34 @@
+{
+  "projection_version": "product-analytical-projection-1.0.0",
+  "designation": "PROD-SEC",
+  "source_contract": "canonical-product-payload-1.0.0",
+  "target_layer_schema": "product-extension.schema.json",
+  "policy": "deterministic_no_semantic_invention",
+  "mappings": {
+    "product_id": "dispatch.scope.product_id",
+    "specialist_artifact_inventory": "immutable input artifacts",
+    "input_completeness": "required input count and valid immutable input count",
+    "cross_domain_correlations": "record references from role security_domain_correlations",
+    "unresolved_conflicts": "conflicts projected from tagged secondary_records",
+    "product_findings": "canonical finding_id references",
+    "product_patterns": "pattern references projected from tagged secondary_records",
+    "product_risk_posture": "role security_posture plus fixed human authority",
+    "technical_confidence": "canonical assessment confidence",
+    "coverage": "required and valid specialist input counts",
+    "evidence_quality": "canonical evidence confidence with deterministic threshold label",
+    "release_readiness_input": "decision-request presence mapped to advisory state; never a release decision",
+    "escalations": "canonical decision request identifiers and required authorities",
+    "role": "canonical role_payload"
+  },
+  "universal_projection": {
+    "observations": "role security_domain_correlations",
+    "assessments": "role attack_path_hypotheses",
+    "patterns_insights_conflicts": "tagged secondary_records"
+  },
+  "prohibited": [
+    "model control of input inventory, completeness, envelope, routing, identity, integrity, or lineage",
+    "projection-time creation of findings, decisions, or confidence",
+    "representation of release_readiness_input as a release decision",
+    "silent omission or truncation"
+  ]
+}

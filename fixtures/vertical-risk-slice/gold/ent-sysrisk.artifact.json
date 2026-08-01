@@ -1,0 +1,46 @@
+{
+  "identity": {"agent_uuid": "24763fb8-bde7-4c1b-b6af-f5690958ef27", "designation": "ENT-SYSRISK", "display_name": "Systemic Risk Reviewer", "agent_version": "design-0.1.0", "contract_version": "1.0.0"},
+  "artifact": {"artifact_id": "55555555-5555-4555-8555-555555555555", "artifact_type": "enterprise-systemic-risk-posture", "created_at": "2026-07-31T14:20:00Z", "lifecycle_state": "complete", "links": {"parents": [], "children": ["33333333-3333-4333-8333-333333333333", "44444444-4444-4444-8444-444444444444"], "peers": []}},
+  "execution": {"execution_id": "a5555555-5555-4555-8555-555555555555", "model": "deterministic-reference-agent", "prompt_version": "design-0.1.0", "rubric_version": "fixture-0.1.0", "toolchain_version": "0.1.0", "settings": {"temperature": 0}},
+  "scope": {"enterprise_scope_id": "ENTERPRISE-FIXTURE-001", "participating_capabilities": ["CAPABILITY-IDENTITY-ACCESS"], "assessment_period": "2026-07-31", "decision_context": "governance"},
+  "inputs": [{"artifact_id": "33333333-3333-4333-8333-333333333333", "hash": "sha256:fixture-output-cap-risk", "compatibility": "compatible", "freshness": "fresh"}, {"artifact_id": "44444444-4444-4444-8444-444444444444", "hash": "sha256:fixture-output-ent-evidence", "compatibility": "compatible", "freshness": "fresh"}],
+  "methodology": {"method": "ENTERPRISE-RISK-FIXTURE-0.1.0", "limitations": ["Single-capability fixture uses declared enterprise concentration context"]},
+  "coverage": {"eligible": 1, "reviewed": 1, "omitted": 0, "inaccessible": 0, "unknown": 0, "negative_evidence": 0},
+  "observations": [{"observation_id": "OBS-ENTRISK-001", "fact": "IDENTITY-SERVICE is declared as an enterprise shared service and CAP-RISK-001 depends on it.", "evidence_refs": ["33333333-3333-4333-8333-333333333333", "CAP-RISK-001"]}],
+  "assessments": [{"assessment_id": "ASM-ENTRISK-001", "rationale": "The credential exposure and enterprise service concentration create a systemic recovery and authorization risk.", "confidence": 0.86}],
+  "findings": [],
+  "patterns": [],
+  "insights": [{"insight_id": "INSIGHT-ENTRISK-001", "statement": "Enterprise identity concentration requires resilience evidence."}],
+  "conflicts": [],
+  "confidence": {"evidence": 0.96, "assessment": 0.86, "review": 1.0, "decision": null, "provenance": [{"artifact_id": "33333333-3333-4333-8333-333333333333", "confidence": 0.88}, {"artifact_id": "44444444-4444-4444-8444-444444444444", "confidence": 1.0}]},
+  "decisions_requested": [{"decision_context_id": "DECISION-ENTRISK-001", "question": "Which coordinated treatment should be authorized for the shared identity concentration and credential exposure?", "required_authority": "enterprise-risk-acceptance-authority"}],
+  "consumers": ["enterprise-risk-acceptance-authority"],
+  "decision_authority": "human",
+  "integrity": {"input_hash": "sha256:fixture-input-ent-sysrisk", "output_hash": "sha256:fixture-output-ent-sysrisk", "attestation_ref": null, "retention_class": "fixture", "schema_validation": "passed"},
+  "extensions": {
+    "enterprise": {
+      "enterprise_scope": {"enterprise_scope_id": "ENTERPRISE-FIXTURE-001", "assessment_period": "2026-07-31"},
+      "participating_capabilities": ["CAPABILITY-IDENTITY-ACCESS"],
+      "capability_input_manifest": [{"artifact_id": "33333333-3333-4333-8333-333333333333", "gate_artifact_id": "44444444-4444-4444-8444-444444444444", "state": "valid"}],
+      "cross_capability_correlations": [{"correlation_id": "CORR-ENTRISK-001", "type": "concentration", "resource": "IDENTITY-SERVICE"}],
+      "enterprise_assertions": [{"assertion_id": "ASSERT-ENTRISK-001", "contributing_artifact_ids": ["33333333-3333-4333-8333-333333333333", "44444444-4444-4444-8444-444444444444"], "statement": "The shared identity service creates an enterprise concentration point."}],
+      "systemic_dependencies": [{"dependency_id": "DEP-IDENTITY-001", "resource": "IDENTITY-SERVICE"}],
+      "enterprise_unknowns": [{"unknown_id": "UNKNOWN-ENTRISK-001", "statement": "Substitutability and recovery time require additional evidence"}],
+      "unresolved_disagreements": [],
+      "confidence_reconciliation": {"method": "preserve_distribution_and_minimum", "inputs": [0.88, 1.0], "result": 0.86, "uncertainty": ["enterprise dependency inventory is fixture-declared"]},
+      "human_decision_requests": [{"decision_context_id": "DECISION-ENTRISK-001", "authority": "enterprise-risk-acceptance-authority"}],
+      "enterprise_traceability_manifest": {"artifact_ids": ["33333333-3333-4333-8333-333333333333", "44444444-4444-4444-8444-444444444444"], "risk_ids": ["CAP-RISK-001", "ENT-RISK-001"]},
+      "role": {
+        "designation": "ENT-SYSRISK",
+        "systemic_risk_register": [{"enterprise_risk_id": "ENT-RISK-001", "risk_statement": "If the shared identity credential or service fails, enterprise authentication may be compromised or unavailable across dependent mission activity.", "risk_category": "strategic_single_point_of_failure", "risk_origin": "systemic_emergent", "contributing_capabilities": ["CAPABILITY-IDENTITY-ACCESS"], "contributing_risk_ids": ["CAP-RISK-001"], "dependency_chain": ["PRODUCT-ALPHA", "CAPABILITY-IDENTITY-ACCESS", "IDENTITY-SERVICE", "ENTERPRISE-MISSION-001"], "affected_enterprise_objectives": ["OBJ-TRUSTED-ACCESS-001"], "affected_mission_threads": ["MT-AUTH-001"], "probability": "fixture-medium", "probability_basis": "Confirmed synthetic credential exposure and shared-service dependence.", "consequence": "fixture-high", "consequence_basis": "Trusted authentication is required for enterprise mission initiation.", "priority": "fixture-high", "scoring_method": "ENTERPRISE-RISK-FIXTURE-0.1.0", "rubric_version": "fixture-0.1.0", "evidence_refs": ["33333333-3333-4333-8333-333333333333", "44444444-4444-4444-8444-444444444444", "CAP-RISK-001"], "confidence_provenance": [{"source": "CAP-RISK-001", "confidence": 0.88}, {"source": "ENT-EVIDENCE", "confidence": 1.0}], "unknowns": ["Service substitutability", "Enterprise recovery time"], "escalation_state": "human_decision_required", "decision_authority": "human"}],
+        "risk_propagation_analysis": [{"enterprise_risk_id": "ENT-RISK-001", "initiating_condition": "Synthetic shared credential compromise", "propagation_path": ["credential", "IDENTITY-SERVICE", "MT-AUTH-001", "ENTERPRISE-MISSION-001"], "detection_points": ["secret scan", "identity audit"], "containment_boundaries": ["credential rotation", "service revocation"], "recovery_dependencies": ["identity operations", "product security"]}],
+        "concentration_analysis": [{"concentration_id": "CONC-IDENTITY-001", "resource": "IDENTITY-SERVICE", "participating_capabilities": ["CAPABILITY-IDENTITY-ACCESS"], "denominator": "fixture enterprise capabilities in scope", "substitutability": "unknown", "threshold_source": "ENTERPRISE-RISK-FIXTURE-0.1.0", "confidence": 0.8}],
+        "risk_relationship_graph": [{"source_id": "CAP-RISK-001", "relationship": "contributes_to", "target_id": "ENT-RISK-001", "evidence_refs": ["33333333-3333-4333-8333-333333333333"], "confidence": 0.88}],
+        "escalation_flags": [{"trigger": "shared_identity_concentration", "threshold": "fixture-high", "affected_objective": "OBJ-TRUSTED-ACCESS-001", "urgency": "before promotion", "decision_authority": "enterprise-risk-acceptance-authority", "evidence_sufficiency": "sufficient_for_decision_request", "unresolved_disagreement": null}],
+        "advisory_treatment_options": [{"option_id": "ENT-COA-001", "description": "Coordinate enterprise-wide rotation, revocation verification, and identity-service resilience testing.", "decision_authority": "human"}],
+        "enterprise_risk_capas": [{"capa_id": "ENT-CAPA-001", "corrective_action": "Rotate and revoke exposed synthetic credential.", "preventive_action": "Require centralized secret references and recovery testing.", "proposed_owner_role": "enterprise-identity-owner", "implementation_level": "enterprise", "target_horizon": "before promotion", "dependencies": ["product-security-owner", "identity-operations"], "validation_method": "Verify revocation and execute degraded-state authentication test", "affected_risks": ["CAP-RISK-001", "ENT-RISK-001"], "affected_capabilities": ["CAPABILITY-IDENTITY-ACCESS"], "evidence_required_for_closure_consideration": ["rotation record", "old-credential rejection test", "recovery exercise"]}],
+        "decision_authority": "human"
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "distribution-approval",
+  "logical_path": "distribution-approval/dc7a19b0-27ff-5e62-b47c-c06a94ada8f8.json",
+  "object_hash": "sha256:6ed16ba95edf7b7b31b0c1dca5ee083f922abf00b85d1e11b818dbef04292f5b",
+  "record_id": "dc7a19b0-27ff-5e62-b47c-c06a94ada8f8",
+  "retention_class": "governance-record"
+}

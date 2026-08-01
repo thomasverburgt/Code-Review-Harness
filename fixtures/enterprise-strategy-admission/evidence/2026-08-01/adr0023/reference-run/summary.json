@@ -1,0 +1,20 @@
+{
+  "adr": "ADR-0023",
+  "artifact_hash": "sha256:4b9b843746f03e20ebb8bfa26c068c1d0cb334fa26eff8c74bcbced39850190b",
+  "artifact_id": "f72d3263-d6c5-5518-8000-794fd69f89c9",
+  "baseline_changed": false,
+  "candidate_status": "candidate",
+  "composite_score": null,
+  "designation": "ENT-STRAT",
+  "ent_arch_schedule_changed": false,
+  "ent_gov_schedule_changed": false,
+  "evidence_tier": "adjudicated_multi_domain_scoring_fixture",
+  "fitness_claim": "scoring_contract_mechanics_only",
+  "ledger_hash": "sha256:c55135ff29ac61aff7c2779ad698766f4850fd6807dea9a9b24ac5ea7b30deed",
+  "posture_inputs": 2,
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "scheduled": false,
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/report-export-record.schema.json",
+  "title": "Controlled Report Export Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["export_id", "report_package_id", "report_package_hash", "export_purpose", "distribution_state", "file_name", "media_type", "file_hash", "created_at", "distribution_approval_record_id"],
+  "properties": {
+    "export_id": {"type": "string", "format": "uuid"},
+    "report_package_id": {"type": "string", "format": "uuid"},
+    "report_package_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "export_purpose": {"enum": ["leadership_distribution_review", "approved_distribution"]},
+    "distribution_state": {"enum": ["not_approved_for_distribution", "approved_for_distribution"]},
+    "file_name": {"type": "string", "minLength": 1},
+    "media_type": {"type": "string", "minLength": 1},
+    "file_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "distribution_approval_record_id": {"type": ["string", "null"], "format": "uuid"}
+  }
+}

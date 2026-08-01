@@ -1,0 +1,10 @@
+{
+  "actionable_item_count": 7,
+  "authority_effect": "review_support_only",
+  "locator_count": 2,
+  "report_package_hash": "sha256:430233c423d65642bdebde1d9217517d7023bc2ddcc5dbbf89ebe361d9ceeb4a",
+  "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f",
+  "report_unchanged": true,
+  "reviewability_state": "ready_for_expert_review",
+  "status": "passed"
+}

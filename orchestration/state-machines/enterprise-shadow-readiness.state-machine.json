@@ -1,0 +1,31 @@
+{
+  "$schema": "../../appendices/schemas/orchestration-state-machine.schema.json",
+  "controller": "ORCH-SCHED",
+  "version": "1.0.0",
+  "initial_state": "blocked",
+  "terminal_states": ["ready_for_shadow_authorization_review", "superseded"],
+  "states": ["blocked", "prerequisites_pending", "ready_for_shadow_authorization_review", "superseded"],
+  "transitions": [
+    {
+      "from": "blocked",
+      "event": "readiness_manifest_materialized",
+      "guard": "all prerequisites are explicit and no candidate is scheduled",
+      "to": "prerequisites_pending",
+      "audit_reason": "Materialize the fail-closed prerequisite inventory without granting readiness."
+    },
+    {
+      "from": "prerequisites_pending",
+      "event": "all_external_acceptances_verified",
+      "guard": "every exact prerequisite is accepted, independently verified, fresh, compatible, scope-aligned, and accepted_live_multi_domain",
+      "to": "ready_for_shadow_authorization_review",
+      "audit_reason": "Permit a separate human shadow-authorization review only after every prerequisite passes."
+    },
+    {
+      "from": "ready_for_shadow_authorization_review",
+      "event": "successor_readiness_manifest_registered",
+      "guard": "prior manifest and records remain retained",
+      "to": "superseded",
+      "audit_reason": "Retain immutable history when a successor readiness assessment is registered."
+    }
+  ]
+}

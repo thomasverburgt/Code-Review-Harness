@@ -25,7 +25,7 @@ This repository is the working architecture library for the Code Review Harness.
 | [orchestration](orchestration/README.md) | Workflow, policy, and execution design |
 | [requirements](requirements/README.md) | Requirements traceability and evidence graph design |
 | [integrations](integrations/README.md) | External-system integration designs, including GitLab CI/CD |
-| [deployment](deployment/README.md) | Runtime and platform deployment designs, including DGX H100 |
+| [deployment](deployment/README.md) | A100 large-cluster production deployment and DGX Spark-equivalent test environments |
 | [planning](planning/README.md) | Architecture-package burn-down and implementation planning |
 | [appendices](appendices/README.md) | Reusable schemas, prompts, workflows, policies, and metrics |
 | [ADRs](adr/README.md) | Material architecture and governance decision records |

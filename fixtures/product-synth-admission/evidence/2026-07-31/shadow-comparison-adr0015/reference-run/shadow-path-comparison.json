@@ -1,0 +1,62 @@
+{
+  "authority_effect": "comparison_only",
+  "baseline_cap_risk": {
+    "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+    "content_hash": "sha256:d691b498eb96556d2c5d3a68f675eaa814b425fa8c1e73e91b6cf5eede475dd5"
+  },
+  "blocking_issues": [],
+  "comparison_hash": "sha256:52f09a42798038a83eb295b58a573fdac4021f5d32946113fd75aba0593713a4",
+  "comparison_id": "9b47249b-1f6a-5b6a-ab66-f91f597d7b99",
+  "generated_at": "2026-07-31T22:00:00Z",
+  "isolation": {
+    "baseline_workflow_changed": false,
+    "deployment_effect": "none",
+    "governance_effect": "none",
+    "ledger_namespace": "shadow/adr-0015",
+    "publication_enabled": false,
+    "report_package_changed": false
+  },
+  "lineage": {
+    "dropped_refs": [],
+    "exact_child_binding": true,
+    "invented_refs": [],
+    "preserved_evidence_refs": [
+      "85879acf-6be4-5637-9789-5aa5670c3c33",
+      "OBS-001",
+      "UDS-0001"
+    ],
+    "preserved_finding_ids": [
+      "FINDING-001"
+    ]
+  },
+  "overall_state": "equivalent",
+  "semantics": {
+    "dimensions": {
+      "assessments": "equivalent",
+      "capa_options": "equivalent",
+      "confidence": "equivalent",
+      "conflicts": "equivalent",
+      "coverage": "equivalent",
+      "decisions_requested": "equivalent",
+      "findings": "equivalent",
+      "risk_register": "equivalent"
+    },
+    "equivalent": true,
+    "explained_deltas": []
+  },
+  "shadow_cap_risk": {
+    "artifact_id": "445fb7f4-c7f3-5635-9097-fdc77a1e022d",
+    "content_hash": "sha256:1edb0ba2536befcdb307d50e65ff4b38408b7c588fcb944eb0cc4fb7a9d5efb8"
+  },
+  "shadow_prod_synth": {
+    "artifact_id": "089b3a2a-cf18-52c3-afc1-545feab8e03d",
+    "content_hash": "sha256:bbb642801216bc347892d212440e5b23ec36a3863c83dea8e91a359e62693196"
+  },
+  "telemetry": {
+    "baseline_wall_duration_ms": null,
+    "platform": "local-deterministic-reference",
+    "shadow_cap_risk_wall_duration_ms": null,
+    "shadow_prod_synth_wall_duration_ms": null
+  },
+  "workflow_id": "WF-PROD-SYNTH-CAP-RISK-SHADOW-001"
+}

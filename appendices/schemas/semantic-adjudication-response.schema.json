@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/semantic-adjudication-response.schema.json",
+  "title": "External Semantic Adjudication Response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["adjudication_id", "packet_id", "packet_hash", "decided_at", "decided_by", "delta_decisions", "overall_recommendation", "authoritative_source_hash", "decision_authority", "effect"],
+  "properties": {
+    "adjudication_id": {"type": "string", "format": "uuid"},
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "decided_by": {
+      "type": "object", "additionalProperties": false, "required": ["authority_role", "authority_name"],
+      "properties": {"authority_role": {"const": "enterprise-risk-acceptance-authority"}, "authority_name": {"type": "string", "minLength": 1}}
+    },
+    "delta_decisions": {
+      "type": "array", "minItems": 1, "items": {
+        "type": "object", "additionalProperties": false, "required": ["delta_id", "disposition", "rationale"],
+        "properties": {"delta_id": {"type": "string", "format": "uuid"}, "disposition": {"enum": ["accept_preserved_meaning", "accept_beneficial_enrichment", "require_normalization", "reject_semantic_drift", "insufficient_evidence"]}, "rationale": {"type": "string", "minLength": 1}}
+      }
+    },
+    "overall_recommendation": {"enum": ["eligible_for_cutover_review", "normalization_required", "reject_cutover", "insufficient_evidence"]},
+    "authoritative_source_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "decision_authority": {"const": "human"},
+    "effect": {"const": "record_only"}
+  }
+}

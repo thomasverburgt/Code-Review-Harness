@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/ent-evidence-role.schema.json",
+  "title": "ENT-EVIDENCE Role Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["designation", "validated_input_manifest", "identity_validation", "schema_compatibility", "integrity_results", "lineage_results", "freshness_results", "completeness", "duplicate_or_superseded_inputs", "conflict_preservation", "reviewability", "confidence_effect", "gate_state", "escalations"],
+  "properties": {
+    "designation": {"const": "ENT-EVIDENCE"},
+    "validated_input_manifest": {"type": "array", "items": {"type": "object"}},
+    "identity_validation": {"type": "object"},
+    "schema_compatibility": {"type": "object"},
+    "integrity_results": {"type": "object"},
+    "lineage_results": {"type": "object"},
+    "freshness_results": {"type": "object"},
+    "completeness": {"type": "object"},
+    "duplicate_or_superseded_inputs": {"type": "array", "items": {"type": "object"}},
+    "conflict_preservation": {"type": "object"},
+    "reviewability": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "confidence_effect": {"type": "object"},
+    "gate_state": {"enum": ["passed", "passed_incomplete_input", "failed"]},
+    "escalations": {"type": "array", "items": {"type": "object"}}
+  }
+}

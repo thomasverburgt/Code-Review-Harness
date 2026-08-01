@@ -1,0 +1,20 @@
+{
+  "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+  "artifact_type": "capability-requirements-posture",
+  "children": [
+    "1e27ed34-d9a5-5309-a876-ab02af8b7d13"
+  ],
+  "consumers": [
+    "CAP-COORD-CANDIDATE"
+  ],
+  "input_refs": [
+    "1e27ed34-d9a5-5309-a876-ab02af8b7d13",
+    "requirements-source-manifest",
+    "LOCATOR-UDS-0001"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:6f7308eabe8d55bb8de3493d2fdf608c1ea531f33d7a86ade906b27bbb6d5fc9",
+  "parents": [],
+  "peers": [],
+  "producer_designation": "CAP-REQ"
+}

@@ -1,0 +1,42 @@
+vertical slice validation passed: workflow=1; nodes=5; state_machines=4; authority_registries=1; gold_artifacts=5; human_decision_requests=1; report_governance=1
+{"deterministic_replay": "passed", "gold": "passed", "negative_cases": 15, "negative_cases_passed": 15, "runtime_scenarios": 5, "suite": "FIXTURE-VERTICAL-RISK-NEGATIVE-001"}
+{"access_control": "passed", "audit_chain": "passed", "idempotency": "passed", "integrity": "passed", "persistence": "passed", "replay": "passed", "suite": "artifact-ledger-conformance", "supersession": "passed"}
+{"assembled_one_node_replacements": ["SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"], "cancellation": "passed", "canonical_capability_live_upstream_lineage": "passed", "canonical_capability_projection": "passed", "canonical_capability_projection_replay": "passed", "canonical_enterprise_live_upstream_lineage": "passed", "canonical_enterprise_projection": "passed", "canonical_enterprise_projection_replay": "passed", "canonical_product_live_upstream_lineage": "passed", "canonical_product_projection": "passed", "canonical_product_projection_replay": "passed", "canonical_projection_replay": "passed", "canonical_worker_derived_limit": "passed", "cardinality_truncation_failed_closed": true, "deterministic_assembly_replay": "passed", "deterministic_enterprise_evidence_gate": "passed", "fan_in_bypass_rejected": true, "harness_field_override_rejected": true, "least_privilege_tools": "passed", "one_node_replacements": ["SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"], "retry_idempotency": "passed", "suite": "worker-runtime-conformance", "telemetry_lineage": "passed", "timeout": "passed", "vllm_auth_gate": "passed", "vllm_protocol": "passed"}
+test_distribution_requires_separate_authority_recorder_and_verifier (__main__.ReportGovernanceTests.test_distribution_requires_separate_authority_recorder_and_verifier) ... ok
+test_external_decision_fails_closed_and_is_immutable (__main__.ReportGovernanceTests.test_external_decision_fails_closed_and_is_immutable) ... ok
+test_external_decision_is_exact_record_only_and_independently_verified (__main__.ReportGovernanceTests.test_external_decision_is_exact_record_only_and_independently_verified) ... ok
+test_report_is_deterministic_complete_and_unmodified (__main__.ReportGovernanceTests.test_report_is_deterministic_complete_and_unmodified) ... ok
+test_review_copy_cannot_be_used_as_approved_distribution (__main__.ReportGovernanceTests.test_review_copy_cannot_be_used_as_approved_distribution) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.039s
+
+OK
+test_binding_is_exact_and_complete (__main__.EvidenceLocatorTests.test_binding_is_exact_and_complete) ... ok
+test_missing_and_unverified_locators_fail_closed (__main__.EvidenceLocatorTests.test_missing_and_unverified_locators_fail_closed) ... ok
+test_ready_packet_is_deterministic_exact_and_report_immutable (__main__.EvidenceLocatorTests.test_ready_packet_is_deterministic_exact_and_report_immutable) ... ok
+test_unsafe_or_mutated_locator_is_rejected (__main__.EvidenceLocatorTests.test_unsafe_or_mutated_locator_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK
+test_child_finding_and_evidence_survive_capability_handoff (__main__.ProductSynthAdmissionTests.test_child_finding_and_evidence_survive_capability_handoff) ... ok
+test_gold_candidate_and_prompt_integrity (__main__.ProductSynthAdmissionTests.test_gold_candidate_and_prompt_integrity) ... ok
+test_negative_admission_cases_fail_closed (__main__.ProductSynthAdmissionTests.test_negative_admission_cases_fail_closed) ... ok
+test_replay_is_deterministic_and_source_children_are_immutable (__main__.ProductSynthAdmissionTests.test_replay_is_deterministic_and_source_children_are_immutable) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+OK
+test_candidate_projection_is_deterministic_and_unscheduled (__main__.ProductSynthCalibrationTests.test_candidate_projection_is_deterministic_and_unscheduled) ... ok
+test_dispatch_and_job_are_pinned_to_test_environment (__main__.ProductSynthCalibrationTests.test_dispatch_and_job_are_pinned_to_test_environment) ... ok
+test_projection_rejects_invented_and_missing_lineage (__main__.ProductSynthCalibrationTests.test_projection_rejects_invented_and_missing_lineage) ... ok
+test_wrong_contract_or_projection_pin_fails_closed (__main__.ProductSynthCalibrationTests.test_wrong_contract_or_projection_pin_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.008s
+
+OK
+{"artifact_hash": "sha256:bbb642801216bc347892d212440e5b23ec36a3863c83dea8e91a359e62693196", "baseline_workflow_changed": false, "candidate_status": "candidate", "credential_exported": false, "designation": "PROD-SYNTH", "error": null, "input_tokens": 8642, "model_manifest": "appendices/model-manifests/gx10-qwen3-32b-prod-synth-calibration-0.1.0.json", "model_manifest_sha256": "676e2cd7337b0cefac45184804923c689fdd07d01df514dc306422d11844f5b6", "output_tokens": 1754, "passed": true, "raw_response_sha256": "837bfcc2b98a5b0b2a96f7e84ca15685bc6fbf681aaf1cf90c1b3e7921e1cd3b", "scheduled": false, "status": "complete", "suite": "prod-synth-live-candidate-calibration", "wall_duration_ms": 264198}

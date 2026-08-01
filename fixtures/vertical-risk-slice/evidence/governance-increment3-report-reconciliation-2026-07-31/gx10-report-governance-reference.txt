@@ -1,0 +1,1 @@
+{"approved_distribution_state": "approved_for_distribution", "effects": ["record_only", "record_only", "record_only"], "external_decision_state": "verified", "report_item_count": 7, "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f", "review_distribution_state": "not_approved_for_distribution", "status": "passed"}

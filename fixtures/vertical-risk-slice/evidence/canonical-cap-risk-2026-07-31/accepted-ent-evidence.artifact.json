@@ -1,0 +1,183 @@
+{
+  "artifact": {
+    "artifact_id": "e18bbf4d-0308-5975-973e-4c731f4105cb",
+    "artifact_type": "validated-enterprise-input-manifest",
+    "created_at": "2026-07-31T15:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [
+        "a5ada795-db2f-5625-aed9-1b619411be17"
+      ],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-ENTEVID-LIVE-001",
+      "confidence": 1.0,
+      "rationale": "All deterministic enterprise input checks passed for the declared capability artifact."
+    }
+  ],
+  "confidence": {
+    "assessment": 1.0,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "deterministic gate checks",
+        "version": "1.0.0"
+      }
+    ],
+    "review": 1.0
+  },
+  "conflicts": [],
+  "consumers": [
+    "ENT-SYSRISK"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 0
+  },
+  "decision_authority": "human",
+  "decisions_requested": [],
+  "execution": {
+    "execution_id": "9959575d-82a3-529d-b727-8d681e15848a",
+    "model": "deterministic-enterprise-evidence-gate",
+    "prompt_version": "role-spec-1.0.0",
+    "rubric_version": "fixture-0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "enterprise": {
+      "capability_input_manifest": [
+        {
+          "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+          "state": "valid"
+        }
+      ],
+      "confidence_reconciliation": {
+        "method": "deterministic_gate_conjunction",
+        "result": 1.0
+      },
+      "cross_capability_correlations": [],
+      "enterprise_assertions": [
+        {
+          "assertion_id": "ASSERT-ENTEVID-LIVE-001",
+          "statement": "The declared capability input is reviewable."
+        }
+      ],
+      "enterprise_scope": {
+        "assessment_period": "2026-07-31",
+        "enterprise_scope_id": "ENTERPRISE-FIXTURE-001"
+      },
+      "enterprise_traceability_manifest": {
+        "artifact_ids": [
+          "a5ada795-db2f-5625-aed9-1b619411be17"
+        ]
+      },
+      "enterprise_unknowns": [],
+      "human_decision_requests": [],
+      "participating_capabilities": [
+        "CAPABILITY-IDENTITY-ACCESS"
+      ],
+      "role": {
+        "completeness": {
+          "fraction": 1.0,
+          "required": 1,
+          "valid": 1
+        },
+        "confidence_effect": {
+          "delta": 0.0
+        },
+        "conflict_preservation": {
+          "count": 0,
+          "state": "passed"
+        },
+        "designation": "ENT-EVIDENCE",
+        "duplicate_or_superseded_inputs": [],
+        "escalations": [],
+        "freshness_results": {
+          "state": "passed"
+        },
+        "gate_state": "passed",
+        "identity_validation": {
+          "state": "passed"
+        },
+        "integrity_results": {
+          "state": "passed"
+        },
+        "lineage_results": {
+          "state": "passed"
+        },
+        "reviewability": 1.0,
+        "schema_compatibility": {
+          "state": "passed"
+        },
+        "validated_input_manifest": [
+          {
+            "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+            "state": "valid"
+          }
+        ]
+      },
+      "systemic_dependencies": [],
+      "unresolved_disagreements": []
+    }
+  },
+  "findings": [],
+  "identity": {
+    "agent_uuid": "f0b5a16b-4075-4f6f-830e-bbd4069e21e4",
+    "agent_version": "role-spec-1.0.0",
+    "contract_version": "1.0.0",
+    "designation": "ENT-EVIDENCE",
+    "display_name": "Evidence Validation Gate"
+  },
+  "inputs": [
+    {
+      "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:b56be7afa96e29b2106b8faad851688844b1bcfdbb9b706c3d1ffcbfd57ed783"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:edf48c1e79b786de33a9e86141863295a43fe49d0c55c1150ceff846740f0f60",
+    "output_hash": "sha256:85037cc5398e9c6ccef05474fe855e7a557c45437b7e4adb5c1f8ef1f472b124",
+    "retention_class": "internal-test",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "Semantic enterprise risk review remains the responsibility of ENT-SYSRISK"
+    ],
+    "method": "deterministic contract, identity, integrity-reference, freshness, and completeness gate"
+  },
+  "observations": [
+    {
+      "evidence_refs": [
+        "a5ada795-db2f-5625-aed9-1b619411be17"
+      ],
+      "fact": "The declared CAP-RISK artifact is complete, schema-valid, traceable, fresh, and compatible.",
+      "observation_id": "OBS-ENTEVID-LIVE-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "assessment_period": "2026-07-31",
+    "decision_context": "governance",
+    "enterprise_scope_id": "ENTERPRISE-FIXTURE-001",
+    "participating_capabilities": [
+      "CAPABILITY-IDENTITY-ACCESS"
+    ]
+  }
+}

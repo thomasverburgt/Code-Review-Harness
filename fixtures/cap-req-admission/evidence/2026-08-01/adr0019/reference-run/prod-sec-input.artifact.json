@@ -1,0 +1,286 @@
+{
+  "artifact": {
+    "artifact_id": "1e27ed34-d9a5-5309-a876-ab02af8b7d13",
+    "artifact_type": "product-security-posture",
+    "created_at": "2026-07-31T15:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [
+        "85879acf-6be4-5637-9789-5aa5670c3c33"
+      ],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-HYPOTHESIS-001",
+      "confidence": 0.85,
+      "rationale": "If the redacted credential-like value is a real secret, it could be exploited to gain unauthorized access to the system."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.85,
+    "decision": null,
+    "evidence": 0.95,
+    "provenance": [
+      {
+        "source": "credential-assignment detector",
+        "version": "0.1.0"
+      },
+      {
+        "source": "SPEC-SECRETS role schema",
+        "version": "1.0.0"
+      },
+      {
+        "source": "universal-agent-artifact schema",
+        "version": "1.0.0"
+      }
+    ],
+    "review": 0.8
+  },
+  "conflicts": [],
+  "consumers": [
+    "cap-risk"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "generation_limit": {
+      "array_max_items": 3,
+      "limit_applied": false,
+      "omitted_item_estimate": 0,
+      "string_max_length": 256,
+      "truncated_string_estimate": 0
+    },
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DC-001",
+      "question": "Should the redacted credential-like value be classified as a confirmed secret, likely secret, or benign/nonsecret?",
+      "required_authority": "security_engineer"
+    }
+  ],
+  "execution": {
+    "assembler_version": "deterministic-envelope-1.1.0",
+    "execution_id": "90000000-0000-4000-8000-000000000001",
+    "generation_contract_version": "canonical-product-payload-1.0.0",
+    "generation_mode": "canonical_payload_v1",
+    "model": "qwen3-32b",
+    "projection_version": "product-analytical-projection-1.0.0",
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "fixture-0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "product": {
+      "coverage": {
+        "required_domains": 1,
+        "reviewed_domains": 1
+      },
+      "cross_domain_correlations": [
+        {
+          "record_id": "CORRELATION-001"
+        }
+      ],
+      "escalations": [
+        {
+          "authority": "security_engineer",
+          "escalation_id": "DC-001"
+        }
+      ],
+      "evidence_quality": {
+        "score": 0.95,
+        "state": "high"
+      },
+      "input_completeness": {
+        "fraction": 1.0,
+        "required": 1,
+        "valid": 1
+      },
+      "product_findings": [
+        {
+          "finding_id": "FINDING-001"
+        }
+      ],
+      "product_id": "PRODUCT-ALPHA",
+      "product_patterns": [],
+      "product_risk_posture": {
+        "decision_authority": "human",
+        "secrets": {
+          "reason": "The redacted credential-like value in the documentation file is a potential exposure that requires classification.",
+          "status": "unresolved"
+        }
+      },
+      "release_readiness_input": {
+        "is_release_decision": false,
+        "state": "blocked_pending_human_decision"
+      },
+      "role": {
+        "attack_path_hypotheses": [
+          {
+            "confidence": 0.85,
+            "contributing_artifact_ids": [
+              "85879acf-6be4-5637-9789-5aa5670c3c33"
+            ],
+            "contributing_evidence_ids": [
+              "OBS-001"
+            ],
+            "missing_links": [
+              "The exact impact of the unresolved credential-like value is unknown without further classification."
+            ],
+            "path_steps": [
+              {
+                "step": "An attacker gains access to the documentation file containing the redacted credential-like value."
+              },
+              {
+                "step": "The attacker uses the credential-like value to gain unauthorized access to the system."
+              }
+            ],
+            "rationale": "If the redacted credential-like value is a real secret, it could be exploited to gain unauthorized access to the system.",
+            "record_id": "HYPOTHESIS-001",
+            "uncertainty": [
+              "The exact impact of the unresolved credential-like value is unknown without further classification."
+            ],
+            "validation_needed": [
+              "Manual classification of the redacted credential-like value by the security team."
+            ]
+          }
+        ],
+        "control_coverage": {
+          "secrets": {
+            "coverage": 1.0,
+            "gaps": [
+              "The redacted credential-like value in the documentation file is a potential exposure that requires classification."
+            ]
+          }
+        },
+        "designation": "PROD-SEC",
+        "evidence_gaps": [
+          {
+            "gap": "The exact impact of the unresolved credential-like value is unknown without further classification."
+          }
+        ],
+        "security_domain_correlations": [
+          {
+            "confidence": 0.85,
+            "contributing_artifact_ids": [
+              "85879acf-6be4-5637-9789-5aa5670c3c33"
+            ],
+            "contributing_evidence_ids": [
+              "OBS-001"
+            ],
+            "rationale": "The unresolved credential-like value in the documentation file is a potential exposure that requires classification.",
+            "record_id": "CORRELATION-001",
+            "uncertainty": [
+              "The exact impact of the unresolved credential-like value is unknown without further classification."
+            ]
+          }
+        ],
+        "security_posture": {
+          "secrets": {
+            "reason": "The redacted credential-like value in the documentation file is a potential exposure that requires classification.",
+            "status": "unresolved"
+          }
+        }
+      },
+      "specialist_artifact_inventory": [
+        {
+          "artifact_id": "85879acf-6be4-5637-9789-5aa5670c3c33",
+          "designation": "SPEC-SECRETS",
+          "state": "valid_present"
+        }
+      ],
+      "technical_confidence": 0.85,
+      "unresolved_conflicts": []
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Classify the redacted value as confirmed secret, likely secret, or benign/nonsecret.",
+        "implementation_level": "code_level",
+        "owner_role": "security_engineer",
+        "preventive_action": "Implement a process to ensure that documentation files do not contain credential-like values.",
+        "target_horizon": "short_term",
+        "validation_method": "manual classification by security team"
+      },
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "finding_id": "FINDING-001",
+      "impact": "The unresolved credential-like value may represent a potential exposure if it is a real secret, but its exact impact is unknown without further classification.",
+      "root_cause": "unknown",
+      "statement": "A redacted credential-like value was detected in a documentation file, but its status as a confirmed secret is unresolved."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "a085d5d0-3431-46a7-8edc-097280a83a48",
+    "agent_version": "1.0.0",
+    "contract_version": "1.0.0",
+    "designation": "PROD-SEC",
+    "display_name": "Product Security Synthesizer"
+  },
+  "inputs": [
+    {
+      "artifact_id": "85879acf-6be4-5637-9789-5aa5670c3c33",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:aa48e2e0f3f2603d32ce9f97c7a775b7d07d50febb9abd083bd5844b0582e9c8"
+    }
+  ],
+  "insights": [
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "insight_id": "INSIGHT-001",
+      "statement": "The presence of a redacted credential-like value in a documentation file suggests a potential oversight in developer workflow or secret management practices."
+    }
+  ],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:091631eac6dd9d128df687c3fba3892de59c6ed095cbd4b19f0fe952445cded8",
+    "output_hash": "sha256:073d9b9112933f0f482e80e9be57c34ea610759ac909260be1d176648a35c6e3",
+    "retention_class": "internal-test",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "This is a declared one-file calibration slice, not a repository-wide security conclusion.",
+      "The redacted heuristic candidate requires classification and was not validated against a live service.",
+      "Repository history, runtime configuration, and external secret stores are outside this slice."
+    ],
+    "method": "read-only shallow clone plus offline redacted heuristic scan"
+  },
+  "observations": [
+    {
+      "evidence_refs": [
+        "85879acf-6be4-5637-9789-5aa5670c3c33",
+        "OBS-001"
+      ],
+      "fact": "The unresolved credential-like value in the documentation file is a potential exposure that requires classification.",
+      "observation_id": "OBS-CORRELATION-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "implementation",
+    "excluded": [
+      "other security domains by fixture policy"
+    ],
+    "included": [
+      "SPEC-SECRETS artifact"
+    ],
+    "product_id": "PRODUCT-ALPHA",
+    "source_revision": "fixture-rev-001"
+  }
+}

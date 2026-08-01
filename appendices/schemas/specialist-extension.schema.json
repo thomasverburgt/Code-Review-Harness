@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/specialist-extension.schema.json",
+  "title": "Specialist Artifact Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "product_id", "domain_scope", "eligible_population", "domain_observations",
+    "domain_assessments", "domain_findings", "domain_patterns", "domain_unknowns",
+    "domain_coverage", "domain_confidence", "product_consumers", "role"
+  ],
+  "properties": {
+    "product_id": {"type": "string", "minLength": 1},
+    "domain_scope": {"type": "object"},
+    "eligible_population": {"type": "object"},
+    "domain_observations": {"type": "array", "items": {"type": "object"}},
+    "domain_assessments": {"type": "array", "items": {"type": "object"}},
+    "domain_findings": {"type": "array", "items": {"type": "object"}},
+    "domain_patterns": {"type": "array", "items": {"type": "object"}},
+    "domain_unknowns": {"type": "array", "items": {"type": "object"}},
+    "domain_coverage": {"type": "object"},
+    "domain_confidence": {"type": "object"},
+    "product_consumers": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "role": {"type": "object", "minProperties": 1}
+  }
+}
