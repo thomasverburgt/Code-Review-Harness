@@ -11,7 +11,7 @@
 
 Sprints 2-5 established release manifests, evidence catalogs, a Python package boundary, and generated agent catalogs. The final organization sprint contemplated removal of legacy runtime paths and transient training artifacts. The accepted gates require a compatibility release, GX-10 validation, verified archive destinations, and migration mappings before destructive retirement.
 
-The previously supplied GX credential file is no longer present at its recorded local path, and no external archive destination has been selected for superseded training QA material.
+GX access credentials are operator-managed local material outside the repository. The repository records only whether remote validation ran; it does not retain credential contents, filenames, or machine-specific paths. No external archive destination has been selected for superseded training QA material.
 
 ## Evidence
 
@@ -60,7 +60,6 @@ The previously supplied GX credential file is no longer present at its recorded 
 
 ## Unresolved matters
 
-- New location of GX-10 credentials or another approved remote test route.
+- Operator-provided local GX-10 access or another approved remote test route.
 - External archive destination and retention policy for training QA candidates.
 - Compatibility release identifier and observation period.
-

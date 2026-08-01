@@ -11,5 +11,9 @@ Runtime and platform deployment architecture is maintained here, including Kuber
 
 An equivalent test platform must support the required CUDA and container runtime, execute the selected test model or an explicitly documented scaled test configuration, preserve the same harness interfaces and deterministic controls, and emit comparable execution and resource telemetry. Results derived from a scaled configuration must be labeled and must not be represented as A100 capacity evidence.
 
+## Local access material
+
+Credentials for DGX Spark-equivalent systems are operator-managed local files outside this repository. Supply the local file reference to the runtime through the approved operator workflow. Do not copy credential contents, credential filenames, or machine-specific credential paths into source control, run artifacts, reports, ADRs, or pull-request discussions. Repository evidence records only the target identity, whether remote validation ran, and its result.
+
 - [A100 Large-Cluster Deployment](a100-large-cluster/README.md)
 - [ADR 0008: A100 Production and DGX Spark Test Baseline](../adr/0008-a100-production-dgx-spark-test-baseline.md)

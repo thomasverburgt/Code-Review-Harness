@@ -8,6 +8,8 @@ The large A100 cluster is the production serving target. All development, regres
 
 Test and production environments must use the same versioned harness interfaces: agent identities, prompts, contracts, schemas, rubrics, policies, tool adapters, container images, model configuration, and audit formats. Hardware-sensitive settings may vary only through explicit environment configuration that is retained with each run.
 
+Access credentials remain in operator-managed local files outside the repository. Deployment and test procedures may consume a local file reference at runtime, but must not persist its contents, filename, or machine-specific path in Git or generated evidence.
+
 ## Equivalent test-platform criteria
 
 An approved DGX Spark equivalent must:
