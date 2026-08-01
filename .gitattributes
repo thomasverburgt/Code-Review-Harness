@@ -1,4 +1,5 @@
 appendices/prompt-templates/candidates/** text eol=lf
+GOVERNANCE.md text eol=lf
 fixtures/**/*.md text eol=lf
 fixtures/**/*.json text eol=lf
 fixtures/**/*.txt text eol=lf

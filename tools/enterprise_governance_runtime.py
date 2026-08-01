@@ -5,6 +5,7 @@ import copy, hashlib, uuid
 from pathlib import Path
 from typing import Any
 from artifact_ledger import ArtifactLedger,content_hash
+from canonical_content import canonical_file_bytes
 from enterprise_arch_runtime import build_inputs
 from validate_vertical_slice import ROOT,ValidationFailure,assert_schema,load_json
 SOURCE=ROOT/"fixtures/enterprise-governance-admission/input/governance-source-manifest.json"
@@ -17,7 +18,7 @@ def validate_source(source:dict[str,Any])->None:
  if content_hash(material)!=actual:raise ValidationFailure("governance source manifest hash mismatch")
  auth=next((x for x in load_json(AUTHORITY)["authorities"] if x["authority_role"]==source["declared_by"]["authority_role"]),None)
  if not auth or auth["authority_kind"]!="expert_decision_authority" or "declare_governance_source_and_applicability" not in auth["allowed_actions"] or source["scope_id"] not in auth["scope_ids"]:raise ValidationFailure("governance source authority is not registered")
- text=GOVERNANCE.read_text(encoding="utf-8");raw_hash="sha256:"+hashlib.sha256(GOVERNANCE.read_bytes()).hexdigest();lines=text.splitlines()
+ text=GOVERNANCE.read_text(encoding="utf-8");raw_hash="sha256:"+hashlib.sha256(canonical_file_bytes(GOVERNANCE)).hexdigest();lines=text.splitlines()
  for s in source["sources"]:
   if s["content_hash"]!=raw_hash or s["path"]!="GOVERNANCE.md":raise ValidationFailure("governance source content binding mismatch")
   line="\n".join(lines[s["line_start"]-1:s["line_end"]]);fingerprint="sha256:"+hashlib.sha256(line.encode()).hexdigest()
