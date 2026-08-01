@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "as_of": "2026-08-01",
+  "projection_authority": "derived_only",
+  "enterprise_shadow_state": "blocked_as_designed",
+  "baseline_route": "ENT-EVIDENCE -> ENT-SYSRISK",
+  "prerequisites": [
+    {
+      "id": "ADR0016-SEMANTIC-ADJUDICATION",
+      "state": "pending_external_decision",
+      "source": "fixtures/product-synth-admission/evidence/2026-08-01/semantic-adjudication-adr0016/reference-run/semantic-adjudication-packet.json",
+      "remaining_gate": "enterprise-risk-acceptance-authority response and independent verification"
+    },
+    {
+      "id": "ADR0020-REQUIREMENTS-ACCEPTANCE",
+      "state": "response_recorded_pending_independent_verification",
+      "source": "fixtures/cap-req-admission/evidence/2026-08-01/adr0020/human-response",
+      "remaining_gate": "independent governance-records-verifier verification"
+    },
+    {
+      "id": "ENT-ARCH-LIVE-MULTI-DOMAIN",
+      "state": "missing_accepted_live_evidence",
+      "source": "adr/0021-enterprise-registry-truth-and-architecture-candidate-admission.md",
+      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+    },
+    {
+      "id": "ENT-GOV-LIVE-MULTI-DOMAIN",
+      "state": "missing_accepted_live_evidence",
+      "source": "adr/0022-authoritative-governance-source-boundary-and-ent-gov-candidate-admission.md",
+      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+    },
+    {
+      "id": "ENT-STRAT-LIVE-MULTI-DOMAIN",
+      "state": "missing_accepted_live_evidence",
+      "source": "adr/0023-human-controlled-strategic-objectives-and-scoring-boundary.md",
+      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+    },
+    {
+      "id": "ENT-SYNTH-LIVE-MULTI-DOMAIN",
+      "state": "missing_accepted_live_evidence",
+      "source": "adr/0024-enterprise-synthesis-provenance-and-release-boundary.md",
+      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+    }
+  ],
+  "effects": {
+    "shadow_scheduled": false,
+    "accepted_route_changed": false,
+    "deployment_changed": false,
+    "production_changed": false
+  }
+}
+

@@ -23,6 +23,8 @@ Each product role consumes only the immutable specialist inputs named by its dis
 
 ## Registered roles
 
+Identity, status, and specification paths are generated from the registry in the [agent catalog](../generated/agent-catalog.md). The table below remains explanatory framework content.
+
 The table describes the intended product topology, not scheduling authority. `PROD-SYNTH` is an admitted but unscheduled candidate; the other product synthesis roles remain planned.
 
 | Designation | Role | Status | Primary result |
@@ -40,4 +42,3 @@ The table describes the intended product topology, not scheduling authority. `PR
 - Release-readiness content is advisory input to a separate human-controlled release process; product agents do not approve release or accept risk.
 - Candidate admission and calibration do not authorize baseline scheduling. Promotion requires an explicit human decision and a version-pinned rollback path.
 - Production execution targets the NVIDIA A100 large cluster. All testing runs on NVIDIA DGX Spark or an approved equivalent, and test capacity is never represented as measured A100 capacity.
-

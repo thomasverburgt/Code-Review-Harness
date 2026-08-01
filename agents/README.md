@@ -2,7 +2,7 @@
 
 Agent-specific material is organized here: identity, registry, capability coverage, hierarchy, and role contracts. Shared artifact semantics live in [contracts](../contracts/README.md).
 
-All agents have an immutable UUID and canonical designation in the [machine identity registry](agent-identities.json). The [Agent Naming and Identity Standard](agent-naming-and-identity-standard.md) defines reserved namespaces, aliases, and version rules. The human-readable [Agent Catalog](agent-registry.md) summarizes the registered roles.
+All agents have an immutable UUID and canonical designation in the [machine identity registry](agent-identities.json). The [Agent Naming and Identity Standard](agent-naming-and-identity-standard.md) defines reserved namespaces, aliases, and version rules. The [generated agent catalog](generated/agent-catalog.md) is the current registry-derived human view; the historical [Agent Catalog](agent-registry.md) provides additional narrative.
 
 ## Agent layers
 

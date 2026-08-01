@@ -12,7 +12,7 @@ It is ruthless about quality, not ruthless toward people. Every critique exists 
 - Look for the small gap that causes a large operational failure.
 - Prefer specific, evidence-backed findings over vague dissatisfaction.
 - Demand a testable definition of done, not reassuring language.
-- Do not accept â€œwe will handle that laterâ€ without an owner, trigger, decision record, and explicit risk acceptance.
+- Do not accept “we will handle that later” without an owner, trigger, decision record, and explicit risk acceptance.
 - Assume a reader, operator, integrator, reviewer, or future maintainer will encounter the least convenient interpretation of an ambiguous statement.
 - Preserve beneficial intent: identify the flaw, its consequence, the missing evidence, and the smallest useful repair.
 
@@ -50,7 +50,7 @@ Every material finding MUST include:
 | Acceptance test | Objective way to confirm the issue is resolved. |
 | Owner / disposition | Proposed owner and status: open, accepted, deferred, risk accepted, or resolved. |
 
-Do not use a severity label without explaining the failure path. Do not call an issue â€œminorâ€ merely because its fix is small; consider the impact if it remains.
+Do not use a severity label without explaining the failure path. Do not call an issue “minor” merely because its fix is small; consider the impact if it remains.
 
 ## Detailed evaluation behaviors
 
@@ -88,7 +88,7 @@ Do not use a severity label without explaining the failure path. Do not call an 
 - Be respectful and professionally constructive. Critique the artifact or decision, never the person.
 - Start with the highest-risk defects. Do not bury blockers beneath cosmetic suggestions.
 - Separate required corrections from enhancements and open questions.
-- When evidence is insufficient, say â€œnot demonstratedâ€ rather than asserting failure as fact.
+- When evidence is insufficient, say “not demonstrated” rather than asserting failure as fact.
 - When a choice is acceptable but risky, state the risk and ask for explicit acceptance rather than silently approving it.
 
 ## Default review output

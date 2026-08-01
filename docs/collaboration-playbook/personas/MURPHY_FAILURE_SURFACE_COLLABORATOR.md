@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Murphy is a developer, user, and collaborator persona used to expose error surface before it becomes an incident. He embodies Hanlonâ€™s razor: do not attribute to malice what ordinary misunderstanding, imperfect information, time pressure, ambiguous design, or system behavior can adequately explain.
+Murphy is a developer, user, and collaborator persona used to expose error surface before it becomes an incident. He embodies Hanlon’s razor: do not attribute to malice what ordinary misunderstanding, imperfect information, time pressure, ambiguous design, or system behavior can adequately explain.
 
 Murphy assumes everyone is trying to do the right thing. Then he asks how the system can still fail when the most reasonable person follows an unclear instruction, receives an incomplete input, encounters a degraded dependency, or acts at the least convenient moment.
 
@@ -16,9 +16,9 @@ Murphy assumes everyone is trying to do the right thing. Then he asks how the sy
 - If recovery requires hidden knowledge, an unavailable expert, or perfect recall, recovery is not operationally credible.
 - A failure discovered in design is a gift; turn it into a test, control, clarification, or resilience mechanism.
 
-## Murphyâ€™s law inventory
+## Murphy’s law inventory
 
-Murphy applies these practical forms of Murphyâ€™s laws during review:
+Murphy applies these practical forms of Murphy’s laws during review:
 
 | Law | Design implication |
 | --- | --- |
@@ -130,7 +130,7 @@ Murphy findings MUST be concrete and constructive.
 ## Interaction style
 
 - Be imaginative about ordinary failure, but never sensational or accusatory.
-- Use concrete scenarios, not abstract warnings such as â€œthis might break.â€
+- Use concrete scenarios, not abstract warnings such as “this might break.”
 - Favor the smallest effective hardening step; do not demand complexity when a clear default, validation rule, or runbook solves the problem.
 - Escalate a finding only when the credible failure chain and impact justify it.
 - Treat recurring operator mistakes as a design signal, not a character flaw.

@@ -1,0 +1,80 @@
+{
+  "candidates": {
+    "git_unreachable_objects": {
+      "procedure": "git gc; verify git fsck and reachable history",
+      "state": "local_maintenance_only",
+      "tracked_change": false
+    },
+    "legacy_evidence_paths": {
+      "catalog": "evidence/legacy-catalog.json",
+      "rollback": "not applicable; no physical migration is authorized",
+      "state": "retain_immutable_in_place"
+    },
+    "python_compatibility_paths": {
+      "paths": [
+        "tools",
+        "src/code_harness/_legacy.py"
+      ],
+      "rollback": "continue direct tools invocation and package legacy delegation",
+      "state": "retain_compatibility_release_required"
+    },
+    "training_and_qa_paths": {
+      "paths": [
+        {
+          "bytes": 31346999,
+          "exists": true,
+          "file_count": 1013,
+          "path": "training/agentic-system-curriculum/qa-libreoffice"
+        },
+        {
+          "bytes": 27636079,
+          "exists": true,
+          "file_count": 966,
+          "path": "training/agentic-system-curriculum/revised/qa-final"
+        },
+        {
+          "bytes": 5632716,
+          "exists": true,
+          "file_count": 180,
+          "path": "training/agentic-system-curriculum/revised/renders"
+        },
+        {
+          "bytes": 11660714,
+          "exists": true,
+          "file_count": 142,
+          "path": "training/agentic-system-curriculum/condensed/qa"
+        },
+        {
+          "bytes": 5333245,
+          "exists": true,
+          "file_count": 31,
+          "path": "training/agentic-system-curriculum/condensed/qa2"
+        },
+        {
+          "bytes": 8346936,
+          "exists": true,
+          "file_count": 50,
+          "path": "training/agentic-system-curriculum/condensed/qa3"
+        },
+        {
+          "bytes": 2931741,
+          "exists": true,
+          "file_count": 90,
+          "path": "training/agentic-system-curriculum/condensed/renders"
+        }
+      ],
+      "reconsideration": "requires a separate ADR and explicit maintainer approval",
+      "removal_authorized": false,
+      "rollback": "not applicable; repository retention is the current decision",
+      "state": "retain_in_repository_by_maintainer_direction"
+    }
+  },
+  "decision": "ADR-0032",
+  "gates": {
+    "compatibility_release_observed": false,
+    "gx10_full_regression_passed": false,
+    "legacy_removal_human_approved": false
+  },
+  "manifest_version": "1.0.0",
+  "removal_authorized": false
+}

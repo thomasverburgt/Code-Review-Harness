@@ -18,14 +18,20 @@ Executable candidate details are defined in [product-synthesis-lead.md](product-
 
 Produces security-domain correlations, attack-path hypotheses, control coverage, evidence gaps, product security findings, CAPA options, and escalation requests. It cannot declare a product secure or accept cyber risk.
 
+Role details are defined in [product-security-synthesizer.md](product-security-synthesizer.md).
+
 ## `PROD-ARCH` — Product Architecture Synthesizer
 
 **Question:** Does the product's implemented structure coherently realize its approved architecture and operational intent?
 
 Produces intended/implemented comparisons, dependency and interface correlations, quality-attribute posture, architecture drift, product architecture findings, cost drivers, and capability escalations. It cannot approve architecture or substitute preference for criteria.
 
+Role details are defined in [product-architecture-synthesizer.md](product-architecture-synthesizer.md).
+
 ## `PROD-LINT` — Product Quality Synthesizer
 
 **Question:** What product-level maintainability and code-quality posture follows from lint, dependency, architecture, testing, and defect evidence?
 
 Produces normalized quality-rule coverage, maintainability trends, systemic code-quality findings, false-positive analysis, debt signals, and CAPA options. It cannot turn tool output directly into an authoritative finding without assessment.
+
+Role details are defined in [product-quality-synthesizer.md](product-quality-synthesizer.md).

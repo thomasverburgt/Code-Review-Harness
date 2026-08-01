@@ -10,7 +10,7 @@ All agents inherit the [Universal Agent Contract](../contracts/universal-agent-c
 - [Enterprise Agent Contract](../contracts/enterprise-agent-contract.md)
 - [Orchestration Agent Contract](../contracts/orchestration-agent-contract.md)
 
-The [machine identity registry](agent-identities.json) is authoritative for UUIDs, designations, versions, layer membership, status, and specification paths. The [agent catalog](agent-registry.md) is the human-readable index.
+The [machine identity registry](agent-identities.json) is authoritative for UUIDs, designations, versions, layer membership, status, and specification paths. The [generated agent catalog](generated/agent-catalog.md) is the registry-derived human-readable index; [agent-registry.md](agent-registry.md) retains additional narrative.
 
 ## End-to-end framework
 
@@ -204,4 +204,3 @@ A consumer may add a derived assertion only when it cites the contributing immut
 - [Orchestration Agent Framework](orchestration/orchestration-agent-framework.md)
 
 The layer-specific documents remain normative for their detailed topology. This integrated document is the single cross-layer architecture view and must remain aligned with those sources and the machine identity registry.
-

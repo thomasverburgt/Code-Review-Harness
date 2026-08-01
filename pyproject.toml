@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-review-harness"
+version = "0.1.0"
+description = "Evidence-driven multi-agent engineering review harness"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "AGPL-3.0-only"}
+authors = [{name = "Thomas Verburgt"}]
+
+[project.optional-dependencies]
+docs = ["python-docx==1.2.0"]
+
+[project.scripts]
+harness-check = "code_harness.cli:check_repository"
+harness-validate = "code_harness.cli:validate_vertical"
+
+[tool.setuptools]
+packages = ["code_harness", "tools"]
+package-dir = {code_harness = "src/code_harness", tools = "tools"}

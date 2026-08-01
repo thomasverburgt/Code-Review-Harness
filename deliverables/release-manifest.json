@@ -1,0 +1,36 @@
+{
+  "artifacts": [
+    {
+      "bytes": 54685,
+      "generator": "document_builders/build_cap_risk_prompt_design.py",
+      "lifecycle": "release_candidate",
+      "path": "deliverables/CAP-RISK-Prompt-Design-and-Methodology.docx",
+      "sha256": "d1f0eda9dd62f83f3715e2776bda1317a782dcf34b57fff6378d378970b492b5"
+    },
+    {
+      "bytes": 55002,
+      "generator": "document_builders/build_ent_sysrisk_prompt_design.py",
+      "lifecycle": "release_candidate",
+      "path": "deliverables/ENT-SYSRISK-Prompt-Design-and-Methodology.docx",
+      "sha256": "2b050358144faf1109722c5bc11004b1ef7df5920d111b5106be9a3b58b4c150"
+    },
+    {
+      "bytes": 57103,
+      "generator": "document_builders/build_prod_sec_prompt_design.py",
+      "lifecycle": "release_candidate",
+      "path": "deliverables/PROD-SEC-Prompt-Design-and-Methodology.docx",
+      "sha256": "29abca6aef2963003b7235e87f433cc8411455f461d21add1b414c302efa5219"
+    },
+    {
+      "bytes": 59920,
+      "generator": "document_builders/build_spec_secrets_prompt_design.py",
+      "lifecycle": "release_candidate",
+      "path": "deliverables/SPEC-SECRETS-Prompt-Design-and-Methodology.docx",
+      "sha256": "d5445961b6816d6b47e76ccce4153e832dd8ac410b356b3aa6bcaddd226d2497"
+    }
+  ],
+  "binary_policy": "legacy_git_until_verified_lfs_migration",
+  "collection": "prompt-design-deliverables",
+  "manifest_version": "1.0.0",
+  "state": "design_candidate"
+}

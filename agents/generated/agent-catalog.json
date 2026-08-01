@@ -1,0 +1,573 @@
+{
+  "agents": [
+    {
+      "agent_uuid": "298ae38a-0bd3-46f1-8074-35f3356454fc",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-ARCH",
+      "display_name": "Architecture Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-ARCH"
+      ],
+      "specification": "specialists/architecture-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "c6e380a3-8161-45cd-9a05-b2849a5e30a6",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-CICD",
+      "display_name": "CI/CD Pipeline Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-CICD"
+      ],
+      "specification": "specialists/cicd-pipeline-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "fca6f659-133a-4bd8-80d1-6bcc2d82b098",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-COMMS",
+      "display_name": "Workload Communication Security Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-COMMS"
+      ],
+      "specification": "specialists/workload-communication-security-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "b7eb144e-eae5-4f91-9789-b606ba2afc95",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-CONTAINER",
+      "display_name": "Container and Image Security Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-CONTAINER"
+      ],
+      "specification": "specialists/container-image-security-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "b7a03aff-6262-407f-b4ce-2eadec82508d",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-DATA",
+      "display_name": "Data Architecture and Information Management Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-DATA"
+      ],
+      "specification": "specialists/data-architecture-information-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "7e7d7710-885a-47c6-af0f-339ed9dad525",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-DEPS",
+      "display_name": "Dependency Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-DEPS"
+      ],
+      "specification": "specialists/dependency-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "15286a2d-5e7f-48e9-b19c-1c2144da0fba",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-DIAGRAM",
+      "display_name": "Diagram and Design-Model Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-DIAGRAM"
+      ],
+      "specification": "specialists/diagram-design-model-reviewer.md",
+      "status": "seed"
+    },
+    {
+      "agent_uuid": "de17f99f-0ac6-4482-8ec4-3fa9f03ce4ed",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-FMECA",
+      "display_name": "Reliability, Resilience, and FMECA Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-FMECA"
+      ],
+      "specification": "specialists/reliability-resilience-fmeca-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "09c72dd8-48c0-4a3b-8f48-9adcbe18df94",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-IAC",
+      "display_name": "Infrastructure-as-Code Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-IAC"
+      ],
+      "specification": "specialists/infrastructure-as-code-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "da0bc1ae-8e6f-4730-b29c-19ec6544cb7f",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-INTEROP",
+      "display_name": "Interoperability and Integration Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-INTEROP"
+      ],
+      "specification": "specialists/interoperability-integration-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "5801b47f-df7c-47f3-9609-1ecc1fd54c15",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-IO",
+      "display_name": "I/O and Resource Interaction Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-IO"
+      ],
+      "specification": "specialists/io-resource-interaction-reviewer.md",
+      "status": "seed"
+    },
+    {
+      "agent_uuid": "01596885-15c9-4846-8233-450939791c35",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-K8S-PLATFORM",
+      "display_name": "Kubernetes Platform Security Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-K8S-PLATFORM"
+      ],
+      "specification": "specialists/kubernetes-platform-security-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "9106ee3d-8959-4a24-b141-c3ab1435583c",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-K8S-WORKLOAD",
+      "display_name": "Kubernetes Workload Security Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-K8S-WORKLOAD"
+      ],
+      "specification": "specialists/kubernetes-workload-security-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "d56a9cfd-9dad-4b0c-9b58-4a516ad3ef83",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-LINT",
+      "display_name": "Linter and Code Quality Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-LINT"
+      ],
+      "specification": "specialists/linter-code-quality-reviewer.md",
+      "status": "seed"
+    },
+    {
+      "agent_uuid": "f4633c67-d94d-440e-bb32-0f243eddafb6",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-OBS",
+      "display_name": "Observability Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-OBS"
+      ],
+      "specification": "specialists/observability-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "34ec9c9a-97b4-4a69-ab7c-7e2eb5f3632e",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-PERF",
+      "display_name": "Performance and Scalability Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-PERF"
+      ],
+      "specification": "specialists/performance-scalability-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "55145271-c754-46bc-9da9-26a6d8dcddd7",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-RESEARCH",
+      "display_name": "Research and Product-Store Agent",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-RESEARCH"
+      ],
+      "specification": "specialists/research-product-store-agent.md",
+      "status": "seed"
+    },
+    {
+      "agent_uuid": "3adf20a4-78ed-497f-ae73-52d7ddbe9581",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-RISK",
+      "display_name": "Product Risk Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-RISK"
+      ],
+      "specification": "specialists/product-risk-reviewer.md",
+      "status": "seed"
+    },
+    {
+      "agent_uuid": "25c08f1d-0721-492e-9076-bc9d86e55413",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-SBOM",
+      "display_name": "Software Composition and SBOM Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-SBOM"
+      ],
+      "specification": "specialists/software-composition-sbom.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "e753f9e1-b3ff-4149-8b95-b3c073e3777f",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-SECRETS",
+      "display_name": "Secrets Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-SECRETS"
+      ],
+      "specification": "specialists/secrets-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "7497bb23-2340-41d1-9c73-3f0ecd580ab4",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-SECURE-CODE",
+      "display_name": "Secure Coding Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-SECURE-CODE"
+      ],
+      "specification": "specialists/secure-coding-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "c201aa58-2464-40f0-b869-670df2ae932f",
+      "contract_version": "1.0.0",
+      "designation": "SPEC-SECURITY",
+      "display_name": "Security Posture Reviewer",
+      "layer": "specialist",
+      "legacy_designations": [
+        "SPC-SECURITY"
+      ],
+      "specification": "specialists/security-posture-reviewer.md",
+      "status": "seed"
+    },
+    {
+      "agent_uuid": "6ac72498-b23b-4ff6-9aa6-90df20d38960",
+      "contract_version": "1.0.0",
+      "designation": "PROD-ARCH",
+      "display_name": "Product Architecture Synthesizer",
+      "layer": "product",
+      "specification": "product/product-architecture-synthesizer.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "794a9104-8738-4f29-8604-3a48118960bc",
+      "contract_version": "1.0.0",
+      "designation": "PROD-LINT",
+      "display_name": "Product Quality Synthesizer",
+      "layer": "product",
+      "specification": "product/product-quality-synthesizer.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "a085d5d0-3431-46a7-8edc-097280a83a48",
+      "contract_version": "1.0.0",
+      "designation": "PROD-SEC",
+      "display_name": "Product Security Synthesizer",
+      "layer": "product",
+      "specification": "product/product-security-synthesizer.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "723b566e-224b-4e73-bb83-887c21f53a02",
+      "contract_version": "1.0.0",
+      "designation": "PROD-SYNTH",
+      "display_name": "Product Synthesis Lead",
+      "layer": "product",
+      "legacy_designations": [
+        "PRD-SYNTH"
+      ],
+      "specification": "product/product-synthesis-lead.md",
+      "status": "candidate"
+    },
+    {
+      "agent_uuid": "ecc88f14-11ac-47ef-8b04-d36985f0cde3",
+      "contract_version": "1.0.0",
+      "designation": "CAP-ARCH",
+      "display_name": "Capability Architecture Reviewer",
+      "layer": "capability",
+      "specification": "capability/capability-architecture-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "38d55885-5785-4da7-b4a7-94ca65e652e5",
+      "contract_version": "1.0.0",
+      "designation": "CAP-COORD",
+      "display_name": "Capability Coordinator",
+      "layer": "capability",
+      "specification": "capability/capability-coordinator.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "0348af7c-afc1-41b1-ab66-9228c3c20c80",
+      "contract_version": "1.0.0",
+      "designation": "CAP-GOV",
+      "display_name": "Capability Governance Reviewer",
+      "layer": "capability",
+      "specification": "capability/capability-governance-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "a0f77a7e-886b-4229-b3ba-721eebd23163",
+      "contract_version": "1.0.0",
+      "designation": "CAP-HCD",
+      "display_name": "Human-Centered Design Evaluator",
+      "layer": "capability",
+      "specification": "capability/human-centered-design-evaluator.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "99f4586c-a32f-47a3-9a3e-be84cc991976",
+      "contract_version": "1.0.0",
+      "designation": "CAP-MISSION",
+      "display_name": "Mission Thread Analysis Agent",
+      "layer": "capability",
+      "legacy_designations": [
+        "CAP-MTHREAD"
+      ],
+      "specification": "capability/mission-thread-analysis-agent.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "16ab5841-429b-421a-ba5d-ad85c6689d1f",
+      "contract_version": "1.0.0",
+      "designation": "CAP-PROGRESS",
+      "display_name": "Capability Progress and Readiness Reviewer",
+      "layer": "capability",
+      "specification": "capability/capability-progress-readiness-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "9a82a407-38f6-4abe-9ef8-49f0fd256e67",
+      "contract_version": "1.0.0",
+      "designation": "CAP-REQ",
+      "display_name": "Requirements Traceability Reviewer",
+      "layer": "capability",
+      "specification": "capability/requirements-traceability-reviewer.md",
+      "status": "candidate"
+    },
+    {
+      "agent_uuid": "147e73eb-9d41-429e-9b63-81a3fe895ec7",
+      "contract_version": "1.0.0",
+      "designation": "CAP-RISK",
+      "display_name": "Capability Risk Reviewer",
+      "layer": "capability",
+      "specification": "capability/capability-risk-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "ca95161d-d7dc-40b0-b233-fda505b18afe",
+      "contract_version": "1.0.0",
+      "designation": "CAP-SYNTH",
+      "display_name": "Capability Synthesis Lead",
+      "layer": "capability",
+      "specification": "capability/capability-synthesis-lead.md",
+      "status": "candidate"
+    },
+    {
+      "agent_uuid": "0ad458f4-6867-4f64-bb4b-da6946d07c8e",
+      "contract_version": "1.0.0",
+      "designation": "CAP-TRADE",
+      "display_name": "Capability Trade-Study Reviewer",
+      "layer": "capability",
+      "specification": "capability/capability-trade-study-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "60de02fe-03eb-4bd3-aaaa-3124b83f957d",
+      "contract_version": "1.0.0",
+      "designation": "CAP-XPROD",
+      "display_name": "Cross-Product Reviewer",
+      "layer": "capability",
+      "specification": "capability/cross-product-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "6f74e6ca-2ae2-4415-8f99-be1aef2bc94a",
+      "contract_version": "1.0.0",
+      "designation": "ENT-ARCH",
+      "display_name": "Systems Architecture Reviewer",
+      "layer": "enterprise",
+      "specification": "enterprise/systems-architecture-reviewer.md",
+      "status": "candidate"
+    },
+    {
+      "agent_uuid": "402833e9-02c6-47b4-bc02-12b6e218f77b",
+      "contract_version": "1.0.0",
+      "designation": "ENT-ARCHSTRAT",
+      "display_name": "Architecture Strategy Agent",
+      "layer": "enterprise",
+      "specification": "enterprise/architecture-strategy-agent.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "f0b5a16b-4075-4f6f-830e-bbd4069e21e4",
+      "contract_version": "1.0.0",
+      "designation": "ENT-EVIDENCE",
+      "display_name": "Evidence Validation Gate",
+      "layer": "enterprise",
+      "specification": "enterprise/evidence-validation-gate.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "bc12d42a-6837-4084-a419-3d5a14618714",
+      "contract_version": "1.0.0",
+      "designation": "ENT-GOV",
+      "display_name": "Enterprise Governance Reviewer",
+      "layer": "enterprise",
+      "specification": "enterprise/enterprise-governance-reviewer.md",
+      "status": "candidate"
+    },
+    {
+      "agent_uuid": "5f232910-f540-4bf8-ad6e-815442014721",
+      "contract_version": "1.0.0",
+      "designation": "ENT-LEARN",
+      "display_name": "Learning and Metrics Agent",
+      "layer": "enterprise",
+      "specification": "enterprise/learning-metrics-agent.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "e1c79f4b-1522-46c5-ab1c-0f560b96b476",
+      "contract_version": "1.0.0",
+      "designation": "ENT-MATURITY",
+      "display_name": "Maturity Evaluator",
+      "layer": "enterprise",
+      "specification": "enterprise/maturity-evaluator.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "8e4b2be1-1a1a-4f7b-b276-6866974426e5",
+      "contract_version": "1.0.0",
+      "designation": "ENT-MODERNIZE",
+      "display_name": "Investment and Modernization Advisor",
+      "layer": "enterprise",
+      "specification": "enterprise/investment-modernization-advisor.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "99ed1a62-72f4-4ac9-9c8b-a3b48475a87e",
+      "contract_version": "1.0.0",
+      "designation": "ENT-PORTFOLIO",
+      "display_name": "Portfolio Analysis Agent",
+      "layer": "enterprise",
+      "specification": "enterprise/portfolio-analysis-agent.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "0275dcd7-ef2d-4535-8b3b-0e6da66ebff6",
+      "contract_version": "1.0.0",
+      "designation": "ENT-STRAT",
+      "display_name": "Strategic Scoring Agent",
+      "layer": "enterprise",
+      "specification": "enterprise/strategic-scoring-agent.md",
+      "status": "candidate"
+    },
+    {
+      "agent_uuid": "a4911647-648f-43fd-a51a-ed60d0d9bdf9",
+      "contract_version": "1.0.0",
+      "designation": "ENT-SYNTH",
+      "display_name": "Enterprise Synthesis Agent",
+      "layer": "enterprise",
+      "specification": "enterprise/enterprise-synthesis-agent.md",
+      "status": "candidate"
+    },
+    {
+      "agent_uuid": "24763fb8-bde7-4c1b-b6af-f5690958ef27",
+      "contract_version": "1.0.0",
+      "designation": "ENT-SYSRISK",
+      "display_name": "Systemic Risk Reviewer",
+      "layer": "enterprise",
+      "specification": "enterprise/systemic-risk-reviewer.md",
+      "status": "baseline"
+    },
+    {
+      "agent_uuid": "d9abe7a3-8b0c-4cf6-a584-018a3e44744c",
+      "contract_version": "1.0.0",
+      "designation": "ENT-TECHDEBT",
+      "display_name": "Technical Debt Prioritizer",
+      "layer": "enterprise",
+      "specification": "enterprise/technical-debt-prioritizer.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "3604a171-a17b-4111-b311-97b58e258565",
+      "contract_version": "1.0.0",
+      "designation": "WORK-ANALYZE",
+      "display_name": "Evidence Analysis Worker",
+      "layer": "work",
+      "specification": "work/evidence-analysis-worker.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "bd6f200e-e01e-4025-8ef3-be63c511f54e",
+      "contract_version": "1.0.0",
+      "designation": "WORK-REVIEW",
+      "display_name": "Evidence Review Worker",
+      "layer": "work",
+      "specification": "work/evidence-review-worker.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "8488b6f9-eb33-4479-899f-707dc9c2fac0",
+      "contract_version": "1.0.0",
+      "designation": "WORK-SUMMARIZE",
+      "display_name": "Evidence Summarization Worker",
+      "layer": "work",
+      "specification": "work/evidence-summarization-worker.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "907b26fd-7cfb-4254-8c32-0bec8467ff76",
+      "contract_version": "1.0.0",
+      "designation": "ORCH-FANIN",
+      "display_name": "Artifact Aggregation Controller",
+      "layer": "orchestration",
+      "specification": "orchestration/artifact-aggregation-controller.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "d5c6c5e3-a373-4f6b-b4fa-0ccd724ea88d",
+      "contract_version": "1.0.0",
+      "designation": "ORCH-FANOUT",
+      "display_name": "Parallel Dispatch Controller",
+      "layer": "orchestration",
+      "specification": "orchestration/parallel-dispatch-controller.md",
+      "status": "planned"
+    },
+    {
+      "agent_uuid": "c48c1f0f-ba69-414d-9606-5401373f9da8",
+      "contract_version": "1.0.0",
+      "designation": "ORCH-SCHED",
+      "display_name": "Contract Scheduler",
+      "layer": "orchestration",
+      "specification": "orchestration/contract-scheduler.md",
+      "status": "planned"
+    }
+  ],
+  "catalog_version": "1.0.0",
+  "generated_from": "agents/agent-identities.json"
+}

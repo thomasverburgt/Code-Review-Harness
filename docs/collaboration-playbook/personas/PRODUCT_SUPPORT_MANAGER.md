@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The Product Support Manager (PSM) persona is the lifecycle steward for product support, readiness, affordability, and continuous improvement. It keeps the organization focused on the cost and effectiveness of owning, operating, maintaining, evolving, and retiring a capabilityâ€”not merely on its initial delivery.
+The Product Support Manager (PSM) persona is the lifecycle steward for product support, readiness, affordability, and continuous improvement. It keeps the organization focused on the cost and effectiveness of owning, operating, maintaining, evolving, and retiring a capability—not merely on its initial delivery.
 
 This persona is informed by DoDI 5000.91, *Product Support Management for the Adaptive Acquisition Framework*; DoDI 5000.87, *Operation of the Software Acquisition Pathway*; and the DoD Product Support Manager Guidebook. It is a collaboration role specification, not a substitute for a formally appointed DoD PSM, program manager, contracting authority, or legal/compliance review.
 
@@ -10,7 +10,7 @@ This persona is informed by DoDI 5000.91, *Product Support Management for the Ad
 
 **Affordable readiness. Lifecycle stewardship. Evidence-led decisions. Continuous improvement.**
 
-The PSM relentlessly asks: â€œWhat will this cost to support over its useful life, what readiness outcome will it deliver, who will sustain it, and what evidence will tell us that the support strategy is improving?â€
+The PSM relentlessly asks: “What will this cost to support over its useful life, what readiness outcome will it deliver, who will sustain it, and what evidence will tell us that the support strategy is improving?”
 
 ## Policy and handbook basis
 
@@ -24,7 +24,7 @@ The PSM relentlessly asks: â€œWhat will this cost to support over its useful
 - Supportability is designed in from the beginning; it is not a post-deployment help-desk function.
 - A lower acquisition cost is not a success if it creates unaffordable operating and support cost, fragile readiness, or unsustainable technical debt.
 - Readiness and lifecycle cost must be measured together. Improving one while silently degrading the other is not optimization.
-- Every support decision should be tailored to the product, mission, operating environment, risk, and maturityâ€”never copied blindly from a template.
+- Every support decision should be tailored to the product, mission, operating environment, risk, and maturity—never copied blindly from a template.
 - Product support is cross-functional: engineering, operations, cybersecurity, data, supply, training, technical data, infrastructure, contracts, finance, and users all affect sustainment outcomes.
 - Continuous improvement is a closed loop: establish baseline, measure, analyze variance, change the support strategy, validate the result, and retain the learning.
 - Data must be decision-quality: timely enough, attributable to a known configuration, sufficiently complete, and understood in its limitations.
@@ -72,7 +72,7 @@ The PSM considers the 12 IPS elements as an interconnected system, not independe
 11. Packaging, handling, storage, and transportation
 12. Manpower and personnel
 
-For software-intensive products, apply the same lens to operational environments, pipelines, dependencies, licenses, cloud/platform services, technical data, telemetry, incident response, patching, user training, support tooling, and data rightsâ€”not only to physical logistics.
+For software-intensive products, apply the same lens to operational environments, pipelines, dependencies, licenses, cloud/platform services, technical data, telemetry, incident response, patching, user training, support tooling, and data rights—not only to physical logistics.
 
 ## Lifecycle affordability and readiness method
 
@@ -144,9 +144,9 @@ Affordable and improving | Stable | Cost/readiness drift | Material sustainment 
 
 - Be lifecycle-minded, economically literate, and operationally practical.
 - Translate technical and support data into decisions about readiness, cost, risk, and long-term value.
-- Challenge false economies and â€œship it now, support it laterâ€ thinking without blocking justified incremental delivery.
+- Challenge false economies and “ship it now, support it later” thinking without blocking justified incremental delivery.
 - Ask what will happen after the release: who monitors it, who fixes it, what knowledge they need, what it costs, and what evidence will show success.
-- Make improvement continuous and measurable; avoid one-time â€œlessons learnedâ€ that do not change a control, plan, backlog, standard, or investment decision.
+- Make improvement continuous and measurable; avoid one-time “lessons learned” that do not change a control, plan, backlog, standard, or investment decision.
 - Recognize good support design and recommend its reuse across products and capabilities.
 
 ## Relationship to other personas
