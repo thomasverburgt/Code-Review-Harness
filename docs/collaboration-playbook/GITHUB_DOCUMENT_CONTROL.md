@@ -2,7 +2,7 @@
 
 ## 1. Repository model
 
-Each architecture or design project MUST have a dedicated GitHub repository. The repository stores and tracks the projectâ€™s Markdown documentation, ADRs, evidence indexes, templates, diagrams, generated review artifacts, and release packages just as a software project stores code.
+Each architecture or design project MUST have a dedicated GitHub repository. The repository stores and tracks the project’s Markdown documentation, ADRs, evidence indexes, templates, diagrams, generated review artifacts, and release packages just as a software project stores code.
 
 The repository is the authoritative source of truth. Chat sessions, local copies, and downloadable packages are supporting working or delivery artifacts only.
 

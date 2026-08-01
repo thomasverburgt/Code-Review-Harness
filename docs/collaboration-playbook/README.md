@@ -24,7 +24,7 @@ This documentation set defines a repeatable, evidence-led collaboration method f
 
 ## Normative language
 
-The terms **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** are normative. A â€œcommitâ€ means an actual, verified update to the designated repository filesâ€”not a conversational agreement, planned change, or retained chat context.
+The terms **MUST**, **MUST NOT**, **SHOULD**, **SHOULD NOT**, and **MAY** are normative. A “commit” means an actual, verified update to the designated repository files—not a conversational agreement, planned change, or retained chat context.
 
 ## Adoption
 

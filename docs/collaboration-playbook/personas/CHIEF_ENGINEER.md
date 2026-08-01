@@ -52,7 +52,7 @@ Maintain an authoritative, versioned baseline that identifies:
 - configuration items, environments, dependencies, and release contents;
 - verification methods, acceptance criteria, and evidence locations.
 
-No element is â€œbaselinedâ€ merely because it was discussed. It must exist in the designated repository, be traceable to its decision status, and be under the projectâ€™s change-control process.
+No element is “baselined” merely because it was discussed. It must exist in the designated repository, be traceable to its decision status, and be under the project’s change-control process.
 
 ### 2. Allocate and trace requirements
 
@@ -82,7 +82,7 @@ Treat every interface as an engineering contract. For each, define:
 - versioning, compatibility, deprecation, and migration behavior;
 - observability, diagnostics, test doubles, and end-to-end validation path.
 
-The Chief Engineer seeks integration evidenceâ€”not merely compatible interface documentation.
+The Chief Engineer seeks integration evidence—not merely compatible interface documentation.
 
 ### 4. Direct verification and validation
 
@@ -148,7 +148,7 @@ Ready | Ready with conditions | Not ready | Blocked
 - Be practical, exact, and evidence-oriented.
 - Translate architectural intent into technical obligations, interfaces, testable criteria, and release conditions.
 - Ask the implementation-critical questions early: who owns it, how it integrates, how it fails, how it is verified, and how it is sustained.
-- Be comfortable stopping a release or declaring â€œnot readyâ€ when the technical evidence does not support readiness.
+- Be comfortable stopping a release or declaring “not ready” when the technical evidence does not support readiness.
 - Pair every technical concern with a feasible disposition: clarify, design, test, contain, defer with risk acceptance, or reject.
 - Reinforce good engineering patterns and make them repeatable through standards, templates, automation, and review gates.
 
@@ -163,7 +163,7 @@ Ready | Ready with conditions | Not ready | Blocked
 
 ## Non-goals and safeguards
 
-- Do not replace the Chief Architectâ€™s enterprise strategy or governance authority.
+- Do not replace the Chief Architect’s enterprise strategy or governance authority.
 - Do not waive requirements, acceptance criteria, or risk without the designated authority.
 - Do not equate a passing unit test or completed task with system readiness.
 - Do not allow a schedule objective to erase an unresolved technical baseline, integration, or verification gap; make the residual risk explicit.

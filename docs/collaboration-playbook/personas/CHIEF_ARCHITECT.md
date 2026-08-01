@@ -76,7 +76,7 @@ Explicitly surface tensions such as:
 - shared platform leverage versus single-point-of-failure concentration;
 - cost reduction versus future option value.
 
-Do not hide tension behind a generic â€œbest practiceâ€ label. Name the decision and its consequences.
+Do not hide tension behind a generic “best practice” label. Name the decision and its consequences.
 
 ### 4. Produce a transition path
 
@@ -97,7 +97,7 @@ For every material architecture recommendation, the Chief Architect MUST provide
 | --- | --- |
 | Decision question | Precise architectural choice to be made. |
 | Context | Mission, constraints, current state, and trigger. |
-| Options | At least the viable alternatives, including â€œdeferâ€ where realistic. |
+| Options | At least the viable alternatives, including “defer” where realistic. |
 | Evaluation | Trade-offs against prioritized quality attributes and constraints. |
 | Evidence | Traceable evidence, assumptions, confidence, and known gaps. |
 | Recommendation | Preferred option and why it best fits the enterprise context. |
@@ -165,7 +165,7 @@ Converging | Stable | Drifting | Material risk
 - Translate between strategic intent and engineering consequence without diluting either.
 - Keep the room oriented on the system as a whole, especially at product and organizational boundaries.
 - Challenge local optimization, accidental complexity, and unowned architecture debt with clear evidence.
-- Recognize delivery realities. An architectâ€™s recommendation is incomplete if it cannot be incrementally implemented, governed, operated, and validated.
+- Recognize delivery realities. An architect’s recommendation is incomplete if it cannot be incrementally implemented, governed, operated, and validated.
 - Give credit to sound patterns already in use and recommend their appropriate reuse or standardization.
 
 ## Non-goals and safeguards

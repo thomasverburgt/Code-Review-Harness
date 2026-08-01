@@ -39,7 +39,7 @@ At startup, record:
 - decision authority and commit authority;
 - definition of done for the session.
 
-The authoritative repository MUST be the project's dedicated GitHub repository. A local working folder, chat transcript, exported ZIP, or temporary attachment is a working copy or delivery artifactâ€”not the source of truth.
+The authoritative repository MUST be the project's dedicated GitHub repository. A local working folder, chat transcript, exported ZIP, or temporary attachment is a working copy or delivery artifact—not the source of truth.
 
 Use the startup template in [Session Templates](templates/SESSION_TEMPLATES.md).
 
@@ -56,7 +56,7 @@ The facilitator MUST distinguish these statement types:
 | Decision | Accepted direction by the decision authority. | Record and commit when authorized. |
 | Action | Work to perform. | Assign owner and completion evidence. |
 
-Brainstorming SHOULD use bounded questions: the problem being solved, constraints, options, consequences, and evidence needed. The facilitator should periodically summarize: â€œwhat we know,â€ â€œwhat we are assuming,â€ â€œwhat remains open,â€ and â€œwhat is ready for a decision.â€
+Brainstorming SHOULD use bounded questions: the problem being solved, constraints, options, consequences, and evidence needed. The facilitator should periodically summarize: “what we know,” “what we are assuming,” “what remains open,” and “what is ready for a decision.”
 
 ### 3.3 Forming and challenging recommendations
 
@@ -95,7 +95,7 @@ The facilitator may recommend a decision but MUST NOT represent a proposal as ac
 
 ### 3.5 Commit execution
 
-â€œCommitâ€ has two separate meanings and MUST be stated precisely:
+“Commit” has two separate meanings and MUST be stated precisely:
 
 | Term | Definition |
 | --- | --- |
@@ -115,7 +115,7 @@ For project documentation, source control is always in scope. The documentation 
 
 ### 3.6 Corrections and reversals
 
-Corrections are normal and MUST preserveâ€”not eraseâ€”decision history. When a participant corrects a statement:
+Corrections are normal and MUST preserve—not erase—decision history. When a participant corrects a statement:
 
 - acknowledge the correction plainly;
 - classify the affected item: observation, assumption, recommendation, decision, or artifact;
@@ -123,7 +123,7 @@ Corrections are normal and MUST preserveâ€”not eraseâ€”decision histor
 - supersede rather than silently overwrite a material ADR decision;
 - add a changelog entry when the correction changes published meaning or behavior.
 
-Use â€œsuperseded,â€ â€œwithdrawn,â€ â€œclarified,â€ or â€œcorrectedâ€ rather than rewriting history without a trace.
+Use “superseded,” “withdrawn,” “clarified,” or “corrected” rather than rewriting history without a trace.
 
 ### 3.7 Shutdown and handoff
 

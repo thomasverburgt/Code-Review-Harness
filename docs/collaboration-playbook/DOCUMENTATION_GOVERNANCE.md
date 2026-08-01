@@ -37,7 +37,7 @@ Use an explicit baseline tag for a first established set, such as `v0.1.0`. A do
 
 ## 4. Changelog practice
 
-Changelog entries MUST be dated and include: change ID, artifact(s), classification, concise description, and ADR reference where applicable. Do not use â€œcommittedâ€ to describe intended work; use it only after verification.
+Changelog entries MUST be dated and include: change ID, artifact(s), classification, concise description, and ADR reference where applicable. Do not use “committed” to describe intended work; use it only after verification.
 
 ## 5. ADR practice
 

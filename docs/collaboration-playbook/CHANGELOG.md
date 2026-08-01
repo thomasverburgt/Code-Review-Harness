@@ -24,7 +24,7 @@ All notable changes to the Collaborative Architecture and Design Playbook are re
 
 ### Added
 
-- Murphy Failure-Surface Collaborator personality specification based on Hanlonâ€™s razor, with developer, user, and collaborator review modes plus error-scenario templates.
+- Murphy Failure-Surface Collaborator personality specification based on Hanlon’s razor, with developer, user, and collaborator review modes plus error-scenario templates.
 
 ## [0.4.0] - 2026-07-24
 

@@ -29,10 +29,15 @@ This repository is the working architecture library for the Code Review Harness.
 | [planning](planning/README.md) | Architecture-package burn-down and implementation planning |
 | [appendices](appendices/README.md) | Reusable schemas, prompts, workflows, policies, and metrics |
 | [ADRs](adr/README.md) | Material architecture and governance decision records |
+| [fixtures](fixtures/README.md) | Reusable test fixtures and indexed legacy retained evidence |
+| [status](status/README.md) | Rebuildable current-state projections linked to authoritative records |
+| [tools](tools/README.md) | Executable reference runtimes, runners, validators, and tests |
+| [training](training/agentic-system-curriculum/README.md) | Controlled agentic-system curriculum source, releases, and QA material |
+| [deliverables](deliverables/README.md) | Human-readable controlled outputs and their lifecycle guidance |
 
 The [architecture package roadmap](planning/architecture-package-roadmap.md) tracks the eventual written Volume I–IX package. It does not prescribe the repository’s file layout.
 
-The agent platform baseline is governed by the [Agent Naming and Identity Standard](agents/agent-naming-and-identity-standard.md), the machine-readable [identity registry](agents/agent-identities.json), the [Universal Agent Contract](contracts/universal-agent-contract.md), and layer-specific contracts. Enterprise behavior is defined by the [Enterprise Agent Framework](agents/enterprise/enterprise-agent-framework.md).
+The agent platform baseline is governed by the [Agent Naming and Identity Standard](agents/agent-naming-and-identity-standard.md), the machine-readable [identity registry](agents/agent-identities.json), the [Universal Agent Contract](contracts/universal-agent-contract.md), layer-specific contracts, and the cross-layer [Integrated Agent Framework](agents/integrated-agent-framework.md).
 
 ## Project principles
 
