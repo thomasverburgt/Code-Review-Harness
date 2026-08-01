@@ -76,12 +76,12 @@
     },
     {
       "file_count": 11,
-      "inventory_sha256": "sha256:fd0fd3e15d26c47c347acf183be0668a5452f5ac857d1fe6f2cb35e3c3eda99f",
+      "inventory_sha256": "sha256:68e370ec068c22c3c1f9be101539d7b4ffb2a793daeb882f85b95d9ce8311323",
       "legacy_root": "fixtures/human-readiness-dossier/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "human-readiness-dossier",
-      "total_bytes": 20655
+      "total_bytes": 20597
     },
     {
       "file_count": 33,
@@ -94,12 +94,12 @@
     },
     {
       "file_count": 81,
-      "inventory_sha256": "sha256:579ad45d0e7c0d72cfeff2eb040b00d1efa87860b12341bb8d67af5a8b075ee5",
+      "inventory_sha256": "sha256:6d521165744659aea330426c1d17c909ecf1aaa97789fa78b58a166f00ecda50",
       "legacy_root": "fixtures/vertical-risk-slice/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "vertical-risk-slice",
-      "total_bytes": 410176
+      "total_bytes": 410050
     }
   ]
 }

@@ -65,7 +65,7 @@
       "reusable_file_count": 1,
       "root": "fixtures/human-readiness-dossier",
       "scenario": "human-readiness-dossier",
-      "total_bytes": 21683
+      "total_bytes": 21625
     },
     {
       "legacy_evidence_file_count": 33,
@@ -79,7 +79,7 @@
       "reusable_file_count": 9,
       "root": "fixtures/vertical-risk-slice",
       "scenario": "vertical-risk-slice",
-      "total_bytes": 445825
+      "total_bytes": 445699
     }
   ]
 }
