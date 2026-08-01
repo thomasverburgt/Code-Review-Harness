@@ -1,0 +1,85 @@
+{
+  "authority": "derived_index_only",
+  "canonical_fixture_root": "fixtures",
+  "canonical_future_evidence_root": "evidence",
+  "catalog_version": "1.0.0",
+  "scenarios": [
+    {
+      "legacy_evidence_file_count": 26,
+      "reusable_file_count": 2,
+      "root": "fixtures/cap-req-admission",
+      "scenario": "cap-req-admission",
+      "total_bytes": 69578
+    },
+    {
+      "legacy_evidence_file_count": 8,
+      "reusable_file_count": 1,
+      "root": "fixtures/capability-coordination",
+      "scenario": "capability-coordination",
+      "total_bytes": 17217
+    },
+    {
+      "legacy_evidence_file_count": 16,
+      "reusable_file_count": 1,
+      "root": "fixtures/capability-synth-admission",
+      "scenario": "capability-synth-admission",
+      "total_bytes": 64838
+    },
+    {
+      "legacy_evidence_file_count": 14,
+      "reusable_file_count": 1,
+      "root": "fixtures/enterprise-arch-admission",
+      "scenario": "enterprise-arch-admission",
+      "total_bytes": 70943
+    },
+    {
+      "legacy_evidence_file_count": 12,
+      "reusable_file_count": 2,
+      "root": "fixtures/enterprise-governance-admission",
+      "scenario": "enterprise-governance-admission",
+      "total_bytes": 69422
+    },
+    {
+      "legacy_evidence_file_count": 6,
+      "reusable_file_count": 1,
+      "root": "fixtures/enterprise-shadow-readiness",
+      "scenario": "enterprise-shadow-readiness",
+      "total_bytes": 13267
+    },
+    {
+      "legacy_evidence_file_count": 11,
+      "reusable_file_count": 3,
+      "root": "fixtures/enterprise-strategy-admission",
+      "scenario": "enterprise-strategy-admission",
+      "total_bytes": 41511
+    },
+    {
+      "legacy_evidence_file_count": 10,
+      "reusable_file_count": 1,
+      "root": "fixtures/enterprise-synthesis-admission",
+      "scenario": "enterprise-synthesis-admission",
+      "total_bytes": 53399
+    },
+    {
+      "legacy_evidence_file_count": 11,
+      "reusable_file_count": 1,
+      "root": "fixtures/human-readiness-dossier",
+      "scenario": "human-readiness-dossier",
+      "total_bytes": 21683
+    },
+    {
+      "legacy_evidence_file_count": 33,
+      "reusable_file_count": 2,
+      "root": "fixtures/product-synth-admission",
+      "scenario": "product-synth-admission",
+      "total_bytes": 156814
+    },
+    {
+      "legacy_evidence_file_count": 81,
+      "reusable_file_count": 9,
+      "root": "fixtures/vertical-risk-slice",
+      "scenario": "vertical-risk-slice",
+      "total_bytes": 445825
+    }
+  ]
+}

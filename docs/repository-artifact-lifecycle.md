@@ -14,7 +14,7 @@ This document assigns a purpose, authority, mutability rule, and retention expec
 ## Directory responsibilities
 
 - `agents`, `contracts`, `orchestration`, `requirements`, `governance`, `adr`, and most of `docs` contain authored source.
-- `fixtures` currently contains both reusable fixtures and legacy retained evidence. New work must identify which class applies; Sprint 3 introduces their canonical separation.
+- `fixtures` is the canonical reusable-fixture root. Existing `fixtures/*/evidence` paths are immutable legacy packages indexed under `evidence`; new retained evidence uses the top-level `evidence` root.
 - `status` contains living, rebuildable projections. It must cite authoritative records and must not contain approval authority.
 - `deliverables`, `session-review`, and `training` contain controlled outputs and must identify source, version, approval state, and whether an item is a final release or working artifact.
 - `_runs` and `_docx_work` are temporary work and remain ignored.
@@ -38,4 +38,3 @@ Intermediate renders are not retained in the main source tree unless they are ex
 ## Migration and rollback
 
 Material reorganizations use a manifest containing old path, new path, artifact class, hash, compatibility treatment, validation result, and rollback command or procedure. The initial migration commit does not delete the old copy. Legacy removal occurs only after consumers and links have been checked locally and on the approved DGX Spark-equivalent test system.
-

@@ -1,0 +1,105 @@
+{
+  "authority": "derived_inventory_only",
+  "catalog_version": "1.0.0",
+  "packages": [
+    {
+      "file_count": 26,
+      "inventory_sha256": "sha256:c167888a3b5eeb3a40d1c630f9fe4766555d570e00c19b1165cd92feaef6136e",
+      "legacy_root": "fixtures/cap-req-admission/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "cap-req-admission",
+      "total_bytes": 67749
+    },
+    {
+      "file_count": 8,
+      "inventory_sha256": "sha256:5c04cb8ad024594767ea181fb8595ac6cd29ce80adcd17408e509ea7766d328f",
+      "legacy_root": "fixtures/capability-coordination/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "capability-coordination",
+      "total_bytes": 16344
+    },
+    {
+      "file_count": 16,
+      "inventory_sha256": "sha256:bfa93c7274b84b6920a0d19d98dc6e48ae3848412d68db9e8ffa871a32c92659",
+      "legacy_root": "fixtures/capability-synth-admission/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "capability-synth-admission",
+      "total_bytes": 63931
+    },
+    {
+      "file_count": 14,
+      "inventory_sha256": "sha256:65d3c67df8e75422d96c5014bb5fbe3c58f20f84137918759fb130cf53953bce",
+      "legacy_root": "fixtures/enterprise-arch-admission/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "enterprise-arch-admission",
+      "total_bytes": 70542
+    },
+    {
+      "file_count": 12,
+      "inventory_sha256": "sha256:a4bc1238798011585e5992b08cf44eeef29d99a023cef3f45642db2a1af1f3a0",
+      "legacy_root": "fixtures/enterprise-governance-admission/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "enterprise-governance-admission",
+      "total_bytes": 66605
+    },
+    {
+      "file_count": 6,
+      "inventory_sha256": "sha256:7d408f8d4c0e3a2bf01f434d22bd879916008d9c651eda56c0765ac0176de19b",
+      "legacy_root": "fixtures/enterprise-shadow-readiness/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "enterprise-shadow-readiness",
+      "total_bytes": 12221
+    },
+    {
+      "file_count": 11,
+      "inventory_sha256": "sha256:bbb9ab43dfa40d88a6ae748f02abff992d7de0f698047455271db82da2a2e077",
+      "legacy_root": "fixtures/enterprise-strategy-admission/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "enterprise-strategy-admission",
+      "total_bytes": 39087
+    },
+    {
+      "file_count": 10,
+      "inventory_sha256": "sha256:14ce812d756fabf34b070cb14898bdba5fdba17e5997644d86570880f9ce0a68",
+      "legacy_root": "fixtures/enterprise-synthesis-admission/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "enterprise-synthesis-admission",
+      "total_bytes": 52519
+    },
+    {
+      "file_count": 11,
+      "inventory_sha256": "sha256:fd0fd3e15d26c47c347acf183be0668a5452f5ac857d1fe6f2cb35e3c3eda99f",
+      "legacy_root": "fixtures/human-readiness-dossier/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "human-readiness-dossier",
+      "total_bytes": 20655
+    },
+    {
+      "file_count": 33,
+      "inventory_sha256": "sha256:a404642d4ba6b50251d89b406bdc91bcdd04f2233f97b6380dbff8e454fdd871",
+      "legacy_root": "fixtures/product-synth-admission/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "product-synth-admission",
+      "total_bytes": 150224
+    },
+    {
+      "file_count": 81,
+      "inventory_sha256": "sha256:579ad45d0e7c0d72cfeff2eb040b00d1efa87860b12341bb8d67af5a8b075ee5",
+      "legacy_root": "fixtures/vertical-risk-slice/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "vertical-risk-slice",
+      "total_bytes": 410176
+    }
+  ]
+}

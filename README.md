@@ -30,6 +30,7 @@ This repository is the working architecture library for the Code Review Harness.
 | [appendices](appendices/README.md) | Reusable schemas, prompts, workflows, policies, and metrics |
 | [ADRs](adr/README.md) | Material architecture and governance decision records |
 | [fixtures](fixtures/README.md) | Reusable test fixtures and indexed legacy retained evidence |
+| [evidence](evidence/README.md) | Canonical future retained-evidence packages and legacy path inventories |
 | [status](status/README.md) | Rebuildable current-state projections linked to authoritative records |
 | [tools](tools/README.md) | Executable reference runtimes, runners, validators, and tests |
 | [training](training/agentic-system-curriculum/README.md) | Controlled agentic-system curriculum source, releases, and QA material |

@@ -152,6 +152,33 @@ def check_release_manifests(errors: list[str]) -> None:
                 errors.append(f"{relative(manifest_path)}: missing generator {generator}")
 
 
+def check_artifact_catalog_paths(errors: list[str]) -> None:
+    catalog_path = ROOT / "evidence" / "legacy-catalog.json"
+    mapping_path = ROOT / "evidence" / "legacy-path-map.json"
+    shared_path = ROOT / "fixtures" / "shared" / "content-addressed-index.json"
+    for path in (catalog_path, mapping_path, shared_path, ROOT / "fixtures" / "catalog.json"):
+        if not path.is_file():
+            errors.append(f"missing artifact catalog: {relative(path)}")
+            return
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    for package in catalog["packages"]:
+        if not (ROOT / package["legacy_root"]).is_dir():
+            errors.append(f"{relative(catalog_path)}: missing legacy root {package['legacy_root']}")
+    shared = json.loads(shared_path.read_text(encoding="utf-8"))
+    for item in shared["objects"]:
+        paths = [
+            item["canonical_source"],
+            *item.get("reusable_fixture_copies", []),
+            *item.get("immutable_evidence_copies", []),
+        ]
+        for value in paths:
+            path = ROOT / value
+            if not path.is_file():
+                errors.append(f"{relative(shared_path)}: missing fixture path {value}")
+            elif f"sha256:{hashlib.sha256(path.read_bytes()).hexdigest()}" != item["object_id"]:
+                errors.append(f"{relative(shared_path)}: hash mismatch for {value}")
+
+
 def main() -> int:
     errors: list[str] = []
     check_utf8_and_mojibake(errors)
@@ -160,6 +187,7 @@ def main() -> int:
     check_prompt_manifest(errors)
     check_schema_catalog(errors)
     check_release_manifests(errors)
+    check_artifact_catalog_paths(errors)
     if errors:
         print("Repository structural checks failed:")
         for error in errors:

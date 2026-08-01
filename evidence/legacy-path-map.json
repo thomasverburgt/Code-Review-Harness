@@ -1,0 +1,72 @@
+{
+  "decision": "ADR-0029",
+  "map_version": "1.0.0",
+  "mappings": [
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/cap-req-admission/<run-id>",
+      "legacy_root": "fixtures/cap-req-admission/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/capability-coordination/<run-id>",
+      "legacy_root": "fixtures/capability-coordination/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/capability-synth-admission/<run-id>",
+      "legacy_root": "fixtures/capability-synth-admission/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/enterprise-arch-admission/<run-id>",
+      "legacy_root": "fixtures/enterprise-arch-admission/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/enterprise-governance-admission/<run-id>",
+      "legacy_root": "fixtures/enterprise-governance-admission/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/enterprise-shadow-readiness/<run-id>",
+      "legacy_root": "fixtures/enterprise-shadow-readiness/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/enterprise-strategy-admission/<run-id>",
+      "legacy_root": "fixtures/enterprise-strategy-admission/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/enterprise-synthesis-admission/<run-id>",
+      "legacy_root": "fixtures/enterprise-synthesis-admission/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/human-readiness-dossier/<run-id>",
+      "legacy_root": "fixtures/human-readiness-dossier/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/product-synth-admission/<run-id>",
+      "legacy_root": "fixtures/product-synth-admission/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/vertical-risk-slice/<run-id>",
+      "legacy_root": "fixtures/vertical-risk-slice/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    }
+  ]
+}

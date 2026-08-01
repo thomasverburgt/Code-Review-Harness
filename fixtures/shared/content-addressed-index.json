@@ -1,0 +1,53 @@
+{
+  "authority": "derived_reuse_index_only",
+  "index_version": "1.0.0",
+  "objects": [
+    {
+      "bytes": 9415,
+      "canonical_source": "fixtures/shared/objects/sha256/04/0459a6a6f1c6e3f4df190795837599b91aaac1dc2ce8fe02359e9c85f8bcad7e",
+      "immutable_evidence_copies": [
+        "fixtures/cap-req-admission/evidence/2026-08-01/adr0019/reference-run/prod-sec-input.artifact.json",
+        "fixtures/vertical-risk-slice/evidence/canonical-prod-sec-2026-07-31/accepted-prod-sec.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:0459a6a6f1c6e3f4df190795837599b91aaac1dc2ce8fe02359e9c85f8bcad7e",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 5469,
+      "canonical_source": "fixtures/shared/objects/sha256/33/3368769166052c0950764fc63c18917fbe606eb8cd0e78a522af0d46979196a0",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-arch-admission/evidence/2026-08-01/adr0021/reference-run/ent-evidence-input.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-01/adr0022/reference-run/ent-evidence-input.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-01/adr0023/reference-run/ent-evidence-input.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:3368769166052c0950764fc63c18917fbe606eb8cd0e78a522af0d46979196a0",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 11724,
+      "canonical_source": "fixtures/shared/objects/sha256/6e/6e7381d2dad28eea4cce10f607e12f929e53e9d173a039284284d1953ed2603a",
+      "immutable_evidence_copies": [
+        "fixtures/capability-synth-admission/evidence/2026-08-01/adr0018/reference-run/cap-risk-input.artifact.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-01/adr0021/reference-run/capability-input-1.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-01/adr0022/reference-run/capability-input-1.artifact.json",
+        "fixtures/vertical-risk-slice/evidence/canonical-cap-risk-2026-07-31/accepted-cap-risk.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6e7381d2dad28eea4cce10f607e12f929e53e9d173a039284284d1953ed2603a",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 11824,
+      "canonical_source": "fixtures/shared/objects/sha256/af/afd6c680881a7f7d76f3b13ad72f725dba8b5cdd2cad85bcbcef21c3839ca8d1",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-arch-admission/evidence/2026-08-01/adr0021/reference-run/capability-input-2.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-01/adr0022/reference-run/capability-input-2.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:afd6c680881a7f7d76f3b13ad72f725dba8b5cdd2cad85bcbcef21c3839ca8d1",
+      "reusable_fixture_copies": []
+    }
+  ]
+}
