@@ -28,8 +28,6 @@ def manifest() -> dict:
     gates = {
         "compatibility_release_observed": False,
         "gx10_full_regression_passed": False,
-        "external_training_archive_selected": False,
-        "archive_hash_verification_passed": False,
         "legacy_removal_human_approved": False,
     }
     training_candidates = [
@@ -52,10 +50,12 @@ def manifest() -> dict:
                 "state": "retain_compatibility_release_required",
                 "rollback": "continue direct tools invocation and package legacy delegation",
             },
-            "training_transient_or_archive_paths": {
+            "training_and_qa_paths": {
                 "paths": [stats(path) for path in training_candidates],
-                "state": "retain_external_archive_not_selected",
-                "rollback": "retain current Git paths and release manifests",
+                "state": "retain_in_repository_by_maintainer_direction",
+                "removal_authorized": False,
+                "reconsideration": "requires a separate ADR and explicit maintainer approval",
+                "rollback": "not applicable; repository retention is the current decision",
             },
             "legacy_evidence_paths": {
                 "catalog": "evidence/legacy-catalog.json",
@@ -98,4 +98,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

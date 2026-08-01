@@ -18,7 +18,7 @@
       "rollback": "continue direct tools invocation and package legacy delegation",
       "state": "retain_compatibility_release_required"
     },
-    "training_transient_or_archive_paths": {
+    "training_and_qa_paths": {
       "paths": [
         {
           "bytes": 31346999,
@@ -63,15 +63,15 @@
           "path": "training/agentic-system-curriculum/condensed/renders"
         }
       ],
-      "rollback": "retain current Git paths and release manifests",
-      "state": "retain_external_archive_not_selected"
+      "reconsideration": "requires a separate ADR and explicit maintainer approval",
+      "removal_authorized": false,
+      "rollback": "not applicable; repository retention is the current decision",
+      "state": "retain_in_repository_by_maintainer_direction"
     }
   },
   "decision": "ADR-0032",
   "gates": {
-    "archive_hash_verification_passed": false,
     "compatibility_release_observed": false,
-    "external_training_archive_selected": false,
     "gx10_full_regression_passed": false,
     "legacy_removal_human_approved": false
   },

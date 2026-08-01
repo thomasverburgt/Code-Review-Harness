@@ -20,7 +20,7 @@ ADR 0027 governs this sequence. Each sprint is independently reviewable and reve
 
 ## Sprint 2: Training and deliverable lifecycle
 
-**Outcome:** Identify authored training source, released packages, final QA evidence, and disposable renders. Track reproducible document builders and introduce release manifests. Decide Git LFS or external release storage before relocating large binaries.
+**Outcome:** Identify authored training source, released packages, final QA evidence, and generated renders. Track reproducible document builders and introduce release manifests. Retain the existing training and QA trees in the repository unless a later ADR explicitly changes that decision.
 
 **Gate:** Approved outputs reproduce from retained source; file hashes and release states are recorded; no approved distribution artifact is lost.
 
@@ -52,13 +52,13 @@ ADR 0027 governs this sequence. Each sprint is independently reviewable and reve
 
 ## Sprint 6: Legacy retirement and repository compaction
 
-**Outcome:** Remove superseded compatibility paths and approved transient artifacts, adopt the selected large-file policy, and clean unreachable Git temporary objects.
+**Outcome:** Remove superseded runtime compatibility paths when approved and clean unreachable Git temporary objects. Existing training and QA paths remain repository content and are outside this retirement sprint.
 
-**Gate:** One full release increment has used the new paths; local and GX-10 validation pass; migration mappings and archive locations are reviewed.
+**Gate:** One full release increment has used the new runtime paths; local and GX-10 validation pass; migration mappings are reviewed.
 
 **Rollback:** Restore from the pre-migration tag or archived release using the verified mapping manifest.
 
-**Current gate state:** Retirement readiness is implemented under ADR 0032, but destructive retirement is not authorized. The compatibility-release, GX-10, external-archive, archive-verification, and removal-approval gates remain open. Legacy paths stay intact until a later evidence-backed increment satisfies them.
+**Current gate state:** Retirement readiness is implemented under ADR 0032, but destructive runtime retirement is not authorized. The compatibility-release, GX-10, and removal-approval gates remain open. Training and QA remain in the repository by maintainer direction. Legacy runtime paths stay intact until a later evidence-backed increment satisfies their gates.
 
 ## Program completion criteria
 

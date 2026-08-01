@@ -5,7 +5,7 @@
 - Decision authority: project maintainer
 - Owners: training, documentation, release, and repository maintainers
 - Supersedes: none
-- Superseded by: none
+- Superseded by: ADR-0032 for the retention state of existing training and QA paths
 
 ## Context
 
@@ -28,6 +28,8 @@ Applying Git LFS attributes directly to every existing binary would rewrite hund
 4. Store intermediate page renders, contact sheets, montages, inspection output, and superseded QA passes as ephemeral CI artifacts or external release-review archives rather than normal source files.
 5. Treat existing tracked binaries as a legacy release layout. Do not rewrite or delete them in Sprint 2. A later retirement sprint may migrate them only with an old-to-new mapping, SHA-256 verification, reviewed archive destination, and rollback instructions.
 6. Preserve final QA reports and only those render artifacts explicitly designated as human-review evidence.
+
+ADR-0032 subsequently directs that the existing training and QA trees remain in the repository for now. The external-storage policy above applies to future artifacts and does not authorize migration or removal of the existing trees.
 
 ## Alternatives considered
 
@@ -62,6 +64,4 @@ Applying Git LFS attributes directly to every existing binary would rewrite hund
 
 ## Unresolved matters
 
-- The external archive service and retention period for superseded training QA packages.
-- Whether final visual-review PNGs remain in Git LFS or release assets after the first migrated curriculum release.
-
+- Whether a later ADR should reconsider repository retention after operational use establishes a durable evidence policy.
