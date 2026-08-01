@@ -4,7 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build_artifact_catalogs import canonical_file_bytes, catalog_size, sha256, stable_files
+from tools.build_artifact_catalogs import sha256, stable_files
+from tools.canonical_content import canonical_file_bytes, catalog_size
 
 
 class ArtifactCatalogCanonicalizationTests(unittest.TestCase):

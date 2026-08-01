@@ -5,7 +5,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 from pathlib import Path
+
+try:
+    from .canonical_content import catalog_size
+except ImportError:
+    from canonical_content import catalog_size
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,12 +21,19 @@ TRAINING = ROOT / "training" / "agentic-system-curriculum"
 
 def stats(relative: str) -> dict:
     path = ROOT / relative
-    files = [item for item in path.rglob("*") if item.is_file()] if path.is_dir() else []
+    result = subprocess.run(
+        ["git", "ls-files", "-z", "--", relative],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    files = [ROOT / value for value in result.stdout.split("\0") if value]
     return {
         "path": relative,
         "exists": path.exists(),
         "file_count": len(files),
-        "bytes": sum(item.stat().st_size for item in files),
+        "bytes": sum(catalog_size(item) for item in files),
     }
 
 

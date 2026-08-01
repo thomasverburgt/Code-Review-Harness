@@ -9,6 +9,11 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+try:
+    from .canonical_content import canonical_file_bytes, catalog_size
+except ImportError:
+    from canonical_content import canonical_file_bytes, catalog_size
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "fixtures"
@@ -17,27 +22,10 @@ EXCLUDED_FIXTURE_OUTPUTS = {
     FIXTURES / "catalog.json",
     FIXTURES / "shared" / "content-addressed-index.json",
 }
-CANONICAL_TEXT_SUFFIXES = {".json", ".md", ".txt", ".yaml", ".yml"}
 
 
 def canonical(data: object) -> str:
     return json.dumps(data, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
-
-
-def canonical_file_bytes(path: Path) -> bytes:
-    """Return stable catalog bytes across LF and CRLF worktrees."""
-    data = path.read_bytes()
-    if path.suffix.lower() not in CANONICAL_TEXT_SUFFIXES or b"\x00" in data:
-        return data
-    try:
-        text = data.decode("utf-8")
-    except UnicodeDecodeError:
-        return data
-    return text.replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
-
-
-def catalog_size(path: Path) -> int:
-    return len(canonical_file_bytes(path))
 
 
 def sha256(path: Path) -> str:
