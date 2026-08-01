@@ -21,15 +21,15 @@
     "training_and_qa_paths": {
       "paths": [
         {
-          "bytes": 31346999,
+          "bytes": 25925191,
           "exists": true,
-          "file_count": 1013,
+          "file_count": 172,
           "path": "training/agentic-system-curriculum/qa-libreoffice"
         },
         {
-          "bytes": 27636079,
+          "bytes": 22418305,
           "exists": true,
-          "file_count": 966,
+          "file_count": 180,
           "path": "training/agentic-system-curriculum/revised/qa-final"
         },
         {
@@ -39,9 +39,9 @@
           "path": "training/agentic-system-curriculum/revised/renders"
         },
         {
-          "bytes": 11660714,
+          "bytes": 11284180,
           "exists": true,
-          "file_count": 142,
+          "file_count": 86,
           "path": "training/agentic-system-curriculum/condensed/qa"
         },
         {

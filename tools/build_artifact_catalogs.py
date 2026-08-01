@@ -9,6 +9,11 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
+try:
+    from .canonical_content import canonical_file_bytes, catalog_size
+except ImportError:
+    from canonical_content import canonical_file_bytes, catalog_size
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURES = ROOT / "fixtures"
@@ -24,11 +29,22 @@ def canonical(data: object) -> str:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_file_bytes(path)).hexdigest()
 
 
 def scenario_roots() -> list[Path]:
-    return sorted(path for path in FIXTURES.iterdir() if path.is_dir() and path.name != "shared")
+    return sorted(
+        (path for path in FIXTURES.iterdir() if path.is_dir() and path.name != "shared"),
+        key=lambda path: path.name,
+    )
+
+
+def stable_files(root: Path) -> list[Path]:
+    """Sort with POSIX relative strings instead of platform-specific Path ordering."""
+    return sorted(
+        (path for path in root.rglob("*") if path.is_file()),
+        key=lambda path: path.relative_to(root).as_posix(),
+    )
 
 
 def is_evidence(path: Path) -> bool:
@@ -38,7 +54,7 @@ def is_evidence(path: Path) -> bool:
 def fixture_catalog() -> tuple[Path, dict]:
     scenarios = []
     for root in scenario_roots():
-        all_files = sorted(path for path in root.rglob("*") if path.is_file())
+        all_files = stable_files(root)
         evidence_files = [path for path in all_files if is_evidence(path)]
         reusable_files = [path for path in all_files if not is_evidence(path)]
         scenarios.append({
@@ -46,7 +62,7 @@ def fixture_catalog() -> tuple[Path, dict]:
             "root": root.relative_to(ROOT).as_posix(),
             "reusable_file_count": len(reusable_files),
             "legacy_evidence_file_count": len(evidence_files),
-            "total_bytes": sum(path.stat().st_size for path in all_files),
+            "total_bytes": sum(catalog_size(path) for path in all_files),
         })
     return FIXTURES / "catalog.json", {
         "catalog_version": "1.0.0",
@@ -60,10 +76,10 @@ def fixture_catalog() -> tuple[Path, dict]:
 def duplicate_groups() -> list[tuple[str, int, list[Path]]]:
     groups: dict[tuple[str, int], list[Path]] = defaultdict(list)
     for root in scenario_roots():
-        for path in sorted(item for item in root.rglob("*") if item.is_file()):
+        for path in stable_files(root):
             if path in EXCLUDED_FIXTURE_OUTPUTS or path.name == ".gitkeep":
                 continue
-            groups[(sha256(path), path.stat().st_size)].append(path)
+            groups[(sha256(path), catalog_size(path))].append(path)
     return [
         (digest, size, paths)
         for (digest, size), paths in sorted(groups.items())
@@ -74,8 +90,14 @@ def duplicate_groups() -> list[tuple[str, int, list[Path]]]:
 def shared_fixture_index() -> tuple[Path, dict]:
     objects = []
     for digest, size, paths in duplicate_groups():
-        reusable = sorted(path for path in paths if not is_evidence(path))
-        retained = sorted(path for path in paths if is_evidence(path))
+        reusable = sorted(
+            (path for path in paths if not is_evidence(path)),
+            key=lambda path: path.relative_to(ROOT).as_posix(),
+        )
+        retained = sorted(
+            (path for path in paths if is_evidence(path)),
+            key=lambda path: path.relative_to(ROOT).as_posix(),
+        )
         reusable_paths = [path.relative_to(ROOT).as_posix() for path in reusable]
         retained_paths = [path.relative_to(ROOT).as_posix() for path in retained]
         object_path = FIXTURES / "shared" / "objects" / "sha256" / digest[:2] / digest
@@ -97,8 +119,8 @@ def shared_fixture_index() -> tuple[Path, dict]:
 def inventory(root: Path) -> tuple[str, int, int]:
     entries = []
     total = 0
-    for path in sorted(item for item in root.rglob("*") if item.is_file()):
-        size = path.stat().st_size
+    for path in stable_files(root):
+        size = catalog_size(path)
         total += size
         entries.append({
             "path": path.relative_to(root).as_posix(),
@@ -166,8 +188,10 @@ def materialize_shared_objects(check: bool) -> list[str]:
             if not object_path.is_file() or sha256(object_path) != digest:
                 stale.append(object_path.relative_to(ROOT).as_posix())
         else:
+            rendered = canonical_file_bytes(paths[0])
             object_path.parent.mkdir(parents=True, exist_ok=True)
-            object_path.write_bytes(paths[0].read_bytes())
+            if not object_path.is_file() or object_path.read_bytes() != rendered:
+                object_path.write_bytes(rendered)
     return stale
 
 
@@ -183,7 +207,8 @@ def main() -> int:
                 stale.append(path.relative_to(ROOT).as_posix())
         else:
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(rendered, encoding="utf-8", newline="\n")
+            if not path.is_file() or path.read_text(encoding="utf-8") != rendered:
+                path.write_text(rendered, encoding="utf-8", newline="\n")
     if stale:
         print("Stale artifact catalogs:")
         for path in stale:
