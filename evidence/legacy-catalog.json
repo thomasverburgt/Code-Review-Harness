@@ -4,7 +4,7 @@
   "packages": [
     {
       "file_count": 26,
-      "inventory_sha256": "sha256:c167888a3b5eeb3a40d1c630f9fe4766555d570e00c19b1165cd92feaef6136e",
+      "inventory_sha256": "sha256:48431348589f9d7d4ce65ee93fff21ef4c643edadb164b1a4ae9a7faa7957354",
       "legacy_root": "fixtures/cap-req-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -13,7 +13,7 @@
     },
     {
       "file_count": 8,
-      "inventory_sha256": "sha256:5c04cb8ad024594767ea181fb8595ac6cd29ce80adcd17408e509ea7766d328f",
+      "inventory_sha256": "sha256:dbbcac8791230a5ca98f6fb681f1e8f145cc776384f483807e0d4ba19b974468",
       "legacy_root": "fixtures/capability-coordination/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -22,7 +22,7 @@
     },
     {
       "file_count": 16,
-      "inventory_sha256": "sha256:bfa93c7274b84b6920a0d19d98dc6e48ae3848412d68db9e8ffa871a32c92659",
+      "inventory_sha256": "sha256:a7c999ca651ad446956df06ba50dbb92a7386f8240c25289637c75f7c32dd7e6",
       "legacy_root": "fixtures/capability-synth-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -31,7 +31,7 @@
     },
     {
       "file_count": 14,
-      "inventory_sha256": "sha256:65d3c67df8e75422d96c5014bb5fbe3c58f20f84137918759fb130cf53953bce",
+      "inventory_sha256": "sha256:058109e6361f41a1f301c24eb0ccb3e4360e7db611fd88b074a0a2e7d9ee9635",
       "legacy_root": "fixtures/enterprise-arch-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -40,7 +40,7 @@
     },
     {
       "file_count": 12,
-      "inventory_sha256": "sha256:a4bc1238798011585e5992b08cf44eeef29d99a023cef3f45642db2a1af1f3a0",
+      "inventory_sha256": "sha256:06f95d1fc319344ad333ef243134f9bf0cd6a2f82d0548a8e2f52b7746d80dfc",
       "legacy_root": "fixtures/enterprise-governance-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -49,7 +49,7 @@
     },
     {
       "file_count": 6,
-      "inventory_sha256": "sha256:7d408f8d4c0e3a2bf01f434d22bd879916008d9c651eda56c0765ac0176de19b",
+      "inventory_sha256": "sha256:95f765db8457d0f717f19e58321a32c85ca348bef33098d5c678fa071a1d050f",
       "legacy_root": "fixtures/enterprise-shadow-readiness/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -58,7 +58,7 @@
     },
     {
       "file_count": 11,
-      "inventory_sha256": "sha256:bbb9ab43dfa40d88a6ae748f02abff992d7de0f698047455271db82da2a2e077",
+      "inventory_sha256": "sha256:33954feaffd9a13562197e89c497a5ed4245d306d3292758c3d6d043c2bce53b",
       "legacy_root": "fixtures/enterprise-strategy-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -67,7 +67,7 @@
     },
     {
       "file_count": 10,
-      "inventory_sha256": "sha256:14ce812d756fabf34b070cb14898bdba5fdba17e5997644d86570880f9ce0a68",
+      "inventory_sha256": "sha256:14eb402fb3926b53972d8b220fc5297600653b935ce1e4d89b134a6ef3ba71de",
       "legacy_root": "fixtures/enterprise-synthesis-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -76,7 +76,7 @@
     },
     {
       "file_count": 11,
-      "inventory_sha256": "sha256:68e370ec068c22c3c1f9be101539d7b4ffb2a793daeb882f85b95d9ce8311323",
+      "inventory_sha256": "sha256:765095da3ad3061618dd2d75d68886c407f6923df97f57f980eaecda49fc037e",
       "legacy_root": "fixtures/human-readiness-dossier/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -85,7 +85,7 @@
     },
     {
       "file_count": 33,
-      "inventory_sha256": "sha256:a404642d4ba6b50251d89b406bdc91bcdd04f2233f97b6380dbff8e454fdd871",
+      "inventory_sha256": "sha256:d5a93ef63b2a731e51b3ccad856b5d2541b758634c4bfe2ae282153fc5b20eda",
       "legacy_root": "fixtures/product-synth-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
@@ -94,7 +94,7 @@
     },
     {
       "file_count": 81,
-      "inventory_sha256": "sha256:6d521165744659aea330426c1d17c909ecf1aaa97789fa78b58a166f00ecda50",
+      "inventory_sha256": "sha256:a1b6169f4f17eb37bdd4df3e863adf27e5c9e9b4fb31b3215bbbb07a167a7d28",
       "legacy_root": "fixtures/vertical-risk-slice/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",

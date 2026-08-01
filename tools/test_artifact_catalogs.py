@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build_artifact_catalogs import canonical_file_bytes, catalog_size, sha256
+from tools.build_artifact_catalogs import canonical_file_bytes, catalog_size, sha256, stable_files
 
 
 class ArtifactCatalogCanonicalizationTests(unittest.TestCase):
@@ -27,6 +27,19 @@ class ArtifactCatalogCanonicalizationTests(unittest.TestCase):
             path.write_bytes(original)
 
             self.assertEqual(canonical_file_bytes(path), original)
+
+    def test_file_order_uses_platform_independent_posix_paths(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            for relative in ("z/item.json", "B/item.json", "a/item.json"):
+                path = root / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("{}", encoding="utf-8")
+
+            self.assertEqual(
+                [path.relative_to(root).as_posix() for path in stable_files(root)],
+                ["B/item.json", "a/item.json", "z/item.json"],
+            )
 
 
 if __name__ == "__main__":

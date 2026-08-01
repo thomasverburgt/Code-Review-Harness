@@ -45,7 +45,18 @@ def sha256(path: Path) -> str:
 
 
 def scenario_roots() -> list[Path]:
-    return sorted(path for path in FIXTURES.iterdir() if path.is_dir() and path.name != "shared")
+    return sorted(
+        (path for path in FIXTURES.iterdir() if path.is_dir() and path.name != "shared"),
+        key=lambda path: path.name,
+    )
+
+
+def stable_files(root: Path) -> list[Path]:
+    """Sort with POSIX relative strings instead of platform-specific Path ordering."""
+    return sorted(
+        (path for path in root.rglob("*") if path.is_file()),
+        key=lambda path: path.relative_to(root).as_posix(),
+    )
 
 
 def is_evidence(path: Path) -> bool:
@@ -55,7 +66,7 @@ def is_evidence(path: Path) -> bool:
 def fixture_catalog() -> tuple[Path, dict]:
     scenarios = []
     for root in scenario_roots():
-        all_files = sorted(path for path in root.rglob("*") if path.is_file())
+        all_files = stable_files(root)
         evidence_files = [path for path in all_files if is_evidence(path)]
         reusable_files = [path for path in all_files if not is_evidence(path)]
         scenarios.append({
@@ -77,7 +88,7 @@ def fixture_catalog() -> tuple[Path, dict]:
 def duplicate_groups() -> list[tuple[str, int, list[Path]]]:
     groups: dict[tuple[str, int], list[Path]] = defaultdict(list)
     for root in scenario_roots():
-        for path in sorted(item for item in root.rglob("*") if item.is_file()):
+        for path in stable_files(root):
             if path in EXCLUDED_FIXTURE_OUTPUTS or path.name == ".gitkeep":
                 continue
             groups[(sha256(path), catalog_size(path))].append(path)
@@ -91,8 +102,14 @@ def duplicate_groups() -> list[tuple[str, int, list[Path]]]:
 def shared_fixture_index() -> tuple[Path, dict]:
     objects = []
     for digest, size, paths in duplicate_groups():
-        reusable = sorted(path for path in paths if not is_evidence(path))
-        retained = sorted(path for path in paths if is_evidence(path))
+        reusable = sorted(
+            (path for path in paths if not is_evidence(path)),
+            key=lambda path: path.relative_to(ROOT).as_posix(),
+        )
+        retained = sorted(
+            (path for path in paths if is_evidence(path)),
+            key=lambda path: path.relative_to(ROOT).as_posix(),
+        )
         reusable_paths = [path.relative_to(ROOT).as_posix() for path in reusable]
         retained_paths = [path.relative_to(ROOT).as_posix() for path in retained]
         object_path = FIXTURES / "shared" / "objects" / "sha256" / digest[:2] / digest
@@ -114,7 +131,7 @@ def shared_fixture_index() -> tuple[Path, dict]:
 def inventory(root: Path) -> tuple[str, int, int]:
     entries = []
     total = 0
-    for path in sorted(item for item in root.rglob("*") if item.is_file()):
+    for path in stable_files(root):
         size = catalog_size(path)
         total += size
         entries.append({
