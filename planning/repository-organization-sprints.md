@@ -58,6 +58,8 @@ ADR 0027 governs this sequence. Each sprint is independently reviewable and reve
 
 **Rollback:** Restore from the pre-migration tag or archived release using the verified mapping manifest.
 
+**Current gate state:** Retirement readiness is implemented under ADR 0032, but destructive retirement is not authorized. The compatibility-release, GX-10, external-archive, archive-verification, and removal-approval gates remain open. Legacy paths stay intact until a later evidence-backed increment satisfies them.
+
 ## Program completion criteria
 
 - Every top-level domain has an owner-facing index.
@@ -66,4 +68,3 @@ ADR 0027 governs this sequence. Each sprint is independently reviewable and reve
 - Runtime code is packaged and tests are discoverable through one documented command.
 - Repeated catalogs are generated from canonical registries.
 - Large binaries and transient QA output follow an approved retention policy.
-

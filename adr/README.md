@@ -47,3 +47,4 @@ Copy `template.md` when creating a new ADR. Material changes identified in `GOVE
 - [ADR 0029: Separate Reusable Fixtures from Retained Evidence](0029-separate-reusable-fixtures-from-retained-evidence.md)
 - [ADR 0030: Introduce a Compatibility-First Python Package Boundary](0030-compatibility-first-python-package-boundary.md)
 - [ADR 0031: Require One Specification per Agent and Generated Registry Catalogs](0031-one-agent-one-specification-and-generated-catalogs.md)
+- [ADR 0032: Defer Legacy Retirement Until Observation and Archive Gates Pass](0032-defer-legacy-retirement-until-observation-and-archive-gates.md)
