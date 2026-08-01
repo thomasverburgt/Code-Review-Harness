@@ -20,6 +20,8 @@ Domain reviewers answer separate authoritative questions and do not modify one a
 
 ## Registered roles
 
+Identity, status, and specification paths are generated from the registry in the [agent catalog](../generated/agent-catalog.md). The table below remains explanatory framework content.
+
 The table describes the intended capability topology, not scheduling status. Baseline roles have specified contracts; `CAP-REQ` and `CAP-SYNTH` are admitted candidates subject to their human and workflow gates.
 
 | Designation | Role | Status | Primary result |

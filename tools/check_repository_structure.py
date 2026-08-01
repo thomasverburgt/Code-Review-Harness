@@ -79,6 +79,7 @@ def check_agent_registry(errors: list[str]) -> None:
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     seen_ids: set[str] = set()
     seen_designations: set[str] = set()
+    seen_specifications: set[str] = set()
     for agent in registry["agents"]:
         agent_id = agent["agent_uuid"]
         designation = agent["designation"]
@@ -88,7 +89,11 @@ def check_agent_registry(errors: list[str]) -> None:
             errors.append(f"agents/agent-identities.json: duplicate designation {designation}")
         seen_ids.add(agent_id)
         seen_designations.add(designation)
-        specification = ROOT / "agents" / agent["specification"]
+        specification_value = agent["specification"]
+        if specification_value in seen_specifications:
+            errors.append(f"agents/agent-identities.json: shared specification path {specification_value}")
+        seen_specifications.add(specification_value)
+        specification = ROOT / "agents" / specification_value
         if not specification.is_file():
             errors.append(f"agents/agent-identities.json: {designation} missing specification {relative(specification)}")
 

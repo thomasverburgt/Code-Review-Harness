@@ -19,6 +19,8 @@ Orchestration selects specialists through versioned policy and gives each role o
 
 ## Registered roles
 
+Identity, status, and specification paths are generated from the registry in the [agent catalog](../generated/agent-catalog.md). The table below remains explanatory framework content.
+
 The table describes the registered specialist topology. `baseline` roles have specified role contracts; `seed` roles require a further domain-design increment before production scheduling.
 
 | Designation | Role | Status | Primary result |
@@ -54,4 +56,3 @@ The table describes the registered specialist topology. `baseline` roles have sp
 - Specialists preserve conflicts and uncertainty and cannot overwrite another domain's conclusion.
 - Findings may propose CAPAs but cannot approve action, accept risk, grant exceptions, approve release, or declare the whole product safe, secure, compliant, reliable, ready, or acceptable.
 - Production execution targets the NVIDIA A100 large cluster. Development, regression, calibration, integration, security, resilience, rollback, and performance testing runs on NVIDIA DGX Spark or an approved equivalent, with environment metadata and limitations retained.
-

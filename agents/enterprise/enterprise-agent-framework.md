@@ -38,6 +38,8 @@ flowchart LR
 
 ## Registered roles
 
+Identity, status, and specification paths are generated from the registry in the [agent catalog](../generated/agent-catalog.md). The table below remains explanatory framework content.
+
 The table describes the intended enterprise topology, not scheduling authority. `ENT-EVIDENCE` and `ENT-SYSRISK` are baseline; `ENT-ARCH`, `ENT-GOV`, `ENT-STRAT`, and `ENT-SYNTH` are admitted but unscheduled candidates; the remaining roles are planned.
 
 | Designation | Role | Status | Primary result |

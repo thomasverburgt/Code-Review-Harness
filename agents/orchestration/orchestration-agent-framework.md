@@ -19,6 +19,8 @@ flowchart LR
 
 ## Registered roles
 
+Identity, status, and specification paths are generated from the registry in the [agent catalog](../generated/agent-catalog.md). The table below remains explanatory framework content.
+
 The registered orchestration roles are planned control-plane roles. The repository's state machines and deterministic runtimes provide the current executable reference behavior; registration alone does not authorize production scheduling.
 
 | Designation | Role | Status | Primary result |
@@ -35,4 +37,3 @@ The registered orchestration roles are planned control-plane roles. The reposito
 - Orchestration cannot alter a review conclusion, average away disagreement, waive a human gate, make an engineering or governance decision, accept risk, approve release, or promote an artifact.
 - Human decisions, administrative recording, independent verification, eligibility derivation, distribution, scheduling, and deployment remain distinct events with immutable audit records.
 - Production dispatch targets the NVIDIA A100 large cluster. Every test dispatch targets NVIDIA DGX Spark or an approved equivalent; mode/platform mismatch fails closed and promotion retains the signed environment delta and rollback evidence.
-
