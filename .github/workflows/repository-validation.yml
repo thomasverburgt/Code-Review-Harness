@@ -19,6 +19,12 @@ jobs:
           python-version: "3.12"
       - name: Check repository structure
         run: python tools/check_repository_structure.py
+      - name: Verify controlled release manifests
+        run: python tools/build_release_manifests.py --check
+      - name: Install document-builder dependency
+        run: python -m pip install -r requirements-docs.txt
+      - name: Verify controlled document builders
+        run: python tools/verify_document_builders.py
       - name: Validate executable vertical
         run: python tools/validate_vertical_slice.py
       - name: Run regression suite

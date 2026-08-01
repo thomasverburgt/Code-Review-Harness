@@ -1,0 +1,85 @@
+{
+  "artifacts": [
+    {
+      "bytes": 323876,
+      "generator": "training/agentic-system-curriculum/revised/build/build_condensed_handbook.py",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/Code-Review-Harness-Agentic-System-Curriculum-Condensed.docx",
+      "sha256": "28fa787bc312cb8e9b727d5623f8c1844891cdf75c3c8c8e421b1301e3c9f90f"
+    },
+    {
+      "bytes": 1133,
+      "generator": "human_visual_review",
+      "lifecycle": "qa_record",
+      "path": "training/agentic-system-curriculum/condensed/QA-Release-Report.md",
+      "sha256": "e7303cbed04a7413677e89e7f49433b6cd9a2109153ccd810752a2ded6e7ef00"
+    },
+    {
+      "bytes": 109233,
+      "generator": "training/agentic-system-curriculum/revised/build/build_reference_primers.py",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/handouts/Primer-Authoring-a-Great-Agent-Prompt.docx",
+      "sha256": "580d3292d2c8cc0c2dc75c2aa8300995c112ceed4710b9598c6858e5766d5e53"
+    },
+    {
+      "bytes": 81047,
+      "generator": "training/agentic-system-curriculum/revised/build/build_reference_primers.py",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/handouts/Primer-Loop-Engineering-for-Agentic-Systems.docx",
+      "sha256": "6136be00a53829b6a4cdbcc4bee674307552ab6921c70d456793b4c4426fe3e4"
+    },
+    {
+      "bytes": 37142,
+      "generator": "training/agentic-system-curriculum/revised/build/build_condensed_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/slides/Session-01-Harness-Philosophy-and-Human-Authority.pptx",
+      "sha256": "4ab2850581084296789ec0188280852c13374c18bc5b2faf414eb7ac3ea84247"
+    },
+    {
+      "bytes": 36971,
+      "generator": "training/agentic-system-curriculum/revised/build/build_condensed_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/slides/Session-02-Evidence-Provenance-and-Contracts.pptx",
+      "sha256": "09e3b9af609723eb1430c69dc73aac310cf8d467633e543aeed64724988ade1f"
+    },
+    {
+      "bytes": 36981,
+      "generator": "training/agentic-system-curriculum/revised/build/build_condensed_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/slides/Session-03-Agent-Catalog-and-State-Machines.pptx",
+      "sha256": "6ba6fe7f2c7c35f49538c8ef2ba2472903a5611794bfbc09ed286f82a227c1b8"
+    },
+    {
+      "bytes": 37040,
+      "generator": "training/agentic-system-curriculum/revised/build/build_condensed_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/slides/Session-04-Orchestration-and-Contract-Driven-Prompts.pptx",
+      "sha256": "e169e0464fcd07225d63e9500d4eddc30be11fa636d59fd20d9cdff29f268926"
+    },
+    {
+      "bytes": 37067,
+      "generator": "training/agentic-system-curriculum/revised/build/build_condensed_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/slides/Session-05-Prompt-Engineering-Deep-Dive.pptx",
+      "sha256": "e5c7229ba6c85b25baf466696970158c6de28b67c0a9ae3352fc970bb7307603"
+    },
+    {
+      "bytes": 37284,
+      "generator": "training/agentic-system-curriculum/revised/build/build_condensed_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/condensed/slides/Session-06-Evaluation-Evolution-and-Agent-Prompt-Playbook.pptx",
+      "sha256": "0a7d658eab7327adda0a9b96795fe78ca23d9a7792530ebe6f2def22a21aeda1"
+    }
+  ],
+  "binary_policy": "legacy_git_until_verified_lfs_migration",
+  "collection": "agentic-system-curriculum-condensed",
+  "manifest_version": "1.0.0",
+  "state": "qa_passed_release_candidate",
+  "transient_or_external_archive_candidates": [
+    "qa",
+    "qa2",
+    "qa3",
+    "renders",
+    "slides/*.inspect.ndjson"
+  ]
+}

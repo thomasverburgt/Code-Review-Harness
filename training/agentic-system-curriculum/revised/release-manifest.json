@@ -1,0 +1,111 @@
+{
+  "artifacts": [
+    {
+      "bytes": 333356,
+      "generator": "training/agentic-system-curriculum/revised/build/build_handbook.py",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/Code-Review-Harness-Agentic-System-Curriculum.docx",
+      "sha256": "5e1a6615669a2c7a8a799e28cc70d70c1c11f503750f5c3ba403d42385235eb9"
+    },
+    {
+      "bytes": 1381,
+      "generator": "human_visual_review",
+      "lifecycle": "qa_record",
+      "path": "training/agentic-system-curriculum/revised/QA-Release-Report.md",
+      "sha256": "89bdfd75987d430de6918471c7cd103e0b82f1736b8bd32c460b7dd78fb196f8"
+    },
+    {
+      "bytes": 37598,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-01-Why-a-Harness-Exists.pptx",
+      "sha256": "3240b5a519919b79796933103f9ae5432f5f5f3c1bad4849598c9d0273fe68d8"
+    },
+    {
+      "bytes": 37600,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-02-Evidence-First-Humans-Decide.pptx",
+      "sha256": "a6257299453cc6c5f83bc76cab83234b84499c3a72f48ddd22725969e36e9609"
+    },
+    {
+      "bytes": 37495,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-03-Evidence-Provenance-and-Traceability.pptx",
+      "sha256": "fd71c1e45327c83264b14ef27bb57f67f7678a3362d8d658705e21245f37bc9b"
+    },
+    {
+      "bytes": 37484,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-04-How-Contracts-Work.pptx",
+      "sha256": "46e2952fa6759412328d78c9632fe123b38986a3577e42044b96925195cbf64d"
+    },
+    {
+      "bytes": 37518,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-05-Agent-Identity-and-Architecture-Layers.pptx",
+      "sha256": "771339b604341aaf4fd687130e32b607f53ed90692d24a7625988c4a35769457"
+    },
+    {
+      "bytes": 37463,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-06-State-Machines.pptx",
+      "sha256": "7da3d3eef6293a4958034efd3fd222621a9cb4f758ab0fa929e76747e9810cd5"
+    },
+    {
+      "bytes": 37668,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-07-Orchestration-Fan-Out-Fan-In-and-Gates.pptx",
+      "sha256": "e723eae0b1d647f482f4505e727f89becfd1e2fe28975d83068e83a7e20249bc"
+    },
+    {
+      "bytes": 37495,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-08-Prompt-Implements-the-Contract.pptx",
+      "sha256": "9b8c33dbab6b4dfd7cc9becedb47681b7ce1d1249a5f70b49d85dd69e5ff86a0"
+    },
+    {
+      "bytes": 37720,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-09-Prompt-Decomposition-and-Specialization.pptx",
+      "sha256": "b00f21c892b71791e05d47ad898be1cbde6d09ce4d4528562104515f1b6fb391"
+    },
+    {
+      "bytes": 37672,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-10-Prompt-Failure-Modes-and-Adversarial-Testing.pptx",
+      "sha256": "584d805dd8525f3f85e1783db4163fbba587fd5ddb7f68615fa4b1d20a5977ea"
+    },
+    {
+      "bytes": 37622,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-11-Evaluation-Calibration-and-Prompt-Evolution.pptx",
+      "sha256": "6bd1eae8acc4d95b81ff4b76e6d3e09334f33100a7b6ba68fc0cba1bec11b75e"
+    },
+    {
+      "bytes": 37642,
+      "generator": "training/agentic-system-curriculum/revised/build/build_decks.mjs",
+      "lifecycle": "release_candidate",
+      "path": "training/agentic-system-curriculum/revised/slides/Session-12-Prompt-Factory-Capstone.pptx",
+      "sha256": "317a1cacecd2804be8c4e47b0d7307134a71ec6e4432bde977c5266b1dd7229f"
+    }
+  ],
+  "binary_policy": "legacy_git_until_verified_lfs_migration",
+  "collection": "agentic-system-curriculum-full",
+  "manifest_version": "1.0.0",
+  "state": "qa_passed_release_candidate",
+  "transient_or_external_archive_candidates": [
+    "qa-final",
+    "renders",
+    "slides/*.inspect.ndjson"
+  ]
+}

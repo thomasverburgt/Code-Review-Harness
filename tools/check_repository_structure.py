@@ -128,6 +128,30 @@ def check_schema_catalog(errors: list[str]) -> None:
             seen_ids[schema_id] = path.name
 
 
+def check_release_manifests(errors: list[str]) -> None:
+    for manifest_path in (
+        ROOT / "deliverables" / "release-manifest.json",
+        ROOT / "training" / "agentic-system-curriculum" / "revised" / "release-manifest.json",
+        ROOT / "training" / "agentic-system-curriculum" / "condensed" / "release-manifest.json",
+    ):
+        if not manifest_path.is_file():
+            errors.append(f"missing release manifest: {relative(manifest_path)}")
+            continue
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for artifact in manifest.get("artifacts", []):
+            path = ROOT / artifact["path"]
+            if not path.is_file():
+                errors.append(f"{relative(manifest_path)}: missing artifact {artifact['path']}")
+                continue
+            if path.stat().st_size != artifact["bytes"]:
+                errors.append(f"{relative(manifest_path)}: size mismatch for {artifact['path']}")
+            if hashlib.sha256(path.read_bytes()).hexdigest() != artifact["sha256"]:
+                errors.append(f"{relative(manifest_path)}: SHA-256 mismatch for {artifact['path']}")
+            generator = artifact.get("generator")
+            if generator not in {"human_visual_review"} and not (ROOT / generator).is_file():
+                errors.append(f"{relative(manifest_path)}: missing generator {generator}")
+
+
 def main() -> int:
     errors: list[str] = []
     check_utf8_and_mojibake(errors)
@@ -135,6 +159,7 @@ def main() -> int:
     check_agent_registry(errors)
     check_prompt_manifest(errors)
     check_schema_catalog(errors)
+    check_release_manifests(errors)
     if errors:
         print("Repository structural checks failed:")
         for error in errors:
