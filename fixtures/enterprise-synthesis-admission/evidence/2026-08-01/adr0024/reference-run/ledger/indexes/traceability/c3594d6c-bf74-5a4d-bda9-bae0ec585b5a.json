@@ -1,0 +1,28 @@
+{
+  "artifact_id": "c3594d6c-bf74-5a4d-bda9-bae0ec585b5a",
+  "artifact_type": "enterprise-synthesis-posture",
+  "children": [
+    "44444444-4444-4444-8444-444444444444",
+    "55555555-5555-4555-8555-555555555555",
+    "317c84a1-5b31-58b2-8c42-7ae55a83f62a",
+    "b786a897-591c-58cf-a606-8d4b9f9c458f",
+    "f72d3263-d6c5-5518-8000-794fd69f89c9"
+  ],
+  "consumers": [
+    "REPORT-PACKAGER-CANDIDATE",
+    "ENT-PORTFOLIO-CANDIDATE"
+  ],
+  "input_refs": [
+    "44444444-4444-4444-8444-444444444444",
+    "55555555-5555-4555-8555-555555555555",
+    "317c84a1-5b31-58b2-8c42-7ae55a83f62a",
+    "b786a897-591c-58cf-a606-8d4b9f9c458f",
+    "f72d3263-d6c5-5518-8000-794fd69f89c9",
+    "enterprise-synthesis-input-manifest"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:811ca0dffd6166a159c68128dcce4eff6c1adbd1f86c4e89021ea70b1ebc9212",
+  "parents": [],
+  "peers": [],
+  "producer_designation": "ENT-SYNTH"
+}

@@ -1,0 +1,103 @@
+{
+  "calibration_scope": "declared_multi_domain",
+  "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+  "coordinator": {
+    "agent_uuid": "38d55885-5785-4da7-b4a7-94ca65e652e5",
+    "designation": "CAP-COORD",
+    "implementation": "deterministic"
+  },
+  "decision_authority": "human",
+  "effect": "validation_and_routing_only",
+  "expected_designations": [
+    "CAP-REQ",
+    "CAP-RISK"
+  ],
+  "extra_designations": [],
+  "fitness_claim": "mechanical_coordination_only",
+  "generated_at": "2026-08-01T18:00:00Z",
+  "integrity": {
+    "input_hash": "sha256:8056398aa2ddb815babe547abba8d75b8013390ba90681941605cbccafa24d31",
+    "manifest_hash": "sha256:bda18fed0d3bfb0bfcbcca7baa49f7be24cd1ff45c0269758b41e04d8fa10001"
+  },
+  "manifest_id": "02ac63d7-a092-532e-a7bf-18bc2381bf0b",
+  "manifest_version": "1.0.0",
+  "missing_designations": [],
+  "partial_input_authorization": null,
+  "preserved_conflicts": [],
+  "received_inputs": [
+    {
+      "artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b",
+      "artifact_type": "capability-requirements-posture",
+      "compatibility": "compatible",
+      "designation": "CAP-REQ",
+      "freshness": "fresh",
+      "lifecycle_state": "complete",
+      "output_hash": "sha256:e819c373eb9d5d7020b3ea48de6b773f13698953b9251750fbd03083f1aa56f0"
+    },
+    {
+      "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "artifact_type": "capability-risk-posture",
+      "compatibility": "compatible",
+      "designation": "CAP-RISK",
+      "freshness": "fresh",
+      "lifecycle_state": "complete",
+      "output_hash": "sha256:b56be7afa96e29b2106b8faad851688844b1bcfdbb9b706c3d1ffcbfd57ed783"
+    }
+  ],
+  "review_completeness": {
+    "expected": 2,
+    "fraction": 1.0,
+    "valid": 2
+  },
+  "routing": {
+    "consumer": "CAP-SYNTH",
+    "state": "ready_for_cap_synth",
+    "synthesis_dispatch_permitted": true
+  },
+  "traceability": [
+    {
+      "evidence_refs": [],
+      "record_id": "DC-REQ-001",
+      "record_kind": "decision_request",
+      "source_artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b"
+    },
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "record_id": "FINDING-REQ-001",
+      "record_kind": "finding",
+      "source_artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b"
+    },
+    {
+      "evidence_refs": [],
+      "record_id": "DC-001",
+      "record_kind": "decision_request",
+      "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17"
+    },
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "record_id": "FINDING-001",
+      "record_kind": "finding",
+      "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17"
+    },
+    {
+      "evidence_refs": [
+        "1e27ed34-d9a5-5309-a876-ab02af8b7d13"
+      ],
+      "record_id": "RISK-001",
+      "record_kind": "risk",
+      "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17"
+    }
+  ],
+  "validation": {
+    "compatibility": "passed",
+    "conflict_preservation": "passed",
+    "freshness": "passed",
+    "identity": "passed",
+    "integrity": "passed",
+    "schema": "passed"
+  }
+}

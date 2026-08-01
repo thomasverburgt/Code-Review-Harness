@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/report-governance-state-machine.schema.json",
+  "title": "Report Governance State Machine",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "machine_id", "version", "initial_state", "terminal_states", "states", "transitions"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "machine_id": {"const": "REPORT-GOVERNANCE"},
+    "version": {"type": "string", "minLength": 1},
+    "initial_state": {"type": "string", "minLength": 1},
+    "terminal_states": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "states": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "transitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "event", "to", "actor_type", "guard"],
+        "properties": {
+          "from": {"type": "string"},
+          "event": {"type": "string"},
+          "to": {"type": "string"},
+          "actor_type": {"enum": ["system", "external_authority", "records_administrator", "records_verifier"]},
+          "guard": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

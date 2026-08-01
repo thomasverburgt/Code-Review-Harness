@@ -33,6 +33,9 @@ CANONICAL_PROJECTION_MANIFEST = ROOT / "appendices" / "projection-manifests" / "
 PRODUCT_CANONICAL_GENERATION_CONTRACT_VERSION = "canonical-product-payload-1.0.0"
 PRODUCT_CANONICAL_PROJECTION_VERSION = "product-analytical-projection-1.0.0"
 PRODUCT_CANONICAL_PROJECTION_MANIFEST = ROOT / "appendices" / "projection-manifests" / "product-analytical-projection-1.0.0.json"
+PRODUCT_SYNTH_CANONICAL_GENERATION_CONTRACT_VERSION = "canonical-product-synthesis-payload-1.0.0"
+PRODUCT_SYNTH_CANONICAL_PROJECTION_VERSION = "product-synthesis-analytical-projection-1.0.0"
+PRODUCT_SYNTH_CANONICAL_PROJECTION_MANIFEST = ROOT / "appendices" / "projection-manifests" / "product-synthesis-analytical-projection-1.0.0.json"
 CAPABILITY_CANONICAL_GENERATION_CONTRACT_VERSION = "canonical-capability-risk-payload-1.0.0"
 CAPABILITY_CANONICAL_PROJECTION_VERSION = "capability-risk-analytical-projection-1.0.0"
 CAPABILITY_CANONICAL_PROJECTION_MANIFEST = ROOT / "appendices" / "projection-manifests" / "capability-risk-analytical-projection-1.0.0.json"
@@ -48,6 +51,7 @@ ANALYTICAL_FIELDS = (
 ARTIFACT_TYPES = {
     "SPEC-SECRETS": "specialist-secrets-review",
     "PROD-SEC": "product-security-posture",
+    "PROD-SYNTH": "product-engineering-posture",
     "CAP-RISK": "capability-risk-posture",
     "ENT-SYSRISK": "enterprise-systemic-risk-posture",
 }
@@ -70,8 +74,9 @@ def sha256_file(path: Path) -> str:
 
 
 class VersionResolver:
-    def __init__(self, model_pin_override: dict[str, Any] | None = None) -> None:
-        self.workflow = load_json(WORKFLOW)
+    def __init__(self, model_pin_override: dict[str, Any] | None = None,
+                 workflow_path: Path | None = None) -> None:
+        self.workflow = load_json(workflow_path or WORKFLOW)
         self.registry = load_json(REGISTRY)
         self.prompt_manifest = load_json(PROMPT_MANIFEST)
         self.rubric = load_json(RUBRIC)
@@ -124,11 +129,12 @@ class VersionResolver:
         resolved["generation_contract_version"] = GENERATION_CONTRACT_VERSION
         resolved["generation_contract_sha256"] = content_hash(resolved["generation_contract"])
         resolved["assembler_version"] = ASSEMBLER_VERSION
-        if designation in {"SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"}:
+        if designation in {"SPEC-SECRETS", "PROD-SEC", "PROD-SYNTH", "CAP-RISK", "ENT-SYSRISK"}:
             resolved["canonical_generation_contract"] = build_canonical_generation_schema(resolved)
             resolved["canonical_generation_contract_version"] = {
                 "SPEC-SECRETS": CANONICAL_GENERATION_CONTRACT_VERSION,
                 "PROD-SEC": PRODUCT_CANONICAL_GENERATION_CONTRACT_VERSION,
+                "PROD-SYNTH": PRODUCT_SYNTH_CANONICAL_GENERATION_CONTRACT_VERSION,
                 "CAP-RISK": CAPABILITY_CANONICAL_GENERATION_CONTRACT_VERSION,
                 "ENT-SYSRISK": ENTERPRISE_CANONICAL_GENERATION_CONTRACT_VERSION,
             }[designation]
@@ -137,12 +143,14 @@ class VersionResolver:
             projection_path = {
                 "SPEC-SECRETS": CANONICAL_PROJECTION_MANIFEST,
                 "PROD-SEC": PRODUCT_CANONICAL_PROJECTION_MANIFEST,
+                "PROD-SYNTH": PRODUCT_SYNTH_CANONICAL_PROJECTION_MANIFEST,
                 "CAP-RISK": CAPABILITY_CANONICAL_PROJECTION_MANIFEST,
                 "ENT-SYSRISK": ENTERPRISE_CANONICAL_PROJECTION_MANIFEST,
             }[designation]
             resolved["canonical_projection_version"] = {
                 "SPEC-SECRETS": CANONICAL_PROJECTION_VERSION,
                 "PROD-SEC": PRODUCT_CANONICAL_PROJECTION_VERSION,
+                "PROD-SYNTH": PRODUCT_SYNTH_CANONICAL_PROJECTION_VERSION,
                 "CAP-RISK": CAPABILITY_CANONICAL_PROJECTION_VERSION,
                 "ENT-SYSRISK": ENTERPRISE_CANONICAL_PROJECTION_VERSION,
             }[designation]
@@ -374,7 +382,7 @@ def build_generation_schema(resolved: dict[str, Any]) -> dict[str, Any]:
 
 def build_canonical_generation_schema(resolved: dict[str, Any]) -> dict[str, Any]:
     """Build one canonical analytical form without the duplicative layer extension."""
-    if resolved["designation"] not in {"SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"}:
+    if resolved["designation"] not in {"SPEC-SECRETS", "PROD-SEC", "PROD-SYNTH", "CAP-RISK", "ENT-SYSRISK"}:
         raise WorkerError("canonical analytical projection is unavailable for this designation")
     root_causes = ["design_flaw", "implementation_defect", "configuration_error", "process_or_governance_gap",
                    "dependency_or_supplier_issue", "insufficient_observability", "external_constraint", "unknown"]
@@ -591,6 +599,110 @@ def project_product_layer(payload: dict[str, Any], job: dict[str, Any], resolved
     }
 
 
+def project_product_synthesis_layer(payload: dict[str, Any], job: dict[str, Any], resolved: dict[str, Any],
+                                    input_values: dict[str, Any]) -> dict[str, Any]:
+    """Project PROD-SYNTH while retaining child meaning and owning all lineage fields."""
+    manifest = load_json(PRODUCT_SYNTH_CANONICAL_PROJECTION_MANIFEST)
+    if manifest["projection_version"] != PRODUCT_SYNTH_CANONICAL_PROJECTION_VERSION:
+        raise WorkerError("product-synthesis canonical projection manifest version mismatch")
+    children = [value for value in input_values.values()
+                if isinstance(value, dict) and isinstance(value.get("artifact"), dict)]
+    if len(children) != 1 or children[0].get("identity", {}).get("designation") != "PROD-SEC":
+        raise WorkerError("PROD-SYNTH calibration requires exactly one immutable PROD-SEC child")
+    child = children[0]
+    child_id = child["artifact"]["artifact_id"]
+    if child.get("artifact", {}).get("lifecycle_state") != "complete":
+        raise WorkerError("PROD-SYNTH child must be complete")
+    record_map: dict[str, dict[str, Any]] = {}
+    for field, key in (("observations", "observation_id"), ("assessments", "assessment_id"),
+                       ("findings", "finding_id"), ("patterns", "pattern_id"),
+                       ("insights", "insight_id"), ("conflicts", "conflict_id"),
+                       ("decisions_requested", "decision_context_id")):
+        for record in child.get(field, []):
+            if key in record:
+                record_map[record[key]] = record
+    role = copy.deepcopy(payload["role_payload"])
+    preserved_ids: set[str] = set()
+    preserved_finding_ids: set[str] = set()
+    preserved_evidence_refs: set[str] = set()
+    for assertion in role["preserved_child_assertions"]:
+        if assertion["source_artifact_id"] != child_id or assertion["source_record_id"] not in record_map:
+            raise WorkerError("PROD-SYNTH preserved assertion does not resolve to the declared child")
+        source = record_map[assertion["source_record_id"]]
+        source_refs = set(source.get("evidence_refs", []))
+        if not set(assertion["evidence_refs"]).issubset(source_refs):
+            raise WorkerError("PROD-SYNTH preserved assertion changed child evidence references")
+        preserved_ids.add(assertion["source_record_id"])
+        preserved_evidence_refs.update(assertion["evidence_refs"])
+        if assertion["record_kind"] == "finding":
+            preserved_finding_ids.add(assertion["source_record_id"])
+    for assertion in role["derived_product_assertions"]:
+        if set(assertion["contributing_artifact_ids"]) != {child_id}:
+            raise WorkerError("PROD-SYNTH derived assertion contains invented artifact lineage")
+        if not set(assertion["contributing_record_ids"]).issubset(preserved_ids):
+            raise WorkerError("PROD-SYNTH derived assertion cites an unpreserved child record")
+    allowed_refs = {child_id, *record_map.keys(), *preserved_evidence_refs}
+    for finding in payload["findings"]:
+        if not set(finding["evidence_refs"]).issubset(allowed_refs):
+            raise WorkerError("PROD-SYNTH finding contains invented evidence lineage")
+    input_confidence = child.get("confidence", {}).get("assessment")
+    confidence_inputs = [input_confidence] if isinstance(input_confidence, (int, float)) else []
+    result_confidence = payload["confidence"].get("assessment")
+    artifact_id = stable_uuid(job["job_id"], "assembled-artifact")
+    product_id = job["dispatch"].get("scope", {}).get("product_id", "unknown")
+    decisions = payload["decisions_requested"]
+    role["synthesis_basis"] = {"required_designations": ["PROD-SEC"], "received_artifact_ids": [child_id],
+                               "completeness_state": "complete", "partial_input_authorization": None}
+    role["confidence_reconciliation"] = {"method": "preserve_child_and_canonical_assessment",
+                                         "input_values": confidence_inputs or [result_confidence or 0.0],
+                                         "result": result_confidence,
+                                         "uncertainty": copy.deepcopy(role["confidence_reconciliation"].get("uncertainty", []))}
+    role["capability_handoff"] = {"product_id": product_id, "artifact_id": artifact_id,
+                                  "preserved_finding_ids": sorted(preserved_finding_ids),
+                                  "preserved_evidence_refs": sorted(preserved_evidence_refs),
+                                  "unresolved_conflict_ids": sorted(item["record_id"] for item in payload["secondary_records"] if item["kind"] == "conflict"),
+                                  "escalation_ids": sorted(item["decision_context_id"] for item in decisions),
+                                  "intended_consumers": copy.deepcopy(resolved["node"]["consumers"]),
+                                  "handoff_state": "ready_for_capability_fan_in"}
+    role["decision_authority"] = "human"
+    payload["coverage"] = copy.deepcopy(payload["review_counts"])
+    payload["observations"] = [{"observation_id": f"OBS-PRESERVED-{index:03d}",
+                                "fact": f"Preserved {item['record_kind']} {item['source_record_id']} from child {child_id}.",
+                                "evidence_refs": [child_id, *item["evidence_refs"]]}
+                               for index, item in enumerate(role["preserved_child_assertions"], 1)]
+    payload["assessments"] = [{"assessment_id": item["assertion_id"], "rationale": item["correlation_logic"],
+                               "confidence": item["confidence"]} for item in role["derived_product_assertions"]]
+    secondary = payload["secondary_records"]
+    payload["patterns"] = [{"pattern_id": item["record_id"], "statement": item["statement"], "evidence_refs": item["evidence_refs"]}
+                           for item in secondary if item["kind"] == "pattern"]
+    payload["insights"] = [{"insight_id": item["record_id"], "statement": item["statement"], "evidence_refs": item["evidence_refs"]}
+                           for item in secondary if item["kind"] == "insight"]
+    payload["conflicts"] = [{"conflict_id": item["record_id"], "statement": item["statement"], "evidence_refs": item["evidence_refs"]}
+                            for item in secondary if item["kind"] == "conflict"]
+    evidence_score = payload["confidence"].get("evidence")
+    return {
+        "product_id": product_id,
+        "specialist_artifact_inventory": [{"artifact_id": child_id, "designation": "PROD-SEC", "state": "valid_present"}],
+        "input_completeness": {"required": 1, "valid": 1, "fraction": 1.0, "policy": "PROD-SYNTH-CALIBRATION-0.1.0"},
+        "cross_domain_correlations": [{"assertion_id": item["assertion_id"], "contributing_artifact_ids": item["contributing_artifact_ids"]}
+                                      for item in role["derived_product_assertions"]],
+        "unresolved_conflicts": copy.deepcopy(payload["conflicts"]),
+        "product_findings": [{"finding_id": item["finding_id"]} for item in payload["findings"]],
+        "product_patterns": [{"pattern_id": item["pattern_id"]} for item in payload["patterns"]],
+        "product_risk_posture": {"state": role["engineering_posture"]["state"], "advisory_only": True,
+                                 "decision_authority": "human"},
+        "technical_confidence": result_confidence,
+        "coverage": {"required_domains": 1, "reviewed_domains": 1, "candidate_calibration": True},
+        "evidence_quality": {"state": "high" if isinstance(evidence_score, (int, float)) and evidence_score >= 0.8 else "limited",
+                             "score": evidence_score},
+        "release_readiness_input": {"state": "human_review_required" if decisions else "advisory_no_decision_requested",
+                                    "is_release_decision": False},
+        "escalations": [{"escalation_id": item["decision_context_id"], "authority": item["required_authority"]}
+                        for item in decisions],
+        "role": role,
+    }
+
+
 def project_capability_risk_layer(payload: dict[str, Any], job: dict[str, Any], resolved: dict[str, Any],
                                   input_values: dict[str, Any]) -> dict[str, Any]:
     """Project capability context and risk rollups without making a risk disposition."""
@@ -727,6 +839,8 @@ def project_canonical_layer(payload: dict[str, Any], job: dict[str, Any], resolv
         return project_specialist_layer(payload, job, resolved)
     if resolved["designation"] == "PROD-SEC":
         return project_product_layer(payload, job, resolved, input_values)
+    if resolved["designation"] == "PROD-SYNTH":
+        return project_product_synthesis_layer(payload, job, resolved, input_values)
     if resolved["designation"] == "CAP-RISK":
         return project_capability_risk_layer(payload, job, resolved, input_values)
     if resolved["designation"] == "ENT-SYSRISK":
@@ -948,6 +1062,48 @@ def validate_candidate(candidate: dict[str, Any], resolved: dict[str, Any],
         raise ValidationFailure("worker artifact toolchain version mismatch")
     if candidate["execution"].get("model") != resolved["model"]["model_id"]:
         raise ValidationFailure("worker artifact model pin mismatch")
+    if designation == "PROD-SYNTH":
+        if resolved["agent"].get("status") != "candidate":
+            raise ValidationFailure("PROD-SYNTH calibration requires candidate identity status")
+        baseline = load_json(WORKFLOW)
+        if any(node["designation"] == "PROD-SYNTH" for node in baseline["nodes"]):
+            raise ValidationFailure("PROD-SYNTH candidate cannot be scheduled in the baseline workflow")
+        values = [value for value in (input_values or {}).values()
+                  if isinstance(value, dict) and isinstance(value.get("artifact"), dict)]
+        if len(values) != 1 or values[0].get("identity", {}).get("designation") != "PROD-SEC":
+            raise ValidationFailure("PROD-SYNTH candidate requires exactly one PROD-SEC calibration child")
+        child_id = values[0]["artifact"]["artifact_id"]
+        extension = candidate["extensions"]["product"]
+        role = extension["role"]
+        input_ids = {item["artifact_id"] for item in candidate["inputs"]}
+        inventory_ids = {item["artifact_id"] for item in extension["specialist_artifact_inventory"]}
+        if input_ids != {child_id} or inventory_ids != {child_id} or set(role["synthesis_basis"]["received_artifact_ids"]) != {child_id}:
+            raise ValidationFailure("PROD-SYNTH candidate lineage does not match the immutable child")
+        if role["capability_handoff"]["artifact_id"] != candidate["artifact"]["artifact_id"]:
+            raise ValidationFailure("PROD-SYNTH capability handoff is not bound to the assembled artifact")
+        if extension["release_readiness_input"].get("is_release_decision") is not False:
+            raise ValidationFailure("PROD-SYNTH cannot emit a release decision")
+        return
+    if designation == "CAP-RISK" and resolved.get("workflow_id") == "WF-PROD-SYNTH-CAP-RISK-SHADOW-001":
+        values = [value for value in (input_values or {}).values()
+                  if isinstance(value, dict) and isinstance(value.get("artifact"), dict)]
+        if len(values) != 1 or values[0].get("identity", {}).get("designation") != "PROD-SYNTH":
+            raise ValidationFailure("shadow CAP-RISK requires exactly one PROD-SYNTH child")
+        child_id = values[0]["artifact"]["artifact_id"]
+        if candidate["artifact"]["links"]["children"] != [child_id] or {item["artifact_id"] for item in candidate["inputs"]} != {child_id}:
+            raise ValidationFailure("shadow CAP-RISK exact child lineage mismatch")
+        role = candidate["extensions"]["capability"]["role"]
+        cited = {artifact_id for risk in role["risk_register"] for artifact_id in risk["contributing_artifacts"]}
+        cited.update(record["source_artifact_id"] for record in role["risk_provenance"] if record.get("source_artifact_id"))
+        if not cited or cited != {child_id}:
+            raise ValidationFailure("shadow CAP-RISK risk lineage must cite only its PROD-SYNTH child")
+        if candidate["decision_authority"] != "human" or role["decision_authority"] != "human":
+            raise ValidationFailure("shadow CAP-RISK cannot claim decision authority")
+        if candidate["consumers"] != ["SHADOW-COMPARISON"]:
+            raise ValidationFailure("shadow CAP-RISK cannot route outside comparison")
+        if any(node["designation"] == "PROD-SYNTH" for node in load_json(WORKFLOW)["nodes"]):
+            raise ValidationFailure("shadow execution cannot mutate baseline scheduling")
+        return
     registry = load_json(REGISTRY)
     registry_by_designation = {item["designation"]: item for item in registry["agents"]}
     workflow = validate_workflow(registry_by_designation)
@@ -1098,6 +1254,33 @@ class Worker:
                                 "and copy the artifact_id into artifact.links.children; never calculate or substitute these immutable references."
                             ),
                         })
+                    if job["designation"] == "PROD-SYNTH":
+                        preservable = []
+                        for value in inputs.values():
+                            if not isinstance(value, dict) or not isinstance(value.get("artifact"), dict):
+                                continue
+                            source_artifact_id = value["artifact"].get("artifact_id")
+                            for field, key, kind in (
+                                ("observations", "observation_id", "observation"),
+                                ("assessments", "assessment_id", "assessment"),
+                                ("findings", "finding_id", "finding"),
+                                ("patterns", "pattern_id", "pattern"),
+                                ("insights", "insight_id", "insight"),
+                                ("conflicts", "conflict_id", "conflict"),
+                                ("decisions_requested", "decision_context_id", "decision_request"),
+                            ):
+                                for record in value.get(field, []):
+                                    preservable.append({"source_artifact_id": source_artifact_id,
+                                                        "source_record_id": record.get(key),
+                                                        "record_kind": kind,
+                                                        "evidence_refs": copy.deepcopy(record.get("evidence_refs", []))})
+                        model_context["preservable_record_bindings"] = preservable
+                        model_context["task_instruction"] += (
+                            " For PROD-SYNTH, preserved_child_assertions and every derived contributing_record_id "
+                            "must copy source_artifact_id, source_record_id, record_kind, and evidence_refs only from "
+                            "preservable_record_bindings. Role-internal correlation or hypothesis IDs are not universal "
+                            "child records and must not be represented as preserved assertions or contributing_record_ids."
+                        )
                     model_output, usage = self.adapter.generate(
                         resolved["prompt_text"],
                         model_context,

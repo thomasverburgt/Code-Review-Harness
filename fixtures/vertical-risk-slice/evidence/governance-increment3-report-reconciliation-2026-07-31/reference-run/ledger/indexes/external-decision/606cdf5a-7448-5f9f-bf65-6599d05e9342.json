@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "external-decision",
+  "logical_path": "external-decision/606cdf5a-7448-5f9f-bf65-6599d05e9342.json",
+  "object_hash": "sha256:9d0f7127607bc25a5013d5385892fd0464abda03a4a7128f9c3e93ebf33685e6",
+  "record_id": "606cdf5a-7448-5f9f-bf65-6599d05e9342",
+  "retention_class": "governance-record"
+}

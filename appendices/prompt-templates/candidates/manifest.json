@@ -2,6 +2,48 @@
   "manifest_version": "1.0.0",
   "prompt_version": "design-0.1.0",
   "prompts": {
+    "ENT-SYNTH": {
+      "path": "appendices/prompt-templates/candidates/ent-synth/design-0.1.0.prompt.txt",
+      "sha256": "27b41117df2a788bc15667caaac2addb2b2796dce60d27aecb801a5798532ce6",
+      "source": "agents/enterprise/enterprise-synthesis-agent.md",
+      "status": "candidate"
+    },
+    "ENT-STRAT": {
+      "path": "appendices/prompt-templates/candidates/ent-strat/design-0.1.0.prompt.txt",
+      "sha256": "110681fca867635fb2f3bafc854010ab21c09ead1ac9b3d900832cf9ba590d9a",
+      "source": "agents/enterprise/strategic-scoring-agent.md",
+      "status": "candidate"
+    },
+    "ENT-GOV": {
+      "path": "appendices/prompt-templates/candidates/ent-gov/design-0.1.0.prompt.txt",
+      "sha256": "af93b1dce90f8c608d01cd33f49e1abc20b5c44e6f0d5723fa52d97c2c62b2e4",
+      "source": "agents/enterprise/enterprise-governance-reviewer.md",
+      "status": "candidate"
+    },
+    "ENT-ARCH": {
+      "path": "appendices/prompt-templates/candidates/ent-arch/design-0.1.0.prompt.txt",
+      "sha256": "543b1a329556228100ca9db16aebdc3c08f13bcda3d763279d18d8bef66ef929",
+      "source": "agents/enterprise/systems-architecture-reviewer.md",
+      "status": "candidate"
+    },
+    "CAP-REQ": {
+      "path": "appendices/prompt-templates/candidates/cap-req/design-0.1.0.prompt.txt",
+      "sha256": "efdc2b71b55f5fce8b4728be57cdd3e398f18f835267d96bedd6f7793338653e",
+      "source": "agents/capability/requirements-traceability-reviewer.md",
+      "status": "candidate"
+    },
+    "CAP-SYNTH": {
+      "path": "appendices/prompt-templates/candidates/cap-synth/design-0.1.0.prompt.txt",
+      "sha256": "7e2c6d29b465560d3f8e65f08c923e56b8a9b2d2314b4345a686a036038aa5e0",
+      "source": "agents/capability/capability-synthesis-lead.md",
+      "status": "candidate"
+    },
+    "PROD-SYNTH": {
+      "path": "appendices/prompt-templates/candidates/prod-synth/design-0.1.0.prompt.txt",
+      "sha256": "cf4c74e8b0afe39c7924fa6e78fd9bdf57d4c8113520ff44c503fb6d8fae006f",
+      "source": "agents/product/product-synthesis-lead.md",
+      "status": "candidate"
+    },
     "CAP-RISK": {
       "path": "appendices/prompt-templates/candidates/cap-risk/design-0.1.0.prompt.txt",
       "sha256": "216331082a8c3e3eb22a88ceeafaf0a9ab37659e184280a705c4359b7d541e07",

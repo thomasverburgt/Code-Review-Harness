@@ -1,0 +1,18 @@
+{
+  "adr": "ADR-0024",
+  "artifact_hash": "sha256:a4e16571a301637bcf3b090c20867fe319a629701c19c91dadfdd4031558d29f",
+  "artifact_id": "c3594d6c-bf74-5a4d-bda9-bae0ec585b5a",
+  "candidate_schedules_changed": false,
+  "candidate_status": "candidate",
+  "designation": "ENT-SYNTH",
+  "distribution_state_changed": false,
+  "domain_inputs": 4,
+  "evidence_tier": "adjudicated_multi_domain_synthesis_fixture",
+  "fitness_claim": "synthesis_contract_mechanics_only",
+  "ledger_hash": "sha256:811ca0dffd6166a159c68128dcce4eff6c1adbd1f86c4e89021ea70b1ebc9212",
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "scheduled": false,
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

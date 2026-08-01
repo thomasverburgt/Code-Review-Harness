@@ -1,0 +1,85 @@
+{
+  "baseline_route": "ENT-EVIDENCE -> ENT-SYSRISK",
+  "decision_authority": "human",
+  "generated_at": "2026-08-02T00:30:00Z",
+  "manifest_hash": "sha256:5ef502c38df724f8e7e12e2a4280b73ed2198b876c06a13a09a6e5b805d50fcc",
+  "manifest_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "manifest_version": "1.0.0",
+  "overall_state": "blocked",
+  "prerequisites": [
+    {
+      "category": "external_human_decision",
+      "evidence_tier": "review_request_only",
+      "prerequisite_id": "ADR0016-SEMANTIC-ADJUDICATION",
+      "rationale": "The semantic adjudication packet has no verified external response.",
+      "required_authority": "enterprise-risk-acceptance-authority",
+      "satisfies_readiness": false,
+      "source_hash": "sha256:bb4225c863adaa659b4cf93899efc16b953a4dcba5299fceec22c579d97b0b38",
+      "source_path": "fixtures/product-synth-admission/evidence/2026-08-01/semantic-adjudication-adr0016/reference-run/semantic-adjudication-packet.json",
+      "state": "pending_external_decision"
+    },
+    {
+      "category": "external_human_decision",
+      "evidence_tier": "review_request_only",
+      "prerequisite_id": "ADR0020-REQUIREMENTS-ACCEPTANCE",
+      "rationale": "The requirements acceptance packet has no verified external response.",
+      "required_authority": "requirements-acceptance-authority",
+      "satisfies_readiness": false,
+      "source_hash": "sha256:9515ecba0ce8fd1a96f2671fe2f5cf6d34220ed321dff0c0d6813c3ee0e2e334",
+      "source_path": "fixtures/cap-req-admission/evidence/2026-08-01/adr0020/reference-run/requirements-acceptance-packet.json",
+      "state": "pending_external_decision"
+    },
+    {
+      "category": "live_domain_acceptance",
+      "evidence_tier": "protocol_smoke_only",
+      "prerequisite_id": "ENT-ARCH-LIVE-MULTI-DOMAIN",
+      "rationale": "Retained live evidence proves single-capability protocol handling only.",
+      "required_authority": "architecture-domain-acceptance-authority",
+      "satisfies_readiness": false,
+      "source_hash": "sha256:c942d8fe9a16dfbb5d5b0ee62a50a3fbd49f7ce8be345e1b23b283d744e90991",
+      "source_path": "fixtures/enterprise-arch-admission/evidence/2026-08-01/adr0021/gx10-live-calibration.tar.gz",
+      "state": "missing_accepted_live_evidence"
+    },
+    {
+      "category": "live_domain_acceptance",
+      "evidence_tier": "protocol_smoke_only",
+      "prerequisite_id": "ENT-GOV-LIVE-MULTI-DOMAIN",
+      "rationale": "Retained live evidence proves single-capability source protocol handling only.",
+      "required_authority": "governance-source-owner",
+      "satisfies_readiness": false,
+      "source_hash": "sha256:80157a7b4b68e3e469f7250d25fea94bfe368b1bf835f4f5b4f1a1ee2407a7b8",
+      "source_path": "fixtures/enterprise-governance-admission/evidence/2026-08-01/adr0022/gx10-live-calibration.tar.gz",
+      "state": "missing_accepted_live_evidence"
+    },
+    {
+      "category": "live_domain_acceptance",
+      "evidence_tier": "protocol_smoke_only",
+      "prerequisite_id": "ENT-STRAT-LIVE-MULTI-DOMAIN",
+      "rationale": "Retained live evidence proves single-domain objective and method protocol handling only.",
+      "required_authority": "enterprise-strategy-authority",
+      "satisfies_readiness": false,
+      "source_hash": "sha256:9bae1bc0c9efaf69050f5f89ffa6a954ef010c754120e614072a2c51bbc25096",
+      "source_path": "fixtures/enterprise-strategy-admission/evidence/2026-08-01/adr0023/gx10-live-calibration.tar.gz",
+      "state": "missing_accepted_live_evidence"
+    },
+    {
+      "category": "live_domain_acceptance",
+      "evidence_tier": "protocol_smoke_only",
+      "prerequisite_id": "ENT-SYNTH-LIVE-MULTI-DOMAIN",
+      "rationale": "Retained live evidence is mixed-tier protocol calibration, not accepted enterprise synthesis.",
+      "required_authority": "enterprise-synthesis-acceptance-authority",
+      "satisfies_readiness": false,
+      "source_hash": "sha256:3b5c579221ada5939558456844d8c23530edf97d2e332313b4ce38725169532b",
+      "source_path": "fixtures/enterprise-synthesis-admission/evidence/2026-08-01/adr0024/gx10-live-calibration.tar.gz",
+      "state": "missing_accepted_live_evidence"
+    }
+  ],
+  "rollback": {
+    "baseline_unchanged": true,
+    "disable_candidate_discovery": true,
+    "discard_derived_shadow_state": true,
+    "retain_evidence": true
+  },
+  "scope_id": "ENTERPRISE-FIXTURE-001",
+  "shadow_scheduled": false
+}

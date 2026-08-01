@@ -38,20 +38,22 @@ flowchart LR
 
 ## Registered roles
 
-| Designation | Role | Primary result |
-|---|---|---|
-| `ENT-EVIDENCE` | Evidence Validation Gate | Validated enterprise input manifest |
-| `ENT-ARCH` | Systems Architecture Reviewer | System-of-systems architecture posture |
-| `ENT-SYSRISK` | Systemic Risk Reviewer | Enterprise systemic risk register |
-| `ENT-GOV` | Enterprise Governance Reviewer | Cross-capability governance posture |
-| `ENT-STRAT` | Strategic Scoring Agent | Traceable strategic confidence distribution |
-| `ENT-PORTFOLIO` | Portfolio Analysis Agent | Duplication, concentration, and portfolio options |
-| `ENT-ARCHSTRAT` | Architecture Strategy Agent | Target-state and roadmap alignment |
-| `ENT-MATURITY` | Maturity Evaluator | Configuration-driven maturity assessment |
-| `ENT-TECHDEBT` | Technical Debt Prioritizer | Enterprise debt trajectory and priorities |
-| `ENT-MODERNIZE` | Investment and Modernization Advisor | Options, tradeoffs, and sequencing |
-| `ENT-LEARN` | Learning and Metrics Agent | Quality, drift, and outcome feedback |
-| `ENT-SYNTH` | Enterprise Synthesis Agent | Coherent enterprise posture and decision brief |
+The table describes the intended enterprise topology, not scheduling authority. `ENT-EVIDENCE` and `ENT-SYSRISK` are baseline; `ENT-ARCH`, `ENT-GOV`, `ENT-STRAT`, and `ENT-SYNTH` are admitted but unscheduled candidates; the remaining roles are planned.
+
+| Designation | Role | Status | Primary result |
+|---|---|---|---|
+| `ENT-EVIDENCE` | Evidence Validation Gate | baseline | Validated enterprise input manifest |
+| `ENT-ARCH` | Systems Architecture Reviewer | candidate | System-of-systems architecture posture |
+| `ENT-SYSRISK` | Systemic Risk Reviewer | baseline | Enterprise systemic risk register |
+| `ENT-GOV` | Enterprise Governance Reviewer | candidate | Cross-capability governance posture |
+| `ENT-STRAT` | Strategic Scoring Agent | candidate | Traceable strategic confidence distribution |
+| `ENT-PORTFOLIO` | Portfolio Analysis Agent | planned | Duplication, concentration, and portfolio options |
+| `ENT-ARCHSTRAT` | Architecture Strategy Agent | planned | Target-state and roadmap alignment |
+| `ENT-MATURITY` | Maturity Evaluator | planned | Configuration-driven maturity assessment |
+| `ENT-TECHDEBT` | Technical Debt Prioritizer | planned | Enterprise debt trajectory and priorities |
+| `ENT-MODERNIZE` | Investment and Modernization Advisor | planned | Options, tradeoffs, and sequencing |
+| `ENT-LEARN` | Learning and Metrics Agent | planned | Quality, drift, and outcome feedback |
+| `ENT-SYNTH` | Enterprise Synthesis Agent | candidate | Coherent enterprise posture and decision brief |
 
 ## Shared gates
 
@@ -60,3 +62,4 @@ flowchart LR
 - Confidence reconciliation retains distributions, uncertainty, and disagreement.
 - Human decisions are separate, immutable linked records.
 - Learning output can propose sandbox experiments but cannot alter production agents.
+- Production execution targets the NVIDIA A100 large cluster. All testing runs on NVIDIA DGX Spark or an approved equivalent, with environment deltas and limitations retained.

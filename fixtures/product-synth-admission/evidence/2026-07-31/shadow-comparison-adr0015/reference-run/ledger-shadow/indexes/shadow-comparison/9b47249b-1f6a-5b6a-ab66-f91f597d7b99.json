@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "shadow-comparison",
+  "logical_path": "shadow/adr-0015/comparisons/9b47249b-1f6a-5b6a-ab66-f91f597d7b99.json",
+  "object_hash": "sha256:b5a17841aacbc72bb82e4e993645afc34902052afc218bd26741bec32bfd7bed",
+  "record_id": "9b47249b-1f6a-5b6a-ab66-f91f597d7b99",
+  "retention_class": "shadow-comparison"
+}

@@ -1,5 +1,7 @@
 # Enterprise Agents
 
+The layer topology, dependency graph, role status, and shared gates are defined in the [Enterprise Agent Framework](enterprise-agent-framework.md).
+
 Enterprise agents consume immutable capability-level assessments and produce strategic, system-of-systems, portfolio, governance, risk, maturity, learning, and investment decision support. The [Enterprise Agent Framework](enterprise-agent-framework.md) defines their workflow and coordination.
 
 All roles inherit the [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Enterprise Agent Contract](../../contracts/enterprise-agent-contract.md). They do not replace capability reviewers or exercise approval authority.
@@ -32,3 +34,7 @@ Every derived assertion must cite contributing capability artifact IDs, evidence
 - [ENT-LEARN — Learning and Metrics Agent](learning-metrics-agent.md)
 
 All enterprise outputs also inherit the evidence, CAPA, pattern/insight, traceability, confidence, and human-authority semantics.
+
+## Executable status
+
+`ENT-EVIDENCE` and `ENT-SYSRISK` are the proven baseline enterprise roles. `ENT-ARCH`, `ENT-GOV`, `ENT-STRAT`, and `ENT-SYNTH` are admitted but unscheduled candidates under ADR-0021 through ADR-0024. ENT-GOV accepts obligations only through a validated human-authored source manifest. ENT-STRAT accepts objectives and scoring policy only through human-controlled manifests. ENT-SYNTH preserves domain authority and evidence tiers and remains separate from report packaging and distribution approval. Their live evidence proves bounded protocol and lineage handling only. All other enterprise roles remain planned pending complete admission and a separate scheduling decision.

@@ -6,11 +6,13 @@ All agents have an immutable UUID and canonical designation in the [machine iden
 
 ## Agent layers
 
-- [Product specialist agents](specialists/)
-- [Product synthesis agents](product/README.md)
-- [Capability delivery agents](capability/)
-- [Enterprise agents](enterprise/)
+- [Specialist agent framework](specialists/specialist-agent-framework.md)
+- [Product agent framework](product/product-agent-framework.md)
+- [Capability agent framework](capability/capability-agent-framework.md)
+- [Enterprise agent framework](enterprise/enterprise-agent-framework.md)
 - [Reusable work agents](work/README.md)
-- [Orchestration agents](orchestration/README.md)
+- [Orchestration agent framework](orchestration/orchestration-agent-framework.md)
 
 Every role inherits the [Universal Agent Contract](../contracts/universal-agent-contract.md). Use the [hierarchical architecture](hierarchical-agent-architecture.md) for layer boundaries and the [capability matrix](capability-matrix.md) for primary concerns and consumers.
+
+The [Integrated Agent Framework](integrated-agent-framework.md) provides the single end-to-end view across specialist, product, capability, enterprise, and orchestration layers.

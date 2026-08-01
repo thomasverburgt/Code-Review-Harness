@@ -1,0 +1,157 @@
+{
+  "actionable_items": [
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "kind": "finding",
+      "locator_ids": [
+        "LOCATOR-UDS-0001"
+      ],
+      "report_item_id": "FINDING:SPEC-SECRETS:FINDING-001",
+      "reviewability": "ready",
+      "statement": "A redacted credential-like value was detected in a documentation file, but its status as a confirmed secret is unresolved."
+    },
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "kind": "finding",
+      "locator_ids": [
+        "LOCATOR-UDS-0001"
+      ],
+      "report_item_id": "FINDING:PROD-SEC:FINDING-001",
+      "reviewability": "ready",
+      "statement": "A redacted credential-like value was detected in a documentation file, but its status as a confirmed secret is unresolved."
+    },
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "kind": "finding",
+      "locator_ids": [
+        "LOCATOR-UDS-0001"
+      ],
+      "report_item_id": "FINDING:CAP-RISK:FINDING-001",
+      "reviewability": "ready",
+      "statement": "A redacted credential-like value was detected in a documentation file, but its status as a confirmed secret is unresolved."
+    },
+    {
+      "evidence_refs": [
+        "OBS-RISK-001"
+      ],
+      "kind": "finding",
+      "locator_ids": [
+        "LOCATOR-OBS-RISK-001"
+      ],
+      "report_item_id": "FINDING:ENT-SYSRISK:FINDING-001",
+      "reviewability": "ready",
+      "statement": "A redacted credential-like value was detected in a documentation file, but its status as a confirmed secret is unresolved."
+    },
+    {
+      "evidence_refs": [
+        "OBS-RISK-001"
+      ],
+      "kind": "risk",
+      "locator_ids": [
+        "LOCATOR-OBS-RISK-001"
+      ],
+      "report_item_id": "RISK:RISK-001",
+      "reviewability": "ready",
+      "statement": "A redacted credential-like value was detected in a documentation file, but its status as a confirmed secret is unresolved."
+    },
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "kind": "capa",
+      "locator_ids": [
+        "LOCATOR-UDS-0001"
+      ],
+      "report_item_id": "CAPA:a5d58ea0-6ce4-5b93-967a-7de957ce0655",
+      "reviewability": "ready",
+      "statement": "Classify the redacted value as confirmed secret, likely secret, or benign/nonsecret. Implement a process to ensure that documentation files do not contain credential-like values."
+    },
+    {
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "kind": "recommendation",
+      "locator_ids": [
+        "LOCATOR-UDS-0001"
+      ],
+      "report_item_id": "RECOMMENDATION:487ad1d4-9f67-56aa-a0b6-91e41f9f3664",
+      "reviewability": "ready",
+      "statement": "Classify the redacted value as confirmed secret, likely secret, or benign/nonsecret."
+    }
+  ],
+  "authority_effect": "review_support_only",
+  "binding_manifest_hash": "sha256:0175a2e144526f73fedc27db25bfd7fbdfa6eeb672886ff51447190a345cbf45",
+  "binding_manifest_id": "5dd53e58-18ee-53f2-a8da-6f7e5dd2c037",
+  "blocking_issues": [],
+  "generated_at": "2026-07-31T19:00:00Z",
+  "locators": [
+    {
+      "access": {
+        "classification": "internal-test-redacted",
+        "constraints": [
+          "authorized reviewers only"
+        ],
+        "reviewer_instructions": [
+          "Obtain an authorized read-only clone; do not copy restricted values into the review packet."
+        ]
+      },
+      "evidence_id": "OBS-RISK-001",
+      "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+      "line_end": 153,
+      "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+      "line_start": 153,
+      "locator_hash": "sha256:28dbfcdc9f73550959ee25b02442e865e719b3eef9d8127eaee15d0e23961e77",
+      "locator_id": "LOCATOR-OBS-RISK-001",
+      "locator_state": "source_located",
+      "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+      "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+      "reproduction_steps": [
+        "Check out commit 329ade01852f9e570d31cb7b19d9979152938c17 from https://github.com/defenseunicorns/uds-core.git.",
+        "Open docs/getting-started/local-demo/integrate-your-package.mdx at line 153.",
+        "Run the approved redacted credential-assignment check and compare the line fingerprint."
+      ],
+      "safe_excerpt": "Credential-like assignment detected; matched value omitted.",
+      "symbol_or_section": null
+    },
+    {
+      "access": {
+        "classification": "internal-test-redacted",
+        "constraints": [
+          "authorized reviewers only"
+        ],
+        "reviewer_instructions": [
+          "Obtain an authorized read-only clone; do not copy restricted values into the review packet."
+        ]
+      },
+      "evidence_id": "UDS-0001",
+      "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+      "line_end": 153,
+      "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+      "line_start": 153,
+      "locator_hash": "sha256:ed501145d15e655829ff084208b3d35daa95752c088d73f5fdbb79bd46c9bcca",
+      "locator_id": "LOCATOR-UDS-0001",
+      "locator_state": "source_located",
+      "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+      "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+      "reproduction_steps": [
+        "Check out commit 329ade01852f9e570d31cb7b19d9979152938c17 from https://github.com/defenseunicorns/uds-core.git.",
+        "Open docs/getting-started/local-demo/integrate-your-package.mdx at line 153.",
+        "Run the approved redacted credential-assignment check and compare the line fingerprint."
+      ],
+      "safe_excerpt": "Credential-like assignment detected; matched value omitted.",
+      "symbol_or_section": null
+    }
+  ],
+  "packet_hash": "sha256:9614db12f4c70f4037af32cae2707711965f9206f0137799a67f2ee2e2c15f1c",
+  "packet_id": "fad6b28b-ed27-58ce-bfe3-cc37f62fcfe6",
+  "packet_version": "1.0.0",
+  "report_package_hash": "sha256:430233c423d65642bdebde1d9217517d7023bc2ddcc5dbbf89ebe361d9ceeb4a",
+  "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f",
+  "reviewability_state": "ready_for_expert_review"
+}

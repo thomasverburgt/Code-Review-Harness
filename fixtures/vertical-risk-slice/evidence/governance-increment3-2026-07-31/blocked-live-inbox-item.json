@@ -1,0 +1,138 @@
+{
+  "decision_authority": "human",
+  "decision_context_id": "DC-001",
+  "due_at": "2026-08-02T00:00:00Z",
+  "execution_id": "90000000-0000-4000-8000-000000000001",
+  "human_gate": {
+    "after_node": "ent-sysrisk",
+    "authority_role": "enterprise-risk-acceptance-authority",
+    "decision_types": [
+      "risk_disposition",
+      "risk_disposition_and_treatment_authorization",
+      "treatment_authorization",
+      "capa_ownership"
+    ],
+    "gate_id": "human-risk-authority"
+  },
+  "inbox_item_id": "4c7a6c19-46be-5be3-8d64-88f566afb279",
+  "presentation": {
+    "advisory_options": [
+      {
+        "action_owner": "security_engineer",
+        "approval_state": "not_approved",
+        "contributing_causes": [
+          "The presence of a redacted credential-like value in a documentation file."
+        ],
+        "cost_schedule_mission_tradeoffs": [],
+        "decision_owner": "security_engineer",
+        "dependencies": [],
+        "expected_consequence_effect": "high",
+        "expected_evidence": "Manual classification of the redacted credential-like value.",
+        "expected_probability_effect": "medium",
+        "option_id": "OPTION-DC-001-001",
+        "proposed_control": "Manual classification by the security team.",
+        "remaining_unknowns": [
+          "The exact impact of the unresolved credential-like value is unknown without further classification."
+        ],
+        "sequencing": [],
+        "side_effects": [],
+        "target_condition": "Classify the redacted value as confirmed secret, likely secret, or benign/nonsecret.",
+        "verification_method": "manual classification by security team"
+      }
+    ],
+    "confidence": {
+      "assessment": 0.85,
+      "decision": null,
+      "evidence": 0.95,
+      "provenance": [
+        {
+          "source": "credential-assignment detector",
+          "version": "0.1.0"
+        },
+        {
+          "source": "SPEC-SECRETS role schema",
+          "version": "1.0.0"
+        },
+        {
+          "source": "universal-agent-artifact schema",
+          "version": "1.0.0"
+        }
+      ],
+      "review": 0.8
+    },
+    "conflicts": [],
+    "coverage": {
+      "eligible": 1,
+      "generation_limit": {
+        "array_max_items": 3,
+        "limit_applied": false,
+        "omitted_item_estimate": 0,
+        "string_max_length": 256,
+        "truncated_string_estimate": 0
+      },
+      "inaccessible": 0,
+      "negative_evidence": 0,
+      "omitted": 0,
+      "reviewed": 1,
+      "unknown": 0
+    },
+    "partial_input_visible": false,
+    "uncertainties": [
+      "The exact impact of the unresolved credential-like value is unknown without further classification."
+    ]
+  },
+  "received_at": "2026-07-31T20:00:00Z",
+  "request_object_hash": "sha256:f22412bca02af3833c1a507c65c2fa57e956b19f32ffd21a563c4682556af293",
+  "request_snapshot": {
+    "available_options": [
+      {
+        "action_owner": "security_engineer",
+        "contributing_causes": [
+          "The presence of a redacted credential-like value in a documentation file."
+        ],
+        "cost_schedule_mission_tradeoffs": [],
+        "decision_owner": "security_engineer",
+        "dependencies": [],
+        "expected_consequence_effect": "high",
+        "expected_evidence": "Manual classification of the redacted credential-like value.",
+        "expected_probability_effect": "medium",
+        "option_id": "OPTION-DC-001-001",
+        "proposed_control": "Manual classification by the security team.",
+        "remaining_unknowns": [
+          "The exact impact of the unresolved credential-like value is unknown without further classification."
+        ],
+        "sequencing": [],
+        "side_effects": [],
+        "target_condition": "Classify the redacted value as confirmed secret, likely secret, or benign/nonsecret.",
+        "verification_method": "manual classification by security team"
+      }
+    ],
+    "decision_authority": "human",
+    "decision_context_id": "DC-001",
+    "decision_due_context": null,
+    "decision_question": "Should the redacted credential-like value be classified as a confirmed secret, likely secret, or benign/nonsecret?",
+    "decision_type": "evidence_classification",
+    "evidence_refs": [
+      "7d9999b9-4188-592b-a3ca-1d939dbe2fa1",
+      "RISK-001",
+      "RISK-001"
+    ],
+    "known_constraints": [],
+    "required_decision_authority": "security_engineer",
+    "triggering_artifacts": [
+      "7d9999b9-4188-592b-a3ca-1d939dbe2fa1"
+    ],
+    "uncertainties": [
+      "The exact impact of the unresolved credential-like value is unknown without further classification."
+    ]
+  },
+  "routing_reason": "requested authority does not match the workflow human gate",
+  "routing_state": "blocked_authority_mismatch",
+  "source_artifact": {
+    "artifact_id": "7d9999b9-4188-592b-a3ca-1d939dbe2fa1",
+    "designation": "ENT-SYSRISK",
+    "lifecycle_state": "complete",
+    "output_hash": "sha256:5aded426e5604ea65a3622d0e92f5eecf134a3fb479631fa3daae3e3e56f20c5"
+  },
+  "workflow_id": "WF-VERTICAL-RISK-001"
+}

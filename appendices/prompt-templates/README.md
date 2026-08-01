@@ -2,9 +2,9 @@
 
 Versioned prompt templates and prompt-contract examples are maintained here.
 
-`candidates/` contains mechanically extracted copy boundaries from the four reviewed prompt-design Word documents. `candidates/manifest.json` pins each source, version, status, path, and SHA-256 hash. Candidate status permits Increment 2 evaluation but does not authorize production promotion.
+`candidates/` contains versioned prompt candidates. The original four are mechanically extracted copy boundaries from reviewed prompt-design Word documents. `PROD-SYNTH`, `CAP-SYNTH`, `CAP-REQ`, `ENT-ARCH`, `ENT-GOV`, `ENT-STRAT`, and `ENT-SYNTH` are contract-derived admission candidates whose sources are their registered agent specifications. `candidates/manifest.json` pins each source, version, status, path, and SHA-256 hash. Candidate status permits evaluation but does not authorize baseline scheduling or production promotion.
 
-Regenerate the candidate files after a reviewed Word-document change with:
+Regenerate the document-derived candidate files after a reviewed Word-document change with:
 
 ```powershell
 python tools/export_candidate_prompts.py

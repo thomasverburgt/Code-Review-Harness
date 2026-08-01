@@ -154,18 +154,29 @@ The ordering expresses the normal evidence flow, not a prohibition on iterative 
 
 ## `CAP-COORD` Capability coordinator
 
-**Authoritative question:** What coherent, reproducible, traceable capability assessment follows from all capability-review evidence and unresolved disagreements?
+**Authoritative question:** Is the declared capability-review input set exact, valid, complete, traceable, and eligible to be dispatched to `CAP-SYNTH`?
 
 **Responsibilities**
 
-- Validate expected input completeness, schema compatibility, freshness, hashes, rubric versions, and reviewer versions.
-- Normalize terminology and scoring scales; reconcile confidence without averaging away disagreement.
-- Preserve separate `evidence_confidence`, `assessment_confidence`, and `decision_confidence` with provenance.
-- Correlate cross-domain findings and expose inconsistencies requiring human review.
-- Publish the authoritative capability traceability manifest and knowledge-graph relationships up, down, and horizontally across the stack.
-- Produce the capability narrative and enterprise handoff without overriding child findings or performing a new specialist review.
+- Deterministically validate the declared input inventory, capability identities, schemas, lifecycle, hashes, freshness, and compatibility.
+- Calculate completeness, preserve child conflicts, index findings/risks/decision requests/evidence, and record any bounded partial-input authorization.
+- Publish an immutable capability-input manifest with input and manifest hashes plus a fail-closed routing state.
+- Do not normalize meaning, reconcile confidence, derive risk, generate narrative, recommend action, or produce an enterprise semantic handoff.
 
-**Required outputs:** `input_manifest`, `input_hash`, `review_completeness`, `schema_compatibility`, `rubric_versions`, `normalized_scores`, `confidence_reconciliation`, `unresolved_conflicts`, `cross_domain_correlations`, `capability_traceability_manifest`, `capability_assessment`, `human_review_triggers`, `enterprise_escalations`, and `output_hash`.
+**Required outputs:** `expected_designations`, `received_inputs`, `missing_designations`, `extra_designations`, `validation`, `review_completeness`, `preserved_conflicts`, `traceability`, `partial_input_authorization`, `routing`, `input_hash`, and `manifest_hash`.
+
+## `CAP-SYNTH` Capability synthesis lead
+
+**Authoritative question:** What explicitly sourced capability posture follows from a validated coordinator manifest and its exact immutable capability-review inputs?
+
+**Responsibilities**
+
+- Consume only a hash-valid, dispatch-eligible `CAP-COORD` manifest and its exact immutable artifact set.
+- Preserve child assertions, evidence, confidence provenance, disagreement, unknowns, and decision requests.
+- Derive explicitly sourced cross-domain correlations, capability posture, human-review triggers, and enterprise handoff without performing a new specialist review.
+- Keep risk acceptance, readiness approval, requirement change, course-of-action selection, release, distribution, deployment, and production promotion human-only.
+
+**Candidate outputs:** `child_assertion_inventory`, `confidence_reconciliation`, `unresolved_conflicts`, `cross_domain_correlations`, `capability_assessment`, `human_review_triggers`, `enterprise_escalations`, and `enterprise_handoff`. The role remains planned and unscheduled until separately admitted and promoted.
 
 ## Mandatory reproducibility fields
 

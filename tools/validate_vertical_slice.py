@@ -18,6 +18,7 @@ WORKFLOW = ROOT / "appendices" / "example-workflows" / "vertical-risk-slice.work
 FIXTURE_DIR = ROOT / "fixtures" / "vertical-risk-slice" / "gold"
 REGISTRY = ROOT / "agents" / "agent-identities.json"
 STATE_DIR = ROOT / "orchestration" / "state-machines"
+AUTHORITY_REGISTRY = ROOT / "appendices" / "governance" / "decision-authorities-0.1.0.json"
 
 
 class ValidationFailure(Exception):
@@ -196,13 +197,33 @@ def validate_workflow(registry_by_designation: dict[str, dict[str, Any]]) -> dic
 def validate_state_machines() -> None:
     for path in sorted(STATE_DIR.glob("*.json")):
         instance = load_json(path)
-        assert_schema(instance, "orchestration-state-machine.schema.json", str(path.relative_to(ROOT)))
+        schema_name = ({
+            "REPORT-GOVERNANCE": "report-governance-state-machine.schema.json",
+            "SEMANTIC-ADJUDICATION": "semantic-adjudication-state-machine.schema.json",
+            "requirements-acceptance": "requirements-acceptance-state-machine.schema.json",
+        }.get(instance.get("machine_id"), "orchestration-state-machine.schema.json"))
+        assert_schema(instance, schema_name, str(path.relative_to(ROOT)))
         states = set(instance["states"])
         if instance["initial_state"] not in states or not set(instance["terminal_states"]).issubset(states):
             raise ValidationFailure(f"{path.relative_to(ROOT)}: initial or terminal state is undeclared")
         for transition in instance["transitions"]:
             if transition["from"] not in states or transition["to"] not in states:
                 raise ValidationFailure(f"{path.relative_to(ROOT)}: transition references undeclared state")
+
+
+def validate_governance(workflow: dict[str, Any]) -> None:
+    registry = load_json(AUTHORITY_REGISTRY)
+    assert_schema(registry, "decision-authority-registry.schema.json", str(AUTHORITY_REGISTRY.relative_to(ROOT)))
+    authorities = {item["authority_role"]: item for item in registry["authorities"]}
+    if len(authorities) != len(registry["authorities"]):
+        raise ValidationFailure("decision authority registry contains duplicate roles")
+    for gate in workflow["human_gates"]:
+        authority = authorities.get(gate["authority_role"])
+        if authority is None:
+            raise ValidationFailure(f"human gate uses unregistered authority role: {gate['authority_role']}")
+        unsupported = set(gate["decision_types"]) - set(authority["decision_types"])
+        if unsupported:
+            raise ValidationFailure(f"human gate contains decision types outside authority policy: {sorted(unsupported)}")
 
 
 def validate_artifact_payloads(workflow: dict[str, Any], registry_by_designation: dict[str, dict[str, Any]], artifacts_by_designation: dict[str, dict[str, Any]], decision: dict[str, Any], authorized_partial_designations: set[str] | None = None, replacement_designation: str | None = None, external_input_designations: set[str] | None = None) -> None:
@@ -273,6 +294,12 @@ def validate_artifact_payloads(workflow: dict[str, Any], registry_by_designation
         if source_id not in target["artifact"]["links"]["children"]:
             raise ValidationFailure(f"target child link missing for edge {edge['from']} -> {edge['to']}")
     assert_schema(decision, "human-decision-request.schema.json", "gold human decision request")
+    final_node = next(node for node in workflow["nodes"] if node["designation"] == "ENT-SYSRISK")
+    human_gate = next(gate for gate in workflow["human_gates"] if gate["after_node"] == final_node["node_id"])
+    if decision["required_decision_authority"] != human_gate["authority_role"]:
+        raise ValidationFailure("human decision request authority does not match final workflow gate")
+    if decision["decision_type"] not in human_gate["decision_types"]:
+        raise ValidationFailure("human decision request type is not authorized by final workflow gate")
     final_id = artifacts_by_designation["ENT-SYSRISK"]["artifact"]["artifact_id"]
     if replacement_designation != "ENT-SYSRISK" and final_id not in decision["triggering_artifacts"]:
         raise ValidationFailure("human decision request does not reference final ENT-SYSRISK artifact")
@@ -300,11 +327,12 @@ def main() -> int:
         registry_by_designation = {agent["designation"]: agent for agent in registry["agents"]}
         workflow = validate_workflow(registry_by_designation)
         validate_state_machines()
+        validate_governance(workflow)
         validate_artifacts(workflow, registry_by_designation)
     except ValidationFailure as exc:
         print(f"vertical slice validation FAILED: {exc}", file=sys.stderr)
         return 1
-    print("vertical slice validation passed: workflow=1; nodes=5; state_machines=3; gold_artifacts=5; human_decision_requests=1")
+    print("vertical slice validation passed: workflow=1; nodes=5; state_machines=4; authority_registries=1; gold_artifacts=5; human_decision_requests=1; report_governance=1")
     return 0
 
 

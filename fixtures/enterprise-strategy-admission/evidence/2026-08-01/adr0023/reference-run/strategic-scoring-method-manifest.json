@@ -1,0 +1,24 @@
+{
+  "aggregation": "weighted_mean",
+  "composite_allowed": false,
+  "confidence": "preserve_source_confidence",
+  "created_at": "2026-08-01T23:56:00Z",
+  "declared_by": {
+    "authority_name": "Strategic Scoring Fixture Method Owner",
+    "authority_role": "scoring-method-owner"
+  },
+  "method_hash": "sha256:50b4d69e941e06ae99f3f998a6f8fee2b19ff401b5fca326a73f8c63dac5cdce",
+  "method_id": "23000000-0000-4000-8000-000000000002",
+  "method_version": "1.0.0",
+  "missingness": "preserve_unknown_no_imputation",
+  "normalization": "identity_0_1",
+  "scope_id": "ENTERPRISE-FIXTURE-001",
+  "sensitivity": {
+    "weight_delta": 0.1
+  },
+  "threshold_context": null,
+  "weights": {
+    "MEASURE-ALIGNMENT": 0.6,
+    "MEASURE-RESILIENCE": 0.4
+  }
+}

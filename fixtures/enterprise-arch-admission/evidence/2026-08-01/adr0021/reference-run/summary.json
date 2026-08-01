@@ -1,0 +1,18 @@
+{
+  "adr": "ADR-0021",
+  "artifact_hash": "sha256:53db3f93acf6889f54b59dfd79047a6936be5305952d3b0cd02fe54746d85f84",
+  "artifact_id": "317c84a1-5b31-58b2-8c42-7ae55a83f62a",
+  "baseline_changed": false,
+  "candidate_status": "candidate",
+  "cap_req_gate_bypassed": false,
+  "capability_inputs": 2,
+  "designation": "ENT-ARCH",
+  "evidence_tier": "adjudicated_multi_capability_contract_fixture",
+  "fitness_claim": "contract_mechanics_only",
+  "ledger_hash": "sha256:a8638f6793134dc7b22ce9c95d7b69d9e4de66dc8e46a21c36fa8aa1fb2c3cd6",
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "scheduled": false,
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

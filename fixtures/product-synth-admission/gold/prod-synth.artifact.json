@@ -1,0 +1,47 @@
+{
+  "identity": {"agent_uuid": "723b566e-224b-4e73-bb83-887c21f53a02", "designation": "PROD-SYNTH", "display_name": "Product Synthesis Lead", "agent_version": "design-0.1.0", "contract_version": "1.0.0"},
+  "artifact": {"artifact_id": "66666666-6666-4666-8666-666666666666", "artifact_type": "product-engineering-posture", "created_at": "2026-07-31T20:00:00Z", "lifecycle_state": "complete", "links": {"parents": [], "children": ["22222222-2222-4222-8222-222222222222"], "peers": []}},
+  "execution": {"execution_id": "a6666666-6666-4666-8666-666666666666", "model": "deterministic-reference-agent", "prompt_version": "design-0.1.0", "rubric_version": "fixture-0.1.0", "toolchain_version": "0.1.0", "settings": {"temperature": 0}},
+  "scope": {"product_id": "PRODUCT-ALPHA", "source_revision": "fixture-rev-001", "included": ["PROD-SEC artifact under narrow admission policy"], "excluded": ["other product domains pending separate calibration"], "decision_context": "capability_handoff"},
+  "inputs": [{"artifact_id": "22222222-2222-4222-8222-222222222222", "hash": "sha256:fixture-output-prod-sec", "compatibility": "compatible", "freshness": "fresh"}],
+  "methodology": {"method": "PROD-SYNTH-FIXTURE-0.1.0 preserve-correlate-handoff", "limitations": ["Admission fixture policy requires only PROD-SEC; this is not a full product review"]},
+  "coverage": {"eligible": 1, "reviewed": 1, "omitted": 0, "inaccessible": 0, "unknown": 0, "negative_evidence": 0},
+  "observations": [{"observation_id": "OBS-PRODSYNTH-001", "fact": "The declared PROD-SEC child is present, complete, schema-valid, and revision-aligned.", "evidence_refs": ["22222222-2222-4222-8222-222222222222"]}],
+  "assessments": [{"assessment_id": "ASM-PRODSYNTH-001", "rationale": "The preserved product-security condition affects the product identity boundary and must remain visible to capability risk review.", "confidence": 0.92}],
+  "findings": [],
+  "patterns": [],
+  "insights": [{"insight_id": "INSIGHT-PRODSYNTH-001", "statement": "The narrow admission policy proves handoff mechanics, not full product posture."}],
+  "conflicts": [],
+  "confidence": {"evidence": 0.99, "assessment": 0.92, "review": 1.0, "decision": null, "provenance": [{"artifact_id": "22222222-2222-4222-8222-222222222222", "confidence": 0.92}]},
+  "decisions_requested": [{"decision_context_id": "DECISION-PRODSYNTH-001", "question": "Determine treatment of the preserved product-security condition at capability scope.", "required_authority": "capability-risk-authority"}],
+  "consumers": ["CAP-RISK"],
+  "decision_authority": "human",
+  "integrity": {"input_hash": "sha256:fixture-output-prod-sec", "output_hash": "sha256:fixture-output-prod-synth", "attestation_ref": null, "retention_class": "fixture", "schema_validation": "passed"},
+  "extensions": {
+    "product": {
+      "product_id": "PRODUCT-ALPHA",
+      "specialist_artifact_inventory": [{"artifact_id": "22222222-2222-4222-8222-222222222222", "designation": "PROD-SEC", "state": "valid_present"}],
+      "input_completeness": {"required": 1, "valid": 1, "fraction": 1.0, "policy": "PROD-SYNTH-ADMISSION-0.1.0"},
+      "cross_domain_correlations": [{"correlation_id": "CORR-PRODSYNTH-001", "relationship": "preserves_for_capability", "contributing_artifact_ids": ["22222222-2222-4222-8222-222222222222"], "record_ids": ["FINDING-PRODSEC-001"]}],
+      "unresolved_conflicts": [],
+      "product_findings": [],
+      "product_patterns": [],
+      "product_risk_posture": {"state": "elevated_input", "basis": ["FINDING-PRODSEC-001"], "decision_authority": "human"},
+      "technical_confidence": 0.92,
+      "coverage": {"required_domains": 1, "reviewed_domains": 1, "admission_fixture_only": true},
+      "evidence_quality": {"state": "high", "score": 0.99},
+      "release_readiness_input": {"state": "unresolved_security_condition", "is_release_decision": false},
+      "escalations": [{"escalation_id": "ESC-PRODSYNTH-001", "authority": "capability-risk-authority", "basis": "FINDING-PRODSEC-001"}],
+      "role": {
+        "designation": "PROD-SYNTH",
+        "synthesis_basis": {"required_designations": ["PROD-SEC"], "received_artifact_ids": ["22222222-2222-4222-8222-222222222222"], "completeness_state": "complete", "partial_input_authorization": null},
+        "preserved_child_assertions": [{"source_artifact_id": "22222222-2222-4222-8222-222222222222", "source_record_id": "FINDING-PRODSEC-001", "record_kind": "finding", "evidence_refs": ["FINDING-SECRET-001"], "preservation_state": "preserved_without_rewrite"}],
+        "derived_product_assertions": [{"assertion_id": "DERIVED-PRODSYNTH-001", "statement": "The product-security identity-boundary condition is a required capability-risk input.", "contributing_artifact_ids": ["22222222-2222-4222-8222-222222222222"], "contributing_record_ids": ["FINDING-PRODSEC-001"], "correlation_logic": "The child finding affects a shared identity service named in the capability mission thread.", "assumptions": ["The capability dependency record remains current"], "alternatives": ["Capability review may determine the service is isolated from the mission path"], "confidence": 0.92, "uncertainty": ["No runtime exploitation evidence"]}],
+        "engineering_posture": {"state": "condition_requires_capability_review", "rationale": "A complete child artifact preserves an elevated product-security input.", "limitations": ["Only PROD-SEC is required by this admission fixture"], "advisory_only": true},
+        "confidence_reconciliation": {"method": "preserve_minimum_with_rationale", "input_values": [0.92], "result": 0.92, "uncertainty": ["Single-domain admission fixture"]},
+        "capability_handoff": {"product_id": "PRODUCT-ALPHA", "artifact_id": "66666666-6666-4666-8666-666666666666", "preserved_finding_ids": ["FINDING-PRODSEC-001"], "preserved_evidence_refs": ["FINDING-SECRET-001"], "unresolved_conflict_ids": [], "escalation_ids": ["ESC-PRODSYNTH-001"], "intended_consumers": ["CAP-RISK"], "handoff_state": "ready_for_capability_fan_in"},
+        "decision_authority": "human"
+      }
+    }
+  }
+}

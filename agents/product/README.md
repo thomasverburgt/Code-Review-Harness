@@ -2,11 +2,15 @@
 
 Product agents inherit the [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Product Agent Contract](../../contracts/product-agent-contract.md). They correlate specialist outputs within one product and preserve all child evidence and disagreement.
 
+The layer topology, workflow, role status, and shared gates are defined in the [Product Agent Framework](product-agent-framework.md).
+
 ## `PROD-SYNTH` — Product Synthesis Lead
 
 **Question:** What coherent engineering state follows from all required product specialist reviews?
 
 Produces the authoritative product input manifest, cross-domain correlations, product posture, unresolved conflicts, confidence reconciliation, and capability handoff. It cannot approve release or override a specialist.
+
+Executable candidate details are defined in [product-synthesis-lead.md](product-synthesis-lead.md). Candidate status does not authorize baseline workflow scheduling.
 
 ## `PROD-SEC` — Product Security Synthesizer
 

@@ -1,0 +1,46 @@
+{
+  "actor": {
+    "actor_type": "human",
+    "assurance_level": "fixture-mfa",
+    "authentication_provider": "fixture-identity-provider",
+    "authority_role": "enterprise-risk-acceptance-authority",
+    "session_id": "SESSION-FIXTURE-001",
+    "subject_id": "HUMAN-ENTERPRISE-RISK-001"
+  },
+  "authority_validation": {
+    "authority_role": "enterprise-risk-acceptance-authority",
+    "decision_type": "risk_disposition_and_treatment_authorization",
+    "registry_id": "DECISION-AUTHORITY-REGISTRY",
+    "registry_version": "0.1.0",
+    "scope_id": "ENTERPRISE-FIXTURE-001",
+    "state": "passed"
+  },
+  "conditions": [
+    "Verify credential revocation before promotion"
+  ],
+  "decided_at": "2026-08-02T12:00:00Z",
+  "decision_authority": "human",
+  "decision_context_id": "DECISION-ENTRISK-001",
+  "decision_record_id": "fecefd65-8152-541e-b851-ef5c54281bb0",
+  "decision_type": "risk_disposition_and_treatment_authorization",
+  "disposition": "approved",
+  "effect": {
+    "authorization_scope": "ENTERPRISE-FIXTURE-001",
+    "does_not_mutate_agent_artifacts": true,
+    "execution_effect": "record_only",
+    "gate_type": "risk"
+  },
+  "effective_until": "2026-09-01T00:00:00Z",
+  "inbox_item_id": "767d2d59-ec10-56c7-8ec3-79848acb4e9b",
+  "rationale": "The cited evidence supports the bounded treatment subject to the recorded conditions.",
+  "request_object_hash": "sha256:e6a673a8118e3e70d8fad1f3a09b5252a3269b22894f816ffdfb86d8ec1f40e0",
+  "residual_uncertainties": [
+    "Service substitutability",
+    "Enterprise recovery time"
+  ],
+  "selected_option_ids": [
+    "ENT-COA-001"
+  ],
+  "source_artifact_id": "55555555-5555-4555-8555-555555555555",
+  "supersedes": null
+}

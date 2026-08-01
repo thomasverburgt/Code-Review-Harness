@@ -1,0 +1,24 @@
+vertical slice validation passed: workflow=1; nodes=5; state_machines=4; authority_registries=1; gold_artifacts=5; human_decision_requests=1; report_governance=1
+{"deterministic_replay": "passed", "gold": "passed", "negative_cases": 15, "negative_cases_passed": 15, "runtime_scenarios": 5, "suite": "FIXTURE-VERTICAL-RISK-NEGATIVE-001"}
+{"access_control": "passed", "audit_chain": "passed", "idempotency": "passed", "integrity": "passed", "persistence": "passed", "replay": "passed", "suite": "artifact-ledger-conformance", "supersession": "passed"}
+{"assembled_one_node_replacements": ["SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"], "cancellation": "passed", "canonical_capability_live_upstream_lineage": "passed", "canonical_capability_projection": "passed", "canonical_capability_projection_replay": "passed", "canonical_enterprise_live_upstream_lineage": "passed", "canonical_enterprise_projection": "passed", "canonical_enterprise_projection_replay": "passed", "canonical_product_live_upstream_lineage": "passed", "canonical_product_projection": "passed", "canonical_product_projection_replay": "passed", "canonical_projection_replay": "passed", "canonical_worker_derived_limit": "passed", "cardinality_truncation_failed_closed": true, "deterministic_assembly_replay": "passed", "deterministic_enterprise_evidence_gate": "passed", "fan_in_bypass_rejected": true, "harness_field_override_rejected": true, "least_privilege_tools": "passed", "one_node_replacements": ["SPEC-SECRETS", "PROD-SEC", "CAP-RISK", "ENT-SYSRISK"], "retry_idempotency": "passed", "suite": "worker-runtime-conformance", "telemetry_lineage": "passed", "timeout": "passed", "vllm_auth_gate": "passed", "vllm_protocol": "passed"}
+test_distribution_requires_separate_authority_recorder_and_verifier (__main__.ReportGovernanceTests.test_distribution_requires_separate_authority_recorder_and_verifier) ... ok
+test_external_decision_fails_closed_and_is_immutable (__main__.ReportGovernanceTests.test_external_decision_fails_closed_and_is_immutable) ... ok
+test_external_decision_is_exact_record_only_and_independently_verified (__main__.ReportGovernanceTests.test_external_decision_is_exact_record_only_and_independently_verified) ... ok
+test_report_is_deterministic_complete_and_unmodified (__main__.ReportGovernanceTests.test_report_is_deterministic_complete_and_unmodified) ... ok
+test_review_copy_cannot_be_used_as_approved_distribution (__main__.ReportGovernanceTests.test_review_copy_cannot_be_used_as_approved_distribution) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.040s
+
+OK
+test_binding_is_exact_and_complete (__main__.EvidenceLocatorTests.test_binding_is_exact_and_complete) ... ok
+test_missing_and_unverified_locators_fail_closed (__main__.EvidenceLocatorTests.test_missing_and_unverified_locators_fail_closed) ... ok
+test_ready_packet_is_deterministic_exact_and_report_immutable (__main__.EvidenceLocatorTests.test_ready_packet_is_deterministic_exact_and_report_immutable) ... ok
+test_unsafe_or_mutated_locator_is_rejected (__main__.EvidenceLocatorTests.test_unsafe_or_mutated_locator_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK
+{"actionable_item_count": 7, "authority_effect": "review_support_only", "locator_count": 2, "report_package_hash": "sha256:430233c423d65642bdebde1d9217517d7023bc2ddcc5dbbf89ebe361d9ceeb4a", "report_package_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f", "report_unchanged": true, "reviewability_state": "ready_for_expert_review", "status": "passed"}

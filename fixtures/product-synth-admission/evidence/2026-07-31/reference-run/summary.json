@@ -1,0 +1,15 @@
+{
+  "baseline_workflow_changed": false,
+  "candidate_status": "candidate",
+  "capability_consumer": "CAP-RISK",
+  "child_artifact_id": "22222222-2222-4222-8222-222222222222",
+  "decision_authority": "human",
+  "handoff_state": "ready_for_capability_fan_in",
+  "preserved_evidence_refs": [
+    "FINDING-SECRET-001"
+  ],
+  "preserved_finding_id": "FINDING-PRODSEC-001",
+  "prod_synth_artifact_id": "66666666-6666-4666-8666-666666666666",
+  "scheduled": false,
+  "status": "passed"
+}

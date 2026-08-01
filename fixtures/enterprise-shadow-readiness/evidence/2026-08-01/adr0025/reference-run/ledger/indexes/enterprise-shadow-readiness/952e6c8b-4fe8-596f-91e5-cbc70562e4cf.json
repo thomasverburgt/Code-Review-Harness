@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-shadow-readiness",
+  "logical_path": "enterprise-shadow-readiness/952e6c8b-4fe8-596f-91e5-cbc70562e4cf.json",
+  "object_hash": "sha256:a073a6c6beb3ebe2dcb4b49304b94c0c3a4ac61d6a30d6b56b2cc515b8a7381c",
+  "record_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "retention_class": "architecture-evidence"
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/semantic-adjudication-packet.schema.json",
+  "title": "Semantic Adjudication Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["packet_id", "packet_version", "generated_at", "source_comparison", "baseline_artifact", "shadow_artifact", "preserved_dimensions", "differing_dimensions", "deltas", "required_decision_authority", "decision_authority", "effect", "cutover_state", "isolation", "packet_hash"],
+  "properties": {
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "source_comparison": {"$ref": "#/$defs/recordRef"},
+    "baseline_artifact": {"$ref": "#/$defs/recordRef"},
+    "shadow_artifact": {"$ref": "#/$defs/recordRef"},
+    "preserved_dimensions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "differing_dimensions": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "deltas": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/delta"}},
+    "required_decision_authority": {"const": "enterprise-risk-acceptance-authority"},
+    "decision_authority": {"const": "human"},
+    "effect": {"const": "review_request_only"},
+    "cutover_state": {"const": "blocked_pending_human_adjudication"},
+    "isolation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["baseline_workflow_changed", "report_package_changed", "deployment_effect"],
+      "properties": {"baseline_workflow_changed": {"const": false}, "report_package_changed": {"const": false}, "deployment_effect": {"const": "none"}}
+    },
+    "packet_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "recordRef": {
+      "type": "object", "additionalProperties": false, "required": ["record_id", "content_hash"],
+      "properties": {"record_id": {"type": "string", "minLength": 1}, "content_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+    },
+    "delta": {
+      "type": "object", "additionalProperties": false,
+      "required": ["delta_id", "dimension", "json_pointer", "baseline_value", "shadow_value", "materiality", "review_question", "downstream_consequence", "available_dispositions", "default_if_unresolved"],
+      "properties": {
+        "delta_id": {"type": "string", "format": "uuid"},
+        "dimension": {"type": "string", "minLength": 1},
+        "json_pointer": {"type": "string", "pattern": "^/"},
+        "baseline_value": {}, "shadow_value": {},
+        "materiality": {"enum": ["substantive", "potentially_substantive", "presentation"]},
+        "review_question": {"type": "string", "minLength": 1},
+        "downstream_consequence": {"type": "string", "minLength": 1},
+        "available_dispositions": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"enum": ["accept_preserved_meaning", "accept_beneficial_enrichment", "require_normalization", "reject_semantic_drift", "insufficient_evidence"]}},
+        "default_if_unresolved": {"const": "block_cutover"}
+      }
+    }
+  }
+}

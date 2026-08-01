@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/governance-source-manifest.schema.json",
+  "title": "Authoritative Governance Source Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_id", "manifest_version", "created_at", "scope_id", "declared_by",
+    "sources", "exception_records", "approval_records", "manifest_hash"
+  ],
+  "properties": {
+    "manifest_id": {"type": "string", "format": "uuid"},
+    "manifest_version": {"const": "1.0.0"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "scope_id": {"type": "string", "minLength": 1},
+    "declared_by": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority_role", "authority_name"],
+      "properties": {
+        "authority_role": {"const": "governance-source-owner"},
+        "authority_name": {"type": "string", "minLength": 1}
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/source"}
+    },
+    "exception_records": {"type": "array", "items": {"type": "object"}},
+    "approval_records": {"type": "array", "items": {"type": "object"}},
+    "manifest_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id", "classification", "source_type", "authority", "repository_uri",
+        "immutable_revision", "path", "line_start", "line_end", "line_fingerprint",
+        "content_hash", "version", "effective_date", "lifecycle_state", "scope",
+        "applicability", "obligations", "required_approvals", "exception_process",
+        "retention_rule", "conflicts"
+      ],
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1},
+        "classification": {"enum": ["authoritative", "advisory", "example", "evidence_only"]},
+        "source_type": {"type": "string", "minLength": 1},
+        "authority": {"type": "string", "minLength": 1},
+        "repository_uri": {"type": "string", "minLength": 1},
+        "immutable_revision": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "minLength": 1},
+        "line_start": {"type": "integer", "minimum": 1},
+        "line_end": {"type": "integer", "minimum": 1},
+        "line_fingerprint": {"$ref": "#/$defs/hash"},
+        "content_hash": {"$ref": "#/$defs/hash"},
+        "version": {"type": "string", "minLength": 1},
+        "effective_date": {"type": "string", "format": "date"},
+        "lifecycle_state": {"enum": ["active", "superseded", "expired", "draft"]},
+        "scope": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "applicability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["determination", "authority_role", "determination_id", "rationale"],
+          "properties": {
+            "determination": {"enum": ["applicable", "not_applicable", "undetermined"]},
+            "authority_role": {"const": "governance-source-owner"},
+            "determination_id": {"type": "string", "minLength": 1},
+            "rationale": {"type": "string", "minLength": 1}
+          }
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["obligation_id", "statement", "obligation_class", "required_evidence"],
+            "properties": {
+              "obligation_id": {"type": "string", "minLength": 1},
+              "statement": {"type": "string", "minLength": 1},
+              "obligation_class": {"enum": ["required", "recommended", "optimization"]},
+              "required_evidence": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+            }
+          }
+        },
+        "required_approvals": {"type": "array", "items": {"type": "string"}},
+        "exception_process": {"type": ["string", "null"]},
+        "retention_rule": {"type": "string", "minLength": 1},
+        "conflicts": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

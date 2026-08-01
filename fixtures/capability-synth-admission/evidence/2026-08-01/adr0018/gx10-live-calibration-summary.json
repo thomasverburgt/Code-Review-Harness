@@ -1,0 +1,22 @@
+{
+  "artifact_hash": "sha256:82c9d93bad5e07484c410d87045e2493f6662a922f0632af0bbe81c4c1e52b8d",
+  "artifact_id": "f69ee1f5-27d0-5dc9-b3cf-db8fce9e5343",
+  "baseline_workflow_changed": false,
+  "candidate_status": "candidate",
+  "designation": "CAP-SYNTH",
+  "evidence_tier": "accepted_live_input_calibration",
+  "fitness_claim": "protocol_lineage_smoke_only",
+  "passed": true,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "eb36ad164330f159cd10378261499d5024ffe7a14c8b2d8068aceebd305d2e4f",
+  "report_changed": false,
+  "scheduled": false,
+  "status": "complete",
+  "suite": "cap-synth-live-single-domain-protocol-calibration",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 3130,
+    "output_tokens": 855
+  }
+}

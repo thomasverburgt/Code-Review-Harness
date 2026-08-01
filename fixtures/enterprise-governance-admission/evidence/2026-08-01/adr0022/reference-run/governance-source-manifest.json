@@ -1,0 +1,56 @@
+{
+  "approval_records": [],
+  "created_at": "2026-08-01T23:30:00Z",
+  "declared_by": {
+    "authority_name": "Project Maintainer Fixture Authority",
+    "authority_role": "governance-source-owner"
+  },
+  "exception_records": [],
+  "manifest_hash": "sha256:5cf5445371b80b99dba5123f6fe888c8435af6c8b43ed57996b614048c507422",
+  "manifest_id": "22000000-0000-4000-8000-000000000001",
+  "manifest_version": "1.0.0",
+  "scope_id": "ENTERPRISE-FIXTURE-001",
+  "sources": [
+    {
+      "applicability": {
+        "authority_role": "governance-source-owner",
+        "determination": "applicable",
+        "determination_id": "GOVAPP-001",
+        "rationale": "The project governance file governs automated agents operating within this harness fixture scope."
+      },
+      "authority": "Project Maintainer",
+      "classification": "authoritative",
+      "conflicts": [],
+      "content_hash": "sha256:114c5ff12372628ef64f1bd43ed80e762e8a4058b48d3cadca5a30c4aedc5f08",
+      "effective_date": "2026-07-30",
+      "exception_process": null,
+      "immutable_revision": "2e5ba23eefced3961d8b76915c314c3681082080",
+      "lifecycle_state": "active",
+      "line_end": 13,
+      "line_fingerprint": "sha256:165bbd9ec42e6e34a93bb6fbea53db1ef188f7bfc18aa701b3ac6823437c010f",
+      "line_start": 13,
+      "obligations": [
+        {
+          "obligation_class": "required",
+          "obligation_id": "GOV-AGENT-AUTH-001",
+          "required_evidence": [
+            "agent authority boundary and execution effect"
+          ],
+          "statement": "Automated agents do not approve pull requests, accept risk, change requirements, grant exceptions, or exercise project authority."
+        }
+      ],
+      "path": "GOVERNANCE.md",
+      "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+      "required_approvals": [
+        "project-maintainer"
+      ],
+      "retention_rule": "retain with architecture decision evidence",
+      "scope": [
+        "ENTERPRISE-FIXTURE-001"
+      ],
+      "source_id": "GOVSRC-HARNESS-001",
+      "source_type": "repository_governance",
+      "version": "repository-revision-2e5ba23"
+    }
+  ]
+}

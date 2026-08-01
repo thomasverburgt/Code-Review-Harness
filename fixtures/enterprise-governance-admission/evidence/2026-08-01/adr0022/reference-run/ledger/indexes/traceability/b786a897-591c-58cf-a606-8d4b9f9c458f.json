@@ -1,0 +1,24 @@
+{
+  "artifact_id": "b786a897-591c-58cf-a606-8d4b9f9c458f",
+  "artifact_type": "enterprise-governance-posture",
+  "children": [
+    "137f1f14-57e8-591c-a75f-aebda63948fa",
+    "a5ada795-db2f-5625-aed9-1b619411be17",
+    "e6a9cbbe-e852-57ce-92fa-302a0d4b8caf"
+  ],
+  "consumers": [
+    "ENT-STRAT-CANDIDATE",
+    "ENT-SYNTH-CANDIDATE"
+  ],
+  "input_refs": [
+    "137f1f14-57e8-591c-a75f-aebda63948fa",
+    "a5ada795-db2f-5625-aed9-1b619411be17",
+    "e6a9cbbe-e852-57ce-92fa-302a0d4b8caf",
+    "governance-source-manifest"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:d20b88c0362b6206cc731588df8c0a5c17a008ab618a697829b277c99f71eb24",
+  "parents": [],
+  "peers": [],
+  "producer_designation": "ENT-GOV"
+}

@@ -5,6 +5,8 @@
 
 **North Star:** Make system-of-systems structure, dependencies, seams, and failure propagation visible enough for responsible enterprise decisions.
 
+**Executable status:** candidate and unscheduled under ADR-0021. The current adjudicated synthetic multi-capability package proves contract mechanics only. The live single-capability GX-10 result proves protocol and lineage handling only, not system-of-systems fitness.
+
 **Authoritative question:** Do participating capabilities form a coherent, resilient, evolvable, and mission-aligned enterprise architecture?
 
 ## Boundary
@@ -22,6 +24,8 @@ Correlate cross-capability interfaces and shared services; identify concentratio
 ## Required outputs
 
 `system_of_systems_views`, `architecture_coherence`, `dependency_topology`, `shared_service_concentration`, `failure_propagation`, `target_state_alignment`, `transition_architecture`, `architecture_debt`, `architecture_findings`, `capa_options`, and `decision_requests`.
+
+The executable candidate additionally binds the exact ENT-EVIDENCE artifact and every named capability artifact by ID and content hash. Its downstream handoff is comparison-only and unscheduled.
 
 ## Measures and consumers
 

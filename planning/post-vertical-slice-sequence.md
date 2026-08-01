@@ -62,29 +62,87 @@ Completion evidence to date:
 - `fixtures/vertical-risk-slice/evidence/canonical-cap-risk-2026-07-31/` records the passing canonical CAP-RISK run against the accepted product artifact: 1,790 output tokens, deterministic capability-risk projection, exact upstream lineage, and human-only risk authority.
 - `fixtures/vertical-risk-slice/evidence/canonical-ent-sysrisk-2026-07-31/` records the passing enterprise increment: deterministic ENT-EVIDENCE replay, strict CAP-RISK/gate binding, 1,633-token live ENT-SYSRISK generation, deterministic enterprise projection, complete lifecycle, and preserved human-only disposition authority.
 
-## Increment 3: Human review and governance interfaces
+## Increment 3: Report distribution and external decision reconciliation
 
 Depends on: Increment 1; may proceed in parallel with late Increment 2 work.
 
+**Status:** Complete for the reference vertical. ADR 0012 was accepted by the project maintainer on 2026-07-31. The previously tested direct in-system decision candidate is superseded and retained only as design evidence. The accepted implementation packages the complete report, controls leadership-review and approved-distribution exports, records external distribution and expert decisions through authenticated administrators, requires independent verification, and keeps all effects record-only. The full five-gate local and GX-10 conformance suites pass.
+
 Implement:
 
-- decision inbox and evidence viewer;
-- immutable human dispositions;
-- risk, exception, CAPA, release, and promotion gates;
+- immutable report package and controlled exports;
+- external leadership distribution-approval attestation;
+- external expert-decision attestation and exact report-item reconciliation;
+- independent records verification;
 - conflict and partial-input presentation;
 - role-based access; and
-- decision due-date, escalation, and aging views.
+- immutable, derived governance-state views.
 
 Exit criteria:
 
-- every agent decision request reaches a named authority;
-- human decisions remain separate linked records;
-- the interface cannot represent recommendations as approvals; and
+- every distributed report is bound to its exact technical sources and approval record;
+- decision-maker, recorder, and verifier identities remain separate;
+- external decisions remain separate linked records with hashed sources;
+- the interface cannot represent recommendations, review exports, or administrative entry as approval; and
 - conflict, confidence, coverage, and evidence limits remain visible.
 
-## Increment 4: Agent and workflow expansion
+Completion evidence:
+
+- `fixtures/vertical-risk-slice/evidence/governance-increment3-report-reconciliation-2026-07-31/` records the passing GX-10 five-gate run, deterministic report/export/attestation chain, independent verification, reconciliation view, and immutable ledger.
+
+## Increment 4: Reproducible evidence localization and expert-review packets
+
+Depends on: Increments 1-3.
+
+**Status:** Complete. ADR 0013 was accepted by the project maintainer on 2026-07-31. The executable evidence-locator and expert-review-packet boundary passes the complete six-gate local and GX-10 suites without changing the ADR-0012 report package or hash.
+
+Implement:
+
+- immutable repository, revision, path, line/section, fingerprint, access, and reproduction locators;
+- explicit evidence bindings for every finding, risk, CAPA, and recommendation;
+- a separately hashed expert-review packet and human-readable evidence annex;
+- safe redaction without loss of source location; and
+- fail-closed reviewability when evidence cannot be reproduced.
+
+Exit criteria:
+
+- every actionable report item resolves to at least one exact `source_located` locator;
+- the approved technical report and package hash remain unchanged;
+- missing, ambiguous, mutable, unsafe, or altered locations fail closed;
+- deterministic packet and annex generation passes local and GX-10 conformance; and
+- the packet cannot express distribution approval, expert disposition, risk acceptance, or change authorization.
+
+Completion evidence:
+
+- `fixtures/vertical-risk-slice/evidence/evidence-locator-increment4-2026-07-31/` retains the deterministic packet, human-readable annex, GX-10 six-gate output, and GX-generated reference archive.
+- Seven actionable report items resolve through explicit bindings to two lineage-preserving evidence identities and one exact `uds-core` source location at commit `329ade01852f9e570d31cb7b19d9979152938c17`, file `docs/getting-started/local-demo/integrate-your-package.mdx`, line 153.
+- Missing, unverified, mutable-revision, path-traversal, reversed-line, changed-hash, incomplete-binding, and altered-direct-reference cases fail closed.
+
+## Increment 5: Agent and workflow expansion
 
 Depends on: Increments 1-3 and calibrated gold packages.
+
+**Status:** In progress. ADR 0014 was accepted by the project maintainer on 2026-07-31, authorizing `PROD-SYNTH` candidate validation and live-model calibration while explicitly withholding baseline scheduling authority. Identity, prompt integrity, executable role schema, gold/negative packages, deterministic replay, and `CAP-RISK` handoff compatibility pass locally and on GX-10. A first live response failed closed on an invented universal-record binding; after adding an explicit runtime allow-list without weakening validation, the second live `qwen3-32b` run produced an accepted candidate artifact. The baseline workflow remains unchanged and a later promotion decision remains the scheduling gate.
+
+Increment 5 evidence to date:
+
+- `fixtures/product-synth-admission/evidence/2026-07-31/` retains the deterministic candidate/handoff package and GX-10 output.
+- `fixtures/product-synth-admission/evidence/2026-07-31/live-calibration/` retains the failed-closed first-attempt summary, successful live artifact, complete output archive, and eight-gate GX-10 transcript.
+- The direct `PROD-SEC -> CAP-RISK` route remains active and is the tested rollback path.
+- ADR 0015 was accepted on 2026-07-31 and authorizes isolated shadow integration before any baseline cutover. Shadow artifacts remain comparison-only and cannot enter report, governance, deployment, or authoritative baseline state.
+- ADR 0015 implementation completed its deterministic and model-backed GX-10 shadow increment. The live comparison is blocked on human adjudication of CAP-RISK semantic differences, so the accepted baseline remains unchanged and no cutover ADR should be proposed until those differences are resolved.
+- ADR 0016 was accepted on 2026-08-01. Its immutable, record-only semantic adjudication packet separates expert semantic judgment from later project-maintainer workflow promotion and keeps cutover blocked pending an external enterprise-risk response.
+- ADR 0017 was accepted and its deterministic `CAP-COORD` increment completed on 2026-08-01. Exact-set validation, immutable manifest/ledger generation, traceability, conflict preservation, partial-input blocking, and CAP-SYNTH dispatch gating pass the structural validator and all 39 tests locally and on GX-10. The initial `CAP-RISK`-only evidence is mechanical calibration, not multi-domain synthesis fitness; `CAP-SYNTH` remains planned and unscheduled.
+- The next capability-layer increment is `CAP-SYNTH` candidate admission: identity/specification, prompt, role schema, rubric, deterministic projection, gold/negative packages, exact coordinator-manifest binding, enterprise-consumer compatibility, and GX-10 calibration. It must not schedule the candidate or alter the accepted direct enterprise/report path.
+- ADR 0018 was accepted and implemented on 2026-08-01. CAP-SYNTH candidate identity, prompt, schema, rubric, projection, adjudicated multi-domain fixtures, negative cases, exact CAP-COORD binding, comparison-only enterprise handoff, and isolated live calibration pass all 47 tests locally and on GX-10. The live `CAP-RISK`-only Qwen3-32B run passed as `protocol_lineage_smoke_only`; CAP-SYNTH remains unscheduled.
+- ADR 0019 was accepted and implemented on 2026-08-01. CAP-REQ candidate contracts, immutable source/locator binding, honest zero-population semantics, negative cases, CAP-COORD compatibility, and live Qwen3-32B calibration pass all 55 tests locally and on GX-10. The technically valid artifact remains pending human requirements acceptance; CAP-SYNTH remains unscheduled.
+- ADR 0020 was accepted on 2026-08-01. The increment implements an immutable review packet bound to the retained live GX-10 CAP-REQ artifact, an external requirements-authority response, independent record verification, and deterministic rollback-safe eligibility. No external disposition has been supplied, so CAP-REQ remains blocked from accepted multi-domain use and CAP-SYNTH remains unscheduled.
+- ADR 0021 was accepted and implemented on 2026-08-01. Enterprise registry status now matches executable reality: `ENT-EVIDENCE` and `ENT-SYSRISK` remain baseline, `ENT-ARCH` is candidate, and the other prose-only enterprise roles are planned. Exact gate/input binding, strict schema/projection controls, negative cases, deterministic two-capability contract fixtures, and live single-capability Qwen3-32B protocol calibration pass all 72 tests locally and on GX-10. ENT-ARCH remains unscheduled, the ADR-0020 gate was not bypassed, and accepted workflow/report state is unchanged.
+- ADR 0022 was accepted and implemented on 2026-08-01. `ENT-GOV` is now an isolated, unscheduled candidate whose sole obligation entry point is a content-addressed governance-source manifest controlled by a registered human authority. Exact source, applicability, gate, capability, exception, and approval bindings; strict schemas; complete obligation-to-capability matrices; fail-closed negative cases; deterministic replay; and live single-capability Qwen3-32B source/protocol calibration pass all 82 tests locally and on GX-10. Missing evidence remains `insufficient_evidence`, no compliance or exception authority was created, and the accepted baseline, report, ADR-0020 state, CAP-SYNTH schedule, and ENT-ARCH schedule remain unchanged.
+- ADR 0023 was accepted and implemented on 2026-08-01. `ENT-STRAT` is now an isolated, unscheduled candidate behind human-controlled strategic-objective and scoring-method manifests. Exact authority, objective, method, gate, posture, evidence-tier, missingness, and weight bindings; strict schemas; fail-closed mutations; deterministic replay; and live single-domain Qwen3-32B protocol calibration pass all 92 tests locally and on GX-10. The authorized method prohibits a composite score, missing evidence is not imputed, and accepted workflow, report, ADR-0020 state, ENT-ARCH schedule, and ENT-GOV schedule remain unchanged.
+- ADR 0024 was accepted and implemented on 2026-08-01. `ENT-SYNTH` is now an isolated, unscheduled candidate behind an exact tiered synthesis-input manifest. Domain-role snapshots and contribution maps preserve source authority; candidate and fixture inputs remain comparison-only; report packaging, distribution approval, expert decisions, and administrative recording remain separate. All 102 tests pass locally and on GX-10, and the live Qwen3-32B mixed-tier run passed as protocol/lineage evidence only without changing the accepted report, distribution state machine, baseline, or candidate schedules.
+- ADR 0025 was accepted and implemented on 2026-08-01. The deterministic enterprise-shadow readiness manifest records six exact prerequisites and is `blocked_as_designed`: ADR-0016 and ADR-0020 await verified external decisions, while ENT-ARCH, ENT-GOV, ENT-STRAT, and ENT-SYNTH lack accepted-live multi-domain semantic evaluations. Zero prerequisites are satisfied, no protocol or fixture evidence is promoted, rollback is explicit, and the accepted route remains unchanged. All 110 tests and structural validation pass locally and on GX-10.
+- ADR 0026 was accepted and implemented on 2026-08-01. The immutable human readiness action dossier binds all six prerequisites to the exact ADR-0025 manifest. Two existing packets await separate external responses; four domain evidence-gap packets remain `not_ready_for_review` and reject premature responses. Dossier-level and batch approval are prohibited, independent verification remains mandatory, and no readiness, scheduling, report, or deployment state changes. All 118 tests and structural validation pass locally and on GX-10.
 
 Sequence:
 
@@ -101,7 +159,7 @@ Exit criteria for each added role:
 - no regression in protected invariants; and
 - downstream compatibility demonstrated before scheduling promotion.
 
-## Increment 5: External integrations
+## Increment 6: External integrations
 
 Depends on: stable artifacts, execution ledger, human decisions, and operational security controls.
 
@@ -120,9 +178,9 @@ Exit criteria:
 - credentials and restricted evidence remain least privilege; and
 - external outages preserve recoverable workflow state.
 
-## Increment 6: Production deployment and scaling
+## Increment 7: Production deployment and scaling
 
-Depends on: Increments 1-5 and approved deployment ADRs.
+Depends on: Increments 1-6 and approved deployment ADRs.
 
 Implement:
 

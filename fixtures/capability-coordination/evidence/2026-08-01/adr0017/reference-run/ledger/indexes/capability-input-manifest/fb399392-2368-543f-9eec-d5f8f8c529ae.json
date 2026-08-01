@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "capability-input-manifest",
+  "logical_path": "capability-input-manifests/fb399392-2368-543f-9eec-d5f8f8c529ae.json",
+  "object_hash": "sha256:ba163f6773c29762130a4fd4655103a7c66e5d17d79903ef8c75aba0aac242ee",
+  "record_id": "fb399392-2368-543f-9eec-d5f8f8c529ae",
+  "retention_class": "architecture-evidence"
+}

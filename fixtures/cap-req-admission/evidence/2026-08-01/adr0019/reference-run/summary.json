@@ -1,0 +1,19 @@
+{
+  "acceptance_state": "pending_human_requirements_acceptance",
+  "adr": "ADR-0019",
+  "artifact_hash": "sha256:998a8e1d08169fb0151c9866453dca30500c2e0ba9bd2c7e83f26667530e1fa0",
+  "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+  "candidate_status": "candidate",
+  "cap_coord_compatible": true,
+  "cap_synth_scheduled": false,
+  "declared_requirements": 0,
+  "designation": "CAP-REQ",
+  "ledger_hash": "sha256:6f7308eabe8d55bb8de3493d2fdf608c1ea531f33d7a86ade906b27bbb6d5fc9",
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "requirement_records": 0,
+  "scheduled": false,
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "traceability_gap": "GAP-REQ-001"
+}

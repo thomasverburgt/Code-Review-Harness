@@ -1,0 +1,55 @@
+{
+  "created_at": "2026-08-02T00:15:00Z",
+  "gate_artifact_hash": "sha256:01685da3524233476e9a243da5daf4b008f8cd9f858f0999ea59cc1079bfc170",
+  "gate_artifact_id": "44444444-4444-4444-8444-444444444444",
+  "inputs": [
+    {
+      "artifact_id": "55555555-5555-4555-8555-555555555555",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:f7faa7b6b5f5dea3f3798413be14ee1017492849c85860240ce6dfa90a500b46",
+      "designation": "ENT-SYSRISK",
+      "evidence_tier": "adjudicated_fixture",
+      "freshness": "fresh",
+      "permitted_use": "comparison_only",
+      "schema_version": "1.0.0"
+    },
+    {
+      "artifact_id": "317c84a1-5b31-58b2-8c42-7ae55a83f62a",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:a8638f6793134dc7b22ce9c95d7b69d9e4de66dc8e46a21c36fa8aa1fb2c3cd6",
+      "designation": "ENT-ARCH",
+      "evidence_tier": "adjudicated_fixture",
+      "freshness": "fresh",
+      "permitted_use": "comparison_only",
+      "schema_version": "1.0.0"
+    },
+    {
+      "artifact_id": "b786a897-591c-58cf-a606-8d4b9f9c458f",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:d20b88c0362b6206cc731588df8c0a5c17a008ab618a697829b277c99f71eb24",
+      "designation": "ENT-GOV",
+      "evidence_tier": "adjudicated_fixture",
+      "freshness": "fresh",
+      "permitted_use": "comparison_only",
+      "schema_version": "1.0.0"
+    },
+    {
+      "artifact_id": "f72d3263-d6c5-5518-8000-794fd69f89c9",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:c55135ff29ac61aff7c2779ad698766f4850fd6807dea9a9b24ac5ea7b30deed",
+      "designation": "ENT-STRAT",
+      "evidence_tier": "adjudicated_fixture",
+      "freshness": "fresh",
+      "permitted_use": "comparison_only",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "manifest_hash": "sha256:b5d9cc9cc9f9299749dc0d3bb6b81b135c5698fcfe399356b0b3f728e3481dd6",
+  "manifest_id": "10d43570-87f1-5654-9324-dc6fa296af24",
+  "manifest_version": "1.0.0",
+  "scope_id": "ENTERPRISE-FIXTURE-001"
+}

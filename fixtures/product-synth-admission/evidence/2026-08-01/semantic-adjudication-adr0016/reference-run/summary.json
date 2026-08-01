@@ -1,0 +1,17 @@
+{
+  "cutover_state": "blocked_pending_human_adjudication",
+  "delta_count": 7,
+  "effect": "review_request_only",
+  "ledger_ref": {
+    "classification": "internal",
+    "family": "semantic-adjudication-request",
+    "logical_path": "semantic-adjudication/047813b4-5125-56f0-9e5c-81803cd078e2.json",
+    "object_hash": "sha256:a02ec178379e0176bf6be1f6cd6a67c54869257ec7a83fb4eaf3e06af6216abb",
+    "record_id": "047813b4-5125-56f0-9e5c-81803cd078e2",
+    "retention_class": "architecture-evidence"
+  },
+  "packet_hash": "sha256:3d87fb628ee30a280c60fc564ba9b365b6225a02119654c1059ef300fa5e9810",
+  "packet_id": "047813b4-5125-56f0-9e5c-81803cd078e2",
+  "required_decision_authority": "enterprise-risk-acceptance-authority",
+  "status": "awaiting_human_adjudication"
+}

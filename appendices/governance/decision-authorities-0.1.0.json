@@ -1,0 +1,79 @@
+{
+  "$schema": "../schemas/decision-authority-registry.schema.json",
+  "registry_id": "REPORT-GOVERNANCE-AUTHORITY-REGISTRY",
+  "registry_version": "0.5.0",
+  "authorities": [
+    {
+      "authority_role": "senior-leadership-distribution-authority",
+      "authority_kind": "distribution_authority",
+      "human_subject_ids": ["HUMAN-SENIOR-LEADER-001"],
+      "allowed_actions": ["approve_report_distribution"],
+      "decision_types": [],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001"],
+      "assurance_levels": ["fixture-mfa"]
+    },
+    {
+      "authority_role": "enterprise-risk-acceptance-authority",
+      "authority_kind": "expert_decision_authority",
+      "human_subject_ids": ["HUMAN-ENTERPRISE-RISK-001"],
+      "allowed_actions": ["make_external_decision"],
+      "decision_types": ["risk_disposition", "risk_disposition_and_treatment_authorization", "treatment_authorization", "capa_ownership"],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001"],
+      "assurance_levels": ["external-authoritative-source"]
+    },
+    {
+      "authority_role": "requirements-acceptance-authority",
+      "authority_kind": "expert_decision_authority",
+      "human_subject_ids": ["HUMAN-REQUIREMENTS-001"],
+      "allowed_actions": ["accept_capability_requirements_review"],
+      "decision_types": ["capability_requirements_review_disposition"],
+      "scope_ids": ["UDS-CORE-IDENTITY-ACCESS-CALIBRATION"],
+      "assurance_levels": ["external-authoritative-source"]
+    },
+    {
+      "authority_role": "governance-source-owner",
+      "authority_kind": "expert_decision_authority",
+      "human_subject_ids": ["HUMAN-PROJECT-MAINTAINER-001"],
+      "allowed_actions": ["declare_governance_source_and_applicability"],
+      "decision_types": ["governance_source_classification", "governance_applicability"],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001"],
+      "assurance_levels": ["repository-authoritative-source"]
+    },
+    {
+      "authority_role": "enterprise-strategy-authority",
+      "authority_kind": "expert_decision_authority",
+      "human_subject_ids": ["HUMAN-ENTERPRISE-STRATEGY-001"],
+      "allowed_actions": ["declare_strategic_objectives"],
+      "decision_types": ["strategic_objective_definition", "objective_applicability"],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001"],
+      "assurance_levels": ["external-authoritative-source"]
+    },
+    {
+      "authority_role": "scoring-method-owner",
+      "authority_kind": "expert_decision_authority",
+      "human_subject_ids": ["HUMAN-SCORING-METHOD-001"],
+      "allowed_actions": ["declare_strategic_scoring_method"],
+      "decision_types": ["normalization", "weighting", "aggregation", "missingness", "sensitivity", "threshold_context"],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001"],
+      "assurance_levels": ["external-authoritative-source"]
+    },
+    {
+      "authority_role": "governance-records-administrator",
+      "authority_kind": "records_administrator",
+      "human_subject_ids": ["ADMIN-GOVERNANCE-001"],
+      "allowed_actions": ["record_distribution_approval", "record_external_decision"],
+      "decision_types": [],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001"],
+      "assurance_levels": ["fixture-mfa"]
+    },
+    {
+      "authority_role": "governance-records-verifier",
+      "authority_kind": "records_verifier",
+      "human_subject_ids": ["ADMIN-GOVERNANCE-VERIFY-001"],
+      "allowed_actions": ["verify_distribution_approval", "verify_external_decision"],
+      "decision_types": [],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001"],
+      "assurance_levels": ["fixture-mfa"]
+    }
+  ]
+}

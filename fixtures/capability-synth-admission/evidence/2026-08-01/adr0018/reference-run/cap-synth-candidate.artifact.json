@@ -1,0 +1,298 @@
+{
+  "artifact": {
+    "artifact_id": "f4c6873d-a91b-5dfb-83a7-5742c5b13c10",
+    "artifact_type": "capability-synthesis-posture",
+    "created_at": "2026-08-01T20:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [
+        "a24d93ba-181b-5f68-b159-402ee65e937b",
+        "a5ada795-db2f-5625-aed9-1b619411be17"
+      ],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [],
+  "confidence": {
+    "assessment": 0.85,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+        "confidence": 0.85
+      },
+      {
+        "artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b",
+        "confidence": 0.9
+      }
+    ],
+    "review": 1.0
+  },
+  "conflicts": [],
+  "consumers": [
+    "ENT-SYNTH-CANDIDATE-COMPARISON"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 0
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-CAPSYNTH-001",
+      "question": "Should this candidate proceed to a later promotion review after accepted live multi-domain evidence exists?",
+      "required_authority": "project-maintainer"
+    }
+  ],
+  "execution": {
+    "evidence_tier": "adjudicated_multi_domain_contract_fixture",
+    "execution_id": "eead4c19-d525-5f0e-88ec-e6dd3de3ef75",
+    "model": "deterministic-reference-agent",
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "capability": {
+      "capability_confidence_score": 0.85,
+      "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+      "capability_risk_posture": {
+        "decision_authority": "human",
+        "state": "undisposed"
+      },
+      "cross_product_interface_state": {},
+      "decision_conflicts": [],
+      "enterprise_escalations": [
+        {
+          "authority": "human",
+          "escalation_id": "DC-001"
+        },
+        {
+          "authority": "human",
+          "escalation_id": "DC-REQ-001"
+        }
+      ],
+      "human_centered_systems_evaluation": {},
+      "mission_effectiveness_evidence": [],
+      "mission_thread": {},
+      "operational_readiness": {
+        "state": "human_decision_required"
+      },
+      "participating_products": [
+        "PRODUCT-ALPHA"
+      ],
+      "requirement_traceability": {},
+      "role": {
+        "capability_posture": {
+          "advisory_only": true,
+          "limitations": [
+            "Candidate comparison only",
+            "Evidence tier does not authorize scheduling"
+          ],
+          "rationale": "Preserved inputs contain unresolved decision requests.",
+          "state": "human_decision_required"
+        },
+        "confidence_reconciliation": {
+          "inputs": [
+            0.85,
+            0.9
+          ],
+          "method": "preserve_inputs_and_bounded_minimum",
+          "result": 0.85,
+          "uncertainty": [
+            "Unlike domain confidence values are not averaged"
+          ]
+        },
+        "decision_authority": "human",
+        "derived_capability_assertions": [
+          {
+            "alternatives": [
+              "Authoritative classification may resolve both records"
+            ],
+            "assertion_id": "DERIVED-CAPSYNTH-001",
+            "assumptions": [
+              "The fixture source binding remains current"
+            ],
+            "confidence": 0.85,
+            "contributing_artifact_ids": [
+              "a24d93ba-181b-5f68-b159-402ee65e937b",
+              "a5ada795-db2f-5625-aed9-1b619411be17"
+            ],
+            "contributing_record_ids": [
+              "FINDING-001",
+              "FINDING-REQ-001"
+            ],
+            "derivation_logic": "The preserved risk and requirement findings cite the same source evidence and unresolved classification context.",
+            "statement": "Risk disposition and requirement closure depend on the same unresolved classification decision.",
+            "uncertainty": [
+              "No authoritative classification decision is present"
+            ]
+          }
+        ],
+        "designation": "CAP-SYNTH",
+        "enterprise_handoff": {
+          "artifact_id": "f4c6873d-a91b-5dfb-83a7-5742c5b13c10",
+          "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+          "decision_request_ids": [
+            "DC-001",
+            "DC-REQ-001"
+          ],
+          "derived_assertion_ids": [
+            "DERIVED-CAPSYNTH-001"
+          ],
+          "handoff_state": "comparison_only",
+          "intended_consumers": [
+            "ENT-SYNTH-CANDIDATE-COMPARISON"
+          ],
+          "preserved_record_ids": [
+            "DC-001",
+            "DC-REQ-001",
+            "FINDING-001",
+            "FINDING-REQ-001",
+            "RISK-001"
+          ],
+          "unresolved_conflict_ids": []
+        },
+        "evidence_tier": "adjudicated_multi_domain_contract_fixture",
+        "fitness_claim": "contract_fixture_only",
+        "preserved_child_assertions": [
+          {
+            "evidence_refs": [],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "decision_request",
+            "source_artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b",
+            "source_record_id": "DC-REQ-001"
+          },
+          {
+            "evidence_refs": [
+              "UDS-0001"
+            ],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "finding",
+            "source_artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b",
+            "source_record_id": "FINDING-REQ-001"
+          },
+          {
+            "evidence_refs": [],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "decision_request",
+            "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+            "source_record_id": "DC-001"
+          },
+          {
+            "evidence_refs": [
+              "UDS-0001"
+            ],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "finding",
+            "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+            "source_record_id": "FINDING-001"
+          },
+          {
+            "evidence_refs": [
+              "1e27ed34-d9a5-5309-a876-ab02af8b7d13"
+            ],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "risk",
+            "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+            "source_record_id": "RISK-001"
+          }
+        ],
+        "synthesis_basis": {
+          "completeness_state": "complete",
+          "coordinator_manifest_hash": "sha256:bda18fed0d3bfb0bfcbcca7baa49f7be24cd1ff45c0269758b41e04d8fa10001",
+          "coordinator_manifest_id": "02ac63d7-a092-532e-a7bf-18bc2381bf0b",
+          "expected_designations": [
+            "CAP-REQ",
+            "CAP-RISK"
+          ],
+          "received_artifact_ids": [
+            "a24d93ba-181b-5f68-b159-402ee65e937b",
+            "a5ada795-db2f-5625-aed9-1b619411be17"
+          ]
+        }
+      },
+      "technical_confidence_rollup": {
+        "inputs": [
+          0.85,
+          0.9
+        ],
+        "method": "preserve_inputs_and_bounded_minimum",
+        "result": 0.85,
+        "uncertainty": [
+          "Unlike domain confidence values are not averaged"
+        ]
+      }
+    }
+  },
+  "findings": [],
+  "identity": {
+    "agent_uuid": "ca95161d-d7dc-40b0-b233-fda505b18afe",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "CAP-SYNTH",
+    "display_name": "Capability Synthesis Lead"
+  },
+  "inputs": [
+    {
+      "artifact_id": "a24d93ba-181b-5f68-b159-402ee65e937b",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:e819c373eb9d5d7020b3ea48de6b773f13698953b9251750fbd03083f1aa56f0"
+    },
+    {
+      "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:b56be7afa96e29b2106b8faad851688844b1bcfdbb9b706c3d1ffcbfd57ed783"
+    }
+  ],
+  "insights": [
+    {
+      "evidence_refs": [
+        "02ac63d7-a092-532e-a7bf-18bc2381bf0b"
+      ],
+      "insight_id": "INSIGHT-CAPSYNTH-001",
+      "statement": "Candidate evidence tier constrains all fitness claims."
+    }
+  ],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:7d50c908fb85f6e87cc07b6d61321e7411e3585bc454bf426d412ddf6f6082b0",
+    "output_hash": "sha256:a1972d33092076cdd87b79658c8853fb5f05d892b5ca2816c701271fee997d7b",
+    "retention_class": "candidate-test",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "Candidate comparison only",
+      "Evidence tier does not authorize scheduling"
+    ],
+    "method": "preserve-correlate-project"
+  },
+  "observations": [],
+  "patterns": [],
+  "scope": {
+    "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+    "decision_context": "candidate_admission",
+    "excluded": [
+      "baseline scheduling",
+      "reports",
+      "governance",
+      "deployment"
+    ],
+    "included": [
+      "CAP-REQ",
+      "CAP-RISK"
+    ]
+  }
+}

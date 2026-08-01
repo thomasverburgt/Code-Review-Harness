@@ -1,0 +1,20 @@
+{
+  "manifest_id": "22000000-0000-4000-8000-000000000001",
+  "manifest_version": "1.0.0",
+  "created_at": "2026-08-01T23:30:00Z",
+  "scope_id": "ENTERPRISE-FIXTURE-001",
+  "declared_by": {"authority_role": "governance-source-owner", "authority_name": "Project Maintainer Fixture Authority"},
+  "sources": [{
+    "source_id": "GOVSRC-HARNESS-001", "classification": "authoritative", "source_type": "repository_governance",
+    "authority": "Project Maintainer", "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+    "immutable_revision": "2e5ba23eefced3961d8b76915c314c3681082080", "path": "GOVERNANCE.md", "line_start": 13, "line_end": 13,
+    "line_fingerprint": "sha256:165bbd9ec42e6e34a93bb6fbea53db1ef188f7bfc18aa701b3ac6823437c010f",
+    "content_hash": "sha256:114c5ff12372628ef64f1bd43ed80e762e8a4058b48d3cadca5a30c4aedc5f08",
+    "version": "repository-revision-2e5ba23", "effective_date": "2026-07-30", "lifecycle_state": "active", "scope": ["ENTERPRISE-FIXTURE-001"],
+    "applicability": {"determination": "applicable", "authority_role": "governance-source-owner", "determination_id": "GOVAPP-001", "rationale": "The project governance file governs automated agents operating within this harness fixture scope."},
+    "obligations": [{"obligation_id": "GOV-AGENT-AUTH-001", "statement": "Automated agents do not approve pull requests, accept risk, change requirements, grant exceptions, or exercise project authority.", "obligation_class": "required", "required_evidence": ["agent authority boundary and execution effect"]}],
+    "required_approvals": ["project-maintainer"], "exception_process": null, "retention_rule": "retain with architecture decision evidence", "conflicts": []
+  }],
+  "exception_records": [], "approval_records": [],
+  "manifest_hash": "sha256:5cf5445371b80b99dba5123f6fe888c8435af6c8b43ed57996b614048c507422"
+}

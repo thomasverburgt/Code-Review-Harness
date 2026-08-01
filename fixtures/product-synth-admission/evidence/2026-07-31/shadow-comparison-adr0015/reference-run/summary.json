@@ -1,0 +1,31 @@
+{
+  "authority_effect": "comparison_only",
+  "baseline_workflow_hash_after": "sha256:d46aea3fb8e65fc01340ee715c4fed2b8151e2be11b6355ef50da67d799f7715",
+  "baseline_workflow_hash_before": "sha256:d46aea3fb8e65fc01340ee715c4fed2b8151e2be11b6355ef50da67d799f7715",
+  "comparison_id": "9b47249b-1f6a-5b6a-ab66-f91f597d7b99",
+  "ledger_namespace": "shadow/adr-0015",
+  "ledger_refs": {
+    "artifact": {
+      "classification": "internal",
+      "family": "shadow-artifact",
+      "logical_path": "shadow/adr-0015/artifacts/445fb7f4-c7f3-5635-9097-fdc77a1e022d.json",
+      "object_hash": "sha256:1edb0ba2536befcdb307d50e65ff4b38408b7c588fcb944eb0cc4fb7a9d5efb8",
+      "record_id": "445fb7f4-c7f3-5635-9097-fdc77a1e022d",
+      "retention_class": "shadow-comparison"
+    },
+    "comparison": {
+      "classification": "internal",
+      "family": "shadow-comparison",
+      "logical_path": "shadow/adr-0015/comparisons/9b47249b-1f6a-5b6a-ab66-f91f597d7b99.json",
+      "object_hash": "sha256:b5a17841aacbc72bb82e4e993645afc34902052afc218bd26741bec32bfd7bed",
+      "record_id": "9b47249b-1f6a-5b6a-ab66-f91f597d7b99",
+      "retention_class": "shadow-comparison"
+    }
+  },
+  "report_hash_after": "sha256:7f920bfd1f8708a903a9282dd592edf7e8866a2ab3be20817312668e93f060e7",
+  "report_hash_before": "sha256:7f920bfd1f8708a903a9282dd592edf7e8866a2ab3be20817312668e93f060e7",
+  "semantic_state": "equivalent",
+  "shadow_cap_risk_artifact_id": "445fb7f4-c7f3-5635-9097-fdc77a1e022d",
+  "status": "passed",
+  "workflow_id": "WF-PROD-SYNTH-CAP-RISK-SHADOW-001"
+}

@@ -35,7 +35,7 @@ The machine-authoritative identity registry is [agent-identities.json](agent-ide
 
 | Designation | Agent | Status | Authoritative question |
 |---|---|---|---|
-| `PROD-SYNTH` | Product Synthesis Lead | planned | What coherent engineering state follows from product specialist reviews? |
+| `PROD-SYNTH` | Product Synthesis Lead | candidate | What coherent engineering state follows from product specialist reviews? |
 | `PROD-SEC` | Product Security Synthesizer | planned | What integrated product security posture follows from specialist evidence? |
 | `PROD-ARCH` | Product Architecture Synthesizer | planned | Does the product coherently realize approved architecture and intent? |
 | `PROD-LINT` | Product Quality Synthesizer | planned | What maintainability and code-quality posture follows from product evidence? |
@@ -48,30 +48,30 @@ The machine-authoritative identity registry is [agent-identities.json](agent-ide
 | `CAP-MISSION` | Mission Thread Analysis Agent | baseline | Can the documented mission thread execute end to end? |
 | `CAP-HCD` | Human-Centered Design Evaluator | baseline | Can intended users execute the mission effectively and safely? |
 | `CAP-RISK` | Capability Risk Reviewer | baseline | What emergent risks exist because products operate together? |
-| `CAP-REQ` | Requirements Traceability Reviewer | baseline | Is each requirement supported by objective, traceable evidence? |
+| `CAP-REQ` | Requirements Traceability Reviewer | candidate | Is each requirement supported by objective, traceable evidence? |
 | `CAP-ARCH` | Capability Architecture Reviewer | baseline | Is the capability a coherent, resilient, mission-aligned solution? |
 | `CAP-TRADE` | Capability Trade-Study Reviewer | baseline | What tradeoffs and uncertainty distinguish the alternatives? |
 | `CAP-GOV` | Capability Governance Reviewer | baseline | What obligations, exceptions, and approval gaps require human action? |
 | `CAP-PROGRESS` | Capability Progress and Readiness Reviewer | baseline | Is capability readiness converging on intended mission value? |
-| `CAP-COORD` | Capability Coordinator | baseline | What traceable capability assessment follows from all reviews? |
-| `CAP-SYNTH` | Capability Synthesis Lead | planned | Do products collectively deliver the intended capability? |
+| `CAP-COORD` | Deterministic Capability Coordinator | baseline | Is the declared capability-review input set exact, valid, complete, traceable, and eligible for synthesis dispatch? |
+| `CAP-SYNTH` | Capability Synthesis Lead | candidate | What explicitly sourced capability posture follows from a validated coordinator manifest and its exact immutable inputs? |
 
 ## Enterprise layer
 
 | Designation | Agent | Status | Authoritative question |
 |---|---|---|---|
 | `ENT-EVIDENCE` | Evidence Validation Gate | baseline | Is the enterprise input set fit for the requested review? |
-| `ENT-ARCH` | Systems Architecture Reviewer | baseline | Do capabilities form a coherent enterprise architecture? |
+| `ENT-ARCH` | Systems Architecture Reviewer | candidate | Do capabilities form a coherent enterprise architecture? |
 | `ENT-SYSRISK` | Systemic Risk Reviewer | baseline | What risks emerge across capabilities? |
-| `ENT-GOV` | Enterprise Governance Reviewer | baseline | Are governance obligations consistently satisfied? |
-| `ENT-STRAT` | Strategic Scoring Agent | baseline | What strategic confidence does the evidence support? |
-| `ENT-PORTFOLIO` | Portfolio Analysis Agent | baseline | Where are portfolio duplication, concentration, and gaps? |
-| `ENT-ARCHSTRAT` | Architecture Strategy Agent | baseline | Does architecture trajectory converge on approved target states? |
-| `ENT-MATURITY` | Maturity Evaluator | baseline | What maturity is demonstrated, and where does it constrain outcomes? |
-| `ENT-TECHDEBT` | Technical Debt Prioritizer | baseline | Which debt conditions most threaten enterprise outcomes? |
-| `ENT-MODERNIZE` | Investment and Modernization Advisor | baseline | What modernization options and tradeoffs are evidence-supported? |
-| `ENT-LEARN` | Learning and Metrics Agent | baseline | What do outcomes show about agent quality and drift? |
-| `ENT-SYNTH` | Enterprise Synthesis Agent | baseline | What coherent enterprise posture follows from all assessments? |
+| `ENT-GOV` | Enterprise Governance Reviewer | candidate | Are governance obligations consistently satisfied? |
+| `ENT-STRAT` | Strategic Scoring Agent | candidate | What strategic confidence does the evidence support? |
+| `ENT-PORTFOLIO` | Portfolio Analysis Agent | planned | Where are portfolio duplication, concentration, and gaps? |
+| `ENT-ARCHSTRAT` | Architecture Strategy Agent | planned | Does architecture trajectory converge on approved target states? |
+| `ENT-MATURITY` | Maturity Evaluator | planned | What maturity is demonstrated, and where does it constrain outcomes? |
+| `ENT-TECHDEBT` | Technical Debt Prioritizer | planned | Which debt conditions most threaten enterprise outcomes? |
+| `ENT-MODERNIZE` | Investment and Modernization Advisor | planned | What modernization options and tradeoffs are evidence-supported? |
+| `ENT-LEARN` | Learning and Metrics Agent | planned | What do outcomes show about agent quality and drift? |
+| `ENT-SYNTH` | Enterprise Synthesis Agent | candidate | What coherent enterprise posture follows from all assessments? |
 
 ## Work and orchestration layers
 

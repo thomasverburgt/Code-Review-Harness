@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/governance-record-verification.schema.json",
+  "title": "Independent Governance Record Verification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verification_record_id", "target_record_id", "target_record_hash", "target_record_type", "verified_by", "source_binding_state", "authority_binding_state", "verification_state", "verified_at", "effect"],
+  "properties": {
+    "verification_record_id": {"type": "string", "format": "uuid"},
+    "target_record_id": {"type": "string", "format": "uuid"},
+    "target_record_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "target_record_type": {"enum": ["distribution_approval", "external_decision"]},
+    "verified_by": {"$ref": "#/$defs/authenticatedActor"},
+    "source_binding_state": {"enum": ["passed", "failed"]},
+    "authority_binding_state": {"enum": ["passed", "failed"]},
+    "verification_state": {"enum": ["verified", "rejected"]},
+    "verified_at": {"type": "string", "format": "date-time"},
+    "effect": {"const": "record_only"}
+  },
+  "$defs": {
+    "authenticatedActor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["actor_type", "subject_id", "authority_role", "authentication_provider", "assurance_level", "session_id"],
+      "properties": {"actor_type": {"const": "human"}, "subject_id": {"type": "string", "minLength": 1}, "authority_role": {"type": "string", "minLength": 1}, "authentication_provider": {"type": "string", "minLength": 1}, "assurance_level": {"type": "string", "minLength": 1}, "session_id": {"type": "string", "minLength": 1}}
+    }
+  }
+}

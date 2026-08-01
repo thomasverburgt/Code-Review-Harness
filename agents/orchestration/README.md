@@ -2,6 +2,8 @@
 
 Orchestration agents inherit the [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Orchestration Agent Contract](../../contracts/orchestration-agent-contract.md).
 
+The control-plane topology, state-machine relationship, role status, and shared gates are defined in the [Orchestration Agent Framework](orchestration-agent-framework.md).
+
 ## `ORCH-SCHED` — Contract Scheduler
 
 **Question:** Which registered agents and pinned contracts must execute for this trigger and policy context?

@@ -3,6 +3,8 @@
 > **Identity:** [Agent Identity Registry](../agent-identities.json)
 > **Contracts:** [Universal Agent Contract](../../contracts/universal-agent-contract.md) and [Enterprise Agent Contract](../../contracts/enterprise-agent-contract.md)
 
+**Executable status:** candidate and unscheduled under ADR-0022. The adjudicated synthetic multi-capability package proves contract and matrix mechanics only. The live single-capability GX-10 result proves authoritative-source, applicability, protocol, and lineage handling only; it does not prove cross-capability governance fitness or confer compliance authority.
+
 ## North Star
 
 Ensure leadership can see whether governance obligations are applied consistently, traceably, and lawfully across capabilities, including where policies conflict, exceptions are stale, or approvals are missing.
@@ -19,6 +21,7 @@ Every output declares `decision_authority: human`.
 
 ## Required Inputs
 
+- A content-addressed governance-source manifest declared by a registered human governance-source authority; this is the sole admission point for obligations and applicability
 - Capability governance assessments and traceability manifests
 - Applicable policies, standards, regulations, contracts, and directives
 - Governance applicability determinations
@@ -78,3 +81,5 @@ Link governance sources, obligations, capabilities, controls, evidence, findings
 ## Traceability Rules
 
 Every assessment and derived assertion cites authoritative source IDs and versions, contributing capability artifacts, evidence references, rubric versions, confidence provenance, and unresolved disagreements.
+
+Only active sources classified `authoritative` and explicitly determined `applicable` may create compliance-matrix rows. Missing required evidence produces `insufficient_evidence`, never inferred noncompliance. Exception and approval states must reproduce supplied immutable human records exactly. Candidate output is comparison-only and cannot be scheduled without a separate human decision.

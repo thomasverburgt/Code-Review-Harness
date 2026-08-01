@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "semantic-adjudication-request",
+  "logical_path": "semantic-adjudication/047813b4-5125-56f0-9e5c-81803cd078e2.json",
+  "object_hash": "sha256:a02ec178379e0176bf6be1f6cd6a67c54869257ec7a83fb4eaf3e06af6216abb",
+  "record_id": "047813b4-5125-56f0-9e5c-81803cd078e2",
+  "retention_class": "architecture-evidence"
+}

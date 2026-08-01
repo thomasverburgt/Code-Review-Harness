@@ -1,0 +1,25 @@
+{
+  "accepted_response_allowed": false,
+  "current_evidence": {
+    "content_hash": "sha256:c942d8fe9a16dfbb5d5b0ee62a50a3fbd49f7ce8be345e1b23b283d744e90991",
+    "evidence_tier": "protocol_smoke_only",
+    "path": "fixtures/enterprise-arch-admission/evidence/2026-08-01/adr0021/gx10-live-calibration.tar.gz"
+  },
+  "decision_authority": "human",
+  "designation": "ENT-ARCH",
+  "effect": "evidence_gap_notice_only",
+  "generated_at": "2026-08-02T00:45:00Z",
+  "missing_requirements": [
+    "accepted-live multi-domain input set",
+    "independent human semantic evaluation",
+    "exact accepted evidence and evaluator-authority bindings"
+  ],
+  "packet_hash": "sha256:02a236c29c1b65985a9db700be965284b1b8dbbcce3f0eae7fa7ee1a22109c55",
+  "packet_id": "6d9e6b22-fce7-5deb-9e0a-eda5450cd4ae",
+  "packet_version": "1.0.0",
+  "prerequisite_id": "ENT-ARCH-LIVE-MULTI-DOMAIN",
+  "readiness_manifest_hash": "sha256:5ef502c38df724f8e7e12e2a4280b73ed2198b876c06a13a09a6e5b805d50fcc",
+  "readiness_manifest_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "required_authority": "architecture-domain-acceptance-authority",
+  "review_state": "not_ready_for_review"
+}

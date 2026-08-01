@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/external-decision-attestation.schema.json",
+  "title": "Recorded External Expert Decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["external_decision_record_id", "report_package_id", "report_package_hash", "report_item_ids", "decision_type", "decided_by", "decision_source", "recorded_by", "disposition", "rationale_summary", "conditions", "decided_at", "recorded_at", "attestation_state", "effect", "original_report_mutated"],
+  "properties": {
+    "external_decision_record_id": {"type": "string", "format": "uuid"},
+    "report_package_id": {"type": "string", "format": "uuid"},
+    "report_package_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "report_item_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+    "decision_type": {"type": "string"},
+    "decided_by": {"$ref": "#/$defs/externalAuthority"},
+    "decision_source": {"$ref": "#/$defs/externalSource"},
+    "recorded_by": {"$ref": "#/$defs/authenticatedActor"},
+    "disposition": {"enum": ["accepted", "rejected", "modified", "deferred", "additional_evidence_requested"]},
+    "rationale_summary": {"type": "string", "minLength": 1},
+    "conditions": {"type": "array", "items": {"type": "string"}},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "attestation_state": {"const": "recorded_pending_verification"},
+    "effect": {"const": "record_only"},
+    "original_report_mutated": {"const": false}
+  },
+  "$defs": {
+    "externalAuthority": {
+      "type": "object", "additionalProperties": false,
+      "required": ["authority_role", "authority_name"],
+      "properties": {"authority_role": {"type": "string", "minLength": 1}, "authority_name": {"type": "string", "minLength": 1}}
+    },
+    "externalSource": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_type", "source_reference", "source_hash"],
+      "properties": {"source_type": {"type": "string", "minLength": 1}, "source_reference": {"type": "string", "minLength": 1}, "source_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+    },
+    "authenticatedActor": {
+      "type": "object", "additionalProperties": false,
+      "required": ["actor_type", "subject_id", "authority_role", "authentication_provider", "assurance_level", "session_id"],
+      "properties": {"actor_type": {"const": "human"}, "subject_id": {"type": "string", "minLength": 1}, "authority_role": {"type": "string", "minLength": 1}, "authentication_provider": {"type": "string", "minLength": 1}, "assurance_level": {"type": "string", "minLength": 1}, "session_id": {"type": "string", "minLength": 1}}
+    }
+  }
+}

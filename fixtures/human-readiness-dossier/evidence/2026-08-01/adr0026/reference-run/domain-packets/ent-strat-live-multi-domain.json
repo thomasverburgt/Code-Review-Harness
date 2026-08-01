@@ -1,0 +1,25 @@
+{
+  "accepted_response_allowed": false,
+  "current_evidence": {
+    "content_hash": "sha256:9bae1bc0c9efaf69050f5f89ffa6a954ef010c754120e614072a2c51bbc25096",
+    "evidence_tier": "protocol_smoke_only",
+    "path": "fixtures/enterprise-strategy-admission/evidence/2026-08-01/adr0023/gx10-live-calibration.tar.gz"
+  },
+  "decision_authority": "human",
+  "designation": "ENT-STRAT",
+  "effect": "evidence_gap_notice_only",
+  "generated_at": "2026-08-02T00:45:00Z",
+  "missing_requirements": [
+    "accepted-live multi-domain input set",
+    "independent human semantic evaluation",
+    "exact accepted evidence and evaluator-authority bindings"
+  ],
+  "packet_hash": "sha256:666b771f137c8f1644b2e5cbb074824644c1879a62177c1cf122b2d96152106e",
+  "packet_id": "b8e430cd-59d6-58ec-9f7f-346e37a6fd29",
+  "packet_version": "1.0.0",
+  "prerequisite_id": "ENT-STRAT-LIVE-MULTI-DOMAIN",
+  "readiness_manifest_hash": "sha256:5ef502c38df724f8e7e12e2a4280b73ed2198b876c06a13a09a6e5b805d50fcc",
+  "readiness_manifest_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "required_authority": "enterprise-strategy-authority",
+  "review_state": "not_ready_for_review"
+}

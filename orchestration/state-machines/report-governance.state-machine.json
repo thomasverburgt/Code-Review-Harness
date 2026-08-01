@@ -1,0 +1,33 @@
+{
+  "$schema": "../../appendices/schemas/report-governance-state-machine.schema.json",
+  "machine_id": "REPORT-GOVERNANCE",
+  "version": "1.0.0",
+  "initial_state": "technically_validated",
+  "terminal_states": ["reconciled", "blocked", "superseded"],
+  "states": [
+    "technically_validated",
+    "exported_for_leadership_review",
+    "distribution_approval_recorded",
+    "distribution_verified",
+    "approved_export_generated",
+    "external_decisions_pending",
+    "external_decision_recorded",
+    "external_decision_verified",
+    "reconciled",
+    "blocked",
+    "superseded"
+  ],
+  "transitions": [
+    {"from": "technically_validated", "event": "review_export_generated", "to": "exported_for_leadership_review", "actor_type": "system", "guard": "immutable report package and source hashes validate; export is marked not approved for distribution"},
+    {"from": "exported_for_leadership_review", "event": "external_distribution_approval_recorded", "to": "distribution_approval_recorded", "actor_type": "records_administrator", "guard": "record cites the exact review export, report hash, leadership authority, and hashed approval source"},
+    {"from": "distribution_approval_recorded", "event": "distribution_record_verified", "to": "distribution_verified", "actor_type": "records_verifier", "guard": "verifier differs from recorder and source and authority bindings pass"},
+    {"from": "distribution_approval_recorded", "event": "distribution_record_rejected", "to": "blocked", "actor_type": "records_verifier", "guard": "source or authority binding fails"},
+    {"from": "distribution_verified", "event": "approved_export_generated", "to": "approved_export_generated", "actor_type": "system", "guard": "approved export embeds the verified distribution record ID and exact immutable report"},
+    {"from": "approved_export_generated", "event": "external_review_started", "to": "external_decisions_pending", "actor_type": "external_authority", "guard": "human experts receive the approved controlled report outside the harness"},
+    {"from": "external_decisions_pending", "event": "external_decision_recorded", "to": "external_decision_recorded", "actor_type": "records_administrator", "guard": "entry binds exact report items, decision authority, source hash, and authenticated recorder"},
+    {"from": "external_decision_recorded", "event": "external_decision_verified", "to": "external_decision_verified", "actor_type": "records_verifier", "guard": "verifier differs from recorder and source and authority bindings pass"},
+    {"from": "external_decision_recorded", "event": "external_decision_rejected", "to": "blocked", "actor_type": "records_verifier", "guard": "source, item, or authority binding fails"},
+    {"from": "external_decision_verified", "event": "reconciliation_materialized", "to": "reconciled", "actor_type": "system", "guard": "derived view links immutable records without modifying report items"},
+    {"from": "reconciled", "event": "successor_report_registered", "to": "superseded", "actor_type": "system", "guard": "new report is independently packaged and prior records remain retained"}
+  ]
+}

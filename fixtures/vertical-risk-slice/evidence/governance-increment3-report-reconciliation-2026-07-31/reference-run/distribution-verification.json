@@ -1,0 +1,19 @@
+{
+  "authority_binding_state": "passed",
+  "effect": "record_only",
+  "source_binding_state": "passed",
+  "target_record_hash": "sha256:6ed16ba95edf7b7b31b0c1dca5ee083f922abf00b85d1e11b818dbef04292f5b",
+  "target_record_id": "dc7a19b0-27ff-5e62-b47c-c06a94ada8f8",
+  "target_record_type": "distribution_approval",
+  "verification_record_id": "6019564f-8b4e-5d32-b57b-90928ccf1a9b",
+  "verification_state": "verified",
+  "verified_at": "2026-07-31T16:07:00Z",
+  "verified_by": {
+    "actor_type": "human",
+    "assurance_level": "fixture-mfa",
+    "authentication_provider": "fixture-idp",
+    "authority_role": "governance-records-verifier",
+    "session_id": "SESSION-ADMIN-GOVERNANCE-VERIFY-001",
+    "subject_id": "ADMIN-GOVERNANCE-VERIFY-001"
+  }
+}

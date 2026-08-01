@@ -114,7 +114,7 @@
       "gate_id": "human-risk-authority",
       "after_node": "ent-sysrisk",
       "authority_role": "enterprise-risk-acceptance-authority",
-      "decision_types": ["risk_disposition", "treatment_authorization", "capa_ownership"]
+      "decision_types": ["risk_disposition", "risk_disposition_and_treatment_authorization", "treatment_authorization", "capa_ownership"]
     }
   ]
 }

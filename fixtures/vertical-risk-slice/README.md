@@ -4,7 +4,7 @@ The gold package exercises:
 
 `SPEC-SECRETS -> PROD-SEC -> CAP-RISK -> ENT-EVIDENCE -> ENT-SYSRISK -> human decision request`
 
-The live canonical chain now covers SPEC-SECRETS, PROD-SEC, CAP-RISK, a deterministic ENT-EVIDENCE gate, and ENT-SYSRISK. Each result is retained under its corresponding `evidence/canonical-*-2026-07-31/` package. The final enterprise output remains decision support and routes to a separate human decision record.
+The live canonical chain now covers SPEC-SECRETS, PROD-SEC, CAP-RISK, a deterministic ENT-EVIDENCE gate, and ENT-SYSRISK. Each result is retained under its corresponding `evidence/canonical-*-2026-07-31/` package. The final enterprise output remains decision support. It is packaged into an immutable report; leadership authorization and expert decisions occur outside the harness and are later recorded as separate verified attestations.
 
 The semantic review path contains the four designed review prompts. `ENT-EVIDENCE` is the mandatory enterprise input gate required by the Enterprise Agent Framework.
 
@@ -37,3 +37,5 @@ The ledger suite persists a gold run, verifies every retained hash and audit-cha
 - [GX-10 live prompt calibration, 2026-07-31](evidence/live-prompt-calibration-2026-07-31/README.md) records four fail-closed live passes, redacted `uds-core` input evidence, telemetry/raw-response archives, and the deterministic-envelope recommendation.
 - [ADR-0011 role-payload implementation evidence, 2026-07-31](evidence/adr11-role-payload-2026-07-31/README.md) records passing dual-mode rollback conformance and the remaining live payload-topology blocker.
 - [Canonical enterprise systemic-risk evidence, 2026-07-31](evidence/canonical-ent-sysrisk-2026-07-31/README.md) records the deterministic evidence gate, passing four-suite GX conformance, live ENT-SYSRISK generation, exact two-input lineage, and human-only decision authority.
+- [Pre-acceptance Increment 3 design evidence, 2026-07-31](evidence/governance-increment3-2026-07-31/README.md) records the superseded direct-decision candidate and is not evidence of the accepted ADR-0012 model.
+- [Accepted ADR-0012 report-governance evidence, 2026-07-31](evidence/governance-increment3-report-reconciliation-2026-07-31/README.md) records the passing five-gate GX-10 run and deterministic report, distribution, external-decision, verification, and reconciliation records.

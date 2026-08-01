@@ -1,0 +1,19 @@
+{
+  "machine_id": "SEMANTIC-ADJUDICATION",
+  "version": "1.0.0",
+  "initial_state": "blocked_comparison",
+  "terminal_states": ["eligible_for_cutover_review", "normalization_required", "rejected", "insufficient_evidence", "blocked"],
+  "states": ["blocked_comparison", "packet_materialized", "external_review_pending", "adjudication_recorded", "adjudication_verified", "eligible_for_cutover_review", "normalization_required", "rejected", "insufficient_evidence", "blocked"],
+  "transitions": [
+    {"from": "blocked_comparison", "event": "packet_generated", "to": "packet_materialized", "actor_type": "system", "guard": "exact baseline, shadow, comparison, hashes, and complete differing-dimension coverage validate"},
+    {"from": "packet_materialized", "event": "packet_delivered_for_external_review", "to": "external_review_pending", "actor_type": "system", "guard": "packet is immutable and visibly review-request-only"},
+    {"from": "external_review_pending", "event": "external_adjudication_recorded", "to": "adjudication_recorded", "actor_type": "records_administrator", "guard": "response binds every delta exactly once, the named human authority, packet hash, and authoritative source hash"},
+    {"from": "adjudication_recorded", "event": "record_verified", "to": "adjudication_verified", "actor_type": "records_verifier", "guard": "verifier differs from recorder and all source, authority, packet, and delta bindings pass"},
+    {"from": "adjudication_recorded", "event": "record_rejected", "to": "blocked", "actor_type": "records_verifier", "guard": "any source, authority, packet, or delta binding fails"},
+    {"from": "adjudication_verified", "event": "accepted_deltas_derived", "to": "eligible_for_cutover_review", "actor_type": "system", "guard": "all dispositions accept preserved meaning or beneficial enrichment; effect remains record-only"},
+    {"from": "adjudication_verified", "event": "normalization_required_derived", "to": "normalization_required", "actor_type": "system", "guard": "one or more deltas require normalization and none reject"},
+    {"from": "adjudication_verified", "event": "rejection_derived", "to": "rejected", "actor_type": "system", "guard": "one or more deltas are rejected as semantic drift"},
+    {"from": "adjudication_verified", "event": "insufficient_evidence_derived", "to": "insufficient_evidence", "actor_type": "system", "guard": "one or more deltas lack sufficient evidence and none reject"}
+  ],
+  "effects": {"all_states": "record_only", "cutover_authority": "none", "required_follow_on": "separate project-maintainer ADR"}
+}

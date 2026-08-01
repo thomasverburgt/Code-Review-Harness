@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""ADR-0021 deterministic ENT-ARCH candidate projection and admission controls."""
+from __future__ import annotations
+import copy, uuid
+from pathlib import Path
+from typing import Any
+from artifact_ledger import ArtifactLedger, content_hash
+from validate_vertical_slice import ROOT, ValidationFailure, assert_schema, load_json
+
+CAP_RISK=ROOT/"fixtures/vertical-risk-slice/evidence/canonical-cap-risk-2026-07-31/accepted-cap-risk.artifact.json"
+ENT_EVIDENCE=ROOT/"fixtures/vertical-risk-slice/gold/ent-evidence.artifact.json"
+BASELINE=ROOT/"appendices/example-workflows/vertical-risk-slice.workflow.json"
+CREATED_AT="2026-08-01T24:00:00Z".replace("T24:","T23:")
+NAMESPACE=uuid.UUID("21000000-0000-4000-8000-000000000000")
+
+def sid(*parts:str)->str:return str(uuid.uuid5(NAMESPACE,"|".join(parts)))
+def rehash(a:dict[str,Any])->dict[str,Any]:
+ a["integrity"]["output_hash"]=None;a["integrity"]["output_hash"]=content_hash(a);return a
+
+def _clone_capability(source:dict[str,Any])->dict[str,Any]:
+ c=copy.deepcopy(source);c["artifact"]["artifact_id"]=sid("synthetic-capability-two");c["scope"]["capability_id"]="CAPABILITY-PLATFORM-DELIVERY";ext=c["extensions"]["capability"];ext["capability_id"]="CAPABILITY-PLATFORM-DELIVERY"
+ for risk in ext.get("role",{}).get("risk_register",[]):risk["capability_id"]="CAPABILITY-PLATFORM-DELIVERY"
+ c["methodology"]["limitations"].append("Adjudicated synthetic capability used only for multi-capability contract mechanics.");c["integrity"]["retention_class"]="candidate-test";return rehash(c)
+
+def build_inputs(live:bool=False)->tuple[dict[str,Any],list[dict[str,Any]]]:
+ first=load_json(CAP_RISK);artifacts=[first] if live else [first,_clone_capability(first)];gate=copy.deepcopy(load_json(ENT_EVIDENCE));gate["artifact"]["artifact_id"]=sid("live-gate" if live else "fixture-gate");gate["artifact"]["links"]["children"]=[a["artifact"]["artifact_id"] for a in artifacts];gate["scope"]["participating_capabilities"]=[a["extensions"]["capability"]["capability_id"] for a in artifacts];gate["inputs"]=[{"artifact_id":a["artifact"]["artifact_id"],"hash":a["integrity"]["output_hash"],"compatibility":"compatible","freshness":"fresh"} for a in artifacts];gate["coverage"].update({"eligible":len(artifacts),"reviewed":len(artifacts)});ext=gate["extensions"]["enterprise"];ext["participating_capabilities"]=gate["scope"]["participating_capabilities"];items=[{"artifact_id":a["artifact"]["artifact_id"],"state":"valid"} for a in artifacts];ext["capability_input_manifest"]=items;ext["enterprise_traceability_manifest"]={"artifact_ids":[x["artifact_id"] for x in items]};ext["role"]["validated_input_manifest"]=items;ext["role"]["completeness"]={"required":len(items),"valid":len(items),"fraction":1.0};gate["integrity"]["input_hash"]=content_hash([a["integrity"]["output_hash"] for a in artifacts]);rehash(gate);return gate,artifacts
+
+def role_template(gate:dict[str,Any],artifacts:list[dict[str,Any]],live:bool=False)->dict[str,Any]:
+ ids=[a["artifact"]["artifact_id"] for a in artifacts];hashes=[content_hash(a) for a in artifacts];caps=[a["extensions"]["capability"]["capability_id"] for a in artifacts];refs=sorted({r for a in artifacts for f in a.get("findings",[]) for r in f.get("evidence_refs",[])}) or ids
+ sourced={"record_id":"ARCH-VIEW-001","statement":"The supplied capability artifacts expose an unresolved shared evidence condition; dependency direction remains unproven.","source_artifact_ids":ids,"evidence_refs":refs,"confidence":0.65 if not live else 0.5,"uncertainty":"The bounded evidence does not prove runtime dependency direction."}
+ edges=[] if live else [{"edge_id":"ARCH-EDGE-001","from_capability":caps[0],"to_capability":caps[1],"relationship":"shared evidence condition only; operational dependency unproven","source_artifact_ids":ids,"evidence_refs":refs,"confidence":0.4,"uncertainty":"Synthetic contract fixture cannot establish a live dependency."}]
+ return {"designation":"ENT-ARCH","evidence_tier":"accepted_live_single_capability_protocol_smoke" if live else "adjudicated_multi_capability_contract_fixture","fitness_claim":"protocol_lineage_smoke_only" if live else "contract_mechanics_only","manifest_binding":{"gate_artifact_id":gate["artifact"]["artifact_id"],"gate_artifact_hash":content_hash(gate),"capability_artifact_ids":ids,"capability_artifact_hashes":hashes,"binding_state":"exact"},"system_of_systems_views":[sourced],"architecture_coherence":{"state":"insufficient_evidence","rationale":"The bounded inputs prove contract handling but not live system-of-systems coherence.","source_artifact_ids":ids,"confidence":0.5,"uncertainty":"No accepted live multi-capability architecture set is present."},"dependency_topology":edges,"shared_service_concentration":[],"failure_propagation":[],"target_state_alignment":{"state":"not_assessed","reason":"No approved target-state source supplied."},"transition_architecture":{"state":"not_assessed"},"architecture_debt":[],"architecture_findings":[{**sourced,"record_id":"ARCH-FINDING-001"}],"capa_options":[],"decision_requests":[],"unsupported_claims":[],"downstream_handoff":{"consumers":["ENT-ARCHSTRAT-CANDIDATE","ENT-TECHDEBT-CANDIDATE","ENT-MODERNIZE-CANDIDATE","ENT-SYNTH-CANDIDATE"],"handoff_state":"comparison_only","scheduled":False},"decision_authority":"human"}
+
+def build_candidate(model_role:dict[str,Any]|None=None,live:bool=False)->dict[str,Any]:
+ gate,artifacts=build_inputs(live);expected=role_template(gate,artifacts,live);role=copy.deepcopy(model_role) if model_role is not None else copy.deepcopy(expected)
+ for key in ("designation","evidence_tier","fitness_claim","manifest_binding","unsupported_claims","downstream_handoff","decision_authority"):role[key]=copy.deepcopy(expected[key])
+ aid=sid("live" if live else "fixture","artifact");ids=[a["artifact"]["artifact_id"] for a in artifacts];caps=[a["extensions"]["capability"]["capability_id"] for a in artifacts]
+ candidate={"identity":{"agent_uuid":"6f74e6ca-2ae2-4415-8f99-be1aef2bc94a","designation":"ENT-ARCH","display_name":"Systems Architecture Reviewer","agent_version":"design-0.1.0","contract_version":"1.0.0"},"artifact":{"artifact_id":aid,"artifact_type":"enterprise-architecture-posture","created_at":CREATED_AT,"lifecycle_state":"complete","links":{"parents":[],"children":[gate["artifact"]["artifact_id"]]+ids,"peers":[]}},"execution":{"execution_id":sid(aid,"execution"),"model":"qwen3-32b" if model_role is not None else "deterministic-reference-agent","prompt_version":"design-0.1.0","rubric_version":"0.1.0","toolchain_version":"0.1.0","settings":{"temperature":0}},"scope":{"enterprise_scope_id":"ENTERPRISE-FIXTURE-001","participating_capabilities":caps,"assessment_period":"2026-08-01","decision_context":"candidate_calibration"},"inputs":[{"artifact_id":gate["artifact"]["artifact_id"],"hash":content_hash(gate),"compatibility":"compatible","freshness":"fresh"}]+[{"artifact_id":a["artifact"]["artifact_id"],"hash":content_hash(a),"compatibility":"compatible","freshness":"fresh"} for a in artifacts],"methodology":{"method":"manifest-gated enterprise architecture correlation","limitations":["Candidate-only evidence","No architecture approval or target-state authority"]},"coverage":{"eligible":len(artifacts),"reviewed":len(artifacts),"omitted":0,"inaccessible":0,"unknown":0,"negative_evidence":0},"observations":[],"assessments":[],"findings":[],"patterns":[],"insights":[],"conflicts":[],"confidence":{"evidence":1.0,"assessment":role["architecture_coherence"]["confidence"],"review":1.0,"decision":None,"provenance":[{"source":"ENT-EVIDENCE exact manifest","version":"1.0.0"}]},"decisions_requested":copy.deepcopy(role["decision_requests"]),"consumers":role["downstream_handoff"]["consumers"],"decision_authority":"human","integrity":{"input_hash":content_hash({"gate":content_hash(gate),"artifacts":[content_hash(a) for a in artifacts]}),"output_hash":None,"attestation_ref":None,"retention_class":"candidate-test","schema_validation":"passed"},"extensions":{"enterprise":{"enterprise_scope":{"enterprise_scope_id":"ENTERPRISE-FIXTURE-001","assessment_period":"2026-08-01"},"participating_capabilities":caps,"capability_input_manifest":role["manifest_binding"]["capability_artifact_ids"],"cross_capability_correlations":role["system_of_systems_views"],"enterprise_assertions":role["architecture_findings"],"systemic_dependencies":role["dependency_topology"],"enterprise_unknowns":[{"statement":role["architecture_coherence"]["uncertainty"]}],"unresolved_disagreements":[],"confidence_reconciliation":{"method":"preserve source confidence and explicit uncertainty","result":role["architecture_coherence"]["confidence"]},"human_decision_requests":role["decision_requests"],"enterprise_traceability_manifest":{"gate_artifact_id":gate["artifact"]["artifact_id"],"artifact_ids":ids},"role":role}}}
+ candidate["extensions"]["enterprise"]["capability_input_manifest"]=[{"artifact_id":i,"content_hash":h,"state":"valid"} for i,h in zip(role["manifest_binding"]["capability_artifact_ids"],role["manifest_binding"]["capability_artifact_hashes"])]
+ rehash(candidate);validate_candidate(candidate,gate,artifacts,live);return candidate
+
+def validate_candidate(c:dict[str,Any],gate:dict[str,Any],artifacts:list[dict[str,Any]],live:bool=False)->None:
+ assert_schema(c,"universal-agent-artifact.schema.json","ENT-ARCH candidate");ext=c["extensions"]["enterprise"];assert_schema(ext,"enterprise-extension.schema.json","ENT-ARCH extension");role=ext["role"];assert_schema(role,"ent-arch-role.schema.json","ENT-ARCH role")
+ material=copy.deepcopy(c);actual=material["integrity"]["output_hash"];material["integrity"]["output_hash"]=None
+ if content_hash(material)!=actual:raise ValidationFailure("ENT-ARCH output hash mismatch")
+ expected_ids=[a["artifact"]["artifact_id"] for a in artifacts];expected_hashes=[content_hash(a) for a in artifacts];binding=role["manifest_binding"]
+ if binding["gate_artifact_id"]!=gate["artifact"]["artifact_id"] or binding["gate_artifact_hash"]!=content_hash(gate) or binding["capability_artifact_ids"]!=expected_ids or binding["capability_artifact_hashes"]!=expected_hashes:raise ValidationFailure("ENT-ARCH exact input binding mismatch")
+ declared=set(expected_ids);refs=[]
+ for group in (role["system_of_systems_views"],role["shared_service_concentration"],role["failure_propagation"],role["architecture_debt"],role["architecture_findings"],role["dependency_topology"]):refs.extend(x for item in group for x in item["source_artifact_ids"])
+ if not refs or not set(refs).issubset(declared):raise ValidationFailure("ENT-ARCH invented or missing source artifact reference")
+ if live and (role["fitness_claim"]!="protocol_lineage_smoke_only" or role["dependency_topology"]):raise ValidationFailure("single-capability live input overclaims architecture fitness")
+ baseline=load_json(BASELINE)
+ if any(n["designation"]=="ENT-ARCH" for n in baseline["nodes"]):raise ValidationFailure("ENT-ARCH candidate cannot be baseline scheduled")
+ if role["downstream_handoff"]["scheduled"] or role["unsupported_claims"] or c["decision_authority"]!="human":raise ValidationFailure("ENT-ARCH authority boundary violated")
+
+def persist_candidate(root:Path,c:dict[str,Any])->dict[str,Any]:return ArtifactLedger(root).persist_artifact(c)

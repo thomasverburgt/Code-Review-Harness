@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "shadow-artifact",
+  "logical_path": "shadow/adr-0015/artifacts/445fb7f4-c7f3-5635-9097-fdc77a1e022d.json",
+  "object_hash": "sha256:1edb0ba2536befcdb307d50e65ff4b38408b7c588fcb944eb0cc4fb7a9d5efb8",
+  "record_id": "445fb7f4-c7f3-5635-9097-fdc77a1e022d",
+  "retention_class": "shadow-comparison"
+}

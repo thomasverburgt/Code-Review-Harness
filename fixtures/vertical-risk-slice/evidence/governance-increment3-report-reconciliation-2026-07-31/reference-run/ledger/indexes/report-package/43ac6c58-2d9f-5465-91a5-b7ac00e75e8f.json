@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "report-package",
+  "logical_path": "report-packages/43ac6c58-2d9f-5465-91a5-b7ac00e75e8f.json",
+  "object_hash": "sha256:a9f1d020871f198cf7a8361e8e61c54fe26ccd7395c238db8dbf6d832bc39cd4",
+  "record_id": "43ac6c58-2d9f-5465-91a5-b7ac00e75e8f",
+  "retention_class": "governance-report"
+}

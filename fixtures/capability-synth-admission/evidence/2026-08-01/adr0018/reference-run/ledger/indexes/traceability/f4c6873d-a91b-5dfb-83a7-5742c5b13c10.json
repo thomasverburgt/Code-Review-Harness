@@ -1,0 +1,20 @@
+{
+  "artifact_id": "f4c6873d-a91b-5dfb-83a7-5742c5b13c10",
+  "artifact_type": "capability-synthesis-posture",
+  "children": [
+    "a24d93ba-181b-5f68-b159-402ee65e937b",
+    "a5ada795-db2f-5625-aed9-1b619411be17"
+  ],
+  "consumers": [
+    "ENT-SYNTH-CANDIDATE-COMPARISON"
+  ],
+  "input_refs": [
+    "a24d93ba-181b-5f68-b159-402ee65e937b",
+    "a5ada795-db2f-5625-aed9-1b619411be17"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:f9b930512c61deee467b3467c0a1140c2e7d3a505b8073aab785dc49e3edb37b",
+  "parents": [],
+  "peers": [],
+  "producer_designation": "CAP-SYNTH"
+}

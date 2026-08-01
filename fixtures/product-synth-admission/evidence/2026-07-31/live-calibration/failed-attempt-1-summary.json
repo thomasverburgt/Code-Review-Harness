@@ -1,0 +1,12 @@
+{
+  "attempt": 1,
+  "status": "failed",
+  "artifact_published": false,
+  "error": "PROD-SYNTH preserved assertion does not resolve to the declared child",
+  "input_tokens": 8181,
+  "output_tokens": 1850,
+  "wall_duration_ms": 283867,
+  "raw_response_sha256": "ff6e9369f4a51dd0520ba54d0ea64a9d345760955614d7d47a1106dab103b646",
+  "diagnosis": "The model treated role-internal CORRELATION-001 as a universal child conflict record. The child had no conflict with that identifier.",
+  "correction": "The runtime supplied an explicit allow-list of preservable universal child record bindings. Validation remained fail closed and no invalid identifier was accepted or rewritten."
+}

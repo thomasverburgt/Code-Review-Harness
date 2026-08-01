@@ -1,0 +1,25 @@
+{
+  "accepted_response_allowed": false,
+  "current_evidence": {
+    "content_hash": "sha256:80157a7b4b68e3e469f7250d25fea94bfe368b1bf835f4f5b4f1a1ee2407a7b8",
+    "evidence_tier": "protocol_smoke_only",
+    "path": "fixtures/enterprise-governance-admission/evidence/2026-08-01/adr0022/gx10-live-calibration.tar.gz"
+  },
+  "decision_authority": "human",
+  "designation": "ENT-GOV",
+  "effect": "evidence_gap_notice_only",
+  "generated_at": "2026-08-02T00:45:00Z",
+  "missing_requirements": [
+    "accepted-live multi-domain input set",
+    "independent human semantic evaluation",
+    "exact accepted evidence and evaluator-authority bindings"
+  ],
+  "packet_hash": "sha256:cc822813c16258d755e41ca7bc821a3e68fc132b50aba2edf833da7acaa3daef",
+  "packet_id": "c1a0aafb-3273-5bb1-8963-65ef95477ef8",
+  "packet_version": "1.0.0",
+  "prerequisite_id": "ENT-GOV-LIVE-MULTI-DOMAIN",
+  "readiness_manifest_hash": "sha256:5ef502c38df724f8e7e12e2a4280b73ed2198b876c06a13a09a6e5b805d50fcc",
+  "readiness_manifest_id": "952e6c8b-4fe8-596f-91e5-cbc70562e4cf",
+  "required_authority": "governance-source-owner",
+  "review_state": "not_ready_for_review"
+}

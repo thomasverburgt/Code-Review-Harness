@@ -1,0 +1,25 @@
+{
+  "$schema": "../schemas/workflow-definition.schema.json",
+  "workflow_id": "WF-CAP-SYNTH-CALIBRATION-001",
+  "workflow_version": "0.1.0",
+  "policy_version": "0.1.0",
+  "registry_version": "1.0.0",
+  "trigger": {"type": "candidate_calibration", "reference": "ADR-0018"},
+  "version_pins": {
+    "contracts": {"universal": "1.0.0", "capability": "1.0.0", "capability-coordination": "1.0.0"},
+    "prompts": {"CAP-SYNTH": "design-0.1.0"},
+    "rubrics": {"CAP-SYNTH": "0.1.0"},
+    "schemas": {"universal": "universal-agent-artifact.schema.json", "capability": "capability-extension.schema.json", "role": "cap-synth-role.schema.json"},
+    "model": {"provider": "fixture", "model_id": "deterministic-reference-agent", "version": "0.1.0"},
+    "toolchain": {"version": "0.1.0"}
+  },
+  "nodes": [{
+    "node_id": "cap-synth-candidate", "agent_uuid": "ca95161d-d7dc-40b0-b233-fda505b18afe",
+    "designation": "CAP-SYNTH", "layer": "capability",
+    "required_inputs": ["CAP-COORD-MANIFEST", "CAP-RISK-ARTIFACT", "CAP-REQ-ARTIFACT"],
+    "output_schema": "capability-extension.schema.json", "role_schema": "cap-synth-role.schema.json",
+    "partial_input_policy": "prohibited", "consumers": ["ENT-SYNTH-CANDIDATE-COMPARISON"]
+  }],
+  "edges": [],
+  "human_gates": [{"gate_id": "candidate-promotion-decision", "after_node": "cap-synth-candidate", "authority_role": "project-maintainer", "decision_types": ["candidate_promotion_and_scheduling"]}]
+}
