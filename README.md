@@ -33,6 +33,7 @@ This repository is the working architecture library for the Code Review Harness.
 | [evidence](evidence/README.md) | Canonical future retained-evidence packages and legacy path inventories |
 | [status](status/README.md) | Rebuildable current-state projections linked to authoritative records |
 | [tools](tools/README.md) | Executable reference runtimes, runners, validators, and tests |
+| [src/code_harness](src/code_harness/README.md) | Supported Python package and CLI boundary |
 | [training](training/agentic-system-curriculum/README.md) | Controlled agentic-system curriculum source, releases, and QA material |
 | [deliverables](deliverables/README.md) | Human-readable controlled outputs and their lifecycle guidance |
 

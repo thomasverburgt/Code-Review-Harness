@@ -45,3 +45,4 @@ Copy `template.md` when creating a new ADR. Material changes identified in `GOVE
 - [ADR 0027: Govern Repository Artifact Lifecycles Before Structural Migration](0027-govern-repository-artifact-lifecycles.md)
 - [ADR 0028: Separate Controlled Binary Releases from Transient Render Evidence](0028-binary-release-and-transient-render-retention.md)
 - [ADR 0029: Separate Reusable Fixtures from Retained Evidence](0029-separate-reusable-fixtures-from-retained-evidence.md)
+- [ADR 0030: Introduce a Compatibility-First Python Package Boundary](0030-compatibility-first-python-package-boundary.md)

@@ -18,5 +18,4 @@ python tools/validate_vertical_slice.py
 python -m unittest discover -s tools -p "test_*.py"
 ```
 
-Sprint 4 will move importable modules to a Python package and tests to a dedicated tree. Existing paths will remain as compatibility wrappers until local and GX-10 regression gates pass and a later sprint approves their removal.
-
+The supported package boundary now lives under [`src/code_harness`](../src/code_harness/README.md), with package-boundary tests under [`tests`](../tests/README.md). For this compatibility release, package modules delegate to the unchanged implementations here. Existing commands and evidence paths therefore remain valid while consumers migrate.

@@ -1,6 +1,8 @@
 _runs/
 __pycache__/
 *.pyc
+build/
+*.egg-info/
 _docx_work/
 training/agentic-system-curriculum/qa-libreoffice/profiles/
 training/agentic-system-curriculum/revised/qa-final/profiles/
