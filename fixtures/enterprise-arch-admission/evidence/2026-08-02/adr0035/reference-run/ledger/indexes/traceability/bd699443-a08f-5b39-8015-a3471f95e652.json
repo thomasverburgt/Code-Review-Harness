@@ -1,0 +1,20 @@
+{
+  "artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+  "artifact_type": "validated-enterprise-input-manifest",
+  "children": [
+    "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  ],
+  "consumers": [
+    "ENT-SYSRISK"
+  ],
+  "input_refs": [
+    "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:efff2cd26b8d02d80277168912711f012a970e929de957352c9851c18a031293",
+  "parents": [
+    "55555555-5555-4555-8555-555555555555"
+  ],
+  "peers": [],
+  "producer_designation": "ENT-EVIDENCE"
+}

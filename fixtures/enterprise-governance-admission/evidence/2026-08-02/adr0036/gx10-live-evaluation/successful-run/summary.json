@@ -1,0 +1,27 @@
+{
+  "anti_double_counting": "parent_only_children_retained_as_lineage",
+  "artifact_hash": "sha256:d3cf61bd18259951db9c7ec2ffe185707750dcbf1f5f5d552a809758cd2bc031",
+  "artifact_id": "efc768dc-b057-530e-9270-bafb88551b29",
+  "candidate_status": "candidate",
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "designation": "ENT-GOV",
+  "ent_gov_scheduled": false,
+  "evidence_tier": "accepted_live_multi_domain_single_capability_governance_evaluation",
+  "fitness_claim": "single_capability_governance_evaluation",
+  "matrix_state": "insufficient_evidence",
+  "passed": true,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "58c56cfd650f34dba9acc4440f1d5f8b803ef13d1d6aa8e28d8afffcaed39d64",
+  "report_effect": "none",
+  "semantic_acceptance": "awaiting_project_owner_review",
+  "semantic_review_packet_hash": "sha256:c9a89097923a1a932ba567b75182c4467adc3d971ef69002239e7e52d9460b68",
+  "semantic_review_packet_id": "8548f24f-4de0-51f9-974e-3967e68dd3b8",
+  "status": "complete",
+  "suite": "ent-gov-accepted-live-multi-domain-single-capability-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "usage": {
+    "mode": "retained_response_reprojection",
+    "model_invoked": false
+  }
+}

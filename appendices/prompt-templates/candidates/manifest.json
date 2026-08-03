@@ -10,19 +10,19 @@
     },
     "ENT-STRAT": {
       "path": "appendices/prompt-templates/candidates/ent-strat/design-0.1.0.prompt.txt",
-      "sha256": "110681fca867635fb2f3bafc854010ab21c09ead1ac9b3d900832cf9ba590d9a",
+      "sha256": "d3061ea8843e33ef67fb801b39243f2f4e22a7da72adea75918c02a6ce5f54b3",
       "source": "agents/enterprise/strategic-scoring-agent.md",
       "status": "candidate"
     },
     "ENT-GOV": {
       "path": "appendices/prompt-templates/candidates/ent-gov/design-0.1.0.prompt.txt",
-      "sha256": "af93b1dce90f8c608d01cd33f49e1abc20b5c44e6f0d5723fa52d97c2c62b2e4",
+      "sha256": "0546f896b437828c98ba33f42460348ea0245e1c1e6d4edbed70ded68e1c8e36",
       "source": "agents/enterprise/enterprise-governance-reviewer.md",
       "status": "candidate"
     },
     "ENT-ARCH": {
       "path": "appendices/prompt-templates/candidates/ent-arch/design-0.1.0.prompt.txt",
-      "sha256": "543b1a329556228100ca9db16aebdc3c08f13bcda3d763279d18d8bef66ef929",
+      "sha256": "944aad98c767a5c4c2dbe8bb88f95f9022d85c71f4fd1361cbdcfc8fb2d276fa",
       "source": "agents/enterprise/systems-architecture-reviewer.md",
       "status": "candidate"
     },
@@ -34,7 +34,7 @@
     },
     "CAP-SYNTH": {
       "path": "appendices/prompt-templates/candidates/cap-synth/design-0.1.0.prompt.txt",
-      "sha256": "7e2c6d29b465560d3f8e65f08c923e56b8a9b2d2314b4345a686a036038aa5e0",
+      "sha256": "214e1f450597563465cb106f7fb1eea9de85e4e2b3783020fb82573abd787d0c",
       "source": "agents/capability/capability-synthesis-lead.md",
       "status": "candidate"
     },

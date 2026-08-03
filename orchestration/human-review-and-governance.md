@@ -16,7 +16,7 @@ accepted artifact chain
   -> derived reconciliation view (record-only)
 ```
 
-`tools/report_governance_runtime.py` implements the reference boundary, and `tools/run_report_governance_reference.py` materializes its retained record chain. `tools/test_report_governance_runtime.py` checks deterministic packaging, controlled-export markings, role separation, exact item/source bindings, independent verification, immutable replay, mutation rejection, report preservation, and absence of external effects.
+`tools/report_governance_runtime.py` implements the reference boundary, and `tools/run_report_governance_reference.py` materializes its retained historical record chain. `tools/test_report_governance_runtime.py` checks deterministic packaging, controlled-export markings, exact item/source bindings, project-owner finalization without a second verifier, legacy verification replay, immutable replay, mutation rejection, report preservation, and absence of external effects.
 
 The authority registry at `appendices/governance/decision-authorities-0.1.0.json` contains synthetic test identities. Production identity mappings require an approved deployment policy. `approved_by` and `decided_by` describe the external authorities; `recorded_by` and `verified_by` are authenticated system actors. Those fields are not interchangeable.
 

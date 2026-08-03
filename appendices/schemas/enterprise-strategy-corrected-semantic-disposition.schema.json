@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/enterprise-strategy-corrected-semantic-disposition.schema.json",
+  "title": "Corrected ENT-STRAT Semantic Disposition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["disposition_id", "packet_id", "packet_hash", "candidate_id", "candidate_hash", "supersession_id", "decided_at", "decided_by", "disposition", "reviewed_dimensions", "semantic_judgment", "remaining_boundaries", "source_context_recommendations", "decision_authority", "effect", "scheduling_authorized", "report_effect", "deployment_effect", "disposition_hash"],
+  "properties": {
+    "disposition_id": {"type": "string", "format": "uuid"},
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_hash": {"$ref": "#/$defs/hash"},
+    "candidate_id": {"type": "string", "format": "uuid"},
+    "candidate_hash": {"$ref": "#/$defs/hash"},
+    "supersession_id": {"type": "string", "format": "uuid"},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "decided_by": {"type": "object", "additionalProperties": false, "required": ["authority_role", "authority_name", "subject_id"], "properties": {"authority_role": {"const": "project-owner"}, "authority_name": {"const": "thomasverburgt"}, "subject_id": {"const": "HUMAN-PROJECT-OWNER-001"}}},
+    "disposition": {"const": "accept_corrected_candidate_as_semantically_faithful"},
+    "reviewed_dimensions": {"const": ["source_authority", "objective_preservation", "method_preservation", "capability_evidence", "missingness", "confidence_and_uncertainty", "authority_boundary", "rollback"]},
+    "semantic_judgment": {"type": "object", "additionalProperties": false, "required": ["statement", "strategy_posture", "effect"], "properties": {"statement": {"const": "Accept corrected ENT-STRAT as semantically faithful and continue."}, "strategy_posture": {"const": "insufficient_evidence"}, "effect": {"const": "semantic_acceptance_of_corrected_candidate"}}},
+    "remaining_boundaries": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "source_context_recommendations": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "decision_authority": {"const": "project_owner"},
+    "effect": {"const": "semantic_acceptance_record_only"},
+    "scheduling_authorized": {"const": false},
+    "report_effect": {"const": "none"},
+    "deployment_effect": {"const": "none"},
+    "disposition_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+}

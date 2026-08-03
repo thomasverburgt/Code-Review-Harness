@@ -1,0 +1,341 @@
+{
+  "artifact": {
+    "artifact_id": "00f8b5b9-19f9-5a1b-8cd1-3122333f2d55",
+    "artifact_type": "enterprise-architecture-posture",
+    "created_at": "2026-08-02T08:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [
+        "bd699443-a08f-5b39-8015-a3471f95e652",
+        "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+      ],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [],
+  "confidence": {
+    "assessment": 0.85,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+        "confidence": 0.85
+      }
+    ],
+    "review": 1.0
+  },
+  "conflicts": [],
+  "consumers": [
+    "ENT-ARCHSTRAT-CANDIDATE",
+    "ENT-TECHDEBT-CANDIDATE",
+    "ENT-MODERNIZE-CANDIDATE",
+    "ENT-SYNTH-CANDIDATE"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 0
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "confidence": 0.85,
+      "evidence_refs": [],
+      "record_id": "6beec632-8baf-5a58-a4ce-fa14784d8435:DC-001",
+      "source_artifact_ids": [
+        "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+      ],
+      "statement": "Declare authoritative requirements for the bounded slice to enable traceability.",
+      "uncertainty": "Requirement satisfaction cannot be assessed without declared requirements."
+    },
+    {
+      "confidence": 0.85,
+      "evidence_refs": [],
+      "record_id": "a5ada795-db2f-5625-aed9-1b619411be17:DC-001",
+      "source_artifact_ids": [
+        "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+      ],
+      "statement": "Classify the redacted credential-like value as confirmed secret, likely secret, or benign/nonsecret to resolve the risk.",
+      "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification."
+    }
+  ],
+  "execution": {
+    "evidence_tier": "accepted_live_multi_domain_single_capability_evaluation",
+    "execution_id": "b7b077d6-8a6f-5707-8f4a-5bb0a012dd91",
+    "model": "qwen3-32b",
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "enterprise": {
+      "capability_input_manifest": [
+        {
+          "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+          "content_hash": "sha256:95d9fa9fe7b6b521c4677ede284ffc18a95e5a3b6ae4d2db6231bb39018baae8",
+          "state": "valid"
+        }
+      ],
+      "confidence_reconciliation": {
+        "method": "preserve source confidence as confidence in unassessability",
+        "result": 0.85
+      },
+      "cross_capability_correlations": [
+        {
+          "confidence": 0.85,
+          "evidence_refs": [
+            "FINDING-REQ-GAP-001",
+            "RISK-001"
+          ],
+          "record_id": "DERIVED-001",
+          "source_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "statement": "The capability posture for CAPABILITY-IDENTITY-ACCESS is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+          "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification. Requirement satisfaction cannot be assessed without declared requirements."
+        }
+      ],
+      "enterprise_assertions": [
+        {
+          "confidence": 0.85,
+          "evidence_refs": [
+            "LOCATOR-UDS-0001"
+          ],
+          "record_id": "FINDING-REQ-GAP-001",
+          "source_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "statement": "The absence of declared requirements is a critical gap for traceability and evaluation.",
+          "uncertainty": "Requirement satisfaction cannot be assessed without declared requirements."
+        },
+        {
+          "confidence": 0.85,
+          "evidence_refs": [
+            "UDS-0001"
+          ],
+          "record_id": "FINDING-001",
+          "source_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "statement": "The redacted credential-like value requires classification to resolve the risk.",
+          "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification."
+        }
+      ],
+      "enterprise_scope": {
+        "assessment_period": "2026-08-02",
+        "enterprise_scope_id": "ENTERPRISE-FIXTURE-001"
+      },
+      "enterprise_traceability_manifest": {
+        "artifact_ids": [
+          "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+        ],
+        "excluded_child_artifact_ids": [
+          "6beec632-8baf-5a58-a4ce-fa14784d8435",
+          "a5ada795-db2f-5625-aed9-1b619411be17"
+        ],
+        "gate_artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652"
+      },
+      "enterprise_unknowns": [
+        {
+          "statement": "The exact impact of the unresolved redacted credential-like value is unknown without further classification. Requirement satisfaction cannot be assessed without declared requirements."
+        }
+      ],
+      "human_decision_requests": [
+        {
+          "confidence": 0.85,
+          "evidence_refs": [],
+          "record_id": "6beec632-8baf-5a58-a4ce-fa14784d8435:DC-001",
+          "source_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "statement": "Declare authoritative requirements for the bounded slice to enable traceability.",
+          "uncertainty": "Requirement satisfaction cannot be assessed without declared requirements."
+        },
+        {
+          "confidence": 0.85,
+          "evidence_refs": [],
+          "record_id": "a5ada795-db2f-5625-aed9-1b619411be17:DC-001",
+          "source_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "statement": "Classify the redacted credential-like value as confirmed secret, likely secret, or benign/nonsecret to resolve the risk.",
+          "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification."
+        }
+      ],
+      "participating_capabilities": [
+        "CAPABILITY-IDENTITY-ACCESS"
+      ],
+      "role": {
+        "architecture_coherence": {
+          "confidence": 0.85,
+          "rationale": "The capability posture is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+          "source_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "state": "insufficient_evidence",
+          "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification. Requirement satisfaction cannot be assessed without declared requirements."
+        },
+        "architecture_debt": [],
+        "architecture_findings": [
+          {
+            "confidence": 0.85,
+            "evidence_refs": [
+              "LOCATOR-UDS-0001"
+            ],
+            "record_id": "FINDING-REQ-GAP-001",
+            "source_artifact_ids": [
+              "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+            ],
+            "statement": "The absence of declared requirements is a critical gap for traceability and evaluation.",
+            "uncertainty": "Requirement satisfaction cannot be assessed without declared requirements."
+          },
+          {
+            "confidence": 0.85,
+            "evidence_refs": [
+              "UDS-0001"
+            ],
+            "record_id": "FINDING-001",
+            "source_artifact_ids": [
+              "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+            ],
+            "statement": "The redacted credential-like value requires classification to resolve the risk.",
+            "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification."
+          }
+        ],
+        "capa_options": [],
+        "decision_authority": "human",
+        "decision_requests": [
+          {
+            "confidence": 0.85,
+            "evidence_refs": [],
+            "record_id": "6beec632-8baf-5a58-a4ce-fa14784d8435:DC-001",
+            "source_artifact_ids": [
+              "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+            ],
+            "statement": "Declare authoritative requirements for the bounded slice to enable traceability.",
+            "uncertainty": "Requirement satisfaction cannot be assessed without declared requirements."
+          },
+          {
+            "confidence": 0.85,
+            "evidence_refs": [],
+            "record_id": "a5ada795-db2f-5625-aed9-1b619411be17:DC-001",
+            "source_artifact_ids": [
+              "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+            ],
+            "statement": "Classify the redacted credential-like value as confirmed secret, likely secret, or benign/nonsecret to resolve the risk.",
+            "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification."
+          }
+        ],
+        "dependency_topology": [],
+        "designation": "ENT-ARCH",
+        "downstream_handoff": {
+          "consumers": [
+            "ENT-ARCHSTRAT-CANDIDATE",
+            "ENT-TECHDEBT-CANDIDATE",
+            "ENT-MODERNIZE-CANDIDATE",
+            "ENT-SYNTH-CANDIDATE"
+          ],
+          "handoff_state": "comparison_only",
+          "scheduled": false
+        },
+        "evidence_tier": "accepted_live_multi_domain_single_capability_evaluation",
+        "failure_propagation": [],
+        "fitness_claim": "single_capability_architecture_evaluation",
+        "manifest_binding": {
+          "binding_state": "exact",
+          "capability_artifact_hashes": [
+            "sha256:95d9fa9fe7b6b521c4677ede284ffc18a95e5a3b6ae4d2db6231bb39018baae8"
+          ],
+          "capability_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "gate_artifact_hash": "sha256:0526ae98f134db1600b38fa43c70831bf31f72a66b481412b3cbe90028f34d55",
+          "gate_artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652"
+        },
+        "shared_service_concentration": [],
+        "system_of_systems_views": [
+          {
+            "confidence": 0.85,
+            "evidence_refs": [
+              "FINDING-REQ-GAP-001",
+              "RISK-001"
+            ],
+            "record_id": "DERIVED-001",
+            "source_artifact_ids": [
+              "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+            ],
+            "statement": "The capability posture for CAPABILITY-IDENTITY-ACCESS is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+            "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification. Requirement satisfaction cannot be assessed without declared requirements."
+          }
+        ],
+        "target_state_alignment": {
+          "reason": "No approved target-state source was supplied.",
+          "state": "not_assessed"
+        },
+        "transition_architecture": {
+          "reason": "No approved transition architecture was supplied.",
+          "state": "not_assessed"
+        },
+        "unsupported_claims": []
+      },
+      "systemic_dependencies": [],
+      "unresolved_disagreements": []
+    }
+  },
+  "findings": [],
+  "identity": {
+    "agent_uuid": "6f74e6ca-2ae2-4415-8f99-be1aef2bc94a",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "ENT-ARCH",
+    "display_name": "Systems Architecture Reviewer"
+  },
+  "inputs": [
+    {
+      "artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:0526ae98f134db1600b38fa43c70831bf31f72a66b481412b3cbe90028f34d55"
+    },
+    {
+      "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:95d9fa9fe7b6b521c4677ede284ffc18a95e5a3b6ae4d2db6231bb39018baae8"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:fd52a744705456731ee306035a8166538a39083edf50d90bb5275e1dc152220a",
+    "output_hash": "sha256:321186b8016dde5dee6f4948d5254397a011e6796b0c63ae5bebf49ab2d3faab",
+    "retention_class": "candidate-test",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "One capability only",
+      "No cross-capability or target-state inference",
+      "Comparison only"
+    ],
+    "method": "eligibility-gated single-capability architecture evaluation"
+  },
+  "observations": [],
+  "patterns": [],
+  "scope": {
+    "assessment_period": "2026-08-02",
+    "decision_context": "accepted_live_single_capability_architecture_evaluation",
+    "enterprise_scope_id": "ENTERPRISE-FIXTURE-001",
+    "participating_capabilities": [
+      "CAPABILITY-IDENTITY-ACCESS"
+    ]
+  }
+}

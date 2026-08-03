@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-governance-disposition",
+  "logical_path": "enterprise-governance-dispositions/94161331-c940-51bc-ad08-d7f7e1af1243.json",
+  "object_hash": "sha256:d5f8df551632b2935aedbcad170a32974619f686f2e9c5608b08255901f8fada",
+  "record_id": "94161331-c940-51bc-ad08-d7f7e1af1243",
+  "retention_class": "architecture-evidence"
+}

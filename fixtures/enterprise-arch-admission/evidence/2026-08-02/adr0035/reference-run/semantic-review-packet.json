@@ -1,0 +1,35 @@
+{
+  "candidate": {
+    "hash": "sha256:39686e3020efc651a5a1082a1189b1fcd8f2656e8e04d9278fe5d81949b213c9",
+    "id": "00f8b5b9-19f9-5a1b-8cd1-3122333f2d55"
+  },
+  "cap_synth_eligibility": {
+    "hash": "sha256:62d202ee80b5970e0bbe4e199106bedec7829a7e458bdcfd179f4ffd108cccc9",
+    "id": "5f3e8885-b5df-578c-87b2-c22fab03342c"
+  },
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "effect": "review_request_only",
+  "ent_arch_scheduled": false,
+  "generated_at": "2026-08-02T08:00:00Z",
+  "input_manifest": {
+    "hash": "sha256:5b6631a8f9556272daa41fab7c320e94ee54ff965222fa0c0e6cf86e68b48972",
+    "id": "b61c82a0-9b20-5827-84b2-283b5e229417"
+  },
+  "packet_hash": "sha256:4b8a4d1412181d665e878bd21994521d59455cc29d39ecb4b38a44fda38facff",
+  "packet_id": "09c336f5-faa1-519a-a375-b4ba18cf2384",
+  "packet_version": "1.0.0",
+  "report_effect": "none",
+  "required_authority": "project-owner",
+  "review_dimensions": [
+    "source_semantics",
+    "anti_double_counting",
+    "single_capability_scope",
+    "unsupported_claim_suppression",
+    "confidence_and_uncertainty",
+    "downstream_handoff",
+    "authority_boundary",
+    "rollback"
+  ],
+  "review_state": "awaiting_human_semantic_review"
+}

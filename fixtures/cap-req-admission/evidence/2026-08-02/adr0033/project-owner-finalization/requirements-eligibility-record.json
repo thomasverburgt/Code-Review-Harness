@@ -1,0 +1,20 @@
+{
+  "artifact_hash": "sha256:99fb774a8754350835a8a7b663f5b755780d19ef83a8907fc8e6ec77400c0cff",
+  "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+  "basis_disposition": "accept_review_as_complete",
+  "cap_synth_scheduled": false,
+  "decision_authority": "derived_from_project_owner_finalization",
+  "derived_at": "2026-08-01T23:30:00Z",
+  "effect": "eligibility_record_only",
+  "eligibility_id": "8d714322-da63-5a15-ad10-bc163424d35d",
+  "finalization_hash": "sha256:4229a3f30bdab19cd9d75c30eae9205e792f4c3c2f85f5d7b04ebbf9c1d164da",
+  "finalization_id": "da097b79-d051-5549-b73a-bd935316ec14",
+  "packet_hash": "sha256:56d6d8cf8f5d651666ecbac424f42c02882c13acb02c427cda8e81fb248d013e",
+  "packet_id": "f7ff7c64-51e8-5a7f-8acf-d5d5c5f504e8",
+  "reason": "project_owner_finalized_acceptance",
+  "record_hash": "sha256:e5f2b73b3a8fbb28732a2c01192155037c34126a29dfa31ca4ade80930333075",
+  "response_hash": "sha256:3cc3817dad00267c64b714726cfaba102dd6abaf10df67afd9c235f767f53338",
+  "response_id": "1c27b946-eed2-54f1-994a-b39f8a12d33b",
+  "rollback_state": "active",
+  "state": "eligible_for_accepted_capability_input"
+}

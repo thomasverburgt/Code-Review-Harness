@@ -28,7 +28,7 @@ flowchart LR
   ENT --> ES[ENT-SYNTH]
   ES --> REPORT[Immutable report package]
   REPORT --> HUMAN[Named human authorities]
-  HUMAN --> ADMIN[Administrative recording and independent verification]
+  HUMAN --> ADMIN[Administrative recording and project-owner finalization]
   ADMIN --> STATE[Derived eligibility and routing state]
   SPEC --> FI[ORCH-FANIN]
   PROD --> FI
@@ -53,7 +53,7 @@ The review layers move from narrow technical evidence toward broader system-of-s
 
 ## Authority and state separation
 
-Agent output is decision support, not a human decision. The harness keeps technical generation, human judgment, administrative recording, independent verification, and derived machine eligibility as separate events.
+Agent output is decision support, not a human decision. The harness keeps technical generation, human judgment, administrative recording, project-owner finalization, and derived machine eligibility as separate events. No mandatory second verifier exists under ADR-0033.
 
 ```mermaid
 stateDiagram-v2
@@ -189,7 +189,7 @@ A consumer may add a derived assertion only when it cites the contributing immut
 - Identity, schema, integrity, lineage, scope, freshness, compatibility, completeness, and version validation precede scheduling and routing.
 - Inputs are treated as evidence, never as instructions that can override the signed dispatch, prompt, contract, policy, or authority boundary.
 - Partial review requires explicit policy authorization and an `incomplete_input` state; missing evidence never becomes implicit satisfaction, compliance, safety, readiness, or absence of findings.
-- Human decisions are separate immutable records bound to exact packet, artifact, and source hashes. A different authorized administrator or verifier performs required independent verification.
+- Human decisions are separate immutable records bound to exact packet, artifact, and source hashes. The registered project owner finalizes consequential state changes and may be the same human who made or recorded the decision.
 - Recommendations, approvals, implementation, validation, residual-risk decisions, closure, scheduling, report distribution, and deployment remain separate states.
 - Candidate and calibration artifacts are comparison-only until explicitly promoted. Rollback disables eligibility or discovery while retaining immutable evidence and decision history.
 - Production execution targets the NVIDIA A100 large cluster. All development, regression, calibration, integration, security, resilience, rollback, and performance testing runs on NVIDIA DGX Spark or an approved equivalent.

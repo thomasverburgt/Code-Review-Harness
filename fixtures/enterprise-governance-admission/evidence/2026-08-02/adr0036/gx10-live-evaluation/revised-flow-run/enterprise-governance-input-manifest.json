@@ -1,0 +1,36 @@
+{
+  "admitted_capability_artifact_ids": [
+    "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  ],
+  "anti_double_counting": "parent_only_children_retained_as_lineage",
+  "cap_synth_candidate": {
+    "hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269",
+    "id": "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  },
+  "cap_synth_eligibility": {
+    "hash": "sha256:62d202ee80b5970e0bbe4e199106bedec7829a7e458bdcfd179f4ffd108cccc9",
+    "id": "5f3e8885-b5df-578c-87b2-c22fab03342c"
+  },
+  "effect": "evaluation_input_only",
+  "ent_evidence_gate": {
+    "hash": "sha256:d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85",
+    "id": "bd699443-a08f-5b39-8015-a3471f95e652"
+  },
+  "evidence_tier": "accepted_live_multi_domain_single_capability_governance_evaluation",
+  "excluded_child_artifact_ids": [
+    "6beec632-8baf-5a58-a4ce-fa14784d8435",
+    "a5ada795-db2f-5625-aed9-1b619411be17"
+  ],
+  "generated_at": "2026-08-02T10:00:00Z",
+  "governance_evidence_manifest": {
+    "hash": "sha256:b0ced7c37e79e8700cc47053a4f95cc952ff42b81c2c1598772dac2e62420b86",
+    "id": "7cf51fb2-ac0a-5aa6-98bf-67f4e3d28980"
+  },
+  "governance_source_manifest": {
+    "hash": "sha256:24ddf6bbf34267ecfaa1b65910ff22dbafd3c92b54020856629d0d9259b69e62",
+    "id": "bace0593-e0ab-5c00-8f37-e5e9b4dac348"
+  },
+  "manifest_hash": "sha256:33c51f4a64b7522e824743b24d8b824ccab23dc3f0d52e602dd46b22a58dda4f",
+  "manifest_id": "b4313c81-f8c9-5f8b-aa60-f59533e4f2c5",
+  "manifest_version": "1.0.0"
+}

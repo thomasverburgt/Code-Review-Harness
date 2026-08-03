@@ -17,7 +17,7 @@
     "distribution_limitations": {"type": "array", "items": {"type": "string"}},
     "approved_at": {"type": "string", "format": "date-time"},
     "recorded_at": {"type": "string", "format": "date-time"},
-    "attestation_state": {"const": "recorded_pending_verification"},
+    "attestation_state": {"enum": ["recorded_pending_verification", "recorded_pending_project_owner_finalization"]},
     "effect": {"const": "record_only"}
   },
   "$defs": {

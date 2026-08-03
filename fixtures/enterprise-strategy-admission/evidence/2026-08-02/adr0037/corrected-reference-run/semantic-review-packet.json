@@ -1,0 +1,49 @@
+{
+  "candidate": {
+    "hash": "sha256:091afdd7c8198101927928432c36ee2b21adcde48a19eec666643f72b05f970f",
+    "id": "dd5598c9-628a-5f24-b974-9f2a53512119"
+  },
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "effect": "review_request_only",
+  "ent_strat_scheduled": false,
+  "generated_at": "2026-08-02T12:00:00Z",
+  "input_manifest": {
+    "hash": "sha256:94901a990b75bb1331b55c4adef1d4eefddf1ce202310d1ae64fdaf5050b85e9",
+    "id": "50c94f68-5abd-58c4-82be-6f5a1c462795"
+  },
+  "packet_hash": "sha256:c8ab4ba64f2ed41ec523e31206ae8447f0d38f3e12523a5be4317bf98fa983dc",
+  "packet_id": "a640de06-f9e1-5263-b928-d453ef860957",
+  "packet_version": "1.0.0",
+  "projection_provenance": {
+    "generation_mode": "deterministic_reference_projection",
+    "harness_owned_fields": [
+      "objective_and_method_authority",
+      "manifest_bindings",
+      "objective_scorecards",
+      "normalization_method",
+      "weighting_model",
+      "confidence_distributions",
+      "sensitivity_analysis",
+      "missing_data_effects",
+      "threshold_context",
+      "strategic_confidence_posture",
+      "composite_score",
+      "authority_boundary"
+    ],
+    "raw_model_response_sha256": null
+  },
+  "report_effect": "none",
+  "required_authority": "project-owner",
+  "review_dimensions": [
+    "source_authority",
+    "objective_preservation",
+    "method_preservation",
+    "capability_evidence",
+    "missingness",
+    "confidence_and_uncertainty",
+    "authority_boundary",
+    "rollback"
+  ],
+  "review_state": "awaiting_human_semantic_review"
+}

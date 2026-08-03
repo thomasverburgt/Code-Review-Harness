@@ -1,0 +1,102 @@
+{
+  "designation": "CAP-SYNTH",
+  "evidence_tier": "accepted_live_multi_domain_candidate_evaluation",
+  "fitness_claim": "multi_domain_candidate_evaluation",
+  "synthesis_basis": {
+    "coordinator_manifest_id": "b586e576-4ee6-5cd1-9aa4-3e11d0d9028d",
+    "coordinator_manifest_hash": "sha256:d3747371d81d001dcb8112e0450388a9058fea171d41c9585bcad4781676860c",
+    "expected_designations": ["CAP-REQ", "CAP-RISK"],
+    "received_artifact_ids": ["6beec632-8baf-5a58-a4ce-fa14784d8435", "a5ada795-db2f-5625-aed9-1b619411be17"],
+    "completeness_state": "complete"
+  },
+  "preserved_child_assertions": [
+    {
+      "source_artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+      "source_record_id": "DC-001",
+      "record_kind": "decision_request",
+      "evidence_refs": [],
+      "preservation_state": "preserved_without_rewrite"
+    },
+    {
+      "source_artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+      "source_record_id": "FINDING-REQ-GAP-001",
+      "record_kind": "finding",
+      "evidence_refs": ["LOCATOR-UDS-0001"],
+      "preservation_state": "preserved_without_rewrite"
+    },
+    {
+      "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "source_record_id": "DC-001",
+      "record_kind": "decision_request",
+      "evidence_refs": [],
+      "preservation_state": "preserved_without_rewrite"
+    },
+    {
+      "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "source_record_id": "FINDING-001",
+      "record_kind": "finding",
+      "evidence_refs": ["UDS-0001"],
+      "preservation_state": "preserved_without_rewrite"
+    },
+    {
+      "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "source_record_id": "RISK-001",
+      "record_kind": "risk",
+      "evidence_refs": ["1e27ed34-d9a5-5309-a876-ab02af8b7d13"],
+      "preservation_state": "preserved_without_rewrite"
+    }
+  ],
+  "derived_capability_assertions": [
+    {
+      "assertion_id": "DERIVED-001",
+      "statement": "The capability posture for CAPABILITY-IDENTITY-ACCESS is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+      "contributing_artifact_ids": ["6beec632-8baf-5a58-a4ce-fa14784d8435", "a5ada795-db2f-5625-aed9-1b619411be17"],
+      "contributing_record_ids": ["FINDING-REQ-GAP-001", "RISK-001"],
+      "derivation_logic": "The absence of declared requirements (FINDING-REQ-GAP-001) prevents any assessment of requirement satisfaction. Additionally, the unresolved risk from a redacted credential-like value (RISK-001) introduces uncertainty about the capability's security posture. These two factors together make the capability posture unassessable.",
+      "assumptions": [
+        "The absence of declared requirements is a critical gap for traceability and evaluation.",
+        "The unresolved redacted credential-like value represents a potential exposure if it is a real secret."
+      ],
+      "alternatives": [
+        "Declare authoritative requirements for the bounded slice to enable traceability.",
+        "Classify the redacted credential-like value as confirmed secret, likely secret, or benign/nonsecret to resolve the risk."
+      ],
+      "confidence": 0.85,
+      "uncertainty": [
+        "The exact impact of the unresolved redacted credential-like value is unknown without further classification.",
+        "Requirement satisfaction cannot be assessed without declared requirements."
+      ]
+    }
+  ],
+  "capability_posture": {
+    "state": "unassessable",
+    "rationale": "The capability posture is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+    "limitations": [
+      "Requirement satisfaction cannot be assessed without declared requirements.",
+      "The unresolved redacted credential-like value introduces uncertainty about the capability's security posture.",
+      "This is a declared one-file calibration slice, not a repository-wide security conclusion.",
+      "The redacted heuristic candidate requires classification and was not validated against a live service."
+    ],
+    "advisory_only": true
+  },
+  "confidence_reconciliation": {
+    "method": "preserve_inputs_and_canonical_assessment",
+    "inputs": [1.0, 0.85],
+    "result": 0.85,
+    "uncertainty": [
+      "The exact impact of the unresolved redacted credential-like value is unknown without further classification.",
+      "Requirement satisfaction cannot be assessed without declared requirements."
+    ]
+  },
+  "enterprise_handoff": {
+    "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+    "artifact_id": "b586e576-4ee6-5cd1-9aa4-3e11d0d9028d",
+    "preserved_record_ids": ["DC-001", "FINDING-REQ-GAP-001", "DC-001", "FINDING-001", "RISK-001"],
+    "derived_assertion_ids": ["DERIVED-001"],
+    "unresolved_conflict_ids": [],
+    "decision_request_ids": ["DC-001", "DC-001"],
+    "intended_consumers": ["ent-evidence", "ent-sysrisk", "CAP-COORD-CANDIDATE"],
+    "handoff_state": "comparison_only"
+  },
+  "decision_authority": "human"
+}

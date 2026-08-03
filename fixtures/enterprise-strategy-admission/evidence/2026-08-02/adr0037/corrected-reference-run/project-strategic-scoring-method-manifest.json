@@ -1,0 +1,53 @@
+{
+  "aggregation": "weighted_mean",
+  "composite_allowed": false,
+  "confidence": "confidence_in_bounded_evidence_insufficiency_not_strategic_approval",
+  "confidence_derivation": {
+    "assessment_confidence": "minimum_observed_source_confidence",
+    "component_confidence": "preserve_source_assessment_confidence",
+    "evidence_coverage": "observed_measure_count_divided_by_eligible_measure_count",
+    "reconciliation": "confidence_applies_to_bounded_insufficiency_not_strategic_approval"
+  },
+  "created_at": "2026-08-02T12:00:00Z",
+  "declared_by": {
+    "authority_name": "thomasverburgt",
+    "authority_registry": {
+      "registry_hash": "sha256:865a1f4f6ea2e3fafd64febbc3005d4b64cef030653efe275c5b02b3d3452d0d",
+      "registry_id": "REPORT-GOVERNANCE-AUTHORITY-REGISTRY",
+      "registry_version": "0.9.0"
+    },
+    "authority_role": "project-owner",
+    "subject_id": "HUMAN-PROJECT-OWNER-001"
+  },
+  "measure_mappings": {
+    "MEASURE-FINDING-LOCATOR-COVERAGE": {
+      "evaluation_rule": "ratio_of_findings_with_resolvable_file_and_location",
+      "mapping_rule_id": "MAP-FINDING-LOCATOR-COVERAGE-001",
+      "missing_when_no_report_finding_records_are_admitted": true
+    },
+    "MEASURE-HUMAN-AUTHORITY": {
+      "evaluation_rule": "all_expected_values_match",
+      "mapping_rule_id": "MAP-HUMAN-AUTHORITY-001",
+      "normalized_value_if_false": 0.0,
+      "normalized_value_if_true": 1.0,
+      "source_locator_ids": [
+        "STRAT-EVID-HUMAN-AUTHORITY",
+        "STRAT-EVID-ADVISORY-ONLY"
+      ]
+    }
+  },
+  "method_hash": "sha256:68fe99e32cee96de65b67c3bffc8f756c8974df821dfb205b475bba5530997fe",
+  "method_id": "4a1d8f5d-423c-5e6e-acf1-e7ad2a21d956",
+  "method_version": "1.0.0",
+  "missingness": "preserve_unknown_no_imputation",
+  "normalization": "identity_0_1",
+  "scope_id": "CODE-HARNESS-PROJECT-001",
+  "sensitivity": {
+    "weight_delta": 0.1
+  },
+  "threshold_context": null,
+  "weights": {
+    "MEASURE-FINDING-LOCATOR-COVERAGE": 0.5,
+    "MEASURE-HUMAN-AUTHORITY": 0.5
+  }
+}

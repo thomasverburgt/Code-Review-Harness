@@ -1,0 +1,46 @@
+{
+  "candidate": {
+    "hash": "sha256:ea730d2b8cea2978c38d99d3702c1d5cbb6cd01c461ac1a5286e0a1eed47b964",
+    "id": "ca22ea90-b911-565a-931f-9a6f39ca265c"
+  },
+  "deployment_effect": "none",
+  "effect": "review_request_only",
+  "ent_synth_scheduled": false,
+  "generated_at": "2026-08-02T16:00:00Z",
+  "input_manifest": {
+    "hash": "sha256:ae723859d7155a1d67b2ebba290d6d5578fce3b9bf8227e14eff018190b5a563",
+    "id": "29dc5ca2-3d43-58f4-b2bb-8427a301a2ba"
+  },
+  "packet_hash": "sha256:af22b414a826d87466216b9a518e311b4c78dfddbd82709b96169301291b0ed5",
+  "packet_id": "622d3763-f624-5264-8465-7ae347e6af6c",
+  "packet_version": "1.0.0",
+  "projection_provenance": {
+    "generation_mode": "model_response_with_harness_owned_synthesis_projection",
+    "harness_owned_fields": [
+      "identity",
+      "exact_bindings",
+      "eligibility_enforcement",
+      "domain_preservation",
+      "limitation_and_source_context_propagation",
+      "completeness",
+      "report_boundary",
+      "authority_boundary",
+      "downstream_state"
+    ],
+    "raw_model_response_sha256": "33d537c3305d7d95068c0ba7a3cd71e7910c1a41bc0bb7ec87e8fc85b0c2433e"
+  },
+  "report_effect": "none",
+  "required_authority": "project-owner",
+  "review_dimensions": [
+    "domain_source_fidelity",
+    "eligibility_and_supersession",
+    "limitation_and_source_context_preservation",
+    "confidence_meaning",
+    "missingness",
+    "unresolved_decisions",
+    "authority_boundary",
+    "report_boundary",
+    "rollback"
+  ],
+  "review_state": "awaiting_human_semantic_review"
+}

@@ -1,0 +1,23 @@
+{
+  "artifact_id": "00f8b5b9-19f9-5a1b-8cd1-3122333f2d55",
+  "artifact_type": "enterprise-architecture-posture",
+  "children": [
+    "bd699443-a08f-5b39-8015-a3471f95e652",
+    "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  ],
+  "consumers": [
+    "ENT-ARCHSTRAT-CANDIDATE",
+    "ENT-TECHDEBT-CANDIDATE",
+    "ENT-MODERNIZE-CANDIDATE",
+    "ENT-SYNTH-CANDIDATE"
+  ],
+  "input_refs": [
+    "bd699443-a08f-5b39-8015-a3471f95e652",
+    "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:4bf6c0ea5f2406effeea5fda742668443de97f6b1672cf52a67fc964e168b001",
+  "parents": [],
+  "peers": [],
+  "producer_designation": "ENT-ARCH"
+}

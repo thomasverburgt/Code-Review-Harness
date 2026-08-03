@@ -1,0 +1,27 @@
+{
+  "adr": "ADR-0038",
+  "boundaries_carried_forward": [
+    "bounded_four_domain_single_capability_evaluation_only",
+    "authoritative_live_complete_means_complete_only_within_declared_test_set",
+    "universal_confidence_1_0_is_projection_fidelity_not_enterprise_readiness",
+    "cross_domain_correlation_quality_not_demonstrated",
+    "comparison_only_no_report_distribution_scheduling_deployment_or_production_authority"
+  ],
+  "deployment_effect": "none",
+  "disposition": "accept_semantically_faithful_for_bounded_integration_evaluation",
+  "disposition_hash": "sha256:69713a8953b030d10e00cf3acb2e5c529c2c342d4c7492084000cc8cc5c16f45",
+  "disposition_id": "ab66b8e5-373c-58cb-80b1-ec42681fe84d",
+  "eligibility_hash": "sha256:bd72d0db1b13adf1c1ef8df056e63b6c11011b466a279fe1a37a26efc6a6742d",
+  "eligibility_id": "9962a86c-2a44-5d8d-b13c-65e3c1428096",
+  "eligibility_state": "eligible_for_enterprise_shadow_integration_evaluation",
+  "ent_synth_scheduled": false,
+  "finalization_hash": "sha256:eabfd1162de0789a55d60f4252af8d31b192e321a5f29f813d6503d3cc6cd852",
+  "finalization_id": "36f3d8dd-eaba-5330-b09e-0552974d831e",
+  "ledger_hashes": [
+    "sha256:956566bc964dc05a8d0327d1013b05d7b77cfee5a22a846276354597e51618fa",
+    "sha256:4988d25c180b3f04fafd46fe22a3da47548da764b702f54e9b097ca1f84076a2",
+    "sha256:89b1873e709417a06bcd2fdebba55e27949d1cb9bc4ab95d9c503582f7f0e161"
+  ],
+  "report_effect": "none",
+  "status": "owner_finalized"
+}

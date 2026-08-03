@@ -1,0 +1,22 @@
+{
+  "candidate_hash": "sha256:ee04f21b04d026cecfc6040568812b32a39c833f8d2b4910ff91e6844aa6d370",
+  "candidate_id": "86456e45-010b-571a-97fb-f78a275320a9",
+  "decision_authority": "derived_from_project_owner_finalization",
+  "deployment_effect": "none",
+  "derived_at": "2026-08-02T11:01:00Z",
+  "disposition_hash": "sha256:1b465d9f7cc884dfa5365665512cab54653c67e2f85c82ac1d2a20e93fbf7b97",
+  "disposition_id": "94161331-c940-51bc-ad08-d7f7e1af1243",
+  "effect": "enterprise_synthesis_evaluation_eligibility_only",
+  "eligibility_id": "eb7281e3-f6f0-5603-9f65-ee4c9d7d08cc",
+  "ent_gov_scheduled": false,
+  "ent_synth_scheduled": false,
+  "finalization_hash": "sha256:8439d5498def6ebf5c6b7cc373dc4ddea86c82ec3ed1f9db6e968a455c42332e",
+  "finalization_id": "16b27673-e2c2-55d0-9c85-72de72ef25b6",
+  "packet_hash": "sha256:869f86a26c52085e3b8ad7df6e04519499cc984a61eed046ac92b635d1d3cc07",
+  "packet_id": "2310362f-43a1-55d0-8243-fa739d01b3b4",
+  "reason": "project_owner_accepted_semantically_faithful",
+  "record_hash": "sha256:1b5be2941ae9ee981a378600305f340545a44e3e8fd07d9de27b828245d5dbd9",
+  "report_effect": "none",
+  "rollback_state": "active",
+  "state": "eligible_for_enterprise_synthesis_candidate_evaluation"
+}

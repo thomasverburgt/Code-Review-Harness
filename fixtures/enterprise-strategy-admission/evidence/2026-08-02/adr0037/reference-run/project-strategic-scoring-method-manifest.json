@@ -1,0 +1,30 @@
+{
+  "aggregation": "weighted_mean",
+  "composite_allowed": false,
+  "confidence": "confidence_in_bounded_evidence_insufficiency_not_strategic_approval",
+  "created_at": "2026-08-02T12:00:00Z",
+  "declared_by": {
+    "authority_name": "thomasverburgt",
+    "authority_registry": {
+      "registry_hash": "sha256:6bfd43e8c308d8075bee0bd92521288ca082a269679c2430d64b787bf8822631",
+      "registry_id": "REPORT-GOVERNANCE-AUTHORITY-REGISTRY",
+      "registry_version": "0.8.0"
+    },
+    "authority_role": "project-owner",
+    "subject_id": "HUMAN-PROJECT-OWNER-001"
+  },
+  "method_hash": "sha256:823dab2dbbc8f334602c56a1ac25863979db23e557fbf3d8d7bd21bac1c46fab",
+  "method_id": "781453ca-dc1c-5d85-a59b-3ace93fc64de",
+  "method_version": "1.0.0",
+  "missingness": "preserve_unknown_no_imputation",
+  "normalization": "identity_0_1",
+  "scope_id": "ENTERPRISE-FIXTURE-001",
+  "sensitivity": {
+    "weight_delta": 0.1
+  },
+  "threshold_context": null,
+  "weights": {
+    "MEASURE-FINDING-LOCATOR-COVERAGE": 0.5,
+    "MEASURE-HUMAN-AUTHORITY": 0.5
+  }
+}

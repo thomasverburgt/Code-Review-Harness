@@ -1,0 +1,25 @@
+vertical slice validation passed: workflow=1; nodes=5; state_machines=4; authority_registries=1; gold_artifacts=5; human_decision_requests=1; report_governance=1
+test_eligibility_is_exact_and_revocation_fails_closed (__main__.AcceptedLiveCapabilitySynthTests.test_eligibility_is_exact_and_revocation_fails_closed) ... ok
+test_enterprise_compatibility_is_comparison_only_and_honest (__main__.AcceptedLiveCapabilitySynthTests.test_enterprise_compatibility_is_comparison_only_and_honest) ... ok
+test_manifest_authorization_and_artifacts_are_exact (__main__.AcceptedLiveCapabilitySynthTests.test_manifest_authorization_and_artifacts_are_exact) ... ok
+test_model_projection_preserves_harness_boundary (__main__.AcceptedLiveCapabilitySynthTests.test_model_projection_preserves_harness_boundary) ... ok
+test_package_is_deterministic_exact_and_unscheduled (__main__.AcceptedLiveCapabilitySynthTests.test_package_is_deterministic_exact_and_unscheduled) ... ok
+test_zero_requirements_remains_unassessable_with_real_lineage (__main__.AcceptedLiveCapabilitySynthTests.test_zero_requirements_remains_unassessable_with_real_lineage) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.042s
+
+OK
+test_authority_and_handoff_changes_fail_closed (__main__.CapabilitySynthAdmissionTests.test_authority_and_handoff_changes_fail_closed) ... ok
+test_candidate_does_not_change_baseline_or_report (__main__.CapabilitySynthAdmissionTests.test_candidate_does_not_change_baseline_or_report) ... ok
+test_evidence_tier_cannot_be_promoted (__main__.CapabilitySynthAdmissionTests.test_evidence_tier_cannot_be_promoted) ... ok
+test_manifest_and_child_mutation_fail_closed (__main__.CapabilitySynthAdmissionTests.test_manifest_and_child_mutation_fail_closed) ... ok
+test_one_domain_live_input_is_protocol_smoke_only (__main__.CapabilitySynthAdmissionTests.test_one_domain_live_input_is_protocol_smoke_only) ... ok
+test_preservation_is_exact_and_invented_lineage_fails (__main__.CapabilitySynthAdmissionTests.test_preservation_is_exact_and_invented_lineage_fails) ... ok
+test_prompt_registry_schema_and_candidate_workflow_are_exact (__main__.CapabilitySynthAdmissionTests.test_prompt_registry_schema_and_candidate_workflow_are_exact) ... ok
+test_reference_is_deterministic_multi_domain_fixture_only (__main__.CapabilitySynthAdmissionTests.test_reference_is_deterministic_multi_domain_fixture_only) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.033s
+
+OK

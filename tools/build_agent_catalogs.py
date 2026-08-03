@@ -39,13 +39,14 @@ def catalog_markdown(data: dict) -> str:
         lines.extend([
             f"## {layer.title()}",
             "",
-            "| Designation | Display name | Status | Contract | Specification |",
-            "|---|---|---|---|---|",
+            "| Designation | Display name | Status | Contract | Specification | Focus profile |",
+            "|---|---|---|---|---|---|",
         ])
         for agent in (item for item in agents if item["layer"] == layer):
             spec = "../" + agent["specification"]
+            focus = "../focus-profiles/" + agent["designation"].lower() + ".json"
             lines.append(
-                f"| `{agent['designation']}` | {agent['display_name']} | `{agent['status']}` | `{agent['contract_version']}` | [role specification]({spec}) |"
+                f"| `{agent['designation']}` | {agent['display_name']} | `{agent['status']}` | `{agent['contract_version']}` | [role specification]({spec}) | [focus]({focus}) |"
             )
         lines.append("")
     return "\n".join(lines)

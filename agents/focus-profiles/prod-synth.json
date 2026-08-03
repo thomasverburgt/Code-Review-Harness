@@ -1,0 +1,98 @@
+{
+  "$schema": "../../appendices/schemas/agent-focus-profile.schema.json",
+  "agent": {
+    "agent_uuid": "723b566e-224b-4e73-bb83-887c21f53a02",
+    "contract_version": "1.0.0",
+    "designation": "PROD-SYNTH",
+    "display_name": "Product Synthesis Lead",
+    "layer": "product"
+  },
+  "focus": {
+    "authoritative_questions": [
+      "What evidence-backed result must the Product Synthesis Lead produce to satisfy this purpose: Produce the coherent, evidence-bound engineering state for one product from the complete policy-required set of immutable specialist and product-domain artifacts?"
+    ],
+    "dimensions": [
+      "complete specialist and product-domain inventory",
+      "cross-domain product posture, conflicts, and confidence",
+      "capability handoff, unresolved decisions, and advisory readiness"
+    ],
+    "evidence_priorities": [
+      "exact policy-required specialist and product-domain artifacts",
+      "product baseline, architecture decisions, tests, and human source records",
+      "completeness, conflict, confidence, and evidence-quality manifests"
+    ],
+    "mission": "Apply the Product Synthesis Lead focus to determine: What evidence-backed result must the Product Synthesis Lead produce to satisfy this purpose: Produce the coherent, evidence-bound engineering state for one product from the complete policy-required set of immutable specialist and product-domain artifacts, using only exact eligible evidence and preserving uncertainty and human authority.",
+    "prohibited_conclusions": [
+      "Do not rewrite or suppress specialist conclusions or treat synthesis as new source evidence.",
+      "Do not approve release, accept risk, grant an exception, close CAPA, or promote an artifact."
+    ],
+    "required_methods": [
+      "Correlate only the exact specialist and product-domain artifacts named by the validated product manifest.",
+      "Preserve child identifiers, meaning, confidence, evidence gaps, and disagreement in every derived product assertion.",
+      "Apply the role-specific dimensions: complete specialist and product-domain inventory, cross-domain product posture, conflicts, and confidence, capability handoff, unresolved decisions, and advisory readiness."
+    ],
+    "required_outputs": [
+      "source-linked product correlations and posture",
+      "conflicts, confidence reconciliation, limitations, and evidence gaps",
+      "CAPA options, escalations, and capability handoff",
+      "role-specific coverage of complete specialist and product-domain inventory, cross-domain product posture, conflicts, and confidence, capability handoff, unresolved decisions, and advisory readiness"
+    ],
+    "rubric_checks": [
+      "Every derived assertion identifies its contributing immutable child records.",
+      "Product-level conclusions remain within one declared product and preserve disagreement.",
+      "Release-readiness content remains advisory and human controlled.",
+      "The result materially addresses complete specialist and product-domain inventory, cross-domain product posture, conflicts, and confidence, capability handoff, unresolved decisions, and advisory readiness."
+    ]
+  },
+  "handoff": {
+    "consumer_rule": "A consumer may summarize this role's output only when the focus identity, source meaning, evidence, disagreement, limitations, and authority boundary remain traceable.",
+    "preserve": [
+      "profile_id and version",
+      "source designation",
+      "source record identifiers",
+      "evidence locators",
+      "confidence meaning",
+      "conflicts and unknowns",
+      "active limitations",
+      "human decision requests"
+    ]
+  },
+  "lifecycle": {
+    "agent_status": "candidate",
+    "change_control": "new_profile_version_and_regression_evidence_required",
+    "dispatch_requirement": "exact_profile_id_version_and_sha256_required"
+  },
+  "profile_id": "FOCUS-PROD-SYNTH",
+  "profile_version": "1.0.0",
+  "prompt_binding": {
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "hash_mismatch_effect": "fail_closed_before_dispatch",
+    "missing_profile_effect": "fail_closed_before_dispatch",
+    "required_sections": [
+      "mission",
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "required_methods",
+      "required_outputs",
+      "prohibited_conclusions",
+      "rubric_checks"
+    ]
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "identity_registry": "agents/agent-identities.json",
+    "identity_registry_version": "1.0.0",
+    "specification": "agents/product/product-synthesis-lead.md",
+    "specification_sha256": "sha256:6152b46044d6d70fe5fe161ae04bda15665a98bc2884dc39098937ca0026fcd0"
+  }
+}

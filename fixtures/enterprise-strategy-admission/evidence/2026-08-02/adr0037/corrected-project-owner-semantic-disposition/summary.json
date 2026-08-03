@@ -1,0 +1,34 @@
+{
+  "adr": "ADR-0037",
+  "deployment_effect": "none",
+  "disposition": "accept_corrected_candidate_as_semantically_faithful",
+  "disposition_hash": "sha256:67a6990f8759acee4fad26c91597a9c1ef813813c8cc1751dee02909e0518738",
+  "disposition_id": "024269c8-38c2-5779-9c5d-6e35d03c48a5",
+  "eligibility_hash": "sha256:7171bbd8aa5b37658229fb1e642d44debe696816f2bdd70222ad994e6f16e12c",
+  "eligibility_id": "be1d1e86-78e7-5c68-94e6-88c570ba526f",
+  "eligibility_state": "eligible_for_enterprise_synthesis_candidate_evaluation",
+  "ent_strat_scheduled": false,
+  "ent_synth_scheduled": false,
+  "finalization_hash": "sha256:58c74786c291c14b80ef64bef9ce86b50a0ff6470bb1826cb22441916ccaf446",
+  "finalization_id": "d7de6aa7-58d1-5ceb-8b0e-25e7595e3d77",
+  "ledger_hashes": [
+    "sha256:bf9665296bcbc880bf102e74c563aaf7a3c2c2441fdebbd3c2b43334554d1678",
+    "sha256:930ab62a5dad268190c229e3f2bb135f9d878a69dbcc21b74285bdfbaa19a1be",
+    "sha256:3dba2110b413bb30f941f40a6adac9624c02fd52d6dd40c8fb01e9074843cc06"
+  ],
+  "limitations_carried_forward": [
+    "single_capability_evidence_scope",
+    "finding_locator_coverage_missing_from_admitted_cap_synth",
+    "no_composite_score_authorized",
+    "comparison_only_no_strategy_investment_or_scheduling_authority",
+    "deterministic_harness_projection_with_raw_response_retained"
+  ],
+  "report_effect": "none",
+  "source_context_carried_forward": [
+    "cap_synth_declared_requirements_absence_remains_unresolved_source_context",
+    "cap_synth_redacted_credential_like_value_remains_unclassified_source_context",
+    "cap_synth_later_promotion_review_request_remains_human_owned",
+    "locator_coverage_requires_admitted_findings_with_resolvable_file_and_location_bindings"
+  ],
+  "status": "owner_finalized"
+}

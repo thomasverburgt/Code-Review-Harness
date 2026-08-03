@@ -1,0 +1,21 @@
+{
+  "adr": "ADR-0034",
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "disposition": "accept_semantically_faithful",
+  "disposition_hash": "sha256:bb53d97c9736cc4df8299b8dab30093b1b2a49926601d6f759784e5af236034c",
+  "disposition_id": "3eec7ec3-d012-57fe-9858-7a870bb10123",
+  "eligibility_hash": "sha256:62d202ee80b5970e0bbe4e199106bedec7829a7e458bdcfd179f4ffd108cccc9",
+  "eligibility_id": "5f3e8885-b5df-578c-87b2-c22fab03342c",
+  "eligibility_state": "eligible_for_enterprise_candidate_evaluation",
+  "enterprise_scheduled": false,
+  "finalization_hash": "sha256:236f5c831697fca262cbe42fe2c27f1018b416ad28aaaaf7faca948dd85ce185",
+  "finalization_id": "09a017fc-b318-5c7a-af3c-1a49022c7ba0",
+  "ledger_hashes": [
+    "sha256:8235fbbc4e8ef62739935c7933d6fc48ffa14e3cd4dbc877ab22922a5a714f10",
+    "sha256:8135aa794c0e97b1848c6e037504368460faea9cda2bd46d3f7ca0cc4ea50fe1",
+    "sha256:f929ce2278d1e3c3d2277894188c7fe91c9ede3ee8cb1d52fc58512a9af0548d"
+  ],
+  "report_effect": "none",
+  "status": "owner_finalized"
+}

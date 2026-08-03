@@ -1,0 +1,309 @@
+{
+  "artifact": {
+    "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+    "artifact_type": "capability-synthesis-posture",
+    "created_at": "2026-08-01T20:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [
+        "6beec632-8baf-5a58-a4ce-fa14784d8435",
+        "a5ada795-db2f-5625-aed9-1b619411be17"
+      ],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [],
+  "confidence": {
+    "assessment": 0.85,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+        "confidence": 0.85
+      },
+      {
+        "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+        "confidence": 1.0
+      }
+    ],
+    "review": 1.0
+  },
+  "conflicts": [],
+  "consumers": [
+    "ENT-ARCH-CANDIDATE-COMPARISON",
+    "ENT-GOV-CANDIDATE-COMPARISON",
+    "ENT-STRAT-CANDIDATE-COMPARISON"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 0
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-CAPSYNTH-001",
+      "question": "Should this candidate proceed to a later promotion review after accepted live multi-domain evidence exists?",
+      "required_authority": "project-maintainer"
+    }
+  ],
+  "execution": {
+    "evidence_tier": "accepted_live_multi_domain_candidate_evaluation",
+    "execution_id": "e368ce4a-8677-5fe4-98ac-2fe3d2437670",
+    "model": "qwen3-32b",
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "capability": {
+      "capability_confidence_score": 0.85,
+      "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+      "capability_risk_posture": {
+        "decision_authority": "human",
+        "state": "undisposed"
+      },
+      "cross_product_interface_state": {},
+      "decision_conflicts": [],
+      "enterprise_escalations": [
+        {
+          "authority": "human",
+          "escalation_id": "6beec632-8baf-5a58-a4ce-fa14784d8435:DC-001"
+        },
+        {
+          "authority": "human",
+          "escalation_id": "a5ada795-db2f-5625-aed9-1b619411be17:DC-001"
+        }
+      ],
+      "human_centered_systems_evaluation": {},
+      "mission_effectiveness_evidence": [],
+      "mission_thread": {},
+      "operational_readiness": {
+        "state": "human_decision_required"
+      },
+      "participating_products": [
+        "PRODUCT-ALPHA"
+      ],
+      "requirement_traceability": {},
+      "role": {
+        "capability_posture": {
+          "advisory_only": true,
+          "limitations": [
+            "Requirement satisfaction cannot be assessed without declared requirements.",
+            "The unresolved redacted credential-like value introduces uncertainty about the capability's security posture.",
+            "This is a declared one-file calibration slice, not a repository-wide security conclusion.",
+            "The redacted heuristic candidate requires classification and was not validated against a live service."
+          ],
+          "rationale": "The capability posture is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+          "state": "unassessable"
+        },
+        "confidence_reconciliation": {
+          "inputs": [
+            1.0,
+            0.85
+          ],
+          "method": "preserve_inputs_and_canonical_assessment",
+          "result": 0.85,
+          "uncertainty": [
+            "The exact impact of the unresolved redacted credential-like value is unknown without further classification.",
+            "Requirement satisfaction cannot be assessed without declared requirements."
+          ]
+        },
+        "decision_authority": "human",
+        "derived_capability_assertions": [
+          {
+            "alternatives": [
+              "Declare authoritative requirements for the bounded slice to enable traceability.",
+              "Classify the redacted credential-like value as confirmed secret, likely secret, or benign/nonsecret to resolve the risk."
+            ],
+            "assertion_id": "DERIVED-001",
+            "assumptions": [
+              "The absence of declared requirements is a critical gap for traceability and evaluation.",
+              "The unresolved redacted credential-like value represents a potential exposure if it is a real secret."
+            ],
+            "confidence": 0.85,
+            "contributing_artifact_ids": [
+              "6beec632-8baf-5a58-a4ce-fa14784d8435",
+              "a5ada795-db2f-5625-aed9-1b619411be17"
+            ],
+            "contributing_record_ids": [
+              "FINDING-REQ-GAP-001",
+              "RISK-001"
+            ],
+            "derivation_logic": "The absence of declared requirements (FINDING-REQ-GAP-001) prevents any assessment of requirement satisfaction. Additionally, the unresolved risk from a redacted credential-like value (RISK-001) introduces uncertainty about the capability's security posture. These two factors together make the capability posture unassessable.",
+            "statement": "The capability posture for CAPABILITY-IDENTITY-ACCESS is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+            "uncertainty": [
+              "The exact impact of the unresolved redacted credential-like value is unknown without further classification.",
+              "Requirement satisfaction cannot be assessed without declared requirements."
+            ]
+          }
+        ],
+        "designation": "CAP-SYNTH",
+        "enterprise_handoff": {
+          "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+          "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+          "decision_request_ids": [
+            "6beec632-8baf-5a58-a4ce-fa14784d8435:DC-001",
+            "a5ada795-db2f-5625-aed9-1b619411be17:DC-001"
+          ],
+          "derived_assertion_ids": [
+            "DERIVED-001"
+          ],
+          "handoff_state": "comparison_only",
+          "intended_consumers": [
+            "ENT-ARCH-CANDIDATE-COMPARISON",
+            "ENT-GOV-CANDIDATE-COMPARISON",
+            "ENT-STRAT-CANDIDATE-COMPARISON"
+          ],
+          "preserved_record_ids": [
+            "6beec632-8baf-5a58-a4ce-fa14784d8435:DC-001",
+            "6beec632-8baf-5a58-a4ce-fa14784d8435:FINDING-REQ-GAP-001",
+            "a5ada795-db2f-5625-aed9-1b619411be17:DC-001",
+            "a5ada795-db2f-5625-aed9-1b619411be17:FINDING-001",
+            "a5ada795-db2f-5625-aed9-1b619411be17:RISK-001"
+          ],
+          "unresolved_conflict_ids": []
+        },
+        "evidence_tier": "accepted_live_multi_domain_candidate_evaluation",
+        "fitness_claim": "multi_domain_candidate_evaluation",
+        "preserved_child_assertions": [
+          {
+            "evidence_refs": [],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "decision_request",
+            "source_artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+            "source_record_id": "DC-001"
+          },
+          {
+            "evidence_refs": [
+              "LOCATOR-UDS-0001"
+            ],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "finding",
+            "source_artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+            "source_record_id": "FINDING-REQ-GAP-001"
+          },
+          {
+            "evidence_refs": [],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "decision_request",
+            "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+            "source_record_id": "DC-001"
+          },
+          {
+            "evidence_refs": [
+              "UDS-0001"
+            ],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "finding",
+            "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+            "source_record_id": "FINDING-001"
+          },
+          {
+            "evidence_refs": [
+              "1e27ed34-d9a5-5309-a876-ab02af8b7d13"
+            ],
+            "preservation_state": "preserved_without_rewrite",
+            "record_kind": "risk",
+            "source_artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+            "source_record_id": "RISK-001"
+          }
+        ],
+        "synthesis_basis": {
+          "completeness_state": "complete",
+          "coordinator_manifest_hash": "sha256:d3747371d81d001dcb8112e0450388a9058fea171d41c9585bcad4781676860c",
+          "coordinator_manifest_id": "b586e576-4ee6-5cd1-9aa4-3e11d0d9028d",
+          "expected_designations": [
+            "CAP-REQ",
+            "CAP-RISK"
+          ],
+          "received_artifact_ids": [
+            "6beec632-8baf-5a58-a4ce-fa14784d8435",
+            "a5ada795-db2f-5625-aed9-1b619411be17"
+          ]
+        }
+      },
+      "technical_confidence_rollup": {
+        "inputs": [
+          1.0,
+          0.85
+        ],
+        "method": "preserve_inputs_and_canonical_assessment",
+        "result": 0.85,
+        "uncertainty": [
+          "The exact impact of the unresolved redacted credential-like value is unknown without further classification.",
+          "Requirement satisfaction cannot be assessed without declared requirements."
+        ]
+      }
+    }
+  },
+  "findings": [],
+  "identity": {
+    "agent_uuid": "ca95161d-d7dc-40b0-b233-fda505b18afe",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "CAP-SYNTH",
+    "display_name": "Capability Synthesis Lead"
+  },
+  "inputs": [
+    {
+      "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:5fc3756ac1e5a5ebc067e2e14a67839b4d8c3f5c120744810bb36ea5299a0727"
+    },
+    {
+      "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:b56be7afa96e29b2106b8faad851688844b1bcfdbb9b706c3d1ffcbfd57ed783"
+    }
+  ],
+  "insights": [
+    {
+      "evidence_refs": [
+        "b586e576-4ee6-5cd1-9aa4-3e11d0d9028d"
+      ],
+      "insight_id": "INSIGHT-CAPSYNTH-001",
+      "statement": "Candidate evidence tier constrains all fitness claims."
+    }
+  ],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:ed4074ccf0a3a890300aa4b7ae6a2587bd5460647144f89fb774f6e3b1ad84bf",
+    "output_hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269",
+    "retention_class": "candidate-test",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "Candidate comparison only",
+      "Evidence tier does not authorize scheduling"
+    ],
+    "method": "preserve-correlate-project"
+  },
+  "observations": [],
+  "patterns": [],
+  "scope": {
+    "capability_id": "CAPABILITY-IDENTITY-ACCESS",
+    "decision_context": "candidate_admission",
+    "excluded": [
+      "baseline scheduling",
+      "reports",
+      "governance",
+      "deployment"
+    ],
+    "included": [
+      "CAP-REQ",
+      "CAP-RISK"
+    ]
+  }
+}

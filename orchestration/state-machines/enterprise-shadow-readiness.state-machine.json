@@ -16,7 +16,7 @@
     {
       "from": "prerequisites_pending",
       "event": "all_external_acceptances_verified",
-      "guard": "every exact prerequisite is accepted, independently verified, fresh, compatible, scope-aligned, and accepted_live_multi_domain",
+      "guard": "every exact prerequisite is accepted, project_owner_finalized, fresh, compatible, scope-aligned, and accepted_live_multi_domain",
       "to": "ready_for_shadow_authorization_review",
       "audit_reason": "Permit a separate human shadow-authorization review only after every prerequisite passes."
     },

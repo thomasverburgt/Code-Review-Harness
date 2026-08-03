@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/project-owner-finalization.schema.json",
+  "title": "Project Owner Finalization Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["finalization_id", "target_record_type", "target_record_id", "target_record_hash", "finalized_on", "finalized_by", "checks", "finalization_state", "decision_authority", "effect", "finalization_hash"],
+  "properties": {
+    "finalization_id": {"type": "string", "format": "uuid"},
+    "target_record_type": {"enum": ["requirements_acceptance_response", "distribution_approval", "external_decision", "semantic_adjudication_response", "domain_acceptance_response", "capability_synthesis_semantic_disposition", "enterprise_architecture_semantic_disposition", "enterprise_governance_semantic_disposition", "enterprise_strategy_semantic_disposition", "enterprise_synthesis_semantic_disposition"]},
+    "target_record_id": {"type": "string", "format": "uuid"},
+    "target_record_hash": {"$ref": "#/$defs/hash"},
+    "finalized_on": {"type": "string", "format": "date"},
+    "finalized_by": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority_role", "authority_name", "subject_id"],
+      "properties": {
+        "authority_role": {"const": "project-owner"},
+        "authority_name": {"type": "string", "minLength": 1},
+        "subject_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_binding", "authority_binding", "record_integrity", "scope_binding"],
+      "properties": {
+        "source_binding": {"type": "boolean"},
+        "authority_binding": {"type": "boolean"},
+        "record_integrity": {"type": "boolean"},
+        "scope_binding": {"type": "boolean"}
+      }
+    },
+    "finalization_state": {"enum": ["finalized", "rejected"]},
+    "decision_authority": {"const": "project_owner"},
+    "effect": {"const": "record_only"},
+    "finalization_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+}

@@ -1,0 +1,42 @@
+{
+  "acknowledged_boundaries": {
+    "comparison_only": true,
+    "no_requirements_satisfaction": true,
+    "no_risk_acceptance": true,
+    "requirements_remain_unassessable": true,
+    "risk_remains_unresolved": true
+  },
+  "candidate_hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269",
+  "candidate_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+  "decided_at": "2026-08-02T07:00:00Z",
+  "decided_by": {
+    "authority_name": "thomasverburgt",
+    "authority_role": "project-owner",
+    "subject_id": "HUMAN-PROJECT-OWNER-001"
+  },
+  "decision_authority": "project_owner",
+  "deployment_effect": "none",
+  "disposition": "accept_semantically_faithful",
+  "disposition_hash": "sha256:bb53d97c9736cc4df8299b8dab30093b1b2a49926601d6f759784e5af236034c",
+  "disposition_id": "3eec7ec3-d012-57fe-9858-7a870bb10123",
+  "effect": "semantic_acceptance_record_only",
+  "packet_hash": "sha256:49b85c84b96ca7d148c067ddaf39cda7970c8008b2656a394b8af4e400d7447f",
+  "packet_id": "3ea2c228-d55f-5d62-bd66-64e0e6037499",
+  "report_effect": "none",
+  "reviewed_dimensions": [
+    "child_assertion_preservation",
+    "cross_domain_derivation",
+    "conflict_and_unknown_preservation",
+    "evidence_sufficiency",
+    "confidence_reconciliation",
+    "enterprise_handoff",
+    "authority_boundary",
+    "rollback"
+  ],
+  "scheduling_authorized": false,
+  "semantic_judgment": {
+    "capability_posture": "unassessable",
+    "confidence_interpretation": "confidence_in_unassessability_not_readiness",
+    "statement": "It is semantically faithful."
+  }
+}

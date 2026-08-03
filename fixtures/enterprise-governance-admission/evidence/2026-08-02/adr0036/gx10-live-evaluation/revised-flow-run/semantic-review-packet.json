@@ -1,0 +1,58 @@
+{
+  "candidate": {
+    "hash": "sha256:ee04f21b04d026cecfc6040568812b32a39c833f8d2b4910ff91e6844aa6d370",
+    "id": "86456e45-010b-571a-97fb-f78a275320a9"
+  },
+  "cap_synth_eligibility": {
+    "hash": "sha256:62d202ee80b5970e0bbe4e199106bedec7829a7e458bdcfd179f4ffd108cccc9",
+    "id": "5f3e8885-b5df-578c-87b2-c22fab03342c"
+  },
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "effect": "review_request_only",
+  "ent_gov_scheduled": false,
+  "generated_at": "2026-08-02T10:00:00Z",
+  "governance_evidence_manifest": {
+    "hash": "sha256:b0ced7c37e79e8700cc47053a4f95cc952ff42b81c2c1598772dac2e62420b86",
+    "id": "7cf51fb2-ac0a-5aa6-98bf-67f4e3d28980"
+  },
+  "governance_source_manifest": {
+    "hash": "sha256:24ddf6bbf34267ecfaa1b65910ff22dbafd3c92b54020856629d0d9259b69e62",
+    "id": "bace0593-e0ab-5c00-8f37-e5e9b4dac348"
+  },
+  "input_manifest": {
+    "hash": "sha256:33c51f4a64b7522e824743b24d8b824ccab23dc3f0d52e602dd46b22a58dda4f",
+    "id": "b4313c81-f8c9-5f8b-aa60-f59533e4f2c5"
+  },
+  "packet_hash": "sha256:869f86a26c52085e3b8ad7df6e04519499cc984a61eed046ac92b635d1d3cc07",
+  "packet_id": "2310362f-43a1-55d0-8243-fa739d01b3b4",
+  "packet_version": "1.0.0",
+  "projection_provenance": {
+    "generation_mode": "model_response_with_harness_owned_governance_projection",
+    "harness_owned_fields": [
+      "governance_baseline",
+      "compliance_matrix",
+      "governance_inconsistencies",
+      "exception_register",
+      "approval_dependencies",
+      "governance_conflicts",
+      "governance_maturity",
+      "capa_options",
+      "authority_boundary"
+    ],
+    "raw_model_response_sha256": "58c56cfd650f34dba9acc4440f1d5f8b803ef13d1d6aa8e28d8afffcaed39d64"
+  },
+  "report_effect": "none",
+  "required_authority": "project-owner",
+  "review_dimensions": [
+    "source_authority",
+    "obligation_preservation",
+    "applicability",
+    "capability_evidence",
+    "missingness",
+    "confidence_and_uncertainty",
+    "authority_boundary",
+    "rollback"
+  ],
+  "review_state": "awaiting_human_semantic_review"
+}

@@ -1,0 +1,45 @@
+{
+  "candidate": {
+    "hash": "sha256:e58f8ad954fe621b4238a33b3e056b2b095f47ee2cc0b7e392c3dd525e159a95",
+    "id": "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  },
+  "cap_req_eligibility": {
+    "hash": "sha256:323982afd0be81f3ed51df460841818b6f5f1d264974d8f636bb03d9c5dbce61",
+    "id": "8b22e9ae-c2b9-5988-8fe9-8a6c77eb3792"
+  },
+  "coordinator_manifest": {
+    "hash": "sha256:d3747371d81d001dcb8112e0450388a9058fea171d41c9585bcad4781676860c",
+    "id": "b586e576-4ee6-5cd1-9aa4-3e11d0d9028d"
+  },
+  "effect": "review_request_only",
+  "generated_at": "2026-08-02T06:00:00Z",
+  "input_artifacts": [
+    {
+      "artifact_hash": "sha256:5fc3756ac1e5a5ebc067e2e14a67839b4d8c3f5c120744810bb36ea5299a0727",
+      "artifact_id": "6beec632-8baf-5a58-a4ce-fa14784d8435",
+      "designation": "CAP-REQ"
+    },
+    {
+      "artifact_hash": "sha256:b56be7afa96e29b2106b8faad851688844b1bcfdbb9b706c3d1ffcbfd57ed783",
+      "artifact_id": "a5ada795-db2f-5625-aed9-1b619411be17",
+      "designation": "CAP-RISK"
+    }
+  ],
+  "packet_hash": "sha256:aae1855f17dc4ba145192033487350966708fa44a40a10fe070e4f15cedddf52",
+  "packet_id": "3ea2c228-d55f-5d62-bd66-64e0e6037499",
+  "packet_version": "1.0.0",
+  "production_effect": "none",
+  "required_authority": "project-owner",
+  "review_dimensions": [
+    "child_assertion_preservation",
+    "cross_domain_derivation",
+    "conflict_and_unknown_preservation",
+    "evidence_sufficiency",
+    "confidence_reconciliation",
+    "enterprise_handoff",
+    "authority_boundary",
+    "rollback"
+  ],
+  "review_state": "awaiting_human_semantic_review",
+  "scheduling_authorized": false
+}

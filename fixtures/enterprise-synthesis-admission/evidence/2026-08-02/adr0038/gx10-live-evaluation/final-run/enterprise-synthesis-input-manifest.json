@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-08-02T16:00:00Z",
+  "gate_artifact_hash": "sha256:b522f33fe52da6a5e642f3a89c52d72fddcc51c51016b1eef9b4b74bf7a00def",
+  "gate_artifact_id": "9f84ac36-ded8-533e-ae4c-17fbef2de108",
+  "inputs": [
+    {
+      "artifact_id": "7d9999b9-4188-592b-a3ca-1d939dbe2fa1",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:5aded426e5604ea65a3622d0e92f5eecf134a3fb479631fa3daae3e3e56f20c5",
+      "designation": "ENT-SYSRISK",
+      "eligibility_hash": null,
+      "eligibility_id": null,
+      "evidence_tier": "accepted_live",
+      "freshness": "fresh",
+      "limitations_carried_forward": [
+        "This is a declared one-file calibration slice, not a repository-wide security conclusion.",
+        "The redacted heuristic candidate requires classification and was not validated against a live service.",
+        "Repository history, runtime configuration, and external secret stores are outside this slice."
+      ],
+      "permitted_use": "authoritative_domain_reference",
+      "schema_version": "1.0.0",
+      "source_context_carried_forward": []
+    },
+    {
+      "artifact_id": "00f8b5b9-19f9-5a1b-8cd1-3122333f2d55",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:321186b8016dde5dee6f4948d5254397a011e6796b0c63ae5bebf49ab2d3faab",
+      "designation": "ENT-ARCH",
+      "eligibility_hash": "sha256:463251fb7f60afea8e21eb30884dd8ee0e5fc7b6ba25ffd9992348a717c81c31",
+      "eligibility_id": "a06c4519-d7c0-5816-9e02-bb7967558c24",
+      "evidence_tier": "accepted_live",
+      "freshness": "fresh",
+      "limitations_carried_forward": [
+        "One capability only",
+        "No cross-capability or target-state inference",
+        "Comparison only"
+      ],
+      "permitted_use": "authoritative_domain_reference",
+      "schema_version": "1.0.0",
+      "source_context_carried_forward": []
+    },
+    {
+      "artifact_id": "86456e45-010b-571a-97fb-f78a275320a9",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:ee04f21b04d026cecfc6040568812b32a39c833f8d2b4910ff91e6844aa6d370",
+      "designation": "ENT-GOV",
+      "eligibility_hash": "sha256:1b5be2941ae9ee981a378600305f340545a44e3e8fd07d9de27b828245d5dbd9",
+      "eligibility_id": "eb7281e3-f6f0-5603-9f65-ee4c9d7d08cc",
+      "evidence_tier": "accepted_live",
+      "freshness": "fresh",
+      "limitations_carried_forward": [
+        "One capability only",
+        "No legal or compliance approval",
+        "Comparison only",
+        "The obligation row and authority boundary are deterministic harness projections; raw model output is retained separately."
+      ],
+      "permitted_use": "authoritative_domain_reference",
+      "schema_version": "1.0.0",
+      "source_context_carried_forward": []
+    },
+    {
+      "artifact_id": "dd5598c9-628a-5f24-b974-9f2a53512119",
+      "authority_owner": "human domain authority",
+      "compatibility": "compatible",
+      "content_hash": "sha256:e9a673ad1e126ccb19d75ee8c73bb142be82370505d0c5ce4cea3bf80190a8e2",
+      "designation": "ENT-STRAT",
+      "eligibility_hash": "sha256:7171bbd8aa5b37658229fb1e642d44debe696816f2bdd70222ad994e6f16e12c",
+      "eligibility_id": "be1d1e86-78e7-5c68-94e6-88c570ba526f",
+      "evidence_tier": "accepted_live",
+      "freshness": "fresh",
+      "limitations_carried_forward": [
+        "One capability only",
+        "No enterprise strategy or investment approval",
+        "Comparison only",
+        "All strategy fields are deterministic harness projections; raw model output is retained separately.",
+        "single_capability_evidence_scope",
+        "finding_locator_coverage_missing_from_admitted_cap_synth",
+        "no_composite_score_authorized",
+        "comparison_only_no_strategy_investment_or_scheduling_authority",
+        "deterministic_harness_projection_with_raw_response_retained"
+      ],
+      "permitted_use": "authoritative_domain_reference",
+      "schema_version": "1.0.0",
+      "source_context_carried_forward": [
+        "cap_synth_declared_requirements_absence_remains_unresolved_source_context",
+        "cap_synth_redacted_credential_like_value_remains_unclassified_source_context",
+        "cap_synth_later_promotion_review_request_remains_human_owned",
+        "locator_coverage_requires_admitted_findings_with_resolvable_file_and_location_bindings"
+      ]
+    }
+  ],
+  "manifest_hash": "sha256:ae723859d7155a1d67b2ebba290d6d5578fce3b9bf8227e14eff018190b5a563",
+  "manifest_id": "29dc5ca2-3d43-58f4-b2bb-8427a301a2ba",
+  "manifest_version": "1.0.0",
+  "scope_id": "CODE-HARNESS-PROJECT-001"
+}

@@ -1,0 +1,505 @@
+{
+  "catalog_version": "1.0.0",
+  "generated_from": [
+    "agents/agent-identities.json",
+    "agents/focus-profiles"
+  ],
+  "profiles": [
+    {
+      "agent_uuid": "298ae38a-0bd3-46f1-8074-35f3356454fc",
+      "designation": "SPEC-ARCH",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-arch.json",
+      "profile_id": "FOCUS-SPEC-ARCH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:c649484558f82d0037890c764b9aa070cabf8121c956b645359ba0076e0f6d4f"
+    },
+    {
+      "agent_uuid": "c6e380a3-8161-45cd-9a05-b2849a5e30a6",
+      "designation": "SPEC-CICD",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-cicd.json",
+      "profile_id": "FOCUS-SPEC-CICD",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:0627b77b073f801e984ec3beb69b3ae9febc11c250c8357694277f85a5691103"
+    },
+    {
+      "agent_uuid": "fca6f659-133a-4bd8-80d1-6bcc2d82b098",
+      "designation": "SPEC-COMMS",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-comms.json",
+      "profile_id": "FOCUS-SPEC-COMMS",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:a6fa5852b1475c4e856879b51da0611d8408069720847923482eaa941b7f257f"
+    },
+    {
+      "agent_uuid": "b7eb144e-eae5-4f91-9789-b606ba2afc95",
+      "designation": "SPEC-CONTAINER",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-container.json",
+      "profile_id": "FOCUS-SPEC-CONTAINER",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:18c476787cb9b10dd3f47439ed17955c902ebce61f31311f139fe11da694e053"
+    },
+    {
+      "agent_uuid": "b7a03aff-6262-407f-b4ce-2eadec82508d",
+      "designation": "SPEC-DATA",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-data.json",
+      "profile_id": "FOCUS-SPEC-DATA",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:aa08f45fc17d6340d57a73287e8a7a157746937475b8b4b127f53460ab29b72e"
+    },
+    {
+      "agent_uuid": "7e7d7710-885a-47c6-af0f-339ed9dad525",
+      "designation": "SPEC-DEPS",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-deps.json",
+      "profile_id": "FOCUS-SPEC-DEPS",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:930cb00d463df5ac1e37978e75d50c029d2477575e732d3c97a7aabef0d1a655"
+    },
+    {
+      "agent_uuid": "15286a2d-5e7f-48e9-b19c-1c2144da0fba",
+      "designation": "SPEC-DIAGRAM",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-diagram.json",
+      "profile_id": "FOCUS-SPEC-DIAGRAM",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:83d33cf943444f6d6f0ac8b8fa2a6d8934ffa0a20049586f3c7e9a193bbfbfb3"
+    },
+    {
+      "agent_uuid": "de17f99f-0ac6-4482-8ec4-3fa9f03ce4ed",
+      "designation": "SPEC-FMECA",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-fmeca.json",
+      "profile_id": "FOCUS-SPEC-FMECA",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:b00d628ba80d0e8b46a3a5938df8f87a4cb8e1b3bd53c0ead263c9c3127ef143"
+    },
+    {
+      "agent_uuid": "09c72dd8-48c0-4a3b-8f48-9adcbe18df94",
+      "designation": "SPEC-IAC",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-iac.json",
+      "profile_id": "FOCUS-SPEC-IAC",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:92d3da0ca7cbf32f6c2daa8db7bdab0e3acaeb0221b73253d849290b74ff8da0"
+    },
+    {
+      "agent_uuid": "da0bc1ae-8e6f-4730-b29c-19ec6544cb7f",
+      "designation": "SPEC-INTEROP",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-interop.json",
+      "profile_id": "FOCUS-SPEC-INTEROP",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:e6ba2c179cd7a30407d09af28ef8de34b7f412e22da15598ded5ae2552229613"
+    },
+    {
+      "agent_uuid": "5801b47f-df7c-47f3-9609-1ecc1fd54c15",
+      "designation": "SPEC-IO",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-io.json",
+      "profile_id": "FOCUS-SPEC-IO",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:6c2b57427d7b1937e28fdf2574e4c692eb46c0d304a1708234afd5e25b75a2bc"
+    },
+    {
+      "agent_uuid": "01596885-15c9-4846-8233-450939791c35",
+      "designation": "SPEC-K8S-PLATFORM",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-k8s-platform.json",
+      "profile_id": "FOCUS-SPEC-K8S-PLATFORM",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:bf2a7d96cc643aea8cc6f9c6720f3bc48683bdd4ab018d4b794ba3ad8dd77983"
+    },
+    {
+      "agent_uuid": "9106ee3d-8959-4a24-b141-c3ab1435583c",
+      "designation": "SPEC-K8S-WORKLOAD",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-k8s-workload.json",
+      "profile_id": "FOCUS-SPEC-K8S-WORKLOAD",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:2396756e9686ec322d9072c1b0b2d09fb33996cc5c90f61ab3883a0fcb37089b"
+    },
+    {
+      "agent_uuid": "d56a9cfd-9dad-4b0c-9b58-4a516ad3ef83",
+      "designation": "SPEC-LINT",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-lint.json",
+      "profile_id": "FOCUS-SPEC-LINT",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:f232d343158fd3c8f52f2ee66a89204cad5a9cf11e89a1b33d6cfa8b34aaae48"
+    },
+    {
+      "agent_uuid": "f4633c67-d94d-440e-bb32-0f243eddafb6",
+      "designation": "SPEC-OBS",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-obs.json",
+      "profile_id": "FOCUS-SPEC-OBS",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:f346df5b918f09f824378d9bdfced512fa8ace9bfa2a3d0ce999960208d0cf05"
+    },
+    {
+      "agent_uuid": "34ec9c9a-97b4-4a69-ab7c-7e2eb5f3632e",
+      "designation": "SPEC-PERF",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-perf.json",
+      "profile_id": "FOCUS-SPEC-PERF",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:8ba05f28ffdfe20515d5f4f88e266d2916b598e7830818c52e14569b90ff36e0"
+    },
+    {
+      "agent_uuid": "55145271-c754-46bc-9da9-26a6d8dcddd7",
+      "designation": "SPEC-RESEARCH",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-research.json",
+      "profile_id": "FOCUS-SPEC-RESEARCH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:abe2e4d74039a01bb98f62394627aaaa687303d60242b12d3969fa742d36dd71"
+    },
+    {
+      "agent_uuid": "3adf20a4-78ed-497f-ae73-52d7ddbe9581",
+      "designation": "SPEC-RISK",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-risk.json",
+      "profile_id": "FOCUS-SPEC-RISK",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:8c6fd98a063afbd45f4496fee291eb5a7eb1e8559fb0a3c7e22b0fbd4827105b"
+    },
+    {
+      "agent_uuid": "25c08f1d-0721-492e-9076-bc9d86e55413",
+      "designation": "SPEC-SBOM",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-sbom.json",
+      "profile_id": "FOCUS-SPEC-SBOM",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:5fef82ebbd76a43063b9d3a846bf64290f8f53cf96206e94d4d4628e6ce96514"
+    },
+    {
+      "agent_uuid": "e753f9e1-b3ff-4149-8b95-b3c073e3777f",
+      "designation": "SPEC-SECRETS",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-secrets.json",
+      "profile_id": "FOCUS-SPEC-SECRETS",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:867293b95177b8482eecda5ccfc962e8e9ecd3411c9e9587198d19d289139f15"
+    },
+    {
+      "agent_uuid": "7497bb23-2340-41d1-9c73-3f0ecd580ab4",
+      "designation": "SPEC-SECURE-CODE",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-secure-code.json",
+      "profile_id": "FOCUS-SPEC-SECURE-CODE",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:6da2409210b680359d7406da9e91f88467e55222e7ff575187749be2d71b085c"
+    },
+    {
+      "agent_uuid": "c201aa58-2464-40f0-b869-670df2ae932f",
+      "designation": "SPEC-SECURITY",
+      "layer": "specialist",
+      "path": "agents/focus-profiles/spec-security.json",
+      "profile_id": "FOCUS-SPEC-SECURITY",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:108e0418d54aaf450a73519807a4226ffa3d5d771d68badc4a3cabfc3f9b8b48"
+    },
+    {
+      "agent_uuid": "6ac72498-b23b-4ff6-9aa6-90df20d38960",
+      "designation": "PROD-ARCH",
+      "layer": "product",
+      "path": "agents/focus-profiles/prod-arch.json",
+      "profile_id": "FOCUS-PROD-ARCH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:a2446308da5d30884d647b38632f337aa942311935b08063ea7974f6ff6ce370"
+    },
+    {
+      "agent_uuid": "794a9104-8738-4f29-8604-3a48118960bc",
+      "designation": "PROD-LINT",
+      "layer": "product",
+      "path": "agents/focus-profiles/prod-lint.json",
+      "profile_id": "FOCUS-PROD-LINT",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:744f5663090f80cc4d0e9a14b145d13483afc1264aaab75bbee6fa848b7a9aff"
+    },
+    {
+      "agent_uuid": "a085d5d0-3431-46a7-8edc-097280a83a48",
+      "designation": "PROD-SEC",
+      "layer": "product",
+      "path": "agents/focus-profiles/prod-sec.json",
+      "profile_id": "FOCUS-PROD-SEC",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:c62eea15215dcac21024b7ff6552a254265d2c74c04f50f7320091bd583d219d"
+    },
+    {
+      "agent_uuid": "723b566e-224b-4e73-bb83-887c21f53a02",
+      "designation": "PROD-SYNTH",
+      "layer": "product",
+      "path": "agents/focus-profiles/prod-synth.json",
+      "profile_id": "FOCUS-PROD-SYNTH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:8435e624abcc7dc21be37e5cfbc0b8b6da7f24533cb7e0540f9cdf1bb6d73112"
+    },
+    {
+      "agent_uuid": "ecc88f14-11ac-47ef-8b04-d36985f0cde3",
+      "designation": "CAP-ARCH",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-arch.json",
+      "profile_id": "FOCUS-CAP-ARCH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:8e5b6f2d85b94aa07f637627af45863a1619a7ab399b9ad9bcb1e52b76c741b4"
+    },
+    {
+      "agent_uuid": "38d55885-5785-4da7-b4a7-94ca65e652e5",
+      "designation": "CAP-COORD",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-coord.json",
+      "profile_id": "FOCUS-CAP-COORD",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:c957685433063c469268ef7f95af645bbbcb7eed385b27f6bcdba71086d444fc"
+    },
+    {
+      "agent_uuid": "0348af7c-afc1-41b1-ab66-9228c3c20c80",
+      "designation": "CAP-GOV",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-gov.json",
+      "profile_id": "FOCUS-CAP-GOV",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:755f3240822887b6f476d05035d2836ec7ce07b3d46d7db568eba8dc9afabbd6"
+    },
+    {
+      "agent_uuid": "a0f77a7e-886b-4229-b3ba-721eebd23163",
+      "designation": "CAP-HCD",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-hcd.json",
+      "profile_id": "FOCUS-CAP-HCD",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:cadf48393eec1255fea0c27695b53df07c2d36bc6f784afcb638e55eea27ef0c"
+    },
+    {
+      "agent_uuid": "99f4586c-a32f-47a3-9a3e-be84cc991976",
+      "designation": "CAP-MISSION",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-mission.json",
+      "profile_id": "FOCUS-CAP-MISSION",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:87a59513886546549929de00f44626a631fc6a7c7233d78715f95721df3dbba9"
+    },
+    {
+      "agent_uuid": "16ab5841-429b-421a-ba5d-ad85c6689d1f",
+      "designation": "CAP-PROGRESS",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-progress.json",
+      "profile_id": "FOCUS-CAP-PROGRESS",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:bfbc4e177937840959ed1fda9b42d2ab0fa7e7af27b64414761dcf2fd823805d"
+    },
+    {
+      "agent_uuid": "9a82a407-38f6-4abe-9ef8-49f0fd256e67",
+      "designation": "CAP-REQ",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-req.json",
+      "profile_id": "FOCUS-CAP-REQ",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:0b8f71f079306083ee71a3a959dfabc4bdd427a37c16cdd8b4dd740c20f738e0"
+    },
+    {
+      "agent_uuid": "147e73eb-9d41-429e-9b63-81a3fe895ec7",
+      "designation": "CAP-RISK",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-risk.json",
+      "profile_id": "FOCUS-CAP-RISK",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:03203532d2fc57b302f968a56bb8dc1715869cbd28f113e07c9bc90764722d0a"
+    },
+    {
+      "agent_uuid": "ca95161d-d7dc-40b0-b233-fda505b18afe",
+      "designation": "CAP-SYNTH",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-synth.json",
+      "profile_id": "FOCUS-CAP-SYNTH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:e5807466ed184794059154874bee3f39d683dc0b4fc75827c59046ddc4460e89"
+    },
+    {
+      "agent_uuid": "0ad458f4-6867-4f64-bb4b-da6946d07c8e",
+      "designation": "CAP-TRADE",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-trade.json",
+      "profile_id": "FOCUS-CAP-TRADE",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:30607a592a830f56fa53f010fa298564043ac2a398b20f7c366a271bd08448bc"
+    },
+    {
+      "agent_uuid": "60de02fe-03eb-4bd3-aaaa-3124b83f957d",
+      "designation": "CAP-XPROD",
+      "layer": "capability",
+      "path": "agents/focus-profiles/cap-xprod.json",
+      "profile_id": "FOCUS-CAP-XPROD",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:fe3e541f6e5ba04d525dfa5399754f893d9eff0ba345d88f602ddce898ddd2f7"
+    },
+    {
+      "agent_uuid": "6f74e6ca-2ae2-4415-8f99-be1aef2bc94a",
+      "designation": "ENT-ARCH",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-arch.json",
+      "profile_id": "FOCUS-ENT-ARCH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:68b823f62ab2ce4c2752510128a49b697554ad3d3d5e5e6b7f2b0995d114cb6a"
+    },
+    {
+      "agent_uuid": "402833e9-02c6-47b4-bc02-12b6e218f77b",
+      "designation": "ENT-ARCHSTRAT",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-archstrat.json",
+      "profile_id": "FOCUS-ENT-ARCHSTRAT",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:cc9f495c6af77a3f42cc296695a46983d2cb9e72ee71d5a0f75b37363806190a"
+    },
+    {
+      "agent_uuid": "f0b5a16b-4075-4f6f-830e-bbd4069e21e4",
+      "designation": "ENT-EVIDENCE",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-evidence.json",
+      "profile_id": "FOCUS-ENT-EVIDENCE",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:79359affa6a7f8fc19477b7af6752c7109b75af45ba2bf94fda831a698f9f393"
+    },
+    {
+      "agent_uuid": "bc12d42a-6837-4084-a419-3d5a14618714",
+      "designation": "ENT-GOV",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-gov.json",
+      "profile_id": "FOCUS-ENT-GOV",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:2a36a14251471fc636a468197dd82e82df2a2394d24e848ac011918aaa751257"
+    },
+    {
+      "agent_uuid": "5f232910-f540-4bf8-ad6e-815442014721",
+      "designation": "ENT-LEARN",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-learn.json",
+      "profile_id": "FOCUS-ENT-LEARN",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:8b04a54c710819671261cecefaec2ac8ca81736d056b1971414c906630075f3e"
+    },
+    {
+      "agent_uuid": "e1c79f4b-1522-46c5-ab1c-0f560b96b476",
+      "designation": "ENT-MATURITY",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-maturity.json",
+      "profile_id": "FOCUS-ENT-MATURITY",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:10dfc8b6f5cf01664cadea260023c5fd83f2294c0a47abde15004ad802203128"
+    },
+    {
+      "agent_uuid": "8e4b2be1-1a1a-4f7b-b276-6866974426e5",
+      "designation": "ENT-MODERNIZE",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-modernize.json",
+      "profile_id": "FOCUS-ENT-MODERNIZE",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:71ed869dc7a6acfb0a50b393019add2cdc2ecde09b150e782d3e7b6fcc6f4b89"
+    },
+    {
+      "agent_uuid": "99ed1a62-72f4-4ac9-9c8b-a3b48475a87e",
+      "designation": "ENT-PORTFOLIO",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-portfolio.json",
+      "profile_id": "FOCUS-ENT-PORTFOLIO",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:6b28872249f30c441ec7e064af0ecd8333b28d31cb9c560441a5e46b18d96c12"
+    },
+    {
+      "agent_uuid": "0275dcd7-ef2d-4535-8b3b-0e6da66ebff6",
+      "designation": "ENT-STRAT",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-strat.json",
+      "profile_id": "FOCUS-ENT-STRAT",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:8d5b1ea341551f752fcb3ba295fa5be61b30683cae90759cacfb1e1ce7110c94"
+    },
+    {
+      "agent_uuid": "a4911647-648f-43fd-a51a-ed60d0d9bdf9",
+      "designation": "ENT-SYNTH",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-synth.json",
+      "profile_id": "FOCUS-ENT-SYNTH",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:8558678bd012d351fff4574f52889d18326db400d46ea0c5d3507374023509fb"
+    },
+    {
+      "agent_uuid": "24763fb8-bde7-4c1b-b6af-f5690958ef27",
+      "designation": "ENT-SYSRISK",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-sysrisk.json",
+      "profile_id": "FOCUS-ENT-SYSRISK",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:acaa9027416b6334874b2a9fcefd9a3d8ffff2fd408a9d5f16c4a4b3eb7bd8f9"
+    },
+    {
+      "agent_uuid": "d9abe7a3-8b0c-4cf6-a584-018a3e44744c",
+      "designation": "ENT-TECHDEBT",
+      "layer": "enterprise",
+      "path": "agents/focus-profiles/ent-techdebt.json",
+      "profile_id": "FOCUS-ENT-TECHDEBT",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:269b8ae3ac8739d8bd2866227ab855bc10fbd1fbf58a6aa754e75b32f4dc36f7"
+    },
+    {
+      "agent_uuid": "3604a171-a17b-4111-b311-97b58e258565",
+      "designation": "WORK-ANALYZE",
+      "layer": "work",
+      "path": "agents/focus-profiles/work-analyze.json",
+      "profile_id": "FOCUS-WORK-ANALYZE",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:ca30feb2fe19c4dce6d507a67f17e4fac68e21dd49f6a78632632fb5f181bb49"
+    },
+    {
+      "agent_uuid": "bd6f200e-e01e-4025-8ef3-be63c511f54e",
+      "designation": "WORK-REVIEW",
+      "layer": "work",
+      "path": "agents/focus-profiles/work-review.json",
+      "profile_id": "FOCUS-WORK-REVIEW",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:a1a219506c3caf6802c00587140dd50dac86ade4bfd79fc8fd1047bf122d9f6e"
+    },
+    {
+      "agent_uuid": "8488b6f9-eb33-4479-899f-707dc9c2fac0",
+      "designation": "WORK-SUMMARIZE",
+      "layer": "work",
+      "path": "agents/focus-profiles/work-summarize.json",
+      "profile_id": "FOCUS-WORK-SUMMARIZE",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:cf90669df8d0cf168569acd594e5c79a5ee790820d20248be25d5e7fd39b935a"
+    },
+    {
+      "agent_uuid": "907b26fd-7cfb-4254-8c32-0bec8467ff76",
+      "designation": "ORCH-FANIN",
+      "layer": "orchestration",
+      "path": "agents/focus-profiles/orch-fanin.json",
+      "profile_id": "FOCUS-ORCH-FANIN",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:c965c11edff32819ee183be3012f9cd2f53650efa163bf81cee1ebb24d31e632"
+    },
+    {
+      "agent_uuid": "d5c6c5e3-a373-4f6b-b4fa-0ccd724ea88d",
+      "designation": "ORCH-FANOUT",
+      "layer": "orchestration",
+      "path": "agents/focus-profiles/orch-fanout.json",
+      "profile_id": "FOCUS-ORCH-FANOUT",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:bf9112f47e36c3c58db27f50974be08651fd434a04fe7cb9ee3ff94b1a76036d"
+    },
+    {
+      "agent_uuid": "c48c1f0f-ba69-414d-9606-5401373f9da8",
+      "designation": "ORCH-SCHED",
+      "layer": "orchestration",
+      "path": "agents/focus-profiles/orch-sched.json",
+      "profile_id": "FOCUS-ORCH-SCHED",
+      "profile_version": "1.0.0",
+      "sha256": "sha256:0071bfb08d2aa74931bf971abff27053028bce787c9eab8b3509e210fe8ee687"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

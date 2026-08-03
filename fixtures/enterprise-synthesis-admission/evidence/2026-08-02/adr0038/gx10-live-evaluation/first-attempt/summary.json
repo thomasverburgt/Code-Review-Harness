@@ -1,0 +1,14 @@
+{
+  "candidate_status": "candidate",
+  "deployment_effect": "none",
+  "designation": "ENT-SYNTH",
+  "error": "vLLM transport failure: timed out",
+  "error_type": "RetryableAdapterError",
+  "passed": false,
+  "production_target": "A100 large cluster",
+  "report_effect": "none",
+  "scheduled": false,
+  "status": "failed_closed",
+  "suite": "ent-synth-accepted-live-bounded-domain-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

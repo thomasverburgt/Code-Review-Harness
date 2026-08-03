@@ -1,0 +1,43 @@
+{
+  "acknowledged_boundaries": {
+    "comparison_only": true,
+    "no_compliance_determination": true,
+    "no_enterprise_governance_maturity_claim": true,
+    "no_exception_or_approval_authority": true,
+    "no_policy_change": true,
+    "single_capability_only": true
+  },
+  "candidate_hash": "sha256:ee04f21b04d026cecfc6040568812b32a39c833f8d2b4910ff91e6844aa6d370",
+  "candidate_id": "86456e45-010b-571a-97fb-f78a275320a9",
+  "decided_at": "2026-08-02T11:00:00Z",
+  "decided_by": {
+    "authority_name": "thomasverburgt",
+    "authority_role": "project-owner",
+    "subject_id": "HUMAN-PROJECT-OWNER-001"
+  },
+  "decision_authority": "project_owner",
+  "deployment_effect": "none",
+  "disposition": "accept_semantically_faithful",
+  "disposition_hash": "sha256:1b465d9f7cc884dfa5365665512cab54653c67e2f85c82ac1d2a20e93fbf7b97",
+  "disposition_id": "94161331-c940-51bc-ad08-d7f7e1af1243",
+  "effect": "semantic_acceptance_record_only",
+  "packet_hash": "sha256:869f86a26c52085e3b8ad7df6e04519499cc984a61eed046ac92b635d1d3cc07",
+  "packet_id": "2310362f-43a1-55d0-8243-fa739d01b3b4",
+  "report_effect": "none",
+  "reviewed_dimensions": [
+    "source_authority",
+    "obligation_preservation",
+    "applicability",
+    "capability_evidence",
+    "missingness",
+    "confidence_and_uncertainty",
+    "authority_boundary",
+    "rollback"
+  ],
+  "scheduling_authorized": false,
+  "semantic_judgment": {
+    "confidence_interpretation": "confidence_in_bounded_evidence_insufficiency_not_compliance",
+    "governance_posture": "insufficient_evidence",
+    "statement": "Revised packet checks out."
+  }
+}

@@ -4,85 +4,85 @@ Generated from [`agent-identities.json`](../agent-identities.json). Do not edit 
 
 ## Specialist
 
-| Designation | Display name | Status | Contract | Specification |
-|---|---|---|---|---|
-| `SPEC-ARCH` | Architecture Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/architecture-reviewer.md) |
-| `SPEC-CICD` | CI/CD Pipeline Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/cicd-pipeline-reviewer.md) |
-| `SPEC-COMMS` | Workload Communication Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/workload-communication-security-reviewer.md) |
-| `SPEC-CONTAINER` | Container and Image Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/container-image-security-reviewer.md) |
-| `SPEC-DATA` | Data Architecture and Information Management Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/data-architecture-information-reviewer.md) |
-| `SPEC-DEPS` | Dependency Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/dependency-reviewer.md) |
-| `SPEC-DIAGRAM` | Diagram and Design-Model Reviewer | `seed` | `1.0.0` | [role specification](../specialists/diagram-design-model-reviewer.md) |
-| `SPEC-FMECA` | Reliability, Resilience, and FMECA Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/reliability-resilience-fmeca-reviewer.md) |
-| `SPEC-IAC` | Infrastructure-as-Code Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/infrastructure-as-code-reviewer.md) |
-| `SPEC-INTEROP` | Interoperability and Integration Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/interoperability-integration-reviewer.md) |
-| `SPEC-IO` | I/O and Resource Interaction Reviewer | `seed` | `1.0.0` | [role specification](../specialists/io-resource-interaction-reviewer.md) |
-| `SPEC-K8S-PLATFORM` | Kubernetes Platform Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/kubernetes-platform-security-reviewer.md) |
-| `SPEC-K8S-WORKLOAD` | Kubernetes Workload Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/kubernetes-workload-security-reviewer.md) |
-| `SPEC-LINT` | Linter and Code Quality Reviewer | `seed` | `1.0.0` | [role specification](../specialists/linter-code-quality-reviewer.md) |
-| `SPEC-OBS` | Observability Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/observability-reviewer.md) |
-| `SPEC-PERF` | Performance and Scalability Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/performance-scalability-reviewer.md) |
-| `SPEC-RESEARCH` | Research and Product-Store Agent | `seed` | `1.0.0` | [role specification](../specialists/research-product-store-agent.md) |
-| `SPEC-RISK` | Product Risk Reviewer | `seed` | `1.0.0` | [role specification](../specialists/product-risk-reviewer.md) |
-| `SPEC-SBOM` | Software Composition and SBOM Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/software-composition-sbom.md) |
-| `SPEC-SECRETS` | Secrets Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/secrets-reviewer.md) |
-| `SPEC-SECURE-CODE` | Secure Coding Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/secure-coding-reviewer.md) |
-| `SPEC-SECURITY` | Security Posture Reviewer | `seed` | `1.0.0` | [role specification](../specialists/security-posture-reviewer.md) |
+| Designation | Display name | Status | Contract | Specification | Focus profile |
+|---|---|---|---|---|---|
+| `SPEC-ARCH` | Architecture Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/architecture-reviewer.md) | [focus](../focus-profiles/spec-arch.json) |
+| `SPEC-CICD` | CI/CD Pipeline Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/cicd-pipeline-reviewer.md) | [focus](../focus-profiles/spec-cicd.json) |
+| `SPEC-COMMS` | Workload Communication Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/workload-communication-security-reviewer.md) | [focus](../focus-profiles/spec-comms.json) |
+| `SPEC-CONTAINER` | Container and Image Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/container-image-security-reviewer.md) | [focus](../focus-profiles/spec-container.json) |
+| `SPEC-DATA` | Data Architecture and Information Management Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/data-architecture-information-reviewer.md) | [focus](../focus-profiles/spec-data.json) |
+| `SPEC-DEPS` | Dependency Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/dependency-reviewer.md) | [focus](../focus-profiles/spec-deps.json) |
+| `SPEC-DIAGRAM` | Diagram and Design-Model Reviewer | `seed` | `1.0.0` | [role specification](../specialists/diagram-design-model-reviewer.md) | [focus](../focus-profiles/spec-diagram.json) |
+| `SPEC-FMECA` | Reliability, Resilience, and FMECA Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/reliability-resilience-fmeca-reviewer.md) | [focus](../focus-profiles/spec-fmeca.json) |
+| `SPEC-IAC` | Infrastructure-as-Code Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/infrastructure-as-code-reviewer.md) | [focus](../focus-profiles/spec-iac.json) |
+| `SPEC-INTEROP` | Interoperability and Integration Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/interoperability-integration-reviewer.md) | [focus](../focus-profiles/spec-interop.json) |
+| `SPEC-IO` | I/O and Resource Interaction Reviewer | `seed` | `1.0.0` | [role specification](../specialists/io-resource-interaction-reviewer.md) | [focus](../focus-profiles/spec-io.json) |
+| `SPEC-K8S-PLATFORM` | Kubernetes Platform Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/kubernetes-platform-security-reviewer.md) | [focus](../focus-profiles/spec-k8s-platform.json) |
+| `SPEC-K8S-WORKLOAD` | Kubernetes Workload Security Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/kubernetes-workload-security-reviewer.md) | [focus](../focus-profiles/spec-k8s-workload.json) |
+| `SPEC-LINT` | Linter and Code Quality Reviewer | `seed` | `1.0.0` | [role specification](../specialists/linter-code-quality-reviewer.md) | [focus](../focus-profiles/spec-lint.json) |
+| `SPEC-OBS` | Observability Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/observability-reviewer.md) | [focus](../focus-profiles/spec-obs.json) |
+| `SPEC-PERF` | Performance and Scalability Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/performance-scalability-reviewer.md) | [focus](../focus-profiles/spec-perf.json) |
+| `SPEC-RESEARCH` | Research and Product-Store Agent | `seed` | `1.0.0` | [role specification](../specialists/research-product-store-agent.md) | [focus](../focus-profiles/spec-research.json) |
+| `SPEC-RISK` | Product Risk Reviewer | `seed` | `1.0.0` | [role specification](../specialists/product-risk-reviewer.md) | [focus](../focus-profiles/spec-risk.json) |
+| `SPEC-SBOM` | Software Composition and SBOM Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/software-composition-sbom.md) | [focus](../focus-profiles/spec-sbom.json) |
+| `SPEC-SECRETS` | Secrets Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/secrets-reviewer.md) | [focus](../focus-profiles/spec-secrets.json) |
+| `SPEC-SECURE-CODE` | Secure Coding Reviewer | `baseline` | `1.0.0` | [role specification](../specialists/secure-coding-reviewer.md) | [focus](../focus-profiles/spec-secure-code.json) |
+| `SPEC-SECURITY` | Security Posture Reviewer | `seed` | `1.0.0` | [role specification](../specialists/security-posture-reviewer.md) | [focus](../focus-profiles/spec-security.json) |
 
 ## Product
 
-| Designation | Display name | Status | Contract | Specification |
-|---|---|---|---|---|
-| `PROD-ARCH` | Product Architecture Synthesizer | `planned` | `1.0.0` | [role specification](../product/product-architecture-synthesizer.md) |
-| `PROD-LINT` | Product Quality Synthesizer | `planned` | `1.0.0` | [role specification](../product/product-quality-synthesizer.md) |
-| `PROD-SEC` | Product Security Synthesizer | `planned` | `1.0.0` | [role specification](../product/product-security-synthesizer.md) |
-| `PROD-SYNTH` | Product Synthesis Lead | `candidate` | `1.0.0` | [role specification](../product/product-synthesis-lead.md) |
+| Designation | Display name | Status | Contract | Specification | Focus profile |
+|---|---|---|---|---|---|
+| `PROD-ARCH` | Product Architecture Synthesizer | `planned` | `1.0.0` | [role specification](../product/product-architecture-synthesizer.md) | [focus](../focus-profiles/prod-arch.json) |
+| `PROD-LINT` | Product Quality Synthesizer | `planned` | `1.0.0` | [role specification](../product/product-quality-synthesizer.md) | [focus](../focus-profiles/prod-lint.json) |
+| `PROD-SEC` | Product Security Synthesizer | `planned` | `1.0.0` | [role specification](../product/product-security-synthesizer.md) | [focus](../focus-profiles/prod-sec.json) |
+| `PROD-SYNTH` | Product Synthesis Lead | `candidate` | `1.0.0` | [role specification](../product/product-synthesis-lead.md) | [focus](../focus-profiles/prod-synth.json) |
 
 ## Capability
 
-| Designation | Display name | Status | Contract | Specification |
-|---|---|---|---|---|
-| `CAP-ARCH` | Capability Architecture Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-architecture-reviewer.md) |
-| `CAP-COORD` | Capability Coordinator | `baseline` | `1.0.0` | [role specification](../capability/capability-coordinator.md) |
-| `CAP-GOV` | Capability Governance Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-governance-reviewer.md) |
-| `CAP-HCD` | Human-Centered Design Evaluator | `baseline` | `1.0.0` | [role specification](../capability/human-centered-design-evaluator.md) |
-| `CAP-MISSION` | Mission Thread Analysis Agent | `baseline` | `1.0.0` | [role specification](../capability/mission-thread-analysis-agent.md) |
-| `CAP-PROGRESS` | Capability Progress and Readiness Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-progress-readiness-reviewer.md) |
-| `CAP-REQ` | Requirements Traceability Reviewer | `candidate` | `1.0.0` | [role specification](../capability/requirements-traceability-reviewer.md) |
-| `CAP-RISK` | Capability Risk Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-risk-reviewer.md) |
-| `CAP-SYNTH` | Capability Synthesis Lead | `candidate` | `1.0.0` | [role specification](../capability/capability-synthesis-lead.md) |
-| `CAP-TRADE` | Capability Trade-Study Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-trade-study-reviewer.md) |
-| `CAP-XPROD` | Cross-Product Reviewer | `baseline` | `1.0.0` | [role specification](../capability/cross-product-reviewer.md) |
+| Designation | Display name | Status | Contract | Specification | Focus profile |
+|---|---|---|---|---|---|
+| `CAP-ARCH` | Capability Architecture Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-architecture-reviewer.md) | [focus](../focus-profiles/cap-arch.json) |
+| `CAP-COORD` | Capability Coordinator | `baseline` | `1.0.0` | [role specification](../capability/capability-coordinator.md) | [focus](../focus-profiles/cap-coord.json) |
+| `CAP-GOV` | Capability Governance Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-governance-reviewer.md) | [focus](../focus-profiles/cap-gov.json) |
+| `CAP-HCD` | Human-Centered Design Evaluator | `baseline` | `1.0.0` | [role specification](../capability/human-centered-design-evaluator.md) | [focus](../focus-profiles/cap-hcd.json) |
+| `CAP-MISSION` | Mission Thread Analysis Agent | `baseline` | `1.0.0` | [role specification](../capability/mission-thread-analysis-agent.md) | [focus](../focus-profiles/cap-mission.json) |
+| `CAP-PROGRESS` | Capability Progress and Readiness Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-progress-readiness-reviewer.md) | [focus](../focus-profiles/cap-progress.json) |
+| `CAP-REQ` | Requirements Traceability Reviewer | `candidate` | `1.0.0` | [role specification](../capability/requirements-traceability-reviewer.md) | [focus](../focus-profiles/cap-req.json) |
+| `CAP-RISK` | Capability Risk Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-risk-reviewer.md) | [focus](../focus-profiles/cap-risk.json) |
+| `CAP-SYNTH` | Capability Synthesis Lead | `candidate` | `1.0.0` | [role specification](../capability/capability-synthesis-lead.md) | [focus](../focus-profiles/cap-synth.json) |
+| `CAP-TRADE` | Capability Trade-Study Reviewer | `baseline` | `1.0.0` | [role specification](../capability/capability-trade-study-reviewer.md) | [focus](../focus-profiles/cap-trade.json) |
+| `CAP-XPROD` | Cross-Product Reviewer | `baseline` | `1.0.0` | [role specification](../capability/cross-product-reviewer.md) | [focus](../focus-profiles/cap-xprod.json) |
 
 ## Enterprise
 
-| Designation | Display name | Status | Contract | Specification |
-|---|---|---|---|---|
-| `ENT-ARCH` | Systems Architecture Reviewer | `candidate` | `1.0.0` | [role specification](../enterprise/systems-architecture-reviewer.md) |
-| `ENT-ARCHSTRAT` | Architecture Strategy Agent | `planned` | `1.0.0` | [role specification](../enterprise/architecture-strategy-agent.md) |
-| `ENT-EVIDENCE` | Evidence Validation Gate | `baseline` | `1.0.0` | [role specification](../enterprise/evidence-validation-gate.md) |
-| `ENT-GOV` | Enterprise Governance Reviewer | `candidate` | `1.0.0` | [role specification](../enterprise/enterprise-governance-reviewer.md) |
-| `ENT-LEARN` | Learning and Metrics Agent | `planned` | `1.0.0` | [role specification](../enterprise/learning-metrics-agent.md) |
-| `ENT-MATURITY` | Maturity Evaluator | `planned` | `1.0.0` | [role specification](../enterprise/maturity-evaluator.md) |
-| `ENT-MODERNIZE` | Investment and Modernization Advisor | `planned` | `1.0.0` | [role specification](../enterprise/investment-modernization-advisor.md) |
-| `ENT-PORTFOLIO` | Portfolio Analysis Agent | `planned` | `1.0.0` | [role specification](../enterprise/portfolio-analysis-agent.md) |
-| `ENT-STRAT` | Strategic Scoring Agent | `candidate` | `1.0.0` | [role specification](../enterprise/strategic-scoring-agent.md) |
-| `ENT-SYNTH` | Enterprise Synthesis Agent | `candidate` | `1.0.0` | [role specification](../enterprise/enterprise-synthesis-agent.md) |
-| `ENT-SYSRISK` | Systemic Risk Reviewer | `baseline` | `1.0.0` | [role specification](../enterprise/systemic-risk-reviewer.md) |
-| `ENT-TECHDEBT` | Technical Debt Prioritizer | `planned` | `1.0.0` | [role specification](../enterprise/technical-debt-prioritizer.md) |
+| Designation | Display name | Status | Contract | Specification | Focus profile |
+|---|---|---|---|---|---|
+| `ENT-ARCH` | Systems Architecture Reviewer | `candidate` | `1.0.0` | [role specification](../enterprise/systems-architecture-reviewer.md) | [focus](../focus-profiles/ent-arch.json) |
+| `ENT-ARCHSTRAT` | Architecture Strategy Agent | `planned` | `1.0.0` | [role specification](../enterprise/architecture-strategy-agent.md) | [focus](../focus-profiles/ent-archstrat.json) |
+| `ENT-EVIDENCE` | Evidence Validation Gate | `baseline` | `1.0.0` | [role specification](../enterprise/evidence-validation-gate.md) | [focus](../focus-profiles/ent-evidence.json) |
+| `ENT-GOV` | Enterprise Governance Reviewer | `candidate` | `1.0.0` | [role specification](../enterprise/enterprise-governance-reviewer.md) | [focus](../focus-profiles/ent-gov.json) |
+| `ENT-LEARN` | Learning and Metrics Agent | `planned` | `1.0.0` | [role specification](../enterprise/learning-metrics-agent.md) | [focus](../focus-profiles/ent-learn.json) |
+| `ENT-MATURITY` | Maturity Evaluator | `planned` | `1.0.0` | [role specification](../enterprise/maturity-evaluator.md) | [focus](../focus-profiles/ent-maturity.json) |
+| `ENT-MODERNIZE` | Investment and Modernization Advisor | `planned` | `1.0.0` | [role specification](../enterprise/investment-modernization-advisor.md) | [focus](../focus-profiles/ent-modernize.json) |
+| `ENT-PORTFOLIO` | Portfolio Analysis Agent | `planned` | `1.0.0` | [role specification](../enterprise/portfolio-analysis-agent.md) | [focus](../focus-profiles/ent-portfolio.json) |
+| `ENT-STRAT` | Strategic Scoring Agent | `candidate` | `1.0.0` | [role specification](../enterprise/strategic-scoring-agent.md) | [focus](../focus-profiles/ent-strat.json) |
+| `ENT-SYNTH` | Enterprise Synthesis Agent | `candidate` | `1.0.0` | [role specification](../enterprise/enterprise-synthesis-agent.md) | [focus](../focus-profiles/ent-synth.json) |
+| `ENT-SYSRISK` | Systemic Risk Reviewer | `baseline` | `1.0.0` | [role specification](../enterprise/systemic-risk-reviewer.md) | [focus](../focus-profiles/ent-sysrisk.json) |
+| `ENT-TECHDEBT` | Technical Debt Prioritizer | `planned` | `1.0.0` | [role specification](../enterprise/technical-debt-prioritizer.md) | [focus](../focus-profiles/ent-techdebt.json) |
 
 ## Work
 
-| Designation | Display name | Status | Contract | Specification |
-|---|---|---|---|---|
-| `WORK-ANALYZE` | Evidence Analysis Worker | `planned` | `1.0.0` | [role specification](../work/evidence-analysis-worker.md) |
-| `WORK-REVIEW` | Evidence Review Worker | `planned` | `1.0.0` | [role specification](../work/evidence-review-worker.md) |
-| `WORK-SUMMARIZE` | Evidence Summarization Worker | `planned` | `1.0.0` | [role specification](../work/evidence-summarization-worker.md) |
+| Designation | Display name | Status | Contract | Specification | Focus profile |
+|---|---|---|---|---|---|
+| `WORK-ANALYZE` | Evidence Analysis Worker | `planned` | `1.0.0` | [role specification](../work/evidence-analysis-worker.md) | [focus](../focus-profiles/work-analyze.json) |
+| `WORK-REVIEW` | Evidence Review Worker | `planned` | `1.0.0` | [role specification](../work/evidence-review-worker.md) | [focus](../focus-profiles/work-review.json) |
+| `WORK-SUMMARIZE` | Evidence Summarization Worker | `planned` | `1.0.0` | [role specification](../work/evidence-summarization-worker.md) | [focus](../focus-profiles/work-summarize.json) |
 
 ## Orchestration
 
-| Designation | Display name | Status | Contract | Specification |
-|---|---|---|---|---|
-| `ORCH-FANIN` | Artifact Aggregation Controller | `planned` | `1.0.0` | [role specification](../orchestration/artifact-aggregation-controller.md) |
-| `ORCH-FANOUT` | Parallel Dispatch Controller | `planned` | `1.0.0` | [role specification](../orchestration/parallel-dispatch-controller.md) |
-| `ORCH-SCHED` | Contract Scheduler | `planned` | `1.0.0` | [role specification](../orchestration/contract-scheduler.md) |
+| Designation | Display name | Status | Contract | Specification | Focus profile |
+|---|---|---|---|---|---|
+| `ORCH-FANIN` | Artifact Aggregation Controller | `planned` | `1.0.0` | [role specification](../orchestration/artifact-aggregation-controller.md) | [focus](../focus-profiles/orch-fanin.json) |
+| `ORCH-FANOUT` | Parallel Dispatch Controller | `planned` | `1.0.0` | [role specification](../orchestration/parallel-dispatch-controller.md) | [focus](../focus-profiles/orch-fanout.json) |
+| `ORCH-SCHED` | Contract Scheduler | `planned` | `1.0.0` | [role specification](../orchestration/contract-scheduler.md) | [focus](../focus-profiles/orch-sched.json) |

@@ -1,0 +1,21 @@
+{
+  "artifact_id": "dd5598c9-628a-5f24-b974-9f2a53512119",
+  "artifact_type": "enterprise-strategic-confidence",
+  "children": [
+    "bd699443-a08f-5b39-8015-a3471f95e652",
+    "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  ],
+  "consumers": [
+    "ENT-SYNTH-CANDIDATE",
+    "ENT-PORTFOLIO-CANDIDATE"
+  ],
+  "input_refs": [
+    "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+    "enterprise-strategy-input-manifest"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:9326cd2e698a64edd4c837c83efac69092d107ba8557316cb7e2baac7e19c857",
+  "parents": [],
+  "peers": [],
+  "producer_designation": "ENT-STRAT"
+}

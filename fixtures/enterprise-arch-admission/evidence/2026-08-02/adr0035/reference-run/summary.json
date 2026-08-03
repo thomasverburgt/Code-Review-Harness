@@ -1,0 +1,28 @@
+{
+  "adr": "ADR-0035",
+  "anti_double_counting": "parent_only_children_retained_as_lineage",
+  "baseline_route": "CAP-RISK -> ENT-EVIDENCE -> ENT-SYSRISK",
+  "candidate_hash": "sha256:39686e3020efc651a5a1082a1189b1fcd8f2656e8e04d9278fe5d81949b213c9",
+  "candidate_id": "00f8b5b9-19f9-5a1b-8cd1-3122333f2d55",
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "ent_arch_scheduled": false,
+  "evidence_tier": "accepted_live_multi_domain_single_capability_evaluation",
+  "fitness_claim": "single_capability_architecture_evaluation",
+  "input_manifest_hash": "sha256:5b6631a8f9556272daa41fab7c320e94ee54ff965222fa0c0e6cf86e68b48972",
+  "input_manifest_id": "b61c82a0-9b20-5827-84b2-283b5e229417",
+  "ledger_hashes": [
+    "sha256:efff2cd26b8d02d80277168912711f012a970e929de957352c9851c18a031293",
+    "sha256:7a57167fdb4e7d2772eb3bb79ecbbf6c0fa27cb2b2c3b85eb5fce24c20d2f05d",
+    "sha256:a60a3a67ebaa7aa566527fd072bee124c68ca4c6a920ab864679889a6eff5ed1",
+    "sha256:c1b07dfb2d85862836d6d794296751cd41916cca5428402bec2da0a53eda266a"
+  ],
+  "package_kind": "deterministic_reference_comparison",
+  "production_target": "A100 large cluster",
+  "report_effect": "none",
+  "semantic_acceptance": "awaiting_project_owner_review",
+  "semantic_review_packet_hash": "sha256:4b8a4d1412181d665e878bd21994521d59455cc29d39ecb4b38a44fda38facff",
+  "semantic_review_packet_id": "09c336f5-faa1-519a-a375-b4ba18cf2384",
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

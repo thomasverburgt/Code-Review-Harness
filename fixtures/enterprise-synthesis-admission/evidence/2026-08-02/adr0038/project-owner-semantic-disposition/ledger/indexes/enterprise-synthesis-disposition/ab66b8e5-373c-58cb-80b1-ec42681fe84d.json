@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-synthesis-disposition",
+  "logical_path": "enterprise-synthesis-dispositions/ab66b8e5-373c-58cb-80b1-ec42681fe84d.json",
+  "object_hash": "sha256:956566bc964dc05a8d0327d1013b05d7b77cfee5a22a846276354597e51618fa",
+  "record_id": "ab66b8e5-373c-58cb-80b1-ec42681fe84d",
+  "retention_class": "architecture-evidence"
+}

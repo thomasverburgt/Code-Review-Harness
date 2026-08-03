@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "artifact",
+  "logical_path": "artifacts/9a0edab2-f80a-5179-a311-1975988ad252.json",
+  "object_hash": "sha256:1177352df0ed0ad728491f4befa99a3b1280e01605f70ba4120be2b8e1df1acd",
+  "record_id": "9a0edab2-f80a-5179-a311-1975988ad252",
+  "retention_class": "candidate-test"
+}

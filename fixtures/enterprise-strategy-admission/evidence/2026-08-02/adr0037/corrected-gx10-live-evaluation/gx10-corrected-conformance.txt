@@ -1,0 +1,9 @@
+ADR-0037 corrected ENT-STRAT scoped conformance
+Platform: GX-10, DGX Spark equivalent
+Date: 2026-08-02
+
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.130s
+
+OK

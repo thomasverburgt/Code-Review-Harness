@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-strategy-eligibility",
+  "logical_path": "enterprise-strategy-eligibility/be1d1e86-78e7-5c68-94e6-88c570ba526f.json",
+  "object_hash": "sha256:3dba2110b413bb30f941f40a6adac9624c02fd52d6dd40c8fb01e9074843cc06",
+  "record_id": "be1d1e86-78e7-5c68-94e6-88c570ba526f",
+  "retention_class": "architecture-evidence"
+}

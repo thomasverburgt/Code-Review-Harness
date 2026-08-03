@@ -81,6 +81,7 @@ def build_manifest(artifacts: list[dict[str, Any]], expected_designations: list[
                    capability_id: str = "CAPABILITY-IDENTITY-ACCESS",
                    freshness: dict[str, str] | None = None, compatibility: dict[str, str] | None = None,
                    partial_input_authorization: dict[str, Any] | None = None,
+                   accepted_input_authorizations: list[dict[str, Any]] | None = None,
                    calibration_scope: str = "single_domain_mechanical_calibration") -> dict[str, Any]:
     if not expected_designations or len(expected_designations) != len(set(expected_designations)):
         raise ValidationFailure("expected capability designations must be non-empty and unique")
@@ -142,6 +143,21 @@ def build_manifest(artifacts: list[dict[str, Any]], expected_designations: list[
         route_state = "blocked"
     else:
         route_state = "ready_for_cap_synth"
+    authorization_records = copy.deepcopy(accepted_input_authorizations or [])
+    if authorization_records:
+        seen_authorizations: set[str] = set()
+        for authorization in authorization_records:
+            designation = authorization.get("designation")
+            if designation in seen_authorizations:
+                raise ValidationFailure(f"duplicate accepted-input authorization: {designation}")
+            seen_authorizations.add(designation)
+            artifact = by_designation.get(designation)
+            if artifact is None:
+                raise ValidationFailure(f"accepted-input authorization names undeclared input: {designation}")
+            if (authorization.get("artifact_id"), authorization.get("artifact_hash")) != (
+                    artifact["artifact"]["artifact_id"], artifact["integrity"]["output_hash"]):
+                raise ValidationFailure(f"accepted-input authorization artifact mismatch: {designation}")
+        authorization_records.sort(key=lambda item: item["designation"])
     manifest_id = _stable_uuid(capability_id, *expected, *[item["output_hash"] for item in received_inputs])
     manifest: dict[str, Any] = {
         "manifest_id": manifest_id, "manifest_version": "1.0.0", "generated_at": GENERATED_AT,
@@ -160,6 +176,8 @@ def build_manifest(artifacts: list[dict[str, Any]], expected_designations: list[
         "decision_authority": "human", "effect": "validation_and_routing_only",
         "integrity": {"input_hash": content_hash(received_inputs), "manifest_hash": "sha256:" + "0" * 64},
     }
+    if authorization_records:
+        manifest["accepted_input_authorizations"] = authorization_records
     material = copy.deepcopy(manifest)
     material["integrity"]["manifest_hash"] = None
     manifest["integrity"]["manifest_hash"] = content_hash(material)
@@ -187,6 +205,11 @@ def validate_for_cap_synth(manifest: dict[str, Any], artifacts: list[dict[str, A
     declared = sorted((item["designation"], item["artifact_id"], item["output_hash"]) for item in manifest["received_inputs"])
     if actual != declared:
         raise ValidationFailure("CAP-SYNTH artifacts do not match the coordinator manifest")
+    authorizations = manifest.get("accepted_input_authorizations", [])
+    received = {item["designation"]: (item["artifact_id"], item["output_hash"]) for item in manifest["received_inputs"]}
+    for authorization in authorizations:
+        if received.get(authorization["designation"]) != (authorization["artifact_id"], authorization["artifact_hash"]):
+            raise ValidationFailure("CAP-SYNTH accepted-input authorization mismatch")
     if content_hash(manifest["received_inputs"]) != manifest["integrity"]["input_hash"]:
         raise ValidationFailure("CAP-SYNTH manifest input hash mismatch")
 

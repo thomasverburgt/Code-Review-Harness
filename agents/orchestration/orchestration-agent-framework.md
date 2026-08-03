@@ -35,5 +35,5 @@ The registered orchestration roles are planned control-plane roles. The reposito
 - Dispatches use immutable inputs and least-privilege evidence, model, tool, credential, network, filesystem, and output permissions.
 - Fan-in validates schema, integrity, lineage, provenance, freshness, coverage, compatibility, conflicts, CAPA structure, authority, and partial-input state before routing.
 - Orchestration cannot alter a review conclusion, average away disagreement, waive a human gate, make an engineering or governance decision, accept risk, approve release, or promote an artifact.
-- Human decisions, administrative recording, independent verification, eligibility derivation, distribution, scheduling, and deployment remain distinct events with immutable audit records.
+- Human decisions, administrative recording, project-owner finalization, eligibility derivation, distribution, scheduling, and deployment remain distinct events with immutable audit records. ADR-0033 removes any mandatory second-person verifier.
 - Production dispatch targets the NVIDIA A100 large cluster. Every test dispatch targets NVIDIA DGX Spark or an approved equivalent; mode/platform mismatch fails closed and promotion retains the signed environment delta and rollback evidence.

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "as_of": "2026-08-01",
+  "as_of": "2026-08-02",
   "projection_authority": "derived_only",
   "enterprise_shadow_state": "blocked_as_designed",
   "baseline_route": "ENT-EVIDENCE -> ENT-SYSRISK",
@@ -9,37 +9,43 @@
       "id": "ADR0016-SEMANTIC-ADJUDICATION",
       "state": "pending_external_decision",
       "source": "fixtures/product-synth-admission/evidence/2026-08-01/semantic-adjudication-adr0016/reference-run/semantic-adjudication-packet.json",
-      "remaining_gate": "enterprise-risk-acceptance-authority response and independent verification"
+      "remaining_gate": "enterprise-risk-acceptance-authority response and project-owner finalization"
     },
     {
       "id": "ADR0020-REQUIREMENTS-ACCEPTANCE",
-      "state": "response_recorded_pending_independent_verification",
-      "source": "fixtures/cap-req-admission/evidence/2026-08-01/adr0020/human-response",
-      "remaining_gate": "independent governance-records-verifier verification"
+      "state": "owner_finalized_eligible_for_accepted_capability_input",
+      "source": "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization-corrected/requirements-eligibility-record.json",
+      "remaining_gate": "none_for_cap_req_acceptance; CAP-SYNTH remains separately unscheduled"
+    },
+    {
+      "id": "CAP-SYNTH-ACCEPTED-LIVE-MULTI-DOMAIN",
+      "state": "owner_finalized_eligible_for_enterprise_candidate_evaluation",
+      "source": "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/project-owner-semantic-disposition/enterprise-evaluation-eligibility.json",
+      "remaining_gate": "none_for_semantic_acceptance; later scheduling requires a separate ADR"
     },
     {
       "id": "ENT-ARCH-LIVE-MULTI-DOMAIN",
-      "state": "missing_accepted_live_evidence",
-      "source": "adr/0021-enterprise-registry-truth-and-architecture-candidate-admission.md",
-      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+      "state": "owner_finalized_eligible_for_enterprise_synthesis_candidate_evaluation",
+      "source": "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/project-owner-semantic-disposition/enterprise-synthesis-evaluation-eligibility.json",
+      "remaining_gate": "none_for_semantic_acceptance; later scheduling requires a separate ADR"
     },
     {
       "id": "ENT-GOV-LIVE-MULTI-DOMAIN",
-      "state": "missing_accepted_live_evidence",
-      "source": "adr/0022-authoritative-governance-source-boundary-and-ent-gov-candidate-admission.md",
-      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+      "state": "owner_finalized_eligible_for_enterprise_synthesis_candidate_evaluation",
+      "source": "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/project-owner-semantic-disposition/enterprise-synthesis-evaluation-eligibility.json",
+      "remaining_gate": "none_for_semantic_acceptance; later scheduling requires a separate ADR"
     },
     {
       "id": "ENT-STRAT-LIVE-MULTI-DOMAIN",
-      "state": "missing_accepted_live_evidence",
-      "source": "adr/0023-human-controlled-strategic-objectives-and-scoring-boundary.md",
-      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+      "state": "corrected_candidate_owner_finalized_eligible_for_enterprise_synthesis_candidate_evaluation",
+      "source": "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-project-owner-semantic-disposition/enterprise-synthesis-evaluation-eligibility.json",
+      "remaining_gate": "none_for_adr0038_candidate_input; prior accepted candidate remains historical and superseded"
     },
     {
       "id": "ENT-SYNTH-LIVE-MULTI-DOMAIN",
-      "state": "missing_accepted_live_evidence",
-      "source": "adr/0024-enterprise-synthesis-provenance-and-release-boundary.md",
-      "remaining_gate": "accepted-live multi-domain semantic evaluation"
+      "state": "owner_finalized_eligible_for_bounded_enterprise_shadow_integration_evaluation",
+      "source": "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/project-owner-semantic-disposition/enterprise-shadow-integration-eligibility.json",
+      "remaining_gate": "separate bounded integration design and decision; scheduling remains unauthorized"
     }
   ],
   "effects": {
@@ -49,4 +55,3 @@
     "production_changed": false
   }
 }
-

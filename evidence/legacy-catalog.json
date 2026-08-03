@@ -3,13 +3,13 @@
   "catalog_version": "1.0.0",
   "packages": [
     {
-      "file_count": 26,
-      "inventory_sha256": "sha256:48431348589f9d7d4ce65ee93fff21ef4c643edadb164b1a4ae9a7faa7957354",
+      "file_count": 41,
+      "inventory_sha256": "sha256:5a513ddacdb8a0147cc8c18476023ef0e78989028b174923be5441b2637b5fd3",
       "legacy_root": "fixtures/cap-req-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "cap-req-admission",
-      "total_bytes": 67749
+      "total_bytes": 80274
     },
     {
       "file_count": 8,
@@ -21,31 +21,31 @@
       "total_bytes": 16344
     },
     {
-      "file_count": 16,
-      "inventory_sha256": "sha256:a7c999ca651ad446956df06ba50dbb92a7386f8240c25289637c75f7c32dd7e6",
+      "file_count": 63,
+      "inventory_sha256": "sha256:d644f0f49b367ab54ba4cedbd5a40c88bc30eca7ae0b43aaf5cef0c3eb04a281",
       "legacy_root": "fixtures/capability-synth-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "capability-synth-admission",
-      "total_bytes": 63931
+      "total_bytes": 215326
     },
     {
-      "file_count": 14,
-      "inventory_sha256": "sha256:058109e6361f41a1f301c24eb0ccb3e4360e7db611fd88b074a0a2e7d9ee9635",
+      "file_count": 84,
+      "inventory_sha256": "sha256:ac415e1526a1bba266697ea71c901b37ab04ed19b9cb20692cb0d10a86c9d803",
       "legacy_root": "fixtures/enterprise-arch-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "enterprise-arch-admission",
-      "total_bytes": 70542
+      "total_bytes": 268974
     },
     {
-      "file_count": 12,
-      "inventory_sha256": "sha256:06f95d1fc319344ad333ef243134f9bf0cd6a2f82d0548a8e2f52b7746d80dfc",
+      "file_count": 101,
+      "inventory_sha256": "sha256:376516a6ccaef6c02855a559cc10ae911906bceba812c0d633b2df4ec614f62b",
       "legacy_root": "fixtures/enterprise-governance-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "enterprise-governance-admission",
-      "total_bytes": 66605
+      "total_bytes": 310284
     },
     {
       "file_count": 6,
@@ -57,22 +57,22 @@
       "total_bytes": 12221
     },
     {
-      "file_count": 11,
-      "inventory_sha256": "sha256:33954feaffd9a13562197e89c497a5ed4245d306d3292758c3d6d043c2bce53b",
+      "file_count": 82,
+      "inventory_sha256": "sha256:b861e240fe60b927c6476038de7ce9602e705284d4314b70a0e29a82014776d9",
       "legacy_root": "fixtures/enterprise-strategy-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "enterprise-strategy-admission",
-      "total_bytes": 39087
+      "total_bytes": 250406
     },
     {
-      "file_count": 10,
-      "inventory_sha256": "sha256:14eb402fb3926b53972d8b220fc5297600653b935ce1e4d89b134a6ef3ba71de",
+      "file_count": 74,
+      "inventory_sha256": "sha256:b63c1b7efadb5c318865b49ef71d450d3c3b672eaa33d40789e10ae06133c253",
       "legacy_root": "fixtures/enterprise-synthesis-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "enterprise-synthesis-admission",
-      "total_bytes": 52519
+      "total_bytes": 521098
     },
     {
       "file_count": 11,

@@ -45,6 +45,8 @@ The agent platform baseline is governed by the [Agent Naming and Identity Standa
 
 The project's governing principles are documented in [Project Philosophy](docs/philosophy.md): evidence over opinion, immutable artifacts, human decision authority, traceability by default, explainable assessment, CAPA discipline, explicit confidence, bounded automation, and reviewability.
 
+The [Code Review Harness FAQ](docs/code-harness-faq.md) provides a detailed leadership and technical explanation of the harness, including shadow integration, prompt derivation, focus-area enforcement, context compression, evidence, governance, performance, and the philosophy behind the architecture.
+
 ## Contributing and governance
 
 Contributions are welcome under the process in [CONTRIBUTING.md](CONTRIBUTING.md). The project uses Developer Certificate of Origin sign-offs, human review of AI-assisted contributions, [CODEOWNERS](CODEOWNERS), [project governance](GOVERNANCE.md), a [Code of Conduct](CODE_OF_CONDUCT.md), and private vulnerability reporting described in [SECURITY.md](SECURITY.md).

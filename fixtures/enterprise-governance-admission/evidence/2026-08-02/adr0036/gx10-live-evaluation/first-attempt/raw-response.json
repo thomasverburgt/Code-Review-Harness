@@ -1,0 +1,56 @@
+{
+  "designation": "ENT-GOV",
+  "evidence_tier": "accepted_live_multi_domain_single_capability_governance_evaluation",
+  "fitness_claim": "single_capability_governance_evaluation",
+  "manifest_binding": {
+    "gate_artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+    "gate_artifact_hash": "sha256:d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85",
+    "capability_artifact_ids": ["0cbe961f-82da-5cf5-92bd-2674c07459ef"],
+    "capability_artifact_hashes": ["sha256:95d9fa9fe7b6b521c4677ede284ffc18a95e5a3b6ae4d2db6231bb39018baae8"],
+    "governance_manifest_id": "bace0593-e0ab-5c00-8f37-e5e9b4dac348",
+    "governance_manifest_hash": "sha256:2219eb5c17ffc28738a31295e4d3f0cbb1206d723d0b8d5daed7deedf81d2897",
+    "binding_state": "exact"
+  },
+  "governance_baseline": [
+    {
+      "source_id": "GOVSRC-HARNESS-OWNER-001",
+      "obligation_id": "GOV-AGENT-AUTH-001",
+      "classification": "authoritative",
+      "applicability": "applicable",
+      "source_locator": "GOVERNANCE.md:13",
+      "source_hash": "sha256:ca65902220a178ed3228c9613700cec9f6d964dab8706d66909922270f5970d5"
+    }
+  ],
+  "compliance_matrix": [
+    {
+      "row_id": "GOV-AGENT-AUTH-001-001",
+      "source_id": "GOVSRC-HARNESS-OWNER-001",
+      "obligation_id": "GOV-AGENT-AUTH-001",
+      "capability_artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+      "state": "insufficient_evidence",
+      "rationale": "The capability posture is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value.",
+      "evidence_refs": ["6beec632-8baf-5a58-a4ce-fa14784d8435:FINDING-REQ-GAP-001", "a5ada795-db2f-5625-aed9-1b619411be17:RISK-001"],
+      "applicability_determination_id": "GOVAPP-ADR36-001",
+      "confidence": 0.85,
+      "uncertainty": "The exact impact of the unresolved redacted credential-like value is unknown without further classification."
+    }
+  ],
+  "governance_inconsistencies": [],
+  "exception_register": [],
+  "approval_dependencies": [],
+  "governance_conflicts": [],
+  "governance_maturity": {
+    "state": "insufficient_evidence",
+    "advisory_only": true,
+    "rationale": "The capability posture is unassessable due to the absence of declared requirements and unresolved risk from a redacted credential-like value."
+  },
+  "capa_options": [],
+  "decision_requests": [],
+  "unsupported_claims": [],
+  "downstream_handoff": {
+    "consumers": ["ENT-STRAT-CANDIDATE","ENT-SYNTH-CANDIDATE"],
+    "handoff_state": "comparison_only",
+    "scheduled": false
+  },
+  "decision_authority": "human"
+}

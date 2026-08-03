@@ -1,0 +1,26 @@
+{
+  "artifact_hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269",
+  "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+  "baseline_workflow_changed": false,
+  "candidate_status": "candidate",
+  "deployment_effect": "none",
+  "designation": "CAP-SYNTH",
+  "evidence_tier": "accepted_live_multi_domain_candidate_evaluation",
+  "fitness_claim": "multi_domain_candidate_evaluation",
+  "passed": true,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "417e900de64585f64c00c9f7784f7cdf322337c3ba94add1ea54774748095fa5",
+  "report_changed": false,
+  "scheduled": false,
+  "semantic_acceptance": "awaiting_project_owner_review",
+  "semantic_review_packet_hash": "sha256:49b85c84b96ca7d148c067ddaf39cda7970c8008b2656a394b8af4e400d7447f",
+  "semantic_review_packet_id": "3ea2c228-d55f-5d62-bd66-64e0e6037499",
+  "status": "complete",
+  "suite": "cap-synth-accepted-live-multi-domain-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 9106,
+    "output_tokens": 1546
+  }
+}

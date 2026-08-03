@@ -4,12 +4,16 @@ from pathlib import Path
 
 
 CANONICAL_TEXT_SUFFIXES = {".json", ".md", ".txt", ".yaml", ".yml"}
+CANONICAL_TEXT_NAMES = {".gitkeep"}
 
 
 def canonical_file_bytes(path: Path) -> bytes:
     """Return stable catalog bytes across LF and CRLF worktrees."""
     data = path.read_bytes()
-    if path.suffix.lower() not in CANONICAL_TEXT_SUFFIXES or b"\x00" in data:
+    if (
+        path.suffix.lower() not in CANONICAL_TEXT_SUFFIXES
+        and path.name.lower() not in CANONICAL_TEXT_NAMES
+    ) or b"\x00" in data:
         return data
     try:
         text = data.decode("utf-8")

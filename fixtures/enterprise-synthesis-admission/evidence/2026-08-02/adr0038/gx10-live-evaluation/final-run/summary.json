@@ -1,0 +1,22 @@
+{
+  "artifact_hash": "sha256:ea730d2b8cea2978c38d99d3702c1d5cbb6cd01c461ac1a5286e0a1eed47b964",
+  "artifact_id": "ca22ea90-b911-565a-931f-9a6f39ca265c",
+  "candidate_status": "candidate",
+  "deployment_effect": "none",
+  "designation": "ENT-SYNTH",
+  "packet_hash": "sha256:af22b414a826d87466216b9a518e311b4c78dfddbd82709b96169301291b0ed5",
+  "packet_id": "622d3763-f624-5264-8465-7ae347e6af6c",
+  "passed": true,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "33d537c3305d7d95068c0ba7a3cd71e7910c1a41bc0bb7ec87e8fc85b0c2433e",
+  "report_effect": "none",
+  "scheduled": false,
+  "status": "complete",
+  "suite": "ent-synth-accepted-live-bounded-domain-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 7696,
+    "output_tokens": 5104
+  }
+}

@@ -1,0 +1,9 @@
+test_authoritative_baseline_and_report_are_unchanged (__main__.EnterpriseArchSemanticAcceptanceTests.test_authoritative_baseline_and_report_are_unchanged) ... ok
+test_eligibility_is_synthesis_evaluation_only_and_unscheduled (__main__.EnterpriseArchSemanticAcceptanceTests.test_eligibility_is_synthesis_evaluation_only_and_unscheduled) ... ok
+test_exact_corrected_candidate_is_owner_finalized (__main__.EnterpriseArchSemanticAcceptanceTests.test_exact_corrected_candidate_is_owner_finalized) ... ok
+test_mutation_and_revocation_fail_closed (__main__.EnterpriseArchSemanticAcceptanceTests.test_mutation_and_revocation_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.015s
+
+OK

@@ -1,0 +1,18 @@
+{
+  "baseline_workflow_changed": false,
+  "candidate_status": "candidate",
+  "deployment_effect": "none",
+  "designation": "CAP-SYNTH",
+  "error": "required model credential environment variable is unavailable: VLLM_API_KEY",
+  "error_type": "WorkerError",
+  "evidence_tier": "accepted_live_multi_domain_candidate_evaluation",
+  "fitness_claim": "multi_domain_candidate_evaluation",
+  "passed": false,
+  "production_target": "A100 large cluster",
+  "report_changed": false,
+  "scheduled": false,
+  "semantic_acceptance": "awaiting_project_owner_review",
+  "status": "failed_closed",
+  "suite": "cap-synth-accepted-live-multi-domain-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

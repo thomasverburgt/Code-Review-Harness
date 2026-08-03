@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-governance-input",
+  "logical_path": "enterprise-governance-inputs/c2a0a75e-143b-55b3-a1ea-a9224dfa4b16.json",
+  "object_hash": "sha256:94b1352b573d77073310976ccd6700d5bde8360845454601a9fba303c50a9be0",
+  "record_id": "c2a0a75e-143b-55b3-a1ea-a9224dfa4b16",
+  "retention_class": "architecture-evidence"
+}

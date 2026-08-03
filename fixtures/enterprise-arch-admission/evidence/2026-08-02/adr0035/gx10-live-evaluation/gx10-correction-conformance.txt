@@ -1,0 +1,28 @@
+vertical slice validation passed: workflow=1; nodes=5; state_machines=4; authority_registries=1; gold_artifacts=5; human_decision_requests=1; report_governance=1
+test_candidate_workflow_is_registered_and_owner_gated (__main__.AcceptedLiveEnterpriseArchTests.test_candidate_workflow_is_registered_and_owner_gated) ... ok
+test_child_decision_ids_are_source_qualified_and_unique (__main__.AcceptedLiveEnterpriseArchTests.test_child_decision_ids_are_source_qualified_and_unique) ... ok
+test_gate_names_cap_synth_not_inherited_cap_risk (__main__.AcceptedLiveEnterpriseArchTests.test_gate_names_cap_synth_not_inherited_cap_risk) ... ok
+test_missing_mutated_or_revoked_eligibility_fails_closed (__main__.AcceptedLiveEnterpriseArchTests.test_missing_mutated_or_revoked_eligibility_fails_closed) ... ok
+test_model_projection_remains_harness_owned_and_exact (__main__.AcceptedLiveEnterpriseArchTests.test_model_projection_remains_harness_owned_and_exact) ... ok
+test_package_is_deterministic_exact_and_unscheduled (__main__.AcceptedLiveEnterpriseArchTests.test_package_is_deterministic_exact_and_unscheduled) ... ok
+test_parent_only_admission_prevents_double_counting (__main__.AcceptedLiveEnterpriseArchTests.test_parent_only_admission_prevents_double_counting) ... ok
+test_rollback_and_authoritative_files_are_unchanged (__main__.AcceptedLiveEnterpriseArchTests.test_rollback_and_authoritative_files_are_unchanged) ... ok
+test_single_capability_scope_suppresses_unsupported_claims (__main__.AcceptedLiveEnterpriseArchTests.test_single_capability_scope_suppresses_unsupported_claims) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.100s
+
+OK
+test_authority_and_downstream_are_comparison_only (__main__.EnterpriseArchAdmissionTests.test_authority_and_downstream_are_comparison_only) ... ok
+test_baseline_report_and_cap_req_gate_unchanged (__main__.EnterpriseArchAdmissionTests.test_baseline_report_and_cap_req_gate_unchanged) ... ok
+test_deterministic_fixture_candidate_exact_binding (__main__.EnterpriseArchAdmissionTests.test_deterministic_fixture_candidate_exact_binding) ... ok
+test_layer_role_and_workflow_schemas (__main__.EnterpriseArchAdmissionTests.test_layer_role_and_workflow_schemas) ... ok
+test_live_single_capability_is_protocol_only (__main__.EnterpriseArchAdmissionTests.test_live_single_capability_is_protocol_only) ... ok
+test_missing_extra_mutated_or_invented_inputs_fail_closed (__main__.EnterpriseArchAdmissionTests.test_missing_extra_mutated_or_invented_inputs_fail_closed) ... ok
+test_persistence_is_immutable (__main__.EnterpriseArchAdmissionTests.test_persistence_is_immutable) ... ok
+test_registry_truth_and_candidate_identity (__main__.EnterpriseArchAdmissionTests.test_registry_truth_and_candidate_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.020s
+
+OK

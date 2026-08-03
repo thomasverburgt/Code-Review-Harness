@@ -1,0 +1,21 @@
+{
+  "adr": "ADR-0036",
+  "deployment_effect": "none",
+  "disposition": "accept_semantically_faithful",
+  "disposition_hash": "sha256:1b465d9f7cc884dfa5365665512cab54653c67e2f85c82ac1d2a20e93fbf7b97",
+  "disposition_id": "94161331-c940-51bc-ad08-d7f7e1af1243",
+  "eligibility_hash": "sha256:1b5be2941ae9ee981a378600305f340545a44e3e8fd07d9de27b828245d5dbd9",
+  "eligibility_id": "eb7281e3-f6f0-5603-9f65-ee4c9d7d08cc",
+  "eligibility_state": "eligible_for_enterprise_synthesis_candidate_evaluation",
+  "ent_gov_scheduled": false,
+  "ent_synth_scheduled": false,
+  "finalization_hash": "sha256:8439d5498def6ebf5c6b7cc373dc4ddea86c82ec3ed1f9db6e968a455c42332e",
+  "finalization_id": "16b27673-e2c2-55d0-9c85-72de72ef25b6",
+  "ledger_hashes": [
+    "sha256:d5f8df551632b2935aedbcad170a32974619f686f2e9c5608b08255901f8fada",
+    "sha256:f56cb22ba0692cfa8a73e935774d8178e67128d593bbbbc471b7da9f82e4ba8b",
+    "sha256:631c6ada8724948961f9f0e691e7329acdf481f92a8a1b21e44046f32c0a27e3"
+  ],
+  "report_effect": "none",
+  "status": "owner_finalized"
+}

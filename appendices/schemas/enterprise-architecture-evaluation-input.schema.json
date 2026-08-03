@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/enterprise-architecture-evaluation-input.schema.json",
+  "title": "ENT-ARCH Accepted-Live Evaluation Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_id", "manifest_version", "generated_at", "ent_evidence_gate", "cap_synth_candidate", "cap_synth_eligibility", "admitted_capability_artifact_ids", "excluded_child_artifact_ids", "anti_double_counting", "evidence_tier", "effect", "manifest_hash"],
+  "properties": {
+    "manifest_id": {"type": "string", "format": "uuid"},
+    "manifest_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "ent_evidence_gate": {"$ref": "#/$defs/idHash"},
+    "cap_synth_candidate": {"$ref": "#/$defs/idHash"},
+    "cap_synth_eligibility": {"$ref": "#/$defs/idHash"},
+    "admitted_capability_artifact_ids": {"type": "array", "const": ["0cbe961f-82da-5cf5-92bd-2674c07459ef"]},
+    "excluded_child_artifact_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "format": "uuid"}},
+    "anti_double_counting": {"const": "parent_only_children_retained_as_lineage"},
+    "evidence_tier": {"const": "accepted_live_multi_domain_single_capability_evaluation"},
+    "effect": {"const": "evaluation_input_only"},
+    "manifest_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "idHash": {"type": "object", "additionalProperties": false, "required": ["id", "hash"], "properties": {"id": {"type": "string", "format": "uuid"}, "hash": {"$ref": "#/$defs/hash"}}}}
+}
