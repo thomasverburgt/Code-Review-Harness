@@ -9,28 +9,28 @@
       "reusable_file_count": 2,
       "root": "fixtures/cap-req-admission",
       "scenario": "cap-req-admission",
-      "total_bytes": 82211
+      "total_bytes": 82209
     },
     {
       "legacy_evidence_file_count": 8,
       "reusable_file_count": 1,
       "root": "fixtures/capability-coordination",
       "scenario": "capability-coordination",
-      "total_bytes": 17218
+      "total_bytes": 17217
     },
     {
       "legacy_evidence_file_count": 63,
       "reusable_file_count": 1,
       "root": "fixtures/capability-synth-admission",
       "scenario": "capability-synth-admission",
-      "total_bytes": 217061
+      "total_bytes": 217060
     },
     {
       "legacy_evidence_file_count": 84,
       "reusable_file_count": 1,
       "root": "fixtures/enterprise-arch-admission",
       "scenario": "enterprise-arch-admission",
-      "total_bytes": 269840
+      "total_bytes": 269839
     },
     {
       "legacy_evidence_file_count": 101,
@@ -72,7 +72,7 @@
       "reusable_file_count": 2,
       "root": "fixtures/product-synth-admission",
       "scenario": "product-synth-admission",
-      "total_bytes": 156815
+      "total_bytes": 156814
     },
     {
       "legacy_evidence_file_count": 81,

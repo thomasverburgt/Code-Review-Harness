@@ -29,6 +29,20 @@ class ArtifactCatalogCanonicalizationTests(unittest.TestCase):
 
             self.assertEqual(canonical_file_bytes(path), original)
 
+    def test_gitkeep_identity_is_stable_across_line_endings(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            lf = root / "lf" / ".gitkeep"
+            crlf = root / "crlf" / ".gitkeep"
+            lf.parent.mkdir()
+            crlf.parent.mkdir()
+            lf.write_bytes(b"placeholder\n")
+            crlf.write_bytes(b"placeholder\r\n")
+
+            self.assertEqual(canonical_file_bytes(lf), canonical_file_bytes(crlf))
+            self.assertEqual(catalog_size(lf), catalog_size(crlf))
+            self.assertEqual(sha256(lf), sha256(crlf))
+
     def test_file_order_uses_platform_independent_posix_paths(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
