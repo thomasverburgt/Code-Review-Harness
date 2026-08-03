@@ -47,18 +47,18 @@
       "total_bytes": 13352
     },
     {
-      "legacy_evidence_file_count": 72,
+      "legacy_evidence_file_count": 82,
       "reusable_file_count": 3,
       "root": "fixtures/enterprise-strategy-admission",
       "scenario": "enterprise-strategy-admission",
-      "total_bytes": 241701
+      "total_bytes": 254192
     },
     {
-      "legacy_evidence_file_count": 10,
+      "legacy_evidence_file_count": 74,
       "reusable_file_count": 1,
       "root": "fixtures/enterprise-synthesis-admission",
       "scenario": "enterprise-synthesis-admission",
-      "total_bytes": 53399
+      "total_bytes": 522749
     },
     {
       "legacy_evidence_file_count": 11,

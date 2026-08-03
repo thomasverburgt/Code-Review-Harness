@@ -14,6 +14,20 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 4121,
+      "canonical_source": "fixtures/shared/objects/sha256/09/0964b6beb92d1151faaa7fdf02d841de3884bd9dbc50467e2b747ac9a68ecc2f",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/gx10-live-evaluation/duplicate-decision-id-attempt/enterprise-synthesis-input-manifest.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/gx10-live-evaluation/missing-domain-limitations-attempt/enterprise-synthesis-input-manifest.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/pre-decision-id-correction-reference/enterprise-synthesis-input-manifest.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/pre-domain-limitations-reference/enterprise-synthesis-input-manifest.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/projection-id-collision-attempt/enterprise-synthesis-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:0964b6beb92d1151faaa7fdf02d841de3884bd9dbc50467e2b747ac9a68ecc2f",
+      "reusable_fixture_copies": []
+    },
+    {
       "bytes": 1204,
       "canonical_source": "fixtures/shared/objects/sha256/1a/1a53108edaf3d3a938353e64c926c2ed459adaf7a75b3014a62054b4defd43b5",
       "immutable_evidence_copies": [
@@ -72,6 +86,22 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:3368769166052c0950764fc63c18917fbe606eb8cd0e78a522af0d46979196a0",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2007,
+      "canonical_source": "fixtures/shared/objects/sha256/33/33ba2435db556485f8faa1502825a8f5f581fd5571f5e0cf13427d237a86eb6e",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/gx10-live-evaluation/duplicate-decision-id-attempt/ent-synthesis-evidence-gate.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/gx10-live-evaluation/final-run/ent-synthesis-evidence-gate.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/gx10-live-evaluation/missing-domain-limitations-attempt/ent-synthesis-evidence-gate.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/pre-decision-id-correction-reference/ent-synthesis-evidence-gate.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/pre-domain-limitations-reference/ent-synthesis-evidence-gate.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/projection-id-collision-attempt/ent-synthesis-evidence-gate.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/reference-run/ent-synthesis-evidence-gate.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:33ba2435db556485f8faa1502825a8f5f581fd5571f5e0cf13427d237a86eb6e",
       "reusable_fixture_copies": []
     },
     {
@@ -225,6 +255,17 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:9bd56c83c07d50e20303b2953434f41e6e7597cbf782a5dadf5e6906af2f1ef0",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 4708,
+      "canonical_source": "fixtures/shared/objects/sha256/a0/a00e0ef220f38884a927e745af466df52a867209ee931c7c1d1ca01055b399d0",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/gx10-live-evaluation/final-run/enterprise-synthesis-input-manifest.json",
+        "fixtures/enterprise-synthesis-admission/evidence/2026-08-02/adr0038/reference-run/enterprise-synthesis-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:a00e0ef220f38884a927e745af466df52a867209ee931c7c1d1ca01055b399d0",
       "reusable_fixture_copies": []
     },
     {
