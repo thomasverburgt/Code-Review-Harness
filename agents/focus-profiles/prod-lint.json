@@ -1,0 +1,98 @@
+{
+  "$schema": "../../appendices/schemas/agent-focus-profile.schema.json",
+  "agent": {
+    "agent_uuid": "794a9104-8738-4f29-8604-3a48118960bc",
+    "contract_version": "1.0.0",
+    "designation": "PROD-LINT",
+    "display_name": "Product Quality Synthesizer",
+    "layer": "product"
+  },
+  "focus": {
+    "authoritative_questions": [
+      "What evidence-backed result must the Product Quality Synthesizer produce to satisfy this purpose: Determine the product-level maintainability and code-quality posture supported by lint, dependency, architecture, testing, and defect evidence?"
+    ],
+    "dimensions": [
+      "normalized rule and tool coverage",
+      "systemic maintainability and quality trends",
+      "false positives, technical-debt signals, and CAPA options"
+    ],
+    "evidence_priorities": [
+      "tool outputs, rule configurations, source coverage, and suppressions",
+      "dependency, architecture, testing, and defect artifacts",
+      "trend, false-positive, remediation, and debt evidence"
+    ],
+    "mission": "Apply the Product Quality Synthesizer focus to determine: What evidence-backed result must the Product Quality Synthesizer produce to satisfy this purpose: Determine the product-level maintainability and code-quality posture supported by lint, dependency, architecture, testing, and defect evidence, using only exact eligible evidence and preserving uncertainty and human authority.",
+    "prohibited_conclusions": [
+      "Do not rewrite or suppress specialist conclusions or treat synthesis as new source evidence.",
+      "Do not approve release, accept risk, grant an exception, close CAPA, or promote an artifact."
+    ],
+    "required_methods": [
+      "Correlate only the exact specialist and product-domain artifacts named by the validated product manifest.",
+      "Preserve child identifiers, meaning, confidence, evidence gaps, and disagreement in every derived product assertion.",
+      "Apply the role-specific dimensions: normalized rule and tool coverage, systemic maintainability and quality trends, false positives, technical-debt signals, and CAPA options."
+    ],
+    "required_outputs": [
+      "source-linked product correlations and posture",
+      "conflicts, confidence reconciliation, limitations, and evidence gaps",
+      "CAPA options, escalations, and capability handoff",
+      "role-specific coverage of normalized rule and tool coverage, systemic maintainability and quality trends, false positives, technical-debt signals, and CAPA options"
+    ],
+    "rubric_checks": [
+      "Every derived assertion identifies its contributing immutable child records.",
+      "Product-level conclusions remain within one declared product and preserve disagreement.",
+      "Release-readiness content remains advisory and human controlled.",
+      "The result materially addresses normalized rule and tool coverage, systemic maintainability and quality trends, false positives, technical-debt signals, and CAPA options."
+    ]
+  },
+  "handoff": {
+    "consumer_rule": "A consumer may summarize this role's output only when the focus identity, source meaning, evidence, disagreement, limitations, and authority boundary remain traceable.",
+    "preserve": [
+      "profile_id and version",
+      "source designation",
+      "source record identifiers",
+      "evidence locators",
+      "confidence meaning",
+      "conflicts and unknowns",
+      "active limitations",
+      "human decision requests"
+    ]
+  },
+  "lifecycle": {
+    "agent_status": "planned",
+    "change_control": "new_profile_version_and_regression_evidence_required",
+    "dispatch_requirement": "exact_profile_id_version_and_sha256_required"
+  },
+  "profile_id": "FOCUS-PROD-LINT",
+  "profile_version": "1.0.0",
+  "prompt_binding": {
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "hash_mismatch_effect": "fail_closed_before_dispatch",
+    "missing_profile_effect": "fail_closed_before_dispatch",
+    "required_sections": [
+      "mission",
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "required_methods",
+      "required_outputs",
+      "prohibited_conclusions",
+      "rubric_checks"
+    ]
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "identity_registry": "agents/agent-identities.json",
+    "identity_registry_version": "1.0.0",
+    "specification": "agents/product/product-quality-synthesizer.md",
+    "specification_sha256": "sha256:aa541cb3dd5ce1f4ea6d185e128f3d3436116eb69295250ab55fa5ae43aeaa56"
+  }
+}

@@ -1,8 +1,17 @@
 {
   "$schema": "../schemas/decision-authority-registry.schema.json",
   "registry_id": "REPORT-GOVERNANCE-AUTHORITY-REGISTRY",
-  "registry_version": "0.5.0",
+  "registry_version": "0.10.0",
   "authorities": [
+    {
+      "authority_role": "project-owner",
+      "authority_kind": "project_owner",
+      "human_subject_ids": ["HUMAN-PROJECT-OWNER-001"],
+      "allowed_actions": ["finalize_governance_record", "revoke_derived_eligibility", "accept_capability_synthesis_semantics", "accept_enterprise_architecture_semantics", "accept_enterprise_synthesis_semantics", "declare_project_strategic_evaluation_objectives", "declare_project_strategic_scoring_method"],
+      "decision_types": ["project_governance_finalization", "capability_synthesis_semantic_disposition", "enterprise_architecture_semantic_disposition", "enterprise_synthesis_semantic_disposition", "project_strategic_evaluation_source_declaration"],
+      "scope_ids": ["ENTERPRISE-FIXTURE-001", "UDS-CORE-IDENTITY-ACCESS-CALIBRATION", "CODE-HARNESS-PROJECT-001"],
+      "assurance_levels": ["repository-owner-attestation"]
+    },
     {
       "authority_role": "senior-leadership-distribution-authority",
       "authority_kind": "distribution_authority",
@@ -33,7 +42,7 @@
     {
       "authority_role": "governance-source-owner",
       "authority_kind": "expert_decision_authority",
-      "human_subject_ids": ["HUMAN-PROJECT-MAINTAINER-001"],
+      "human_subject_ids": ["HUMAN-PROJECT-MAINTAINER-001", "HUMAN-PROJECT-OWNER-001"],
       "allowed_actions": ["declare_governance_source_and_applicability"],
       "decision_types": ["governance_source_classification", "governance_applicability"],
       "scope_ids": ["ENTERPRISE-FIXTURE-001"],

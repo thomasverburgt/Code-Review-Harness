@@ -5,6 +5,7 @@
 - Decision authority: project maintainer
 - Required external authorities: the authority named by each readiness prerequisite
 - Depends on: ADR-0012, ADR-0016, ADR-0020, ADR-0025
+- Superseded in part by: ADR-0033 for mandatory independent verification
 
 ## Context
 

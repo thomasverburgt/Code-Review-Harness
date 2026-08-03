@@ -1,0 +1,10 @@
+{
+  "supersession_id": "a98e0a1a-b689-509c-ae39-9049c0d60dc6",
+  "previous_artifact_id": "9a0edab2-f80a-5179-a311-1975988ad252",
+  "previous_object_hash": "sha256:ab5e620ffbab8ce32ec90687ecdb76e6f85af9735dade36fc037646a93ed7450",
+  "successor_artifact_id": "dd5598c9-628a-5f24-b974-9f2a53512119",
+  "successor_object_hash": "sha256:e9a673ad1e126ccb19d75ee8c73bb142be82370505d0c5ce4cea3bf80190a8e2",
+  "authority_role": "project-owner",
+  "decided_at": "2026-08-02T14:00:00Z",
+  "reason": "Project-owner direction corrected all four acknowledged ENT-STRAT limitations. The prior accept-as-is records remain immutable history but are not admitted to ADR-0038; the corrected candidate requires a new semantic disposition."
+}

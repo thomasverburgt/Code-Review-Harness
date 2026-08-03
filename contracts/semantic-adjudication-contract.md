@@ -12,7 +12,7 @@ The request has `effect: review_request_only`. It cannot express approval, distr
 
 The `enterprise-risk-acceptance-authority` decides semantic meaning outside the harness. For every delta it selects exactly one disposition and supplies rationale. The response is bound to the exact packet hash and an authoritative external-source hash.
 
-Under ADR-0012, a governance records administrator records the response and a different records verifier confirms its source, authority, packet, and delta bindings. Authentication of either administrator does not make that actor the semantic decision authority.
+Under ADR-0033, a governance records administrator records the response and the registered project owner finalizes its source, authority, packet, and delta bindings. No second verifier is required. Administrative or owner authentication does not turn a model recommendation into a semantic decision.
 
 ## Derived recommendation
 

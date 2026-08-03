@@ -1,0 +1,39 @@
+{
+  "candidate": {
+    "hash": "sha256:d3cf61bd18259951db9c7ec2ffe185707750dcbf1f5f5d552a809758cd2bc031",
+    "id": "efc768dc-b057-530e-9270-bafb88551b29"
+  },
+  "cap_synth_eligibility": {
+    "hash": "sha256:62d202ee80b5970e0bbe4e199106bedec7829a7e458bdcfd179f4ffd108cccc9",
+    "id": "5f3e8885-b5df-578c-87b2-c22fab03342c"
+  },
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "effect": "review_request_only",
+  "ent_gov_scheduled": false,
+  "generated_at": "2026-08-02T10:00:00Z",
+  "governance_source_manifest": {
+    "hash": "sha256:2219eb5c17ffc28738a31295e4d3f0cbb1206d723d0b8d5daed7deedf81d2897",
+    "id": "bace0593-e0ab-5c00-8f37-e5e9b4dac348"
+  },
+  "input_manifest": {
+    "hash": "sha256:1982c9ee123b31a1044f39bf608d7f1b8411831e7ccc58730a9c87b6ed8c5985",
+    "id": "c2a0a75e-143b-55b3-a1ea-a9224dfa4b16"
+  },
+  "packet_hash": "sha256:c9a89097923a1a932ba567b75182c4467adc3d971ef69002239e7e52d9460b68",
+  "packet_id": "8548f24f-4de0-51f9-974e-3967e68dd3b8",
+  "packet_version": "1.0.0",
+  "report_effect": "none",
+  "required_authority": "project-owner",
+  "review_dimensions": [
+    "source_authority",
+    "obligation_preservation",
+    "applicability",
+    "capability_evidence",
+    "missingness",
+    "confidence_and_uncertainty",
+    "authority_boundary",
+    "rollback"
+  ],
+  "review_state": "awaiting_human_semantic_review"
+}

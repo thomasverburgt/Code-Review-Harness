@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-strategy-disposition",
+  "logical_path": "enterprise-strategy-dispositions/5e03ee9f-d4be-5661-952e-360a734bfab3.json",
+  "object_hash": "sha256:f1d1e0b6be3bd7284fa11d1be84d163e8359b5abc4542a51628a56e16f62bb34",
+  "record_id": "5e03ee9f-d4be-5661-952e-360a734bfab3",
+  "retention_class": "architecture-evidence"
+}

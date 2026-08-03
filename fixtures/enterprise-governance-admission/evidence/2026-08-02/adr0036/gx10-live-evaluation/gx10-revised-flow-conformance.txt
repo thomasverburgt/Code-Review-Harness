@@ -1,0 +1,29 @@
+vertical slice validation passed: workflow=1; nodes=5; state_machines=4; authority_registries=1; gold_artifacts=5; human_decision_requests=1; report_governance=1
+test_authoritative_files_and_schedules_are_unchanged (__main__.AcceptedLiveEnterpriseGovernanceTests.test_authoritative_files_and_schedules_are_unchanged) ... ok
+test_evidence_binding_resolves_exact_fields_and_excludes_unrelated_derivation (__main__.AcceptedLiveEnterpriseGovernanceTests.test_evidence_binding_resolves_exact_fields_and_excludes_unrelated_derivation) ... ok
+test_matrix_preserves_missingness_and_rejects_invention (__main__.AcceptedLiveEnterpriseGovernanceTests.test_matrix_preserves_missingness_and_rejects_invention) ... ok
+test_model_cannot_create_exception_approval_maturity_or_capa (__main__.AcceptedLiveEnterpriseGovernanceTests.test_model_cannot_create_exception_approval_maturity_or_capa) ... ok
+test_mutated_source_or_revoked_eligibility_fails_closed (__main__.AcceptedLiveEnterpriseGovernanceTests.test_mutated_source_or_revoked_eligibility_fails_closed) ... ok
+test_owner_source_exact_authority_obligation_and_locator (__main__.AcceptedLiveEnterpriseGovernanceTests.test_owner_source_exact_authority_obligation_and_locator) ... ok
+test_package_is_deterministic_owner_declared_and_unscheduled (__main__.AcceptedLiveEnterpriseGovernanceTests.test_package_is_deterministic_owner_declared_and_unscheduled) ... ok
+test_parent_only_admission_prevents_double_counting (__main__.AcceptedLiveEnterpriseGovernanceTests.test_parent_only_admission_prevents_double_counting) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.106s
+
+OK
+test_authority_boundary_and_persistence (__main__.EnterpriseGovernanceAdmissionTests.test_authority_boundary_and_persistence) ... ok
+test_baseline_report_adr20_and_ent_arch_schedule_unchanged (__main__.EnterpriseGovernanceAdmissionTests.test_baseline_report_adr20_and_ent_arch_schedule_unchanged) ... ok
+test_deterministic_exact_source_gate_and_capability_binding (__main__.EnterpriseGovernanceAdmissionTests.test_deterministic_exact_source_gate_and_capability_binding) ... ok
+test_live_single_capability_is_source_protocol_only (__main__.EnterpriseGovernanceAdmissionTests.test_live_single_capability_is_source_protocol_only) ... ok
+test_matrix_is_complete_cross_product_and_missing_evidence_is_unknown (__main__.EnterpriseGovernanceAdmissionTests.test_matrix_is_complete_cross_product_and_missing_evidence_is_unknown) ... ok
+test_missing_extra_matrix_rows_and_invented_human_record_fail_closed (__main__.EnterpriseGovernanceAdmissionTests.test_missing_extra_matrix_rows_and_invented_human_record_fail_closed) ... ok
+test_mutated_source_classification_applicability_or_hash_fails_closed (__main__.EnterpriseGovernanceAdmissionTests.test_mutated_source_classification_applicability_or_hash_fails_closed) ... ok
+test_registry_truth_and_candidate_identity (__main__.EnterpriseGovernanceAdmissionTests.test_registry_truth_and_candidate_identity) ... ok
+test_role_and_workflow_schemas (__main__.EnterpriseGovernanceAdmissionTests.test_role_and_workflow_schemas) ... ok
+test_source_manifest_schema_hash_locator_and_authority (__main__.EnterpriseGovernanceAdmissionTests.test_source_manifest_schema_hash_locator_and_authority) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.052s
+
+OK

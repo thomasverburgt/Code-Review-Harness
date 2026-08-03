@@ -1,0 +1,34 @@
+{
+  "candidate": {
+    "hash": "sha256:84d22d78aa08e9f5f8db86ba39a7369019edbbbb5ef37a9585a8f8f24f7f3709",
+    "id": "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+  },
+  "decision_authority": "human",
+  "effect": "comparison_only",
+  "enterprise_scheduled": false,
+  "generated_at": "2026-08-02T06:00:00Z",
+  "record_id": "59284387-1a6b-5ec4-a36d-2aa648c1ba77",
+  "record_version": "1.0.0",
+  "results": [
+    {
+      "designation": "ENT-ARCH",
+      "required_input": "CAPABILITY-ARTIFACTS",
+      "state": "direct_comparison_compatible"
+    },
+    {
+      "designation": "ENT-GOV",
+      "required_input": "CAPABILITY-ARTIFACTS",
+      "state": "direct_comparison_compatible"
+    },
+    {
+      "designation": "ENT-STRAT",
+      "required_input": "TIERED-POSTURE-INPUTS",
+      "state": "compatible_via_tiered_posture_wrapper"
+    },
+    {
+      "designation": "ENT-SYNTH",
+      "required_input": "TIERED-ENTERPRISE-DOMAIN-ARTIFACTS",
+      "state": "not_direct_enterprise_domain_agents_required"
+    }
+  ]
+}

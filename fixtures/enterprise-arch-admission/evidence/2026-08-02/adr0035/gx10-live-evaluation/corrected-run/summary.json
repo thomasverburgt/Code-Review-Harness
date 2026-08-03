@@ -1,0 +1,26 @@
+{
+  "anti_double_counting": "parent_only_children_retained_as_lineage",
+  "artifact_hash": "sha256:321186b8016dde5dee6f4948d5254397a011e6796b0c63ae5bebf49ab2d3faab",
+  "artifact_id": "00f8b5b9-19f9-5a1b-8cd1-3122333f2d55",
+  "candidate_status": "candidate",
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "designation": "ENT-ARCH",
+  "ent_arch_scheduled": false,
+  "evidence_tier": "accepted_live_multi_domain_single_capability_evaluation",
+  "fitness_claim": "single_capability_architecture_evaluation",
+  "passed": true,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "a65e88e6dd8d488c83d63d681ccd4683bc2d33c33b243509640c9722c3a9796a",
+  "report_effect": "none",
+  "semantic_acceptance": "awaiting_project_owner_review",
+  "semantic_review_packet_hash": "sha256:170b55b2ff03a9e4ca034f52f3eedec3a2cb3c9d948146bb0eafb5c6db8126e5",
+  "semantic_review_packet_id": "09c336f5-faa1-519a-a375-b4ba18cf2384",
+  "status": "complete",
+  "suite": "ent-arch-accepted-live-multi-domain-single-capability-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "usage": {
+    "mode": "retained_response_reprojection",
+    "model_invoked": false
+  }
+}

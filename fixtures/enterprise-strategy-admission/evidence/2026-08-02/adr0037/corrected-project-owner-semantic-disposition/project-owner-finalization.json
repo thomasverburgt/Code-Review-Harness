@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "authority_binding": true,
+    "record_integrity": true,
+    "scope_binding": true,
+    "source_binding": true
+  },
+  "decision_authority": "project_owner",
+  "effect": "record_only",
+  "finalization_hash": "sha256:58c74786c291c14b80ef64bef9ce86b50a0ff6470bb1826cb22441916ccaf446",
+  "finalization_id": "d7de6aa7-58d1-5ceb-8b0e-25e7595e3d77",
+  "finalization_state": "finalized",
+  "finalized_by": {
+    "authority_name": "thomasverburgt",
+    "authority_role": "project-owner",
+    "subject_id": "HUMAN-PROJECT-OWNER-001"
+  },
+  "finalized_on": "2026-08-02",
+  "target_record_hash": "sha256:67a6990f8759acee4fad26c91597a9c1ef813813c8cc1751dee02909e0518738",
+  "target_record_id": "024269c8-38c2-5779-9c5d-6e35d03c48a5",
+  "target_record_type": "enterprise_strategy_semantic_disposition"
+}

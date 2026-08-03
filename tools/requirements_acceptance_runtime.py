@@ -13,7 +13,10 @@ LIVE_ARTIFACT_MEMBER = "adr19-cap-req-live/cap-req-candidate.artifact.json"
 AUTHORITY_REGISTRY = ROOT / "appendices/governance/decision-authorities-0.1.0.json"
 STATE_MACHINE = ROOT / "orchestration/state-machines/requirements-acceptance.state-machine.json"
 GENERATED_AT = "2026-08-01T23:00:00Z"
-DERIVED_AT = "2026-08-01T23:30:00Z"
+DERIVED_AT = "2026-08-02T05:00:00Z"
+OWNER_FINALIZED_ON = "2026-08-02"
+PROJECT_OWNER_NAME = "thomasverburgt"
+PROJECT_OWNER_SUBJECT_ID = "HUMAN-PROJECT-OWNER-001"
 NAMESPACE = uuid.UUID("20000000-0000-4000-8000-000000000000")
 DISPOSITIONS = ["accept_review_as_complete", "supply_authoritative_requirements", "require_scope_correction", "reject_artifact", "insufficient_evidence"]
 
@@ -72,11 +75,50 @@ def validate_verification(packet: dict[str, Any], response: dict[str, Any], veri
     if verification["status"] != "verified" or not all(verification["checks"].values()): raise ValidationFailure("requirements acceptance verification did not pass")
     if verification["verified_by"]["authority_name"] == response["decided_by"]["authority_name"]: raise ValidationFailure("requirements acceptance verification is not independent")
 
-def derive_eligibility(packet: dict[str, Any], response: dict[str, Any], verification: dict[str, Any], revoked: bool=False) -> dict[str, Any]:
-    validate_verification(packet,response,verification)
+def build_owner_finalization(packet: dict[str, Any], response: dict[str, Any], *,
+                             owner_name: str = PROJECT_OWNER_NAME,
+                             owner_subject_id: str = PROJECT_OWNER_SUBJECT_ID,
+                             finalized_on: str = OWNER_FINALIZED_ON) -> dict[str, Any]:
+    validate_response(packet, response)
+    _authority("project-owner", "project_owner", "finalize_governance_record", packet["source_manifest"]["scope_id"])
+    value = {
+        "finalization_id": str(uuid.uuid5(NAMESPACE, response["response_id"] + ":project-owner-finalization")),
+        "target_record_type": "requirements_acceptance_response",
+        "target_record_id": response["response_id"],
+        "target_record_hash": response["response_hash"],
+        "finalized_on": finalized_on,
+        "finalized_by": {"authority_role": "project-owner", "authority_name": owner_name,
+                         "subject_id": owner_subject_id},
+        "checks": {"source_binding": True, "authority_binding": True,
+                   "record_integrity": True, "scope_binding": True},
+        "finalization_state": "finalized",
+        "decision_authority": "project_owner",
+        "effect": "record_only",
+        "finalization_hash": "sha256:" + "0" * 64,
+    }
+    _hashed(value, "finalization_hash")
+    assert_schema(value, "project-owner-finalization.schema.json", "requirements project-owner finalization")
+    return value
+
+def validate_owner_finalization(packet: dict[str, Any], response: dict[str, Any], finalization: dict[str, Any]) -> None:
+    validate_response(packet, response)
+    assert_schema(finalization, "project-owner-finalization.schema.json", "requirements project-owner finalization")
+    if finalization["target_record_type"] != "requirements_acceptance_response":
+        raise ValidationFailure("project-owner finalization target type mismatch")
+    if (finalization["target_record_id"], finalization["target_record_hash"]) != (response["response_id"], response["response_hash"]):
+        raise ValidationFailure("project-owner finalization response binding mismatch")
+    if content_hash({**finalization, "finalization_hash": None}) != finalization["finalization_hash"]:
+        raise ValidationFailure("project-owner finalization hash mismatch")
+    if finalization["finalization_state"] != "finalized" or not all(finalization["checks"].values()):
+        raise ValidationFailure("project-owner finalization did not pass")
+    _authority(finalization["finalized_by"]["authority_role"], "project_owner",
+               "finalize_governance_record", packet["source_manifest"]["scope_id"])
+
+def derive_eligibility(packet: dict[str, Any], response: dict[str, Any], finalization: dict[str, Any], revoked: bool=False) -> dict[str, Any]:
+    validate_owner_finalization(packet,response,finalization)
     eligible=response["disposition"]=="accept_review_as_complete" and not revoked
-    reason="verified_human_acceptance" if eligible else "eligibility_revoked" if revoked else "human_disposition_does_not_accept_review"
-    value={"eligibility_id":str(uuid.uuid5(NAMESPACE,response["response_id"]+(':revoked' if revoked else ':active'))),"artifact_id":packet["cap_req_artifact"]["artifact_id"],"artifact_hash":packet["cap_req_artifact"]["content_hash"],"packet_id":packet["packet_id"],"packet_hash":packet["packet_hash"],"response_id":response["response_id"],"response_hash":response["response_hash"],"verification_id":verification["verification_id"],"verification_hash":verification["verification_hash"],"derived_at":DERIVED_AT,"basis_disposition":response["disposition"],"state":"eligible_for_accepted_capability_input" if eligible else "not_eligible","rollback_state":"revoked" if revoked else "active","reason":reason,"decision_authority":"derived_from_verified_human_record","effect":"eligibility_record_only","cap_synth_scheduled":False,"record_hash":"sha256:"+"0"*64}
+    reason="project_owner_finalized_acceptance" if eligible else "eligibility_revoked" if revoked else "human_disposition_does_not_accept_review"
+    value={"eligibility_id":str(uuid.uuid5(NAMESPACE,"|".join([response["response_id"],finalization["finalization_hash"],DERIVED_AT,('revoked' if revoked else 'active')]))),"artifact_id":packet["cap_req_artifact"]["artifact_id"],"artifact_hash":packet["cap_req_artifact"]["content_hash"],"packet_id":packet["packet_id"],"packet_hash":packet["packet_hash"],"response_id":response["response_id"],"response_hash":response["response_hash"],"finalization_id":finalization["finalization_id"],"finalization_hash":finalization["finalization_hash"],"derived_at":DERIVED_AT,"basis_disposition":response["disposition"],"state":"eligible_for_accepted_capability_input" if eligible else "not_eligible","rollback_state":"revoked" if revoked else "active","reason":reason,"decision_authority":"derived_from_project_owner_finalization","effect":"eligibility_record_only","cap_synth_scheduled":False,"record_hash":"sha256:"+"0"*64}
     _hashed(value,"record_hash"); assert_schema(value,"requirements-eligibility-record.schema.json","requirements eligibility record"); return value
 
 def render_review(packet: dict[str, Any]) -> str:
@@ -107,7 +149,7 @@ Required authority: `requirements-acceptance-authority`
 
 Allowed dispositions: {', '.join(f'`{x}`' for x in DISPOSITIONS)}.
 
-Acceptance means only that this bounded review may become an accepted CAP-REQ input after independent verification. It does not establish requirement satisfaction, capability readiness, risk acceptance, scheduling, report distribution, deployment, or A100 production approval. CAP-SYNTH remains unscheduled.
+Acceptance means only that this bounded review may become an accepted CAP-REQ input after project-owner finalization under ADR-0033. No second verifier is required. It does not establish requirement satisfaction, capability readiness, risk acceptance, scheduling, report distribution, deployment, or A100 production approval. CAP-SYNTH remains unscheduled.
 
 ## Rollback
 

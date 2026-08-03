@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-governance-review",
+  "logical_path": "enterprise-governance-reviews/8548f24f-4de0-51f9-974e-3967e68dd3b8.json",
+  "object_hash": "sha256:3234a20ceb4f5fa8449729b4e14c03ab72b520616eca7e9b29ed26aea721e17f",
+  "record_id": "8548f24f-4de0-51f9-974e-3967e68dd3b8",
+  "retention_class": "architecture-evidence"
+}

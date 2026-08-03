@@ -1,0 +1,20 @@
+{
+  "anti_double_counting": "parent_only_children_retained_as_lineage",
+  "candidate_status": "candidate",
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "designation": "ENT-ARCH",
+  "ent_arch_scheduled": false,
+  "error": "ADR-0035 ENT-ARCH invented source or evidence lineage",
+  "error_type": "ValidationFailure",
+  "evidence_tier": "accepted_live_multi_domain_single_capability_evaluation",
+  "fitness_claim": "single_capability_architecture_evaluation",
+  "passed": false,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "a65e88e6dd8d488c83d63d681ccd4683bc2d33c33b243509640c9722c3a9796a",
+  "report_effect": "none",
+  "semantic_acceptance": "awaiting_project_owner_review",
+  "status": "failed_closed",
+  "suite": "ent-arch-accepted-live-multi-domain-single-capability-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

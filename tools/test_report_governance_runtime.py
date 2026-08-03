@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Conformance tests for accepted ADR-0012 report governance boundary."""
+"""Conformance tests for ADR-0012 governance and ADR-0033 owner finalization."""
 
 from __future__ import annotations
 
@@ -39,6 +39,8 @@ class ReportGovernanceTests(unittest.TestCase):
         self.review, self.review_bytes = self.service.create_review_export(self.package, "2026-07-31T16:01:00Z")
         self.admin = actor("ADMIN-GOVERNANCE-001", "governance-records-administrator")
         self.verifier = actor("ADMIN-GOVERNANCE-VERIFY-001", "governance-records-verifier")
+        self.owner = actor("HUMAN-PROJECT-OWNER-001", "project-owner")
+        self.owner["assurance_level"] = "repository-owner-attestation"
 
     def tearDown(self) -> None:
         self.temp.cleanup()
@@ -96,6 +98,16 @@ class ReportGovernanceTests(unittest.TestCase):
         self.assertIn(b"APPROVED FOR DISTRIBUTION", approved_bytes)
         self.assertNotEqual(export["file_hash"], self.review["file_hash"])
 
+    def test_project_owner_can_finalize_distribution_without_second_verifier(self) -> None:
+        approval = self.distribution_approval()
+        finalization = self.service.finalize_record(
+            approval, "distribution_approval", self.owner, True, True, "2026-08-02")
+        export, approved_bytes = self.service.create_approved_export(
+            self.package, approval, finalization, "2026-08-02T12:00:00Z")
+        self.assertEqual(finalization["finalization_state"], "finalized")
+        self.assertEqual(export["distribution_state"], "approved_for_distribution")
+        self.assertIn(b"APPROVED FOR DISTRIBUTION", approved_bytes)
+
     def test_external_decision_is_exact_record_only_and_independently_verified(self) -> None:
         export, _ = self.approved_export()
         package_before = copy.deepcopy(self.package)
@@ -109,10 +121,10 @@ class ReportGovernanceTests(unittest.TestCase):
             "2026-07-31T17:00:00Z", "2026-07-31T17:05:00Z")
         self.assertEqual(decision["effect"], "record_only")
         self.assertFalse(decision["original_report_mutated"])
-        self.assertEqual(decision["attestation_state"], "recorded_pending_verification")
+        self.assertEqual(decision["attestation_state"], "recorded_pending_project_owner_finalization")
         pending = self.service.reconciliation_view(self.package, [decision], [])
         self.assertEqual(next(v for v in pending if v["report_item"]["report_item_id"] == item_id)
-                         ["external_decisions"][0]["administrative_state"], "recorded_pending_verification")
+                         ["external_decisions"][0]["administrative_state"], "recorded_pending_project_owner_finalization")
         verification = self.service.verify_record(decision, "external_decision", self.verifier,
                                                   True, True, "2026-07-31T17:06:00Z")
         reconciled = self.service.reconciliation_view(self.package, [decision], [verification])

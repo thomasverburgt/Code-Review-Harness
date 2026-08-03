@@ -1,0 +1,15 @@
+{
+  "adr": "ADR-0038",
+  "artifact_hash": "sha256:494b239dd8e5b68198e9b3096f2fd825a1f67eda7cce0e9fca7ffbdeab68c13d",
+  "artifact_id": "1a8f9cba-f16c-5006-86ec-dd11c77e9307",
+  "deployment_effect": "none",
+  "domain_inputs": 4,
+  "ent_synth_scheduled": false,
+  "ledger_hash": "sha256:0d41449c24bd77ef495f5d22e74a6ae29bac19d7482f16937567e042a0d5d36c",
+  "packet_hash": "sha256:556555743f584ddc4e582ca04ee0d017f71515b4dff0d42983278cff3d0566ae",
+  "packet_id": "5f75232e-4bce-5393-8f88-2799946da9bd",
+  "production_target": "A100 large cluster",
+  "report_effect": "none",
+  "status": "passed",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

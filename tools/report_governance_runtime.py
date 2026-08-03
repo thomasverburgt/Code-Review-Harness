@@ -212,7 +212,7 @@ class ReportGovernanceService:
                   "approval_source": copy.deepcopy(approval_source), "recorded_by": copy.deepcopy(recorded_by),
                   "intended_recipients": copy.deepcopy(intended_recipients),
                   "distribution_limitations": copy.deepcopy(limitations), "approved_at": approved_at,
-                  "recorded_at": recorded_at, "attestation_state": "recorded_pending_verification",
+                  "recorded_at": recorded_at, "attestation_state": "recorded_pending_project_owner_finalization",
                   "effect": "record_only"}
         assert_schema(record, "distribution-approval-attestation.schema.json", "distribution approval attestation")
         self._persist_immutable("distribution-approval", record_id, record)
@@ -251,14 +251,51 @@ class ReportGovernanceService:
                                "verification_hash": content_hash(verification)})
         return verification
 
+    def finalize_record(self, target: dict[str, Any], target_type: str, finalized_by: dict[str, Any],
+                        source_passed: bool, authority_passed: bool, finalized_on: str) -> dict[str, Any]:
+        """Finalize a governance record under ADR-0033 without a second-person gate."""
+        if target_type not in {"distribution_approval", "external_decision"}:
+            raise ReportGovernanceError("unsupported governance finalization target type")
+        assert_schema(target, ("distribution-approval-attestation.schema.json" if target_type == "distribution_approval"
+                               else "external-decision-attestation.schema.json"), "governance finalization target")
+        id_field = ("distribution_approval_record_id" if target_type == "distribution_approval"
+                    else "external_decision_record_id")
+        target_id = target[id_field]
+        self._validate_actor(finalized_by, "project-owner")
+        scope = self._scope_for_record(target)
+        self._authority(finalized_by["authority_role"], "project_owner", "finalize_governance_record", scope,
+                        finalized_by["subject_id"], finalized_by["assurance_level"])
+        passed = source_passed and authority_passed
+        value = {"finalization_id": stable_uuid(target_id, content_hash(target), "project-owner-finalization"),
+                 "target_record_type": target_type, "target_record_id": target_id,
+                 "target_record_hash": content_hash(target), "finalized_on": finalized_on,
+                 "finalized_by": {"authority_role": "project-owner",
+                                  "authority_name": finalized_by["subject_id"],
+                                  "subject_id": finalized_by["subject_id"]},
+                 "checks": {"source_binding": source_passed, "authority_binding": authority_passed,
+                            "record_integrity": True, "scope_binding": True},
+                 "finalization_state": "finalized" if passed else "rejected",
+                 "decision_authority": "project_owner", "effect": "record_only",
+                 "finalization_hash": "sha256:" + "0" * 64}
+        value["finalization_hash"] = content_hash({**value, "finalization_hash": None})
+        assert_schema(value, "project-owner-finalization.schema.json", "project-owner finalization")
+        self._persist_immutable("project-owner-finalization", value["finalization_id"], value)
+        return value
+
+    @staticmethod
+    def _finalization_passed(value: dict[str, Any]) -> bool:
+        if "finalization_state" in value:
+            return value["finalization_state"] == "finalized" and all(value["checks"].values())
+        return value.get("verification_state") == "verified"
+
     def create_approved_export(self, package: dict[str, Any], approval: dict[str, Any],
-                               verification: dict[str, Any], created_at: str) -> tuple[dict[str, Any], bytes]:
+                               finalization: dict[str, Any], created_at: str) -> tuple[dict[str, Any], bytes]:
         if (approval["report_package_id"] != package["report_package_id"] or
                 approval["report_package_hash"] != package["package_hash"] or
-                verification["target_record_id"] != approval["distribution_approval_record_id"] or
-                verification["target_record_hash"] != content_hash(approval) or
-                verification["verification_state"] != "verified"):
-            raise ReportGovernanceError("approved export requires a verified distribution attestation")
+                finalization["target_record_id"] != approval["distribution_approval_record_id"] or
+                finalization["target_record_hash"] != content_hash(approval) or
+                not self._finalization_passed(finalization)):
+            raise ReportGovernanceError("approved export requires a finalized distribution attestation")
         content = canonical_bytes({"distribution_notice": "APPROVED FOR DISTRIBUTION",
                                    "distribution_approval_record_id": approval["distribution_approval_record_id"],
                                    "report_package": package})
@@ -300,19 +337,20 @@ class ReportGovernanceService:
                   "decision_source": copy.deepcopy(decision_source), "recorded_by": copy.deepcopy(recorded_by),
                   "disposition": disposition, "rationale_summary": rationale,
                   "conditions": copy.deepcopy(conditions), "decided_at": decided_at, "recorded_at": recorded_at,
-                  "attestation_state": "recorded_pending_verification", "effect": "record_only",
+                  "attestation_state": "recorded_pending_project_owner_finalization", "effect": "record_only",
                   "original_report_mutated": False}
         assert_schema(record, "external-decision-attestation.schema.json", "external decision attestation")
         self._persist_immutable("external-decision", record_id, record)
         return record
 
     def reconciliation_view(self, package: dict[str, Any], decisions: list[dict[str, Any]],
-                            verifications: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        verified = {item["target_record_id"]: item for item in verifications}
+                            finalizations: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        verified = {item["target_record_id"]: item for item in finalizations}
         by_item: dict[str, list[dict[str, Any]]] = {}
         for decision in decisions:
             check = verified.get(decision["external_decision_record_id"])
-            state = (check["verification_state"] if check else "recorded_pending_verification")
+            state = ((check.get("finalization_state") or check.get("verification_state"))
+                     if check else "recorded_pending_project_owner_finalization")
             for item_id in decision["report_item_ids"]:
                 by_item.setdefault(item_id, []).append({"external_decision_record_id": decision["external_decision_record_id"],
                                                         "disposition": decision["disposition"],

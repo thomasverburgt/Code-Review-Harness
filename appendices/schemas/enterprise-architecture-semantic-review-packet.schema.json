@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/enterprise-architecture-semantic-review-packet.schema.json",
+  "title": "ENT-ARCH Accepted-Live Semantic Review Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["packet_id", "packet_version", "generated_at", "candidate", "input_manifest", "cap_synth_eligibility", "review_dimensions", "review_state", "required_authority", "effect", "cap_synth_scheduled", "ent_arch_scheduled", "report_effect", "deployment_effect", "packet_hash"],
+  "properties": {
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "candidate": {"$ref": "#/$defs/idHash"},
+    "input_manifest": {"$ref": "#/$defs/idHash"},
+    "cap_synth_eligibility": {"$ref": "#/$defs/idHash"},
+    "review_dimensions": {"const": ["source_semantics", "anti_double_counting", "single_capability_scope", "unsupported_claim_suppression", "confidence_and_uncertainty", "downstream_handoff", "authority_boundary", "rollback"]},
+    "review_state": {"const": "awaiting_human_semantic_review"},
+    "required_authority": {"const": "project-owner"},
+    "effect": {"const": "review_request_only"},
+    "cap_synth_scheduled": {"const": false},
+    "ent_arch_scheduled": {"const": false},
+    "report_effect": {"const": "none"},
+    "deployment_effect": {"const": "none"},
+    "packet_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "idHash": {"type": "object", "additionalProperties": false, "required": ["id", "hash"], "properties": {"id": {"type": "string", "format": "uuid"}, "hash": {"$ref": "#/$defs/hash"}}}}
+}

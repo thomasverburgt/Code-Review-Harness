@@ -1,0 +1,46 @@
+{
+  "candidate": {
+    "hash": "sha256:b8505ad2f180416bea0ed5842f43c95ab05d9137be2205775a5536a53dacb811",
+    "id": "1a8f9cba-f16c-5006-86ec-dd11c77e9307"
+  },
+  "deployment_effect": "none",
+  "effect": "review_request_only",
+  "ent_synth_scheduled": false,
+  "generated_at": "2026-08-02T16:00:00Z",
+  "input_manifest": {
+    "hash": "sha256:56c35320889e9b06f5ea560ad44834d0f6274d1430816c45a7fa8672f27ef1d0",
+    "id": "29dc5ca2-3d43-58f4-b2bb-8427a301a2ba"
+  },
+  "packet_hash": "sha256:f817c2a948f4cb6cdc317947e5779e056a5d54a6f8e3bb9c69fff09467cc51c5",
+  "packet_id": "5f75232e-4bce-5393-8f88-2799946da9bd",
+  "packet_version": "1.0.0",
+  "projection_provenance": {
+    "generation_mode": "deterministic_reference_projection",
+    "harness_owned_fields": [
+      "identity",
+      "exact_bindings",
+      "eligibility_enforcement",
+      "domain_preservation",
+      "limitation_and_source_context_propagation",
+      "completeness",
+      "report_boundary",
+      "authority_boundary",
+      "downstream_state"
+    ],
+    "raw_model_response_sha256": null
+  },
+  "report_effect": "none",
+  "required_authority": "project-owner",
+  "review_dimensions": [
+    "domain_source_fidelity",
+    "eligibility_and_supersession",
+    "limitation_and_source_context_preservation",
+    "confidence_meaning",
+    "missingness",
+    "unresolved_decisions",
+    "authority_boundary",
+    "report_boundary",
+    "rollback"
+  ],
+  "review_state": "awaiting_human_semantic_review"
+}

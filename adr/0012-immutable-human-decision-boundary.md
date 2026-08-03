@@ -1,5 +1,7 @@
 # ADR-0012: Immutable Report Distribution and External Decision Reconciliation
 
+> Superseded in part by ADR-0033 for mandatory second-person verification. Historical evidence remains unchanged.
+
 - **Status:** Accepted
 - **Date:** 2026-07-31
 - **Accepted by:** project maintainer

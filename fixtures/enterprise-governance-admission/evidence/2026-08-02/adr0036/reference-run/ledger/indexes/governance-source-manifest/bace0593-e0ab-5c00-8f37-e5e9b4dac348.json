@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "governance-source-manifest",
+  "logical_path": "governance-sources/bace0593-e0ab-5c00-8f37-e5e9b4dac348.json",
+  "object_hash": "sha256:2219eb5c17ffc28738a31295e4d3f0cbb1206d723d0b8d5daed7deedf81d2897",
+  "record_id": "bace0593-e0ab-5c00-8f37-e5e9b4dac348",
+  "retention_class": "architecture-evidence"
+}

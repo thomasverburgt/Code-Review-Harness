@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-08-02T12:00:00Z",
+  "declared_by": {
+    "authority_name": "thomasverburgt",
+    "authority_registry": {
+      "registry_hash": "sha256:6bfd43e8c308d8075bee0bd92521288ca082a269679c2430d64b787bf8822631",
+      "registry_id": "REPORT-GOVERNANCE-AUTHORITY-REGISTRY",
+      "registry_version": "0.8.0"
+    },
+    "authority_role": "project-owner",
+    "subject_id": "HUMAN-PROJECT-OWNER-001"
+  },
+  "manifest_hash": "sha256:aed8a4a77f79aedcd957bd12642a6ffe4824f018e92e950d6823fff671f5f6ec",
+  "manifest_id": "6add2fa6-628d-515b-ad25-ab88e6633035",
+  "manifest_version": "1.0.0",
+  "objectives": [
+    {
+      "applicability": "applicable",
+      "measures": [
+        {
+          "description": "The capability posture preserves human decision authority and advisory-only agent operation.",
+          "direction": "higher_is_better",
+          "measure_id": "MEASURE-HUMAN-AUTHORITY"
+        },
+        {
+          "description": "Findings expose exact source-file and location context sufficient for human correctness review.",
+          "direction": "higher_is_better",
+          "measure_id": "MEASURE-FINDING-LOCATOR-COVERAGE"
+        }
+      ],
+      "objective_id": "STRAT-HARNESS-DECISION-QUALITY-001",
+      "outcome": "Preserve traceable, human-controlled Code Harness review outputs for leadership and expert decisions.",
+      "owner": "project-owner"
+    }
+  ],
+  "scope_id": "ENTERPRISE-FIXTURE-001"
+}

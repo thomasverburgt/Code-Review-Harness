@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-architecture-input",
+  "logical_path": "enterprise-architecture-inputs/b61c82a0-9b20-5827-84b2-283b5e229417.json",
+  "object_hash": "sha256:c8820dabedface4acd0d937fb863572df611afc7344dfb793444032a80276cd9",
+  "record_id": "b61c82a0-9b20-5827-84b2-283b5e229417",
+  "retention_class": "architecture-evidence"
+}

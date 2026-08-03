@@ -83,7 +83,9 @@ class CapabilitySynthAdmissionTests(unittest.TestCase):
         before = (BASELINE.read_bytes(), REPORT.read_bytes()); build_reference_package()
         self.assertEqual(before, (BASELINE.read_bytes(), REPORT.read_bytes()))
         self.assertNotIn("CAP-SYNTH", {node["designation"] for node in load_json(BASELINE)["nodes"]})
-        self.assertEqual(self.candidate["consumers"], ["ENT-SYNTH-CANDIDATE-COMPARISON"])
+        self.assertEqual(self.candidate["consumers"], ["ENT-ARCH-CANDIDATE-COMPARISON",
+                                                       "ENT-GOV-CANDIDATE-COMPARISON",
+                                                       "ENT-STRAT-CANDIDATE-COMPARISON"])
 
 
 if __name__ == "__main__": unittest.main(verbosity=2)

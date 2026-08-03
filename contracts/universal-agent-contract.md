@@ -19,6 +19,12 @@ Every agent specification defines:
 8. Failure, partial-input, conflict, and escalation behavior.
 9. Measures, validation criteria, and human review gates.
 
+## Focus profile binding
+
+Every new focus-enforced dispatch binds the exact agent focus-profile ID, version, and SHA-256 from the controlled [focus-profile catalog](../agents/focus-profiles/catalog.json). The effective prompt or deterministic role configuration must include the profile's mission, authoritative questions, dimensions, evidence priorities, required methods, required outputs, prohibited conclusions, and rubric checks.
+
+Focus-profile content is compression-protected. A prompt assembler may remove repeated representations and harness-owned metadata, but it may not remove or weaken the role's focus dimensions, evidence obligations, prohibited conclusions, active limitations, or human-authority boundary. A missing profile, registry mismatch, source-specification drift, or profile-hash mismatch fails closed before dispatch. Historical dispatches remain replayable under their retained version pins; migration of an accepted workflow requires compatibility and regression evidence.
+
 ## Artifact envelope
 
 Every execution publishes schema-valid JSON as the machine contract and a human-readable immutable report. Required top-level sections are:

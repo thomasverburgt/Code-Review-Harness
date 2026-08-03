@@ -1,0 +1,9 @@
+test_exact_owner_disposition_is_deterministic_and_limited (__main__.CapabilitySynthSemanticAcceptanceTests.test_exact_owner_disposition_is_deterministic_and_limited) ... ok
+test_finalization_mutation_fails_closed (__main__.CapabilitySynthSemanticAcceptanceTests.test_finalization_mutation_fails_closed) ... ok
+test_packet_candidate_and_hash_mutations_fail_closed (__main__.CapabilitySynthSemanticAcceptanceTests.test_packet_candidate_and_hash_mutations_fail_closed) ... ok
+test_revocation_is_deterministic_and_never_schedules (__main__.CapabilitySynthSemanticAcceptanceTests.test_revocation_is_deterministic_and_never_schedules) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.027s
+
+OK

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/capability-synthesis-semantic-review-packet.schema.json",
+  "title": "CAP-SYNTH Accepted-Live Semantic Review Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["packet_id", "packet_version", "generated_at", "candidate", "coordinator_manifest", "cap_req_eligibility", "input_artifacts", "review_dimensions", "review_state", "required_authority", "effect", "scheduling_authorized", "production_effect", "packet_hash"],
+  "properties": {
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "candidate": {"$ref": "#/$defs/idHash"},
+    "coordinator_manifest": {"$ref": "#/$defs/idHash"},
+    "cap_req_eligibility": {"$ref": "#/$defs/idHash"},
+    "input_artifacts": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "object", "additionalProperties": false, "required": ["designation", "artifact_id", "artifact_hash"], "properties": {"designation": {"enum": ["CAP-RISK", "CAP-REQ"]}, "artifact_id": {"type": "string", "format": "uuid"}, "artifact_hash": {"$ref": "#/$defs/hash"}}}},
+    "review_dimensions": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"enum": ["child_assertion_preservation", "cross_domain_derivation", "conflict_and_unknown_preservation", "evidence_sufficiency", "confidence_reconciliation", "enterprise_handoff", "authority_boundary", "rollback"]}},
+    "review_state": {"const": "awaiting_human_semantic_review"},
+    "required_authority": {"const": "project-owner"},
+    "effect": {"const": "review_request_only"},
+    "scheduling_authorized": {"const": false},
+    "production_effect": {"const": "none"},
+    "packet_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "idHash": {"type": "object", "additionalProperties": false, "required": ["id", "hash"], "properties": {"id": {"type": "string", "format": "uuid"}, "hash": {"$ref": "#/$defs/hash"}}}
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "enterprise-governance-eligibility",
+  "logical_path": "enterprise-governance-eligibility/eb7281e3-f6f0-5603-9f65-ee4c9d7d08cc.json",
+  "object_hash": "sha256:631c6ada8724948961f9f0e691e7329acdf481f92a8a1b21e44046f32c0a27e3",
+  "record_id": "eb7281e3-f6f0-5603-9f65-ee4c9d7d08cc",
+  "retention_class": "architecture-evidence"
+}

@@ -3,9 +3,11 @@ GOVERNANCE.md text eol=lf
 fixtures/**/*.md text eol=lf
 fixtures/**/*.json text eol=lf
 fixtures/**/*.txt text eol=lf
+fixtures/shared/objects/** -text
 evidence/**/*.md text eol=lf
 evidence/**/*.json text eol=lf
 evidence/**/*.txt text eol=lf
+training/**/*.md text eol=lf
 training/**/releases/**/*.docx filter=lfs diff=lfs merge=lfs -text
 training/**/releases/**/*.pptx filter=lfs diff=lfs merge=lfs -text
 training/**/releases/**/*.pdf filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,14 @@
+{
+  "adr": "ADR-0037",
+  "artifact_hash": "sha256:969c11c469519984aa8ea1025e135c997d26f55f2d62402b4b40bc1e0676de69",
+  "artifact_id": "9a0edab2-f80a-5179-a311-1975988ad252",
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "ent_strat_scheduled": false,
+  "ledger_hash": "sha256:1177352df0ed0ad728491f4befa99a3b1280e01605f70ba4120be2b8e1df1acd",
+  "packet_hash": "sha256:b5a01b06211aee5141e5a1c25d3558322b2ec035c0eeb1027996596af5c0e802",
+  "packet_id": "0a6862f2-ab8d-5c46-b41d-3315ec61c7ea",
+  "report_effect": "none",
+  "state": "insufficient_evidence",
+  "status": "passed"
+}

@@ -1,0 +1,234 @@
+{
+  "artifact": {
+    "artifact_id": "efc768dc-b057-530e-9270-bafb88551b29",
+    "artifact_type": "enterprise-governance-posture",
+    "created_at": "2026-08-02T10:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [
+        "bd699443-a08f-5b39-8015-a3471f95e652",
+        "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+      ],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [],
+  "confidence": {
+    "assessment": 0.85,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+        "confidence": 0.85
+      }
+    ],
+    "review": 1.0
+  },
+  "conflicts": [],
+  "consumers": [
+    "ENT-STRAT-CANDIDATE",
+    "ENT-SYNTH-CANDIDATE"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [],
+  "execution": {
+    "evidence_tier": "accepted_live_multi_domain_single_capability_governance_evaluation",
+    "execution_id": "26c92518-9700-55b1-b09b-9efce2e3507f",
+    "model": "deterministic-reference-agent",
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "enterprise": {
+      "capability_input_manifest": [
+        {
+          "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+          "content_hash": "sha256:95d9fa9fe7b6b521c4677ede284ffc18a95e5a3b6ae4d2db6231bb39018baae8",
+          "state": "valid"
+        }
+      ],
+      "confidence_reconciliation": {
+        "method": "preserve row confidence and missingness",
+        "result": 0.85
+      },
+      "cross_capability_correlations": [],
+      "enterprise_assertions": [
+        {
+          "applicability_determination_id": "GOVAPP-ADR36-001",
+          "capability_artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+          "confidence": 0.85,
+          "evidence_refs": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+            "DERIVED-001"
+          ],
+          "obligation_id": "GOV-AGENT-AUTH-001",
+          "rationale": "CAP-SYNTH preserves human decision authority, advisory-only posture, and an unscheduled comparison handoff, but the bounded artifact does not prove enforcement of every repository agent prohibition.",
+          "row_id": "ROW-GOV-AGENT-AUTH-001-0cbe961f",
+          "source_id": "GOVSRC-HARNESS-OWNER-001",
+          "state": "insufficient_evidence",
+          "uncertainty": "No execution-control evidence proves that all agent instances cannot approve pull requests, change requirements, grant exceptions, or exercise project authority."
+        }
+      ],
+      "enterprise_scope": {
+        "assessment_period": "2026-08-02",
+        "enterprise_scope_id": "ENTERPRISE-FIXTURE-001"
+      },
+      "enterprise_traceability_manifest": {
+        "artifact_ids": [
+          "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+        ],
+        "excluded_child_artifact_ids": [
+          "6beec632-8baf-5a58-a4ce-fa14784d8435",
+          "a5ada795-db2f-5625-aed9-1b619411be17"
+        ],
+        "gate_artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+        "governance_manifest_id": "bace0593-e0ab-5c00-8f37-e5e9b4dac348"
+      },
+      "enterprise_unknowns": [
+        {
+          "statement": "No execution-control evidence proves that all agent instances cannot approve pull requests, change requirements, grant exceptions, or exercise project authority."
+        }
+      ],
+      "human_decision_requests": [],
+      "participating_capabilities": [
+        "CAPABILITY-IDENTITY-ACCESS"
+      ],
+      "role": {
+        "approval_dependencies": [],
+        "capa_options": [],
+        "compliance_matrix": [
+          {
+            "applicability_determination_id": "GOVAPP-ADR36-001",
+            "capability_artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+            "confidence": 0.85,
+            "evidence_refs": [
+              "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+              "DERIVED-001"
+            ],
+            "obligation_id": "GOV-AGENT-AUTH-001",
+            "rationale": "CAP-SYNTH preserves human decision authority, advisory-only posture, and an unscheduled comparison handoff, but the bounded artifact does not prove enforcement of every repository agent prohibition.",
+            "row_id": "ROW-GOV-AGENT-AUTH-001-0cbe961f",
+            "source_id": "GOVSRC-HARNESS-OWNER-001",
+            "state": "insufficient_evidence",
+            "uncertainty": "No execution-control evidence proves that all agent instances cannot approve pull requests, change requirements, grant exceptions, or exercise project authority."
+          }
+        ],
+        "decision_authority": "human",
+        "decision_requests": [],
+        "designation": "ENT-GOV",
+        "downstream_handoff": {
+          "consumers": [
+            "ENT-STRAT-CANDIDATE",
+            "ENT-SYNTH-CANDIDATE"
+          ],
+          "handoff_state": "comparison_only",
+          "scheduled": false
+        },
+        "evidence_tier": "accepted_live_multi_domain_single_capability_governance_evaluation",
+        "exception_register": [],
+        "fitness_claim": "single_capability_governance_evaluation",
+        "governance_baseline": [
+          {
+            "applicability": "applicable",
+            "classification": "authoritative",
+            "obligation_id": "GOV-AGENT-AUTH-001",
+            "source_hash": "sha256:ca65902220a178ed3228c9613700cec9f6d964dab8706d66909922270f5970d5",
+            "source_id": "GOVSRC-HARNESS-OWNER-001",
+            "source_locator": "GOVERNANCE.md:13"
+          }
+        ],
+        "governance_conflicts": [],
+        "governance_inconsistencies": [],
+        "governance_maturity": {
+          "advisory_only": true,
+          "rationale": "One capability and one obligation cannot establish enterprise governance maturity.",
+          "state": "insufficient_evidence"
+        },
+        "manifest_binding": {
+          "binding_state": "exact",
+          "capability_artifact_hashes": [
+            "sha256:95d9fa9fe7b6b521c4677ede284ffc18a95e5a3b6ae4d2db6231bb39018baae8"
+          ],
+          "capability_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "gate_artifact_hash": "sha256:d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85",
+          "gate_artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+          "governance_manifest_hash": "sha256:2219eb5c17ffc28738a31295e4d3f0cbb1206d723d0b8d5daed7deedf81d2897",
+          "governance_manifest_id": "bace0593-e0ab-5c00-8f37-e5e9b4dac348"
+        },
+        "unsupported_claims": []
+      },
+      "systemic_dependencies": [],
+      "unresolved_disagreements": []
+    }
+  },
+  "findings": [],
+  "identity": {
+    "agent_uuid": "bc12d42a-6837-4084-a419-3d5a14618714",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "ENT-GOV",
+    "display_name": "Enterprise Governance Reviewer"
+  },
+  "inputs": [
+    {
+      "artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85"
+    },
+    {
+      "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:95d9fa9fe7b6b521c4677ede284ffc18a95e5a3b6ae4d2db6231bb39018baae8"
+    },
+    {
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:2219eb5c17ffc28738a31295e4d3f0cbb1206d723d0b8d5daed7deedf81d2897",
+      "reference": "governance-source-manifest"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:9ed8f4e1c9be4970094c68ddc8e55a6909b267b18398eea09a7e8c6e902ee42b",
+    "output_hash": "sha256:edd1d48e569116ddee654966464e893849afc9fb9888ed1234a508f6d5e2d3d4",
+    "retention_class": "candidate-test",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "One capability only",
+      "No legal or compliance approval",
+      "Comparison only"
+    ],
+    "method": "owner-source and eligibility gated governance evaluation"
+  },
+  "observations": [],
+  "patterns": [],
+  "scope": {
+    "assessment_period": "2026-08-02",
+    "decision_context": "accepted_live_single_capability_governance_evaluation",
+    "enterprise_scope_id": "ENTERPRISE-FIXTURE-001",
+    "participating_capabilities": [
+      "CAPABILITY-IDENTITY-ACCESS"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+ADR-0038 ENT-SYNTH deterministic conformance
+Date: 2026-08-02
+Platform: DGX Spark or approved equivalent (GX-10 cluster1)
+Workspace: ephemeral test workspace
+
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.080s
+
+OK
+
+Validated controls:
+- exact ENT-SYSRISK, ENT-ARCH, ENT-GOV, and corrected ENT-STRAT domain set;
+- active eligibility and exact candidate binding for candidate enterprise domains;
+- corrected ENT-STRAT limitation and CAP-SYNTH source-context propagation;
+- complete domain set without direct capability or child double counting;
+- fail-closed missing, mutation, eligibility substitution, report authority, and revocation cases;
+- preserved decision identifiers are unique, child-qualified, and never flattened to an unqualified record ID;
+- every domain summary carries its artifact-declared and eligibility-carried limitations without replacement;
+- unchanged accepted baseline, report package, report governance state machine, scheduling, deployment, and A100 production posture.
+
+The authenticated corrected Qwen3-32B execution subsequently passed. No credential is retained in this evidence.

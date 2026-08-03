@@ -1,0 +1,34 @@
+{
+  "adr": "ADR-0033",
+  "cap_synth_scheduled": false,
+  "eligibility_hash": "sha256:323982afd0be81f3ed51df460841818b6f5f1d264974d8f636bb03d9c5dbce61",
+  "eligibility_id": "8b22e9ae-c2b9-5988-8fe9-8a6c77eb3792",
+  "eligibility_state": "eligible_for_accepted_capability_input",
+  "finalization_hash": "sha256:4229a3f30bdab19cd9d75c30eae9205e792f4c3c2f85f5d7b04ebbf9c1d164da",
+  "finalization_id": "da097b79-d051-5549-b73a-bd935316ec14",
+  "ledger_refs": [
+    {
+      "classification": "internal",
+      "family": "project-owner-finalization",
+      "logical_path": "project-owner-finalizations/da097b79-d051-5549-b73a-bd935316ec14.json",
+      "object_hash": "sha256:edfad80389dd2abffd477b6003d12e243611d749d00f395dd149c9bf76e8599f",
+      "record_id": "da097b79-d051-5549-b73a-bd935316ec14",
+      "retention_class": "architecture-evidence"
+    },
+    {
+      "classification": "internal",
+      "family": "requirements-eligibility",
+      "logical_path": "requirements-eligibility/8b22e9ae-c2b9-5988-8fe9-8a6c77eb3792.json",
+      "object_hash": "sha256:4b9c5060d582ea92892d193a5f3df719ce1e8ffe31ddb1b0547ddaa0a0455f0e",
+      "record_id": "8b22e9ae-c2b9-5988-8fe9-8a6c77eb3792",
+      "retention_class": "architecture-evidence"
+    }
+  ],
+  "production_target": "A100 large cluster",
+  "project_owner": "thomasverburgt",
+  "response_hash": "sha256:3cc3817dad00267c64b714726cfaba102dd6abaf10df67afd9c235f767f53338",
+  "response_id": "1c27b946-eed2-54f1-994a-b39f8a12d33b",
+  "second_verifier_required": false,
+  "status": "owner_finalized",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)"
+}

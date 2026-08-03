@@ -14,6 +14,55 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 1204,
+      "canonical_source": "fixtures/shared/objects/sha256/1a/1a53108edaf3d3a938353e64c926c2ed459adaf7a75b3014a62054b4defd43b5",
+      "immutable_evidence_copies": [
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/project-owner-semantic-disposition/enterprise-evaluation-eligibility.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/corrected-reference-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/corrected-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/successful-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/reference-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/first-attempt/cap-synth-eligibility.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/revised-flow-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/successful-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-gx10-live-evaluation/cap-synth-eligibility.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-reference-run/cap-synth-eligibility.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/gx10-live-evaluation/cap-synth-eligibility.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/reference-run/cap-synth-eligibility.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:1a53108edaf3d3a938353e64c926c2ed459adaf7a75b3014a62054b4defd43b5",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 5062,
+      "canonical_source": "fixtures/shared/objects/sha256/27/27d55fed80e207f356b6dcf44a742f14468dbe203d16787c81a73629ad222fab",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/corrected-reference-run/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/corrected-run/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-gx10-live-evaluation/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-reference-run/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/gx10-live-evaluation/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/reference-run/ent-evidence-gate.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:27d55fed80e207f356b6dcf44a742f14468dbe203d16787c81a73629ad222fab",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2008,
+      "canonical_source": "fixtures/shared/objects/sha256/29/292ebe27def4ca04bc9511c301e29335e0bbe026445c756fc5f3b9e093c70156",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/governance-evidence-binding-manifest.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/revised-flow-run/governance-evidence-binding-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:292ebe27def4ca04bc9511c301e29335e0bbe026445c756fc5f3b9e093c70156",
+      "reusable_fixture_copies": []
+    },
+    {
       "bytes": 5469,
       "canonical_source": "fixtures/shared/objects/sha256/33/3368769166052c0950764fc63c18917fbe606eb8cd0e78a522af0d46979196a0",
       "immutable_evidence_copies": [
@@ -26,16 +75,191 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 2782,
+      "canonical_source": "fixtures/shared/objects/sha256/36/36496c26be18d4310350e782eca6df16a92cc2e334ec1ef944eb5cd05c42463e",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/owner-governance-source-manifest.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/revised-flow-run/owner-governance-source-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:36496c26be18d4310350e782eca6df16a92cc2e334ec1ef944eb5cd05c42463e",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 533,
+      "canonical_source": "fixtures/shared/objects/sha256/41/414fd9d9db0104613618b79cddf6f4aee281258a5a75d4c6745c9dc94e49d3f7",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/ledger/indexes/traceability/bd699443-a08f-5b39-8015-a3471f95e652.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/ledger/indexes/traceability/bd699443-a08f-5b39-8015-a3471f95e652.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:414fd9d9db0104613618b79cddf6f4aee281258a5a75d4c6745c9dc94e49d3f7",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 6848,
+      "canonical_source": "fixtures/shared/objects/sha256/44/44851fde8beabf5e111666b49da6074676fe4b2e190a6a3b331bdd667f4f8bec",
+      "immutable_evidence_copies": [
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/pre-lineage-tightening-attempt/cap-req-input.artifact.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/successful-run/cap-req-input.artifact.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/reference-run/cap-req-input.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:44851fde8beabf5e111666b49da6074676fe4b2e190a6a3b331bdd667f4f8bec",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1437,
+      "canonical_source": "fixtures/shared/objects/sha256/45/45f70dfcb6d408174195212a2def0e8e271b5815d213eaaff43a697a1d865fc8",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-gx10-live-evaluation/project-strategic-objective-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-reference-run/project-strategic-objective-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:45f70dfcb6d408174195212a2def0e8e271b5815d213eaaff43a697a1d865fc8",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 11271,
+      "canonical_source": "fixtures/shared/objects/sha256/54/54482dc4314bc2573f4d6b95a64010833f72618e4b51c3aa5dbb9c4de0ae917c",
+      "immutable_evidence_copies": [
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/successful-run/cap-synth-model-candidate.artifact.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/corrected-reference-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/corrected-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/successful-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/reference-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/first-attempt/cap-synth-input.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/revised-flow-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/successful-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-gx10-live-evaluation/cap-synth-input.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-reference-run/cap-synth-input.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/gx10-live-evaluation/cap-synth-input.artifact.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/reference-run/cap-synth-input.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:54482dc4314bc2573f4d6b95a64010833f72618e4b51c3aa5dbb9c4de0ae917c",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2573,
+      "canonical_source": "fixtures/shared/objects/sha256/58/58c56cfd650f34dba9acc4440f1d5f8b803ef13d1d6aa8e28d8afffcaed39d64",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/first-attempt/raw-response.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/revised-flow-run/raw-response.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/successful-run/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:58c56cfd650f34dba9acc4440f1d5f8b803ef13d1d6aa8e28d8afffcaed39d64",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1326,
+      "canonical_source": "fixtures/shared/objects/sha256/5f/5f1f7a1290662614fc16e3960278bade909497885bb011b130d825c806b8e698",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/gx10-live-evaluation/enterprise-strategy-input-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/reference-run/enterprise-strategy-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:5f1f7a1290662614fc16e3960278bade909497885bb011b130d825c806b8e698",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 311,
+      "canonical_source": "fixtures/shared/objects/sha256/6a/6a3beaf7c89abe95150111749a119d562f38e90edc81724fac68b3fa3ebfb98c",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/ledger/indexes/artifact/bd699443-a08f-5b39-8015-a3471f95e652.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/ledger/indexes/artifact/bd699443-a08f-5b39-8015-a3471f95e652.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6a3beaf7c89abe95150111749a119d562f38e90edc81724fac68b3fa3ebfb98c",
+      "reusable_fixture_copies": []
+    },
+    {
       "bytes": 11724,
       "canonical_source": "fixtures/shared/objects/sha256/6e/6e7381d2dad28eea4cce10f607e12f929e53e9d173a039284284d1953ed2603a",
       "immutable_evidence_copies": [
         "fixtures/capability-synth-admission/evidence/2026-08-01/adr0018/reference-run/cap-risk-input.artifact.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/pre-lineage-tightening-attempt/cap-risk-input.artifact.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/successful-run/cap-risk-input.artifact.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/reference-run/cap-risk-input.artifact.json",
         "fixtures/enterprise-arch-admission/evidence/2026-08-01/adr0021/reference-run/capability-input-1.artifact.json",
         "fixtures/enterprise-governance-admission/evidence/2026-08-01/adr0022/reference-run/capability-input-1.artifact.json",
         "fixtures/vertical-risk-slice/evidence/canonical-cap-risk-2026-07-31/accepted-cap-risk.artifact.json"
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:6e7381d2dad28eea4cce10f607e12f929e53e9d173a039284284d1953ed2603a",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1126,
+      "canonical_source": "fixtures/shared/objects/sha256/8b/8bd32ad49096dea4f63dcc709c0a7a99eddd74d4d3755dde84df2c861f602455",
+      "immutable_evidence_copies": [
+        "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization-corrected/requirements-eligibility-record.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/pre-lineage-tightening-attempt/requirements-eligibility-record.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/successful-run/requirements-eligibility-record.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/reference-run/requirements-eligibility-record.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:8bd32ad49096dea4f63dcc709c0a7a99eddd74d4d3755dde84df2c861f602455",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1048,
+      "canonical_source": "fixtures/shared/objects/sha256/8d/8d21e5bfb35262e68f2fd22d15ef021311c24072d730585ff16a6c1488b4373d",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/gx10-live-evaluation/project-strategic-scoring-method-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/reference-run/project-strategic-scoring-method-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:8d21e5bfb35262e68f2fd22d15ef021311c24072d730585ff16a6c1488b4373d",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 4983,
+      "canonical_source": "fixtures/shared/objects/sha256/9b/9bd56c83c07d50e20303b2953434f41e6e7597cbf782a5dadf5e6906af2f1ef0",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/successful-run/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/reference-run/ent-evidence-gate.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:9bd56c83c07d50e20303b2953434f41e6e7597cbf782a5dadf5e6906af2f1ef0",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1494,
+      "canonical_source": "fixtures/shared/objects/sha256/a3/a3b715f321cd76a31863bddb438f1e1282e7cc2167ba1e77a4b1d51d0dbd85a4",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/enterprise-governance-input-manifest.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/revised-flow-run/enterprise-governance-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:a3b715f321cd76a31863bddb438f1e1282e7cc2167ba1e77a4b1d51d0dbd85a4",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 4859,
+      "canonical_source": "fixtures/shared/objects/sha256/a6/a65e88e6dd8d488c83d63d681ccd4683bc2d33c33b243509640c9722c3a9796a",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/corrected-run/raw-response.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/first-attempt/raw-response.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/successful-run/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:a65e88e6dd8d488c83d63d681ccd4683bc2d33c33b243509640c9722c3a9796a",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1317,
+      "canonical_source": "fixtures/shared/objects/sha256/af/af862d6f2b71f2d184b2d61b9ebae840c7f814539d5a39b8f8ee9bc4ca2e5d9b",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/first-attempt/enterprise-governance-input-manifest.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/successful-run/enterprise-governance-input-manifest.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/enterprise-governance-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:af862d6f2b71f2d184b2d61b9ebae840c7f814539d5a39b8f8ee9bc4ca2e5d9b",
       "reusable_fixture_copies": []
     },
     {
@@ -47,6 +271,156 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:afd6c680881a7f7d76f3b13ad72f725dba8b5cdd2cad85bcbcef21c3839ca8d1",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 5060,
+      "canonical_source": "fixtures/shared/objects/sha256/ba/ba3ca6f703ce0a527b6d6b8a4399e33020f6a4bcaf9e213f44a705e0904c8885",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/first-attempt/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/revised-flow-run/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/successful-run/ent-evidence-gate.artifact.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/ent-evidence-gate.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:ba3ca6f703ce0a527b6d6b8a4399e33020f6a4bcaf9e213f44a705e0904c8885",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2509,
+      "canonical_source": "fixtures/shared/objects/sha256/ba/ba4c8dd721e7da83beb084efefac3619d2da8f09b7a89fa066e8303836224ca6",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/first-attempt/owner-governance-source-manifest.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/gx10-live-evaluation/successful-run/owner-governance-source-manifest.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/owner-governance-source-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:ba4c8dd721e7da83beb084efefac3619d2da8f09b7a89fa066e8303836224ca6",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1326,
+      "canonical_source": "fixtures/shared/objects/sha256/c2/c231a0ef2f8195e82e0f2adc58d2c9d346cda68f3acfae6c5d29b74eab40a4e9",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-gx10-live-evaluation/enterprise-strategy-input-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-reference-run/enterprise-strategy-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:c231a0ef2f8195e82e0f2adc58d2c9d346cda68f3acfae6c5d29b74eab40a4e9",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1131,
+      "canonical_source": "fixtures/shared/objects/sha256/d4/d4b84056060b88f05768553896351ae4470e518f0ee51095e90dea0f4f511c16",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/corrected-reference-run/enterprise-architecture-input-manifest.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/corrected-run/enterprise-architecture-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:d4b84056060b88f05768553896351ae4470e518f0ee51095e90dea0f4f511c16",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 3697,
+      "canonical_source": "fixtures/shared/objects/sha256/d6/d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/corrected-reference-run/ledger/objects/sha256/d6/d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85.json",
+        "fixtures/enterprise-governance-admission/evidence/2026-08-02/adr0036/reference-run/ledger/objects/sha256/d6/d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 3560,
+      "canonical_source": "fixtures/shared/objects/sha256/dd/ddc62e37f75bcfa17b6f30bbcbe323f00ae2f391cd11adfd77e17105460bfa1f",
+      "immutable_evidence_copies": [
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/pre-lineage-tightening-attempt/capability-input-manifest.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/gx10-live-evaluation/successful-run/capability-input-manifest.json",
+        "fixtures/capability-synth-admission/evidence/2026-08-02/adr0034/reference-run/capability-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:ddc62e37f75bcfa17b6f30bbcbe323f00ae2f391cd11adfd77e17105460bfa1f",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 361,
+      "canonical_source": "fixtures/shared/objects/sha256/e5/e5796a448f0d80bb2235220d902feeba93f3f6e4c2096ea22620600ae88dd983",
+      "immutable_evidence_copies": [
+        "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization-corrected/ledger/indexes/project-owner-finalization/da097b79-d051-5549-b73a-bd935316ec14.json",
+        "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization/ledger/indexes/project-owner-finalization/da097b79-d051-5549-b73a-bd935316ec14.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:e5796a448f0d80bb2235220d902feeba93f3f6e4c2096ea22620600ae88dd983",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 802,
+      "canonical_source": "fixtures/shared/objects/sha256/ec/ec98647e894cca89ff431f08f7026341ff464fbf5066cdba4f688cc9a4320433",
+      "immutable_evidence_copies": [
+        "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization-corrected/project-owner-finalization.json",
+        "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization/project-owner-finalization.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:ec98647e894cca89ff431f08f7026341ff464fbf5066cdba4f688cc9a4320433",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 709,
+      "canonical_source": "fixtures/shared/objects/sha256/ed/edfad80389dd2abffd477b6003d12e243611d749d00f395dd149c9bf76e8599f",
+      "immutable_evidence_copies": [
+        "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization-corrected/ledger/objects/sha256/ed/edfad80389dd2abffd477b6003d12e243611d749d00f395dd149c9bf76e8599f.json",
+        "fixtures/cap-req-admission/evidence/2026-08-02/adr0033/project-owner-finalization/ledger/objects/sha256/ed/edfad80389dd2abffd477b6003d12e243611d749d00f395dd149c9bf76e8599f.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:edfad80389dd2abffd477b6003d12e243611d749d00f395dd149c9bf76e8599f",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1131,
+      "canonical_source": "fixtures/shared/objects/sha256/ee/eee4980e3d8bd7313c95b9188f96c7040d168b6ad45b7378febb7c6f0d2da483",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/gx10-live-evaluation/successful-run/enterprise-architecture-input-manifest.json",
+        "fixtures/enterprise-arch-admission/evidence/2026-08-02/adr0035/reference-run/enterprise-architecture-input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:eee4980e3d8bd7313c95b9188f96c7040d168b6ad45b7378febb7c6f0d2da483",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1435,
+      "canonical_source": "fixtures/shared/objects/sha256/f3/f37cf03fb3bdd63e3dbdb266db0c308b46e2cb3d066190ab934600bf7f7d39a0",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/gx10-live-evaluation/project-strategic-objective-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/reference-run/project-strategic-objective-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:f37cf03fb3bdd63e3dbdb266db0c308b46e2cb3d066190ab934600bf7f7d39a0",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1137,
+      "canonical_source": "fixtures/shared/objects/sha256/f7/f787b5de4e16fd48a31d478fb66626e437932cd32599760c0b100c87e5a2c1d1",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-gx10-live-evaluation/strategy-evidence-binding-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-reference-run/strategy-evidence-binding-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/gx10-live-evaluation/strategy-evidence-binding-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/reference-run/strategy-evidence-binding-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:f787b5de4e16fd48a31d478fb66626e437932cd32599760c0b100c87e5a2c1d1",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2016,
+      "canonical_source": "fixtures/shared/objects/sha256/fd/fd92dcd16bff09242baabe74cf367d8226e849674c097a46aa41eaaafddac479",
+      "immutable_evidence_copies": [
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-gx10-live-evaluation/project-strategic-scoring-method-manifest.json",
+        "fixtures/enterprise-strategy-admission/evidence/2026-08-02/adr0037/corrected-reference-run/project-strategic-scoring-method-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:fd92dcd16bff09242baabe74cf367d8226e849674c097a46aa41eaaafddac479",
       "reusable_fixture_copies": []
     }
   ]

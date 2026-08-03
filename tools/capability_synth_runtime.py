@@ -84,17 +84,22 @@ def build_candidate(manifest: dict[str, Any], artifacts: list[dict[str, Any]], e
     is_multi = len(manifest["expected_designations"]) >= 2
     if evidence_tier == "adjudicated_multi_domain_contract_fixture" and not is_multi:
         raise ValidationFailure("adjudicated multi-domain tier requires at least two domains")
-    if evidence_tier not in {"adjudicated_multi_domain_contract_fixture", "accepted_live_input_calibration"}:
+    if evidence_tier not in {"adjudicated_multi_domain_contract_fixture", "accepted_live_input_calibration",
+                             "accepted_live_multi_domain_candidate_evaluation"}:
         raise ValidationFailure("unsupported CAP-SYNTH evidence tier")
-    fitness = "contract_fixture_only" if evidence_tier.startswith("adjudicated") else ("multi_domain_candidate_calibration" if is_multi else "protocol_lineage_smoke_only")
+    fitness = ("contract_fixture_only" if evidence_tier.startswith("adjudicated") else
+               "multi_domain_candidate_evaluation" if evidence_tier == "accepted_live_multi_domain_candidate_evaluation" else
+               "multi_domain_candidate_calibration" if is_multi else "protocol_lineage_smoke_only")
     derived = []
     if is_multi:
         finding_ids = [item["source_record_id"] for item in preserved if item["record_kind"] == "finding"]
-        derived = [{"assertion_id": "DERIVED-CAPSYNTH-001", "statement": "Risk disposition and requirement closure depend on the same unresolved classification decision.",
+        live_multi = evidence_tier == "accepted_live_multi_domain_candidate_evaluation"
+        derived = [{"assertion_id": "DERIVED-CAPSYNTH-001", "statement": ("The accepted risk finding cannot be evaluated against an authoritative requirement because the accepted requirements review declares none for this bounded slice." if live_multi else "Risk disposition and requirement closure depend on the same unresolved classification decision."),
                     "contributing_artifact_ids": artifact_ids, "contributing_record_ids": sorted(finding_ids)[:2],
-                    "derivation_logic": "The preserved risk and requirement findings cite the same source evidence and unresolved classification context.",
-                    "assumptions": ["The fixture source binding remains current"], "alternatives": ["Authoritative classification may resolve both records"],
-                    "confidence": 0.85, "uncertainty": ["No authoritative classification decision is present"]}]
+                    "derivation_logic": ("The preserved CAP-RISK finding identifies a risk question while the preserved CAP-REQ finding states that no authoritative requirement is declared; therefore requirement-based evaluation is unavailable without inferring a requirement." if live_multi else "The preserved risk and requirement findings cite the same source evidence and unresolved classification context."),
+                    "assumptions": (["The owner-finalized CAP-REQ eligibility remains active"] if live_multi else ["The fixture source binding remains current"]),
+                    "alternatives": (["A later authoritative requirement declaration may enable traceability evaluation"] if live_multi else ["Authoritative classification may resolve both records"]),
+                    "confidence": 0.85, "uncertainty": (["No authoritative requirement is declared for this bounded slice"] if live_multi else ["No authoritative classification decision is present"])}]
     candidate_id = stable_uuid(manifest["manifest_id"], evidence_tier, "candidate")
     confidence_inputs = [item.get("confidence", {}).get("assessment") for item in artifacts]
     role = {
@@ -108,11 +113,16 @@ def build_candidate(manifest: dict[str, Any], artifacts: list[dict[str, Any]], e
                                       "result": min(value for value in confidence_inputs if isinstance(value, (int, float))),
                                       "uncertainty": ["Unlike domain confidence values are not averaged"]},
         "enterprise_handoff": {"capability_id": manifest["capability_id"], "artifact_id": candidate_id,
-                               "preserved_record_ids": sorted(item["source_record_id"] for item in preserved),
+                               "preserved_record_ids": sorted(
+                                   f"{item['source_artifact_id']}:{item['source_record_id']}" for item in preserved),
                                "derived_assertion_ids": [item["assertion_id"] for item in derived],
                                "unresolved_conflict_ids": sorted(item["conflict_id"] for item in manifest["preserved_conflicts"]),
-                               "decision_request_ids": sorted(item["source_record_id"] for item in preserved if item["record_kind"] == "decision_request"),
-                               "intended_consumers": ["ENT-SYNTH-CANDIDATE-COMPARISON"], "handoff_state": "comparison_only"},
+                               "decision_request_ids": sorted(
+                                   f"{item['source_artifact_id']}:{item['source_record_id']}" for item in preserved
+                                   if item["record_kind"] == "decision_request"),
+                               "intended_consumers": ["ENT-ARCH-CANDIDATE-COMPARISON", "ENT-GOV-CANDIDATE-COMPARISON",
+                                                      "ENT-STRAT-CANDIDATE-COMPARISON"],
+                               "handoff_state": "comparison_only"},
         "decision_authority": "human",
     }
     candidate = {
@@ -129,7 +139,8 @@ def build_candidate(manifest: dict[str, Any], artifacts: list[dict[str, Any]], e
         "confidence": {"evidence": 1.0, "assessment": role["confidence_reconciliation"]["result"], "review": 1.0, "decision": None,
                        "provenance": [{"artifact_id": item["artifact"]["artifact_id"], "confidence": item.get("confidence", {}).get("assessment")} for item in artifacts]},
         "decisions_requested": [{"decision_context_id": "DECISION-CAPSYNTH-001", "question": "Should this candidate proceed to a later promotion review after accepted live multi-domain evidence exists?", "required_authority": "project-maintainer"}],
-        "consumers": ["ENT-SYNTH-CANDIDATE-COMPARISON"], "decision_authority": "human",
+        "consumers": ["ENT-ARCH-CANDIDATE-COMPARISON", "ENT-GOV-CANDIDATE-COMPARISON",
+                      "ENT-STRAT-CANDIDATE-COMPARISON"], "decision_authority": "human",
         "integrity": {"input_hash": content_hash({"manifest_hash": manifest["integrity"]["manifest_hash"], "inputs": manifest["received_inputs"]}),
                       "output_hash": None, "attestation_ref": None, "retention_class": "candidate-test", "schema_validation": "passed"},
         "extensions": {"capability": {"capability_id": manifest["capability_id"], "participating_products": ["PRODUCT-ALPHA"],
@@ -169,6 +180,17 @@ def validate_candidate(candidate: dict[str, Any], manifest: dict[str, Any], arti
     actual_records = {(item["source_artifact_id"], item["source_record_id"]): tuple(item["evidence_refs"]) for item in role["preserved_child_assertions"]}
     if actual_records != expected_records:
         raise ValidationFailure("CAP-SYNTH did not exactly preserve coordinator traceability")
+    expected_handoff_records = sorted(f"{source_id}:{record_id}" for source_id, record_id in expected_records)
+    if role["enterprise_handoff"]["preserved_record_ids"] != expected_handoff_records:
+        raise ValidationFailure("CAP-SYNTH enterprise handoff preserved-record lineage mismatch")
+    expected_decisions = sorted(
+        f"{item['source_artifact_id']}:{item['source_record_id']}" for item in role["preserved_child_assertions"]
+        if item["record_kind"] == "decision_request")
+    if role["enterprise_handoff"]["decision_request_ids"] != expected_decisions:
+        raise ValidationFailure("CAP-SYNTH enterprise handoff decision-request lineage mismatch")
+    if role["enterprise_handoff"]["derived_assertion_ids"] != sorted(
+            item["assertion_id"] for item in role["derived_capability_assertions"]):
+        raise ValidationFailure("CAP-SYNTH enterprise handoff derived-assertion lineage mismatch")
     preserved_ids = {item["source_record_id"] for item in role["preserved_child_assertions"]}
     for derived in role["derived_capability_assertions"]:
         if not set(derived["contributing_artifact_ids"]).issubset(artifact_ids) or not set(derived["contributing_record_ids"]).issubset(preserved_ids):
@@ -178,6 +200,8 @@ def validate_candidate(candidate: dict[str, Any], manifest: dict[str, Any], arti
         raise ValidationFailure("CAP-SYNTH fixture tier fitness mismatch")
     if tier == "accepted_live_input_calibration" and len(artifacts) == 1 and fitness != "protocol_lineage_smoke_only":
         raise ValidationFailure("single-domain live evidence cannot claim multi-domain fitness")
+    if tier == "accepted_live_multi_domain_candidate_evaluation" and (len(artifacts) < 2 or fitness != "multi_domain_candidate_evaluation"):
+        raise ValidationFailure("accepted-live multi-domain evidence tier mismatch")
     if role["enterprise_handoff"]["artifact_id"] != candidate["artifact"]["artifact_id"] or role["enterprise_handoff"]["handoff_state"] != "comparison_only":
         raise ValidationFailure("CAP-SYNTH enterprise handoff is not comparison-only and exact")
     if candidate["decision_authority"] != "human" or role["decision_authority"] != "human":
@@ -187,14 +211,17 @@ def validate_candidate(candidate: dict[str, Any], manifest: dict[str, Any], arti
         raise ValidationFailure("CAP-SYNTH candidate cannot be scheduled in the baseline workflow")
 
 
-def assemble_model_candidate(model_role: dict[str, Any], manifest: dict[str, Any], artifacts: list[dict[str, Any]]) -> dict[str, Any]:
+def assemble_model_candidate(model_role: dict[str, Any], manifest: dict[str, Any], artifacts: list[dict[str, Any]], *,
+                             evidence_tier: str = "accepted_live_input_calibration") -> dict[str, Any]:
     """Project only model-owned analytical fields into a harness-owned live-smoke envelope."""
-    base = build_candidate(manifest, artifacts, "accepted_live_input_calibration")
+    base = build_candidate(manifest, artifacts, evidence_tier)
     role = base["extensions"]["capability"]["role"]
     for field in ("preserved_child_assertions", "derived_capability_assertions", "capability_posture", "confidence_reconciliation"):
         if field not in model_role:
             raise ValidationFailure(f"CAP-SYNTH model payload omitted {field}")
         role[field] = copy.deepcopy(model_role[field])
+    role["enterprise_handoff"]["derived_assertion_ids"] = sorted(
+        item["assertion_id"] for item in role["derived_capability_assertions"])
     if len(artifacts) == 1 and role["derived_capability_assertions"]:
         raise ValidationFailure("single-domain model calibration cannot emit a cross-domain derivation")
     base["extensions"]["capability"]["technical_confidence_rollup"] = copy.deepcopy(role["confidence_reconciliation"])

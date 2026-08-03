@@ -1,0 +1,28 @@
+{
+  "candidate": {
+    "hash": "sha256:5c3c6de43612a86741aa489fc806525467f1a2d7f5225a39dacc7bc6ffa3c88c",
+    "id": "00f8b5b9-19f9-5a1b-8cd1-3122333f2d55"
+  },
+  "effect": "comparison_only",
+  "generated_at": "2026-08-02T08:00:00Z",
+  "record_id": "5c6879d9-06d6-561b-b7dd-90bb8ebb9cf3",
+  "results": [
+    {
+      "consumer": "ENT-SYNTH",
+      "state": "compatible_via_tiered_enterprise_domain_wrapper"
+    },
+    {
+      "consumer": "ENT-ARCHSTRAT",
+      "state": "candidate_interface_only_unscheduled"
+    },
+    {
+      "consumer": "ENT-TECHDEBT",
+      "state": "planned_interface_only"
+    },
+    {
+      "consumer": "ENT-MODERNIZE",
+      "state": "planned_interface_only"
+    }
+  ],
+  "scheduled": false
+}

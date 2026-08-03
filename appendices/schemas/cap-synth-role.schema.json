@@ -7,8 +7,8 @@
   "required": ["designation", "evidence_tier", "fitness_claim", "synthesis_basis", "preserved_child_assertions", "derived_capability_assertions", "capability_posture", "confidence_reconciliation", "enterprise_handoff", "decision_authority"],
   "properties": {
     "designation": {"const": "CAP-SYNTH"},
-    "evidence_tier": {"enum": ["adjudicated_multi_domain_contract_fixture", "accepted_live_input_calibration"]},
-    "fitness_claim": {"enum": ["contract_fixture_only", "protocol_lineage_smoke_only", "multi_domain_candidate_calibration"]},
+    "evidence_tier": {"enum": ["adjudicated_multi_domain_contract_fixture", "accepted_live_input_calibration", "accepted_live_multi_domain_candidate_evaluation"]},
+    "fitness_claim": {"enum": ["contract_fixture_only", "protocol_lineage_smoke_only", "multi_domain_candidate_calibration", "multi_domain_candidate_evaluation"]},
     "synthesis_basis": {
       "type": "object", "additionalProperties": false,
       "required": ["coordinator_manifest_id", "coordinator_manifest_hash", "expected_designations", "received_artifact_ids", "completeness_state"],

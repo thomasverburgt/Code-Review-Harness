@@ -1,0 +1,327 @@
+{
+  "artifact": {
+    "artifact_id": "9a0edab2-f80a-5179-a311-1975988ad252",
+    "artifact_type": "enterprise-strategic-confidence",
+    "created_at": "2026-08-02T12:00:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [
+        "bd699443-a08f-5b39-8015-a3471f95e652",
+        "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+      ],
+      "parents": [],
+      "peers": []
+    }
+  },
+  "assessments": [],
+  "confidence": {
+    "assessment": 0.85,
+    "decision": null,
+    "evidence": 0.5,
+    "provenance": [
+      {
+        "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+        "confidence": 0.85
+      }
+    ],
+    "review": 1.0
+  },
+  "conflicts": [],
+  "consumers": [
+    "ENT-SYNTH-CANDIDATE",
+    "ENT-PORTFOLIO-CANDIDATE"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [],
+  "execution": {
+    "execution_id": "fc05bcdd-133d-52ca-aca4-829a46dda14d",
+    "generation_mode": "deterministic_reference_projection",
+    "harness_owned_fields": [
+      "objective_and_method_authority",
+      "manifest_bindings",
+      "objective_scorecards",
+      "normalization_method",
+      "weighting_model",
+      "confidence_distributions",
+      "sensitivity_analysis",
+      "missing_data_effects",
+      "threshold_context",
+      "strategic_confidence_posture",
+      "composite_score",
+      "authority_boundary"
+    ],
+    "model": "deterministic-reference-agent",
+    "prompt_version": "design-0.1.0",
+    "raw_model_response_sha256": null,
+    "rubric_version": "0.1.0",
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "enterprise": {
+      "capability_input_manifest": [
+        {
+          "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+          "content_hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269",
+          "state": "valid"
+        }
+      ],
+      "confidence_reconciliation": {
+        "method": "confidence_in_bounded_evidence_insufficiency_not_strategic_approval",
+        "result": 0.85
+      },
+      "cross_capability_correlations": [],
+      "enterprise_assertions": [
+        {
+          "components": [
+            {
+              "confidence": 0.85,
+              "direction": "higher_is_better",
+              "evidence_refs": [
+                "STRAT-EVID-HUMAN-AUTHORITY",
+                "STRAT-EVID-ADVISORY-ONLY"
+              ],
+              "measure_id": "MEASURE-HUMAN-AUTHORITY",
+              "normalized_value": 1.0,
+              "source_artifact_ids": [
+                "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+              ],
+              "source_evidence_tier": "accepted_live_multi_domain_capability_synthesis_evaluation",
+              "state": "observed",
+              "weight": 0.5
+            },
+            {
+              "confidence": null,
+              "direction": "higher_is_better",
+              "evidence_refs": [],
+              "measure_id": "MEASURE-FINDING-LOCATOR-COVERAGE",
+              "normalized_value": null,
+              "source_artifact_ids": [],
+              "source_evidence_tier": "unavailable",
+              "state": "missing",
+              "weight": 0.5
+            }
+          ],
+          "composite_score": null,
+          "objective_id": "STRAT-HARNESS-DECISION-QUALITY-001",
+          "outcome": "Preserve traceable, human-controlled Code Harness review outputs for leadership and expert decisions.",
+          "state": "insufficient_evidence"
+        }
+      ],
+      "enterprise_scope": {
+        "assessment_period": "2026-08-02",
+        "enterprise_scope_id": "ENTERPRISE-FIXTURE-001"
+      },
+      "enterprise_traceability_manifest": {
+        "binding_state": "exact",
+        "cap_synth_eligibility_hash": "sha256:62d202ee80b5970e0bbe4e199106bedec7829a7e458bdcfd179f4ffd108cccc9",
+        "cap_synth_eligibility_id": "5f3e8885-b5df-578c-87b2-c22fab03342c",
+        "evaluation_input_manifest_hash": "sha256:08cc4c5ebf4baaad1053bb9ac4677d18f592bcbf96801f6632b17c79f2ba2d73",
+        "evaluation_input_manifest_id": "28ca3666-44d2-527e-a263-25542f276844",
+        "evidence_manifest_hash": "sha256:520137acc8298dd2346a00e6431f463aa13f8e5ef5200993cea7feaae25e817e",
+        "evidence_manifest_id": "ea53942f-2aef-5466-a852-0ca155b7c724",
+        "gate_artifact_hash": "sha256:0526ae98f134db1600b38fa43c70831bf31f72a66b481412b3cbe90028f34d55",
+        "gate_artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+        "objective_manifest_hash": "sha256:eb77d2319962f24a569a0d6f01f0d801e1790f257f34aeec65f17f74cc3d76bc",
+        "objective_manifest_id": "6add2fa6-628d-515b-ad25-ab88e6633035",
+        "posture_artifact_hashes": [
+          "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269"
+        ],
+        "posture_artifact_ids": [
+          "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+        ],
+        "scoring_method_hash": "sha256:11d43671d60c6b93ff50d10912e883e96fbb780cc7cc5e53122e874251e3ace8",
+        "scoring_method_id": "781453ca-dc1c-5d85-a59b-3ace93fc64de"
+      },
+      "enterprise_unknowns": [
+        {
+          "effect": "Strategic alignment remains insufficient_evidence; no value is imputed and no composite is calculated.",
+          "measure_id": "MEASURE-FINDING-LOCATOR-COVERAGE",
+          "objective_id": "STRAT-HARNESS-DECISION-QUALITY-001"
+        }
+      ],
+      "human_decision_requests": [],
+      "participating_capabilities": [
+        "CAPABILITY-IDENTITY-ACCESS"
+      ],
+      "role": {
+        "composite_score": null,
+        "confidence_distributions": [
+          {
+            "component_max": 1.0,
+            "component_min": 1.0,
+            "composite": null,
+            "false_precision_avoided": true,
+            "objective_id": "STRAT-HARNESS-DECISION-QUALITY-001"
+          }
+        ],
+        "decision_authority": "human",
+        "decision_requests": [],
+        "designation": "ENT-STRAT",
+        "disagreement_register": [],
+        "downstream_handoff": {
+          "consumers": [
+            "ENT-SYNTH-CANDIDATE",
+            "ENT-PORTFOLIO-CANDIDATE"
+          ],
+          "handoff_state": "comparison_only",
+          "scheduled": false
+        },
+        "evidence_tier": "accepted_live_multi_domain_single_capability_strategy_evaluation",
+        "fitness_claim": "single_capability_project_strategy_evaluation",
+        "input_evidence_tiers": [
+          {
+            "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+            "designation": "CAP-SYNTH",
+            "evidence_tier": "accepted_live_multi_domain_capability_synthesis_evaluation"
+          }
+        ],
+        "manifest_binding": {
+          "binding_state": "exact",
+          "cap_synth_eligibility_hash": "sha256:62d202ee80b5970e0bbe4e199106bedec7829a7e458bdcfd179f4ffd108cccc9",
+          "cap_synth_eligibility_id": "5f3e8885-b5df-578c-87b2-c22fab03342c",
+          "evaluation_input_manifest_hash": "sha256:08cc4c5ebf4baaad1053bb9ac4677d18f592bcbf96801f6632b17c79f2ba2d73",
+          "evaluation_input_manifest_id": "28ca3666-44d2-527e-a263-25542f276844",
+          "evidence_manifest_hash": "sha256:520137acc8298dd2346a00e6431f463aa13f8e5ef5200993cea7feaae25e817e",
+          "evidence_manifest_id": "ea53942f-2aef-5466-a852-0ca155b7c724",
+          "gate_artifact_hash": "sha256:0526ae98f134db1600b38fa43c70831bf31f72a66b481412b3cbe90028f34d55",
+          "gate_artifact_id": "bd699443-a08f-5b39-8015-a3471f95e652",
+          "objective_manifest_hash": "sha256:eb77d2319962f24a569a0d6f01f0d801e1790f257f34aeec65f17f74cc3d76bc",
+          "objective_manifest_id": "6add2fa6-628d-515b-ad25-ab88e6633035",
+          "posture_artifact_hashes": [
+            "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269"
+          ],
+          "posture_artifact_ids": [
+            "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+          ],
+          "scoring_method_hash": "sha256:11d43671d60c6b93ff50d10912e883e96fbb780cc7cc5e53122e874251e3ace8",
+          "scoring_method_id": "781453ca-dc1c-5d85-a59b-3ace93fc64de"
+        },
+        "missing_data_effects": [
+          {
+            "effect": "Strategic alignment remains insufficient_evidence; no value is imputed and no composite is calculated.",
+            "measure_id": "MEASURE-FINDING-LOCATOR-COVERAGE",
+            "objective_id": "STRAT-HARNESS-DECISION-QUALITY-001"
+          }
+        ],
+        "normalization_method": "identity_0_1",
+        "objective_scorecards": [
+          {
+            "components": [
+              {
+                "confidence": 0.85,
+                "direction": "higher_is_better",
+                "evidence_refs": [
+                  "STRAT-EVID-HUMAN-AUTHORITY",
+                  "STRAT-EVID-ADVISORY-ONLY"
+                ],
+                "measure_id": "MEASURE-HUMAN-AUTHORITY",
+                "normalized_value": 1.0,
+                "source_artifact_ids": [
+                  "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+                ],
+                "source_evidence_tier": "accepted_live_multi_domain_capability_synthesis_evaluation",
+                "state": "observed",
+                "weight": 0.5
+              },
+              {
+                "confidence": null,
+                "direction": "higher_is_better",
+                "evidence_refs": [],
+                "measure_id": "MEASURE-FINDING-LOCATOR-COVERAGE",
+                "normalized_value": null,
+                "source_artifact_ids": [],
+                "source_evidence_tier": "unavailable",
+                "state": "missing",
+                "weight": 0.5
+              }
+            ],
+            "composite_score": null,
+            "objective_id": "STRAT-HARNESS-DECISION-QUALITY-001",
+            "outcome": "Preserve traceable, human-controlled Code Harness review outputs for leadership and expert decisions.",
+            "state": "insufficient_evidence"
+          }
+        ],
+        "sensitivity_analysis": [
+          {
+            "authorized_weight_delta": 0.1,
+            "objective_id": "STRAT-HARNESS-DECISION-QUALITY-001",
+            "result": "not_calculated_composite_prohibited"
+          }
+        ],
+        "strategic_confidence_posture": {
+          "advisory_only": true,
+          "rationale": "Human authority is evidenced, but exact finding-locator coverage is not established by the bounded CAP-SYNTH artifact.",
+          "state": "insufficient_evidence"
+        },
+        "threshold_context": null,
+        "unsupported_claims": [],
+        "weighting_model": {
+          "MEASURE-FINDING-LOCATOR-COVERAGE": 0.5,
+          "MEASURE-HUMAN-AUTHORITY": 0.5
+        }
+      },
+      "systemic_dependencies": [],
+      "unresolved_disagreements": []
+    }
+  },
+  "findings": [],
+  "identity": {
+    "agent_uuid": "0275dcd7-ef2d-4535-8b3b-0e6da66ebff6",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "ENT-STRAT",
+    "display_name": "Strategic Scoring Agent"
+  },
+  "inputs": [
+    {
+      "artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef",
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269"
+    },
+    {
+      "compatibility": "compatible",
+      "freshness": "fresh",
+      "hash": "sha256:08cc4c5ebf4baaad1053bb9ac4677d18f592bcbf96801f6632b17c79f2ba2d73",
+      "reference": "enterprise-strategy-input-manifest"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:08cc4c5ebf4baaad1053bb9ac4677d18f592bcbf96801f6632b17c79f2ba2d73",
+    "output_hash": "sha256:969c11c469519984aa8ea1025e135c997d26f55f2d62402b4b40bc1e0676de69",
+    "retention_class": "candidate-test",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "limitations": [
+      "One capability only",
+      "No enterprise strategy or investment approval",
+      "Comparison only",
+      "All strategy fields are deterministic harness projections; raw model output is retained separately."
+    ],
+    "method": "owner-source and eligibility gated project strategy evaluation"
+  },
+  "observations": [],
+  "patterns": [],
+  "scope": {
+    "assessment_period": "2026-08-02",
+    "decision_context": "accepted_live_single_capability_strategy_evaluation",
+    "enterprise_scope_id": "ENTERPRISE-FIXTURE-001",
+    "participating_capabilities": [
+      "CAPABILITY-IDENTITY-ACCESS"
+    ]
+  }
+}

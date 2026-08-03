@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "expected_value": "human",
+      "json_pointer": "/decision_authority",
+      "locator_id": "STRAT-EVID-HUMAN-AUTHORITY",
+      "measure_id": "MEASURE-HUMAN-AUTHORITY",
+      "purpose": "Exact evidence for the human-authority measure.",
+      "source_artifact_hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269",
+      "source_artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+    },
+    {
+      "expected_value": true,
+      "json_pointer": "/extensions/capability/role/capability_posture/advisory_only",
+      "locator_id": "STRAT-EVID-ADVISORY-ONLY",
+      "measure_id": "MEASURE-HUMAN-AUTHORITY",
+      "purpose": "Exact evidence for the human-authority measure.",
+      "source_artifact_hash": "sha256:32af60e0eb9ab3f397496abc4a55876ce4e7d8c97354c568841ac9f714fbe269",
+      "source_artifact_id": "0cbe961f-82da-5cf5-92bd-2674c07459ef"
+    }
+  ],
+  "created_at": "2026-08-02T12:00:00Z",
+  "manifest_hash": "sha256:72312dc715d3c4665da49aeab8c516c66bffd840ab72a8aaead7c5a73c8d0948",
+  "manifest_id": "ea53942f-2aef-5466-a852-0ca155b7c724",
+  "manifest_version": "1.0.0"
+}

@@ -4,6 +4,8 @@ Agent-specific material is organized here: identity, registry, capability covera
 
 All agents have an immutable UUID and canonical designation in the [machine identity registry](agent-identities.json). The [Agent Naming and Identity Standard](agent-naming-and-identity-standard.md) defines reserved namespaces, aliases, and version rules. The [generated agent catalog](generated/agent-catalog.md) is the current registry-derived human view; the historical [Agent Catalog](agent-registry.md) provides additional narrative.
 
+Every registered role also has a versioned, hash-bound [agent focus profile](focus-profiles/README.md). The profiles make each role's authoritative question, special focus dimensions, evidence priorities, methods, required outputs, prohibited conclusions, rubric checks, compression protections, and handoff obligations executable and auditable.
+
 ## Agent layers
 
 - [Specialist agent framework](specialists/specialist-agent-framework.md)

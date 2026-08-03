@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""ADR-0020 packet, authority, verification, eligibility, and rollback tests."""
+"""ADR-0020/0033 packet, project-owner finalization, eligibility, and rollback tests."""
 from __future__ import annotations
 import copy, uuid, unittest
 from artifact_ledger import content_hash
 from requirements_acceptance_runtime import (AUTHORITY_REGISTRY, DISPOSITIONS, LIVE_ARCHIVE, STATE_MACHINE,
- build_packet, build_verification, derive_eligibility, load_live_artifact, render_review, validate_response, validate_verification)
+ build_owner_finalization, build_packet, build_verification, derive_eligibility, load_live_artifact,
+ render_review, validate_owner_finalization, validate_response, validate_verification)
 from validate_vertical_slice import ROOT, ValidationFailure, assert_schema, load_json
 
 BASELINE=ROOT/"appendices/example-workflows/vertical-risk-slice.workflow.json"
@@ -34,22 +35,23 @@ class RequirementsAcceptanceTests(unittest.TestCase):
   for value in cases:
    with self.subTest(value=value):
     with self.assertRaises(ValidationFailure):validate_response(self.packet,value)
- def test_independent_verification_is_exact(self)->None:
-  r=response_for(self.packet);v=build_verification(self.packet,r);validate_verification(self.packet,r,v);self.assertEqual(v["status"],"verified");self.assertNotEqual(v["verified_by"]["authority_name"],r["decided_by"]["authority_name"])
-  with self.assertRaises(ValidationFailure):build_verification(self.packet,r,r["decided_by"]["authority_name"])
-  bad=copy.deepcopy(v);bad["response_hash"]="sha256:"+"3"*64
-  with self.assertRaises(ValidationFailure):validate_verification(self.packet,r,bad)
- def test_only_verified_acceptance_yields_eligibility(self)->None:
+ def test_project_owner_finalization_is_exact_and_needs_no_second_person(self)->None:
+  r=response_for(self.packet,authority_name="thomasverburgt");f=build_owner_finalization(self.packet,r);validate_owner_finalization(self.packet,r,f);self.assertEqual(f["finalization_state"],"finalized");self.assertEqual(f["finalized_by"]["authority_name"],r["decided_by"]["authority_name"])
+  bad=copy.deepcopy(f);bad["target_record_hash"]="sha256:"+"3"*64
+  with self.assertRaises(ValidationFailure):validate_owner_finalization(self.packet,r,bad)
+ def test_legacy_independent_verification_remains_replayable_but_is_not_required(self)->None:
+  r=response_for(self.packet);v=build_verification(self.packet,r);validate_verification(self.packet,r,v);self.assertEqual(v["status"],"verified")
+ def test_only_owner_finalized_acceptance_yields_eligibility(self)->None:
   for disposition in DISPOSITIONS:
-   r=response_for(self.packet,disposition);v=build_verification(self.packet,r);e=derive_eligibility(self.packet,r,v)
+   r=response_for(self.packet,disposition);f=build_owner_finalization(self.packet,r);e=derive_eligibility(self.packet,r,f)
    expected="eligible_for_accepted_capability_input" if disposition=="accept_review_as_complete" else "not_eligible"
    self.assertEqual(e["state"],expected);self.assertFalse(e["cap_synth_scheduled"]);self.assertEqual(e["effect"],"eligibility_record_only")
  def test_rollback_revokes_without_mutating_history(self)->None:
-  r=response_for(self.packet);v=build_verification(self.packet,r);before=(copy.deepcopy(self.packet),copy.deepcopy(r),copy.deepcopy(v));active=derive_eligibility(self.packet,r,v);revoked=derive_eligibility(self.packet,r,v,revoked=True);self.assertEqual(active["state"],"eligible_for_accepted_capability_input");self.assertEqual(revoked["state"],"not_eligible");self.assertEqual(revoked["rollback_state"],"revoked");self.assertEqual(before,(self.packet,r,v))
+  r=response_for(self.packet);f=build_owner_finalization(self.packet,r);before=(copy.deepcopy(self.packet),copy.deepcopy(r),copy.deepcopy(f));active=derive_eligibility(self.packet,r,f);revoked=derive_eligibility(self.packet,r,f,revoked=True);self.assertEqual(active["state"],"eligible_for_accepted_capability_input");self.assertEqual(revoked["state"],"not_eligible");self.assertEqual(revoked["rollback_state"],"revoked");self.assertEqual(before,(self.packet,r,f))
  def test_generation_does_not_mutate_operational_inputs(self)->None:
   paths=[BASELINE,REPORT,SOURCE,LIVE_ARCHIVE];before=[p.read_bytes() for p in paths];build_packet();self.assertEqual(before,[p.read_bytes() for p in paths]);self.assertFalse(self.packet["isolation"]["cap_synth_scheduled"])
  def test_authority_registry_and_state_machine_are_closed(self)->None:
-  registry=load_json(AUTHORITY_REGISTRY);assert_schema(registry,"decision-authority-registry.schema.json","authority registry");role=next(x for x in registry["authorities"] if x["authority_role"]=="requirements-acceptance-authority");self.assertEqual(role["authority_kind"],"expert_decision_authority")
+  registry=load_json(AUTHORITY_REGISTRY);assert_schema(registry,"decision-authority-registry.schema.json","authority registry");role=next(x for x in registry["authorities"] if x["authority_role"]=="requirements-acceptance-authority");self.assertEqual(role["authority_kind"],"expert_decision_authority");owner=next(x for x in registry["authorities"] if x["authority_role"]=="project-owner");self.assertIn("HUMAN-PROJECT-OWNER-001",owner["human_subject_ids"])
   machine=load_json(STATE_MACHINE);assert_schema(machine,"requirements-acceptance-state-machine.schema.json","requirements acceptance state machine");states=set(machine["states"]);self.assertIn(machine["initial_state"],states);self.assertTrue(set(machine["terminal_states"]).issubset(states));self.assertTrue(all(t["from"] in states and t["to"] in states for t in machine["transitions"]));self.assertEqual(machine["effects"]["scheduling"],"none")
 
 if __name__=="__main__":unittest.main(verbosity=2)

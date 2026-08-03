@@ -3,49 +3,49 @@
   "catalog_version": "1.0.0",
   "packages": [
     {
-      "file_count": 26,
-      "inventory_sha256": "sha256:48431348589f9d7d4ce65ee93fff21ef4c643edadb164b1a4ae9a7faa7957354",
+      "file_count": 41,
+      "inventory_sha256": "sha256:73f1d27406e65f52562ffca90cf8570ba44899350dcd9e9580aaa806b69266fd",
       "legacy_root": "fixtures/cap-req-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "cap-req-admission",
-      "total_bytes": 67749
+      "total_bytes": 80276
     },
     {
       "file_count": 8,
-      "inventory_sha256": "sha256:dbbcac8791230a5ca98f6fb681f1e8f145cc776384f483807e0d4ba19b974468",
+      "inventory_sha256": "sha256:528cc812be7eeb378f3bed70d1a2400a8a00dfec5f9716f6eaeaf5d14a0f25df",
       "legacy_root": "fixtures/capability-coordination/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "capability-coordination",
-      "total_bytes": 16344
+      "total_bytes": 16345
     },
     {
-      "file_count": 16,
-      "inventory_sha256": "sha256:a7c999ca651ad446956df06ba50dbb92a7386f8240c25289637c75f7c32dd7e6",
+      "file_count": 63,
+      "inventory_sha256": "sha256:52be4f1e595858e2d8a0ce718cc309cdcfd35a33dc31ec7734af6d303e15ec26",
       "legacy_root": "fixtures/capability-synth-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "capability-synth-admission",
-      "total_bytes": 63931
+      "total_bytes": 215327
     },
     {
-      "file_count": 14,
-      "inventory_sha256": "sha256:058109e6361f41a1f301c24eb0ccb3e4360e7db611fd88b074a0a2e7d9ee9635",
+      "file_count": 84,
+      "inventory_sha256": "sha256:e619b04fa28c55fadefbde9ec552d6c6d9e6ae78fa557a6928450bd95540d466",
       "legacy_root": "fixtures/enterprise-arch-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "enterprise-arch-admission",
-      "total_bytes": 70542
+      "total_bytes": 268975
     },
     {
-      "file_count": 12,
-      "inventory_sha256": "sha256:06f95d1fc319344ad333ef243134f9bf0cd6a2f82d0548a8e2f52b7746d80dfc",
+      "file_count": 101,
+      "inventory_sha256": "sha256:376516a6ccaef6c02855a559cc10ae911906bceba812c0d633b2df4ec614f62b",
       "legacy_root": "fixtures/enterprise-governance-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "enterprise-governance-admission",
-      "total_bytes": 66605
+      "total_bytes": 310284
     },
     {
       "file_count": 6,
@@ -57,13 +57,13 @@
       "total_bytes": 12221
     },
     {
-      "file_count": 11,
-      "inventory_sha256": "sha256:33954feaffd9a13562197e89c497a5ed4245d306d3292758c3d6d043c2bce53b",
+      "file_count": 72,
+      "inventory_sha256": "sha256:7bf75ee0f2c8f1be10a04a82510c45bc44a87a194ef12e5b6a6845f832faf80d",
       "legacy_root": "fixtures/enterprise-strategy-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "enterprise-strategy-admission",
-      "total_bytes": 39087
+      "total_bytes": 238205
     },
     {
       "file_count": 10,
@@ -85,12 +85,12 @@
     },
     {
       "file_count": 33,
-      "inventory_sha256": "sha256:d5a93ef63b2a731e51b3ccad856b5d2541b758634c4bfe2ae282153fc5b20eda",
+      "inventory_sha256": "sha256:fd1ec9d3c0483c311792d88d6f9e0ea94334e8bd47948461e20154b77d4bd990",
       "legacy_root": "fixtures/product-synth-admission/evidence",
       "migration_state": "indexed_in_place",
       "retention": "immutable_in_place",
       "scenario": "product-synth-admission",
-      "total_bytes": 150224
+      "total_bytes": 150225
     },
     {
       "file_count": 81,

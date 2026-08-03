@@ -18,7 +18,7 @@
     "designation": "CAP-SYNTH", "layer": "capability",
     "required_inputs": ["CAP-COORD-MANIFEST", "CAP-RISK-ARTIFACT", "CAP-REQ-ARTIFACT"],
     "output_schema": "capability-extension.schema.json", "role_schema": "cap-synth-role.schema.json",
-    "partial_input_policy": "prohibited", "consumers": ["ENT-SYNTH-CANDIDATE-COMPARISON"]
+    "partial_input_policy": "prohibited", "consumers": ["ENT-ARCH-CANDIDATE-COMPARISON", "ENT-GOV-CANDIDATE-COMPARISON", "ENT-STRAT-CANDIDATE-COMPARISON"]
   }],
   "edges": [],
   "human_gates": [{"gate_id": "candidate-promotion-decision", "after_node": "cap-synth-candidate", "authority_role": "project-maintainer", "decision_types": ["candidate_promotion_and_scheduling"]}]

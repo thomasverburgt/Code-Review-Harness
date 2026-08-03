@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://code-review-harness/schemas/enterprise-governance-semantic-review-packet.schema.json",
+  "title": "ENT-GOV Semantic Review Packet", "type": "object", "additionalProperties": false,
+  "required": ["packet_id", "packet_version", "generated_at", "candidate", "input_manifest", "cap_synth_eligibility", "governance_source_manifest", "governance_evidence_manifest", "projection_provenance", "review_dimensions", "review_state", "required_authority", "effect", "cap_synth_scheduled", "ent_gov_scheduled", "report_effect", "deployment_effect", "packet_hash"],
+  "properties": {
+    "packet_id": {"type": "string", "format": "uuid"}, "packet_version": {"const": "1.0.0"}, "generated_at": {"type": "string", "format": "date-time"},
+    "candidate": {"$ref": "#/$defs/binding"}, "input_manifest": {"$ref": "#/$defs/binding"}, "cap_synth_eligibility": {"$ref": "#/$defs/binding"}, "governance_source_manifest": {"$ref": "#/$defs/binding"}, "governance_evidence_manifest": {"$ref": "#/$defs/binding"},
+    "projection_provenance": {"type": "object", "additionalProperties": false, "required": ["generation_mode", "raw_model_response_sha256", "harness_owned_fields"], "properties": {"generation_mode": {"enum": ["deterministic_reference_projection", "model_response_with_harness_owned_governance_projection"]}, "raw_model_response_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}, "harness_owned_fields": {"const": ["governance_baseline", "compliance_matrix", "governance_inconsistencies", "exception_register", "approval_dependencies", "governance_conflicts", "governance_maturity", "capa_options", "authority_boundary"]}}},
+    "review_dimensions": {"const": ["source_authority", "obligation_preservation", "applicability", "capability_evidence", "missingness", "confidence_and_uncertainty", "authority_boundary", "rollback"]},
+    "review_state": {"const": "awaiting_human_semantic_review"}, "required_authority": {"const": "project-owner"}, "effect": {"const": "review_request_only"},
+    "cap_synth_scheduled": {"const": false}, "ent_gov_scheduled": {"const": false}, "report_effect": {"const": "none"}, "deployment_effect": {"const": "none"}, "packet_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, "binding": {"type": "object", "additionalProperties": false, "required": ["id", "hash"], "properties": {"id": {"type": "string", "format": "uuid"}, "hash": {"$ref": "#/$defs/hash"}}}}
+}

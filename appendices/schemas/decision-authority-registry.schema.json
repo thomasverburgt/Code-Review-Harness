@@ -18,7 +18,7 @@
       "required": ["authority_role", "authority_kind", "human_subject_ids", "allowed_actions", "decision_types", "scope_ids", "assurance_levels"],
       "properties": {
         "authority_role": {"type": "string", "minLength": 1},
-        "authority_kind": {"enum": ["distribution_authority", "expert_decision_authority", "records_administrator", "records_verifier"]},
+        "authority_kind": {"enum": ["distribution_authority", "expert_decision_authority", "records_administrator", "records_verifier", "project_owner"]},
         "human_subject_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
         "allowed_actions": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
         "decision_types": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},

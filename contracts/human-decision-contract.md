@@ -8,13 +8,13 @@ A report package binds the complete accepted artifact chain, stable report-item 
 
 ## Controlled distribution
 
-The first export is a leadership review copy and must be visibly marked `not_approved_for_distribution`. A distributable copy may be generated only after an administrator records leadership's off-system authorization and a separate records verifier confirms the authority, source, review-export, and report-hash bindings.
+The first export is a leadership review copy and must be visibly marked `not_approved_for_distribution`. A distributable copy may be generated only after an administrator records leadership's off-system authorization and the registered project owner finalizes the authority, source, review-export, and report-hash bindings under ADR-0033. No second verifier is required.
 
 The distribution record keeps these roles distinct:
 
 - `approved_by`: senior leadership or its named distribution authority;
 - `recorded_by`: the authenticated records administrator who transcribed the approval; and
-- `verified_by`: a different authenticated records verifier.
+- `finalized_by`: the authenticated registered project owner; this may be the same human who recorded or approved the underlying decision.
 
 Authentication of the recorder proves who entered the record. It does not prove that the recorder made the substantive authorization.
 

@@ -1,0 +1,20 @@
+{
+  "candidate": {
+    "hash": "sha256:d0a717ae3c328f04e2ea2c37f8f23b2c46390edec812229388cf1ea9b7e85033",
+    "id": "86456e45-010b-571a-97fb-f78a275320a9"
+  },
+  "effect": "comparison_only",
+  "generated_at": "2026-08-02T10:00:00Z",
+  "record_id": "5d7784c1-a01d-55c4-9a66-e639ac3753ff",
+  "results": [
+    {
+      "consumer": "ENT-SYNTH",
+      "state": "compatible_via_tiered_enterprise_domain_wrapper"
+    },
+    {
+      "consumer": "ENT-STRAT",
+      "state": "candidate_interface_only_unscheduled"
+    }
+  ],
+  "scheduled": false
+}

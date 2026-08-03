@@ -1,0 +1,22 @@
+{
+  "artifact_hash": "sha256:ab5e620ffbab8ce32ec90687ecdb76e6f85af9735dade36fc037646a93ed7450",
+  "artifact_id": "9a0edab2-f80a-5179-a311-1975988ad252",
+  "cap_synth_scheduled": false,
+  "deployment_effect": "none",
+  "ent_strat_scheduled": false,
+  "passed": true,
+  "production_target": "A100 large cluster",
+  "raw_response_sha256": "9e8bca069c37664cf7e8396e779263a29e6878551e4397aa36e370de213213ec",
+  "report_effect": "none",
+  "semantic_review_packet_hash": "sha256:03d61c101eb4fa1b10d07e8a293c755e05313a9a47317ae0e93ad6acf84b7fdf",
+  "semantic_review_packet_id": "0a6862f2-ab8d-5c46-b41d-3315ec61c7ea",
+  "state": "insufficient_evidence",
+  "status": "complete",
+  "suite": "ent-strat-accepted-live-multi-domain-single-capability-evaluation",
+  "test_platform": "DGX Spark or approved equivalent (GX-10)",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 5632,
+    "output_tokens": 1674
+  }
+}

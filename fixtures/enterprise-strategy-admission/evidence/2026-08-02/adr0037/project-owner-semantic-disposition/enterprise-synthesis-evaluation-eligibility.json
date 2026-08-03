@@ -1,0 +1,28 @@
+{
+  "candidate_hash": "sha256:ab5e620ffbab8ce32ec90687ecdb76e6f85af9735dade36fc037646a93ed7450",
+  "candidate_id": "9a0edab2-f80a-5179-a311-1975988ad252",
+  "decision_authority": "derived_from_project_owner_finalization",
+  "deployment_effect": "none",
+  "derived_at": "2026-08-02T13:01:00Z",
+  "disposition_hash": "sha256:2112f3259e6c92c014e8c44a379a52c0fe957f43cce231df53560875ed7e6cc6",
+  "disposition_id": "5e03ee9f-d4be-5661-952e-360a734bfab3",
+  "effect": "enterprise_synthesis_evaluation_eligibility_only",
+  "eligibility_id": "c5097c20-071f-57ad-8a83-8a3f03f9fa2d",
+  "ent_strat_scheduled": false,
+  "ent_synth_scheduled": false,
+  "finalization_hash": "sha256:55c86f8589300918c4b9207544575240f685948ee7c0afe382b17e79c92e9357",
+  "finalization_id": "2c891750-d1a3-562a-ba3d-75900626a740",
+  "limitations_carried_forward": [
+    "categorical_human_authority_evidence_is_projected_to_numeric_1_0_without_an_explicit_manifest_mapping_rule",
+    "numeric_confidence_fields_lack_a_complete_declared_derivation_formula",
+    "observed_only_1_0_distribution_requires_context_to_avoid_being_read_as_objective_completeness",
+    "accepted_live_project_evaluation_uses_legacy_scope_id_ENTERPRISE_FIXTURE_001"
+  ],
+  "packet_hash": "sha256:03d61c101eb4fa1b10d07e8a293c755e05313a9a47317ae0e93ad6acf84b7fdf",
+  "packet_id": "0a6862f2-ab8d-5c46-b41d-3315ec61c7ea",
+  "reason": "project_owner_accepted_as_is_with_acknowledged_limitations",
+  "record_hash": "sha256:e85844b4bf432c66c50b53948f4e9f3998119455ac63748361bc9bd74068fc3f",
+  "report_effect": "none",
+  "rollback_state": "active",
+  "state": "eligible_for_enterprise_synthesis_candidate_evaluation"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/capability-synthesis-semantic-disposition.schema.json",
+  "title": "CAP-SYNTH Semantic Disposition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["disposition_id", "packet_id", "packet_hash", "candidate_id", "candidate_hash", "decided_at", "decided_by", "disposition", "reviewed_dimensions", "semantic_judgment", "acknowledged_boundaries", "decision_authority", "effect", "scheduling_authorized", "report_effect", "deployment_effect", "disposition_hash"],
+  "properties": {
+    "disposition_id": {"type": "string", "format": "uuid"},
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_hash": {"$ref": "#/$defs/hash"},
+    "candidate_id": {"type": "string", "format": "uuid"},
+    "candidate_hash": {"$ref": "#/$defs/hash"},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "decided_by": {"type": "object", "additionalProperties": false, "required": ["authority_role", "authority_name", "subject_id"], "properties": {"authority_role": {"const": "project-owner"}, "authority_name": {"const": "thomasverburgt"}, "subject_id": {"const": "HUMAN-PROJECT-OWNER-001"}}},
+    "disposition": {"enum": ["accept_semantically_faithful", "require_correction", "reject_semantics", "insufficient_evidence"]},
+    "reviewed_dimensions": {"const": ["child_assertion_preservation", "cross_domain_derivation", "conflict_and_unknown_preservation", "evidence_sufficiency", "confidence_reconciliation", "enterprise_handoff", "authority_boundary", "rollback"]},
+    "semantic_judgment": {"type": "object", "additionalProperties": false, "required": ["statement", "capability_posture", "confidence_interpretation"], "properties": {"statement": {"const": "It is semantically faithful."}, "capability_posture": {"const": "unassessable"}, "confidence_interpretation": {"const": "confidence_in_unassessability_not_readiness"}}},
+    "acknowledged_boundaries": {"type": "object", "additionalProperties": false, "required": ["risk_remains_unresolved", "requirements_remain_unassessable", "no_risk_acceptance", "no_requirements_satisfaction", "comparison_only"], "properties": {"risk_remains_unresolved": {"const": true}, "requirements_remain_unassessable": {"const": true}, "no_risk_acceptance": {"const": true}, "no_requirements_satisfaction": {"const": true}, "comparison_only": {"const": true}}},
+    "decision_authority": {"const": "project_owner"},
+    "effect": {"const": "semantic_acceptance_record_only"},
+    "scheduling_authorized": {"const": false},
+    "report_effect": {"const": "none"},
+    "deployment_effect": {"const": "none"},
+    "disposition_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+}

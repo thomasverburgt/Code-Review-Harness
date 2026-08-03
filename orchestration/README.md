@@ -29,13 +29,13 @@ ADR-0016 adds `state-machines/semantic-adjudication.state-machine.json` and the 
 
 ## Report governance baseline
 
-- [Report Governance and External Decision Reconciliation](human-review-and-governance.md) defines immutable report packaging, controlled distribution approval, external decision recording, independent verification, and reconciliation.
+- [Report Governance and External Decision Reconciliation](human-review-and-governance.md) defines immutable report packaging, controlled distribution approval, external decision recording, project-owner finalization, and reconciliation.
 - `../tools/report_governance_runtime.py` implements the record-only reference boundary.
 - `../tools/test_report_governance_runtime.py` is the Increment 3 DGX Spark-equivalent conformance suite.
 
 ## Requirements acceptance boundary
 
-- [CAP-REQ Human Acceptance Contract](../contracts/requirements-acceptance-contract.md) defines the separation among technical validation, external requirements acceptance, independent verification, derived eligibility, and scheduling.
+- [CAP-REQ Human Acceptance Contract](../contracts/requirements-acceptance-contract.md) defines the separation among technical validation, requirements acceptance, project-owner finalization, derived eligibility, and scheduling.
 - `state-machines/requirements-acceptance.state-machine.json` fails closed from live candidate validation through review, verification, eligibility, and revocation.
 - `../tools/requirements_acceptance_runtime.py` emits the exact review packet and validates response and verification records.
 - `../tools/test_requirements_acceptance.py` is the ADR-0020 DGX Spark/GX-10 conformance suite. Production remains targeted to the A100 large cluster.

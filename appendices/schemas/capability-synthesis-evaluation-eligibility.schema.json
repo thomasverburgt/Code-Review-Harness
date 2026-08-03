@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/capability-synthesis-evaluation-eligibility.schema.json",
+  "title": "CAP-SYNTH Enterprise Evaluation Eligibility",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["eligibility_id", "candidate_id", "candidate_hash", "packet_id", "packet_hash", "disposition_id", "disposition_hash", "finalization_id", "finalization_hash", "derived_at", "state", "rollback_state", "reason", "decision_authority", "effect", "cap_synth_scheduled", "enterprise_scheduled", "report_effect", "deployment_effect", "record_hash"],
+  "properties": {
+    "eligibility_id": {"type": "string", "format": "uuid"},
+    "candidate_id": {"type": "string", "format": "uuid"},
+    "candidate_hash": {"$ref": "#/$defs/hash"},
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_hash": {"$ref": "#/$defs/hash"},
+    "disposition_id": {"type": "string", "format": "uuid"},
+    "disposition_hash": {"$ref": "#/$defs/hash"},
+    "finalization_id": {"type": "string", "format": "uuid"},
+    "finalization_hash": {"$ref": "#/$defs/hash"},
+    "derived_at": {"type": "string", "format": "date-time"},
+    "state": {"enum": ["eligible_for_enterprise_candidate_evaluation", "not_eligible"]},
+    "rollback_state": {"enum": ["active", "revoked"]},
+    "reason": {"type": "string", "minLength": 1},
+    "decision_authority": {"const": "derived_from_project_owner_finalization"},
+    "effect": {"const": "enterprise_evaluation_eligibility_only"},
+    "cap_synth_scheduled": {"const": false},
+    "enterprise_scheduled": {"const": false},
+    "report_effect": {"const": "none"},
+    "deployment_effect": {"const": "none"},
+    "record_hash": {"$ref": "#/$defs/hash"}
+  },
+  "$defs": {"hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}}
+}

@@ -5,6 +5,7 @@
 - Decision authority: project maintainer
 - Required external authority: requirements-acceptance-authority
 - Depends on: ADR-0019
+- Superseded in part by: ADR-0033 for the mandatory independent-verifier prerequisite
 
 ## Context
 
