@@ -8,6 +8,7 @@ import sys
 import unittest
 from pathlib import Path
 
+from tools.canonical_content import canonical_file_bytes
 from tools.validate_vertical_slice import assert_schema
 
 
@@ -63,7 +64,7 @@ class AgentFocusProfileTests(unittest.TestCase):
             profile = load(ROOT / entry["path"])
             source = ROOT / profile["source"]["specification"]
             self.assertTrue(source.is_file())
-            actual = "sha256:" + hashlib.sha256(source.read_bytes()).hexdigest()
+            actual = "sha256:" + hashlib.sha256(canonical_file_bytes(source)).hexdigest()
             self.assertEqual(profile["source"]["specification_sha256"], actual)
             self.assertEqual(profile["source"]["identity_registry_version"], self.registry["registry_version"])
 

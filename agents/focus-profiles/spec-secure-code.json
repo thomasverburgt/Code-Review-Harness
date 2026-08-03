@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/secure-coding-reviewer.md",
-    "specification_sha256": "sha256:ba7c662e2270fd46f3e6236e90180db8db4f674318b22bf444e12a67b18a45eb"
+    "specification_sha256": "sha256:bdba4b8711ce54991d9a825a243f6a9fb2bd16773c70b66484f041397c8b570d"
   }
 }

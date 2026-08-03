@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/learning-metrics-agent.md",
-    "specification_sha256": "sha256:0f6618af64f4be46fd6d37f08601b4727db71bcd11b98dfc29def35edb634dde"
+    "specification_sha256": "sha256:e0561a0087b6e767fece46e7b6e12d4185e563a27c866821f9e2b3a743b912e9"
   }
 }

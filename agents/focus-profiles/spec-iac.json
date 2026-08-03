@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/infrastructure-as-code-reviewer.md",
-    "specification_sha256": "sha256:13dab2e16efd12cc32a2aeadadc3fbb6c4fe0635ac12cedb8c820016783f928c"
+    "specification_sha256": "sha256:ac0f713b2010476b5dac953afe4b34d106af22596b8d9203647eee087aef637c"
   }
 }

@@ -92,6 +92,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/orchestration/contract-scheduler.md",
-    "specification_sha256": "sha256:03fe0b5978dd45778a63f5bb97e4464e1697e69a1501b1a8bc80f4be4182e22f"
+    "specification_sha256": "sha256:fb190c8e02dc4fbd952d71e2740370ffbddd5102deabbdd08f24d7cf3cd93aae"
   }
 }

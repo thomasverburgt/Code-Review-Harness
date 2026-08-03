@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/architecture-reviewer.md",
-    "specification_sha256": "sha256:31e0e3ae9c73ccc1d9f45adfae7b217f288ead92a274ba3dcb4383db4e91fa68"
+    "specification_sha256": "sha256:743fbf5d235d7ab7741d1318bdb506c1d6950e51da274ea177fe3093f72e45ad"
   }
 }

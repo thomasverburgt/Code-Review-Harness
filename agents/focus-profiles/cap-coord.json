@@ -92,6 +92,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/capability-coordinator.md",
-    "specification_sha256": "sha256:b2ad9be6175a212ec6a29d1fcc6c074116244a2a7ebb8413ed9ccbda2aa0f8a7"
+    "specification_sha256": "sha256:b3a99a19b4ba6bcf9d36fb1c228a9fd7095341f59bff9f3a3f2cbf1180828d03"
   }
 }

@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/interoperability-integration-reviewer.md",
-    "specification_sha256": "sha256:9c8fa8d6c89ec71cbe4b06f74b0e39008b48fc6c195a2bfdb59f439f39b8637a"
+    "specification_sha256": "sha256:38aba76ca8d61f545f1383bdf3cde3b6f43323efda4c9cd40db926fe8c2778f6"
   }
 }

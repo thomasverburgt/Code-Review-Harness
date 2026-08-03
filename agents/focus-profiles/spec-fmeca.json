@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/reliability-resilience-fmeca-reviewer.md",
-    "specification_sha256": "sha256:5414a3b96fa382e0df99defe3c35109198b4c9571d7a37eeba124bd508484ac0"
+    "specification_sha256": "sha256:0480d93ad4109cdd9b954cad1a514aee78bc1fa3da2514bfb1d6498e357ff3b8"
   }
 }

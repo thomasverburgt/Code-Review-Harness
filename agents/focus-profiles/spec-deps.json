@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/dependency-reviewer.md",
-    "specification_sha256": "sha256:723ccd826da6b209e2886332d92893a31065e491ccbdf170b6589edcf4e8441d"
+    "specification_sha256": "sha256:caf790b51d02e878504b4b8eb1b16cb8f1d4d57c1420050c6545f6d75559d91d"
   }
 }

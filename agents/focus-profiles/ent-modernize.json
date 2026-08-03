@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/investment-modernization-advisor.md",
-    "specification_sha256": "sha256:a744f7aad9032f5559a303282e88b6a5e3305ab7597ab2c1cd41b3e4f5f84021"
+    "specification_sha256": "sha256:0746ac999a3260701e513b9e2f68abd8de0d64ddd4f2f1e7af0f806056007471"
   }
 }

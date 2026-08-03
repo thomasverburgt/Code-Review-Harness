@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/capability-synthesis-lead.md",
-    "specification_sha256": "sha256:76f29c2af8c25007369c51e186139677aa7d933d05a2b998942bfe3adaf195e4"
+    "specification_sha256": "sha256:890d485dd436e3a395e8d7963f308fae60b7295044c22872fa2dfe34aaf30b86"
   }
 }

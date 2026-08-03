@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/systemic-risk-reviewer.md",
-    "specification_sha256": "sha256:6cdc20923eef0fb5176c1d9e3c094eb6d8ecac40828704b1b4886a72d02c5ff6"
+    "specification_sha256": "sha256:1a077e4656b7ba33d728ccbc38024af8e6453bfcdcf5b33de0bbdeca5eb2a887"
   }
 }

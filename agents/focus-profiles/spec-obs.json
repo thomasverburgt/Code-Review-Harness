@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/observability-reviewer.md",
-    "specification_sha256": "sha256:9e0ef57f2695ce5954e4b0c65e46bdc3e0d6f413e085eb445698b804aab748ad"
+    "specification_sha256": "sha256:7f25d623de36100c3a5092049b8e132c0dc97f2aaf8be1d00a5fe0f5225254ec"
   }
 }

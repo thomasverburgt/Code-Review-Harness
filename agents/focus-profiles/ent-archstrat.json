@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/architecture-strategy-agent.md",
-    "specification_sha256": "sha256:d8f4234ede27ba6449780c8cba2c3b71408c9904f86671f6b18f3b8e6736b7d4"
+    "specification_sha256": "sha256:6fd7c7772d2356265b9cbd9e0b83d06c3fa1795e113a6a2a9b36f21a6386adbc"
   }
 }

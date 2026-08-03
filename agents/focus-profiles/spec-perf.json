@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/performance-scalability-reviewer.md",
-    "specification_sha256": "sha256:daf5a2454ded2091cc4d0a75a7a73af4ef0c49d23ff138cb9d5c27b4d590b0d7"
+    "specification_sha256": "sha256:b90e8a8100c246822ee9203f9b4e4be83e86822a746fe917741bcf0764fb5822"
   }
 }

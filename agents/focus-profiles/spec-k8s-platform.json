@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/kubernetes-platform-security-reviewer.md",
-    "specification_sha256": "sha256:2bc17c4250700a25c52ab36baa91802a804a6bf96fcbfc3a817408f498da7103"
+    "specification_sha256": "sha256:a953b0639334402fb0719f04d0f7c3bd961734c6e11db09cf78fefcbcefd63bc"
   }
 }

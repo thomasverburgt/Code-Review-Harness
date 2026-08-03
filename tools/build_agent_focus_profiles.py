@@ -9,6 +9,11 @@ import json
 import re
 from pathlib import Path
 
+try:
+    from .canonical_content import canonical_file_bytes
+except ImportError:
+    from canonical_content import canonical_file_bytes
+
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY = ROOT / "agents" / "agent-identities.json"
@@ -193,7 +198,7 @@ ROLE_DEFAULTS = {
 
 
 def sha256(path: Path) -> str:
-    return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
+    return "sha256:" + hashlib.sha256(canonical_file_bytes(path)).hexdigest()
 
 
 def section(text: str, names: tuple[str, ...]) -> str | None:

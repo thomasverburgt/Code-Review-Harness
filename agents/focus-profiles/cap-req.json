@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/requirements-traceability-reviewer.md",
-    "specification_sha256": "sha256:7c42728d41305b500e8c9b12836068e26cff34dff173dd9599b1c8270b5dfba7"
+    "specification_sha256": "sha256:81f90709d3623ad93f09bb36122f3c247e23a2921314faccc139b185156fd19f"
   }
 }

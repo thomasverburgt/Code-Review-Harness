@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/maturity-evaluator.md",
-    "specification_sha256": "sha256:17ccb786926c280bdfa3e5707bfcf0a891c91e98da65b487095fa26f7b704813"
+    "specification_sha256": "sha256:fedc5d4038a275aa401195d407d281bd70cd0f5e37005dcdbffdd594ceab7f4c"
   }
 }

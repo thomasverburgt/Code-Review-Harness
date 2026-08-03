@@ -92,6 +92,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/orchestration/parallel-dispatch-controller.md",
-    "specification_sha256": "sha256:36152771468d58a74fdb6b2d57aa333818f5d4a8f4f51725b9a487f0a798fde1"
+    "specification_sha256": "sha256:66a259bac86c5f8a4e71772b1ad7d336d7db433da1a93a69ce0c1af0109e226e"
   }
 }

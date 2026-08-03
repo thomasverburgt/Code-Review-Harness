@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/cicd-pipeline-reviewer.md",
-    "specification_sha256": "sha256:f6cb38bb8b291f5e04913e6563257f03955054b8f32e0a39fbfe31892d8d3d42"
+    "specification_sha256": "sha256:9fdc2b889911f97d2301caaa47c0be2670b00083a60f0e5a0d1097bea2c295d5"
   }
 }

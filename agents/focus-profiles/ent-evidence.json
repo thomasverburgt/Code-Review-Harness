@@ -92,6 +92,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/evidence-validation-gate.md",
-    "specification_sha256": "sha256:e70537d5dc59e0ccf11057dedc4a634b25ffc2a25e3f1c7e623d12af290a6827"
+    "specification_sha256": "sha256:c425b81e30bee46114926bc403ff5cda98b7e7f9f01bf67f71c605464fec6368"
   }
 }

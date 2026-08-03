@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/portfolio-analysis-agent.md",
-    "specification_sha256": "sha256:31ee6c6b271e6bb1861d3b4c908f34990cf6f0a1984756cf22588e393fdb38e7"
+    "specification_sha256": "sha256:feeff782b76987fae193476c5ad756c970393f652b7b31c26deabd91cda4660e"
   }
 }

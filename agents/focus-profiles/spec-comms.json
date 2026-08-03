@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/workload-communication-security-reviewer.md",
-    "specification_sha256": "sha256:f665c53a74dde4440308f08187a20e3fa165916a279ee11fa75296c5f9f12cda"
+    "specification_sha256": "sha256:8d33237776f12b2b5433b6a0e89551469a733b2da1dde7b4a381459324b2f028"
   }
 }

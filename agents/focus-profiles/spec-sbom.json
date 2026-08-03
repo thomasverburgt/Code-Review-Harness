@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/software-composition-sbom.md",
-    "specification_sha256": "sha256:f9f309aaefcd4ebece004617d9b363cc0d2ca0856bcb2442b174918f159a049f"
+    "specification_sha256": "sha256:34c9f26a28fb62e6b070251ef2cf5ccad1951c32f76e7f7405917f4abee0df4b"
   }
 }

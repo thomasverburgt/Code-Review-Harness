@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/diagram-design-model-reviewer.md",
-    "specification_sha256": "sha256:37dfc72936af51f350fed6134f861d9c40ccb7fb413f20cbd26d950adb0cd29d"
+    "specification_sha256": "sha256:560517d7ed45948f1c6758ffd33a75819a58ac694411f3cb0b4d038e4c330b03"
   }
 }

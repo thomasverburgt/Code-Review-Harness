@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/human-centered-design-evaluator.md",
-    "specification_sha256": "sha256:12b0f9f7d762099d16576f8ea8113d7627c8715d2dbf1e46c345e2310862d784"
+    "specification_sha256": "sha256:53bf9875eb7df07ef208d575930df7cca846fcfa5a5ea2947115fd3ba8337404"
   }
 }

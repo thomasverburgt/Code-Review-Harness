@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/technical-debt-prioritizer.md",
-    "specification_sha256": "sha256:b29aa4e863a309be50007bcce95914329ab0f3992d2754a4d13fc165d7372a27"
+    "specification_sha256": "sha256:c4ababc3623ff99fadd406943351697bc4ed18963dde58e817fba9d870171f59"
   }
 }

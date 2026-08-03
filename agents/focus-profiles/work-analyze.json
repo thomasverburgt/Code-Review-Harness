@@ -92,6 +92,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/work/evidence-analysis-worker.md",
-    "specification_sha256": "sha256:6557a8895babdfafa02dde3021d12045e237f44544828f28cb70ed30d02646d8"
+    "specification_sha256": "sha256:45c9efdd40ccd72e31953797b18cfec06ef2fa4ed0356c9a79896acd55cdbb08"
   }
 }

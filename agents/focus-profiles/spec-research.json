@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/research-product-store-agent.md",
-    "specification_sha256": "sha256:4c6810594796a91480e2621777f91bf62170aff887d11409cbb894c73b0fa61b"
+    "specification_sha256": "sha256:44f8ee6657a935553a365da0d81542428f78954bd57d843a7e2b91d693dd74a4"
   }
 }

@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/kubernetes-workload-security-reviewer.md",
-    "specification_sha256": "sha256:832bcf8d75ce5c5e541d10bc0b66245b8888915d8d1b24e51218b8af54ce9425"
+    "specification_sha256": "sha256:7fe531f23b069f2ac9e699a0ba38adfe89550cf0c99e972f9475f4d779ed73a1"
   }
 }

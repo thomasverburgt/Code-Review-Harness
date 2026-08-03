@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/strategic-scoring-agent.md",
-    "specification_sha256": "sha256:aa4838cc496c36c7f73bd931ef59fe143ef7aa1d782747887398f2feecbd7c6d"
+    "specification_sha256": "sha256:4b2c5daee05437d5c9c35764d3434c338eb1fb2e40ff13cc891b2669a258d2e7"
   }
 }

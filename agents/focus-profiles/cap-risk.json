@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/capability-risk-reviewer.md",
-    "specification_sha256": "sha256:dd9c6de077d928a0012cace98d331b6a4c4b106b235c09b924078793d8e9baa1"
+    "specification_sha256": "sha256:8d7ae83fad4a70b83c91c166b2f96a6bb2148641df21e25da3bcba72df061ebe"
   }
 }

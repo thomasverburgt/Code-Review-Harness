@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/mission-thread-analysis-agent.md",
-    "specification_sha256": "sha256:ba71ed1f9062a2cf5710efc5b4ae716f879d6dd77f73b44ebbce5fbe52a180d4"
+    "specification_sha256": "sha256:8f27a1b20426b1e9948abdb17c823b11d150d2dbeadc10e20bcee29594e6785b"
   }
 }

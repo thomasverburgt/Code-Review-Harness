@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/container-image-security-reviewer.md",
-    "specification_sha256": "sha256:d38a22af2dfe46eb50bad958012f17ab6b97edaed237347c5cf182d9a8275e87"
+    "specification_sha256": "sha256:1a9f46827d89d37f73c1c97201392c1475bb4b86351b10e56a9128109da5173b"
   }
 }

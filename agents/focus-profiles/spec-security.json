@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/security-posture-reviewer.md",
-    "specification_sha256": "sha256:85fe770c839e9465dcff206ff46d7341435d74d61a4224bd814bdedf6d4c1983"
+    "specification_sha256": "sha256:935f6a45cb2e8543d01fd7db8462a0c0a5d80d332711d76e0a454e28549a267d"
   }
 }

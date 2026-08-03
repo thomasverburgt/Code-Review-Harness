@@ -92,6 +92,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/work/evidence-summarization-worker.md",
-    "specification_sha256": "sha256:b66a6e90aae2b16b44ec14fdc72487bb06b197ad96d62ec27cbdc88a44a6047a"
+    "specification_sha256": "sha256:0b907984ada2676ded35dfb5ba96bd6deb1195d8d9cdef4adc3db129b481a304"
   }
 }

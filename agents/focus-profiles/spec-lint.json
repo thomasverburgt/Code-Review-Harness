@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/linter-code-quality-reviewer.md",
-    "specification_sha256": "sha256:ee01372f109d449a14002613abde12da74f0acfe36fe69d69fdfa669891f8484"
+    "specification_sha256": "sha256:ec0887b337198b93f3ec13133d64375efa6e1edde12a9910f39f4a9828c22a85"
   }
 }

@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/cross-product-reviewer.md",
-    "specification_sha256": "sha256:8ba7dca8b0881cd03b728eef4486245ed39eea114d4f31c0d5f96a62137caa0e"
+    "specification_sha256": "sha256:eff57489585c51278f840cda430ed3c3158b7668c9e664316dd48e9b10fa1dce"
   }
 }

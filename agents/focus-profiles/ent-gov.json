@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/enterprise/enterprise-governance-reviewer.md",
-    "specification_sha256": "sha256:fea95397519c795ea7d31f9d49f59681039a7b5e676eac86f151966cf9b15c15"
+    "specification_sha256": "sha256:3639a4bb2044b36bfb97df6904d9dce68006b023e4c2f720e57ee6d57d2f4b2c"
   }
 }

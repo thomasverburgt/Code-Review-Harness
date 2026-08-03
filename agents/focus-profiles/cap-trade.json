@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/capability/capability-trade-study-reviewer.md",
-    "specification_sha256": "sha256:dd0227e58d22fa151d5fc14d0de9ad15620924c59344279d5805b8b9269759e9"
+    "specification_sha256": "sha256:d4eb7e0f3b22cef815da9be06c70145114833697f7f51b0544f8b36a4ccdbfd3"
   }
 }

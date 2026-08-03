@@ -93,6 +93,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/specialists/io-resource-interaction-reviewer.md",
-    "specification_sha256": "sha256:583cd56572b1660d12e361200c8b6185e695ad07e63df432c94d0b45bddf772c"
+    "specification_sha256": "sha256:17fd254fd2f87f86b076f0148bc14e1d20e0aefdbd0a0dc2f48e135a1c7ad235"
   }
 }

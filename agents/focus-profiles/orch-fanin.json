@@ -92,6 +92,6 @@
     "identity_registry": "agents/agent-identities.json",
     "identity_registry_version": "1.0.0",
     "specification": "agents/orchestration/artifact-aggregation-controller.md",
-    "specification_sha256": "sha256:523a7c842e2fa9c9d38aebf733a37d76e1b29c7f9f82c4def412702998bb130c"
+    "specification_sha256": "sha256:ee24828349fd9036bd6816e9b3c5d54cd6ac232d30f3dd3a11424b0b3e011dbe"
   }
 }
