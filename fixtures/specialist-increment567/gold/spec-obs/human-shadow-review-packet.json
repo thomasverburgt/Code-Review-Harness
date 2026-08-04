@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "f4633c67-d94d-440e-bb32-0f243eddafb6",
+    "designation": "SPEC-OBS",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:c3d02b394f0b45df3756af3d74bb9517d9c7184bbc175b5af4d420ded175b90b",
+  "candidate_artifact_id": "c2e9b7d9-0ffd-5854-bc56-3f3a8ffc3964",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:f346df5b918f09f824378d9bdfced512fa8ace9bfa2a3d0ce999960208d0cf05",
+    "profile_id": "FOCUS-SPEC-OBS",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:cac0a850d5076d5096eb3eb1e74c651cf95b7ef8f70b231d75dc884fa17ef29e",
+  "input_manifest_id": "c2e5b929-0497-58b7-a7fe-e0dca408135c",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-OBS-RULE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 14,
+          "line_fingerprint": "sha256:9cf12363a49ce3bfe9baa2d714deed58d4e552d84c98a805f98ae72e60fb8115",
+          "line_start": 14,
+          "locator_hash": "sha256:0aeea971d7c09a828e06f54f01234cb07246811782b5ce6bc73c8e04c05e83ac",
+          "locator_id": "cf30af44-3eb3-5114-aa0b-4d0759baa0ef",
+          "locator_state": "source_located",
+          "path": "src/vector/chart/templates/uptime-recording-rules.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/vector/chart/templates/uptime-recording-rules.yaml line 14.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - record: uds:vector:up",
+          "symbol_or_section": "Vector uptime recording rule"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-OBS-001",
+      "statement": "The admitted chart configures a Vector uptime recording rule."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-OBS-RULE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 14,
+          "line_fingerprint": "sha256:9cf12363a49ce3bfe9baa2d714deed58d4e552d84c98a805f98ae72e60fb8115",
+          "line_start": 14,
+          "locator_hash": "sha256:0aeea971d7c09a828e06f54f01234cb07246811782b5ce6bc73c8e04c05e83ac",
+          "locator_id": "cf30af44-3eb3-5114-aa0b-4d0759baa0ef",
+          "locator_state": "source_located",
+          "path": "src/vector/chart/templates/uptime-recording-rules.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/vector/chart/templates/uptime-recording-rules.yaml line 14.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - record: uds:vector:up",
+          "symbol_or_section": "Vector uptime recording rule"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-OBS-001",
+      "statement": "A recording-rule definition does not demonstrate scrape health, alert coverage, diagnostic usefulness, ownership, or response effectiveness."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-OBS-RULE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 14,
+          "line_fingerprint": "sha256:9cf12363a49ce3bfe9baa2d714deed58d4e552d84c98a805f98ae72e60fb8115",
+          "line_start": 14,
+          "locator_hash": "sha256:0aeea971d7c09a828e06f54f01234cb07246811782b5ce6bc73c8e04c05e83ac",
+          "locator_id": "cf30af44-3eb3-5114-aa0b-4d0759baa0ef",
+          "locator_state": "source_located",
+          "path": "src/vector/chart/templates/uptime-recording-rules.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/vector/chart/templates/uptime-recording-rules.yaml line 14.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - record: uds:vector:up",
+          "symbol_or_section": "Vector uptime recording rule"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-OBS-001:CAPA",
+      "statement": "Retain rule evaluation, alert routing, runbook, incident, and diagnosis evidence for the exact deployment."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-OBS-RULE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 14,
+          "line_fingerprint": "sha256:9cf12363a49ce3bfe9baa2d714deed58d4e552d84c98a805f98ae72e60fb8115",
+          "line_start": 14,
+          "locator_hash": "sha256:0aeea971d7c09a828e06f54f01234cb07246811782b5ce6bc73c8e04c05e83ac",
+          "locator_id": "cf30af44-3eb3-5114-aa0b-4d0759baa0ef",
+          "locator_state": "source_located",
+          "path": "src/vector/chart/templates/uptime-recording-rules.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/vector/chart/templates/uptime-recording-rules.yaml line 14.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - record: uds:vector:up",
+          "symbol_or_section": "Vector uptime recording rule"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-OBS-001",
+      "statement": "Signal availability, alert effectiveness, diagnostic coverage, ownership, and operational response remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:5701fc38b9a453e215bcf74498ca754204864c0d9b9e72e1c53e6c747679ccd4",
+  "packet_id": "e78601e4-285d-516b-9444-8a19ac46dca3",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

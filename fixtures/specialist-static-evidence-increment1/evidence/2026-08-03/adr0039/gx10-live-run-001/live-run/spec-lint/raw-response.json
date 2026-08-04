@@ -1,0 +1,50 @@
+{
+  "designation": "SPEC-LINT",
+  "rule_set": {
+    "rule_set_id": "REPOSITORY-STRUCTURE-CHECK",
+    "rule_version": null,
+    "languages_or_frameworks": [
+      "Python",
+      "repository metadata"
+    ],
+    "configuration_refs": [
+      "pyproject.toml:project.scripts.harness-check"
+    ],
+    "evidence_refs": [
+      "EVIDENCE-LINT-ENTRY-001",
+      "EVIDENCE-LINT-RULE-001"
+    ]
+  },
+  "executions": [],
+  "violations": [],
+  "suppressions": [],
+  "quality_gate": {
+    "defined": true,
+    "threshold": "zero structural check errors",
+    "observed_result": null,
+    "gate_state": "not_executed",
+    "authority_effect": "quality_signal_only"
+  },
+  "measures": {
+    "eligible_files": 0,
+    "reviewed_files": 0,
+    "violation_count": 0,
+    "suppression_count": 0,
+    "autofixable_count": 0,
+    "complexity_trend": "not_measurable"
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-LINT-001",
+      "statement": "Rule execution coverage, violations, suppressions, false positives, complexity, and trend are unknown without a completed result.",
+      "missing_evidence": [
+        "completed checker execution record"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ]
+    }
+  ],
+  "authority_boundary": "defined_quality_rule_assessment_only_no_architecture_security_or_release_approval"
+}

@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "5801b47f-df7c-47f3-9609-1ecc1fd54c15",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-IO",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-5.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:813beed77a5a843c83869037cc21c957c22b074db3a6a380816438d86e91813a",
+      "evidence_id": "EVIDENCE-IO-EGRESS-001",
+      "path": "src/test/app-admin-package.yaml",
+      "purpose": "Review SPEC-IO evidence in httpbin egress destination.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:bfdb18c4a86280ea48bef161524b761c35d778bd27532e8baec88b25f4844772",
+      "id": "GX10-QWEN3-32B-SPEC-IO-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:c19a813738351bfef0f1223ccf0b19ab7fee5b2bc2a0442a476b8206cec114f1",
+      "id": "SPEC-IO-CANDIDATE-PROMPT",
+      "version": "design-0.2.0"
+    },
+    "role_schema": {
+      "hash": "sha256:3c3fcfdef3f4630802a0991b2a0a0c54b76496bbce9cbc23a19c8d932bc72ce7",
+      "id": "SPEC-IO-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:3ab5b7358a996d70481abb6f38c91ba32330b3d56425bebd707872c036355f8e",
+      "id": "RUBRIC-SPEC-IO-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:93adcc35fecadc059786aa7314e410531517c54f8c3a1f461053d797b9662c96",
+      "id": "TOOLCHAIN-SPEC-IO-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:2beb013f7eeecf34f56814ee4aef56a8970d5b3790fb7eb8f6d55a37d4045f81",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:6c2b57427d7b1937e28fdf2574e4c692eb46c0d304a1708234afd5e25b75a2bc",
+    "profile_id": "FOCUS-SPEC-IO",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/io-resource-interaction-reviewer.md",
+    "source_specification_hash": "sha256:17fd254fd2f87f86b076f0148bc14e1d20e0aefdbd0a0dc2f48e135a1c7ad235"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:dca2b416665d70ba21367f2978470ccb09101bfa67c4ab3320bd8904b7d2b054",
+  "manifest_id": "0c9f576a-62b4-526a-b7e7-a3ab44128c3b",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

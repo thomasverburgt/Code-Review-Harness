@@ -1,0 +1,307 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "3adf20a4-78ed-497f-ae73-52d7ddbe9581",
+    "designation": "SPEC-RISK",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:88be86f79106844c2415b858a4351e13412dfa9180836dc0cbd4b786b0ce7afe",
+  "candidate_artifact_id": "46aa6bda-69ee-500e-b98e-97a4c30a63fb",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:8c6fd98a063afbd45f4496fee291eb5a7eb1e8559fb0a3c7e22b0fbd4827105b",
+    "profile_id": "FOCUS-SPEC-RISK",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:00ebc54f23d9d7f00e82969186f4d2472fc5f4e5b7a9972fe7b63d596973057f",
+  "input_manifest_id": "eb0ce91e-31e8-53a4-bc40-515525c99373",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-RISK-COMMS-001",
+        "EVIDENCE-RISK-PLATFORM-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-COMMS-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 159,
+          "line_fingerprint": "sha256:f1c039966c2499409c1d4eeccb90993695331eef1bd83a5653b642b974bde682",
+          "line_start": 159,
+          "locator_hash": "sha256:3788b26cda30fb33ced46cdb88b80bd360b5ce39a61e7edf50b17ee2358d1d72",
+          "locator_id": "67703bc5-acd6-554a-89fd-bde6a082d9a3",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json line 159.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Effective identity, encryption, authorization, exposure, lateral-movement resistance, and failure behavior are not demonstrated without runtime traffic evidence.\",",
+          "symbol_or_section": "retained SPEC-COMMS unknown"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-PLATFORM-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 153,
+          "line_fingerprint": "sha256:0f9b5aa6a9a47fc270406b9a93faa978a0c8ebc349693cddc04784a84e7dfe3a",
+          "line_start": 153,
+          "locator_hash": "sha256:560ec96e2bdfa83b62d6227cd3058a3168b4e35858dfee88dabe912872474296",
+          "locator_id": "a2eec134-d221-592c-8460-123855552253",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json line 153.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.\",",
+          "symbol_or_section": "retained SPEC-K8S-PLATFORM unknown"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-RISK-001",
+      "statement": "Two retained child candidates preserve distinct communication and platform unknowns."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-RISK-COMMS-001",
+        "EVIDENCE-RISK-PLATFORM-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-COMMS-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 159,
+          "line_fingerprint": "sha256:f1c039966c2499409c1d4eeccb90993695331eef1bd83a5653b642b974bde682",
+          "line_start": 159,
+          "locator_hash": "sha256:3788b26cda30fb33ced46cdb88b80bd360b5ce39a61e7edf50b17ee2358d1d72",
+          "locator_id": "67703bc5-acd6-554a-89fd-bde6a082d9a3",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json line 159.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Effective identity, encryption, authorization, exposure, lateral-movement resistance, and failure behavior are not demonstrated without runtime traffic evidence.\",",
+          "symbol_or_section": "retained SPEC-COMMS unknown"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-PLATFORM-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 153,
+          "line_fingerprint": "sha256:0f9b5aa6a9a47fc270406b9a93faa978a0c8ebc349693cddc04784a84e7dfe3a",
+          "line_start": 153,
+          "locator_hash": "sha256:560ec96e2bdfa83b62d6227cd3058a3168b4e35858dfee88dabe912872474296",
+          "locator_id": "a2eec134-d221-592c-8460-123855552253",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json line 153.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.\",",
+          "symbol_or_section": "retained SPEC-K8S-PLATFORM unknown"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-RISK-001",
+      "statement": "The child records support evidence gaps, not quantified likelihood, consequence, aggregate risk, risk acceptance, or whole-product disposition."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-RISK-COMMS-001",
+        "EVIDENCE-RISK-PLATFORM-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-COMMS-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 159,
+          "line_fingerprint": "sha256:f1c039966c2499409c1d4eeccb90993695331eef1bd83a5653b642b974bde682",
+          "line_start": 159,
+          "locator_hash": "sha256:3788b26cda30fb33ced46cdb88b80bd360b5ce39a61e7edf50b17ee2358d1d72",
+          "locator_id": "67703bc5-acd6-554a-89fd-bde6a082d9a3",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json line 159.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Effective identity, encryption, authorization, exposure, lateral-movement resistance, and failure behavior are not demonstrated without runtime traffic evidence.\",",
+          "symbol_or_section": "retained SPEC-COMMS unknown"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-PLATFORM-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 153,
+          "line_fingerprint": "sha256:0f9b5aa6a9a47fc270406b9a93faa978a0c8ebc349693cddc04784a84e7dfe3a",
+          "line_start": 153,
+          "locator_hash": "sha256:560ec96e2bdfa83b62d6227cd3058a3168b4e35858dfee88dabe912872474296",
+          "locator_id": "a2eec134-d221-592c-8460-123855552253",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json line 153.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.\",",
+          "symbol_or_section": "retained SPEC-K8S-PLATFORM unknown"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-RISK-001:CAPA",
+      "statement": "Add explicit cause-event-consequence records, likelihood and impact bases, control evidence, uncertainty, and named decision authority."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-RISK-COMMS-001",
+        "EVIDENCE-RISK-PLATFORM-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-COMMS-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 159,
+          "line_fingerprint": "sha256:f1c039966c2499409c1d4eeccb90993695331eef1bd83a5653b642b974bde682",
+          "line_start": 159,
+          "locator_hash": "sha256:3788b26cda30fb33ced46cdb88b80bd360b5ce39a61e7edf50b17ee2358d1d72",
+          "locator_id": "67703bc5-acd6-554a-89fd-bde6a082d9a3",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json line 159.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Effective identity, encryption, authorization, exposure, lateral-movement resistance, and failure behavior are not demonstrated without runtime traffic evidence.\",",
+          "symbol_or_section": "retained SPEC-COMMS unknown"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RISK-PLATFORM-001",
+          "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+          "line_end": 153,
+          "line_fingerprint": "sha256:0f9b5aa6a9a47fc270406b9a93faa978a0c8ebc349693cddc04784a84e7dfe3a",
+          "line_start": 153,
+          "locator_hash": "sha256:560ec96e2bdfa83b62d6227cd3058a3168b4e35858dfee88dabe912872474296",
+          "locator_id": "a2eec134-d221-592c-8460-123855552253",
+          "locator_state": "source_located",
+          "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+            "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json line 153.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "\"statement\": \"Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.\",",
+          "symbol_or_section": "retained SPEC-K8S-PLATFORM unknown"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-RISK-001",
+      "statement": "Risk events, likelihood, consequence, control effectiveness, aggregation logic, tolerance, and acceptance remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:fd359187637ed4f1922b284b0080024d2b716d2c587dbacf294e2cccf1151e6e",
+  "packet_id": "bfe4062a-1353-5df3-9da5-7bbd75cdb6d1",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

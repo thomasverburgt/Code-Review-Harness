@@ -1,0 +1,26 @@
+{
+  "action": "enable_calibration",
+  "authority_effect": "candidate_calibration_control_only",
+  "authority_source": "ADR-0039 Increments 3 and 4 project-owner authorization",
+  "control_hash": "sha256:086ada181e60665971dc60da293717bc507307026615597453b0c80b348d35ae",
+  "control_id": "06e60292-5cc8-54da-bb0c-d663f3e87729",
+  "control_version": "1.0.0",
+  "decided_at": "2026-08-03T22:00:00Z",
+  "decided_by": {
+    "authority_name": "thomasverburgt",
+    "authority_role": "project_owner"
+  },
+  "designation": "SPEC-K8S-WORKLOAD",
+  "effects": {
+    "a100_production_authorized": false,
+    "candidate_discovery_enabled": true,
+    "deployment_authorized": false,
+    "dispatch_enabled": true,
+    "packet_export_enabled": true,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:c6ee1dfe36c3b8dad9b42e7d5a81105411845b7287c27cdf9cbba3f008ebca21",
+  "manifest_id": "4f9673a8-d87e-5712-9c69-fee32540ae39"
+}

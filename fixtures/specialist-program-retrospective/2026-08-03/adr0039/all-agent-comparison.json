@@ -1,0 +1,142 @@
+{
+  "comparison_hash": "sha256:51b6a3365849c08a979b2e2ebc9c6b17ff83920029baac71d3461a4ff4ffe901",
+  "coverage": {
+    "constructed_candidates": 22,
+    "focus_bindings_validated": 22,
+    "gx10_model_calibrations_passed": 22,
+    "human_responses": 0,
+    "qualified_adjudications": 0,
+    "registered_specialists": 22,
+    "strict_role_payloads_retained": 22
+  },
+  "cross_agent_relationships": [
+    {
+      "agents": [
+        "SPEC-DEPS",
+        "SPEC-SBOM",
+        "SPEC-LINT"
+      ],
+      "group": "inventory",
+      "preserved_distinction": "dependency health, inventory completeness, and rule execution remain separate"
+    },
+    {
+      "agents": [
+        "SPEC-CONTAINER",
+        "SPEC-CICD",
+        "SPEC-IAC"
+      ],
+      "group": "delivery",
+      "preserved_distinction": "definition, artifact, pipeline, desired state, and observed deployment are not collapsed"
+    },
+    {
+      "agents": [
+        "SPEC-K8S-WORKLOAD",
+        "SPEC-K8S-PLATFORM",
+        "SPEC-COMMS"
+      ],
+      "group": "kubernetes_trust",
+      "preserved_distinction": "workload, shared platform, and traffic-path authority remain separate"
+    },
+    {
+      "agents": [
+        "SPEC-ARCH",
+        "SPEC-INTEROP",
+        "SPEC-DATA",
+        "SPEC-DIAGRAM",
+        "SPEC-IO"
+      ],
+      "group": "design_and_resources",
+      "preserved_distinction": "intended structure, interfaces, information, model quality, and external interactions retain source meanings"
+    },
+    {
+      "agents": [
+        "SPEC-OBS",
+        "SPEC-PERF",
+        "SPEC-FMECA"
+      ],
+      "group": "operability",
+      "preserved_distinction": "signals, measured behavior, failure propagation, and recovery evidence are distinct"
+    },
+    {
+      "agents": [
+        "SPEC-RESEARCH",
+        "SPEC-RISK",
+        "SPEC-SECURITY"
+      ],
+      "group": "synthesis",
+      "preserved_distinction": "source authority, risk characterization, and security posture cannot manufacture acceptance or release authority"
+    }
+  ],
+  "final_state_register": "final-state-register.json",
+  "human_metrics": {
+    "must_not_be_fabricated": [
+      "semantic faithfulness",
+      "false-positive rate",
+      "partial-support rate",
+      "reviewer agreement",
+      "reproduction time",
+      "review usefulness"
+    ],
+    "reason": "project owner directed all human review to the end of candidate construction",
+    "state": "not_yet_observable"
+  },
+  "next_gate": "execute the consolidated human shadow-review wave, qualified adjudication, and project-owner dispositions; any scheduling or fan-in requires a separate ADR",
+  "observed_harness_lessons": [
+    "Strict schemas and evidence-reference validation constrain structure; they do not provide semantic approval.",
+    "Protected focus-profile material kept overlapping roles distinguishable while a shared universal envelope preserved harness interoperability.",
+    "Static configuration consistently required configured_not_demonstrated or not_assessed effectiveness.",
+    "Synthesis-sensitive roles can consume content-addressed child candidates while preserving child identifiers and unknowns.",
+    "Transport and package completeness must be tested before inference; fail-closed regressions caught a missing pyproject.toml before model execution.",
+    "Raw model payloads must remain separate from deterministic projection, locators, lifecycle controls, and human packets.",
+    "Credentials can be streamed without retention; all retrieved Increment 5-7 evidence had zero exact-key and restricted-marker matches."
+  ],
+  "program": "ADR-0039 specialist candidate buildout",
+  "result": "machine_preparation_complete_human_review_pending",
+  "schema_version": "1.0.0",
+  "usage": {
+    "cost_usd_reported": 0.0,
+    "input_tokens": 53369,
+    "model": "qwen3-32b",
+    "output_tokens": 8641,
+    "platform": "GX-10 / approved DGX Spark-equivalent",
+    "timing_limitations": [
+      "Comparable per-role latency was not retained across every wave.",
+      "The Increment 5-7 remote command took 512.3 seconds including transfer, regression, inference, packaging, and hashing; it is not a pure model-latency measurement.",
+      "No A100 timing or throughput claim is inferred from GX-10 execution."
+    ],
+    "wave_metrics": [
+      {
+        "input_tokens": 9921,
+        "output_tokens": 1768,
+        "passed": true,
+        "roles": 3,
+        "summary": "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json",
+        "wave": 1
+      },
+      {
+        "input_tokens": 9642,
+        "output_tokens": 1743,
+        "passed": true,
+        "roles": 3,
+        "summary": "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json",
+        "wave": 2
+      },
+      {
+        "input_tokens": 13530,
+        "output_tokens": 1765,
+        "passed": true,
+        "roles": 5,
+        "summary": "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json",
+        "wave": 3
+      },
+      {
+        "input_tokens": 20276,
+        "output_tokens": 3365,
+        "passed": true,
+        "roles": 11,
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json",
+        "wave": 5
+      }
+    ]
+  }
+}

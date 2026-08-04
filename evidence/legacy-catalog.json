@@ -93,6 +93,51 @@
       "total_bytes": 150224
     },
     {
+      "file_count": 22,
+      "inventory_sha256": "sha256:01c6340c7f6a1c7dc8f7a478264ff03a0f8d7aedeb4f0c4a0ac387afa94aa076",
+      "legacy_root": "fixtures/specialist-build-supply-chain-increment2/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "specialist-build-supply-chain-increment2",
+      "total_bytes": 146999
+    },
+    {
+      "file_count": 69,
+      "inventory_sha256": "sha256:aa5f4d2030b17cc5b5f6bc53e67a94072725515fe4c2af06db6c0213742e1efb",
+      "legacy_root": "fixtures/specialist-increment567/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "specialist-increment567",
+      "total_bytes": 370072
+    },
+    {
+      "file_count": 34,
+      "inventory_sha256": "sha256:51e9b7af6dac5fc8e5ff33dcf7fb7b97488ff096c9183a9c4b1232d2d5796e19",
+      "legacy_root": "fixtures/specialist-k8s-secure-increment34/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "specialist-k8s-secure-increment34",
+      "total_bytes": 203842
+    },
+    {
+      "file_count": 32,
+      "inventory_sha256": "sha256:cb406af77d276e27b2d6a00cc8ed74acc74390e475b77978086d55e23304531b",
+      "legacy_root": "fixtures/specialist-shadow-calibration/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "specialist-shadow-calibration",
+      "total_bytes": 83577
+    },
+    {
+      "file_count": 24,
+      "inventory_sha256": "sha256:5c8ce1f911fdb442feb0501cc907fc76c57aeaeba419bc18807a4fd801d746b5",
+      "legacy_root": "fixtures/specialist-static-evidence-increment1/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "specialist-static-evidence-increment1",
+      "total_bytes": 134564
+    },
+    {
       "file_count": 81,
       "inventory_sha256": "sha256:a1b6169f4f17eb37bdd4df3e863adf27e5c9e9b4fb31b3215bbbb07a167a7d28",
       "legacy_root": "fixtures/vertical-risk-slice/evidence",

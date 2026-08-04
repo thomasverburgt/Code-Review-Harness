@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "specialist-shadow-packet",
+  "logical_path": "specialist-shadow/review-packet.json",
+  "object_hash": "sha256:04a767cfff82ebd17222aba7440632d627bfbb41fe14dce6ca58e090b9cb8b4b",
+  "record_id": "8c492a1c-0e2a-52d7-99ba-be20aaa9dd65",
+  "retention_class": "specialist-human-shadow-calibration"
+}

@@ -1,0 +1,275 @@
+{
+  "artifact": {
+    "artifact_id": "a57dd7c4-9b3c-5077-bc61-a67445ae2669",
+    "artifact_type": "spec-k8s-platform-shadow-candidate",
+    "created_at": "2026-08-03T22:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "09167b34-7e71-59b1-adf3-87bb418b6d96"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-K8S-PLATFORM-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ],
+      "rationale": "No live cluster state, policy inventory, enforcement test, tenant boundary test, control-plane observation, or failure evidence is admitted."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increments 3 and 4 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-K8S-PLATFORM-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:dc8c962b79fd34c0c2c2be392093ef287509e1d8b7b7bd599cbb2d58e6a7f69e",
+        "id": "GX10-QWEN3-32B-SPEC-K8S-PLATFORM-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:6441826ee055ace7965642074a154f3fdf7034842dffa40fc0d3b0db4e2b93a6",
+        "id": "SPEC-K8S-PLATFORM-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:1139406af61bc8a268a5d7c2e829645deecb31e137446f78398251d51b8798a8",
+        "id": "SPEC-K8S-PLATFORM-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:9f613f8b680dfca97c5974a3a80478b1f09c3c021b47faff76f85c4a14eddb5f",
+        "id": "RUBRIC-SPEC-K8S-PLATFORM-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:7643c86be8c41b2246557af1e4f78e0f92edb2a5e47ed74c5738d7366b9f7735",
+        "id": "TOOLCHAIN-SPEC-K8S-PLATFORM-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "90a24ccd-ca12-5d86-ba60-11c651c93bcc",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:900713361dce0ebf7d8f69bbb102e1d7665acba824191d122beb0e1dca12f228",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:bf2a7d96cc643aea8cc6f9c6720f3bc48683bdd4ab018d4b794ba3ad8dd77983",
+      "profile_id": "FOCUS-SPEC-K8S-PLATFORM",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/kubernetes-platform-security-reviewer.md",
+      "source_specification_hash": "sha256:a953b0639334402fb0719f04d0f7c3bd961734c6e11db09cf78fefcbcefd63bc"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "09167b34-7e71-59b1-adf3-87bb418b6d96",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-K8S-PLATFORM-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-K8S-PLATFORM-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-K8S-PLATFORM-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "kubernetes_platform_security",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+          ],
+          "statement": "Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.",
+          "unknown_id": "UNKNOWN-K8S-PLATFORM-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "shared_platform_desired_state_only_no_workload_runtime_release_or_product_approval",
+        "coverage": {
+          "enforcement_tests_reviewed": 0,
+          "live_clusters_reviewed": 0,
+          "platform_definitions_reviewed": 1
+        },
+        "designation": "SPEC-K8S-PLATFORM",
+        "platform_controls": [
+          {
+            "control_id": "EKS-VPC-CNI-NETWORK-POLICY",
+            "desired_state": "declared",
+            "enforcement_effectiveness": "configured_not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+            ],
+            "observed_state": "not_observed",
+            "tenant_isolation_confidence": null
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+            ],
+            "missing_evidence": [
+              "live cluster state",
+              "enforcement tests",
+              "tenant isolation tests"
+            ],
+            "statement": "Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.",
+            "unknown_id": "UNKNOWN-K8S-PLATFORM-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain live configuration and negative/positive enforcement tests for the exact cluster revision.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Continuously reconcile platform desired state with observed controls and tenant-isolation tests.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ],
+      "finding_id": "FINDING-K8S-PLATFORM-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "No live cluster state, policy inventory, enforcement test, tenant boundary test, control-plane observation, or failure evidence is admitted."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "01596885-15c9-4846-8233-450939791c35",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-K8S-PLATFORM",
+    "display_name": "Kubernetes Platform Security Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-K8S-PLATFORM-NETPOL-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:f1fea85dcf05b2511c21ad8b31ac9138a478df956dc2a206f914df51d80e87f3",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:.github/test-infra/aws/eks/cluster.tf"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:3cc96fd8f3110c4d6c296c65eed75312624e69babb664d202bf0b59674adc6f7",
+    "output_hash": "sha256:2725dddaae911ce90108b762dfd6014f0ef788aaf361843928986f8c61480292",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-K8S-PLATFORM",
+    "limitations": [
+      "Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic kubernetes_platform_security projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ],
+      "fact": "The admitted EKS desired state enables the VPC CNI network-policy option.",
+      "observation_id": "OBS-K8S-PLATFORM-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      ".github/test-infra/aws/eks/cluster.tf"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

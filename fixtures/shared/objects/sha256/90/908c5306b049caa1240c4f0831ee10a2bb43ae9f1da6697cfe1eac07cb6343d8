@@ -1,0 +1,109 @@
+{
+  "candidate": {
+    "agent_uuid": "3adf20a4-78ed-497f-ae73-52d7ddbe9581",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-RISK",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-7.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:9258179259df5fe9a582250d59b16530438db422cb3bbbf12befe820c9f0c9e7",
+      "evidence_id": "EVIDENCE-RISK-COMMS-001",
+      "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+      "purpose": "Review SPEC-RISK evidence in retained SPEC-COMMS unknown.",
+      "safe_for_human_review": true,
+      "source_type": "external_record"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:6e111eb3b04235b9804f506117e512d293c961e45ba8d7d328d6c9b4e25f55fd",
+      "evidence_id": "EVIDENCE-RISK-PLATFORM-001",
+      "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/candidate.artifact.json",
+      "purpose": "Review SPEC-RISK evidence in retained SPEC-K8S-PLATFORM unknown.",
+      "safe_for_human_review": true,
+      "source_type": "external_record"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:4d66e170d4ef491fec721d5f1392be77b257af2e2234392e026812abcdf9fbc0",
+      "id": "GX10-QWEN3-32B-SPEC-RISK-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:b6d26dcd5eb0d0a54b3d7618c68a89f7ebae85c93eece9f5a749eb0e47f55fc6",
+      "id": "SPEC-RISK-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:99c0094e75f2e8c65383d7e2cde08e1193ca81721acd8c5f424496634a705e03",
+      "id": "SPEC-RISK-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:1a91155e00cd49ea88ed442ec2d6a1528435069e36da1984d9febec3e783e7a6",
+      "id": "RUBRIC-SPEC-RISK-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:f2e3f8d26785fbf94d58c2c932cddf1283886354484e5f4fe1fa6cb8f9bedc7a",
+      "id": "TOOLCHAIN-SPEC-RISK-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:ad9e56c5d89d665f0709a1c74640958d2d3a8d5b2be0b5da7868ac11fd1ea41b",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:8c6fd98a063afbd45f4496fee291eb5a7eb1e8559fb0a3c7e22b0fbd4827105b",
+    "profile_id": "FOCUS-SPEC-RISK",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/product-risk-reviewer.md",
+    "source_specification_hash": "sha256:d91c2075995d812f2272357e99af28d11b2822c97f2489c1eaec26daf45648c2"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:b394f88d42a929810c4be194ef6ba852ec9cfeec8f231ac4084741587dbd31cf",
+  "manifest_id": "eb0ce91e-31e8-53a4-bc40-515525c99373",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git"
+  }
+}

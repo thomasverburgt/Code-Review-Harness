@@ -1,0 +1,307 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "b7eb144e-eae5-4f91-9789-b606ba2afc95",
+    "designation": "SPEC-CONTAINER",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:c5521feed93adc44964530699d037b262a333f388140ae50add9d80740ffd103",
+  "candidate_artifact_id": "9247abfa-7401-5385-90bd-c76fbddcd0aa",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:18c476787cb9b10dd3f47439ed17955c902ebce61f31311f139fe11da694e053",
+    "profile_id": "FOCUS-SPEC-CONTAINER",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T20:05:00Z",
+  "input_manifest_hash": "sha256:0af8813a5d94154ba1c82d1b35f183bd112b343b3081ae33b672a9f2ea3f1d30",
+  "input_manifest_id": "974072d8-ac07-583b-8603-6fb74f000c71",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-BASE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 4,
+          "line_fingerprint": "sha256:bb57c7da220a8753d7bdabac0d3afdb6efa742e4c736c5bc93ab40dfd5e23b9b",
+          "line_start": 4,
+          "locator_hash": "sha256:f0196b2c24d09d12a307e28a9a0ac9f392db3f98230ca64bb3f63ef541c54014",
+          "locator_id": "81d241d7-91c3-575f-8a6e-f35fcab56df2",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 4.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "FROM scratch",
+          "symbol_or_section": "base image"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-COPY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 5,
+          "line_fingerprint": "sha256:a771d239180989d008d1c33b10fea8c4ebc5932c61682cb4824159c90b3d4d0a",
+          "line_start": 5,
+          "locator_hash": "sha256:afa5eaf3c2447bb7b7475f61e1282dc16ef2e9dc34c84d17c12e3ad64324647b",
+          "locator_id": "4c6cb1a9-cdf9-5854-9d93-fb24c318843f",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 5.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "COPY stage/ /",
+          "symbol_or_section": "composition"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-CONTAINER-001",
+      "statement": "The admitted container definition uses a scratch base and copies a staged filesystem into the image."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-BASE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 4,
+          "line_fingerprint": "sha256:bb57c7da220a8753d7bdabac0d3afdb6efa742e4c736c5bc93ab40dfd5e23b9b",
+          "line_start": 4,
+          "locator_hash": "sha256:f0196b2c24d09d12a307e28a9a0ac9f392db3f98230ca64bb3f63ef541c54014",
+          "locator_id": "81d241d7-91c3-575f-8a6e-f35fcab56df2",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 4.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "FROM scratch",
+          "symbol_or_section": "base image"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-COPY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 5,
+          "line_fingerprint": "sha256:a771d239180989d008d1c33b10fea8c4ebc5932c61682cb4824159c90b3d4d0a",
+          "line_start": 5,
+          "locator_hash": "sha256:afa5eaf3c2447bb7b7475f61e1282dc16ef2e9dc34c84d17c12e3ad64324647b",
+          "locator_id": "4c6cb1a9-cdf9-5854-9d93-fb24c318843f",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 5.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "COPY stage/ /",
+          "symbol_or_section": "composition"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-CONTAINER-001",
+      "statement": "The source definition does not identify a built digest, verified signature or attestation, provenance record, scan result, or declared runtime user."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-BASE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 4,
+          "line_fingerprint": "sha256:bb57c7da220a8753d7bdabac0d3afdb6efa742e4c736c5bc93ab40dfd5e23b9b",
+          "line_start": 4,
+          "locator_hash": "sha256:f0196b2c24d09d12a307e28a9a0ac9f392db3f98230ca64bb3f63ef541c54014",
+          "locator_id": "81d241d7-91c3-575f-8a6e-f35fcab56df2",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 4.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "FROM scratch",
+          "symbol_or_section": "base image"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-COPY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 5,
+          "line_fingerprint": "sha256:a771d239180989d008d1c33b10fea8c4ebc5932c61682cb4824159c90b3d4d0a",
+          "line_start": 5,
+          "locator_hash": "sha256:afa5eaf3c2447bb7b7475f61e1282dc16ef2e9dc34c84d17c12e3ad64324647b",
+          "locator_id": "4c6cb1a9-cdf9-5854-9d93-fb24c318843f",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 5.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "COPY stage/ /",
+          "symbol_or_section": "composition"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-CONTAINER-001:CAPA",
+      "statement": "Retain the built image digest, provenance, signature verification, composition scan, and runtime security-context evidence for this image."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-BASE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 4,
+          "line_fingerprint": "sha256:bb57c7da220a8753d7bdabac0d3afdb6efa742e4c736c5bc93ab40dfd5e23b9b",
+          "line_start": 4,
+          "locator_hash": "sha256:f0196b2c24d09d12a307e28a9a0ac9f392db3f98230ca64bb3f63ef541c54014",
+          "locator_id": "81d241d7-91c3-575f-8a6e-f35fcab56df2",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 4.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "FROM scratch",
+          "symbol_or_section": "base image"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-CONTAINER-COPY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 5,
+          "line_fingerprint": "sha256:a771d239180989d008d1c33b10fea8c4ebc5932c61682cb4824159c90b3d4d0a",
+          "line_start": 5,
+          "locator_hash": "sha256:afa5eaf3c2447bb7b7475f61e1282dc16ef2e9dc34c84d17c12e3ad64324647b",
+          "locator_id": "4c6cb1a9-cdf9-5854-9d93-fb24c318843f",
+          "locator_state": "source_located",
+          "path": "scripts/keycloak-crl-airgap/Dockerfile",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect scripts/keycloak-crl-airgap/Dockerfile line 5.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "COPY stage/ /",
+          "symbol_or_section": "composition"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-CONTAINER-001",
+      "statement": "Built contents, registry trust, signing, provenance, vulnerability exposure, runtime identity, startup behavior, and deployment readiness are not demonstrated by the admitted Dockerfile alone."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:0b4990085c4a8234224ccfc04256d41c8e6f2dce42554c662488c848ae7f7d19",
+  "packet_id": "bec538e5-14ab-54e0-8c5d-be32f6e0bbf8",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

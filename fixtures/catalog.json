@@ -75,6 +75,48 @@
       "total_bytes": 156814
     },
     {
+      "legacy_evidence_file_count": 22,
+      "reusable_file_count": 21,
+      "root": "fixtures/specialist-build-supply-chain-increment2",
+      "scenario": "specialist-build-supply-chain-increment2",
+      "total_bytes": 273538
+    },
+    {
+      "legacy_evidence_file_count": 69,
+      "reusable_file_count": 67,
+      "root": "fixtures/specialist-increment567",
+      "scenario": "specialist-increment567",
+      "total_bytes": 700516
+    },
+    {
+      "legacy_evidence_file_count": 34,
+      "reusable_file_count": 32,
+      "root": "fixtures/specialist-k8s-secure-increment34",
+      "scenario": "specialist-k8s-secure-increment34",
+      "total_bytes": 382680
+    },
+    {
+      "legacy_evidence_file_count": 0,
+      "reusable_file_count": 5,
+      "root": "fixtures/specialist-program-retrospective",
+      "scenario": "specialist-program-retrospective",
+      "total_bytes": 36201
+    },
+    {
+      "legacy_evidence_file_count": 32,
+      "reusable_file_count": 31,
+      "root": "fixtures/specialist-shadow-calibration",
+      "scenario": "specialist-shadow-calibration",
+      "total_bytes": 154206
+    },
+    {
+      "legacy_evidence_file_count": 24,
+      "reusable_file_count": 21,
+      "root": "fixtures/specialist-static-evidence-increment1",
+      "scenario": "specialist-static-evidence-increment1",
+      "total_bytes": 241197
+    },
+    {
       "legacy_evidence_file_count": 81,
       "reusable_file_count": 9,
       "root": "fixtures/vertical-risk-slice",

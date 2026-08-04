@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "specialist-shadow-input",
+  "logical_path": "specialist-shadow/input-manifest.json",
+  "object_hash": "sha256:536b09a6303585a0437f0d00e62427bf3bc11731615972d6d9f87fdd100d5072",
+  "record_id": "3bf87306-6e8e-5e55-ad88-8c53db6128d4",
+  "retention_class": "specialist-human-shadow-calibration"
+}

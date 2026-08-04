@@ -1,0 +1,7 @@
+{
+  "rubric_id": "RUBRIC-SPEC-LINT-CANDIDATE",
+  "version": "0.1.0",
+  "status": "candidate-comparison-only",
+  "authoritative_question": "Does implementation meet defined quality rules?",
+  "required_controls": ["exact_identity_and_focus_binding", "declared_evidence_population_only", "configuration_is_not_execution", "exact_rule_tool_version_and_source_population", "deterministic_output_separate_from_interpretation", "suppression_and_false_positive_preservation", "no_missing_output_as_pass", "no_architecture_security_or_release_authority", "exact_human_review_locators", "unscheduled_downstream_ineligible"]
+}

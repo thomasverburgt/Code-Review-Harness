@@ -1,0 +1,76 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-34-deterministic-reference",
+    "evidence_id": "EVIDENCE-SECURE-CODE-SANITIZE-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 74,
+    "line_fingerprint": "sha256:eb73812513e238d9aaabdd47c97882c8e409a27a7250cbcfa96f6a7ed1700af8",
+    "line_start": 74,
+    "locator_hash": "sha256:90f5c6db16d236d7c4a651608737544ab5936d6a19dd9326f75411e21178c054",
+    "locator_id": "892af218-22f7-51f1-b9c3-ad5663457ae1",
+    "locator_state": "source_located",
+    "path": "src/pepr/operator/crd/validators/package-validator.ts",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/pepr/operator/crd/validators/package-validator.ts line 74.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "    const sanitizedName = sanitizeResourceName(customGateway.name);",
+    "source_type": "git_source",
+    "symbol_or_section": "custom gateway input sanitization"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-34-deterministic-reference",
+    "evidence_id": "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 88,
+    "line_fingerprint": "sha256:3118d7ec2b1dd700a6f1a40577dfb7f43d57540e2965ea0d64b39aea04e9fd01",
+    "line_start": 88,
+    "locator_hash": "sha256:486d81cba5b0038a24f0119658d878ef96611e6eae1f9f3802439378480f0fcc",
+    "locator_id": "836cd24f-97bc-593a-b013-26cefa6f9c29",
+    "locator_state": "source_located",
+    "path": "src/pepr/operator/crd/validators/package-validator.ts",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/pepr/operator/crd/validators/package-validator.ts line 88.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "    if (expose.protocol === \"UDP\") {",
+    "source_type": "git_source",
+    "symbol_or_section": "UDP incompatible-field validation"
+  }
+]

@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "34ec9c9a-97b4-4a69-ab7c-7e2eb5f3632e",
+    "designation": "SPEC-PERF",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:9d3f3845d930c1bd9b12be0feb2bc39a32e94f1fd8048859d0f404d7f98e2915",
+  "candidate_artifact_id": "c6bc4c21-425c-5b06-88d4-6162f434773c",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:8ba05f28ffdfe20515d5f4f88e266d2916b598e7830818c52e14569b90ff36e0",
+    "profile_id": "FOCUS-SPEC-PERF",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:f8285fce13cb1764acc84d0c8f2b61f817c564312ca10211e36209999f6d1c85",
+  "input_manifest_id": "459a0b64-1fd2-5447-98be-f76e85163f7d",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-PERF-AUTOSCALE-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-PERF-AUTOSCALE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 96,
+          "line_fingerprint": "sha256:574b7cbbac3ba303819ea6131d41f1106ed0d628ab3d2d9a6056e56e39cf3993",
+          "line_start": 96,
+          "locator_hash": "sha256:5834b86d279f2c81547e720720cb4d7a563cd58b8dc1939b21eb70ebf448d93f",
+          "locator_id": "a237c76c-f5b3-5033-a6c0-70bb3ce4613d",
+          "locator_state": "source_located",
+          "path": "src/grafana/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/grafana/values/values.yaml line 96.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  enabled: false",
+          "symbol_or_section": "Grafana autoscaling"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-PERF-001",
+      "statement": "The admitted Grafana values disable autoscaling in this configuration."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-PERF-AUTOSCALE-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-PERF-AUTOSCALE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 96,
+          "line_fingerprint": "sha256:574b7cbbac3ba303819ea6131d41f1106ed0d628ab3d2d9a6056e56e39cf3993",
+          "line_start": 96,
+          "locator_hash": "sha256:5834b86d279f2c81547e720720cb4d7a563cd58b8dc1939b21eb70ebf448d93f",
+          "locator_id": "a237c76c-f5b3-5033-a6c0-70bb3ce4613d",
+          "locator_state": "source_located",
+          "path": "src/grafana/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/grafana/values/values.yaml line 96.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  enabled: false",
+          "symbol_or_section": "Grafana autoscaling"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-PERF-001",
+      "statement": "The static setting does not establish workload shape, objectives, capacity, saturation, latency, throughput, or scaling behavior."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-PERF-AUTOSCALE-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-PERF-AUTOSCALE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 96,
+          "line_fingerprint": "sha256:574b7cbbac3ba303819ea6131d41f1106ed0d628ab3d2d9a6056e56e39cf3993",
+          "line_start": 96,
+          "locator_hash": "sha256:5834b86d279f2c81547e720720cb4d7a563cd58b8dc1939b21eb70ebf448d93f",
+          "locator_id": "a237c76c-f5b3-5033-a6c0-70bb3ce4613d",
+          "locator_state": "source_located",
+          "path": "src/grafana/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/grafana/values/values.yaml line 96.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  enabled: false",
+          "symbol_or_section": "Grafana autoscaling"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-PERF-001:CAPA",
+      "statement": "Retain workload definitions and repeatable measurements across relevant resource and failure conditions."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-PERF-AUTOSCALE-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-PERF-AUTOSCALE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 96,
+          "line_fingerprint": "sha256:574b7cbbac3ba303819ea6131d41f1106ed0d628ab3d2d9a6056e56e39cf3993",
+          "line_start": 96,
+          "locator_hash": "sha256:5834b86d279f2c81547e720720cb4d7a563cd58b8dc1939b21eb70ebf448d93f",
+          "locator_id": "a237c76c-f5b3-5033-a6c0-70bb3ce4613d",
+          "locator_state": "source_located",
+          "path": "src/grafana/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/grafana/values/values.yaml line 96.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  enabled: false",
+          "symbol_or_section": "Grafana autoscaling"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-PERF-001",
+      "statement": "Capacity, latency, throughput, scaling limits, bottlenecks, and A100 behavior remain unknown; GX-10 results cannot establish A100 performance."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:0c55f298da8a0c23bf9fcda613adc179f4205c48244789aa1ac2b48e513eee57",
+  "packet_id": "7c044655-9b46-5dcc-be9b-7396488e6ab1",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

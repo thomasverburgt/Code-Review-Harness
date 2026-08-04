@@ -1,0 +1,27 @@
+ADR-0039 Increments 3 and 4 GX-10 conformance
+hostname=cluster1
+architecture=aarch64
+python=3.12.3
+gpu=NVIDIA GB10
+driver=580.173.02
+source_repository=https://github.com/defenseunicorns/uds-core.git
+source_revision=329ade01852f9e570d31cb7b19d9979152938c17
+increment1_fail_closed_tests=8 passed
+increment2_fail_closed_tests=9 passed
+increment34_fail_closed_tests=5 passed
+SPEC-K8S-WORKLOAD=passed input_tokens=1988 output_tokens=341
+SPEC-K8S-PLATFORM=passed input_tokens=1719 output_tokens=290
+SPEC-COMMS=passed input_tokens=2509 output_tokens=599
+SPEC-SECURE-CODE=passed input_tokens=1896 output_tokens=324
+SPEC-SECRETS=passed input_tokens=5418 output_tokens=211
+total_input_tokens=13530
+total_output_tokens=1765
+human_review_deferred=true
+scheduled=false
+product_fan_in_eligible=false
+report_eligible=false
+deployment_authorized=false
+a100_production_authorized=false
+credential_marker_matches=0
+archive_sha256=4733af6737c6639d4e61bd3d7ea100552b76e29ad7376379a1421786b695c645
+result=pass

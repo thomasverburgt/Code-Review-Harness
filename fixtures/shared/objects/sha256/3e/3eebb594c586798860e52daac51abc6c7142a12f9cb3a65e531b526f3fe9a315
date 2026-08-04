@@ -1,0 +1,40 @@
+[
+  {
+    "access": {
+      "classification": "internal",
+      "constraints": [
+        "restricted or qualified reviewer only",
+        "raw value access not admitted"
+      ],
+      "reviewer_instructions": [
+        "Compare this locator with the retained redacted detector record; do not request or reproduce the matched value in the review packet."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-34-deterministic-reference",
+    "evidence_id": "UDS-0001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 153,
+    "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+    "line_start": 153,
+    "locator_hash": "sha256:dc1ca10c3c497f557b40c7b040740ad2eaf4161d3052461ca75ff476c9740857",
+    "locator_id": "489066aa-3e96-5e2a-a640-f2a9aa39f7f5",
+    "locator_state": "source_located",
+    "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+    "redaction": {
+      "applied": true,
+      "method": "irreversible_value_omission",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open the retained redacted calibration slice.",
+      "Match evidence ID UDS-0001, source path, line 153, and the detector fingerprint.",
+      "Verify that the matched value remains omitted."
+    ],
+    "safe_excerpt": "matched value omitted",
+    "source_type": "external_record",
+    "symbol_or_section": "redacted credential-like detector candidate"
+  }
+]

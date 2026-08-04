@@ -1,0 +1,113 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T20:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-IAC-MODULE-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 34,
+    "line_fingerprint": "sha256:42087141874e061628b9fc644706fdfb4b71a42fce791c9a28c79248a73a0fb8",
+    "line_start": 34,
+    "locator_hash": "sha256:e6754fccfaef156bc739e31951c0a12689c50eb42b6f89208fbe5997931d206d",
+    "locator_id": "322971cd-14e7-54f1-aa05-645977170120",
+    "locator_state": "source_located",
+    "path": ".github/test-infra/aws/eks/main.tf",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect .github/test-infra/aws/eks/main.tf line 34.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "  source                    = \"../modules/kms\"",
+    "source_type": "iac",
+    "symbol_or_section": "generate_kms module source"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T20:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-IAC-BACKEND-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 16,
+    "line_fingerprint": "sha256:f806a2ff5e1209ea1221470d7b39fb2973095e619c731535f7da0e2e0318558b",
+    "line_start": 16,
+    "locator_hash": "sha256:a540fab4925d25e9a2673ca5aa786785c7b36f8a6474d4e6544bedc1374d2673",
+    "locator_id": "3546991a-a8e7-5d87-997f-08ce15222e88",
+    "locator_state": "source_located",
+    "path": ".github/test-infra/aws/eks/versions.tf",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect .github/test-infra/aws/eks/versions.tf line 16.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "  backend \"s3\" {",
+    "source_type": "iac",
+    "symbol_or_section": "Terraform backend"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T20:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-IAC-VERSION-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 21,
+    "line_fingerprint": "sha256:9e98bc89b505e38ce088d5e238900c2c962357bb98cff9331d079950d057fea7",
+    "line_start": 21,
+    "locator_hash": "sha256:508a797d5aac3b069d40f738e4e502a4d38ebf5b5ae67ceebdfd5ebf68324797",
+    "locator_id": "74125e04-0826-5ad9-99cb-f64a1e519fb8",
+    "locator_state": "source_located",
+    "path": ".github/test-infra/aws/eks/versions.tf",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect .github/test-infra/aws/eks/versions.tf line 21.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "      version = \"~> 6.0\"",
+    "source_type": "iac",
+    "symbol_or_section": "AWS provider constraint"
+  }
+]

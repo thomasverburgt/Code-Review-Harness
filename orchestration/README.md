@@ -6,6 +6,8 @@ ADR-0015 adds `appendices/candidate-workflows/prod-synth-cap-risk-shadow.workflo
 
 ADR-0016 adds `state-machines/semantic-adjudication.state-machine.json` and the record-only semantic adjudication runtime. It converts blocked shadow differences into exact external-human review requests while withholding all workflow-promotion authority.
 
+ADR-0039 adds `state-machines/specialist-human-shadow-calibration.state-machine.json`. It governs all `SPEC-*` candidate calibration and access-appropriate human review as comparison-only evidence, with no scheduling, product fan-in, report, deployment, or A100 production authority.
+
 ## Executable vertical-slice baseline
 
 - `state-machines/orch-sched.state-machine.json` resolves identity and versions and rejects invalid or cyclic graphs.

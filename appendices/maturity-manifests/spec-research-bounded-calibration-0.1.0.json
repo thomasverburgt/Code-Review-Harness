@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "authoritative_question": "passed",
+    "evidence_and_authority_boundaries": "passed",
+    "focus_profile": "passed",
+    "identity": "passed",
+    "prohibited_conclusions": "passed",
+    "rollback": "passed",
+    "source_specification": "passed",
+    "strict_output_schema": "passed"
+  },
+  "deployment_or_promotion_effect": false,
+  "designation": "SPEC-RESEARCH",
+  "focus_profile_hash": "sha256:44f8ee6657a935553a365da0d81542428f78954bd57d843a7e2b91d693dd74a4",
+  "record_version": "0.1.0",
+  "registry_status_preserved": "seed",
+  "result": "sufficient_for_bounded_candidate_calibration",
+  "scope": "bounded ADR-0039 candidate calibration only"
+}

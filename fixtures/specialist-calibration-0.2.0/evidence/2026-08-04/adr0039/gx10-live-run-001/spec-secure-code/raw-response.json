@@ -1,0 +1,37 @@
+{
+  "designation": "SPEC-SECURE-CODE",
+  "code_assessments": [
+    {
+      "assessment_id": "CODE-VALIDATION-001",
+      "pattern": "input sanitization and protocol-specific incompatible-field rejection",
+      "assessment_state": "positive_control_observed",
+      "exploitability": "not_assessed",
+      "test_support": "not_admitted",
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ]
+    }
+  ],
+  "coverage": {
+    "source_files_reviewed": 1,
+    "security_tests_reviewed": 0,
+    "execution_traces_reviewed": 0
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-SECURE-CODE-001",
+      "statement": "Population coverage, generated-code boundaries, bypass behavior, execution-path reachability, and exploitability remain unknown.",
+      "missing_evidence": [
+        "security tests",
+        "execution traces",
+        "bypass and exploit evidence"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ]
+    }
+  ],
+  "authority_boundary": "implementation_quality_only_no_architecture_supply_chain_release_or_product_approval"
+}

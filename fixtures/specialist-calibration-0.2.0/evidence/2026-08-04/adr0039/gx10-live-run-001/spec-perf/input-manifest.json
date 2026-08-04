@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "34ec9c9a-97b4-4a69-ab7c-7e2eb5f3632e",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-PERF",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-6.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:7697509de4a2f6dc27c7d157afe8468e4a54050664c2f9ac23f4da094edfa871",
+      "evidence_id": "EVIDENCE-PERF-AUTOSCALE-001",
+      "path": "src/grafana/values/values.yaml",
+      "purpose": "Review SPEC-PERF evidence in Grafana autoscaling.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:6bf3e9e1edca16e00812a28a5d7a3ebf7cdc1cfe34dc16ab23f545fbc5e0b19c",
+      "id": "GX10-QWEN3-32B-SPEC-PERF-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:b64139aa526fcb86e7c3946524b7ff1843a232bc00065073f1ddf01aafe209a5",
+      "id": "SPEC-PERF-CANDIDATE-PROMPT",
+      "version": "design-0.2.0"
+    },
+    "role_schema": {
+      "hash": "sha256:8cc966820de297fb3d2b94d14666ac15da2fd1260993f1b803d3d6c3f0f1e738",
+      "id": "SPEC-PERF-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:ac45302b10a1911f6215cbd330cd15f54a0c285cab05df7c0e35a7b11bcd4a04",
+      "id": "RUBRIC-SPEC-PERF-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:a29d66d8ab770f21ce263c494a07aad8218be4aaaeccc59fd45822fb2c4f7c9a",
+      "id": "TOOLCHAIN-SPEC-PERF-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:c0e989d9169d100cb3fa14e246974af152c0f63232852300e2d93c295ece0856",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:8ba05f28ffdfe20515d5f4f88e266d2916b598e7830818c52e14569b90ff36e0",
+    "profile_id": "FOCUS-SPEC-PERF",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/performance-scalability-reviewer.md",
+    "source_specification_hash": "sha256:b90e8a8100c246822ee9203f9b4e4be83e86822a746fe917741bcf0764fb5822"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:0cc5bb978092b6c1cede858982d0c8121552155f1cadc30a58c2956a71455e92",
+  "manifest_id": "459a0b64-1fd2-5447-98be-f76e85163f7d",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

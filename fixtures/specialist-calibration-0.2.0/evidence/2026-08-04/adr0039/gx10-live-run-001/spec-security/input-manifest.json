@@ -1,0 +1,124 @@
+{
+  "candidate": {
+    "agent_uuid": "c201aa58-2464-40f0-b869-670df2ae932f",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-SECURITY",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-7.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:ee37ef0ec6f3603d92452c93166502f17e5b4bdbce95d316ee6febffa7cb2145",
+      "evidence_id": "EVIDENCE-SECURITY-CODE-001",
+      "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-secure-code/candidate.artifact.json",
+      "purpose": "Review SPEC-SECURITY evidence in retained SPEC-SECURE-CODE unknown.",
+      "safe_for_human_review": true,
+      "source_type": "external_record"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:adfc0c63a03238dd7bf01dcc797545977a800d760ac45f92cf744face4021bb5",
+      "evidence_id": "EVIDENCE-SECURITY-SECRETS-001",
+      "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-secrets/candidate.artifact.json",
+      "purpose": "Review SPEC-SECURITY evidence in retained SPEC-SECRETS unknown.",
+      "safe_for_human_review": true,
+      "source_type": "external_record"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:9258179259df5fe9a582250d59b16530438db422cb3bbbf12befe820c9f0c9e7",
+      "evidence_id": "EVIDENCE-SECURITY-COMMS-001",
+      "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+      "purpose": "Review SPEC-SECURITY evidence in retained SPEC-COMMS unknown.",
+      "safe_for_human_review": true,
+      "source_type": "external_record"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:7dac39e431584c73f04406f0606843bdea8dabefc51776a64d467bc08e9adedf",
+      "id": "GX10-QWEN3-32B-SPEC-SECURITY-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:6a123d837172e506204cb5403222d266c8464bdac819c93433176acf8870405d",
+      "id": "SPEC-SECURITY-CANDIDATE-PROMPT",
+      "version": "design-0.2.0"
+    },
+    "role_schema": {
+      "hash": "sha256:7c7506e3532fb8dd876850b6100b8283c43920d26f958e6af32d0f54267d212d",
+      "id": "SPEC-SECURITY-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:9113cf6e9c35f3f101576d75b0a7c6539ff72d373a0f2dd1f5561b22124bf6b1",
+      "id": "RUBRIC-SPEC-SECURITY-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:b7bd1457569c8e4bb8901628be22951933c4d35be6e9f4ba2fdf098742e91fa5",
+      "id": "TOOLCHAIN-SPEC-SECURITY-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:05d4a186286b6147b8b61b05ff1b8e19e1d0628de2a457b3c89b65f834ede7c6",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:108e0418d54aaf450a73519807a4226ffa3d5d771d68badc4a3cabfc3f9b8b48",
+    "profile_id": "FOCUS-SPEC-SECURITY",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/security-posture-reviewer.md",
+    "source_specification_hash": "sha256:935f6a45cb2e8543d01fd7db8462a0c0a5d80d332711d76e0a454e28549a267d"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:2a25bb3f82b9fb147a926dfdcdde2ea70c1901b848a5cc8d707e44c959636f96",
+  "manifest_id": "c5ae1929-bc85-5b6a-aeca-73d75569d47d",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git"
+  }
+}

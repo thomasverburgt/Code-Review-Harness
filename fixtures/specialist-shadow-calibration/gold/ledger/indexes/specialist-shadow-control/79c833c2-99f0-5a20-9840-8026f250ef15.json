@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "specialist-shadow-control",
+  "logical_path": "specialist-shadow/control-enable.json",
+  "object_hash": "sha256:d687ed4adc8fd892572e6a4384b22469cf599f638d19198ffa797a57b85c5bd1",
+  "record_id": "79c833c2-99f0-5a20-9840-8026f250ef15",
+  "retention_class": "specialist-human-shadow-calibration"
+}

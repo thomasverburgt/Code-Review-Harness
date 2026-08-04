@@ -1,0 +1,109 @@
+{
+  "candidate": {
+    "agent_uuid": "25c08f1d-0721-492e-9076-bc9d86e55413",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-SBOM",
+    "product_id": "CODE-HARNESS-PROJECT-001"
+  },
+  "created_at": "2026-08-03T17:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-1.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "evidence_id": "EVIDENCE-SBOM-BUILD-001",
+      "path": "pyproject.toml",
+      "purpose": "Review SPEC-SBOM evidence in build-system.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "evidence_id": "EVIDENCE-SBOM-DOCS-001",
+      "path": "pyproject.toml",
+      "purpose": "Review SPEC-SBOM evidence in project.optional-dependencies.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:0d007ca4c1063985eaecb5e52ba689f799b5256f71d95799143a534d746adfb4",
+      "id": "GX10-QWEN3-32B-SPEC-SBOM-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:d7c49adf2b3e2f78ba6f9198ca91bb80e1ae0f7da89f2fbfbd9d1e13b28bf296",
+      "id": "SPEC-SBOM-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:f516dc2cef0e30a52a564b1690ccfe68a582a9522e6d355c56d5b981d8717cd6",
+      "id": "SPEC-SBOM-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:2dddc9e1b75e5fa4a54874927704972aeafba6fce767e467afb3b2ce9c4e1e90",
+      "id": "RUBRIC-SPEC-SBOM-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:e6646585ac7aee595c14856261c2cdaf12e46affe94b702c91c17c70ffe99916",
+      "id": "TOOLCHAIN-SPEC-SBOM-STATIC-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:1eaf435a0eeb1a15c4f8c5a03db82ca40be695cad7952eaaa12c7ca3f26fffbc",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:5fef82ebbd76a43063b9d3a846bf64290f8f53cf96206e94d4d4628e6ce96514",
+    "profile_id": "FOCUS-SPEC-SBOM",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/software-composition-sbom.md",
+    "source_specification_hash": "sha256:34c9f26a28fb62e6b070251ef2cf5ccad1951c32f76e7f7405917f4abee0df4b"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:028081c9f55ba196fc5474052f0b8ba0aa895f03748ce275ccdbcbb13da322f7",
+  "manifest_id": "74b8c18b-dd58-5bb1-9149-35a92203a862",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git"
+  }
+}

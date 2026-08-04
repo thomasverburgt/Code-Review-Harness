@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "evidence-locator",
+  "logical_path": "specialist-shadow/locators/29b620b7-1139-5181-a5cf-337848e0f5af.json",
+  "object_hash": "sha256:2a099b3e0e94ae6e9867eff016abe6492cb315d6ab6075afbaeab4fd7b6fd8ac",
+  "record_id": "29b620b7-1139-5181-a5cf-337848e0f5af",
+  "retention_class": "specialist-human-shadow-calibration"
+}

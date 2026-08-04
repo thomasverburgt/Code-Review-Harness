@@ -1,0 +1,307 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "25c08f1d-0721-492e-9076-bc9d86e55413",
+    "designation": "SPEC-SBOM",
+    "product_id": "CODE-HARNESS-PROJECT-001"
+  },
+  "candidate_artifact_hash": "sha256:8380c32edd0f9daddb00ea9c5539afbb5917fbfd032a37e8a7f396e87bb0b9de",
+  "candidate_artifact_id": "e3f42366-9afb-58ed-a2f4-251a5df76b92",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:5fef82ebbd76a43063b9d3a846bf64290f8f53cf96206e94d4d4628e6ce96514",
+    "profile_id": "FOCUS-SPEC-SBOM",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T17:05:00Z",
+  "input_manifest_hash": "sha256:5eead642a320278ef7530de8e707338d173601c4d8df1d7e99cfd32c5ace710d",
+  "input_manifest_id": "74b8c18b-dd58-5bb1-9149-35a92203a862",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:3102bd688e6318f19126509a4bd58499ee088d32b0aab35659016a00be36b07c",
+          "locator_id": "c5ae3b5b-d290-5eea-9045-f953b78dc8ab",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b1476c8e3d50731e3b18681f67a0e3f553b5f5363ea0775f90bb82c82c54bc4d",
+          "locator_id": "4f4a5dbb-6161-5aff-96c6-46e3a74bccf8",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-SBOM-001",
+      "statement": "The manifest declares setuptools and python-docx components for the bounded source population."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:3102bd688e6318f19126509a4bd58499ee088d32b0aab35659016a00be36b07c",
+          "locator_id": "c5ae3b5b-d290-5eea-9045-f953b78dc8ab",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b1476c8e3d50731e3b18681f67a0e3f553b5f5363ea0775f90bb82c82c54bc4d",
+          "locator_id": "4f4a5dbb-6161-5aff-96c6-46e3a74bccf8",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-SBOM-001",
+      "statement": "The admitted evidence contains declarations but no resolved, artifact-derived, or signed SBOM inventory."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:3102bd688e6318f19126509a4bd58499ee088d32b0aab35659016a00be36b07c",
+          "locator_id": "c5ae3b5b-d290-5eea-9045-f953b78dc8ab",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b1476c8e3d50731e3b18681f67a0e3f553b5f5363ea0775f90bb82c82c54bc4d",
+          "locator_id": "4f4a5dbb-6161-5aff-96c6-46e3a74bccf8",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-SBOM-001:CAPA",
+      "statement": "Generate a content-addressed SBOM from the resolved build and retain its method and source population."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:3102bd688e6318f19126509a4bd58499ee088d32b0aab35659016a00be36b07c",
+          "locator_id": "c5ae3b5b-d290-5eea-9045-f953b78dc8ab",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SBOM-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b1476c8e3d50731e3b18681f67a0e3f553b5f5363ea0775f90bb82c82c54bc4d",
+          "locator_id": "4f4a5dbb-6161-5aff-96c6-46e3a74bccf8",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-SBOM-001",
+      "statement": "Transitive components, artifact contents, suppliers, package identifiers, and runtime inventory are unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:204a8b21cc9fd4661e03f93d04aa2910831e44f149743e6ae456588e4d001b12",
+  "packet_id": "2e9052da-f42e-5573-8c68-721710abe105",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

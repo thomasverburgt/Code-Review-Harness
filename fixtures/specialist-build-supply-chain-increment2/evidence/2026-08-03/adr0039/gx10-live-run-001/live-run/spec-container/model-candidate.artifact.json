@@ -1,0 +1,305 @@
+{
+  "artifact": {
+    "artifact_id": "9247abfa-7401-5385-90bd-c76fbddcd0aa",
+    "artifact_type": "spec-container-shadow-candidate",
+    "created_at": "2026-08-03T20:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "974072d8-ac07-583b-8603-6fb74f000c71"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-CONTAINER-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ],
+      "rationale": "The source definition does not identify a built digest, verified signature or attestation, provenance record, scan result, or declared runtime user."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 2 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-CONTAINER-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:eab4f6465f9b8d5fcb0124581ce9bec346914abe9132949bd2f31bedaf758b99",
+        "id": "GX10-QWEN3-32B-SPEC-CONTAINER-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:d241b1ef0a980f5491a4bbd82600d7146e579b0ff1b237a7cc8e00d534167759",
+        "id": "SPEC-CONTAINER-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:c9766e58a05bfe938d78f5b4ec08762cb191df34056170f980c048a3ed5474d7",
+        "id": "SPEC-CONTAINER-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:e858f02b48c1cdba032ff89c79293a048eccdd58f08eb25af78c0c813f5e7e84",
+        "id": "RUBRIC-SPEC-CONTAINER-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:5aef4fa143d28f23e701afab2398d0a6a104a9cc52e27793b13e6c89638b387c",
+        "id": "TOOLCHAIN-SPEC-CONTAINER-BUILD-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "7c1b7b63-a852-5fed-97a7-0bc3476abc9c",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:3e9030ac978ba66db597d4689926f895a8ff680ede2e4b8915c3448772dda011",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:18c476787cb9b10dd3f47439ed17955c902ebce61f31311f139fe11da694e053",
+      "profile_id": "FOCUS-SPEC-CONTAINER",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/container-image-security-reviewer.md",
+      "source_specification_hash": "sha256:1a9f46827d89d37f73c1c97201392c1475bb4b86351b10e56a9128109da5173b"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "974072d8-ac07-583b-8603-6fb74f000c71",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-CONTAINER-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-CONTAINER-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-CONTAINER-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "container_image_posture",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-CONTAINER-BASE-001",
+            "EVIDENCE-CONTAINER-COPY-001"
+          ],
+          "statement": "Built contents, registry trust, signing, provenance, vulnerability exposure, runtime identity, startup behavior, and deployment readiness are not demonstrated by the admitted Dockerfile alone.",
+          "unknown_id": "UNKNOWN-CONTAINER-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 2
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "image_and_artifact_assessment_only_no_live_cluster_release_or_product_approval",
+        "coverage": {
+          "built_images_scanned": 0,
+          "dockerfiles_reviewed": 1,
+          "image_manifests_reviewed": 0,
+          "runtime_configs_reviewed": 0,
+          "signatures_verified": 0
+        },
+        "designation": "SPEC-CONTAINER",
+        "images": [
+          {
+            "artifact_provenance": "not_observed",
+            "base_image": "scratch",
+            "composition": "staged filesystem copied into scratch image",
+            "deployment_readiness": "unable_to_determine",
+            "digest": null,
+            "evidence_refs": [
+              "EVIDENCE-CONTAINER-BASE-001",
+              "EVIDENCE-CONTAINER-COPY-001"
+            ],
+            "hardening_maturity": "not_demonstrated",
+            "image_id": "IMAGE-KEYCLOAK-CRL-AIRGAP",
+            "image_reference": null,
+            "patch_lifecycle": "not_applicable_scratch_base",
+            "registry_trust": "not_assessed",
+            "runtime_user": "not_declared",
+            "signature_or_attestation": "not_observed"
+          }
+        ],
+        "measures": {
+          "patch_currency": null,
+          "readiness_gap_count": 5,
+          "reproducibility": "not_measurable",
+          "runtime_assumption_coverage": null,
+          "signed_image_rate": null,
+          "supported_base_image_rate": null
+        },
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-CONTAINER-BASE-001",
+              "EVIDENCE-CONTAINER-COPY-001"
+            ],
+            "missing_evidence": [
+              "built image digest",
+              "signature and provenance",
+              "scan result",
+              "runtime configuration"
+            ],
+            "statement": "Built contents, registry trust, signing, provenance, vulnerability exposure, runtime identity, startup behavior, and deployment readiness are not demonstrated by the admitted Dockerfile alone.",
+            "unknown_id": "UNKNOWN-CONTAINER-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain the built image digest, provenance, signature verification, composition scan, and runtime security-context evidence for this image.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Gate image promotion on immutable identity, verified provenance, scan retention, and least-privilege runtime declarations.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ],
+      "finding_id": "FINDING-CONTAINER-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The source definition does not identify a built digest, verified signature or attestation, provenance record, scan result, or declared runtime user."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "b7eb144e-eae5-4f91-9789-b606ba2afc95",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-CONTAINER",
+    "display_name": "Container and Image Security Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-CONTAINER-BASE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:68d294b60ad036736ed6a8074d438f16adef6c805e51c813ed81b1a722f771b4",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:scripts/keycloak-crl-airgap/Dockerfile"
+    },
+    {
+      "evidence_id": "EVIDENCE-CONTAINER-COPY-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:68d294b60ad036736ed6a8074d438f16adef6c805e51c813ed81b1a722f771b4",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:scripts/keycloak-crl-airgap/Dockerfile"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:0af8813a5d94154ba1c82d1b35f183bd112b343b3081ae33b672a9f2ea3f1d30",
+    "output_hash": "sha256:4624c541e886f4ce6cac1f9b5efcaf1b1cd2747c414385d4de955dd579a5f023",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-CONTAINER",
+    "limitations": [
+      "Built contents, registry trust, signing, provenance, vulnerability exposure, runtime identity, startup behavior, and deployment readiness are not demonstrated by the admitted Dockerfile alone.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic container_image_posture projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ],
+      "fact": "The admitted container definition uses a scratch base and copies a staged filesystem into the image.",
+      "observation_id": "OBS-CONTAINER-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "scripts/keycloak-crl-airgap/Dockerfile"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

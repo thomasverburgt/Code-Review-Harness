@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "research_evidence_only_no_authority_or_product_approval",
+  "coverage": {
+    "external_sources_reviewed": 1,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-RESEARCH",
+  "domain_records": [
+    {
+      "assessment_state": "observed_positive_control",
+      "effectiveness": "not_assessed",
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "evidence_tier": "external_source",
+      "record_id": "RECORD-RESEARCH-001",
+      "subject": "repository license"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "missing_evidence": [
+        "claim-specific source mapping",
+        "currency rationale",
+        "independent corroboration"
+      ],
+      "statement": "Claim-specific authority, bias, currentness, completeness, and corroboration remain unknown; no network research was performed.",
+      "unknown_id": "UNKNOWN-RESEARCH-001"
+    }
+  ]
+}

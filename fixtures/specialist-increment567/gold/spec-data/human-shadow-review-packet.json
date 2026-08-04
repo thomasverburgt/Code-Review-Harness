@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "b7a03aff-6262-407f-b4ce-2eadec82508d",
+    "designation": "SPEC-DATA",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:6c591e16d86b06f5ad15bf9316ce79136148a42d1232ff5f7583fc3377e5dcff",
+  "candidate_artifact_id": "108eb8f2-95d1-530e-8b04-be581fec1420",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:aa08f45fc17d6340d57a73287e8a7a157746937475b8b4b127f53460ab29b72e",
+    "profile_id": "FOCUS-SPEC-DATA",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:5085a1c092427d2c33ed9e2aa1716e2f86cc17990a868d3d69a2455ab01292aa",
+  "input_manifest_id": "edba463f-fddb-5c7a-931b-743f5ceda130",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DATA-BACKUP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 28,
+          "line_fingerprint": "sha256:c6e7368d4cfc0a2e2e2214379d80f48cb1724315eb91b2cf1db972fd8b7c6d25",
+          "line_start": 28,
+          "locator_hash": "sha256:aeb89b263b4110fc56bd2dcc67b5b267a6d0d8ced0c8ec0c3ea84ff8c4d32414",
+          "locator_id": "d7186bc0-9c29-5597-a48a-142403765aa2",
+          "locator_state": "source_located",
+          "path": "src/velero/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/velero/values/values.yaml line 28.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  backupStorageLocation:",
+          "symbol_or_section": "Velero backup storage configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-DATA-001",
+      "statement": "The admitted Velero configuration declares a backup-storage location section."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DATA-BACKUP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 28,
+          "line_fingerprint": "sha256:c6e7368d4cfc0a2e2e2214379d80f48cb1724315eb91b2cf1db972fd8b7c6d25",
+          "line_start": 28,
+          "locator_hash": "sha256:aeb89b263b4110fc56bd2dcc67b5b267a6d0d8ced0c8ec0c3ea84ff8c4d32414",
+          "locator_id": "d7186bc0-9c29-5597-a48a-142403765aa2",
+          "locator_state": "source_located",
+          "path": "src/velero/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/velero/values/values.yaml line 28.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  backupStorageLocation:",
+          "symbol_or_section": "Velero backup storage configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-DATA-001",
+      "statement": "The configuration does not identify data ownership, classification, lineage, retention, recovery objectives, or successful restore evidence."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DATA-BACKUP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 28,
+          "line_fingerprint": "sha256:c6e7368d4cfc0a2e2e2214379d80f48cb1724315eb91b2cf1db972fd8b7c6d25",
+          "line_start": 28,
+          "locator_hash": "sha256:aeb89b263b4110fc56bd2dcc67b5b267a6d0d8ced0c8ec0c3ea84ff8c4d32414",
+          "locator_id": "d7186bc0-9c29-5597-a48a-142403765aa2",
+          "locator_state": "source_located",
+          "path": "src/velero/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/velero/values/values.yaml line 28.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  backupStorageLocation:",
+          "symbol_or_section": "Velero backup storage configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-DATA-001:CAPA",
+      "statement": "Retain a data inventory, ownership and lineage records, retention rules, recovery objectives, and restore-test results."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DATA-BACKUP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 28,
+          "line_fingerprint": "sha256:c6e7368d4cfc0a2e2e2214379d80f48cb1724315eb91b2cf1db972fd8b7c6d25",
+          "line_start": 28,
+          "locator_hash": "sha256:aeb89b263b4110fc56bd2dcc67b5b267a6d0d8ced0c8ec0c3ea84ff8c4d32414",
+          "locator_id": "d7186bc0-9c29-5597-a48a-142403765aa2",
+          "locator_state": "source_located",
+          "path": "src/velero/values/values.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/velero/values/values.yaml line 28.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "  backupStorageLocation:",
+          "symbol_or_section": "Velero backup storage configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-DATA-001",
+      "statement": "Data population, semantics, lineage, retention, access, loss tolerance, and recovery effectiveness remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:35243d80e6827ff744fb638662ebffbcb3e5f12e5c8c39e0e5e48d62d3da1ce3",
+  "packet_id": "a9629c1a-66e0-5a60-bfe7-b8373ea114bf",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

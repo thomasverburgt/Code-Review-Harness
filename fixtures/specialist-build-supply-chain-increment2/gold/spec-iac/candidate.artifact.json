@@ -1,0 +1,326 @@
+{
+  "artifact": {
+    "artifact_id": "0692175c-57df-59be-a5e7-ee6cc28f8c09",
+    "artifact_type": "spec-iac-shadow-candidate",
+    "created_at": "2026-08-03T20:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "346c6fbd-e9ed-54a3-842c-9674a0cdbf0a"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-IAC-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-IAC-MODULE-001",
+        "EVIDENCE-IAC-BACKEND-001",
+        "EVIDENCE-IAC-VERSION-001"
+      ],
+      "rationale": "No plan, apply, state safeguard verification, drift result, policy result, idempotency test, failure recovery, or rollback evidence is admitted."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 2 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 3,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 3,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-IAC-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:818b3f3b8a28c0460868f67f0c5a4cc23ccfcf9c69b3e9360995641ff563c819",
+        "id": "GX10-QWEN3-32B-SPEC-IAC-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:e53baf22c28a88f1d1491cd24c797695a291f468d60ee496e1f17976ab5b2dad",
+        "id": "SPEC-IAC-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:047bbb90af78210918dde49d8f3428793c89eab3902d374c06710652ec773a00",
+        "id": "SPEC-IAC-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:e4dcd608da3f6aaac0dc47ac67c6418e8ac890450c43e8f2a8ac3dd0aef60b19",
+        "id": "RUBRIC-SPEC-IAC-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:67c8f0791bb69f8763ef544e8ee4a74b5f41abac7d9378dd61d00cbf2ce0a0ec",
+        "id": "TOOLCHAIN-SPEC-IAC-BUILD-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "58759438-026c-5008-ad14-7be67ecd5921",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:d553050149402f4edc0cdfd46fc240641f19a245ac49ce11147ee1a737b2bd16",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:92d3da0ca7cbf32f6c2daa8db7bdab0e3acaeb0221b73253d849290b74ff8da0",
+      "profile_id": "FOCUS-SPEC-IAC",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/infrastructure-as-code-reviewer.md",
+      "source_specification_hash": "sha256:ac0f713b2010476b5dac953afe4b34d106af22596b8d9203647eee087aef637c"
+    },
+    "input_manifest_id": "346c6fbd-e9ed-54a3-842c-9674a0cdbf0a",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-IAC-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-IAC-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-IAC-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "infrastructure_desired_state",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-IAC-MODULE-001",
+            "EVIDENCE-IAC-BACKEND-001",
+            "EVIDENCE-IAC-VERSION-001"
+          ],
+          "statement": "Resource coverage, ownership, backend locking and encryption, observed state, policy conformance, drift, idempotency, failure behavior, recovery, and blast radius remain unknown.",
+          "unknown_id": "UNKNOWN-IAC-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 3
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "desired_state_assessment_only_no_runtime_health_deployment_or_product_approval",
+        "coverage": {
+          "applies_reviewed": 0,
+          "drift_checks_reviewed": 0,
+          "iac_files_reviewed": 2,
+          "modules_reviewed": 1,
+          "plans_reviewed": 0,
+          "rollback_tests_reviewed": 0
+        },
+        "designation": "SPEC-IAC",
+        "measures": {
+          "drift_detection_readiness": "not_measurable",
+          "idempotency_confidence": null,
+          "managed_resource_coverage": null,
+          "ownership_clarity": null,
+          "partial_deployment_recovery_coverage": null,
+          "policy_conformance": null
+        },
+        "modules": [
+          {
+            "change_blast_radius_prediction": "not_assessed",
+            "dependency_order": "implicit",
+            "desired_state": "declared",
+            "evidence_refs": [
+              "EVIDENCE-IAC-MODULE-001"
+            ],
+            "expected_state": "partial",
+            "idempotency": "not_assessed",
+            "infrastructure_layer_owner": null,
+            "module": "generate_kms",
+            "module_id": "IAC-EKS-KMS",
+            "module_maturity": "not_declared",
+            "observed_state": "not_observed",
+            "partial_deployment_failure_mode": "not_assessed",
+            "policy_inheritance": "not_assessed",
+            "recovery_consideration": "not_observed"
+          }
+        ],
+        "state_management": {
+          "access_control": "not_observed",
+          "backend": "remote",
+          "encryption": "not_observed",
+          "evidence_refs": [
+            "EVIDENCE-IAC-BACKEND-001"
+          ],
+          "locking": "not_observed"
+        },
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-IAC-MODULE-001",
+              "EVIDENCE-IAC-BACKEND-001",
+              "EVIDENCE-IAC-VERSION-001"
+            ],
+            "missing_evidence": [
+              "plans and applies",
+              "state safeguards",
+              "policy and drift results",
+              "failure and recovery tests"
+            ],
+            "statement": "Resource coverage, ownership, backend locking and encryption, observed state, policy conformance, drift, idempotency, failure behavior, recovery, and blast radius remain unknown.",
+            "unknown_id": "UNKNOWN-IAC-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain immutable module provenance plus redacted backend-control, plan, policy, apply, drift, idempotency, failure, and recovery evidence.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Require content-addressed plans, policy results, protected remote state, drift checks, and tested recovery before infrastructure change approval.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-IAC-MODULE-001",
+        "EVIDENCE-IAC-BACKEND-001",
+        "EVIDENCE-IAC-VERSION-001"
+      ],
+      "finding_id": "FINDING-IAC-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "No plan, apply, state safeguard verification, drift result, policy result, idempotency test, failure recovery, or rollback evidence is admitted."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "09c72dd8-48c0-4a3b-8f48-9adcbe18df94",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-IAC",
+    "display_name": "Infrastructure-as-Code Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-IAC-MODULE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:6645013085794585353406bb41480c0ac7ac18dddd1d60984dfb831ec5aa784f",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:.github/test-infra/aws/eks/main.tf"
+    },
+    {
+      "evidence_id": "EVIDENCE-IAC-BACKEND-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:758fd3a64791ca409cd88e19129af3942fd4220bb590f995a126c5592825f275",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:.github/test-infra/aws/eks/versions.tf"
+    },
+    {
+      "evidence_id": "EVIDENCE-IAC-VERSION-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:758fd3a64791ca409cd88e19129af3942fd4220bb590f995a126c5592825f275",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:.github/test-infra/aws/eks/versions.tf"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:55b966365d6687a42c6ac9c089ba08e125930db149928e766e804f34576f24e8",
+    "output_hash": "sha256:dd67154d86c45e687bcbb547b09dc0aa5714422892fd0869f74257ba0fd3ca21",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-IAC",
+    "limitations": [
+      "Resource coverage, ownership, backend locking and encryption, observed state, policy conformance, drift, idempotency, failure behavior, recovery, and blast radius remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic infrastructure_desired_state projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-IAC-MODULE-001",
+        "EVIDENCE-IAC-BACKEND-001",
+        "EVIDENCE-IAC-VERSION-001"
+      ],
+      "fact": "The admitted EKS IaC declares a local KMS module, an S3 backend, and a constrained AWS provider version.",
+      "observation_id": "OBS-IAC-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      ".github/test-infra/aws/eks/main.tf",
+      ".github/test-infra/aws/eks/versions.tf"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

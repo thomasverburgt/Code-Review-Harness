@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-34-deterministic-reference",
+    "evidence_id": "EVIDENCE-K8S-PLATFORM-NETPOL-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 160,
+    "line_fingerprint": "sha256:582ccc2779a156a42f702868639d2b81e579d2c35685499f3a3f718fb9f5b0ff",
+    "line_start": 160,
+    "locator_hash": "sha256:f444b79eb5a60d0e578975969189651301bf844a6240366bcfa2dfc23d938ee8",
+    "locator_id": "d138f085-28b7-50bb-b197-9ed78ed9e96b",
+    "locator_state": "source_located",
+    "path": ".github/test-infra/aws/eks/cluster.tf",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect .github/test-infra/aws/eks/cluster.tf line 160.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "        enableNetworkPolicy = \"true\"",
+    "source_type": "iac",
+    "symbol_or_section": "EKS VPC CNI configuration"
+  }
+]

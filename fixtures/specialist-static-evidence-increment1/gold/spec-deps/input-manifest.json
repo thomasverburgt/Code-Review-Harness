@@ -1,0 +1,109 @@
+{
+  "candidate": {
+    "agent_uuid": "7e7d7710-885a-47c6-af0f-339ed9dad525",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-DEPS",
+    "product_id": "CODE-HARNESS-PROJECT-001"
+  },
+  "created_at": "2026-08-03T17:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-1.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "evidence_id": "EVIDENCE-DEPS-BUILD-001",
+      "path": "pyproject.toml",
+      "purpose": "Review SPEC-DEPS evidence in build-system.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "evidence_id": "EVIDENCE-DEPS-DOCS-001",
+      "path": "pyproject.toml",
+      "purpose": "Review SPEC-DEPS evidence in project.optional-dependencies.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:5464763ee7f6ce5e28cbcf373b5b1cd54d312e98cd1cbdb4b76c2776ae62dfd0",
+      "id": "GX10-QWEN3-32B-SPEC-DEPS-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:a204c46239f4282508bb3eba01ca7b0d8b8bfd598fa0319c276c88e7fae20401",
+      "id": "SPEC-DEPS-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:346c6bf8f4a2a2c0235a024bd1482bbe031d0455136089e9f2d3d90b848c69ca",
+      "id": "SPEC-DEPS-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:3dbab424119f7ef7a4e48e996801251cae7a416a7179acac120404af3e38762e",
+      "id": "RUBRIC-SPEC-DEPS-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:681a7a0457994ffd40e472df12ba714af3804e6db1fdd95461f660a3b8f06afa",
+      "id": "TOOLCHAIN-SPEC-DEPS-STATIC-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:68c246f5d2ea539e5ddc46db1df0f5761cedf4755ec03eee03c73b54cc371d02",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:930cb00d463df5ac1e37978e75d50c029d2477575e732d3c97a7aabef0d1a655",
+    "profile_id": "FOCUS-SPEC-DEPS",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/dependency-reviewer.md",
+    "source_specification_hash": "sha256:caf790b51d02e878504b4b8eb1b16cb8f1d4d57c1420050c6545f6d75559d91d"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:9f7955ccc6b66caf780b708bf3a56a5ffd0549109e30e9afaee70cc179841f1d",
+  "manifest_id": "a0b12d51-539c-5ad5-aa6c-9cb21d769f85",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git"
+  }
+}

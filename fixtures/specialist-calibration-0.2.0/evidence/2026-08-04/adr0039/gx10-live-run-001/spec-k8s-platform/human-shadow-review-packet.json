@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "01596885-15c9-4846-8233-450939791c35",
+    "designation": "SPEC-K8S-PLATFORM",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:8df605e51615cec647fb734b04d0826663b568312d25e3ad734d63fd21f99af9",
+  "candidate_artifact_id": "a57dd7c4-9b3c-5077-bc61-a67445ae2669",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:bf2a7d96cc643aea8cc6f9c6720f3bc48683bdd4ab018d4b794ba3ad8dd77983",
+    "profile_id": "FOCUS-SPEC-K8S-PLATFORM",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T22:05:00Z",
+  "input_manifest_hash": "sha256:d4947cc63f81387307900edc6d33647780cdca7c77a3b8af5a7e68ac3d2d2930",
+  "input_manifest_id": "09167b34-7e71-59b1-adf3-87bb418b6d96",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-PLATFORM-NETPOL-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 160,
+          "line_fingerprint": "sha256:582ccc2779a156a42f702868639d2b81e579d2c35685499f3a3f718fb9f5b0ff",
+          "line_start": 160,
+          "locator_hash": "sha256:f444b79eb5a60d0e578975969189651301bf844a6240366bcfa2dfc23d938ee8",
+          "locator_id": "d138f085-28b7-50bb-b197-9ed78ed9e96b",
+          "locator_state": "source_located",
+          "path": ".github/test-infra/aws/eks/cluster.tf",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect .github/test-infra/aws/eks/cluster.tf line 160.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        enableNetworkPolicy = \"true\"",
+          "symbol_or_section": "EKS VPC CNI configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-K8S-PLATFORM-001",
+      "statement": "The admitted EKS desired state enables the VPC CNI network-policy option."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-PLATFORM-NETPOL-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 160,
+          "line_fingerprint": "sha256:582ccc2779a156a42f702868639d2b81e579d2c35685499f3a3f718fb9f5b0ff",
+          "line_start": 160,
+          "locator_hash": "sha256:f444b79eb5a60d0e578975969189651301bf844a6240366bcfa2dfc23d938ee8",
+          "locator_id": "d138f085-28b7-50bb-b197-9ed78ed9e96b",
+          "locator_state": "source_located",
+          "path": ".github/test-infra/aws/eks/cluster.tf",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect .github/test-infra/aws/eks/cluster.tf line 160.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        enableNetworkPolicy = \"true\"",
+          "symbol_or_section": "EKS VPC CNI configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-K8S-PLATFORM-001",
+      "statement": "No live cluster state, policy inventory, enforcement test, tenant boundary test, control-plane observation, or failure evidence is admitted."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-PLATFORM-NETPOL-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 160,
+          "line_fingerprint": "sha256:582ccc2779a156a42f702868639d2b81e579d2c35685499f3a3f718fb9f5b0ff",
+          "line_start": 160,
+          "locator_hash": "sha256:f444b79eb5a60d0e578975969189651301bf844a6240366bcfa2dfc23d938ee8",
+          "locator_id": "d138f085-28b7-50bb-b197-9ed78ed9e96b",
+          "locator_state": "source_located",
+          "path": ".github/test-infra/aws/eks/cluster.tf",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect .github/test-infra/aws/eks/cluster.tf line 160.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        enableNetworkPolicy = \"true\"",
+          "symbol_or_section": "EKS VPC CNI configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-K8S-PLATFORM-001:CAPA",
+      "statement": "Retain live configuration and negative/positive enforcement tests for the exact cluster revision."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-PLATFORM-NETPOL-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 160,
+          "line_fingerprint": "sha256:582ccc2779a156a42f702868639d2b81e579d2c35685499f3a3f718fb9f5b0ff",
+          "line_start": 160,
+          "locator_hash": "sha256:f444b79eb5a60d0e578975969189651301bf844a6240366bcfa2dfc23d938ee8",
+          "locator_id": "d138f085-28b7-50bb-b197-9ed78ed9e96b",
+          "locator_state": "source_located",
+          "path": ".github/test-infra/aws/eks/cluster.tf",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect .github/test-infra/aws/eks/cluster.tf line 160.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        enableNetworkPolicy = \"true\"",
+          "symbol_or_section": "EKS VPC CNI configuration"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-K8S-PLATFORM-001",
+      "statement": "Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:7dd1b460b748bd34e17cbb8db95fc617675fb1af077b96edf9b89f742b0e9dbb",
+  "packet_id": "8c6026de-e6d9-5157-855b-893d6c05530b",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

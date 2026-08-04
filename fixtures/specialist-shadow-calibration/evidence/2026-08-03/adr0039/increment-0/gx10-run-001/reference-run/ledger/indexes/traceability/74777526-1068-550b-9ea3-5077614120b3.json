@@ -1,0 +1,19 @@
+{
+  "artifact_id": "74777526-1068-550b-9ea3-5077614120b3",
+  "artifact_type": "specialist-dependency-shadow-candidate",
+  "children": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "input_refs": [
+    "EVIDENCE-DEPS-BUILD-001",
+    "EVIDENCE-DEPS-DOCS-001"
+  ],
+  "lifecycle_state": "complete",
+  "object_hash": "sha256:1614caf969d897164307daa56d5e10fd2dfdb2f678e3ed2cc304136616a2af1e",
+  "parents": [
+    "3bf87306-6e8e-5e55-ad88-8c53db6128d4"
+  ],
+  "peers": [],
+  "producer_designation": "SPEC-DEPS"
+}

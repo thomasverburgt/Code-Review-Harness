@@ -1,0 +1,26 @@
+{
+  "action": "enable_calibration",
+  "authority_effect": "candidate_calibration_control_only",
+  "authority_source": "ADR-0039 Increment 6 project-owner authorization",
+  "control_hash": "sha256:0e3fa7704ff4dc8a7a7ea532e7bbf182d73b7ea0fe7982805bd9e8121d4a7cc9",
+  "control_id": "a1515251-8671-5817-b8fd-d6fa92bc2164",
+  "control_version": "1.0.0",
+  "decided_at": "2026-08-03T23:00:00Z",
+  "decided_by": {
+    "authority_name": "thomasverburgt",
+    "authority_role": "project_owner"
+  },
+  "designation": "SPEC-FMECA",
+  "effects": {
+    "a100_production_authorized": false,
+    "candidate_discovery_enabled": true,
+    "deployment_authorized": false,
+    "dispatch_enabled": true,
+    "packet_export_enabled": true,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:0a467478fd0dd0a85ec6cbea5008118b9ece423509e1546cb5e4fbe171e86a41",
+  "manifest_id": "a28fcd23-b269-5dbb-8761-1989b253640b"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://code-review-harness/schemas/specialist-qualified-adjudication.schema.json",
+  "title":"Qualified Specialist Human Review Adjudication",
+  "type":"object","additionalProperties":false,
+  "required":["adjudication_id","adjudication_version","completed_at","designation","packet_binding","response_bindings","adjudicator","item_adjudications","overall_disposition","gold_eligibility","decision_authority","authority_effect","lifecycle","adjudication_hash"],
+  "properties":{
+    "adjudication_id":{"type":"string","format":"uuid"},"adjudication_version":{"const":"1.0.0"},"completed_at":{"type":"string","format":"date-time"},"designation":{"pattern":"^SPEC-[A-Z0-9-]+$"},
+    "packet_binding":{"$ref":"#/$defs/hashBinding"},"response_bindings":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/hashBinding"}},
+    "adjudicator":{"type":"object","additionalProperties":false,"required":["adjudicator_id","authority_role","domain_qualifications","conflict_of_interest"],"properties":{"adjudicator_id":{"type":"string","minLength":1},"authority_role":{"const":"qualified_subject_matter_expert"},"domain_qualifications":{"type":"array","minItems":1,"items":{"type":"string","minLength":1}},"conflict_of_interest":{"type":["string","null"]}}},
+    "item_adjudications":{"type":"array","minItems":1,"items":{"type":"object","additionalProperties":false,"required":["item_id","final_disposition","rationale","evidence_sufficient","gold_eligible","negative_eligible","corrective_action"],"properties":{"item_id":{"type":"string","minLength":1},"final_disposition":{"enum":["supported","partially_supported","unsupported","duplicate","outside_specialist_scope","unable_to_determine"]},"rationale":{"type":"string","minLength":1},"evidence_sufficient":{"type":"boolean"},"gold_eligible":{"type":"boolean"},"negative_eligible":{"type":"boolean"},"corrective_action":{"type":["string","null"]}}}},
+    "overall_disposition":{"enum":["semantically_faithful","revision_required","more_evidence_required","retained_only"]},"gold_eligibility":{"enum":["eligible","not_eligible","partial"]},
+    "decision_authority":{"const":"human"},"authority_effect":{"const":"calibration_adjudication_only"},
+    "lifecycle":{"type":"object","additionalProperties":false,"required":["comparison_only","scheduled","product_fan_in_eligible","report_eligible","deployment_authorized","a100_production_authorized"],"properties":{"comparison_only":{"const":true},"scheduled":{"const":false},"product_fan_in_eligible":{"const":false},"report_eligible":{"const":false},"deployment_authorized":{"const":false},"a100_production_authorized":{"const":false}}},
+    "adjudication_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs":{"hashBinding":{"type":"object","additionalProperties":false,"required":["record_id","record_hash"],"properties":{"record_id":{"type":"string","minLength":1},"record_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}}}}
+}

@@ -1,0 +1,145 @@
+{
+  "$id": "https://code-review-harness/schemas/spec-diagram-role.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authority_boundary": {
+      "const": "design_model_assessment_only_no_implementation_or_product_approval"
+    },
+    "coverage": {
+      "additionalProperties": false,
+      "properties": {
+        "external_sources_reviewed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "records_reviewed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "runtime_records_reviewed": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "tests_reviewed": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "records_reviewed",
+        "tests_reviewed",
+        "runtime_records_reviewed",
+        "external_sources_reviewed"
+      ],
+      "type": "object"
+    },
+    "designation": {
+      "const": "SPEC-DIAGRAM"
+    },
+    "domain_records": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assessment_state": {
+            "enum": [
+              "observed_positive_control",
+              "bounded_concern",
+              "insufficient_evidence"
+            ]
+          },
+          "effectiveness": {
+            "enum": [
+              "demonstrated",
+              "configured_not_demonstrated",
+              "not_assessed"
+            ]
+          },
+          "evidence_refs": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "evidence_tier": {
+            "enum": [
+              "configuration",
+              "design_model",
+              "source_contract",
+              "test",
+              "runtime",
+              "external_source",
+              "retained_candidate"
+            ]
+          },
+          "record_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "subject": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "record_id",
+          "subject",
+          "assessment_state",
+          "evidence_tier",
+          "effectiveness",
+          "evidence_refs"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "unknowns": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence_refs": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "missing_evidence": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "unknown_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "unknown_id",
+          "statement",
+          "missing_evidence",
+          "evidence_refs"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "designation",
+    "domain_records",
+    "coverage",
+    "unknowns",
+    "authority_boundary"
+  ],
+  "title": "SPEC-DIAGRAM Candidate Role Extension",
+  "type": "object"
+}

@@ -1,0 +1,34 @@
+{
+  "a100_production_authorized": false,
+  "candidates": [
+    {
+      "artifact_id": "67e63e3e-8bd9-59e0-b625-095f9b2c799d",
+      "designation": "SPEC-DEPS",
+      "item_count": 4,
+      "manifest_id": "a0b12d51-539c-5ad5-aa6c-9cb21d769f85",
+      "packet_id": "2d8e10d1-ba1a-51a3-9750-c36ba607bad5",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "0eec8535-d850-5d55-ac0a-cd668fbf9e0b",
+      "designation": "SPEC-SBOM",
+      "item_count": 4,
+      "manifest_id": "74b8c18b-dd58-5bb1-9149-35a92203a862",
+      "packet_id": "b30642b5-2479-5f6f-b07c-1deedac9c37a",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "325ef9ff-27dc-536d-b602-a328f6b87016",
+      "designation": "SPEC-LINT",
+      "item_count": 4,
+      "manifest_id": "ebe39cd7-411f-5444-8a29-a19a104c5dbd",
+      "packet_id": "3286b4d6-9ff7-559f-8863-116648b3904e",
+      "reviewability": "ready_for_human_shadow_review"
+    }
+  ],
+  "deployment_authorized": false,
+  "increment": 1,
+  "product_fan_in_eligible": false,
+  "scheduled": false,
+  "state": "packets_ready_for_non_authoritative_human_review"
+}

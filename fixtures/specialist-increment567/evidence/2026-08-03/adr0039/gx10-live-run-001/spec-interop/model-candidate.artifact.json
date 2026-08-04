@@ -1,0 +1,276 @@
+{
+  "artifact": {
+    "artifact_id": "e6dd9e4d-8f99-5d54-a9c6-3e5a0b271b7f",
+    "artifact_type": "spec-interop-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "278d2613-91f5-5531-845f-9d41d7254f73"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-INTEROP-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "rationale": "A declared interface contract does not demonstrate producer-consumer compatibility, version negotiation, or live integration behavior."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 5 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-INTEROP-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:4272f6411ad53777d1251ca2f053c27e7af4d0ba0f560b5806c29cfec09e724f",
+        "id": "GX10-QWEN3-32B-SPEC-INTEROP-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:c88b1510e0a875ac3853b66996ddee0c142765d9411bb22cd308ad8457910213",
+        "id": "SPEC-INTEROP-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:483a9408997d6d604d1d939952283d4286e76c90e5fcecb48538770dfa7b6e0c",
+        "id": "SPEC-INTEROP-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:4677a093686ea9f82abbecc02852ae99c993013cab97fe87dc13253e1a2aeb78",
+        "id": "RUBRIC-SPEC-INTEROP-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:a50d103c4b5af595fce5b2373984293a1d2de8918273cf28541ed26ef4dfb0fb",
+        "id": "TOOLCHAIN-SPEC-INTEROP-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "c421b6f1-c75b-527b-ac83-3dd16f7be012",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:aa212807fb0f942a8b36e43a6608751752c654117481288e10af9c2d3d3fb02c",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:e6ba2c179cd7a30407d09af28ef8de34b7f412e22da15598ded5ae2552229613",
+      "profile_id": "FOCUS-SPEC-INTEROP",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/interoperability-integration-reviewer.md",
+      "source_specification_hash": "sha256:38aba76ca8d61f545f1383bdf3cde3b6f43323efda4c9cd40db926fe8c2778f6"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "278d2613-91f5-5531-845f-9d41d7254f73",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-INTEROP-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-INTEROP-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-INTEROP-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "interface_compatibility",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-INTEROP-UDP-001"
+          ],
+          "statement": "Consumer population, version compatibility, error semantics, and runtime integration remain unknown.",
+          "unknown_id": "UNKNOWN-INTEROP-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "interface_assessment_only_no_product_or_release_approval",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-INTEROP",
+        "domain_records": [
+          {
+            "assessment_state": "observed_positive_control",
+            "effectiveness": "configured_not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-INTEROP-UDP-001"
+            ],
+            "evidence_tier": "source_contract",
+            "record_id": "RECORD-INTEROP-001",
+            "subject": "Expose protocol contract"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-INTEROP-UDP-001"
+            ],
+            "missing_evidence": [
+              "consumer contracts",
+              "compatibility tests",
+              "runtime integration traces"
+            ],
+            "statement": "Consumer population, version compatibility, error semantics, and runtime integration remain unknown.",
+            "unknown_id": "UNKNOWN-INTEROP-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain versioned producer and consumer contracts plus compatibility and failure-path tests.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Gate interface changes on contract compatibility, negotiated-version, and negative integration evidence.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "finding_id": "FINDING-INTEROP-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "A declared interface contract does not demonstrate producer-consumer compatibility, version negotiation, or live integration behavior."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "da0bc1ae-8e6f-4730-b29c-19ec6544cb7f",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-INTEROP",
+    "display_name": "Interoperability and Integration Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-INTEROP-UDP-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:f4ba8a9ea016ce84b42843eca7bcc0d501c5ee7734387f9fd7adba781a06dbd4",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/pepr/operator/crd/sources/package/v1alpha1.ts"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:27febf598a3f12f4cbeff8b38870463b44593b8069537465c33223a3f7ec637e",
+    "output_hash": "sha256:9fb30aa98f590771b03412f4f5a878a1ecf10a6239bfd7267e948dd5d7b236b8",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-INTEROP",
+    "limitations": [
+      "Consumer population, version compatibility, error semantics, and runtime integration remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic interface_compatibility projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "fact": "The admitted source contract distinguishes UDP routing, incompatible hostname fields, and its trust-control boundary.",
+      "observation_id": "OBS-INTEROP-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/pepr/operator/crd/sources/package/v1alpha1.ts"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "a100_production_authorized": false,
+  "artifact_hash": "sha256:e5283e8d205f8f5269e407a3cb6f79236377de76f739c4bda108ee20d8f29b67",
+  "artifact_id": "e7ff96ff-02e5-5d63-828b-cee2553e0182",
+  "candidate_status": "candidate",
+  "deployment_authorized": false,
+  "designation": "SPEC-FMECA",
+  "human_review_deferred": true,
+  "packet_hash": "sha256:245a6a067e5e47b216a8426af2019a06c9bd195b52683a0c703543ce92f42069",
+  "packet_id": "ccda73a3-626d-5299-b921-5da4cc5d5f9e",
+  "passed": true,
+  "product_fan_in_eligible": false,
+  "raw_response_hash": "sha256:65803c950b76a5cb1c98be4b31ec5a03983243c81cb53d587dd84d097f2ffbf2",
+  "report_eligible": false,
+  "scheduled": false,
+  "semantic_acceptance": "human_review_deferred",
+  "status": "complete",
+  "suite": "adr0039-increment567-live-calibration",
+  "test_platform": "GX-10 / approved DGX Spark-equivalent",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 5480,
+    "output_tokens": 284
+  }
+}

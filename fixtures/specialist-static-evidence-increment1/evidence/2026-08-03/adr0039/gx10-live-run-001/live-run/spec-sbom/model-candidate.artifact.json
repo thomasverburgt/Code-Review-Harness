@@ -1,0 +1,341 @@
+{
+  "artifact": {
+    "artifact_id": "e3f42366-9afb-58ed-a2f4-251a5df76b92",
+    "artifact_type": "spec-sbom-shadow-candidate",
+    "created_at": "2026-08-03T17:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "74b8c18b-dd58-5bb1-9149-35a92203a862"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-SBOM-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ],
+      "rationale": "The admitted evidence contains declarations but no resolved, artifact-derived, or signed SBOM inventory."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 1 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-SBOM-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:0d007ca4c1063985eaecb5e52ba689f799b5256f71d95799143a534d746adfb4",
+        "id": "GX10-QWEN3-32B-SPEC-SBOM-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:d7c49adf2b3e2f78ba6f9198ca91bb80e1ae0f7da89f2fbfbd9d1e13b28bf296",
+        "id": "SPEC-SBOM-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:f516dc2cef0e30a52a564b1690ccfe68a582a9522e6d355c56d5b981d8717cd6",
+        "id": "SPEC-SBOM-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:2dddc9e1b75e5fa4a54874927704972aeafba6fce767e467afb3b2ce9c4e1e90",
+        "id": "RUBRIC-SPEC-SBOM-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:e6646585ac7aee595c14856261c2cdaf12e46affe94b702c91c17c70ffe99916",
+        "id": "TOOLCHAIN-SPEC-SBOM-STATIC-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "d8d42b85-eb35-5d49-8881-96b7955a3dd3",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:1eaf435a0eeb1a15c4f8c5a03db82ca40be695cad7952eaaa12c7ca3f26fffbc",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:5fef82ebbd76a43063b9d3a846bf64290f8f53cf96206e94d4d4628e6ce96514",
+      "profile_id": "FOCUS-SPEC-SBOM",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/software-composition-sbom.md",
+      "source_specification_hash": "sha256:34c9f26a28fb62e6b070251ef2cf5ccad1951c32f76e7f7405917f4abee0df4b"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "74b8c18b-dd58-5bb1-9149-35a92203a862",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-SBOM-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-SBOM-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-SBOM-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "software_inventory",
+        "revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-SBOM-BUILD-001",
+            "EVIDENCE-SBOM-DOCS-001"
+          ],
+          "statement": "Transitive components, artifact contents, suppliers, package identifiers, and runtime inventory are unknown.",
+          "unknown_id": "UNKNOWN-SBOM-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 2
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "CODE-HARNESS-PROJECT-001",
+      "role": {
+        "authority_boundary": "inventory_evidence_only_no_vulnerability_release_or_governance_decision",
+        "changes": [],
+        "components": [
+          {
+            "build_system": "setuptools.build_meta",
+            "component_criticality": "not_assessed",
+            "component_id": "COMP-SETUPTOOLS",
+            "component_name": "setuptools",
+            "dependency_confidence": 1.0,
+            "evidence_refs": [
+              "EVIDENCE-SBOM-BUILD-001"
+            ],
+            "first_seen": null,
+            "inventory_completeness": "partial",
+            "inventory_drift": "not_comparable",
+            "last_seen": null,
+            "license": null,
+            "lineage": "direct",
+            "package_manager": "Python build-system declaration",
+            "purl_or_cpe": null,
+            "source_of_inventory": "pyproject.toml:build-system.requires",
+            "supplier": null,
+            "version": null
+          },
+          {
+            "build_system": null,
+            "component_criticality": "not_assessed",
+            "component_id": "COMP-PYTHON-DOCX",
+            "component_name": "python-docx",
+            "dependency_confidence": 1.0,
+            "evidence_refs": [
+              "EVIDENCE-SBOM-DOCS-001"
+            ],
+            "first_seen": null,
+            "inventory_completeness": "partial",
+            "inventory_drift": "not_comparable",
+            "last_seen": null,
+            "license": null,
+            "lineage": "direct",
+            "package_manager": "Python project declaration",
+            "purl_or_cpe": null,
+            "source_of_inventory": "pyproject.toml:project.optional-dependencies.docs",
+            "supplier": null,
+            "version": "1.2.0"
+          }
+        ],
+        "coverage": {
+          "artifacts_scanned": 0,
+          "declared_components": 2,
+          "identified_components": 2,
+          "resolved_components": 0,
+          "runtime_components_reviewed": 0
+        },
+        "designation": "SPEC-SBOM",
+        "generation_method": {
+          "evidence_refs": [
+            "EVIDENCE-SBOM-BUILD-001",
+            "EVIDENCE-SBOM-DOCS-001"
+          ],
+          "format": "internal_projection",
+          "generated_at": "2026-08-03T17:05:00Z",
+          "method": "declared_manifest_projection",
+          "source_population": [
+            "pyproject.toml"
+          ],
+          "tool": "harness deterministic manifest projector",
+          "tool_version": "0.1.0"
+        },
+        "measures": {
+          "critical_component_coverage": null,
+          "identification_confidence": 1.0,
+          "inventory_coverage": null,
+          "sbom_completeness": null,
+          "unexplained_drift_count": null
+        },
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-SBOM-BUILD-001",
+              "EVIDENCE-SBOM-DOCS-001"
+            ],
+            "missing_evidence": [
+              "resolved SBOM",
+              "artifact scan"
+            ],
+            "statement": "Transitive components, artifact contents, suppliers, package identifiers, and runtime inventory are unknown.",
+            "unknown_id": "UNKNOWN-SBOM-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Generate a content-addressed SBOM from the resolved build and retain its method and source population.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Compare SBOM identity and component drift for each candidate artifact.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the review against the newly admitted immutable evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ],
+      "finding_id": "FINDING-SBOM-001",
+      "impact": "The bounded specialist question cannot be fully answered from the admitted population.",
+      "root_cause": "missing_or_incomplete_declared_evidence",
+      "severity": "low",
+      "statement": "The admitted evidence contains declarations but no resolved, artifact-derived, or signed SBOM inventory."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "25c08f1d-0721-492e-9076-bc9d86e55413",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-SBOM",
+    "display_name": "Software Composition and SBOM Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-SBOM-BUILD-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:pyproject.toml"
+    },
+    {
+      "evidence_id": "EVIDENCE-SBOM-DOCS-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:pyproject.toml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:028081c9f55ba196fc5474052f0b8ba0aa895f03748ce275ccdbcbb13da322f7",
+    "output_hash": "sha256:cc79bf10f1713521250b964669c6fe924f0998cd2f683205710d675df7732ba5",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-SBOM",
+    "limitations": [
+      "Transitive components, artifact contents, suppliers, package identifiers, and runtime inventory are unknown.",
+      "No external network evidence was admitted.",
+      "Human review remains non-authoritative calibration evidence."
+    ],
+    "method": "bounded deterministic software_inventory projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ],
+      "fact": "The manifest declares setuptools and python-docx components for the bounded source population.",
+      "observation_id": "OBS-SBOM-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "pyproject.toml"
+    ],
+    "product_id": "CODE-HARNESS-PROJECT-001",
+    "source_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+  }
+}

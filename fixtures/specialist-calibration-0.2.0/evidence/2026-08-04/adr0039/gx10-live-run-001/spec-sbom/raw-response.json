@@ -1,0 +1,91 @@
+{
+  "designation": "SPEC-SBOM",
+  "generation_method": {
+    "method": "declared_manifest_projection",
+    "tool": "harness deterministic manifest projector",
+    "tool_version": "0.1.0",
+    "format": "internal_projection",
+    "generated_at": "2026-08-03T17:05:00Z",
+    "source_population": [
+      "pyproject.toml"
+    ],
+    "evidence_refs": [
+      "EVIDENCE-SBOM-BUILD-001",
+      "EVIDENCE-SBOM-DOCS-001"
+    ]
+  },
+  "components": [
+    {
+      "component_id": "COMP-SETUPTOOLS",
+      "component_name": "setuptools",
+      "version": null,
+      "purl_or_cpe": null,
+      "supplier": null,
+      "license": null,
+      "component_criticality": "not_assessed",
+      "source_of_inventory": "pyproject.toml:build-system.requires",
+      "build_system": "setuptools.build_meta",
+      "package_manager": "Python build-system declaration",
+      "first_seen": null,
+      "last_seen": null,
+      "lineage": "direct",
+      "inventory_completeness": "partial",
+      "inventory_drift": "not_comparable",
+      "dependency_confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001"
+      ]
+    },
+    {
+      "component_id": "COMP-PYTHON-DOCX",
+      "component_name": "python-docx",
+      "version": "1.2.0",
+      "purl_or_cpe": null,
+      "supplier": null,
+      "license": null,
+      "component_criticality": "not_assessed",
+      "source_of_inventory": "pyproject.toml:project.optional-dependencies.docs",
+      "build_system": null,
+      "package_manager": "Python project declaration",
+      "first_seen": null,
+      "last_seen": null,
+      "lineage": "direct",
+      "inventory_completeness": "partial",
+      "inventory_drift": "not_comparable",
+      "dependency_confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-SBOM-DOCS-001"
+      ]
+    }
+  ],
+  "changes": [],
+  "coverage": {
+    "declared_components": 2,
+    "identified_components": 2,
+    "resolved_components": 0,
+    "artifacts_scanned": 0,
+    "runtime_components_reviewed": 0
+  },
+  "measures": {
+    "inventory_coverage": null,
+    "identification_confidence": 1.0,
+    "sbom_completeness": null,
+    "unexplained_drift_count": null,
+    "critical_component_coverage": null
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-SBOM-001",
+      "statement": "Transitive components, artifact contents, suppliers, package identifiers, and runtime inventory are unknown.",
+      "missing_evidence": [
+        "resolved SBOM",
+        "artifact scan"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-SBOM-BUILD-001",
+        "EVIDENCE-SBOM-DOCS-001"
+      ]
+    }
+  ],
+  "authority_boundary": "inventory_evidence_only_no_vulnerability_release_or_governance_decision"
+}

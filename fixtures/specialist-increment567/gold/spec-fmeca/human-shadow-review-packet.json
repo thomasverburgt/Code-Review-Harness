@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "de17f99f-0ac6-4482-8ec4-3fa9f03ce4ed",
+    "designation": "SPEC-FMECA",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:fe05143fe247ae2611936b59c945986dd29a6b56c4674cb377219a857d2acdc3",
+  "candidate_artifact_id": "bf0895b4-bb96-50d9-bdf6-1cae2e33419b",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:b00d628ba80d0e8b46a3a5938df8f87a4cb8e1b3bd53c0ead263c9c3127ef143",
+    "profile_id": "FOCUS-SPEC-FMECA",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:0a467478fd0dd0a85ec6cbea5008118b9ece423509e1546cb5e4fbe171e86a41",
+  "input_manifest_id": "a28fcd23-b269-5dbb-8761-1989b253640b",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-FMECA-BACKOFF-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 68,
+          "line_fingerprint": "sha256:63d7c8dea44d4fae56dd795f085a84cd4c560e20ade3f34261f6673a0fea5173",
+          "line_start": 68,
+          "locator_hash": "sha256:a3596d405986c1320186b303ef39eb7fc15e54a812eee1eeb915546d8aea2354",
+          "locator_id": "9875b308-37ee-597a-b06e-e93c601e13f3",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/reconcilers/package-reconciler.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/reconcilers/package-reconciler.ts line 68.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const backOffSeconds = 3 ** pkg.status.retryAttempt;",
+          "symbol_or_section": "package reconciliation backoff"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-FMECA-001",
+      "statement": "The admitted reconciler source calculates exponential retry backoff from the retry-attempt count."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-FMECA-BACKOFF-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 68,
+          "line_fingerprint": "sha256:63d7c8dea44d4fae56dd795f085a84cd4c560e20ade3f34261f6673a0fea5173",
+          "line_start": 68,
+          "locator_hash": "sha256:a3596d405986c1320186b303ef39eb7fc15e54a812eee1eeb915546d8aea2354",
+          "locator_id": "9875b308-37ee-597a-b06e-e93c601e13f3",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/reconcilers/package-reconciler.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/reconcilers/package-reconciler.ts line 68.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const backOffSeconds = 3 ** pkg.status.retryAttempt;",
+          "symbol_or_section": "package reconciliation backoff"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-FMECA-001",
+      "statement": "A retry mechanism is visible in source, but failure modes, propagation, retry bounds, recovery effectiveness, and mission effects are not demonstrated."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-FMECA-BACKOFF-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 68,
+          "line_fingerprint": "sha256:63d7c8dea44d4fae56dd795f085a84cd4c560e20ade3f34261f6673a0fea5173",
+          "line_start": 68,
+          "locator_hash": "sha256:a3596d405986c1320186b303ef39eb7fc15e54a812eee1eeb915546d8aea2354",
+          "locator_id": "9875b308-37ee-597a-b06e-e93c601e13f3",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/reconcilers/package-reconciler.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/reconcilers/package-reconciler.ts line 68.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const backOffSeconds = 3 ** pkg.status.retryAttempt;",
+          "symbol_or_section": "package reconciliation backoff"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-FMECA-001:CAPA",
+      "statement": "Retain failure-mode analysis, bounded retry tests, fault injection, recovery measurements, and mission-effect mappings."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-FMECA-BACKOFF-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 68,
+          "line_fingerprint": "sha256:63d7c8dea44d4fae56dd795f085a84cd4c560e20ade3f34261f6673a0fea5173",
+          "line_start": 68,
+          "locator_hash": "sha256:a3596d405986c1320186b303ef39eb7fc15e54a812eee1eeb915546d8aea2354",
+          "locator_id": "9875b308-37ee-597a-b06e-e93c601e13f3",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/reconcilers/package-reconciler.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/reconcilers/package-reconciler.ts line 68.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const backOffSeconds = 3 ** pkg.status.retryAttempt;",
+          "symbol_or_section": "package reconciliation backoff"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-FMECA-001",
+      "statement": "Failure likelihood, propagation, retry exhaustion, recovery time, control effectiveness, and mission effect remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:273fdd2bc54ec5069944b139afb0b7066962eab33da07521afb16d230f1a8aa4",
+  "packet_id": "c072fc69-a80e-5e27-b24a-a5123fd71d91",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

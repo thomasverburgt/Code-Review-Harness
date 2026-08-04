@@ -1,0 +1,7 @@
+{
+  "rubric_id": "RUBRIC-SPEC-SBOM-CANDIDATE",
+  "version": "0.1.0",
+  "status": "candidate-comparison-only",
+  "authoritative_question": "Is the software inventory trustworthy and complete?",
+  "required_controls": ["exact_identity_and_focus_binding", "declared_evidence_population_only", "generation_method_and_source_population", "manifest_resolved_artifact_runtime_separation", "component_identity_and_lineage_evidence", "honest_supplier_license_purl_unknowns", "change_state_preservation", "no_vulnerability_release_or_governance_authority", "exact_human_review_locators", "unscheduled_downstream_ineligible"]
+}

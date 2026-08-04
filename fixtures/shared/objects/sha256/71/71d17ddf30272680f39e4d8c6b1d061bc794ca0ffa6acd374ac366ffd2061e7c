@@ -1,0 +1,242 @@
+{
+  "artifact": {
+    "artifact_id": "74777526-1068-550b-9ea3-5077614120b3",
+    "artifact_type": "specialist-dependency-shadow-candidate",
+    "created_at": "2026-08-03T15:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "3bf87306-6e8e-5e55-ad88-8c53db6128d4"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-DEPS-001",
+      "confidence": 0.94,
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001"
+      ],
+      "rationale": "An unconstrained build dependency can resolve differently across clean build environments."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "deterministic Increment 0 reference fixture",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 0
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-DEPS-001",
+      "question": "Should the project define and test a setuptools compatibility range?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_id": "f781aa8c-8644-5cf3-8345-f4b94cc4e5f9",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:68c246f5d2ea539e5ddc46db1df0f5761cedf4755ec03eee03c73b54cc371d02",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:930cb00d463df5ac1e37978e75d50c029d2477575e732d3c97a7aabef0d1a655",
+      "profile_id": "FOCUS-SPEC-DEPS",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/dependency-reviewer.md",
+      "source_specification_hash": "sha256:caf790b51d02e878504b4b8eb1b16cb8f1d4d57c1420050c6545f6d75559d91d"
+    },
+    "input_manifest_id": "3bf87306-6e8e-5e55-ad88-8c53db6128d4",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "increment-0.1.0",
+    "rubric_version": "increment-0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "increment-0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-DEPS-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "declared_entries_reviewed_fraction": 1.0,
+        "transitive_graph_reviewed": false
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-DEPS-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-DEPS-001"
+        }
+      ],
+      "domain_patterns": [
+        {
+          "pattern_id": "PATTERN-DEPS-001"
+        }
+      ],
+      "domain_scope": {
+        "domain": "dependency_health",
+        "revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-DEPS-BUILD-001"
+          ],
+          "statement": "Transitive dependency health is unknown because no resolved dependency graph was admitted.",
+          "unknown_id": "UNKNOWN-DEPS-001"
+        }
+      ],
+      "eligible_population": {
+        "dependency_entries": 2,
+        "files": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "CODE-HARNESS-PROJECT-001",
+      "role": {
+        "dependency_observations": [
+          "OBS-DEPS-001",
+          "FINDING-DEPS-001",
+          "PATTERN-DEPS-001"
+        ],
+        "designation": "SPEC-DEPS",
+        "focus_profile_id": "FOCUS-SPEC-DEPS"
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Declare a tested setuptools compatibility range in build-system.requires.",
+        "implementation_level": "product",
+        "owner_role": "build-maintainer",
+        "preventive_action": "Exercise clean-build reproducibility in CI when dependency constraints change.",
+        "target_horizon": "before candidate admission",
+        "validation_method": "Rebuild in a clean environment and compare the resolved build tool version and artifact hash."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001"
+      ],
+      "finding_id": "FINDING-DEPS-001",
+      "impact": "Clean builds may select different supported setuptools releases over time.",
+      "root_cause": "dependency_constraint_not_declared",
+      "severity": "low",
+      "statement": "The setuptools build-system dependency is declared without a version constraint."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "7e7d7710-885a-47c6-af0f-339ed9dad525",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-DEPS",
+    "display_name": "Dependency Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-DEPS-BUILD-001",
+      "freshness": "immutable reference fixture",
+      "hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:pyproject.toml"
+    },
+    {
+      "evidence_id": "EVIDENCE-DEPS-DOCS-001",
+      "freshness": "immutable reference fixture",
+      "hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:pyproject.toml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:7d5d61c57d5c2f9d1e3a2efed5596f999e41b33e2d0014f5f33e1fb42e4caa90",
+    "output_hash": "sha256:cda23e783f82d10a213147235569ed3f28b9519adedb6cbb9df332f31c7595fd",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-DEPS",
+    "limitations": [
+      "The fixture does not resolve the transitive dependency graph.",
+      "The fixture does not establish vulnerability, license, or runtime supportability status.",
+      "Human shadow dispositions are calibration evidence and do not establish correctness."
+    ],
+    "method": "Bounded deterministic inspection of declared dependency entries"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001"
+      ],
+      "fact": "The build system declares setuptools as a required build dependency.",
+      "observation_id": "OBS-DEPS-001"
+    }
+  ],
+  "patterns": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "pattern_id": "PATTERN-DEPS-001",
+      "statement": "The optional documentation dependency uses an exact python-docx version pin."
+    }
+  ],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "pyproject.toml"
+    ],
+    "product_id": "CODE-HARNESS-PROJECT-001",
+    "source_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+  }
+}

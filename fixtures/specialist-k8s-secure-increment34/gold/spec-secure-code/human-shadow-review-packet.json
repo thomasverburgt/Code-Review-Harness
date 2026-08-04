@@ -1,0 +1,307 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "7497bb23-2340-41d1-9c73-3f0ecd580ab4",
+    "designation": "SPEC-SECURE-CODE",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:4bf8fd1ba71153dd511b28f8902974c64bd58774d3f78ee3253507d17304e788",
+  "candidate_artifact_id": "d8cfa8e8-0833-5837-b10c-b4c9fec42c89",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:6da2409210b680359d7406da9e91f88467e55222e7ff575187749be2d71b085c",
+    "profile_id": "FOCUS-SPEC-SECURE-CODE",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T22:05:00Z",
+  "input_manifest_hash": "sha256:284b2c51648d679bae720de9528214184af90f8a660ef5ee45535d8173f1ded2",
+  "input_manifest_id": "62ec4251-5d1f-5b6b-aca6-77bd27cde301",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-SANITIZE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 74,
+          "line_fingerprint": "sha256:eb73812513e238d9aaabdd47c97882c8e409a27a7250cbcfa96f6a7ed1700af8",
+          "line_start": 74,
+          "locator_hash": "sha256:90f5c6db16d236d7c4a651608737544ab5936d6a19dd9326f75411e21178c054",
+          "locator_id": "892af218-22f7-51f1-b9c3-ad5663457ae1",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 74.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const sanitizedName = sanitizeResourceName(customGateway.name);",
+          "symbol_or_section": "custom gateway input sanitization"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 88,
+          "line_fingerprint": "sha256:3118d7ec2b1dd700a6f1a40577dfb7f43d57540e2965ea0d64b39aea04e9fd01",
+          "line_start": 88,
+          "locator_hash": "sha256:486d81cba5b0038a24f0119658d878ef96611e6eae1f9f3802439378480f0fcc",
+          "locator_id": "836cd24f-97bc-593a-b013-26cefa6f9c29",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 88.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    if (expose.protocol === \"UDP\") {",
+          "symbol_or_section": "UDP incompatible-field validation"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-SECURE-CODE-001",
+      "statement": "The admitted validator sanitizes a custom gateway name and rejects fields incompatible with UDP exposure."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-SANITIZE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 74,
+          "line_fingerprint": "sha256:eb73812513e238d9aaabdd47c97882c8e409a27a7250cbcfa96f6a7ed1700af8",
+          "line_start": 74,
+          "locator_hash": "sha256:90f5c6db16d236d7c4a651608737544ab5936d6a19dd9326f75411e21178c054",
+          "locator_id": "892af218-22f7-51f1-b9c3-ad5663457ae1",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 74.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const sanitizedName = sanitizeResourceName(customGateway.name);",
+          "symbol_or_section": "custom gateway input sanitization"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 88,
+          "line_fingerprint": "sha256:3118d7ec2b1dd700a6f1a40577dfb7f43d57540e2965ea0d64b39aea04e9fd01",
+          "line_start": 88,
+          "locator_hash": "sha256:486d81cba5b0038a24f0119658d878ef96611e6eae1f9f3802439378480f0fcc",
+          "locator_id": "836cd24f-97bc-593a-b013-26cefa6f9c29",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 88.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    if (expose.protocol === \"UDP\") {",
+          "symbol_or_section": "UDP incompatible-field validation"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-SECURE-CODE-001",
+      "statement": "The bounded source shows positive validation controls, but their completeness, bypass resistance, error behavior, and exploitability context are not established by admitted tests or execution."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-SANITIZE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 74,
+          "line_fingerprint": "sha256:eb73812513e238d9aaabdd47c97882c8e409a27a7250cbcfa96f6a7ed1700af8",
+          "line_start": 74,
+          "locator_hash": "sha256:90f5c6db16d236d7c4a651608737544ab5936d6a19dd9326f75411e21178c054",
+          "locator_id": "892af218-22f7-51f1-b9c3-ad5663457ae1",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 74.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const sanitizedName = sanitizeResourceName(customGateway.name);",
+          "symbol_or_section": "custom gateway input sanitization"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 88,
+          "line_fingerprint": "sha256:3118d7ec2b1dd700a6f1a40577dfb7f43d57540e2965ea0d64b39aea04e9fd01",
+          "line_start": 88,
+          "locator_hash": "sha256:486d81cba5b0038a24f0119658d878ef96611e6eae1f9f3802439378480f0fcc",
+          "locator_id": "836cd24f-97bc-593a-b013-26cefa6f9c29",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 88.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    if (expose.protocol === \"UDP\") {",
+          "symbol_or_section": "UDP incompatible-field validation"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-SECURE-CODE-001:CAPA",
+      "statement": "Retain focused positive, negative, boundary, and bypass tests for the exact validator revision."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-SANITIZE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 74,
+          "line_fingerprint": "sha256:eb73812513e238d9aaabdd47c97882c8e409a27a7250cbcfa96f6a7ed1700af8",
+          "line_start": 74,
+          "locator_hash": "sha256:90f5c6db16d236d7c4a651608737544ab5936d6a19dd9326f75411e21178c054",
+          "locator_id": "892af218-22f7-51f1-b9c3-ad5663457ae1",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 74.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    const sanitizedName = sanitizeResourceName(customGateway.name);",
+          "symbol_or_section": "custom gateway input sanitization"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 88,
+          "line_fingerprint": "sha256:3118d7ec2b1dd700a6f1a40577dfb7f43d57540e2965ea0d64b39aea04e9fd01",
+          "line_start": 88,
+          "locator_hash": "sha256:486d81cba5b0038a24f0119658d878ef96611e6eae1f9f3802439378480f0fcc",
+          "locator_id": "836cd24f-97bc-593a-b013-26cefa6f9c29",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/validators/package-validator.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/validators/package-validator.ts line 88.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    if (expose.protocol === \"UDP\") {",
+          "symbol_or_section": "UDP incompatible-field validation"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-SECURE-CODE-001",
+      "statement": "Population coverage, generated-code boundaries, bypass behavior, execution-path reachability, and exploitability remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:fc20194053538ce13f24b75a4c2e1d14c50c2273b12afcaf0e2086bcd9b2b1a4",
+  "packet_id": "07b97386-3a37-5850-a7a0-00a5e7e8c5e7",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "55145271-c754-46bc-9da9-26a6d8dcddd7",
+    "designation": "SPEC-RESEARCH",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:11cd914095b7fa0bb4c02bdf5d4abd674097d5bb2ee0d88ff92d8eaf3083cf67",
+  "candidate_artifact_id": "22cef1b0-4088-59fc-9d99-b48796a60b06",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:abe2e4d74039a01bb98f62394627aaaa687303d60242b12d3969fa742d36dd71",
+    "profile_id": "FOCUS-SPEC-RESEARCH",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:5e81776b94c9aca11bbd4aa1ff03ed6de7eadc9d91355dfc8c5283131c646716",
+  "input_manifest_id": "92cfbe64-a7e0-5500-98f6-86988b6eefbe",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RESEARCH-LICENSE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 1,
+          "line_fingerprint": "sha256:78e416d3251590f62074f9da691961e4dd43a93af5138fb392644db9cf5a10a3",
+          "line_start": 1,
+          "locator_hash": "sha256:d91a91fafd0298f8368e11b907278127aabf00e1a006e7a98894d6dbca5643e1",
+          "locator_id": "e803c764-df88-59a4-850e-acc8f4926967",
+          "locator_state": "source_located",
+          "path": "LICENSE.md",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect LICENSE.md line 1.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE",
+          "symbol_or_section": "repository license"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-RESEARCH-001",
+      "statement": "The admitted immutable repository includes an attributable AGPL license record."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RESEARCH-LICENSE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 1,
+          "line_fingerprint": "sha256:78e416d3251590f62074f9da691961e4dd43a93af5138fb392644db9cf5a10a3",
+          "line_start": 1,
+          "locator_hash": "sha256:d91a91fafd0298f8368e11b907278127aabf00e1a006e7a98894d6dbca5643e1",
+          "locator_id": "e803c764-df88-59a4-850e-acc8f4926967",
+          "locator_state": "source_located",
+          "path": "LICENSE.md",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect LICENSE.md line 1.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE",
+          "symbol_or_section": "repository license"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-RESEARCH-001",
+      "statement": "License and revision establish bounded provenance, but source authority, claim-specific relevance, currentness, and corroboration still require explicit evaluation."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RESEARCH-LICENSE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 1,
+          "line_fingerprint": "sha256:78e416d3251590f62074f9da691961e4dd43a93af5138fb392644db9cf5a10a3",
+          "line_start": 1,
+          "locator_hash": "sha256:d91a91fafd0298f8368e11b907278127aabf00e1a006e7a98894d6dbca5643e1",
+          "locator_id": "e803c764-df88-59a4-850e-acc8f4926967",
+          "locator_state": "source_located",
+          "path": "LICENSE.md",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect LICENSE.md line 1.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE",
+          "symbol_or_section": "repository license"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-RESEARCH-001:CAPA",
+      "statement": "Retain claim-to-source mappings with author, license, retrieval time, revision, currency rationale, and corroboration."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-RESEARCH-LICENSE-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 1,
+          "line_fingerprint": "sha256:78e416d3251590f62074f9da691961e4dd43a93af5138fb392644db9cf5a10a3",
+          "line_start": 1,
+          "locator_hash": "sha256:d91a91fafd0298f8368e11b907278127aabf00e1a006e7a98894d6dbca5643e1",
+          "locator_id": "e803c764-df88-59a4-850e-acc8f4926967",
+          "locator_state": "source_located",
+          "path": "LICENSE.md",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect LICENSE.md line 1.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE",
+          "symbol_or_section": "repository license"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-RESEARCH-001",
+      "statement": "Claim-specific authority, bias, currentness, completeness, and corroboration remain unknown; no network research was performed."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:9f23d1e392822e39d84d0d1606e0e2d24cdca25c4f02ee22d5582407587ddfeb",
+  "packet_id": "78de5f09-a3ac-5a25-835d-9508096407db",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

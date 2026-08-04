@@ -1,0 +1,24 @@
+{
+  "a100_production_authorized": false,
+  "artifact_hash": "sha256:8e25b097a725958f784629e61a7c32bfcdf6e6e1f3ed75a15d614bef570016ad",
+  "artifact_id": "c197edcd-9710-58b2-ab75-f738b5156eac",
+  "candidate_status": "candidate",
+  "deployment_authorized": false,
+  "designation": "SPEC-DEPS",
+  "packet_hash": "sha256:cc0c8d7bf1f60e389d62b35ca2b1563443c7bfa528de7afc94abfe1681f21dbc",
+  "packet_id": "1cbcf9d3-1d0c-5648-860f-4178b209ac6a",
+  "passed": true,
+  "product_fan_in_eligible": false,
+  "raw_response_hash": "sha256:71961b875e63c737527209374a08bf7babdf4fedce2172235fa48a089ab04f72",
+  "report_eligible": false,
+  "scheduled": false,
+  "semantic_acceptance": "awaiting_human_review",
+  "status": "complete",
+  "suite": "adr0039-increment1-specialist-static-evidence-live-calibration",
+  "test_platform": "GX-10 / approved DGX Spark-equivalent",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 3131,
+    "output_tokens": 624
+  }
+}

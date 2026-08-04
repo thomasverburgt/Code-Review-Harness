@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/spec-container-role.schema.json",
+  "title": "SPEC-CONTAINER Candidate Role Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["designation", "images", "coverage", "measures", "unknowns", "authority_boundary"],
+  "properties": {
+    "designation": {"const": "SPEC-CONTAINER"},
+    "images": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["image_id", "image_reference", "digest", "base_image", "composition", "registry_trust", "signature_or_attestation", "artifact_provenance", "patch_lifecycle", "runtime_user", "hardening_maturity", "deployment_readiness", "evidence_refs"],
+      "properties": {
+        "image_id": {"type": "string", "minLength": 1},
+        "image_reference": {"type": ["string", "null"]},
+        "digest": {"type": ["string", "null"]},
+        "base_image": {"type": ["string", "null"]},
+        "composition": {"type": "string", "minLength": 1},
+        "registry_trust": {"enum": ["trusted", "untrusted", "not_assessed", "unknown"]},
+        "signature_or_attestation": {"enum": ["verified", "declared_not_verified", "not_observed", "not_assessed", "unknown"]},
+        "artifact_provenance": {"enum": ["verified", "declared_not_verified", "not_observed", "not_assessed", "unknown"]},
+        "patch_lifecycle": {"enum": ["current", "stale", "not_applicable_scratch_base", "not_assessed", "unknown"]},
+        "runtime_user": {"enum": ["non_root_declared", "root_declared", "not_declared", "not_applicable", "unknown"]},
+        "hardening_maturity": {"enum": ["demonstrated", "partially_declared", "not_demonstrated", "not_assessed", "unknown"]},
+        "deployment_readiness": {"enum": ["demonstrated", "not_demonstrated", "unable_to_determine"]},
+        "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    }},
+    "coverage": {"type": "object", "additionalProperties": false, "required": ["dockerfiles_reviewed", "image_manifests_reviewed", "built_images_scanned", "signatures_verified", "runtime_configs_reviewed"], "properties": {
+      "dockerfiles_reviewed": {"type": "integer", "minimum": 0}, "image_manifests_reviewed": {"type": "integer", "minimum": 0}, "built_images_scanned": {"type": "integer", "minimum": 0}, "signatures_verified": {"type": "integer", "minimum": 0}, "runtime_configs_reviewed": {"type": "integer", "minimum": 0}
+    }},
+    "measures": {"type": "object", "additionalProperties": false, "required": ["signed_image_rate", "supported_base_image_rate", "patch_currency", "reproducibility", "runtime_assumption_coverage", "readiness_gap_count"], "properties": {
+      "signed_image_rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "supported_base_image_rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "patch_currency": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "reproducibility": {"enum": ["demonstrated", "not_demonstrated", "not_measurable"]}, "runtime_assumption_coverage": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "readiness_gap_count": {"type": "integer", "minimum": 0}
+    }},
+    "unknowns": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/unknown"}},
+    "authority_boundary": {"const": "image_and_artifact_assessment_only_no_live_cluster_release_or_product_approval"}
+  },
+  "$defs": {"unknown": {"type": "object", "additionalProperties": false, "required": ["unknown_id", "statement", "missing_evidence", "evidence_refs"], "properties": {"unknown_id": {"type": "string", "minLength": 1}, "statement": {"type": "string", "minLength": 1}, "missing_evidence": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}}}}
+}

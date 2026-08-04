@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "298ae38a-0bd3-46f1-8074-35f3356454fc",
+    "designation": "SPEC-ARCH",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:fb6fd3cc3a4a1381ebb9020a795323fe1b724e6324519d695c69d17b78695ccf",
+  "candidate_artifact_id": "8d91cd6b-74ce-538d-8913-62338758209a",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:c649484558f82d0037890c764b9aa070cabf8121c956b645359ba0076e0f6d4f",
+    "profile_id": "FOCUS-SPEC-ARCH",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:8341b245887efb993bae04220586b6f28edfad4ae4cb653b1662b16fc8a15344",
+  "input_manifest_id": "332aedbb-a63a-5a93-9595-0f8eb1dbaec6",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-ARCH-PEPR-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-ARCH-PEPR-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 20,
+          "line_fingerprint": "sha256:1f6ff16684cd952b30945fa2ec7247e44aee9d98ada51d59c9213f91dd8baeb2",
+          "line_start": 20,
+          "locator_hash": "sha256:1ee208411f3c289d279e1e7e8f21f4d7c0403b283ba91c309ed7681bb34b0bb0",
+          "locator_id": "ccbde295-6cfc-554c-b428-9deff3e09b77",
+          "locator_state": "source_located",
+          "path": "docs/.c4/model.c4",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect docs/.c4/model.c4 line 20.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        description 'Namespace containing Pepr controller and admission pods for policy enforcement and automated integration. Pepr is a Kubernetes controller built with TypeScript that implements UDS Core security policies and automates integration with the rest of the platform via custom resources.'",
+          "symbol_or_section": "Pepr system namespace"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-ARCH-001",
+      "statement": "The admitted C4 model declares a Pepr policy and integration namespace inside the UDS Core cluster boundary."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-ARCH-PEPR-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-ARCH-PEPR-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 20,
+          "line_fingerprint": "sha256:1f6ff16684cd952b30945fa2ec7247e44aee9d98ada51d59c9213f91dd8baeb2",
+          "line_start": 20,
+          "locator_hash": "sha256:1ee208411f3c289d279e1e7e8f21f4d7c0403b283ba91c309ed7681bb34b0bb0",
+          "locator_id": "ccbde295-6cfc-554c-b428-9deff3e09b77",
+          "locator_state": "source_located",
+          "path": "docs/.c4/model.c4",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect docs/.c4/model.c4 line 20.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        description 'Namespace containing Pepr controller and admission pods for policy enforcement and automated integration. Pepr is a Kubernetes controller built with TypeScript that implements UDS Core security policies and automates integration with the rest of the platform via custom resources.'",
+          "symbol_or_section": "Pepr system namespace"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-ARCH-001",
+      "statement": "The design record communicates intended structure but does not demonstrate implemented or observed conformance."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-ARCH-PEPR-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-ARCH-PEPR-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 20,
+          "line_fingerprint": "sha256:1f6ff16684cd952b30945fa2ec7247e44aee9d98ada51d59c9213f91dd8baeb2",
+          "line_start": 20,
+          "locator_hash": "sha256:1ee208411f3c289d279e1e7e8f21f4d7c0403b283ba91c309ed7681bb34b0bb0",
+          "locator_id": "ccbde295-6cfc-554c-b428-9deff3e09b77",
+          "locator_state": "source_located",
+          "path": "docs/.c4/model.c4",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect docs/.c4/model.c4 line 20.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        description 'Namespace containing Pepr controller and admission pods for policy enforcement and automated integration. Pepr is a Kubernetes controller built with TypeScript that implements UDS Core security policies and automates integration with the rest of the platform via custom resources.'",
+          "symbol_or_section": "Pepr system namespace"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-ARCH-001:CAPA",
+      "statement": "Retain implementation mappings and observed deployment evidence linked to the design elements."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-ARCH-PEPR-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-ARCH-PEPR-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 20,
+          "line_fingerprint": "sha256:1f6ff16684cd952b30945fa2ec7247e44aee9d98ada51d59c9213f91dd8baeb2",
+          "line_start": 20,
+          "locator_hash": "sha256:1ee208411f3c289d279e1e7e8f21f4d7c0403b283ba91c309ed7681bb34b0bb0",
+          "locator_id": "ccbde295-6cfc-554c-b428-9deff3e09b77",
+          "locator_state": "source_located",
+          "path": "docs/.c4/model.c4",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect docs/.c4/model.c4 line 20.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        description 'Namespace containing Pepr controller and admission pods for policy enforcement and automated integration. Pepr is a Kubernetes controller built with TypeScript that implements UDS Core security policies and automates integration with the rest of the platform via custom resources.'",
+          "symbol_or_section": "Pepr system namespace"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-ARCH-001",
+      "statement": "Implementation conformance, runtime topology, ownership, drift, and architectural fitness remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:79be03afa227f03d80526ee6067598d064f5c8767748ed51bca0466d584767f1",
+  "packet_id": "97b4ee28-d5a4-551e-a21f-94b0f0260fa3",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

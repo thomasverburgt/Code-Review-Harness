@@ -1,0 +1,267 @@
+{
+  "artifact": {
+    "artifact_id": "3e93f022-8193-55d6-bc7a-7c8fcb49bcb9",
+    "artifact_type": "spec-secrets-shadow-candidate",
+    "created_at": "2026-08-03T22:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "941da381-5e40-5990-8881-5840ccd31512"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-SECRETS-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "rationale": "The admitted redacted evidence supports only unresolved_credential_like_value and does not establish a confirmed exposure or benign classification."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increments 3 and 4 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-SECRETS-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:5afed0353d452c210548bd20f5c66cc46088b210f3a0216edf37594b375aea47",
+        "id": "GX10-QWEN3-32B-SPEC-SECRETS-REVALIDATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:4cf984b16dcd4725bd8e9ff617817dc3e247d529802e894b28f0080efca90c3d",
+        "id": "SPEC-SECRETS-CANDIDATE-PROMPT",
+        "version": "design-0.2.0"
+      },
+      "role_schema": {
+        "hash": "sha256:74b2fe58ac9531f7f7dd84f19e14187d9ab86c901f46d446e0e6b8a3e80ea33c",
+        "id": "SPEC-SECRETS-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:96dc955d4b711ef4a98681c5733405b6acf4f745118962d00531e7113ea5aba7",
+        "id": "RUBRIC-SPEC-SECRETS-REVALIDATION",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:4ccb617a3371c1dba43e760eb1609ecb97a6cc15b85cb708212338e3404fc00d",
+        "id": "TOOLCHAIN-SPEC-SECRETS-REVALIDATION",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "0c38ba38-7640-552f-acff-44d489e5d3c1",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:04b4d4c8a8bd7e94f0cfeb431cb842337978005af545214b14d088ae3681cf25",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:867293b95177b8482eecda5ccfc962e8e9ecd3411c9e9587198d19d289139f15",
+      "profile_id": "FOCUS-SPEC-SECRETS",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/secrets-reviewer.md",
+      "source_specification_hash": "sha256:c9610bd3bc4fac7c2060eded29aefd9e6df43188cf5ccab5779449c16cb4dbba"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "941da381-5e40-5990-8881-5840ccd31512",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.2.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-SECRETS-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-SECRETS-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-SECRETS-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "secrets_revalidation",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "UDS-0001"
+          ],
+          "statement": "Secret classification, validity, ownership, age, storage policy, and blast radius remain unknown; no raw value is admitted.",
+          "unknown_id": "UNKNOWN-SECRETS-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "designation": "SPEC-SECRETS",
+        "measures": {
+          "confirmed_exposure_count": 0,
+          "eligible_coverage": 1.0,
+          "managed_secret_adoption": null,
+          "rotation_compliance": null,
+          "unresolved_detection_rate": 1.0
+        },
+        "secret_observations": [
+          {
+            "age_or_expiry": null,
+            "approved_storage_reference": null,
+            "blast_radius": {},
+            "evidence_refs": [
+              "UDS-0001"
+            ],
+            "evidence_state": "unresolved_credential_like_value",
+            "exposure_location": "docs/getting-started/local-demo/integrate-your-package.mdx:153",
+            "observation_id": "OBS-001",
+            "owner_role": null,
+            "regulatory_or_policy_impact": [],
+            "rotation_policy": null,
+            "secret_type": "credential-like value"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "A restricted qualified reviewer may classify the redacted candidate using separately authorized evidence without distributing the value.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Keep detection, classification, rotation, and exposure confirmation separate and irreversibly redact review exports.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "finding_id": "FINDING-SECRETS-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The admitted redacted evidence supports only unresolved_credential_like_value and does not establish a confirmed exposure or benign classification."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "e753f9e1-b3ff-4149-8b95-b3c073e3777f",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-SECRETS",
+    "display_name": "Secrets Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "UDS-0001",
+      "freshness": "immutable revision",
+      "hash": "sha256:ea1f7e607a6f1afd442316db9ce06f270926fa321e07b8a488de4d45684eda99",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:docs/getting-started/local-demo/integrate-your-package.mdx"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:9ef90469895b1fce6ac88e5e50f6f895c8c345d1c5375bffe4f47427d4b4d3e4",
+    "output_hash": "sha256:04f408163f3229ee0ff68f1215e3467a00b9d7985141037265facf0ed2783a43",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-SECRETS",
+    "limitations": [
+      "Secret classification, validity, ownership, age, storage policy, and blast radius remain unknown; no raw value is admitted.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic secrets_revalidation projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "fact": "The accepted retained route records one redacted credential-like detector candidate with a source path, line, and fingerprint; the matched value is omitted.",
+      "observation_id": "OBS-SECRETS-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "docs/getting-started/local-demo/integrate-your-package.mdx"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

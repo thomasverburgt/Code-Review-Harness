@@ -1,0 +1,276 @@
+{
+  "artifact": {
+    "artifact_id": "aed55ea4-4f26-5420-b1e6-4d84a48a13bb",
+    "artifact_type": "spec-obs-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "c2e5b929-0497-58b7-a7fe-e0dca408135c"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-OBS-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "rationale": "A recording-rule definition does not demonstrate scrape health, alert coverage, diagnostic usefulness, ownership, or response effectiveness."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 6 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-OBS-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:cb092dd7515d628b4038ef984df78663ed1857ddb8ca4ed712474e3042c6756e",
+        "id": "GX10-QWEN3-32B-SPEC-OBS-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:c8359b8312fe0cac7479332799752c24008e7e1d029305805fc59e65a2693be4",
+        "id": "SPEC-OBS-CANDIDATE-PROMPT",
+        "version": "design-0.2.0"
+      },
+      "role_schema": {
+        "hash": "sha256:c6e1f09c3ad4fbdddb278e02209ade96c9ab30f01b692ce3c7f349ff0adcfc88",
+        "id": "SPEC-OBS-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:998edcf26020655346dcdc143d075a65fd065e69867c743140d57ab798176782",
+        "id": "RUBRIC-SPEC-OBS-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:1b8a31c55b1cc3dd1e7b00426f9d1da96f9cc7c0a7aa17475cfc13f60cd6f3a5",
+        "id": "TOOLCHAIN-SPEC-OBS-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "34d90601-6ec8-5ac9-b62e-26166365f119",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:f9e5b302214bddd3c8eaca88e2e458f545738577ae11cc8a752ae19b74d41d74",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:f346df5b918f09f824378d9bdfced512fa8ace9bfa2a3d0ce999960208d0cf05",
+      "profile_id": "FOCUS-SPEC-OBS",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/observability-reviewer.md",
+      "source_specification_hash": "sha256:7f25d623de36100c3a5092049b8e132c0dc97f2aaf8be1d00a5fe0f5225254ec"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "c2e5b929-0497-58b7-a7fe-e0dca408135c",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.2.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-OBS-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-OBS-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-OBS-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "observability",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-OBS-RULE-001"
+          ],
+          "statement": "Signal availability, alert effectiveness, diagnostic coverage, ownership, and operational response remain unknown.",
+          "unknown_id": "UNKNOWN-OBS-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "observability_assessment_only_no_operational_or_product_approval",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-OBS",
+        "domain_records": [
+          {
+            "assessment_state": "observed_positive_control",
+            "effectiveness": "configured_not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-OBS-RULE-001"
+            ],
+            "evidence_tier": "configuration",
+            "record_id": "RECORD-OBS-001",
+            "subject": "Vector uptime recording rule"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-OBS-RULE-001"
+            ],
+            "missing_evidence": [
+              "rule evaluation results",
+              "alert and runbook evidence",
+              "incident diagnosis evidence"
+            ],
+            "statement": "Signal availability, alert effectiveness, diagnostic coverage, ownership, and operational response remain unknown.",
+            "unknown_id": "UNKNOWN-OBS-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain rule evaluation, alert routing, runbook, incident, and diagnosis evidence for the exact deployment.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Map objectives and failure modes to tested signals, alerts, ownership, and diagnostic paths.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "finding_id": "FINDING-OBS-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "A recording-rule definition does not demonstrate scrape health, alert coverage, diagnostic usefulness, ownership, or response effectiveness."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "f4633c67-d94d-440e-bb32-0f243eddafb6",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-OBS",
+    "display_name": "Observability Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-OBS-RULE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:4fa8de051bd3d6b0f2b043b20e8c451beddee1f25836fed990c7765ee49d2942",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/vector/chart/templates/uptime-recording-rules.yaml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:14ce29d4babc7f50a06f2280c033bcc920c42b51f3644c91997fb90dc67b284b",
+    "output_hash": "sha256:1e6a622edca05988bfef70024d76131b82d7cd631cf7b31234a3e967f26f283a",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-OBS",
+    "limitations": [
+      "Signal availability, alert effectiveness, diagnostic coverage, ownership, and operational response remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic observability projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "fact": "The admitted chart configures a Vector uptime recording rule.",
+      "observation_id": "OBS-OBS-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/vector/chart/templates/uptime-recording-rules.yaml"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

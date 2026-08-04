@@ -1,0 +1,184 @@
+{
+  "control_prompt": "SPEC-SECRETS design-0.2.0",
+  "manifest_version": "1.0.0",
+  "prompt_version": "design-0.2.0",
+  "prompts": {
+    "SPEC-ARCH": {
+      "focus_profile": "agents/focus-profiles/spec-arch.json",
+      "focus_profile_sha256": "sha256:c649484558f82d0037890c764b9aa070cabf8121c956b645359ba0076e0f6d4f",
+      "path": "appendices/prompt-templates/candidates/spec-arch/design-0.2.0.prompt.txt",
+      "sha256": "6f7e545992a8def4ba9b0fde23f7c300e80f6a441f7263465433f450cbf9930c",
+      "source": "agents/specialists/architecture-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-CICD": {
+      "focus_profile": "agents/focus-profiles/spec-cicd.json",
+      "focus_profile_sha256": "sha256:0627b77b073f801e984ec3beb69b3ae9febc11c250c8357694277f85a5691103",
+      "path": "appendices/prompt-templates/candidates/spec-cicd/design-0.2.0.prompt.txt",
+      "sha256": "8d57a463582de0e649cb8a13b7b9f5bd3adf6cbfbb9b440bac180f853e9c0daf",
+      "source": "agents/specialists/cicd-pipeline-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-COMMS": {
+      "focus_profile": "agents/focus-profiles/spec-comms.json",
+      "focus_profile_sha256": "sha256:a6fa5852b1475c4e856879b51da0611d8408069720847923482eaa941b7f257f",
+      "path": "appendices/prompt-templates/candidates/spec-comms/design-0.2.0.prompt.txt",
+      "sha256": "ce0372d27381e71ba21e21c9b0bbd28d911e79a1970e7c287339d782150c2372",
+      "source": "agents/specialists/workload-communication-security-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-CONTAINER": {
+      "focus_profile": "agents/focus-profiles/spec-container.json",
+      "focus_profile_sha256": "sha256:18c476787cb9b10dd3f47439ed17955c902ebce61f31311f139fe11da694e053",
+      "path": "appendices/prompt-templates/candidates/spec-container/design-0.2.0.prompt.txt",
+      "sha256": "4225c01b737cab49bb027c9cff1ab6bb15d1bb3f27697d464bf97b8d2985a679",
+      "source": "agents/specialists/container-image-security-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-DATA": {
+      "focus_profile": "agents/focus-profiles/spec-data.json",
+      "focus_profile_sha256": "sha256:aa08f45fc17d6340d57a73287e8a7a157746937475b8b4b127f53460ab29b72e",
+      "path": "appendices/prompt-templates/candidates/spec-data/design-0.2.0.prompt.txt",
+      "sha256": "96005897deb59fb0a47a427a9940a568d2aff5b75558e9fae233feaf67bc3dc5",
+      "source": "agents/specialists/data-architecture-information-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-DEPS": {
+      "focus_profile": "agents/focus-profiles/spec-deps.json",
+      "focus_profile_sha256": "sha256:930cb00d463df5ac1e37978e75d50c029d2477575e732d3c97a7aabef0d1a655",
+      "path": "appendices/prompt-templates/candidates/spec-deps/design-0.2.0.prompt.txt",
+      "sha256": "db6342219949b615ebb4085c2d58c5a6b256073f67481285edc768d130363ff4",
+      "source": "agents/specialists/dependency-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-DIAGRAM": {
+      "focus_profile": "agents/focus-profiles/spec-diagram.json",
+      "focus_profile_sha256": "sha256:83d33cf943444f6d6f0ac8b8fa2a6d8934ffa0a20049586f3c7e9a193bbfbfb3",
+      "path": "appendices/prompt-templates/candidates/spec-diagram/design-0.2.0.prompt.txt",
+      "sha256": "a2fe77a4845925bd854109d3a449dd868dad8740c799bd5a40305ca5958d0061",
+      "source": "agents/specialists/diagram-design-model-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-FMECA": {
+      "focus_profile": "agents/focus-profiles/spec-fmeca.json",
+      "focus_profile_sha256": "sha256:b00d628ba80d0e8b46a3a5938df8f87a4cb8e1b3bd53c0ead263c9c3127ef143",
+      "path": "appendices/prompt-templates/candidates/spec-fmeca/design-0.2.0.prompt.txt",
+      "sha256": "894c2f7030b8f00ed16090401a580d1c1bc4a58a5daf8aa9b650e13a1457c235",
+      "source": "agents/specialists/reliability-resilience-fmeca-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-IAC": {
+      "focus_profile": "agents/focus-profiles/spec-iac.json",
+      "focus_profile_sha256": "sha256:92d3da0ca7cbf32f6c2daa8db7bdab0e3acaeb0221b73253d849290b74ff8da0",
+      "path": "appendices/prompt-templates/candidates/spec-iac/design-0.2.0.prompt.txt",
+      "sha256": "b8d7d417e4bd55d0ae0343aaecccd349a885cbeca1b766d11e8b420e8d3ae2ae",
+      "source": "agents/specialists/infrastructure-as-code-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-INTEROP": {
+      "focus_profile": "agents/focus-profiles/spec-interop.json",
+      "focus_profile_sha256": "sha256:e6ba2c179cd7a30407d09af28ef8de34b7f412e22da15598ded5ae2552229613",
+      "path": "appendices/prompt-templates/candidates/spec-interop/design-0.2.0.prompt.txt",
+      "sha256": "91cd5e53e9472181553c1444e9f9053fe7bce27d6e4810019efc21628c060929",
+      "source": "agents/specialists/interoperability-integration-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-IO": {
+      "focus_profile": "agents/focus-profiles/spec-io.json",
+      "focus_profile_sha256": "sha256:6c2b57427d7b1937e28fdf2574e4c692eb46c0d304a1708234afd5e25b75a2bc",
+      "path": "appendices/prompt-templates/candidates/spec-io/design-0.2.0.prompt.txt",
+      "sha256": "c19a813738351bfef0f1223ccf0b19ab7fee5b2bc2a0442a476b8206cec114f1",
+      "source": "agents/specialists/io-resource-interaction-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-K8S-PLATFORM": {
+      "focus_profile": "agents/focus-profiles/spec-k8s-platform.json",
+      "focus_profile_sha256": "sha256:bf2a7d96cc643aea8cc6f9c6720f3bc48683bdd4ab018d4b794ba3ad8dd77983",
+      "path": "appendices/prompt-templates/candidates/spec-k8s-platform/design-0.2.0.prompt.txt",
+      "sha256": "743ad12ddc46064a6c97714fd10951d0238ec54c0ece08ff193e879a8a453359",
+      "source": "agents/specialists/kubernetes-platform-security-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-K8S-WORKLOAD": {
+      "focus_profile": "agents/focus-profiles/spec-k8s-workload.json",
+      "focus_profile_sha256": "sha256:2396756e9686ec322d9072c1b0b2d09fb33996cc5c90f61ab3883a0fcb37089b",
+      "path": "appendices/prompt-templates/candidates/spec-k8s-workload/design-0.2.0.prompt.txt",
+      "sha256": "423c117fac83c7ccd45acc7f3af85882d4ba9e30f1d3e7f446a1dee5c1a5caa9",
+      "source": "agents/specialists/kubernetes-workload-security-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-LINT": {
+      "focus_profile": "agents/focus-profiles/spec-lint.json",
+      "focus_profile_sha256": "sha256:f232d343158fd3c8f52f2ee66a89204cad5a9cf11e89a1b33d6cfa8b34aaae48",
+      "path": "appendices/prompt-templates/candidates/spec-lint/design-0.2.0.prompt.txt",
+      "sha256": "0e7c6c0c27bf01efaf3a4102d4fd9bb8ede5748ecc149647e873b8d2ebcf33c6",
+      "source": "agents/specialists/linter-code-quality-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-OBS": {
+      "focus_profile": "agents/focus-profiles/spec-obs.json",
+      "focus_profile_sha256": "sha256:f346df5b918f09f824378d9bdfced512fa8ace9bfa2a3d0ce999960208d0cf05",
+      "path": "appendices/prompt-templates/candidates/spec-obs/design-0.2.0.prompt.txt",
+      "sha256": "c8359b8312fe0cac7479332799752c24008e7e1d029305805fc59e65a2693be4",
+      "source": "agents/specialists/observability-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-PERF": {
+      "focus_profile": "agents/focus-profiles/spec-perf.json",
+      "focus_profile_sha256": "sha256:8ba05f28ffdfe20515d5f4f88e266d2916b598e7830818c52e14569b90ff36e0",
+      "path": "appendices/prompt-templates/candidates/spec-perf/design-0.2.0.prompt.txt",
+      "sha256": "b64139aa526fcb86e7c3946524b7ff1843a232bc00065073f1ddf01aafe209a5",
+      "source": "agents/specialists/performance-scalability-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-RESEARCH": {
+      "focus_profile": "agents/focus-profiles/spec-research.json",
+      "focus_profile_sha256": "sha256:abe2e4d74039a01bb98f62394627aaaa687303d60242b12d3969fa742d36dd71",
+      "path": "appendices/prompt-templates/candidates/spec-research/design-0.2.0.prompt.txt",
+      "sha256": "d3d3d4dada99a65cefe7cdc0cf4c22171ebe0cde643c40aee142221c6201d3d8",
+      "source": "agents/specialists/research-product-store-agent.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-RISK": {
+      "focus_profile": "agents/focus-profiles/spec-risk.json",
+      "focus_profile_sha256": "sha256:8c6fd98a063afbd45f4496fee291eb5a7eb1e8559fb0a3c7e22b0fbd4827105b",
+      "path": "appendices/prompt-templates/candidates/spec-risk/design-0.2.0.prompt.txt",
+      "sha256": "91064c6e71b2b9d5bea223133c738cfd6857a6507e066044fed8a78193247aad",
+      "source": "agents/specialists/product-risk-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-SBOM": {
+      "focus_profile": "agents/focus-profiles/spec-sbom.json",
+      "focus_profile_sha256": "sha256:5fef82ebbd76a43063b9d3a846bf64290f8f53cf96206e94d4d4628e6ce96514",
+      "path": "appendices/prompt-templates/candidates/spec-sbom/design-0.2.0.prompt.txt",
+      "sha256": "97e5cc3a678ff76d89ecd8ecba0b84fa8c52990d94139fdefa5e569846368ae2",
+      "source": "agents/specialists/software-composition-sbom.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-SECRETS": {
+      "focus_profile": "agents/focus-profiles/spec-secrets.json",
+      "focus_profile_sha256": "sha256:867293b95177b8482eecda5ccfc962e8e9ecd3411c9e9587198d19d289139f15",
+      "path": "appendices/prompt-templates/candidates/spec-secrets/design-0.2.0.prompt.txt",
+      "sha256": "4cf984b16dcd4725bd8e9ff617817dc3e247d529802e894b28f0080efca90c3d",
+      "source": "agents/specialists/secrets-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-SECURE-CODE": {
+      "focus_profile": "agents/focus-profiles/spec-secure-code.json",
+      "focus_profile_sha256": "sha256:6da2409210b680359d7406da9e91f88467e55222e7ff575187749be2d71b085c",
+      "path": "appendices/prompt-templates/candidates/spec-secure-code/design-0.2.0.prompt.txt",
+      "sha256": "b7691a1cc20b4fc45f6f9cec6f0cd52c4f1b9ca1b05976bd462e7e5b73205c16",
+      "source": "agents/specialists/secure-coding-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    },
+    "SPEC-SECURITY": {
+      "focus_profile": "agents/focus-profiles/spec-security.json",
+      "focus_profile_sha256": "sha256:108e0418d54aaf450a73519807a4226ffa3d5d771d68badc4a3cabfc3f9b8b48",
+      "path": "appendices/prompt-templates/candidates/spec-security/design-0.2.0.prompt.txt",
+      "sha256": "6a123d837172e506204cb5403222d266c8464bdac819c93433176acf8870405d",
+      "source": "agents/specialists/security-posture-reviewer.md",
+      "status": "calibrated-gx10-2026-08-04"
+    }
+  },
+  "status": "calibrated-gx10-2026-08-04"
+}

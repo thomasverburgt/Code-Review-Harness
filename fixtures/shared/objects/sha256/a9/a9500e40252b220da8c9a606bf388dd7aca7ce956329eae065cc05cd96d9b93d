@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "UDS-0001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 153,
+    "line_fingerprint": "sha256:de65acebd8b19e82cfa4ca22a1ed62efda0ada536ff512c461802bbedc67a064",
+    "line_start": 153,
+    "locator_hash": "sha256:84181ffc0402710821910f346664c63728377f6b359469db6df0f86ec792d977",
+    "locator_id": "489066aa-3e96-5e2a-a640-f2a9aa39f7f5",
+    "locator_state": "source_located",
+    "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect docs/getting-started/local-demo/integrate-your-package.mdx line 153.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "matched value omitted",
+    "source_type": "external_record",
+    "symbol_or_section": "redacted credential-like detector candidate"
+  }
+]

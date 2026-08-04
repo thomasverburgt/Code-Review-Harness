@@ -1,0 +1,22 @@
+{
+  "designation": "SPEC-RESEARCH",
+  "network_access": "denied",
+  "repository_mutation": "denied",
+  "runtime_access": "denied",
+  "secret_access": "denied",
+  "status": "candidate-comparison-only",
+  "toolchain_id": "TOOLCHAIN-SPEC-RESEARCH-EVIDENCE",
+  "tools": [
+    {
+      "access": "declared-read-only-evidence",
+      "mutating": false,
+      "tool_id": "immutable-admitted-evidence-reader"
+    },
+    {
+      "access": "admitted-evidence-only",
+      "mutating": false,
+      "tool_id": "evidence-locator"
+    }
+  ],
+  "version": "0.1.0"
+}

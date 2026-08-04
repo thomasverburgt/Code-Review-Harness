@@ -6,3 +6,4 @@ This directory contains the master architecture-package burn-down and will hold 
 - [Today: Executable Vertical Slice](today-executable-vertical-slice.md)
 - [Post-Vertical-Slice Implementation Sequence](post-vertical-slice-sequence.md)
 - [Repository Organization Sprint Plan](repository-organization-sprints.md)
+- [Specialist Agent Buildout Increment Plan](specialist-agent-buildout-increments.md)

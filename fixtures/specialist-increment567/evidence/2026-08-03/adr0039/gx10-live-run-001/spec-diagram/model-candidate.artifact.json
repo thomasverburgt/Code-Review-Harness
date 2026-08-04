@@ -1,0 +1,276 @@
+{
+  "artifact": {
+    "artifact_id": "1116d7dc-e11e-5479-94e1-e91e223987cd",
+    "artifact_type": "spec-diagram-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "477224c1-d482-53c0-8539-75aa57e422fa"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-DIAGRAM-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-DIAGRAM-PURPOSE-001"
+      ],
+      "rationale": "The design-model purpose is declared, but completeness, freshness, consistency, and implementation conformance are not demonstrated."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 5 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-DIAGRAM-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:d9fecb68059b6cee332802db130cada69eb9d8d249f6eb6dec21b230cc68d72f",
+        "id": "GX10-QWEN3-32B-SPEC-DIAGRAM-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:52f3b695788744abf6d5fc9e52feb5ac4030fedcbc3a19c4f0101d98190328e2",
+        "id": "SPEC-DIAGRAM-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:e996e214dc49c5ccd7b0e9451b9b42516afa0a3ba328c2b6a8d95f927319152e",
+        "id": "SPEC-DIAGRAM-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:af42a8a0b5ac71a9022eb81c228411f7b1019e64a7859809d6ef5c35dc6c4989",
+        "id": "RUBRIC-SPEC-DIAGRAM-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:3fca631eea2054a4f8bd71c1719813e52c2d8ff2d8c1ff1669873ea4bb805507",
+        "id": "TOOLCHAIN-SPEC-DIAGRAM-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "7c9f1257-6f98-5d1d-a8e9-4e10ab3d6209",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:5daa3e7a2042f8b03d0228cbb352472b48e9a1894d1bef10f70b216ef0273d5e",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:83d33cf943444f6d6f0ac8b8fa2a6d8934ffa0a20049586f3c7e9a193bbfbfb3",
+      "profile_id": "FOCUS-SPEC-DIAGRAM",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/diagram-design-model-reviewer.md",
+      "source_specification_hash": "sha256:560517d7ed45948f1c6758ffd33a75819a58ac694411f3cb0b4d038e4c330b03"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "477224c1-d482-53c0-8539-75aa57e422fa",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-DIAGRAM-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-DIAGRAM-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-DIAGRAM-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "design_model_consistency",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-DIAGRAM-PURPOSE-001"
+          ],
+          "statement": "Model completeness, renderability, freshness, and implementation correspondence remain unknown; absence or drift alone is not an implementation defect.",
+          "unknown_id": "UNKNOWN-DIAGRAM-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "design_model_assessment_only_no_implementation_or_product_approval",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-DIAGRAM",
+        "domain_records": [
+          {
+            "assessment_state": "observed_positive_control",
+            "effectiveness": "not_assessed",
+            "evidence_refs": [
+              "EVIDENCE-DIAGRAM-PURPOSE-001"
+            ],
+            "evidence_tier": "design_model",
+            "record_id": "RECORD-DIAGRAM-001",
+            "subject": "C4 model purpose"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-DIAGRAM-PURPOSE-001"
+            ],
+            "missing_evidence": [
+              "rendered model validation",
+              "freshness evidence",
+              "implementation mapping"
+            ],
+            "statement": "Model completeness, renderability, freshness, and implementation correspondence remain unknown; absence or drift alone is not an implementation defect.",
+            "unknown_id": "UNKNOWN-DIAGRAM-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain generated diagram outputs, model validation, freshness checks, and implementation mappings.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Validate diagram syntax, identifiers, relationships, and drift as a distinct documentation control.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-DIAGRAM-PURPOSE-001"
+      ],
+      "finding_id": "FINDING-DIAGRAM-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The design-model purpose is declared, but completeness, freshness, consistency, and implementation conformance are not demonstrated."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "15286a2d-5e7f-48e9-b19c-1c2144da0fba",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-DIAGRAM",
+    "display_name": "Diagram and Design-Model Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-DIAGRAM-PURPOSE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:38344c44031dc5f7f366ac96057a939dc715dd85b1c957b41c24c74152f46aa7",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:docs/.c4/README.md"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:bd9d6fd5c79f01be8c0c9d2e190224e2fcb3675e3168ab4d1be595e97c673d39",
+    "output_hash": "sha256:fa95a75a7dc48c78a472cf5cfb0c9c6b9fdc32437ad5e702d9e304d90daa0300",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-DIAGRAM",
+    "limitations": [
+      "Model completeness, renderability, freshness, and implementation correspondence remain unknown; absence or drift alone is not an implementation defect.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic design_model_consistency projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-DIAGRAM-PURPOSE-001"
+      ],
+      "fact": "The repository states that its C4 model represents namespaces, components, relationships, and interactions.",
+      "observation_id": "OBS-DIAGRAM-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "docs/.c4/README.md"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

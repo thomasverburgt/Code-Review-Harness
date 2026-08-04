@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-6-deterministic-reference",
+    "evidence_id": "EVIDENCE-OBS-RULE-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 14,
+    "line_fingerprint": "sha256:9cf12363a49ce3bfe9baa2d714deed58d4e552d84c98a805f98ae72e60fb8115",
+    "line_start": 14,
+    "locator_hash": "sha256:0aeea971d7c09a828e06f54f01234cb07246811782b5ce6bc73c8e04c05e83ac",
+    "locator_id": "cf30af44-3eb3-5114-aa0b-4d0759baa0ef",
+    "locator_state": "source_located",
+    "path": "src/vector/chart/templates/uptime-recording-rules.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/vector/chart/templates/uptime-recording-rules.yaml line 14.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "        - record: uds:vector:up",
+    "source_type": "configuration",
+    "symbol_or_section": "Vector uptime recording rule"
+  }
+]

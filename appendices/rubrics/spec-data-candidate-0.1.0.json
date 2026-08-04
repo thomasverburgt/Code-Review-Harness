@@ -1,0 +1,15 @@
+{
+  "authoritative_question": "Are information semantics, ownership, lineage, and lifecycle controls explicit?",
+  "required_controls": [
+    "exact_identity_focus_and_evidence_binding",
+    "domain_specific_question",
+    "evidence_tier_separation",
+    "no_effectiveness_without_test_or_runtime_evidence",
+    "preserve_identifiers_disagreement_and_unknowns",
+    "exact_locators",
+    "human_authority_and_downstream_ineligibility"
+  ],
+  "rubric_id": "RUBRIC-SPEC-DATA-CANDIDATE",
+  "status": "candidate-comparison-only",
+  "version": "0.1.0"
+}

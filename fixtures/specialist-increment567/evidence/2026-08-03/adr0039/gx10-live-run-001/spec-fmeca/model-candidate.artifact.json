@@ -1,0 +1,276 @@
+{
+  "artifact": {
+    "artifact_id": "e7ff96ff-02e5-5d63-828b-cee2553e0182",
+    "artifact_type": "spec-fmeca-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "a28fcd23-b269-5dbb-8761-1989b253640b"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-FMECA-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "rationale": "A retry mechanism is visible in source, but failure modes, propagation, retry bounds, recovery effectiveness, and mission effects are not demonstrated."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 6 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-FMECA-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:02729588821900035d1e75904697f3de5f7e9e5323a73d939e4ee970ff2c8b97",
+        "id": "GX10-QWEN3-32B-SPEC-FMECA-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:0d09d82c0af96a996fb096c2109b82a44c6e70764cdc3e518c1fc5df97d42fe8",
+        "id": "SPEC-FMECA-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:335097d7e2cd354f3c8481ec5d769f55c1b50f0677121e023b0013aa909c8645",
+        "id": "SPEC-FMECA-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:e5c03b6dddd4f24db67788f676f71ec709b114626ba6a1dec4a91283af460fb7",
+        "id": "RUBRIC-SPEC-FMECA-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:438188885a450c11a923d818bef679403dce725eaa0186f87efc6179d84f8556",
+        "id": "TOOLCHAIN-SPEC-FMECA-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "ccd2b26b-00bc-588a-a09f-aaa5cfe25c7a",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:4268f089e5b67690c6cb9ca2690db51082d13b4e00016374c567b13be64c0417",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:b00d628ba80d0e8b46a3a5938df8f87a4cb8e1b3bd53c0ead263c9c3127ef143",
+      "profile_id": "FOCUS-SPEC-FMECA",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/reliability-resilience-fmeca-reviewer.md",
+      "source_specification_hash": "sha256:0480d93ad4109cdd9b954cad1a514aee78bc1fa3da2514bfb1d6498e357ff3b8"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "a28fcd23-b269-5dbb-8761-1989b253640b",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-FMECA-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-FMECA-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-FMECA-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "reliability_resilience",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-FMECA-BACKOFF-001"
+          ],
+          "statement": "Failure likelihood, propagation, retry exhaustion, recovery time, control effectiveness, and mission effect remain unknown.",
+          "unknown_id": "UNKNOWN-FMECA-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "reliability_assessment_only_no_resilience_or_product_approval",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-FMECA",
+        "domain_records": [
+          {
+            "assessment_state": "observed_positive_control",
+            "effectiveness": "configured_not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-FMECA-BACKOFF-001"
+            ],
+            "evidence_tier": "source_contract",
+            "record_id": "RECORD-FMECA-001",
+            "subject": "package reconciliation backoff"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-FMECA-BACKOFF-001"
+            ],
+            "missing_evidence": [
+              "failure-mode inventory",
+              "fault-injection results",
+              "recovery and mission-effect evidence"
+            ],
+            "statement": "Failure likelihood, propagation, retry exhaustion, recovery time, control effectiveness, and mission effect remain unknown.",
+            "unknown_id": "UNKNOWN-FMECA-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain failure-mode analysis, bounded retry tests, fault injection, recovery measurements, and mission-effect mappings.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Connect each critical failure mode to detection, control, bounded recovery, verification, and residual-risk ownership.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "finding_id": "FINDING-FMECA-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "A retry mechanism is visible in source, but failure modes, propagation, retry bounds, recovery effectiveness, and mission effects are not demonstrated."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "de17f99f-0ac6-4482-8ec4-3fa9f03ce4ed",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-FMECA",
+    "display_name": "Reliability, Resilience, and FMECA Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-FMECA-BACKOFF-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:cd53d7cea37267fd9a12d3ae2d9a868e64a0d4c415a9802f9391f7de6a1c3b82",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/pepr/operator/reconcilers/package-reconciler.ts"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:0a467478fd0dd0a85ec6cbea5008118b9ece423509e1546cb5e4fbe171e86a41",
+    "output_hash": "sha256:166a0abcb5b691b04cadadffef8c660f1eba02798d1092ebdbeef09b325d4de2",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-FMECA",
+    "limitations": [
+      "Failure likelihood, propagation, retry exhaustion, recovery time, control effectiveness, and mission effect remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic reliability_resilience projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "fact": "The admitted reconciler source calculates exponential retry backoff from the retry-attempt count.",
+      "observation_id": "OBS-FMECA-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/pepr/operator/reconcilers/package-reconciler.ts"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "resource_interaction_assessment_only_no_runtime_or_product_approval",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-IO",
+  "domain_records": [
+    {
+      "assessment_state": "bounded_concern",
+      "effectiveness": "configured_not_demonstrated",
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "evidence_tier": "configuration",
+      "record_id": "RECORD-IO-001",
+      "subject": "httpbin egress destination"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "missing_evidence": [
+        "rendered policy",
+        "endpoint and data inventory",
+        "runtime interaction evidence"
+      ],
+      "statement": "Actual endpoints, protocols, data flows, permissions, runtime use, and blast radius remain unknown.",
+      "unknown_id": "UNKNOWN-IO-001"
+    }
+  ]
+}

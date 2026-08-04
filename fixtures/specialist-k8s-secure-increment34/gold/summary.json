@@ -1,0 +1,62 @@
+{
+  "a100_production_authorized": false,
+  "candidates": [
+    {
+      "artifact_id": "9dfcde68-b210-57c5-8497-13d01487935d",
+      "designation": "SPEC-K8S-WORKLOAD",
+      "item_count": 4,
+      "manifest_id": "4f9673a8-d87e-5712-9c69-fee32540ae39",
+      "packet_id": "8d42e3ad-549f-50cb-9fad-865b884d110f",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "67e3831f-a2af-52e1-9ddf-becca459cfc7",
+      "designation": "SPEC-K8S-PLATFORM",
+      "item_count": 4,
+      "manifest_id": "09167b34-7e71-59b1-adf3-87bb418b6d96",
+      "packet_id": "e98a4bb7-be6a-5397-93eb-0d20221c5e95",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "4c64166a-a06a-5b8a-99cb-eaa4cfca015c",
+      "designation": "SPEC-COMMS",
+      "item_count": 4,
+      "manifest_id": "f8d9f278-aa16-5412-9195-13bff290b1dc",
+      "packet_id": "91f4b67b-93aa-5f2e-8e0d-cbee5a0724d2",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "d8cfa8e8-0833-5837-b10c-b4c9fec42c89",
+      "designation": "SPEC-SECURE-CODE",
+      "item_count": 4,
+      "manifest_id": "62ec4251-5d1f-5b6b-aca6-77bd27cde301",
+      "packet_id": "07b97386-3a37-5850-a7a0-00a5e7e8c5e7",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "b44b5db3-6326-5721-adfd-4ab842b57343",
+      "designation": "SPEC-SECRETS",
+      "item_count": 4,
+      "manifest_id": "941da381-5e40-5990-8881-5840ccd31512",
+      "packet_id": "2509ec01-4958-5304-afeb-17e7e2eb9725",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    }
+  ],
+  "deployment_authorized": false,
+  "human_review_deferred": true,
+  "increment": [
+    3,
+    4
+  ],
+  "product_fan_in_eligible": false,
+  "scheduled": false,
+  "source_repository": "https://github.com/defenseunicorns/uds-core.git",
+  "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+  "state": "candidate_packets_retained_human_review_deferred",
+  "suite": "adr0039-increment34-kubernetes-secure-specialists"
+}

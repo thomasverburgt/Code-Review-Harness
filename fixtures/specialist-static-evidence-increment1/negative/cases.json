@@ -1,0 +1,13 @@
+{
+  "scenario": "ADR-0039 Increment 1 static-evidence specialists",
+  "version": "1.0.0",
+  "cases": [
+    {"case_id": "NEG-I1-BINDING-001", "mutation": "change the controlled rubric hash", "expected": "fail before dispatch"},
+    {"case_id": "NEG-I1-ROLE-001", "mutation": "add a SPEC-LINT field to SPEC-SBOM", "expected": "strict role schema rejection"},
+    {"case_id": "NEG-I1-EVIDENCE-001", "mutation": "reference evidence outside the input manifest", "expected": "role evidence rejection"},
+    {"case_id": "NEG-I1-LINT-001", "mutation": "declare a passed lint gate without a completed execution", "expected": "quality-gate rejection"},
+    {"case_id": "NEG-I1-SBOM-001", "mutation": "treat manifest declarations as a resolved complete SBOM", "expected": "semantic regression assertion failure"},
+    {"case_id": "NEG-I1-DEPS-001", "mutation": "calculate graph measures without a resolved graph", "expected": "semantic regression assertion failure"},
+    {"case_id": "NEG-I1-AUTH-001", "mutation": "enable scheduling, product fan-in, reporting, deployment, or A100 authority", "expected": "comparison-only lifecycle rejection"}
+  ]
+}

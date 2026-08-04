@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "observability_assessment_only_no_operational_or_product_approval",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-OBS",
+  "domain_records": [
+    {
+      "assessment_state": "observed_positive_control",
+      "effectiveness": "configured_not_demonstrated",
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "evidence_tier": "configuration",
+      "record_id": "RECORD-OBS-001",
+      "subject": "Vector uptime recording rule"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-OBS-RULE-001"
+      ],
+      "missing_evidence": [
+        "rule evaluation results",
+        "alert and runbook evidence",
+        "incident diagnosis evidence"
+      ],
+      "statement": "Signal availability, alert effectiveness, diagnostic coverage, ownership, and operational response remain unknown.",
+      "unknown_id": "UNKNOWN-OBS-001"
+    }
+  ]
+}
