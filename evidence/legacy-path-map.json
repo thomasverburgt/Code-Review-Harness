@@ -69,6 +69,12 @@
       "treatment": "indexed_in_place"
     },
     {
+      "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/specialist-calibration-0.2.0/<run-id>",
+      "legacy_root": "fixtures/specialist-calibration-0.2.0/evidence",
+      "remove_legacy": false,
+      "treatment": "indexed_in_place"
+    },
+    {
       "canonical_future_prefix": "evidence/YYYY-MM-DD/adrNNNN/specialist-increment567/<run-id>",
       "legacy_root": "fixtures/specialist-increment567/evidence",
       "remove_legacy": false,

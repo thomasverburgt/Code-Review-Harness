@@ -1,0 +1,66 @@
+{
+  "designation": "SPEC-IAC",
+  "modules": [
+    {
+      "module_id": "IAC-EKS-KMS",
+      "module": "generate_kms",
+      "infrastructure_layer_owner": null,
+      "module_maturity": "not_declared",
+      "desired_state": "declared",
+      "observed_state": "not_observed",
+      "expected_state": "partial",
+      "idempotency": "not_assessed",
+      "policy_inheritance": "not_assessed",
+      "dependency_order": "implicit",
+      "partial_deployment_failure_mode": "not_assessed",
+      "recovery_consideration": "not_observed",
+      "change_blast_radius_prediction": "not_assessed",
+      "evidence_refs": [
+        "EVIDENCE-IAC-MODULE-001"
+      ]
+    }
+  ],
+  "state_management": {
+    "backend": "remote",
+    "locking": "not_observed",
+    "encryption": "not_observed",
+    "access_control": "not_observed",
+    "evidence_refs": [
+      "EVIDENCE-IAC-BACKEND-001"
+    ]
+  },
+  "coverage": {
+    "iac_files_reviewed": 2,
+    "modules_reviewed": 1,
+    "plans_reviewed": 0,
+    "applies_reviewed": 0,
+    "drift_checks_reviewed": 0,
+    "rollback_tests_reviewed": 0
+  },
+  "measures": {
+    "managed_resource_coverage": null,
+    "policy_conformance": null,
+    "drift_detection_readiness": "not_measurable",
+    "idempotency_confidence": null,
+    "partial_deployment_recovery_coverage": null,
+    "ownership_clarity": null
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-IAC-001",
+      "statement": "Resource coverage, ownership, backend locking and encryption, observed state, policy conformance, drift, idempotency, failure behavior, recovery, and blast radius remain unknown.",
+      "missing_evidence": [
+        "plans and applies",
+        "state safeguards",
+        "policy and drift results",
+        "failure and recovery tests"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-IAC-MODULE-001",
+        "EVIDENCE-IAC-BACKEND-001",
+        "EVIDENCE-IAC-VERSION-001"
+      ]
+    }
+  ],
+  "authority_boundary": "desired_state_assessment_only_no_runtime_health_deployment_or_product_approval"
+}

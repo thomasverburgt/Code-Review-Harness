@@ -1,0 +1,65 @@
+{
+  "designation": "SPEC-COMMS",
+  "topology": {
+    "artifact_ref": "EVIDENCE-COMMS-TOPOLOGY-001",
+    "completeness": "bounded_declared"
+  },
+  "trust_paths": [
+    {
+      "path_id": "METRICS-API-DEFAULT",
+      "protocol": "TCP",
+      "mtls_posture": "strict_declared",
+      "authorization_coverage": "configured_not_demonstrated",
+      "runtime_effectiveness": "not_observed",
+      "evidence_refs": [
+        "EVIDENCE-COMMS-MTLS-STRICT-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ]
+    },
+    {
+      "path_id": "METRICS-API-10250",
+      "protocol": "TCP/10250",
+      "mtls_posture": "permissive_exception_declared",
+      "authorization_coverage": "unknown",
+      "runtime_effectiveness": "not_observed",
+      "evidence_refs": [
+        "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ]
+    },
+    {
+      "path_id": "UDP-EXPOSE",
+      "protocol": "UDP",
+      "mtls_posture": "not_declared",
+      "authorization_coverage": "not_protected_by_declared_control",
+      "runtime_effectiveness": "not_observed",
+      "evidence_refs": [
+        "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ]
+    }
+  ],
+  "coverage": {
+    "topology_artifacts_reviewed": 1,
+    "routes_reviewed": 3,
+    "traffic_tests_reviewed": 0
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-COMMS-001",
+      "statement": "Effective identity, encryption, authorization, exposure, lateral-movement resistance, and failure behavior are not demonstrated without runtime traffic evidence.",
+      "missing_evidence": [
+        "rendered topology",
+        "identity and authorization results",
+        "traffic tests and telemetry"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-COMMS-MTLS-STRICT-001",
+        "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+        "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ]
+    }
+  ],
+  "authority_boundary": "communication_trust_paths_only_no_platform_workload_release_or_product_approval"
+}

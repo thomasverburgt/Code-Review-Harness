@@ -102,6 +102,15 @@
       "total_bytes": 146999
     },
     {
+      "file_count": 132,
+      "inventory_sha256": "sha256:ec4d0f92ca6fc9d124900022f7fc8584a46ef414dfe89e6fdca4ff6e566ea002",
+      "legacy_root": "fixtures/specialist-calibration-0.2.0/evidence",
+      "migration_state": "indexed_in_place",
+      "retention": "immutable_in_place",
+      "scenario": "specialist-calibration-0.2.0",
+      "total_bytes": 713434
+    },
+    {
       "file_count": 69,
       "inventory_sha256": "sha256:aa5f4d2030b17cc5b5f6bc53e67a94072725515fe4c2af06db6c0213742e1efb",
       "legacy_root": "fixtures/specialist-increment567/evidence",

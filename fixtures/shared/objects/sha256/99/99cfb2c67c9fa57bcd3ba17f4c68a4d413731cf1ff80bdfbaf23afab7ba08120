@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "design_model_assessment_only_no_implementation_or_product_approval",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-DIAGRAM",
+  "domain_records": [
+    {
+      "assessment_state": "observed_positive_control",
+      "effectiveness": "not_assessed",
+      "evidence_refs": [
+        "EVIDENCE-DIAGRAM-PURPOSE-001"
+      ],
+      "evidence_tier": "design_model",
+      "record_id": "RECORD-DIAGRAM-001",
+      "subject": "C4 model purpose"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-DIAGRAM-PURPOSE-001"
+      ],
+      "missing_evidence": [
+        "rendered model validation",
+        "freshness evidence",
+        "implementation mapping"
+      ],
+      "statement": "Model completeness, renderability, freshness, and implementation correspondence remain unknown; absence or drift alone is not an implementation defect.",
+      "unknown_id": "UNKNOWN-DIAGRAM-001"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "designation": "SPEC-K8S-PLATFORM",
+  "platform_controls": [
+    {
+      "control_id": "EKS-VPC-CNI-NETWORK-POLICY",
+      "desired_state": "declared",
+      "observed_state": "not_observed",
+      "enforcement_effectiveness": "configured_not_demonstrated",
+      "tenant_isolation_confidence": null,
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ]
+    }
+  ],
+  "coverage": {
+    "platform_definitions_reviewed": 1,
+    "live_clusters_reviewed": 0,
+    "enforcement_tests_reviewed": 0
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-K8S-PLATFORM-001",
+      "statement": "Actual installation, enforcement, coverage, tenant isolation, drift, and platform effectiveness remain unknown from IaC desired state alone.",
+      "missing_evidence": [
+        "live cluster state",
+        "enforcement tests",
+        "tenant isolation tests"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-K8S-PLATFORM-NETPOL-001"
+      ]
+    }
+  ],
+  "authority_boundary": "shared_platform_desired_state_only_no_workload_runtime_release_or_product_approval"
+}

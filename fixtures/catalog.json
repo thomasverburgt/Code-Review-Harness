@@ -82,6 +82,13 @@
       "total_bytes": 273538
     },
     {
+      "legacy_evidence_file_count": 132,
+      "reusable_file_count": 0,
+      "root": "fixtures/specialist-calibration-0.2.0",
+      "scenario": "specialist-calibration-0.2.0",
+      "total_bytes": 713434
+    },
+    {
       "legacy_evidence_file_count": 69,
       "reusable_file_count": 67,
       "root": "fixtures/specialist-increment567",
