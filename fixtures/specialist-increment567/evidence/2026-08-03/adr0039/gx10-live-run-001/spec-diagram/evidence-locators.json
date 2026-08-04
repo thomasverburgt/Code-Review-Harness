@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-5-deterministic-reference",
+    "evidence_id": "EVIDENCE-DIAGRAM-PURPOSE-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 7,
+    "line_fingerprint": "sha256:e3a9cbb803a9351034ca003445c5ccfe2321fef7f1bf2f78964b6429fd6156f1",
+    "line_start": 7,
+    "locator_hash": "sha256:50f12211b612c00dfd37ffb5ef9fb453bff84ce971a8ccdc554f6dcd64278f12",
+    "locator_id": "153b8dcb-349d-5f59-b20d-9787a9cd6765",
+    "locator_state": "source_located",
+    "path": "docs/.c4/README.md",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect docs/.c4/README.md line 7.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "In UDS Core, we use C4 diagrams to visualize and document our system architecture, including namespaces, components, and their relationships. This helps developers understand how different parts of the system interact with each other.",
+    "source_type": "git_source",
+    "symbol_or_section": "C4 model purpose"
+  }
+]

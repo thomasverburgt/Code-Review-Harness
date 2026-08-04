@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "de17f99f-0ac6-4482-8ec4-3fa9f03ce4ed",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-FMECA",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-6.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:cd53d7cea37267fd9a12d3ae2d9a868e64a0d4c415a9802f9391f7de6a1c3b82",
+      "evidence_id": "EVIDENCE-FMECA-BACKOFF-001",
+      "path": "src/pepr/operator/reconcilers/package-reconciler.ts",
+      "purpose": "Review SPEC-FMECA evidence in package reconciliation backoff.",
+      "safe_for_human_review": true,
+      "source_type": "git_source"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:02729588821900035d1e75904697f3de5f7e9e5323a73d939e4ee970ff2c8b97",
+      "id": "GX10-QWEN3-32B-SPEC-FMECA-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:0d09d82c0af96a996fb096c2109b82a44c6e70764cdc3e518c1fc5df97d42fe8",
+      "id": "SPEC-FMECA-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:335097d7e2cd354f3c8481ec5d769f55c1b50f0677121e023b0013aa909c8645",
+      "id": "SPEC-FMECA-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:e5c03b6dddd4f24db67788f676f71ec709b114626ba6a1dec4a91283af460fb7",
+      "id": "RUBRIC-SPEC-FMECA-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:438188885a450c11a923d818bef679403dce725eaa0186f87efc6179d84f8556",
+      "id": "TOOLCHAIN-SPEC-FMECA-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:4268f089e5b67690c6cb9ca2690db51082d13b4e00016374c567b13be64c0417",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:b00d628ba80d0e8b46a3a5938df8f87a4cb8e1b3bd53c0ead263c9c3127ef143",
+    "profile_id": "FOCUS-SPEC-FMECA",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/reliability-resilience-fmeca-reviewer.md",
+    "source_specification_hash": "sha256:0480d93ad4109cdd9b954cad1a514aee78bc1fa3da2514bfb1d6498e357ff3b8"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:0a467478fd0dd0a85ec6cbea5008118b9ece423509e1546cb5e4fbe171e86a41",
+  "manifest_id": "a28fcd23-b269-5dbb-8761-1989b253640b",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

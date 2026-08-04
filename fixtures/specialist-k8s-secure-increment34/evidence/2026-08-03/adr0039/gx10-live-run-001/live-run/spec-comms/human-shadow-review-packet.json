@@ -1,0 +1,491 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "fca6f659-133a-4bd8-80d1-6bcc2d82b098",
+    "designation": "SPEC-COMMS",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:fe45838626cbe40098fb63c8b9ff6885f30a18d3700696c010caad0606a63a6a",
+  "candidate_artifact_id": "f63b32bc-1a85-5c94-9412-c4740edb60fd",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:a6fa5852b1475c4e856879b51da0611d8408069720847923482eaa941b7f257f",
+    "profile_id": "FOCUS-SPEC-COMMS",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T22:05:00Z",
+  "input_manifest_hash": "sha256:1f43b458f4373a32fcf3590808fe6c45287b16e276581c777c3f5c93998127e3",
+  "input_manifest_id": "f8d9f278-aa16-5412-9195-13bff290b1dc",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-COMMS-MTLS-STRICT-001",
+        "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+        "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-STRICT-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 12,
+          "line_fingerprint": "sha256:32a30cb171908615aef043e0b09fb18ed72b9145b85cedf726494fdde4a58613",
+          "line_start": 12,
+          "locator_hash": "sha256:e8b8eb7cdd7f01763495bec0ff345f4a6d19bac2737f02bf7739ec48eddd1a32",
+          "locator_id": "c2619740-0b87-5075-af6d-9b58060885bc",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 12.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    mode: STRICT",
+          "symbol_or_section": "default mTLS posture"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 19,
+          "line_fingerprint": "sha256:095f2f041f8ea6262716e63a1f889efc8d2735b00f4ccab69ef109c46a1d9878",
+          "line_start": 19,
+          "locator_hash": "sha256:7df0c3373c511b8476483ed72e0af9d5d131be8d219198fd525e02e18c78cd08",
+          "locator_id": "29b2287a-6691-5797-85f6-028ab01f54ad",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 19.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      mode: PERMISSIVE",
+          "symbol_or_section": "port 10250 exception"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:966dd90c3d608b1e9b703a68514117aafee394010f733676ba8ff0635d760294",
+          "line_start": 185,
+          "locator_hash": "sha256:e665d344f88f5f64f0ef070095572be47d87ee312c67a080149456a8ec11159f",
+          "locator_id": "520fcc28-eca7-5b92-9172-55eb016472bf",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.",
+          "symbol_or_section": "UDP protocol contract"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-TOPOLOGY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 17,
+          "line_fingerprint": "sha256:baaa1e37062b85242a00f84e4886d9eb21a0a7fe643d1ca8883f1fe2aaae843d",
+          "line_start": 17,
+          "locator_hash": "sha256:2aa12a20c86cd62e3ebfadb3a5d7c0307287abdf2f954a5426e8fc923d9476a9",
+          "locator_id": "03fa86ab-d805-5705-b861-1e4eebec0c1b",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 17.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - name: httpbin",
+          "symbol_or_section": "bounded service topology"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-COMMS-001",
+      "statement": "The topology declares an exposed httpbin service and egress, while communication policy declares STRICT mTLS with a port-specific PERMISSIVE exception and documents that UDP bypasses Istio mTLS and AuthorizationPolicy."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-COMMS-MTLS-STRICT-001",
+        "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+        "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-STRICT-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 12,
+          "line_fingerprint": "sha256:32a30cb171908615aef043e0b09fb18ed72b9145b85cedf726494fdde4a58613",
+          "line_start": 12,
+          "locator_hash": "sha256:e8b8eb7cdd7f01763495bec0ff345f4a6d19bac2737f02bf7739ec48eddd1a32",
+          "locator_id": "c2619740-0b87-5075-af6d-9b58060885bc",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 12.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    mode: STRICT",
+          "symbol_or_section": "default mTLS posture"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 19,
+          "line_fingerprint": "sha256:095f2f041f8ea6262716e63a1f889efc8d2735b00f4ccab69ef109c46a1d9878",
+          "line_start": 19,
+          "locator_hash": "sha256:7df0c3373c511b8476483ed72e0af9d5d131be8d219198fd525e02e18c78cd08",
+          "locator_id": "29b2287a-6691-5797-85f6-028ab01f54ad",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 19.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      mode: PERMISSIVE",
+          "symbol_or_section": "port 10250 exception"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:966dd90c3d608b1e9b703a68514117aafee394010f733676ba8ff0635d760294",
+          "line_start": 185,
+          "locator_hash": "sha256:e665d344f88f5f64f0ef070095572be47d87ee312c67a080149456a8ec11159f",
+          "locator_id": "520fcc28-eca7-5b92-9172-55eb016472bf",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.",
+          "symbol_or_section": "UDP protocol contract"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-TOPOLOGY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 17,
+          "line_fingerprint": "sha256:baaa1e37062b85242a00f84e4886d9eb21a0a7fe643d1ca8883f1fe2aaae843d",
+          "line_start": 17,
+          "locator_hash": "sha256:2aa12a20c86cd62e3ebfadb3a5d7c0307287abdf2f954a5426e8fc923d9476a9",
+          "locator_id": "03fa86ab-d805-5705-b861-1e4eebec0c1b",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 17.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - name: httpbin",
+          "symbol_or_section": "bounded service topology"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-COMMS-001",
+      "statement": "No rendered route set, identity binding, authorization result, traffic test, telemetry, or failure-path evidence is admitted."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-COMMS-MTLS-STRICT-001",
+        "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+        "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-STRICT-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 12,
+          "line_fingerprint": "sha256:32a30cb171908615aef043e0b09fb18ed72b9145b85cedf726494fdde4a58613",
+          "line_start": 12,
+          "locator_hash": "sha256:e8b8eb7cdd7f01763495bec0ff345f4a6d19bac2737f02bf7739ec48eddd1a32",
+          "locator_id": "c2619740-0b87-5075-af6d-9b58060885bc",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 12.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    mode: STRICT",
+          "symbol_or_section": "default mTLS posture"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 19,
+          "line_fingerprint": "sha256:095f2f041f8ea6262716e63a1f889efc8d2735b00f4ccab69ef109c46a1d9878",
+          "line_start": 19,
+          "locator_hash": "sha256:7df0c3373c511b8476483ed72e0af9d5d131be8d219198fd525e02e18c78cd08",
+          "locator_id": "29b2287a-6691-5797-85f6-028ab01f54ad",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 19.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      mode: PERMISSIVE",
+          "symbol_or_section": "port 10250 exception"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:966dd90c3d608b1e9b703a68514117aafee394010f733676ba8ff0635d760294",
+          "line_start": 185,
+          "locator_hash": "sha256:e665d344f88f5f64f0ef070095572be47d87ee312c67a080149456a8ec11159f",
+          "locator_id": "520fcc28-eca7-5b92-9172-55eb016472bf",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.",
+          "symbol_or_section": "UDP protocol contract"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-TOPOLOGY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 17,
+          "line_fingerprint": "sha256:baaa1e37062b85242a00f84e4886d9eb21a0a7fe643d1ca8883f1fe2aaae843d",
+          "line_start": 17,
+          "locator_hash": "sha256:2aa12a20c86cd62e3ebfadb3a5d7c0307287abdf2f954a5426e8fc923d9476a9",
+          "locator_id": "03fa86ab-d805-5705-b861-1e4eebec0c1b",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 17.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - name: httpbin",
+          "symbol_or_section": "bounded service topology"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-COMMS-001:CAPA",
+      "statement": "Retain the rendered topology plus authenticated positive and unauthorized negative traffic tests for every declared path and exception."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-COMMS-MTLS-STRICT-001",
+        "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+        "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+        "EVIDENCE-COMMS-TOPOLOGY-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-STRICT-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 12,
+          "line_fingerprint": "sha256:32a30cb171908615aef043e0b09fb18ed72b9145b85cedf726494fdde4a58613",
+          "line_start": 12,
+          "locator_hash": "sha256:e8b8eb7cdd7f01763495bec0ff345f4a6d19bac2737f02bf7739ec48eddd1a32",
+          "locator_id": "c2619740-0b87-5075-af6d-9b58060885bc",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 12.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "    mode: STRICT",
+          "symbol_or_section": "default mTLS posture"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 19,
+          "line_fingerprint": "sha256:095f2f041f8ea6262716e63a1f889efc8d2735b00f4ccab69ef109c46a1d9878",
+          "line_start": 19,
+          "locator_hash": "sha256:7df0c3373c511b8476483ed72e0af9d5d131be8d219198fd525e02e18c78cd08",
+          "locator_id": "29b2287a-6691-5797-85f6-028ab01f54ad",
+          "locator_state": "source_located",
+          "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 19.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      mode: PERMISSIVE",
+          "symbol_or_section": "port 10250 exception"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:966dd90c3d608b1e9b703a68514117aafee394010f733676ba8ff0635d760294",
+          "line_start": 185,
+          "locator_hash": "sha256:e665d344f88f5f64f0ef070095572be47d87ee312c67a080149456a8ec11159f",
+          "locator_id": "520fcc28-eca7-5b92-9172-55eb016472bf",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.",
+          "symbol_or_section": "UDP protocol contract"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-COMMS-TOPOLOGY-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 17,
+          "line_fingerprint": "sha256:baaa1e37062b85242a00f84e4886d9eb21a0a7fe643d1ca8883f1fe2aaae843d",
+          "line_start": 17,
+          "locator_hash": "sha256:2aa12a20c86cd62e3ebfadb3a5d7c0307287abdf2f954a5426e8fc923d9476a9",
+          "locator_id": "03fa86ab-d805-5705-b861-1e4eebec0c1b",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 17.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        - name: httpbin",
+          "symbol_or_section": "bounded service topology"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-COMMS-001",
+      "statement": "Effective identity, encryption, authorization, exposure, lateral-movement resistance, and failure behavior are not demonstrated without runtime traffic evidence."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:38e0c750e19d65b045bb250a1f28de716a8eebd5a68cefe6405d3aff1698b479",
+  "packet_id": "15e4f0ac-888b-529d-8854-cdbe9e033d8c",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

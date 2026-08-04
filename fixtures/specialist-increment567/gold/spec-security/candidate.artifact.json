@@ -1,0 +1,319 @@
+{
+  "artifact": {
+    "artifact_id": "1e78572f-275b-5e0b-a2d1-74b483213533",
+    "artifact_type": "spec-security-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "c5ae1929-bc85-5b6a-aeca-73d75569d47d"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-SECURITY-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-SECURITY-CODE-001",
+        "EVIDENCE-SECURITY-SECRETS-001",
+        "EVIDENCE-SECURITY-COMMS-001"
+      ],
+      "rationale": "The admitted children do not justify a whole-product security conclusion, release decision, or risk acceptance."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 7 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 3,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 3,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-SECURITY-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:7dac39e431584c73f04406f0606843bdea8dabefc51776a64d467bc08e9adedf",
+        "id": "GX10-QWEN3-32B-SPEC-SECURITY-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:0f00ad01fed15bb03c211afee4ccaf38c73b15e97d9a586712774dec3b9665c0",
+        "id": "SPEC-SECURITY-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:7c7506e3532fb8dd876850b6100b8283c43920d26f958e6af32d0f54267d212d",
+        "id": "SPEC-SECURITY-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:9113cf6e9c35f3f101576d75b0a7c6539ff72d373a0f2dd1f5561b22124bf6b1",
+        "id": "RUBRIC-SPEC-SECURITY-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:b7bd1457569c8e4bb8901628be22951933c4d35be6e9f4ba2fdf098742e91fa5",
+        "id": "TOOLCHAIN-SPEC-SECURITY-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "85ada44a-584b-598a-ac97-f9bc01ecd114",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:05d4a186286b6147b8b61b05ff1b8e19e1d0628de2a457b3c89b65f834ede7c6",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:108e0418d54aaf450a73519807a4226ffa3d5d771d68badc4a3cabfc3f9b8b48",
+      "profile_id": "FOCUS-SPEC-SECURITY",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/security-posture-reviewer.md",
+      "source_specification_hash": "sha256:935f6a45cb2e8543d01fd7db8462a0c0a5d80d332711d76e0a454e28549a267d"
+    },
+    "input_manifest_id": "c5ae1929-bc85-5b6a-aeca-73d75569d47d",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-SECURITY-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-SECURITY-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-SECURITY-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "integrated_security_posture",
+        "revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-SECURITY-CODE-001",
+            "EVIDENCE-SECURITY-SECRETS-001",
+            "EVIDENCE-SECURITY-COMMS-001"
+          ],
+          "statement": "Whole-product coverage, exploitability, exposure, control effectiveness, residual risk, and release readiness remain unknown.",
+          "unknown_id": "UNKNOWN-SECURITY-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 3
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "security_synthesis_only_no_whole_product_release_or_acceptance",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 3,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-SECURITY",
+        "domain_records": [
+          {
+            "assessment_state": "insufficient_evidence",
+            "effectiveness": "not_assessed",
+            "evidence_refs": [
+              "EVIDENCE-SECURITY-CODE-001"
+            ],
+            "evidence_tier": "retained_candidate",
+            "record_id": "RECORD-SECURITY-001",
+            "subject": "retained SPEC-SECURE-CODE unknown"
+          },
+          {
+            "assessment_state": "insufficient_evidence",
+            "effectiveness": "not_assessed",
+            "evidence_refs": [
+              "EVIDENCE-SECURITY-SECRETS-001"
+            ],
+            "evidence_tier": "retained_candidate",
+            "record_id": "RECORD-SECURITY-002",
+            "subject": "retained SPEC-SECRETS unknown"
+          },
+          {
+            "assessment_state": "insufficient_evidence",
+            "effectiveness": "not_assessed",
+            "evidence_refs": [
+              "EVIDENCE-SECURITY-COMMS-001"
+            ],
+            "evidence_tier": "retained_candidate",
+            "record_id": "RECORD-SECURITY-003",
+            "subject": "retained SPEC-COMMS unknown"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-SECURITY-CODE-001",
+              "EVIDENCE-SECURITY-SECRETS-001",
+              "EVIDENCE-SECURITY-COMMS-001"
+            ],
+            "missing_evidence": [
+              "domain-complete evidence",
+              "control-effectiveness evidence",
+              "qualified semantic adjudication"
+            ],
+            "statement": "Whole-product coverage, exploitability, exposure, control effectiveness, residual risk, and release readiness remain unknown.",
+            "unknown_id": "UNKNOWN-SECURITY-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain domain-complete evidence, conflicts, coverage, control effectiveness, and qualified human adjudication before posture synthesis.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Preserve child claims and disagreement; prohibit security synthesis from exceeding admitted evidence or human authority.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-SECURITY-CODE-001",
+        "EVIDENCE-SECURITY-SECRETS-001",
+        "EVIDENCE-SECURITY-COMMS-001"
+      ],
+      "finding_id": "FINDING-SECURITY-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The admitted children do not justify a whole-product security conclusion, release decision, or risk acceptance."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "c201aa58-2464-40f0-b869-670df2ae932f",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-SECURITY",
+    "display_name": "Security Posture Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-SECURITY-CODE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:ee37ef0ec6f3603d92452c93166502f17e5b4bdbce95d316ee6febffa7cb2145",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@16a7129e9e19969bce5528b046b2fc94ef5af60b:fixtures/specialist-k8s-secure-increment34/gold/spec-secure-code/candidate.artifact.json"
+    },
+    {
+      "evidence_id": "EVIDENCE-SECURITY-SECRETS-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:adfc0c63a03238dd7bf01dcc797545977a800d760ac45f92cf744face4021bb5",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@16a7129e9e19969bce5528b046b2fc94ef5af60b:fixtures/specialist-k8s-secure-increment34/gold/spec-secrets/candidate.artifact.json"
+    },
+    {
+      "evidence_id": "EVIDENCE-SECURITY-COMMS-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:9258179259df5fe9a582250d59b16530438db422cb3bbbf12befe820c9f0c9e7",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@16a7129e9e19969bce5528b046b2fc94ef5af60b:fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:8ea48467fe1aeaf4949cd630fd56b49ef561b28ecdf52aa0953a53131e061aba",
+    "output_hash": "sha256:9d673b6927510771b3c640cb813618569082a023f17f8dd988c433dd26d6a80a",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-SECURITY",
+    "limitations": [
+      "Whole-product coverage, exploitability, exposure, control effectiveness, residual risk, and release readiness remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic integrated_security_posture projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-SECURITY-CODE-001",
+        "EVIDENCE-SECURITY-SECRETS-001",
+        "EVIDENCE-SECURITY-COMMS-001"
+      ],
+      "fact": "Retained secure-code, secrets, and communications candidates preserve separate unknowns and evidence provenance.",
+      "observation_id": "OBS-SECURITY-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+      "fixtures/specialist-k8s-secure-increment34/gold/spec-secrets/candidate.artifact.json",
+      "fixtures/specialist-k8s-secure-increment34/gold/spec-secure-code/candidate.artifact.json"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b"
+  }
+}

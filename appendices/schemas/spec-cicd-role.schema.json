@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/spec-cicd-role.schema.json",
+  "title": "SPEC-CICD Candidate Role Extension",
+  "type": "object", "additionalProperties": false,
+  "required": ["designation", "pipelines", "coverage", "measures", "unknowns", "authority_boundary"],
+  "properties": {
+    "designation": {"const": "SPEC-CICD"},
+    "pipelines": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false,
+      "required": ["pipeline_id", "pipeline_definition", "pipeline_stage", "trigger", "permissions", "action_pinning", "build_integrity", "artifact_provenance", "promotion_flow", "gate_effectiveness", "determinism", "resumability", "rollback_evidence", "auditability", "evidence_refs"],
+      "properties": {
+        "pipeline_id": {"type": "string", "minLength": 1}, "pipeline_definition": {"type": "string", "minLength": 1}, "pipeline_stage": {"enum": ["test", "build", "publish", "promote", "release", "mixed"]}, "trigger": {"type": "string", "minLength": 1},
+        "permissions": {"enum": ["least_privilege_observed", "broad_write_observed", "mixed", "not_assessed", "unknown"]}, "action_pinning": {"enum": ["immutable_commit", "mutable_tag", "mixed", "not_assessed", "unknown"]},
+        "build_integrity": {"enum": ["demonstrated", "partially_declared", "not_demonstrated", "not_assessed", "unknown"]}, "artifact_provenance": {"enum": ["verified", "declared_not_verified", "not_observed", "not_assessed", "unknown"]},
+        "promotion_flow": {"enum": ["explicit", "implicit", "not_observed", "not_assessed", "unknown"]}, "gate_effectiveness": {"enum": ["demonstrated", "configured_not_demonstrated", "not_observed", "not_assessed", "unknown"]},
+        "determinism": {"enum": ["demonstrated", "partially_constrained", "not_demonstrated", "not_assessed", "unknown"]}, "resumability": {"enum": ["demonstrated", "declared", "not_observed", "not_assessed", "unknown"]}, "rollback_evidence": {"enum": ["demonstrated", "declared", "not_observed", "not_assessed", "unknown"]}, "auditability": {"enum": ["strong", "partial", "weak", "not_assessed", "unknown"]},
+        "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }}},
+    "coverage": {"type": "object", "additionalProperties": false, "required": ["pipeline_definitions_reviewed", "completed_runs_reviewed", "artifacts_verified", "promotion_events_reviewed", "rollback_events_reviewed"], "properties": {"pipeline_definitions_reviewed": {"type": "integer", "minimum": 0}, "completed_runs_reviewed": {"type": "integer", "minimum": 0}, "artifacts_verified": {"type": "integer", "minimum": 0}, "promotion_events_reviewed": {"type": "integer", "minimum": 0}, "rollback_events_reviewed": {"type": "integer", "minimum": 0}}},
+    "measures": {"type": "object", "additionalProperties": false, "required": ["repeatability", "provenanced_artifact_coverage", "verification_gap_count", "effective_gate_rate", "nondeterminism_rate", "recovery_maturity"], "properties": {"repeatability": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "provenanced_artifact_coverage": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "verification_gap_count": {"type": "integer", "minimum": 0}, "effective_gate_rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "nondeterminism_rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "recovery_maturity": {"enum": ["demonstrated", "declared", "not_demonstrated", "not_measurable"]}}},
+    "unknowns": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/unknown"}},
+    "authority_boundary": {"const": "pipeline_evidence_only_no_release_risk_acceptance_or_product_approval"}
+  },
+  "$defs": {"unknown": {"type": "object", "additionalProperties": false, "required": ["unknown_id", "statement", "missing_evidence", "evidence_refs"], "properties": {"unknown_id": {"type": "string", "minLength": 1}, "statement": {"type": "string", "minLength": 1}, "missing_evidence": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}}}}
+}

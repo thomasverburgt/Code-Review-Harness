@@ -480,7 +480,9 @@ def main() -> int:
         server = ThreadingHTTPServer(("127.0.0.1", 0), MockVLLMHandler)
         thread = threading.Thread(target=server.serve_forever, daemon=True)
         thread.start()
-        os.environ["CODE_HARNESS_TEST_VLLM_KEY"] = "conformance-test-key"
+        # Environment injection may carry surrounding transport whitespace on Windows-to-Linux handoff.
+        # The adapter must strip it before constructing the authorization header.
+        os.environ["CODE_HARNESS_TEST_VLLM_KEY"] = " conformance-test-key\r"
         try:
             live_adapter = VLLMAdapter(f"http://127.0.0.1:{server.server_port}", "qwen3-32b", "CODE_HARNESS_TEST_VLLM_KEY")
             live_result, _, _ = process(base, run_dir, "SPEC-SECRETS", "vllm-protocol", live_adapter)

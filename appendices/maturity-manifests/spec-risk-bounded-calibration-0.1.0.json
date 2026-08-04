@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "authoritative_question": "passed",
+    "evidence_and_authority_boundaries": "passed",
+    "focus_profile": "passed",
+    "identity": "passed",
+    "prohibited_conclusions": "passed",
+    "rollback": "passed",
+    "source_specification": "passed",
+    "strict_output_schema": "passed"
+  },
+  "deployment_or_promotion_effect": false,
+  "designation": "SPEC-RISK",
+  "focus_profile_hash": "sha256:d91c2075995d812f2272357e99af28d11b2822c97f2489c1eaec26daf45648c2",
+  "record_version": "0.1.0",
+  "registry_status_preserved": "seed",
+  "result": "sufficient_for_bounded_candidate_calibration",
+  "scope": "bounded ADR-0039 candidate calibration only"
+}

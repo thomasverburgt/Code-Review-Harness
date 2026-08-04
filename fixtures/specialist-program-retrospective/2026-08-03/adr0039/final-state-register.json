@@ -1,0 +1,623 @@
+{
+  "as_of": "2026-08-03",
+  "counts": {
+    "blocked_on_evidence": 22
+  },
+  "human_review": {
+    "owner_candidate_dispositions_observed": 0,
+    "qualified_adjudications_observed": 0,
+    "responses_observed": 0,
+    "state": "pending_consolidated_end_of_program_wave"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "scheduled": false
+  },
+  "program": "ADR-0039 specialist candidate buildout",
+  "register_hash": "sha256:462c186367fc2984513300a634a7e7a8ecce5f84831e7a389fb2108bea8ef2c4",
+  "schema_version": "1.0.0",
+  "state_definitions": {
+    "blocked_on_evidence": "candidate construction passed but required semantic evidence is absent",
+    "candidate_complete": "all machine, human-review, adjudication, and owner-disposition evidence complete",
+    "retained_only": "retained for lineage with no active completion path",
+    "revision_required": "an identified candidate defect requires correction"
+  },
+  "states": [
+    {
+      "agent_uuid": "7e7d7710-885a-47c6-af0f-339ed9dad525",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-DEPS",
+      "final_state": "blocked_on_evidence",
+      "increment": 1,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:8e25b097a725958f784629e61a7c32bfcdf6e6e1f3ed75a15d614bef570016ad",
+        "packet_hash": "sha256:cc0c8d7bf1f60e389d62b35ca2b1563443c7bfa528de7afc94abfe1681f21dbc",
+        "raw_response_hash": "sha256:71961b875e63c737527209374a08bf7babdf4fedce2172235fa48a089ab04f72",
+        "summary": "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "d56a9cfd-9dad-4b0c-9b58-4a516ad3ef83",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-LINT",
+      "final_state": "blocked_on_evidence",
+      "increment": 1,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:1e880a10cae388ef1fc9bcb49e4fe227b828bba2c4cbafc43ab0e3bc2153e722",
+        "packet_hash": "sha256:adb914512e4dea5300716e9aa370c763e894d4a1e9d610ebd8482a40c3a63773",
+        "raw_response_hash": "sha256:140effdb6f107f988b6e8347a93ec5dcc35365ef336cc5c9e23a3dd14d64eeff",
+        "summary": "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "25c08f1d-0721-492e-9076-bc9d86e55413",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-SBOM",
+      "final_state": "blocked_on_evidence",
+      "increment": 1,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:3b7ae0276b575b3864837d9d94d88d2b148aa607c607e9bcc0baa5a6453cde23",
+        "packet_hash": "sha256:23adc291e584bd45832e62bbf4e92ffc528c63b4026eaeeaeffed0aaa53142a3",
+        "raw_response_hash": "sha256:f03519208886300e51fab8ba84a491bc009cd58d199b96787bd9cce76f4e16f8",
+        "summary": "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "c6e380a3-8161-45cd-9a05-b2849a5e30a6",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-CICD",
+      "final_state": "blocked_on_evidence",
+      "increment": 2,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:72083e34ef64d7898a352d53b0994161c3b822fb854e729c1538042f1b7d8a92",
+        "packet_hash": "sha256:71dd60c20e285e6a023fa21719c11d7c8c7793159143f25b3a226742309f6ebf",
+        "raw_response_hash": "sha256:aaef0f8578b2d96d7f5ffc61ef7defc9e7a395b60f323b80c426a32fbf1932a5",
+        "summary": "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "b7eb144e-eae5-4f91-9789-b606ba2afc95",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-CONTAINER",
+      "final_state": "blocked_on_evidence",
+      "increment": 2,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:c5521feed93adc44964530699d037b262a333f388140ae50add9d80740ffd103",
+        "packet_hash": "sha256:0b4990085c4a8234224ccfc04256d41c8e6f2dce42554c662488c848ae7f7d19",
+        "raw_response_hash": "sha256:5e619ea9b60cdc5dfc13c351fa93a3dad0b09994e7a7ebb499e8eb3d32732c2b",
+        "summary": "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "09c72dd8-48c0-4a3b-8f48-9adcbe18df94",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-IAC",
+      "final_state": "blocked_on_evidence",
+      "increment": 2,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:b0f545b895c0b1edc8164c50b6a9127996a445dea45bdde354bc62436e25142c",
+        "packet_hash": "sha256:2f103a89b82c413580b502d623f068ea6889d0b9dc266bf8aee60b3c0a78c32c",
+        "raw_response_hash": "sha256:a58b5ad0b00848fa6dd8ddc65045760c4d5251ab70a964cadd4b2ce02c115571",
+        "summary": "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "fca6f659-133a-4bd8-80d1-6bcc2d82b098",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-COMMS",
+      "final_state": "blocked_on_evidence",
+      "increment": 3,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:fe45838626cbe40098fb63c8b9ff6885f30a18d3700696c010caad0606a63a6a",
+        "packet_hash": "sha256:38e0c750e19d65b045bb250a1f28de716a8eebd5a68cefe6405d3aff1698b479",
+        "raw_response_hash": "sha256:373e4d7a951bc6b7b0b901004cae1e9c6cc12fa6deb584ca0204b5a9ad97e95d",
+        "summary": "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "01596885-15c9-4846-8233-450939791c35",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-K8S-PLATFORM",
+      "final_state": "blocked_on_evidence",
+      "increment": 3,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:a289262eb9cf55cacf5f3cc9de09cfb04d515ba8c4c153d18368e2ef517d20cb",
+        "packet_hash": "sha256:ecc79493da3ed4c23e6c3dcd7259753141ef0c506cc9052936fcfbe597144961",
+        "raw_response_hash": "sha256:b0a020fd29409080e480ec3acd9957013673e57c7c00d098269973853fd75c9e",
+        "summary": "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "9106ee3d-8959-4a24-b141-c3ab1435583c",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-K8S-WORKLOAD",
+      "final_state": "blocked_on_evidence",
+      "increment": 3,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:da83b3718bab0fc230db6c5eb3ae1bf88f5d12e46db4c0eecd1183b3405fbe91",
+        "packet_hash": "sha256:0c16c4ff4a60e7d9b02807a552d69f71fd6d2f8391eefc6980855017d0434b42",
+        "raw_response_hash": "sha256:b62ddd11c75dfe1f6bfc7bf53509bf30a3dc5a070c483aad22207abc223771f2",
+        "summary": "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "e753f9e1-b3ff-4149-8b95-b3c073e3777f",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-SECRETS",
+      "final_state": "blocked_on_evidence",
+      "increment": 4,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:9ea27e6fd80f2c9a3b2556d5966b4bf7cf5817b49add34759eb362e376648557",
+        "packet_hash": "sha256:fe8eb24cdda9daf6c5be657271ff4d8f7b939707a53875b95ee40cf8c3100583",
+        "raw_response_hash": "sha256:8f0efab385d49b7e1f556c13dda6ccd75a6d3a77b4f475d1bae1a3a885646383",
+        "summary": "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "7497bb23-2340-41d1-9c73-3f0ecd580ab4",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-SECURE-CODE",
+      "final_state": "blocked_on_evidence",
+      "increment": 4,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:12dfa5d701dbcb01809cfd30e5a49ac36b3bd8845b69dd00cafc27db8d25d8cc",
+        "packet_hash": "sha256:1ba68b8ea38acdd7dc7cc91acff859364c06ac4722cfaa9f5977d1cf38061f3e",
+        "raw_response_hash": "sha256:6316c6e2a07f39f4a8aa433f7da9b0336c84d6867dad7f2e625811e0990a8640",
+        "summary": "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "298ae38a-0bd3-46f1-8074-35f3356454fc",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-ARCH",
+      "final_state": "blocked_on_evidence",
+      "increment": 5,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:701e0a8d7305422be53a548a978fe8cf61500c51cd73fd0bc47e605c26c679e5",
+        "packet_hash": "sha256:5875f56843397ca0f19081798fe2c67ef61941064742b67d61bc0f9a396561f9",
+        "raw_response_hash": "sha256:44dcfc303ac1db586db12870712ff14edbd36ba06dadd20e08f94a50fb7580da",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "b7a03aff-6262-407f-b4ce-2eadec82508d",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-DATA",
+      "final_state": "blocked_on_evidence",
+      "increment": 5,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:a2cc2317b16abc7ea48f63b14ff1de3503d25eb5e380b8ea78db326ba51f1c21",
+        "packet_hash": "sha256:fa1a069b7be60d89e2d0560263feced5db74055e7b22f8fb846eb2e7b03ba330",
+        "raw_response_hash": "sha256:da813f31642704c3a610e6e02b3eed56748c50338208568bedb18af9f185d0e7",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "15286a2d-5e7f-48e9-b19c-1c2144da0fba",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-DIAGRAM",
+      "final_state": "blocked_on_evidence",
+      "increment": 5,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:03e0243a7cf3913646b017350e873caf1878929e19793261cbc30b0ee08946f6",
+        "packet_hash": "sha256:1bbb22532021d1db15bc847db94529ec1aba17fc4757c432ceed297bec50b894",
+        "raw_response_hash": "sha256:99cfb2c67c9fa57bcd3ba17f4c68a4d413731cf1ff80bdfbaf23afab7ba08120",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "da0bc1ae-8e6f-4730-b29c-19ec6544cb7f",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-INTEROP",
+      "final_state": "blocked_on_evidence",
+      "increment": 5,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:041974097b008c7dd470d42736449c6db82106772654fb9ae41de99f321d048b",
+        "packet_hash": "sha256:bd567910bf8206a341c4f666b5404f7e204b3f2be9909fdb27e595cba61c087f",
+        "raw_response_hash": "sha256:dc0f39f683931d2626c2d67d8ba7b7bd99318e600214cdc2587f1a2878bb29ad",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "5801b47f-df7c-47f3-9609-1ecc1fd54c15",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-IO",
+      "final_state": "blocked_on_evidence",
+      "increment": 5,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:e9d843f85f9fad6145e04245210c5d9c3d19ebc07dccb214dd8a68606c5af37a",
+        "packet_hash": "sha256:ea52bfb865af47a7adeb08910e34de69db1fe967280d8834a6c91ba623808298",
+        "raw_response_hash": "sha256:6f56ef59d25e9d955059fd0ca424a1bbe1ddac93de4dc8a4be084567d067f173",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "de17f99f-0ac6-4482-8ec4-3fa9f03ce4ed",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-FMECA",
+      "final_state": "blocked_on_evidence",
+      "increment": 6,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:5704b7895c3b97bce9b36ae651a77fee7437b7967dd7cf8af3831a6b7c3c9b82",
+        "packet_hash": "sha256:846489bf061997279da494c19524f4eb4ddeac4b1ad88cc358b9c9c03f8c0524",
+        "raw_response_hash": "sha256:65803c950b76a5cb1c98be4b31ec5a03983243c81cb53d587dd84d097f2ffbf2",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "f4633c67-d94d-440e-bb32-0f243eddafb6",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-OBS",
+      "final_state": "blocked_on_evidence",
+      "increment": 6,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:f18cfbbbfb3ae5f9b025ce3c9cfa2e97bf3c2abc87441bce3d98399775df8265",
+        "packet_hash": "sha256:b1e445fd9fbd36847ca905ba35f64a27c7b0e92c874cf4deaf6f0eff851b357b",
+        "raw_response_hash": "sha256:71c05b8175e08ea5c3718145ce111d53585f6549495db9779f311727e90f9752",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "34ec9c9a-97b4-4a69-ab7c-7e2eb5f3632e",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-PERF",
+      "final_state": "blocked_on_evidence",
+      "increment": 6,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:6ef8f8172d0a94633cb34bb3f4965a3132d16dfecbca1ea65a2deb18af311dcf",
+        "packet_hash": "sha256:c3561d200987c6d17f2b296d4be4deef9265d74df3738290449db07391bf56a8",
+        "raw_response_hash": "sha256:c3178fc7aa5e060d7522c5c2cb0e00a726ec0a420fcf19763b93480cf5c31467",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "55145271-c754-46bc-9da9-26a6d8dcddd7",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-RESEARCH",
+      "final_state": "blocked_on_evidence",
+      "increment": 7,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:8476cabefe6329d7d13d9526957d15213606ffb65cda3882800c57f7c9f84b05",
+        "packet_hash": "sha256:bab8e6b2daa226226dd7271020be71e4df404dfff552845c2746e3566ee20af5",
+        "raw_response_hash": "sha256:ab4fc613b2ec0e7c3867c293929fd1f5afe5e82e75f3e23c49a605d880a915b9",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "3adf20a4-78ed-497f-ae73-52d7ddbe9581",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-RISK",
+      "final_state": "blocked_on_evidence",
+      "increment": 7,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:1895bb0abea055e799d52beb21a8e953ebb501c3d2e697cf86af8c63bcddbdb4",
+        "packet_hash": "sha256:5b4991fa8798b085d283e245eb49d171b58ee6d2944aa20a23448fe07409d579",
+        "raw_response_hash": "sha256:fed5de66aec7f4bb20553dd945dd407eedc9f11d47bca041651a56e09b302bfe",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    },
+    {
+      "agent_uuid": "c201aa58-2464-40f0-b869-670df2ae932f",
+      "blocking_evidence": [
+        "independent human shadow-review response",
+        "qualified semantic adjudication",
+        "project-owner candidate disposition"
+      ],
+      "candidate_complete": false,
+      "construction_state": "model_calibration_passed",
+      "designation": "SPEC-SECURITY",
+      "final_state": "blocked_on_evidence",
+      "increment": 7,
+      "lifecycle": {
+        "a100_production_authorized": false,
+        "comparison_only": true,
+        "deployment_authorized": false,
+        "product_fan_in_eligible": false,
+        "report_eligible": false,
+        "scheduled": false
+      },
+      "machine_evidence": {
+        "artifact_hash": "sha256:fe2cd5a589ec2fff56640bc153ca6a776c929893ba8d06bd3bdcf7d8e9f281e5",
+        "packet_hash": "sha256:626c95efd7ffd44e46739704ea73c85c31c7972feb5342faae1bddf5b864cf0a",
+        "raw_response_hash": "sha256:25ab6bfd548968424a5de0af2623cc306b2dc348d849dbda3637d3ffd3cb51cc",
+        "summary": "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/summary.json"
+      }
+    }
+  ]
+}

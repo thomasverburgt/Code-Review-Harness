@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "b7a03aff-6262-407f-b4ce-2eadec82508d",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-DATA",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-5.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:2389e0a2df571bd8113795f271fe8dd1fd0e76ff82fc830536696a0580b4aef6",
+      "evidence_id": "EVIDENCE-DATA-BACKUP-001",
+      "path": "src/velero/values/values.yaml",
+      "purpose": "Review SPEC-DATA evidence in Velero backup storage configuration.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:8b4ddd0557b5535b898319a59376c291a91e95f1d4273416680cffb8ab156112",
+      "id": "GX10-QWEN3-32B-SPEC-DATA-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:96005897deb59fb0a47a427a9940a568d2aff5b75558e9fae233feaf67bc3dc5",
+      "id": "SPEC-DATA-CANDIDATE-PROMPT",
+      "version": "design-0.2.0"
+    },
+    "role_schema": {
+      "hash": "sha256:23c7a065f08e148b4665f9d2545a56c9eb3b38a0441cafefc746824d810f6656",
+      "id": "SPEC-DATA-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:f3723c61473008650f3ce5a79d590296d77ef80907f6d7537f913b172f078ae2",
+      "id": "RUBRIC-SPEC-DATA-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:d587cf56bef15384bbf5fac66f60ddfa27ec013ad5110da4ff6195037e03a3c5",
+      "id": "TOOLCHAIN-SPEC-DATA-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:4d7e30ab2cdc6bfb98e1d34a0d5017acd53924b97c08bb33928ebf8184c80c87",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:aa08f45fc17d6340d57a73287e8a7a157746937475b8b4b127f53460ab29b72e",
+    "profile_id": "FOCUS-SPEC-DATA",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/data-architecture-information-reviewer.md",
+    "source_specification_hash": "sha256:c328264d2d25eeb0b538a7de8ab6ab3a314aad657ab3712904d0a627427a3614"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:91c2c2c9e0253fbd005947411105e03d8b0846848ebc8cd4c19da897a8ad28cd",
+  "manifest_id": "edba463f-fddb-5c7a-931b-743f5ceda130",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

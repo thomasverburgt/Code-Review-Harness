@@ -1,0 +1,307 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "d56a9cfd-9dad-4b0c-9b58-4a516ad3ef83",
+    "designation": "SPEC-LINT",
+    "product_id": "CODE-HARNESS-PROJECT-001"
+  },
+  "candidate_artifact_hash": "sha256:5e3d5f0df323c13ed22945cd0a6d5aa78957da09d519283be06066331a807861",
+  "candidate_artifact_id": "193100cc-cc48-5580-8730-d1322d23175c",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:f232d343158fd3c8f52f2ee66a89204cad5a9cf11e89a1b33d6cfa8b34aaae48",
+    "profile_id": "FOCUS-SPEC-LINT",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T17:05:00Z",
+  "input_manifest_hash": "sha256:77e031f5ab0387648d6b69d9e979ecd1cf62871d3327033cef651e327324f7a5",
+  "input_manifest_id": "ebe39cd7-411f-5444-8a29-a19a104c5dbd",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-ENTRY-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 18,
+          "line_fingerprint": "sha256:e3f6f6b62dfa697605240cb8366908cefc174534137ffdeebb1d0c491936592b",
+          "line_start": 18,
+          "locator_hash": "sha256:3893f949367da1170561edefdb383baaa79cfaedf3827c3cca9ce0153529cdc7",
+          "locator_id": "134516fc-bfc9-5d9f-b268-b1464c9a1c20",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 18.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "harness-check = \"code_harness.cli:check_repository\"",
+          "symbol_or_section": "project.scripts"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-RULE-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 38,
+          "line_fingerprint": "sha256:3b5d72b333f5ee2c24577f7713b2349e81c8b9a3b56adf5c572a132ce9c6de34",
+          "line_start": 38,
+          "locator_hash": "sha256:26fb68f8f9a5a09a5dd19a432c9686965633157883e532d32ed9b54a4b94e0bb",
+          "locator_id": "ae764cbe-2bd5-5f86-98a5-f1bb5ef1be9b",
+          "locator_state": "source_located",
+          "path": "tools/check_repository_structure.py",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect tools/check_repository_structure.py line 38.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "def check_utf8_and_mojibake(errors: list[str]) -> None:",
+          "symbol_or_section": "check_utf8_and_mojibake"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-LINT-001",
+      "statement": "The project declares a repository-check command and implements a text-integrity rule function."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-ENTRY-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 18,
+          "line_fingerprint": "sha256:e3f6f6b62dfa697605240cb8366908cefc174534137ffdeebb1d0c491936592b",
+          "line_start": 18,
+          "locator_hash": "sha256:3893f949367da1170561edefdb383baaa79cfaedf3827c3cca9ce0153529cdc7",
+          "locator_id": "134516fc-bfc9-5d9f-b268-b1464c9a1c20",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 18.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "harness-check = \"code_harness.cli:check_repository\"",
+          "symbol_or_section": "project.scripts"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-RULE-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 38,
+          "line_fingerprint": "sha256:3b5d72b333f5ee2c24577f7713b2349e81c8b9a3b56adf5c572a132ce9c6de34",
+          "line_start": 38,
+          "locator_hash": "sha256:26fb68f8f9a5a09a5dd19a432c9686965633157883e532d32ed9b54a4b94e0bb",
+          "locator_id": "ae764cbe-2bd5-5f86-98a5-f1bb5ef1be9b",
+          "locator_state": "source_located",
+          "path": "tools/check_repository_structure.py",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect tools/check_repository_structure.py line 38.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "def check_utf8_and_mojibake(errors: list[str]) -> None:",
+          "symbol_or_section": "check_utf8_and_mojibake"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-LINT-001",
+      "statement": "No completed checker execution result is admitted for this candidate evidence population."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-ENTRY-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 18,
+          "line_fingerprint": "sha256:e3f6f6b62dfa697605240cb8366908cefc174534137ffdeebb1d0c491936592b",
+          "line_start": 18,
+          "locator_hash": "sha256:3893f949367da1170561edefdb383baaa79cfaedf3827c3cca9ce0153529cdc7",
+          "locator_id": "134516fc-bfc9-5d9f-b268-b1464c9a1c20",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 18.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "harness-check = \"code_harness.cli:check_repository\"",
+          "symbol_or_section": "project.scripts"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-RULE-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 38,
+          "line_fingerprint": "sha256:3b5d72b333f5ee2c24577f7713b2349e81c8b9a3b56adf5c572a132ce9c6de34",
+          "line_start": 38,
+          "locator_hash": "sha256:26fb68f8f9a5a09a5dd19a432c9686965633157883e532d32ed9b54a4b94e0bb",
+          "locator_id": "ae764cbe-2bd5-5f86-98a5-f1bb5ef1be9b",
+          "locator_state": "source_located",
+          "path": "tools/check_repository_structure.py",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect tools/check_repository_structure.py line 38.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "def check_utf8_and_mojibake(errors: list[str]) -> None:",
+          "symbol_or_section": "check_utf8_and_mojibake"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-LINT-001:CAPA",
+      "statement": "Execute the pinned checker against the immutable revision and retain its source population, exit code, and output."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-ENTRY-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 18,
+          "line_fingerprint": "sha256:e3f6f6b62dfa697605240cb8366908cefc174534137ffdeebb1d0c491936592b",
+          "line_start": 18,
+          "locator_hash": "sha256:3893f949367da1170561edefdb383baaa79cfaedf3827c3cca9ce0153529cdc7",
+          "locator_id": "134516fc-bfc9-5d9f-b268-b1464c9a1c20",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 18.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "harness-check = \"code_harness.cli:check_repository\"",
+          "symbol_or_section": "project.scripts"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-LINT-RULE-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 38,
+          "line_fingerprint": "sha256:3b5d72b333f5ee2c24577f7713b2349e81c8b9a3b56adf5c572a132ce9c6de34",
+          "line_start": 38,
+          "locator_hash": "sha256:26fb68f8f9a5a09a5dd19a432c9686965633157883e532d32ed9b54a4b94e0bb",
+          "locator_id": "ae764cbe-2bd5-5f86-98a5-f1bb5ef1be9b",
+          "locator_state": "source_located",
+          "path": "tools/check_repository_structure.py",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect tools/check_repository_structure.py line 38.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "def check_utf8_and_mojibake(errors: list[str]) -> None:",
+          "symbol_or_section": "check_utf8_and_mojibake"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-LINT-001",
+      "statement": "Rule execution coverage, violations, suppressions, false positives, complexity, and trend are unknown without a completed result."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:6cab68e8678adf3534abf59b1359194ee831c44c316ceeb286ce7e30a15d81be",
+  "packet_id": "87d8be77-46e7-5bae-8811-c136d83abaa6",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

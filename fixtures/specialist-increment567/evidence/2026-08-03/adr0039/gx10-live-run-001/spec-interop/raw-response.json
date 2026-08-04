@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "interface_assessment_only_no_product_or_release_approval",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-INTEROP",
+  "domain_records": [
+    {
+      "assessment_state": "observed_positive_control",
+      "effectiveness": "configured_not_demonstrated",
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "evidence_tier": "source_contract",
+      "record_id": "RECORD-INTEROP-001",
+      "subject": "Expose protocol contract"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "missing_evidence": [
+        "consumer contracts",
+        "compatibility tests",
+        "runtime integration traces"
+      ],
+      "statement": "Consumer population, version compatibility, error semantics, and runtime integration remain unknown.",
+      "unknown_id": "UNKNOWN-INTEROP-001"
+    }
+  ]
+}

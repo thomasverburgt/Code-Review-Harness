@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "architecture_assessment_only_no_product_or_release_approval",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-ARCH",
+  "domain_records": [
+    {
+      "assessment_state": "observed_positive_control",
+      "effectiveness": "not_assessed",
+      "evidence_refs": [
+        "EVIDENCE-ARCH-PEPR-001"
+      ],
+      "evidence_tier": "design_model",
+      "record_id": "RECORD-ARCH-001",
+      "subject": "Pepr system namespace"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-ARCH-PEPR-001"
+      ],
+      "missing_evidence": [
+        "implementation mapping",
+        "observed runtime topology",
+        "architecture conformance record"
+      ],
+      "statement": "Implementation conformance, runtime topology, ownership, drift, and architectural fitness remain unknown.",
+      "unknown_id": "UNKNOWN-ARCH-001"
+    }
+  ]
+}

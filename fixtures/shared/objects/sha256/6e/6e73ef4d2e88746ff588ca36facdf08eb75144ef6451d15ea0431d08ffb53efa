@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-7-deterministic-reference",
+    "evidence_id": "EVIDENCE-RESEARCH-LICENSE-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 1,
+    "line_fingerprint": "sha256:78e416d3251590f62074f9da691961e4dd43a93af5138fb392644db9cf5a10a3",
+    "line_start": 1,
+    "locator_hash": "sha256:d91a91fafd0298f8368e11b907278127aabf00e1a006e7a98894d6dbca5643e1",
+    "locator_id": "e803c764-df88-59a4-850e-acc8f4926967",
+    "locator_state": "source_located",
+    "path": "LICENSE.md",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect LICENSE.md line 1.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "                    GNU AFFERO GENERAL PUBLIC LICENSE",
+    "source_type": "external_record",
+    "symbol_or_section": "repository license"
+  }
+]

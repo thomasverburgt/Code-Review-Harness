@@ -1,0 +1,55 @@
+{
+  "designation": "SPEC-CONTAINER",
+  "images": [
+    {
+      "image_id": "IMAGE-KEYCLOAK-CRL-AIRGAP",
+      "image_reference": null,
+      "digest": null,
+      "base_image": "scratch",
+      "composition": "staged filesystem copied into scratch image",
+      "registry_trust": "not_assessed",
+      "signature_or_attestation": "not_observed",
+      "artifact_provenance": "not_observed",
+      "patch_lifecycle": "not_applicable_scratch_base",
+      "runtime_user": "not_declared",
+      "hardening_maturity": "not_demonstrated",
+      "deployment_readiness": "unable_to_determine",
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ]
+    }
+  ],
+  "coverage": {
+    "dockerfiles_reviewed": 1,
+    "image_manifests_reviewed": 0,
+    "built_images_scanned": 0,
+    "signatures_verified": 0,
+    "runtime_configs_reviewed": 0
+  },
+  "measures": {
+    "signed_image_rate": null,
+    "supported_base_image_rate": null,
+    "patch_currency": null,
+    "reproducibility": "not_measurable",
+    "runtime_assumption_coverage": null,
+    "readiness_gap_count": 5
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-CONTAINER-001",
+      "statement": "Built contents, registry trust, signing, provenance, vulnerability exposure, runtime identity, startup behavior, and deployment readiness are not demonstrated by the admitted Dockerfile alone.",
+      "missing_evidence": [
+        "built image digest",
+        "signature and provenance",
+        "scan result",
+        "runtime configuration"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-CONTAINER-BASE-001",
+        "EVIDENCE-CONTAINER-COPY-001"
+      ]
+    }
+  ],
+  "authority_boundary": "image_and_artifact_assessment_only_no_live_cluster_release_or_product_approval"
+}

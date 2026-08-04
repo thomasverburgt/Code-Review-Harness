@@ -1,0 +1,39 @@
+{
+  "designation": "SPEC-K8S-WORKLOAD",
+  "workloads": [
+    {
+      "workload_id": "WORKLOAD-HTTPBIN",
+      "service_account": "httpbin",
+      "security_context": "least_privilege_declared",
+      "resource_controls": "declared",
+      "admission_effectiveness": "configured_not_demonstrated",
+      "runtime_effectiveness": "not_observed",
+      "deployment_readiness": "unable_to_determine",
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ]
+    }
+  ],
+  "coverage": {
+    "manifests_reviewed": 1,
+    "admission_records_reviewed": 0,
+    "runtime_records_reviewed": 0
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-K8S-WORKLOAD-001",
+      "statement": "Admission enforcement, mutation, effective namespace policy, runtime identity, and deployable readiness are not demonstrated by source configuration alone.",
+      "missing_evidence": [
+        "admission records",
+        "effective policy",
+        "runtime pod and identity evidence"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ]
+    }
+  ],
+  "authority_boundary": "workload_configuration_only_no_platform_runtime_release_or_product_approval"
+}

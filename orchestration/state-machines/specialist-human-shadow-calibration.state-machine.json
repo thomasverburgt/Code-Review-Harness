@@ -1,0 +1,36 @@
+{
+  "machine_id": "SPECIALIST-HUMAN-SHADOW-CALIBRATION",
+  "version": "1.0.0",
+  "initial_state": "candidate_manifested",
+  "terminal_states": ["retained_calibration", "reviewability_blocked", "revoked"],
+  "states": [
+    "candidate_manifested", "dispatch_ready", "candidate_generated", "structurally_valid",
+    "packet_ready", "human_review_pending", "reviewed", "adjudication_pending",
+    "retained_calibration", "reviewability_blocked", "revoked"
+  ],
+  "transitions": [
+    {"from": "candidate_manifested", "event": "bindings_validated", "to": "dispatch_ready", "actor_type": "system", "guard": "identity, specification, focus, prompt, schema, rubric, model, tool, evidence, environment, and lifecycle bindings are exact"},
+    {"from": "dispatch_ready", "event": "candidate_response_retained", "to": "candidate_generated", "actor_type": "system", "guard": "raw response and execution telemetry are immutable and comparison-only"},
+    {"from": "candidate_generated", "event": "projection_validated", "to": "structurally_valid", "actor_type": "system", "guard": "universal, specialist, role, integrity, authority, and prohibited-effect validation passes"},
+    {"from": "candidate_generated", "event": "candidate_rejected", "to": "retained_calibration", "actor_type": "system", "guard": "invalid output is retained as failed calibration evidence and cannot be published"},
+    {"from": "structurally_valid", "event": "review_packet_materialized", "to": "packet_ready", "actor_type": "system", "guard": "every distributed item has safe access-appropriate exact evidence locators"},
+    {"from": "structurally_valid", "event": "reviewability_failed", "to": "reviewability_blocked", "actor_type": "system", "guard": "a locator is missing, unverified, inaccessible, or unsafe for the intended reviewer track"},
+    {"from": "packet_ready", "event": "packet_delivered", "to": "human_review_pending", "actor_type": "system", "guard": "packet is immutable, comparison-only, and delivered only to an authorized reviewer track"},
+    {"from": "human_review_pending", "event": "non_authoritative_review_recorded", "to": "reviewed", "actor_type": "human_reviewer", "guard": "response binds the exact packet, every item, reviewer identity, access, duration, and non-authoritative acknowledgement"},
+    {"from": "reviewed", "event": "qualified_adjudication_requested", "to": "adjudication_pending", "actor_type": "project_owner", "guard": "intern or general engineering review remains calibration evidence only"},
+    {"from": "adjudication_pending", "event": "semantic_sample_adjudicated", "to": "retained_calibration", "actor_type": "qualified_subject_matter_expert", "guard": "adjudication is retained separately and creates no scheduling or downstream authority"},
+    {"from": "reviewed", "event": "retain_without_adjudication", "to": "retained_calibration", "actor_type": "project_owner", "guard": "review remains non-authoritative calibration evidence"},
+    {"from": "candidate_manifested", "event": "revoke", "to": "revoked", "actor_type": "project_owner", "guard": "candidate discovery, dispatch, and packet export are disabled without deleting history"},
+    {"from": "dispatch_ready", "event": "revoke", "to": "revoked", "actor_type": "project_owner", "guard": "candidate discovery, dispatch, and packet export are disabled without deleting history"},
+    {"from": "packet_ready", "event": "revoke", "to": "revoked", "actor_type": "project_owner", "guard": "candidate discovery, dispatch, and packet export are disabled without deleting history"},
+    {"from": "human_review_pending", "event": "revoke", "to": "revoked", "actor_type": "project_owner", "guard": "candidate discovery, dispatch, and packet export are disabled without deleting history"}
+  ],
+  "effects": {
+    "all_states": "comparison_only",
+    "scheduling_authority": "none",
+    "product_fan_in_authority": "none",
+    "report_authority": "none",
+    "deployment_authority": "none",
+    "a100_production_authority": "none"
+  }
+}

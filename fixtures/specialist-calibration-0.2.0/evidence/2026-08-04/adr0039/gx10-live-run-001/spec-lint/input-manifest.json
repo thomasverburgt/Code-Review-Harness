@@ -1,0 +1,109 @@
+{
+  "candidate": {
+    "agent_uuid": "d56a9cfd-9dad-4b0c-9b58-4a516ad3ef83",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-LINT",
+    "product_id": "CODE-HARNESS-PROJECT-001"
+  },
+  "created_at": "2026-08-03T17:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-1.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "evidence_id": "EVIDENCE-LINT-ENTRY-001",
+      "path": "pyproject.toml",
+      "purpose": "Review SPEC-LINT evidence in project.scripts.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:e40c8d28559c3ebf120565f3b3eae2116832bc5335fd6817d2b22cb530c67f9b",
+      "evidence_id": "EVIDENCE-LINT-RULE-001",
+      "path": "tools/check_repository_structure.py",
+      "purpose": "Review SPEC-LINT evidence in check_utf8_and_mojibake.",
+      "safe_for_human_review": true,
+      "source_type": "git_source"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:d8cb98596f3e007f6395c54caba7f8f01785d8746d3dd2ac89a206602f253f54",
+      "id": "GX10-QWEN3-32B-SPEC-LINT-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:0e7c6c0c27bf01efaf3a4102d4fd9bb8ede5748ecc149647e873b8d2ebcf33c6",
+      "id": "SPEC-LINT-CANDIDATE-PROMPT",
+      "version": "design-0.2.0"
+    },
+    "role_schema": {
+      "hash": "sha256:ed5c2e8f8f96234da8344e7494eda82f5d7e920b280c498cfab8df5aa48214fa",
+      "id": "SPEC-LINT-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:f43d87445979b91cb8097c1428c7c386eaeb4a67ad6179ad329e2c7c62013814",
+      "id": "RUBRIC-SPEC-LINT-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:4e90f07b9e1fc497629b235f9487454e920dcef676cc9ba76ffcc06645be00d0",
+      "id": "TOOLCHAIN-SPEC-LINT-STATIC-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:19c31b27e794297b6b92ccdaa152efdb21cb6ee3bbb40da35d56c76ddd4ab6de",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:f232d343158fd3c8f52f2ee66a89204cad5a9cf11e89a1b33d6cfa8b34aaae48",
+    "profile_id": "FOCUS-SPEC-LINT",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/linter-code-quality-reviewer.md",
+    "source_specification_hash": "sha256:ec0887b337198b93f3ec13133d64375efa6e1edde12a9910f39f4a9828c22a85"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:77e031f5ab0387648d6b69d9e979ecd1cf62871d3327033cef651e327324f7a5",
+  "manifest_id": "ebe39cd7-411f-5444-8a29-a19a104c5dbd",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git"
+  }
+}

@@ -1,0 +1,50 @@
+ADR-0039 Increment 0 GX-10 conformance
+started_at=2026-08-03T16:02:39Z
+hostname=cluster1
+architecture=aarch64
+kernel=Linux 6.17.0-1029-nvidia
+python=Python 3.12.3
+NVIDIA GB10, 580.173.02
+f5b8a5e9fd2b0e79eb3f052a5f8bb5a8b3458b9cef1bd989c5ac7cd72a0f361e  tools/specialist_shadow_calibration_runtime.py
+c3e4515ed65222bea71e14494ff105e87d89f944de6288ffaa5acc0ceda3f9ba  tools/run_specialist_shadow_calibration_reference.py
+0fca11a7606d87e057043318709e5175e98647c23f7d0a0c82f24b26f43e4817  tools/test_specialist_shadow_calibration.py
+c9377e45830dedcac4c91f64602e6f4c7ba8c529ab5e2dc735840d3aa3a6df3c  contracts/specialist-human-shadow-calibration-contract.md
+25408ef7867d5686823ee75b49ace0126bd8b0e390ba68d3cffa8e1bab680ac2  orchestration/state-machines/specialist-human-shadow-calibration.state-machine.json
+{
+  "a100_production_authorized": false,
+  "deployment_authorized": false,
+  "final_control_id": "17966281-69dd-5900-a8dd-feea2e653c4b",
+  "metrics_id": "a1c6c2e6-e3e4-5d9c-a113-676db2b4551c",
+  "packet_id": "8c492a1c-0e2a-52d7-99ba-be20aaa9dd65",
+  "product_fan_in_eligible": false,
+  "record_count": 9,
+  "scheduled": false,
+  "status": "persisted_and_revoked"
+}
+test_all_registered_specialists_have_exact_focus_sources (__main__.SpecialistShadowCalibrationTests.test_all_registered_specialists_have_exact_focus_sources) ... ok
+test_focus_binding_tampering_fails_closed (__main__.SpecialistShadowCalibrationTests.test_focus_binding_tampering_fails_closed) ... ok
+test_metrics_are_derived_and_never_establish_correctness (__main__.SpecialistShadowCalibrationTests.test_metrics_are_derived_and_never_establish_correctness) ... ok
+test_missing_locator_blocks_review_and_response (__main__.SpecialistShadowCalibrationTests.test_missing_locator_blocks_review_and_response) ... ok
+test_project_owner_enable_and_revoke_are_bounded (__main__.SpecialistShadowCalibrationTests.test_project_owner_enable_and_revoke_are_bounded) ... ok
+test_raw_restricted_marker_is_rejected (__main__.SpecialistShadowCalibrationTests.test_raw_restricted_marker_is_rejected) ... ok
+test_reference_generation_persists_immutable_rollback_package (__main__.SpecialistShadowCalibrationTests.test_reference_generation_persists_immutable_rollback_package) ... ok
+test_reference_packet_is_exact_reviewable_and_comparison_only (__main__.SpecialistShadowCalibrationTests.test_reference_packet_is_exact_reviewable_and_comparison_only) ... ok
+test_restricted_evidence_cannot_route_to_general_intern (__main__.SpecialistShadowCalibrationTests.test_restricted_evidence_cannot_route_to_general_intern) ... ok
+test_review_requires_exact_item_coverage_and_authorized_access (__main__.SpecialistShadowCalibrationTests.test_review_requires_exact_item_coverage_and_authorized_access) ... ok
+test_unauthorized_candidate_effects_and_consumers_fail_closed (__main__.SpecialistShadowCalibrationTests.test_unauthorized_candidate_effects_and_consumers_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.057s
+
+OK
+Repository structural checks passed.
+vertical slice validation passed: workflow=1; nodes=5; state_machines=4; authority_registries=1; gold_artifacts=5; human_decision_requests=1; report_governance=1
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.126s
+
+OK
+Artifact catalogs verified.
+f3c4458c9c7bb40a77594878ee65b731dae7c219da56d62e38528b397d81e1ee  /tmp/code-harness-adr0039-inc0-019fb411/conformance/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run.tar.gz
+completed_at=2026-08-03T16:02:40Z
+result=pass

@@ -1,0 +1,113 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T20:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-CICD-RELEASE-PERM-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 21,
+    "line_fingerprint": "sha256:25e3de04757e49995eac946156afe35a5092d7c64fc31e1cb6ab1d09443ddd45",
+    "line_start": 21,
+    "locator_hash": "sha256:dd90ac78d4c8a4aa7058f1332eaf15f42446e3369f92c21b5f9bf669da8cbbdc",
+    "locator_id": "52cc9a37-27d3-5399-bf6d-700ed7a1b1f4",
+    "locator_state": "source_located",
+    "path": ".github/workflows/tag-and-release.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect .github/workflows/tag-and-release.yaml line 21.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "    permissions: write-all",
+    "source_type": "configuration",
+    "symbol_or_section": "tag-new-version permissions"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T20:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-CICD-PUBLISH-PERM-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 30,
+    "line_fingerprint": "sha256:65174fd255ce5670b478af046cd43c6734f20659cd112385f753307583bfcde1",
+    "line_start": 30,
+    "locator_hash": "sha256:bbbae9ae5576a5ce464f974bdcabb10746bfb366f2b3b18c98870a973325e0ce",
+    "locator_id": "031e14b0-7922-5305-84bc-f8505ae95dac",
+    "locator_state": "source_located",
+    "path": ".github/workflows/publish.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect .github/workflows/publish.yaml line 30.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "    permissions:",
+    "source_type": "configuration",
+    "symbol_or_section": "publish job permissions"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T20:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-CICD-ACTION-PIN-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 30,
+    "line_fingerprint": "sha256:c433fbedc58d8023aa38846e14c2e4952fb349bc8be4c4fbb98ddfc21c677827",
+    "line_start": 30,
+    "locator_hash": "sha256:1f3e0c7928692564bc54f29a432a323d1275f0c290691a5db8921113657a8b9c",
+    "locator_id": "3321289c-3e51-5d73-8b6e-6e04e49d7390",
+    "locator_state": "source_located",
+    "path": ".github/workflows/tag-and-release.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect .github/workflows/tag-and-release.yaml line 30.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0",
+    "source_type": "configuration",
+    "symbol_or_section": "release action pin"
+  }
+]

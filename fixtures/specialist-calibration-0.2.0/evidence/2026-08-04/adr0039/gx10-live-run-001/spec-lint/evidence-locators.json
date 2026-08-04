@@ -1,0 +1,76 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint."
+      ]
+    },
+    "collected_at": "2026-08-03T17:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-1-deterministic-reference",
+    "evidence_id": "EVIDENCE-LINT-ENTRY-001",
+    "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+    "line_end": 18,
+    "line_fingerprint": "sha256:e3f6f6b62dfa697605240cb8366908cefc174534137ffdeebb1d0c491936592b",
+    "line_start": 18,
+    "locator_hash": "sha256:3893f949367da1170561edefdb383baaa79cfaedf3827c3cca9ce0153529cdc7",
+    "locator_id": "134516fc-bfc9-5d9f-b268-b1464c9a1c20",
+    "locator_state": "source_located",
+    "path": "pyproject.toml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+    "reproduction_steps": [
+      "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+      "Inspect pyproject.toml line 18.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "harness-check = \"code_harness.cli:check_repository\"",
+    "source_type": "configuration",
+    "symbol_or_section": "project.scripts"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint."
+      ]
+    },
+    "collected_at": "2026-08-03T17:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-1-deterministic-reference",
+    "evidence_id": "EVIDENCE-LINT-RULE-001",
+    "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+    "line_end": 38,
+    "line_fingerprint": "sha256:3b5d72b333f5ee2c24577f7713b2349e81c8b9a3b56adf5c572a132ce9c6de34",
+    "line_start": 38,
+    "locator_hash": "sha256:26fb68f8f9a5a09a5dd19a432c9686965633157883e532d32ed9b54a4b94e0bb",
+    "locator_id": "ae764cbe-2bd5-5f86-98a5-f1bb5ef1be9b",
+    "locator_state": "source_located",
+    "path": "tools/check_repository_structure.py",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+    "reproduction_steps": [
+      "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+      "Inspect tools/check_repository_structure.py line 38.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "def check_utf8_and_mojibake(errors: list[str]) -> None:",
+    "source_type": "git_source",
+    "symbol_or_section": "check_utf8_and_mojibake"
+  }
+]

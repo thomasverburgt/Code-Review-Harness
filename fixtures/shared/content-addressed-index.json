@@ -3,6 +3,19 @@
   "index_version": "1.0.0",
   "objects": [
     {
+      "bytes": 4610,
+      "canonical_source": "fixtures/shared/objects/sha256/03/03e7af51c3f4e935bd91d423202983c5caf2381017e81dadfb8bb863725eef8e",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-iac/evidence-locators.json",
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-iac/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:03e7af51c3f4e935bd91d423202983c5caf2381017e81dadfb8bb863725eef8e",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/gold/spec-iac/evidence-locators.json"
+      ]
+    },
+    {
       "bytes": 9415,
       "canonical_source": "fixtures/shared/objects/sha256/04/0459a6a6f1c6e3f4df190795837599b91aaac1dc2ce8fe02359e9c85f8bcad7e",
       "immutable_evidence_copies": [
@@ -12,6 +25,42 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:0459a6a6f1c6e3f4df190795837599b91aaac1dc2ce8fe02359e9c85f8bcad7e",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 3191,
+      "canonical_source": "fixtures/shared/objects/sha256/04/0468181a13f798455d1fa620899694fcb2650803595b92f79d9cd24047bff06b",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:0468181a13f798455d1fa620899694fcb2650803595b92f79d9cd24047bff06b",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 8558,
+      "canonical_source": "fixtures/shared/objects/sha256/04/04a767cfff82ebd17222aba7440632d627bfbb41fe14dce6ca58e090b9cb8b4b",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/04/04a767cfff82ebd17222aba7440632d627bfbb41fe14dce6ca58e090b9cb8b4b.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:04a767cfff82ebd17222aba7440632d627bfbb41fe14dce6ca58e090b9cb8b4b",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/04/04a767cfff82ebd17222aba7440632d627bfbb41fe14dce6ca58e090b9cb8b4b.json"
+      ]
+    },
+    {
+      "bytes": 3262,
+      "canonical_source": "fixtures/shared/objects/sha256/05/05456ebab539dc0d23cfb2d802bc56592d10c13ecea45b0925337fffb4dc53db",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/human-shadow-review-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:05456ebab539dc0d23cfb2d802bc56592d10c13ecea45b0925337fffb4dc53db",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/human-shadow-review-response.json"
+      ]
     },
     {
       "bytes": 4121,
@@ -26,6 +75,66 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:0964b6beb92d1151faaa7fdf02d841de3884bd9dbc50467e2b747ac9a68ecc2f",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 3416,
+      "canonical_source": "fixtures/shared/objects/sha256/0d/0d254af58f71bb770a7486be29a8067a95ed73dfd98510e88f2a19a2cb97d48f",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-arch/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:0d254af58f71bb770a7486be29a8067a95ed73dfd98510e88f2a19a2cb97d48f",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-arch/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1370,
+      "canonical_source": "fixtures/shared/objects/sha256/14/140effdb6f107f988b6e8347a93ec5dcc35365ef336cc5c9e23a3dd14d64eeff",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-lint/raw-response.json",
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-lint/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:140effdb6f107f988b6e8347a93ec5dcc35365ef336cc5c9e23a3dd14d64eeff",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 10899,
+      "canonical_source": "fixtures/shared/objects/sha256/15/15059c7569b01f5ce59d153db7f5297c98970a57847d299878aa68277eaf1ddb",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/human-shadow-review-packet.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:15059c7569b01f5ce59d153db7f5297c98970a57847d299878aa68277eaf1ddb",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/human-shadow-review-packet.json"
+      ]
+    },
+    {
+      "bytes": 6009,
+      "canonical_source": "fixtures/shared/objects/sha256/16/1614caf969d897164307daa56d5e10fd2dfdb2f678e3ed2cc304136616a2af1e",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/16/1614caf969d897164307daa56d5e10fd2dfdb2f678e3ed2cc304136616a2af1e.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:1614caf969d897164307daa56d5e10fd2dfdb2f678e3ed2cc304136616a2af1e",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/16/1614caf969d897164307daa56d5e10fd2dfdb2f678e3ed2cc304136616a2af1e.json"
+      ]
+    },
+    {
+      "bytes": 3638,
+      "canonical_source": "fixtures/shared/objects/sha256/18/181bf50dfb589659d29aa1d44247b89bae07e62d9eee58fcfe27011501b0a3bb",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-risk/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-risk/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:181bf50dfb589659d29aa1d44247b89bae07e62d9eee58fcfe27011501b0a3bb",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-risk/evidence-locators.json"
+      ]
     },
     {
       "bytes": 1204,
@@ -48,6 +157,67 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:1a53108edaf3d3a938353e64c926c2ed459adaf7a75b3014a62054b4defd43b5",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2966,
+      "canonical_source": "fixtures/shared/objects/sha256/1b/1b21800e1206dfc3312b07ae60ad766234225cb8540c04cb4feac48b8a769f5c",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-deps/evidence-locators.json",
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-deps/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:1b21800e1206dfc3312b07ae60ad766234225cb8540c04cb4feac48b8a769f5c",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-static-evidence-increment1/gold/spec-deps/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 4023,
+      "canonical_source": "fixtures/shared/objects/sha256/1e/1e27162a41146b030c3786122d6eb0db6f2060528f4929d318ca9f0f96c89633",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:1e27162a41146b030c3786122d6eb0db6f2060528f4929d318ca9f0f96c89633",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1610,
+      "canonical_source": "fixtures/shared/objects/sha256/1e/1e9e3c7bd72b73e68cd44bc8a23a2346c7d395d7323ee9fc6e8c2a323d743fd3",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-fmeca/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-fmeca/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:1e9e3c7bd72b73e68cd44bc8a23a2346c7d395d7323ee9fc6e8c2a323d743fd3",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-fmeca/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 1338,
+      "canonical_source": "fixtures/shared/objects/sha256/25/25158eb0359ce71cf3854cefc7c335b367991e4e12c31a5983cf6f283bae0611",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/25/25158eb0359ce71cf3854cefc7c335b367991e4e12c31a5983cf6f283bae0611.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:25158eb0359ce71cf3854cefc7c335b367991e4e12c31a5983cf6f283bae0611",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/25/25158eb0359ce71cf3854cefc7c335b367991e4e12c31a5983cf6f283bae0611.json"
+      ]
+    },
+    {
+      "bytes": 1763,
+      "canonical_source": "fixtures/shared/objects/sha256/25/25ab6bfd548968424a5de0af2623cc306b2dc348d849dbda3637d3ffd3cb51cc",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-security/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-security/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:25ab6bfd548968424a5de0af2623cc306b2dc348d849dbda3637d3ffd3cb51cc",
       "reusable_fixture_copies": []
     },
     {
@@ -75,6 +245,30 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:292ebe27def4ca04bc9511c301e29335e0bbe026445c756fc5f3b9e093c70156",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1378,
+      "canonical_source": "fixtures/shared/objects/sha256/2a/2a099b3e0e94ae6e9867eff016abe6492cb315d6ab6075afbaeab4fd7b6fd8ac",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/2a/2a099b3e0e94ae6e9867eff016abe6492cb315d6ab6075afbaeab4fd7b6fd8ac.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:2a099b3e0e94ae6e9867eff016abe6492cb315d6ab6075afbaeab4fd7b6fd8ac",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/2a/2a099b3e0e94ae6e9867eff016abe6492cb315d6ab6075afbaeab4fd7b6fd8ac.json"
+      ]
+    },
+    {
+      "bytes": 5306,
+      "canonical_source": "fixtures/shared/objects/sha256/2c/2cad1af42c8a00b5b0074b9bfa443a31881c3a5984d5b987fd0059d0cfd18957",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-comms/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:2cad1af42c8a00b5b0074b9bfa443a31881c3a5984d5b987fd0059d0cfd18957",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/input-manifest.json"
+      ]
     },
     {
       "bytes": 5469,
@@ -116,6 +310,67 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 2022,
+      "canonical_source": "fixtures/shared/objects/sha256/37/373e4d7a951bc6b7b0b901004cae1e9c6cc12fa6deb584ca0204b5a9ad97e95d",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-comms/raw-response.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-comms/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:373e4d7a951bc6b7b0b901004cae1e9c6cc12fa6deb584ca0204b5a9ad97e95d",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1775,
+      "canonical_source": "fixtures/shared/objects/sha256/3b/3b3302ada97a001d738bbb279789273729e42c4ab3106e437ccbce15178ada99",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-arch/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-arch/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:3b3302ada97a001d738bbb279789273729e42c4ab3106e437ccbce15178ada99",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-arch/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 1635,
+      "canonical_source": "fixtures/shared/objects/sha256/3e/3eebb594c586798860e52daac51abc6c7142a12f9cb3a65e531b526f3fe9a315",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-secrets/evidence-locators.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-secrets/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:3eebb594c586798860e52daac51abc6c7142a12f9cb3a65e531b526f3fe9a315",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-secrets/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 837,
+      "canonical_source": "fixtures/shared/objects/sha256/3f/3fdb76be5c99848edd6e8eaf7ff9de839e6eb0c9c9950324c0123ae0d00bc941",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/3f/3fdb76be5c99848edd6e8eaf7ff9de839e6eb0c9c9950324c0123ae0d00bc941.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:3fdb76be5c99848edd6e8eaf7ff9de839e6eb0c9c9950324c0123ae0d00bc941",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/3f/3fdb76be5c99848edd6e8eaf7ff9de839e6eb0c9c9950324c0123ae0d00bc941.json"
+      ]
+    },
+    {
+      "bytes": 375,
+      "canonical_source": "fixtures/shared/objects/sha256/41/4127aa0350df3f3eb3814b482680b2ebba95e698e7de268b7e6cc579ccdc53cc",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/specialist-shadow-response/6cc5c95c-9986-5ba7-bf9e-f526a11d6286.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:4127aa0350df3f3eb3814b482680b2ebba95e698e7de268b7e6cc579ccdc53cc",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/specialist-shadow-response/6cc5c95c-9986-5ba7-bf9e-f526a11d6286.json"
+      ]
+    },
+    {
       "bytes": 533,
       "canonical_source": "fixtures/shared/objects/sha256/41/414fd9d9db0104613618b79cddf6f4aee281258a5a75d4c6745c9dc94e49d3f7",
       "immutable_evidence_copies": [
@@ -139,6 +394,17 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 997,
+      "canonical_source": "fixtures/shared/objects/sha256/44/44dcfc303ac1db586db12870712ff14edbd36ba06dadd20e08f94a50fb7580da",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-arch/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-arch/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:44dcfc303ac1db586db12870712ff14edbd36ba06dadd20e08f94a50fb7580da",
+      "reusable_fixture_copies": []
+    },
+    {
       "bytes": 1437,
       "canonical_source": "fixtures/shared/objects/sha256/45/45f70dfcb6d408174195212a2def0e8e271b5815d213eaaff43a697a1d865fc8",
       "immutable_evidence_copies": [
@@ -148,6 +414,42 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:45f70dfcb6d408174195212a2def0e8e271b5815d213eaaff43a697a1d865fc8",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2760,
+      "canonical_source": "fixtures/shared/objects/sha256/50/500d79f218365d1ea03d0593da869642b7b518cea920434e37908279b8e1252b",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/50/500d79f218365d1ea03d0593da869642b7b518cea920434e37908279b8e1252b.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:500d79f218365d1ea03d0593da869642b7b518cea920434e37908279b8e1252b",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/50/500d79f218365d1ea03d0593da869642b7b518cea920434e37908279b8e1252b.json"
+      ]
+    },
+    {
+      "bytes": 339,
+      "canonical_source": "fixtures/shared/objects/sha256/51/519f6701473415a749323ee1aadcf3707557bfcd8440e20ab94ce17e171f7bf7",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/artifact/74777526-1068-550b-9ea3-5077614120b3.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:519f6701473415a749323ee1aadcf3707557bfcd8440e20ab94ce17e171f7bf7",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/artifact/74777526-1068-550b-9ea3-5077614120b3.json"
+      ]
+    },
+    {
+      "bytes": 3339,
+      "canonical_source": "fixtures/shared/objects/sha256/53/536b09a6303585a0437f0d00e62427bf3bc11731615972d6d9f87fdd100d5072",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/53/536b09a6303585a0437f0d00e62427bf3bc11731615972d6d9f87fdd100d5072.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:536b09a6303585a0437f0d00e62427bf3bc11731615972d6d9f87fdd100d5072",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/53/536b09a6303585a0437f0d00e62427bf3bc11731615972d6d9f87fdd100d5072.json"
+      ]
     },
     {
       "bytes": 11271,
@@ -173,6 +475,31 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 3487,
+      "canonical_source": "fixtures/shared/objects/sha256/54/54cef961588b4c6bcb17c82ae2591fc32f6af0466b2a58e4388bce04a4730773",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-fmeca/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:54cef961588b4c6bcb17c82ae2591fc32f6af0466b2a58e4388bce04a4730773",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-fmeca/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1843,
+      "canonical_source": "fixtures/shared/objects/sha256/56/5690cdd62ee79f48d124c3fad62d6d7641c3d227f62d6be8ffe7fb3977e07bbd",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-interop/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-interop/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:5690cdd62ee79f48d124c3fad62d6d7641c3d227f62d6be8ffe7fb3977e07bbd",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-interop/evidence-locators.json"
+      ]
+    },
+    {
       "bytes": 2573,
       "canonical_source": "fixtures/shared/objects/sha256/58/58c56cfd650f34dba9acc4440f1d5f8b803ef13d1d6aa8e28d8afffcaed39d64",
       "immutable_evidence_copies": [
@@ -182,6 +509,41 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:58c56cfd650f34dba9acc4440f1d5f8b803ef13d1d6aa8e28d8afffcaed39d64",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 4624,
+      "canonical_source": "fixtures/shared/objects/sha256/5c/5cfcc47c4d9096691c238d7dfd807c7f461c09d5b35a2480c2fe619bf3e3f08b",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-cicd/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:5cfcc47c4d9096691c238d7dfd807c7f461c09d5b35a2480c2fe619bf3e3f08b",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/gold/spec-cicd/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 3999,
+      "canonical_source": "fixtures/shared/objects/sha256/5d/5df0b024a5dfa549f1659530da7048e8c657bf6df0e9eb8ee70ae4100cba2568",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-lint/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:5df0b024a5dfa549f1659530da7048e8c657bf6df0e9eb8ee70ae4100cba2568",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-static-evidence-increment1/gold/spec-lint/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1786,
+      "canonical_source": "fixtures/shared/objects/sha256/5e/5e619ea9b60cdc5dfc13c351fa93a3dad0b09994e7a7ebb499e8eb3d32732c2b",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-container/raw-response.json",
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-container/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:5e619ea9b60cdc5dfc13c351fa93a3dad0b09994e7a7ebb499e8eb3d32732c2b",
       "reusable_fixture_copies": []
     },
     {
@@ -196,6 +558,28 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 1199,
+      "canonical_source": "fixtures/shared/objects/sha256/63/6316c6e2a07f39f4a8aa433f7da9b0336c84d6867dad7f2e625811e0990a8640",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-secure-code/raw-response.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-secure-code/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6316c6e2a07f39f4a8aa433f7da9b0336c84d6867dad7f2e625811e0990a8640",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1058,
+      "canonical_source": "fixtures/shared/objects/sha256/65/65803c950b76a5cb1c98be4b31ec5a03983243c81cb53d587dd84d097f2ffbf2",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-fmeca/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-fmeca/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:65803c950b76a5cb1c98be4b31ec5a03983243c81cb53d587dd84d097f2ffbf2",
+      "reusable_fixture_copies": []
+    },
+    {
       "bytes": 311,
       "canonical_source": "fixtures/shared/objects/sha256/6a/6a3beaf7c89abe95150111749a119d562f38e90edc81724fac68b3fa3ebfb98c",
       "immutable_evidence_copies": [
@@ -205,6 +589,54 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:6a3beaf7c89abe95150111749a119d562f38e90edc81724fac68b3fa3ebfb98c",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 365,
+      "canonical_source": "fixtures/shared/objects/sha256/6b/6b005de164a4cd8ae8c120c138faec2eb1c24f2c635650669552316a7126091a",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/summary.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6b005de164a4cd8ae8c120c138faec2eb1c24f2c635650669552316a7126091a",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/summary.json"
+      ]
+    },
+    {
+      "bytes": 1315,
+      "canonical_source": "fixtures/shared/objects/sha256/6b/6b4c73799be3e5e6ac67fd207418b2687f6172f4ed7baa6d46c95b3fa6be2d96",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/human-shadow-review-metrics.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6b4c73799be3e5e6ac67fd207418b2687f6172f4ed7baa6d46c95b3fa6be2d96",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/human-shadow-review-metrics.json"
+      ]
+    },
+    {
+      "bytes": 4088,
+      "canonical_source": "fixtures/shared/objects/sha256/6b/6bd0b187130fb5db120d24ede5ff559c6f5ae58242a859172ff043252c008e3b",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-k8s-workload/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6bd0b187130fb5db120d24ede5ff559c6f5ae58242a859172ff043252c008e3b",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-workload/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1087,
+      "canonical_source": "fixtures/shared/objects/sha256/6d/6d104850915ca45b83c70b0a14549aa79ca24c96cc208c256912d83be4b60ad5",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/6d/6d104850915ca45b83c70b0a14549aa79ca24c96cc208c256912d83be4b60ad5.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6d104850915ca45b83c70b0a14549aa79ca24c96cc208c256912d83be4b60ad5",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/6d/6d104850915ca45b83c70b0a14549aa79ca24c96cc208c256912d83be4b60ad5.json"
+      ]
     },
     {
       "bytes": 11724,
@@ -221,6 +653,127 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:6e7381d2dad28eea4cce10f607e12f929e53e9d173a039284284d1953ed2603a",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1518,
+      "canonical_source": "fixtures/shared/objects/sha256/6e/6e73ef4d2e88746ff588ca36facdf08eb75144ef6451d15ea0431d08ffb53efa",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-research/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-research/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6e73ef4d2e88746ff588ca36facdf08eb75144ef6451d15ea0431d08ffb53efa",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-research/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 996,
+      "canonical_source": "fixtures/shared/objects/sha256/6f/6f56ef59d25e9d955059fd0ca424a1bbe1ddac93de4dc8a4be084567d067f173",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-io/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-io/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:6f56ef59d25e9d955059fd0ca424a1bbe1ddac93de4dc8a4be084567d067f173",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1027,
+      "canonical_source": "fixtures/shared/objects/sha256/71/71c05b8175e08ea5c3718145ce111d53585f6549495db9779f311727e90f9752",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-obs/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-obs/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:71c05b8175e08ea5c3718145ce111d53585f6549495db9779f311727e90f9752",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 7700,
+      "canonical_source": "fixtures/shared/objects/sha256/71/71d17ddf30272680f39e4d8c6b1d061bc794ca0ffa6acd374ac366ffd2061e7c",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/candidate.artifact.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:71d17ddf30272680f39e4d8c6b1d061bc794ca0ffa6acd374ac366ffd2061e7c",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/candidate.artifact.json"
+      ]
+    },
+    {
+      "bytes": 952,
+      "canonical_source": "fixtures/shared/objects/sha256/75/750d6f9bce342c643bcd3dae4b319464f64215c2f216efd83101bc848930e6c1",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/control-revoke.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:750d6f9bce342c643bcd3dae4b319464f64215c2f216efd83101bc848930e6c1",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/control-revoke.json"
+      ]
+    },
+    {
+      "bytes": 4159,
+      "canonical_source": "fixtures/shared/objects/sha256/76/76748c1aa146ec39425725b1c08e930eb2d98a3f1ffa3934c18dc01553d3d7b7",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-secure-code/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:76748c1aa146ec39425725b1c08e930eb2d98a3f1ffa3934c18dc01553d3d7b7",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-secure-code/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 6364,
+      "canonical_source": "fixtures/shared/objects/sha256/7c/7c4fca01daaf03843505e2d6a81d1a0471871c3e2a971f2adfe1a6a0270276d6",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-comms/evidence-locators.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-comms/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:7c4fca01daaf03843505e2d6a81d1a0471871c3e2a971f2adfe1a6a0270276d6",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 3523,
+      "canonical_source": "fixtures/shared/objects/sha256/7f/7f63755fa6bdaf7045392907f74ee40c13d8f818486e3d46fc14ca543e650480",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-k8s-platform/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:7f63755fa6bdaf7045392907f74ee40c13d8f818486e3d46fc14ca543e650480",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1562,
+      "canonical_source": "fixtures/shared/objects/sha256/88/88a76b0e47142f04bf980efe8eb1ea15c6577f55287794bcac8a065e5eabf134",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-k8s-platform/evidence-locators.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-k8s-platform/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:88a76b0e47142f04bf980efe8eb1ea15c6577f55287794bcac8a065e5eabf134",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-platform/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 3433,
+      "canonical_source": "fixtures/shared/objects/sha256/8b/8b59d4896ea1580aede5eedd01206599be2b8c62cf30b11c41d39c7c893d0926",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-io/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:8b59d4896ea1580aede5eedd01206599be2b8c62cf30b11c41d39c7c893d0926",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-io/input-manifest.json"
+      ]
     },
     {
       "bytes": 1126,
@@ -247,6 +800,115 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 3041,
+      "canonical_source": "fixtures/shared/objects/sha256/8e/8e66cee77f8a15b4688641c6202de9cd14b0726a55fecd1217ab916d0d222f02",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-container/evidence-locators.json",
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-container/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:8e66cee77f8a15b4688641c6202de9cd14b0726a55fecd1217ab916d0d222f02",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/gold/spec-container/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 753,
+      "canonical_source": "fixtures/shared/objects/sha256/8f/8f0efab385d49b7e1f556c13dda6ccd75a6d3a77b4f475d1bae1a3a885646383",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-secrets/raw-response.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-secrets/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:8f0efab385d49b7e1f556c13dda6ccd75a6d3a77b4f475d1bae1a3a885646383",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 4152,
+      "canonical_source": "fixtures/shared/objects/sha256/90/908c5306b049caa1240c4f0831ee10a2bb43ae9f1da6697cfe1eac07cb6343d8",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-risk/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:908c5306b049caa1240c4f0831ee10a2bb43ae9f1da6697cfe1eac07cb6343d8",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-risk/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 3062,
+      "canonical_source": "fixtures/shared/objects/sha256/91/9184f607e046208ad47e71c2b03141519688abf63a1cee7cf6f99f885429651a",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-k8s-workload/evidence-locators.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-k8s-workload/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:9184f607e046208ad47e71c2b03141519688abf63a1cee7cf6f99f885429651a",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-k8s-workload/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 340,
+      "canonical_source": "fixtures/shared/objects/sha256/93/934d9725ef14ae3493fab182f6ad6f378706cc32c7c2015fa192871881bb7db9",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/specialist-shadow-packet/8c492a1c-0e2a-52d7-99ba-be20aaa9dd65.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:934d9725ef14ae3493fab182f6ad6f378706cc32c7c2015fa192871881bb7db9",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/specialist-shadow-packet/8c492a1c-0e2a-52d7-99ba-be20aaa9dd65.json"
+      ]
+    },
+    {
+      "bytes": 4071,
+      "canonical_source": "fixtures/shared/objects/sha256/94/94e8bf26983f09ca542e60c33c68731646a129c5e06e2d0b347963a9f90e70a8",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-container/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:94e8bf26983f09ca542e60c33c68731646a129c5e06e2d0b347963a9f90e70a8",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/gold/spec-container/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1540,
+      "canonical_source": "fixtures/shared/objects/sha256/97/9790f5bff8a5f0586f194ca8978bc8ac45a762ef2dcd2329b42c60fef15d06bb",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-data/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-data/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:9790f5bff8a5f0586f194ca8978bc8ac45a762ef2dcd2329b42c60fef15d06bb",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-data/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 364,
+      "canonical_source": "fixtures/shared/objects/sha256/98/988b1990ee39a4191f9611945852ebec670205943997e48b70d72d3c62d48343",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/evidence-locator/43ffac2d-c6b1-5967-9f07-663708fb05d4.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:988b1990ee39a4191f9611945852ebec670205943997e48b70d72d3c62d48343",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/evidence-locator/43ffac2d-c6b1-5967-9f07-663708fb05d4.json"
+      ]
+    },
+    {
+      "bytes": 1053,
+      "canonical_source": "fixtures/shared/objects/sha256/99/99cfb2c67c9fa57bcd3ba17f4c68a4d413731cf1ff80bdfbaf23afab7ba08120",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-diagram/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-diagram/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:99cfb2c67c9fa57bcd3ba17f4c68a4d413731cf1ff80bdfbaf23afab7ba08120",
+      "reusable_fixture_copies": []
+    },
+    {
       "bytes": 4983,
       "canonical_source": "fixtures/shared/objects/sha256/9b/9bd56c83c07d50e20303b2953434f41e6e7597cbf782a5dadf5e6906af2f1ef0",
       "immutable_evidence_copies": [
@@ -256,6 +918,32 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:9bd56c83c07d50e20303b2953434f41e6e7597cbf782a5dadf5e6906af2f1ef0",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 3246,
+      "canonical_source": "fixtures/shared/objects/sha256/9e/9e130975bf94c47f6d4f7ee6c1f8c780ff136b384076c6d7f7d957bff7e0672d",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-secure-code/evidence-locators.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-secure-code/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:9e130975bf94c47f6d4f7ee6c1f8c780ff136b384076c6d7f7d957bff7e0672d",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-secure-code/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 1542,
+      "canonical_source": "fixtures/shared/objects/sha256/9f/9f4e4114d224237d33011581ad5a463152e51f82d6ac6e5cd3a4398da853a2d0",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-io/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-io/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:9f4e4114d224237d33011581ad5a463152e51f82d6ac6e5cd3a4398da853a2d0",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-io/evidence-locators.json"
+      ]
     },
     {
       "bytes": 4708,
@@ -269,6 +957,32 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 3055,
+      "canonical_source": "fixtures/shared/objects/sha256/a3/a34f307c4278d0c8a68cf3fe5bca6e1c09a2acc7d2425eb3eea458dec0475aa2",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-lint/evidence-locators.json",
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-lint/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:a34f307c4278d0c8a68cf3fe5bca6e1c09a2acc7d2425eb3eea458dec0475aa2",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-static-evidence-increment1/gold/spec-lint/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 1707,
+      "canonical_source": "fixtures/shared/objects/sha256/a3/a3a8646cababa83c2bde94b74767fa0955f000277d9630aaad470c12c2a998f5",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-diagram/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-diagram/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:a3a8646cababa83c2bde94b74767fa0955f000277d9630aaad470c12c2a998f5",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-diagram/evidence-locators.json"
+      ]
+    },
+    {
       "bytes": 1494,
       "canonical_source": "fixtures/shared/objects/sha256/a3/a3b715f321cd76a31863bddb438f1e1282e7cc2167ba1e77a4b1d51d0dbd85a4",
       "immutable_evidence_copies": [
@@ -277,6 +991,29 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:a3b715f321cd76a31863bddb438f1e1282e7cc2167ba1e77a4b1d51d0dbd85a4",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 342,
+      "canonical_source": "fixtures/shared/objects/sha256/a4/a49857ffa908542b302e6c3eb52d9bf236a2a8acb0305dba86899c99f196bee1",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/specialist-shadow-control/79c833c2-99f0-5a20-9840-8026f250ef15.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:a49857ffa908542b302e6c3eb52d9bf236a2a8acb0305dba86899c99f196bee1",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/specialist-shadow-control/79c833c2-99f0-5a20-9840-8026f250ef15.json"
+      ]
+    },
+    {
+      "bytes": 2026,
+      "canonical_source": "fixtures/shared/objects/sha256/a5/a58b5ad0b00848fa6dd8ddc65045760c4d5251ab70a964cadd4b2ce02c115571",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-iac/raw-response.json",
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-iac/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:a58b5ad0b00848fa6dd8ddc65045760c4d5251ab70a964cadd4b2ce02c115571",
       "reusable_fixture_copies": []
     },
     {
@@ -289,6 +1026,28 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:a65e88e6dd8d488c83d63d681ccd4683bc2d33c33b243509640c9722c3a9796a",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2658,
+      "canonical_source": "fixtures/shared/objects/sha256/aa/aaef0f8578b2d96d7f5ffc61ef7defc9e7a395b60f323b80c426a32fbf1932a5",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-cicd/raw-response.json",
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-cicd/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:aaef0f8578b2d96d7f5ffc61ef7defc9e7a395b60f323b80c426a32fbf1932a5",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1035,
+      "canonical_source": "fixtures/shared/objects/sha256/ab/ab4fc613b2ec0e7c3867c293929fd1f5afe5e82e75f3e23c49a605d880a915b9",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-research/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-research/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:ab4fc613b2ec0e7c3867c293929fd1f5afe5e82e75f3e23c49a605d880a915b9",
       "reusable_fixture_copies": []
     },
     {
@@ -313,6 +1072,90 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:afd6c680881a7f7d76f3b13ad72f725dba8b5cdd2cad85bcbcef21c3839ca8d1",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1081,
+      "canonical_source": "fixtures/shared/objects/sha256/b0/b0a020fd29409080e480ec3acd9957013673e57c7c00d098269973853fd75c9e",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-k8s-platform/raw-response.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-k8s-platform/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:b0a020fd29409080e480ec3acd9957013673e57c7c00d098269973853fd75c9e",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1253,
+      "canonical_source": "fixtures/shared/objects/sha256/b6/b62ddd11c75dfe1f6bfc7bf53509bf30a3dc5a070c483aad22207abc223771f2",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-k8s-workload/raw-response.json",
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-k8s-workload/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:b62ddd11c75dfe1f6bfc7bf53509bf30a3dc5a070c483aad22207abc223771f2",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 4697,
+      "canonical_source": "fixtures/shared/objects/sha256/b6/b6c3f8ad1c32a5082076ca6eb4b1f070eafc590401d20a9037bf24ae62d601a0",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-cicd/evidence-locators.json",
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-cicd/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:b6c3f8ad1c32a5082076ca6eb4b1f070eafc590401d20a9037bf24ae62d601a0",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/gold/spec-cicd/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 342,
+      "canonical_source": "fixtures/shared/objects/sha256/b7/b714a2ad4ae85e4121ed4a1a4dd3aedec80e23fd6884eec868c7cdeb9f55370e",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/specialist-shadow-control/17966281-69dd-5900-a8dd-feea2e653c4b.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:b714a2ad4ae85e4121ed4a1a4dd3aedec80e23fd6884eec868c7cdeb9f55370e",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/specialist-shadow-control/17966281-69dd-5900-a8dd-feea2e653c4b.json"
+      ]
+    },
+    {
+      "bytes": 364,
+      "canonical_source": "fixtures/shared/objects/sha256/b7/b73f83c848c6933183e3012dbb277ce30fe47a558216222f961a3ba473f76399",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/evidence-locator/29b620b7-1139-5181-a5cf-337848e0f5af.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:b73f83c848c6933183e3012dbb277ce30fe47a558216222f961a3ba473f76399",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/evidence-locator/29b620b7-1139-5181-a5cf-337848e0f5af.json"
+      ]
+    },
+    {
+      "bytes": 926,
+      "canonical_source": "fixtures/shared/objects/sha256/b7/b7a9d534da75cfb3d26a7132e2042923ea30d9e372ab7007c75bd00ff746db54",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/control-enable.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:b7a9d534da75cfb3d26a7132e2042923ea30d9e372ab7007c75bd00ff746db54",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/control-enable.json"
+      ]
+    },
+    {
+      "bytes": 1521,
+      "canonical_source": "fixtures/shared/objects/sha256/b8/b841857dc85b6ee8bcd6b59786d28af50fb79e78534494c96d48a33c9d9464c2",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-perf/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-perf/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:b841857dc85b6ee8bcd6b59786d28af50fb79e78534494c96d48a33c9d9464c2",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-perf/evidence-locators.json"
+      ]
     },
     {
       "bytes": 5060,
@@ -341,6 +1184,18 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 3461,
+      "canonical_source": "fixtures/shared/objects/sha256/bf/bf7c897760d4145b9a45d6befc08520808698b8542b8bbf4d99bb59e8fb5741c",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-k8s-secure-increment34/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-secrets/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:bf7c897760d4145b9a45d6befc08520808698b8542b8bbf4d99bb59e8fb5741c",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-k8s-secure-increment34/gold/spec-secrets/input-manifest.json"
+      ]
+    },
+    {
       "bytes": 1326,
       "canonical_source": "fixtures/shared/objects/sha256/c2/c231a0ef2f8195e82e0f2adc58d2c9d346cda68f3acfae6c5d29b74eab40a4e9",
       "immutable_evidence_copies": [
@@ -350,6 +1205,90 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:c231a0ef2f8195e82e0f2adc58d2c9d346cda68f3acfae6c5d29b74eab40a4e9",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 1037,
+      "canonical_source": "fixtures/shared/objects/sha256/c3/c3178fc7aa5e060d7522c5c2cb0e00a726ec0a420fcf19763b93480cf5c31467",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-perf/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-perf/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:c3178fc7aa5e060d7522c5c2cb0e00a726ec0a420fcf19763b93480cf5c31467",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 3464,
+      "canonical_source": "fixtures/shared/objects/sha256/c4/c46148e1c6dd930c429b95457bd1f55fc6f71c0014645fe55e6d4ce75138eed6",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-data/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:c46148e1c6dd930c429b95457bd1f55fc6f71c0014645fe55e6d4ce75138eed6",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-data/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 3975,
+      "canonical_source": "fixtures/shared/objects/sha256/c6/c67f8f4cca03154ee9bcbc120c9ecf132209515e9c359268a79094043c29a26f",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-deps/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:c67f8f4cca03154ee9bcbc120c9ecf132209515e9c359268a79094043c29a26f",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-static-evidence-increment1/gold/spec-deps/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 3455,
+      "canonical_source": "fixtures/shared/objects/sha256/c7/c73a2ef28e9a9043b8568b115d2a0b194d4aef46315ac20538bbef316610b858",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-obs/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:c73a2ef28e9a9043b8568b115d2a0b194d4aef46315ac20538bbef316610b858",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-obs/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 3457,
+      "canonical_source": "fixtures/shared/objects/sha256/ca/ca408f0f6914d634ee96de866f8aa00641e268d0e6d04bfc1f9d9283d20b7c2f",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-research/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:ca408f0f6914d634ee96de866f8aa00641e268d0e6d04bfc1f9d9283d20b7c2f",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-research/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 2847,
+      "canonical_source": "fixtures/shared/objects/sha256/cb/cbb6343f05a2210a311649bfb380e73a1ae2f11c1c8d89925539a0b0e1a31958",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/human-shadow-review-packet.md"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:cbb6343f05a2210a311649bfb380e73a1ae2f11c1c8d89925539a0b0e1a31958",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/human-shadow-review-packet.md"
+      ]
+    },
+    {
+      "bytes": 1587,
+      "canonical_source": "fixtures/shared/objects/sha256/d4/d43ca751de9a15a9020897e6e4882724760230918ccbf54feb9c6d2837cf51bf",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-obs/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-obs/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:d43ca751de9a15a9020897e6e4882724760230918ccbf54feb9c6d2837cf51bf",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-obs/evidence-locators.json"
+      ]
     },
     {
       "bytes": 1131,
@@ -363,6 +1302,42 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 3450,
+      "canonical_source": "fixtures/shared/objects/sha256/d4/d4cf225b2994bba549f03c41aa2b9e57598fe3f687f0f61d50515faef34e4ece",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-diagram/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:d4cf225b2994bba549f03c41aa2b9e57598fe3f687f0f61d50515faef34e4ece",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-diagram/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 3446,
+      "canonical_source": "fixtures/shared/objects/sha256/d6/d65d1f1e2f0fa511b5f002dda3e2e991634026ce9a0da966de437147bbbb7656",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-perf/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:d65d1f1e2f0fa511b5f002dda3e2e991634026ce9a0da966de437147bbbb7656",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-perf/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 811,
+      "canonical_source": "fixtures/shared/objects/sha256/d6/d687ed4adc8fd892572e6a4384b22469cf599f638d19198ffa797a57b85c5bd1",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/objects/sha256/d6/d687ed4adc8fd892572e6a4384b22469cf599f638d19198ffa797a57b85c5bd1.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:d687ed4adc8fd892572e6a4384b22469cf599f638d19198ffa797a57b85c5bd1",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/objects/sha256/d6/d687ed4adc8fd892572e6a4384b22469cf599f638d19198ffa797a57b85c5bd1.json"
+      ]
+    },
+    {
       "bytes": 3697,
       "canonical_source": "fixtures/shared/objects/sha256/d6/d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85",
       "immutable_evidence_copies": [
@@ -372,6 +1347,77 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:d6a0f7e10b87f2575f28d5ac613cc19a2253ab014ecfe6ef3e96aea6dcde2b85",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 2966,
+      "canonical_source": "fixtures/shared/objects/sha256/d8/d83f6998d44fab6cbbdafa2b8e2eb383c9a9bc8b9bf685203a1aeaab4643e709",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-sbom/evidence-locators.json",
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-sbom/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:d83f6998d44fab6cbbdafa2b8e2eb383c9a9bc8b9bf685203a1aeaab4643e709",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-static-evidence-increment1/gold/spec-sbom/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 4578,
+      "canonical_source": "fixtures/shared/objects/sha256/da/da24ca37fe9682182ffc7844bb24368dd9067520d05ace09e30fca0e615a8403",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-iac/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:da24ca37fe9682182ffc7844bb24368dd9067520d05ace09e30fca0e615a8403",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-build-supply-chain-increment2/gold/spec-iac/input-manifest.json"
+      ]
+    },
+    {
+      "bytes": 1030,
+      "canonical_source": "fixtures/shared/objects/sha256/da/da813f31642704c3a610e6e02b3eed56748c50338208568bedb18af9f185d0e7",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-data/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-data/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:da813f31642704c3a610e6e02b3eed56748c50338208568bedb18af9f185d0e7",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 335,
+      "canonical_source": "fixtures/shared/objects/sha256/db/db422d5add8b04ce1204bf0f0df347743ba111396235fb431b64f58311e6e879",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/specialist-shadow-metrics/a1c6c2e6-e3e4-5d9c-a113-676db2b4551c.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:db422d5add8b04ce1204bf0f0df347743ba111396235fb431b64f58311e6e879",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/specialist-shadow-metrics/a1c6c2e6-e3e4-5d9c-a113-676db2b4551c.json"
+      ]
+    },
+    {
+      "bytes": 1008,
+      "canonical_source": "fixtures/shared/objects/sha256/dc/dc0f39f683931d2626c2d67d8ba7b7bd99318e600214cdc2587f1a2878bb29ad",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-interop/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-interop/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:dc0f39f683931d2626c2d67d8ba7b7bd99318e600214cdc2587f1a2878bb29ad",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 4840,
+      "canonical_source": "fixtures/shared/objects/sha256/dd/dd9501486986b25480dd23f2e70dd63b17e92563b3bf0cef5e7f52949e3b5ce3",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-security/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:dd9501486986b25480dd23f2e70dd63b17e92563b3bf0cef5e7f52949e3b5ce3",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-security/input-manifest.json"
+      ]
     },
     {
       "bytes": 3560,
@@ -386,6 +1432,30 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 340,
+      "canonical_source": "fixtures/shared/objects/sha256/e1/e180c29c823a1f48b64fab89df6f1c6542cfb7147873499235ecbd4aeaa27113",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/specialist-shadow-input/3bf87306-6e8e-5e55-ad88-8c53db6128d4.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:e180c29c823a1f48b64fab89df6f1c6542cfb7147873499235ecbd4aeaa27113",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/specialist-shadow-input/3bf87306-6e8e-5e55-ad88-8c53db6128d4.json"
+      ]
+    },
+    {
+      "bytes": 3981,
+      "canonical_source": "fixtures/shared/objects/sha256/e2/e2f8503bd8728ad8da6c7d3b7c61cfbe5e4fa1eeba7c94d8319807f717ad8235",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-sbom/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:e2f8503bd8728ad8da6c7d3b7c61cfbe5e4fa1eeba7c94d8319807f717ad8235",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-static-evidence-increment1/gold/spec-sbom/input-manifest.json"
+      ]
+    },
+    {
       "bytes": 361,
       "canonical_source": "fixtures/shared/objects/sha256/e5/e5796a448f0d80bb2235220d902feeba93f3f6e4c2096ea22620600ae88dd983",
       "immutable_evidence_copies": [
@@ -395,6 +1465,18 @@
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:e5796a448f0d80bb2235220d902feeba93f3f6e4c2096ea22620600ae88dd983",
       "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 3493,
+      "canonical_source": "fixtures/shared/objects/sha256/ea/eacfeacaf2ab52feb015cafcddd01740f8271e40c3eb04eab30217bb791a8e29",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-interop/input-manifest.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:eacfeacaf2ab52feb015cafcddd01740f8271e40c3eb04eab30217bb791a8e29",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-interop/input-manifest.json"
+      ]
     },
     {
       "bytes": 802,
@@ -430,6 +1512,17 @@
       "reusable_fixture_copies": []
     },
     {
+      "bytes": 2681,
+      "canonical_source": "fixtures/shared/objects/sha256/f0/f03519208886300e51fab8ba84a491bc009cd58d199b96787bd9cce76f4e16f8",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-sbom/raw-response.json",
+        "fixtures/specialist-static-evidence-increment1/evidence/2026-08-03/adr0039/gx10-live-run-001/live-run/spec-sbom/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:f03519208886300e51fab8ba84a491bc009cd58d199b96787bd9cce76f4e16f8",
+      "reusable_fixture_copies": []
+    },
+    {
       "bytes": 1435,
       "canonical_source": "fixtures/shared/objects/sha256/f3/f37cf03fb3bdd63e3dbdb266db0c308b46e2cb3d066190ab934600bf7f7d39a0",
       "immutable_evidence_copies": [
@@ -462,6 +1555,42 @@
       ],
       "migration_state": "shared_object_materialized_copies_retained",
       "object_id": "sha256:fd92dcd16bff09242baabe74cf367d8226e849674c097a46aa41eaaafddac479",
+      "reusable_fixture_copies": []
+    },
+    {
+      "bytes": 5417,
+      "canonical_source": "fixtures/shared/objects/sha256/fd/fd9ff419efd6505625c0c1ee5a797852a5a4337f52499e0aaafcae3fbd4adb21",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-security/evidence-locators.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-security/evidence-locators.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:fd9ff419efd6505625c0c1ee5a797852a5a4337f52499e0aaafcae3fbd4adb21",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-increment567/gold/spec-security/evidence-locators.json"
+      ]
+    },
+    {
+      "bytes": 517,
+      "canonical_source": "fixtures/shared/objects/sha256/fe/fe9e90b67495f1976d077db3a931190929aac47ceecb39b667213b48f5e19ba3",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-shadow-calibration/evidence/2026-08-03/adr0039/increment-0/gx10-run-001/reference-run/ledger/indexes/traceability/74777526-1068-550b-9ea3-5077614120b3.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:fe9e90b67495f1976d077db3a931190929aac47ceecb39b667213b48f5e19ba3",
+      "reusable_fixture_copies": [
+        "fixtures/specialist-shadow-calibration/gold/ledger/indexes/traceability/74777526-1068-550b-9ea3-5077614120b3.json"
+      ]
+    },
+    {
+      "bytes": 1387,
+      "canonical_source": "fixtures/shared/objects/sha256/fe/fed5de66aec7f4bb20553dd945dd407eedc9f11d47bca041651a56e09b302bfe",
+      "immutable_evidence_copies": [
+        "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-risk/raw-response.json",
+        "fixtures/specialist-increment567/evidence/2026-08-03/adr0039/gx10-live-run-001/spec-risk/raw-response.json"
+      ],
+      "migration_state": "shared_object_materialized_copies_retained",
+      "object_id": "sha256:fed5de66aec7f4bb20553dd945dd407eedc9f11d47bca041651a56e09b302bfe",
       "reusable_fixture_copies": []
     }
   ]

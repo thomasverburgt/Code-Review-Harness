@@ -1,0 +1,307 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "9106ee3d-8959-4a24-b141-c3ab1435583c",
+    "designation": "SPEC-K8S-WORKLOAD",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:51247d978fb03ed56009247ffb2f757a4ed1a0cc2c1dec01233497723730cc38",
+  "candidate_artifact_id": "9dfcde68-b210-57c5-8497-13d01487935d",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:2396756e9686ec322d9072c1b0b2d09fb33996cc5c90f61ab3883a0fcb37089b",
+    "profile_id": "FOCUS-SPEC-K8S-WORKLOAD",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T22:05:00Z",
+  "input_manifest_hash": "sha256:c6ee1dfe36c3b8dad9b42e7d5a81105411845b7287c27cdf9cbba3f008ebca21",
+  "input_manifest_id": "4f9673a8-d87e-5712-9c69-fee32540ae39",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SA-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 43,
+          "line_fingerprint": "sha256:4a8f4d76bc01f5f8f2afde1fd6162e1af9eb0ca25df11478ee033c13b093cd05",
+          "line_start": 43,
+          "locator_hash": "sha256:e7f553bc6d30ef3449de49f97fb70e622f49caaf309ae00b82f165243ead98de",
+          "locator_id": "0c6559c8-a3db-5458-88e5-14c91c3673e1",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 43.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      serviceAccountName: httpbin",
+          "symbol_or_section": "service account"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SC-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 58,
+          "line_fingerprint": "sha256:8dc19d61ae90fdb0675c18ec52595b415087e2d7a87dc6ba3d6807005de9af57",
+          "line_start": 58,
+          "locator_hash": "sha256:f22bd5c5e3ac4211f99ff49b5cfc9f1a1baa587cb74512e80898bf29c853f0d1",
+          "locator_id": "5fad1100-a212-59e5-9271-bd42b415f5c0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 58.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "            allowPrivilegeEscalation: false",
+          "symbol_or_section": "container security context"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-K8S-WORKLOAD-001",
+      "statement": "The admitted workload manifest names a service account and declares a container security context that disables privilege escalation, runs non-root, and drops capabilities."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SA-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 43,
+          "line_fingerprint": "sha256:4a8f4d76bc01f5f8f2afde1fd6162e1af9eb0ca25df11478ee033c13b093cd05",
+          "line_start": 43,
+          "locator_hash": "sha256:e7f553bc6d30ef3449de49f97fb70e622f49caaf309ae00b82f165243ead98de",
+          "locator_id": "0c6559c8-a3db-5458-88e5-14c91c3673e1",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 43.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      serviceAccountName: httpbin",
+          "symbol_or_section": "service account"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SC-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 58,
+          "line_fingerprint": "sha256:8dc19d61ae90fdb0675c18ec52595b415087e2d7a87dc6ba3d6807005de9af57",
+          "line_start": 58,
+          "locator_hash": "sha256:f22bd5c5e3ac4211f99ff49b5cfc9f1a1baa587cb74512e80898bf29c853f0d1",
+          "locator_id": "5fad1100-a212-59e5-9271-bd42b415f5c0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 58.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "            allowPrivilegeEscalation: false",
+          "symbol_or_section": "container security context"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-K8S-WORKLOAD-001",
+      "statement": "The source manifest declares workload hardening, but no admission result, effective policy, pod status, runtime identity, or execution evidence is admitted."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SA-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 43,
+          "line_fingerprint": "sha256:4a8f4d76bc01f5f8f2afde1fd6162e1af9eb0ca25df11478ee033c13b093cd05",
+          "line_start": 43,
+          "locator_hash": "sha256:e7f553bc6d30ef3449de49f97fb70e622f49caaf309ae00b82f165243ead98de",
+          "locator_id": "0c6559c8-a3db-5458-88e5-14c91c3673e1",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 43.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      serviceAccountName: httpbin",
+          "symbol_or_section": "service account"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SC-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 58,
+          "line_fingerprint": "sha256:8dc19d61ae90fdb0675c18ec52595b415087e2d7a87dc6ba3d6807005de9af57",
+          "line_start": 58,
+          "locator_hash": "sha256:f22bd5c5e3ac4211f99ff49b5cfc9f1a1baa587cb74512e80898bf29c853f0d1",
+          "locator_id": "5fad1100-a212-59e5-9271-bd42b415f5c0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 58.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "            allowPrivilegeEscalation: false",
+          "symbol_or_section": "container security context"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-K8S-WORKLOAD-001:CAPA",
+      "statement": "Retain admission decisions and immutable runtime observations for the exact rendered workload."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SA-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 43,
+          "line_fingerprint": "sha256:4a8f4d76bc01f5f8f2afde1fd6162e1af9eb0ca25df11478ee033c13b093cd05",
+          "line_start": 43,
+          "locator_hash": "sha256:e7f553bc6d30ef3449de49f97fb70e622f49caaf309ae00b82f165243ead98de",
+          "locator_id": "0c6559c8-a3db-5458-88e5-14c91c3673e1",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 43.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "      serviceAccountName: httpbin",
+          "symbol_or_section": "service account"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-K8S-WORKLOAD-SC-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 58,
+          "line_fingerprint": "sha256:8dc19d61ae90fdb0675c18ec52595b415087e2d7a87dc6ba3d6807005de9af57",
+          "line_start": 58,
+          "locator_hash": "sha256:f22bd5c5e3ac4211f99ff49b5cfc9f1a1baa587cb74512e80898bf29c853f0d1",
+          "locator_id": "5fad1100-a212-59e5-9271-bd42b415f5c0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin.yaml line 58.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "            allowPrivilegeEscalation: false",
+          "symbol_or_section": "container security context"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-K8S-WORKLOAD-001",
+      "statement": "Admission enforcement, mutation, effective namespace policy, runtime identity, and deployable readiness are not demonstrated by source configuration alone."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:e2258ed9796f1cfdfdfffab94b90f33f947694cef5907c2df15282cba82519db",
+  "packet_id": "8d42e3ad-549f-50cb-9fad-865b884d110f",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

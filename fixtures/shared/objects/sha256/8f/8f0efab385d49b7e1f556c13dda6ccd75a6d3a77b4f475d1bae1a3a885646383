@@ -1,0 +1,27 @@
+{
+  "designation": "SPEC-SECRETS",
+  "secret_observations": [
+    {
+      "observation_id": "OBS-001",
+      "secret_type": "credential-like value",
+      "evidence_state": "unresolved_credential_like_value",
+      "exposure_location": "docs/getting-started/local-demo/integrate-your-package.mdx:153",
+      "owner_role": null,
+      "rotation_policy": null,
+      "age_or_expiry": null,
+      "approved_storage_reference": null,
+      "blast_radius": {},
+      "regulatory_or_policy_impact": [],
+      "evidence_refs": [
+        "UDS-0001"
+      ]
+    }
+  ],
+  "measures": {
+    "eligible_coverage": 1.0,
+    "confirmed_exposure_count": 0,
+    "managed_secret_adoption": null,
+    "rotation_compliance": null,
+    "unresolved_detection_rate": 1.0
+  }
+}

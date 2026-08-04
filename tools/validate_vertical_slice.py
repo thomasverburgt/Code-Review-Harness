@@ -201,6 +201,7 @@ def validate_state_machines() -> None:
             "REPORT-GOVERNANCE": "report-governance-state-machine.schema.json",
             "SEMANTIC-ADJUDICATION": "semantic-adjudication-state-machine.schema.json",
             "requirements-acceptance": "requirements-acceptance-state-machine.schema.json",
+            "SPECIALIST-HUMAN-SHADOW-CALIBRATION": "specialist-shadow-calibration-state-machine.schema.json",
         }.get(instance.get("machine_id"), "orchestration-state-machine.schema.json"))
         assert_schema(instance, schema_name, str(path.relative_to(ROOT)))
         states = set(instance["states"])

@@ -1,0 +1,26 @@
+{
+  "action": "enable_calibration",
+  "authority_effect": "candidate_calibration_control_only",
+  "authority_source": "ADR-0039 Increment 6 project-owner authorization",
+  "control_hash": "sha256:c0c86907300dd143e386cb0421876f7ed8279df6370546bf0126a19588b3bfab",
+  "control_id": "f81b720a-21ef-59a2-bb40-d3b440f08d5a",
+  "control_version": "1.0.0",
+  "decided_at": "2026-08-03T23:00:00Z",
+  "decided_by": {
+    "authority_name": "thomasverburgt",
+    "authority_role": "project_owner"
+  },
+  "designation": "SPEC-OBS",
+  "effects": {
+    "a100_production_authorized": false,
+    "candidate_discovery_enabled": true,
+    "deployment_authorized": false,
+    "dispatch_enabled": true,
+    "packet_export_enabled": true,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:cac0a850d5076d5096eb3eb1e74c651cf95b7ef8f70b231d75dc884fa17ef29e",
+  "manifest_id": "c2e5b929-0497-58b7-a7fe-e0dca408135c"
+}

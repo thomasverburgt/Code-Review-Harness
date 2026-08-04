@@ -54,3 +54,4 @@ Copy `template.md` when creating a new ADR. Material changes identified in `GOVE
 - [ADR 0036: Evaluate ENT-GOV Using an Owner-Declared Governance Source and Semantically Accepted CAP-SYNTH](0036-owner-declared-governance-source-to-ent-gov-evaluation.md)
 - [ADR 0037: Evaluate ENT-STRAT Using Owner-Declared Project Strategy Sources and Semantically Accepted CAP-SYNTH](0037-owner-declared-strategic-evaluation-sources-to-ent-strat.md)
 - [ADR 0038: Evaluate ENT-SYNTH Using the Accepted Enterprise Domain Set Without Scheduling or Report Promotion](0038-accepted-live-enterprise-synthesis-evaluation.md)
+- [ADR 0039: Build Specialist Candidates for Human Shadow Calibration Without Deployment](0039-build-specialist-candidates-for-human-shadow-calibration.md)

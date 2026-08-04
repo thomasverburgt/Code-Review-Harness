@@ -2,34 +2,16 @@
   "manifest_version": "1.0.0",
   "prompt_version": "design-0.1.0",
   "prompts": {
-    "ENT-SYNTH": {
-      "path": "appendices/prompt-templates/candidates/ent-synth/design-0.1.0.prompt.txt",
-      "sha256": "27b41117df2a788bc15667caaac2addb2b2796dce60d27aecb801a5798532ce6",
-      "source": "agents/enterprise/enterprise-synthesis-agent.md",
-      "status": "candidate"
-    },
-    "ENT-STRAT": {
-      "path": "appendices/prompt-templates/candidates/ent-strat/design-0.1.0.prompt.txt",
-      "sha256": "d3061ea8843e33ef67fb801b39243f2f4e22a7da72adea75918c02a6ce5f54b3",
-      "source": "agents/enterprise/strategic-scoring-agent.md",
-      "status": "candidate"
-    },
-    "ENT-GOV": {
-      "path": "appendices/prompt-templates/candidates/ent-gov/design-0.1.0.prompt.txt",
-      "sha256": "0546f896b437828c98ba33f42460348ea0245e1c1e6d4edbed70ded68e1c8e36",
-      "source": "agents/enterprise/enterprise-governance-reviewer.md",
-      "status": "candidate"
-    },
-    "ENT-ARCH": {
-      "path": "appendices/prompt-templates/candidates/ent-arch/design-0.1.0.prompt.txt",
-      "sha256": "944aad98c767a5c4c2dbe8bb88f95f9022d85c71f4fd1361cbdcfc8fb2d276fa",
-      "source": "agents/enterprise/systems-architecture-reviewer.md",
-      "status": "candidate"
-    },
     "CAP-REQ": {
       "path": "appendices/prompt-templates/candidates/cap-req/design-0.1.0.prompt.txt",
       "sha256": "efdc2b71b55f5fce8b4728be57cdd3e398f18f835267d96bedd6f7793338653e",
       "source": "agents/capability/requirements-traceability-reviewer.md",
+      "status": "candidate"
+    },
+    "CAP-RISK": {
+      "path": "appendices/prompt-templates/candidates/cap-risk/design-0.1.0.prompt.txt",
+      "sha256": "216331082a8c3e3eb22a88ceeafaf0a9ab37659e184280a705c4359b7d541e07",
+      "source": "deliverables/CAP-RISK-Prompt-Design-and-Methodology.docx",
       "status": "candidate"
     },
     "CAP-SYNTH": {
@@ -38,16 +20,28 @@
       "source": "agents/capability/capability-synthesis-lead.md",
       "status": "candidate"
     },
-    "PROD-SYNTH": {
-      "path": "appendices/prompt-templates/candidates/prod-synth/design-0.1.0.prompt.txt",
-      "sha256": "cf4c74e8b0afe39c7924fa6e78fd9bdf57d4c8113520ff44c503fb6d8fae006f",
-      "source": "agents/product/product-synthesis-lead.md",
+    "ENT-ARCH": {
+      "path": "appendices/prompt-templates/candidates/ent-arch/design-0.1.0.prompt.txt",
+      "sha256": "944aad98c767a5c4c2dbe8bb88f95f9022d85c71f4fd1361cbdcfc8fb2d276fa",
+      "source": "agents/enterprise/systems-architecture-reviewer.md",
       "status": "candidate"
     },
-    "CAP-RISK": {
-      "path": "appendices/prompt-templates/candidates/cap-risk/design-0.1.0.prompt.txt",
-      "sha256": "216331082a8c3e3eb22a88ceeafaf0a9ab37659e184280a705c4359b7d541e07",
-      "source": "deliverables/CAP-RISK-Prompt-Design-and-Methodology.docx",
+    "ENT-GOV": {
+      "path": "appendices/prompt-templates/candidates/ent-gov/design-0.1.0.prompt.txt",
+      "sha256": "0546f896b437828c98ba33f42460348ea0245e1c1e6d4edbed70ded68e1c8e36",
+      "source": "agents/enterprise/enterprise-governance-reviewer.md",
+      "status": "candidate"
+    },
+    "ENT-STRAT": {
+      "path": "appendices/prompt-templates/candidates/ent-strat/design-0.1.0.prompt.txt",
+      "sha256": "d3061ea8843e33ef67fb801b39243f2f4e22a7da72adea75918c02a6ce5f54b3",
+      "source": "agents/enterprise/strategic-scoring-agent.md",
+      "status": "candidate"
+    },
+    "ENT-SYNTH": {
+      "path": "appendices/prompt-templates/candidates/ent-synth/design-0.1.0.prompt.txt",
+      "sha256": "27b41117df2a788bc15667caaac2addb2b2796dce60d27aecb801a5798532ce6",
+      "source": "agents/enterprise/enterprise-synthesis-agent.md",
       "status": "candidate"
     },
     "ENT-SYSRISK": {
@@ -62,10 +56,142 @@
       "source": "deliverables/PROD-SEC-Prompt-Design-and-Methodology.docx",
       "status": "candidate"
     },
+    "PROD-SYNTH": {
+      "path": "appendices/prompt-templates/candidates/prod-synth/design-0.1.0.prompt.txt",
+      "sha256": "cf4c74e8b0afe39c7924fa6e78fd9bdf57d4c8113520ff44c503fb6d8fae006f",
+      "source": "agents/product/product-synthesis-lead.md",
+      "status": "candidate"
+    },
+    "SPEC-ARCH": {
+      "path": "appendices/prompt-templates/candidates/spec-arch/design-0.1.0.prompt.txt",
+      "sha256": "3469e1ec8b42e7cba02b3357ee2c45eae6abd16aa9e29bf37aab70dc74d8b224",
+      "source": "agents/specialists/architecture-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-CICD": {
+      "path": "appendices/prompt-templates/candidates/spec-cicd/design-0.1.0.prompt.txt",
+      "sha256": "f72ee4045976e9914321c5ce04a83b1593381a91308a58807ed2588674a09960",
+      "source": "agents/specialists/cicd-pipeline-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-COMMS": {
+      "path": "appendices/prompt-templates/candidates/spec-comms/design-0.1.0.prompt.txt",
+      "sha256": "c90a0a767d054954d50c0124d02464a68a80771b524f1d28f1b898f1f94d1d41",
+      "source": "agents/specialists/workload-communication-security-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-CONTAINER": {
+      "path": "appendices/prompt-templates/candidates/spec-container/design-0.1.0.prompt.txt",
+      "sha256": "d241b1ef0a980f5491a4bbd82600d7146e579b0ff1b237a7cc8e00d534167759",
+      "source": "agents/specialists/container-image-security-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-DATA": {
+      "path": "appendices/prompt-templates/candidates/spec-data/design-0.1.0.prompt.txt",
+      "sha256": "2373c754dd5130990ef1747d55bca29def889cb205da3c80b243c745326cc173",
+      "source": "agents/specialists/data-architecture-information-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-DEPS": {
+      "path": "appendices/prompt-templates/candidates/spec-deps/design-0.1.0.prompt.txt",
+      "sha256": "a204c46239f4282508bb3eba01ca7b0d8b8bfd598fa0319c276c88e7fae20401",
+      "source": "agents/specialists/dependency-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-DIAGRAM": {
+      "path": "appendices/prompt-templates/candidates/spec-diagram/design-0.1.0.prompt.txt",
+      "sha256": "52f3b695788744abf6d5fc9e52feb5ac4030fedcbc3a19c4f0101d98190328e2",
+      "source": "agents/specialists/diagram-design-model-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-FMECA": {
+      "path": "appendices/prompt-templates/candidates/spec-fmeca/design-0.1.0.prompt.txt",
+      "sha256": "0d09d82c0af96a996fb096c2109b82a44c6e70764cdc3e518c1fc5df97d42fe8",
+      "source": "agents/specialists/reliability-resilience-fmeca-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-IAC": {
+      "path": "appendices/prompt-templates/candidates/spec-iac/design-0.1.0.prompt.txt",
+      "sha256": "e53baf22c28a88f1d1491cd24c797695a291f468d60ee496e1f17976ab5b2dad",
+      "source": "agents/specialists/infrastructure-as-code-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-INTEROP": {
+      "path": "appendices/prompt-templates/candidates/spec-interop/design-0.1.0.prompt.txt",
+      "sha256": "c88b1510e0a875ac3853b66996ddee0c142765d9411bb22cd308ad8457910213",
+      "source": "agents/specialists/interoperability-integration-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-IO": {
+      "path": "appendices/prompt-templates/candidates/spec-io/design-0.1.0.prompt.txt",
+      "sha256": "184592233332e2ba43934a0b1d19cfeee02185dd397c0ba3619ada79a5f1f163",
+      "source": "agents/specialists/io-resource-interaction-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-K8S-PLATFORM": {
+      "path": "appendices/prompt-templates/candidates/spec-k8s-platform/design-0.1.0.prompt.txt",
+      "sha256": "6441826ee055ace7965642074a154f3fdf7034842dffa40fc0d3b0db4e2b93a6",
+      "source": "agents/specialists/kubernetes-platform-security-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-K8S-WORKLOAD": {
+      "path": "appendices/prompt-templates/candidates/spec-k8s-workload/design-0.1.0.prompt.txt",
+      "sha256": "baf22a39c724014ae247225779ab14d466cb9d089c3a1dae89c23d36521dd269",
+      "source": "agents/specialists/kubernetes-workload-security-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-LINT": {
+      "path": "appendices/prompt-templates/candidates/spec-lint/design-0.1.0.prompt.txt",
+      "sha256": "47b127d0f43911478ed47145a80cc1053bbb440ba22d3fe1e3cdd4cb0f5d4bab",
+      "source": "agents/specialists/linter-code-quality-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-OBS": {
+      "path": "appendices/prompt-templates/candidates/spec-obs/design-0.1.0.prompt.txt",
+      "sha256": "bf40a16b99cb31bd9e505edf3b3c24796f99928eb393847abdbdb19957ed55da",
+      "source": "agents/specialists/observability-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-PERF": {
+      "path": "appendices/prompt-templates/candidates/spec-perf/design-0.1.0.prompt.txt",
+      "sha256": "080d1c856c0627b720a151d36d2cacb921eb63b912538f409cb848c991a640ac",
+      "source": "agents/specialists/performance-scalability-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-RESEARCH": {
+      "path": "appendices/prompt-templates/candidates/spec-research/design-0.1.0.prompt.txt",
+      "sha256": "48943d6286befc81c6452b7516a9dab190fa743571e2a65fda42f99cf88349c9",
+      "source": "agents/specialists/research-product-store-agent.md",
+      "status": "candidate"
+    },
+    "SPEC-RISK": {
+      "path": "appendices/prompt-templates/candidates/spec-risk/design-0.1.0.prompt.txt",
+      "sha256": "b6d26dcd5eb0d0a54b3d7618c68a89f7ebae85c93eece9f5a749eb0e47f55fc6",
+      "source": "agents/specialists/product-risk-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-SBOM": {
+      "path": "appendices/prompt-templates/candidates/spec-sbom/design-0.1.0.prompt.txt",
+      "sha256": "d7c49adf2b3e2f78ba6f9198ca91bb80e1ae0f7da89f2fbfbd9d1e13b28bf296",
+      "source": "agents/specialists/software-composition-sbom.md",
+      "status": "candidate"
+    },
     "SPEC-SECRETS": {
       "path": "appendices/prompt-templates/candidates/spec-secrets/design-0.1.0.prompt.txt",
       "sha256": "17ca304344bc932c34d4628306a79d860d0ec7ac4e3ae52f0b0962b724137192",
       "source": "deliverables/SPEC-SECRETS-Prompt-Design-and-Methodology.docx",
+      "status": "candidate"
+    },
+    "SPEC-SECURE-CODE": {
+      "path": "appendices/prompt-templates/candidates/spec-secure-code/design-0.1.0.prompt.txt",
+      "sha256": "af2b1ae48d2f39dda1f8c53fffb908a9131a920c5089b9face63a24c43d65982",
+      "source": "agents/specialists/secure-coding-reviewer.md",
+      "status": "candidate"
+    },
+    "SPEC-SECURITY": {
+      "path": "appendices/prompt-templates/candidates/spec-security/design-0.1.0.prompt.txt",
+      "sha256": "0f00ad01fed15bb03c211afee4ccaf38c73b15e97d9a586712774dec3b9665c0",
+      "source": "agents/specialists/security-posture-reviewer.md",
       "status": "candidate"
     }
   }

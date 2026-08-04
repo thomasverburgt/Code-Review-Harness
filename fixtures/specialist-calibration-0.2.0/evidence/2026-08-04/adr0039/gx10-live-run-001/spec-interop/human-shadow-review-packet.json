@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "da0bc1ae-8e6f-4730-b29c-19ec6544cb7f",
+    "designation": "SPEC-INTEROP",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:e0f082d3f0406425cea4a2d04d4e1cf8ef12a6d1dd11591fcae41b5990196606",
+  "candidate_artifact_id": "e6dd9e4d-8f99-5d54-a9c6-3e5a0b271b7f",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:e6ba2c179cd7a30407d09af28ef8de34b7f412e22da15598ded5ae2552229613",
+    "profile_id": "FOCUS-SPEC-INTEROP",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:7b25f6d071e422b4535bb2bcd702e52fa6bd95d986ed79ba99f0daa15a60e7e0",
+  "input_manifest_id": "278d2613-91f5-5531-845f-9d41d7254f73",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-INTEROP-UDP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:960735d30040c7ce0e598608093ccb00b9e98a9923dc2849650123e1f6f40b95",
+          "line_start": 185,
+          "locator_hash": "sha256:305a1a2a41b68f693592de2f6d936dc9a878ad7edc317163f189ba8d91d911cb",
+          "locator_id": "eba14407-3c7e-5ac0-a0c3-3ed0631569c7",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "          \"The routing protocol for this expose entry. When set to `UDP`, the entry routes through Envoy Gateway instead of Istio. Hostname routing fields (`host`, `domain`, `advancedHTTP`, `match`) are invalid for UDP entries. UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.\",",
+          "symbol_or_section": "Expose protocol contract"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-INTEROP-001",
+      "statement": "The admitted source contract distinguishes UDP routing, incompatible hostname fields, and its trust-control boundary."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-INTEROP-UDP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:960735d30040c7ce0e598608093ccb00b9e98a9923dc2849650123e1f6f40b95",
+          "line_start": 185,
+          "locator_hash": "sha256:305a1a2a41b68f693592de2f6d936dc9a878ad7edc317163f189ba8d91d911cb",
+          "locator_id": "eba14407-3c7e-5ac0-a0c3-3ed0631569c7",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "          \"The routing protocol for this expose entry. When set to `UDP`, the entry routes through Envoy Gateway instead of Istio. Hostname routing fields (`host`, `domain`, `advancedHTTP`, `match`) are invalid for UDP entries. UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.\",",
+          "symbol_or_section": "Expose protocol contract"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-INTEROP-001",
+      "statement": "A declared interface contract does not demonstrate producer-consumer compatibility, version negotiation, or live integration behavior."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-INTEROP-UDP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:960735d30040c7ce0e598608093ccb00b9e98a9923dc2849650123e1f6f40b95",
+          "line_start": 185,
+          "locator_hash": "sha256:305a1a2a41b68f693592de2f6d936dc9a878ad7edc317163f189ba8d91d911cb",
+          "locator_id": "eba14407-3c7e-5ac0-a0c3-3ed0631569c7",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "          \"The routing protocol for this expose entry. When set to `UDP`, the entry routes through Envoy Gateway instead of Istio. Hostname routing fields (`host`, `domain`, `advancedHTTP`, `match`) are invalid for UDP entries. UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.\",",
+          "symbol_or_section": "Expose protocol contract"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-INTEROP-001:CAPA",
+      "statement": "Retain versioned producer and consumer contracts plus compatibility and failure-path tests."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-INTEROP-UDP-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-INTEROP-UDP-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 185,
+          "line_fingerprint": "sha256:960735d30040c7ce0e598608093ccb00b9e98a9923dc2849650123e1f6f40b95",
+          "line_start": 185,
+          "locator_hash": "sha256:305a1a2a41b68f693592de2f6d936dc9a878ad7edc317163f189ba8d91d911cb",
+          "locator_id": "eba14407-3c7e-5ac0-a0c3-3ed0631569c7",
+          "locator_state": "source_located",
+          "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "          \"The routing protocol for this expose entry. When set to `UDP`, the entry routes through Envoy Gateway instead of Istio. Hostname routing fields (`host`, `domain`, `advancedHTTP`, `match`) are invalid for UDP entries. UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.\",",
+          "symbol_or_section": "Expose protocol contract"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-INTEROP-001",
+      "statement": "Consumer population, version compatibility, error semantics, and runtime integration remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:e2314a6c86383a10ae4c6e1b29e0469b96e3a77b61e0981562c12a90d638bab1",
+  "packet_id": "3077edec-3f06-5193-8d54-43506030d335",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

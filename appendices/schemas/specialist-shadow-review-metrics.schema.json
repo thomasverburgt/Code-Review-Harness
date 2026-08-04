@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/specialist-shadow-review-metrics.schema.json",
+  "title": "Specialist Human Shadow Review Metrics",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metrics_id", "metrics_version", "generated_at", "packet_id", "packet_hash", "response_bindings",
+    "item_count", "review_count", "disposition_counts", "locator_counts", "rates", "review_duration_seconds",
+    "correctness_established", "authority_effect", "metrics_hash"
+  ],
+  "properties": {
+    "metrics_id": {"type": "string", "format": "uuid"},
+    "metrics_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "response_bindings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["response_id", "response_hash"],
+        "properties": {
+          "response_id": {"type": "string", "format": "uuid"},
+          "response_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "item_count": {"type": "integer", "minimum": 1},
+    "review_count": {"type": "integer", "minimum": 1},
+    "disposition_counts": {"$ref": "#/$defs/dispositionCounts"},
+    "locator_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["correct", "partially_correct", "incorrect", "not_verified"],
+      "properties": {
+        "correct": {"type": "integer", "minimum": 0},
+        "partially_correct": {"type": "integer", "minimum": 0},
+        "incorrect": {"type": "integer", "minimum": 0},
+        "not_verified": {"type": "integer", "minimum": 0}
+      }
+    },
+    "rates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["support", "partial_support", "unsupported", "duplicate", "scope_violation", "unresolved", "locator_success"],
+      "properties": {
+        "support": {"type": "number", "minimum": 0, "maximum": 1},
+        "partial_support": {"type": "number", "minimum": 0, "maximum": 1},
+        "unsupported": {"type": "number", "minimum": 0, "maximum": 1},
+        "duplicate": {"type": "number", "minimum": 0, "maximum": 1},
+        "scope_violation": {"type": "number", "minimum": 0, "maximum": 1},
+        "unresolved": {"type": "number", "minimum": 0, "maximum": 1},
+        "locator_success": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "review_duration_seconds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "minimum", "maximum", "mean"],
+      "properties": {
+        "total": {"type": "number", "minimum": 0},
+        "minimum": {"type": "number", "minimum": 0},
+        "maximum": {"type": "number", "minimum": 0},
+        "mean": {"type": "number", "minimum": 0}
+      }
+    },
+    "correctness_established": {"const": false},
+    "authority_effect": {"const": "calibration_measurement_only"},
+    "metrics_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "dispositionCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["supported", "partially_supported", "unsupported", "duplicate", "outside_specialist_scope", "unable_to_determine"],
+      "properties": {
+        "supported": {"type": "integer", "minimum": 0},
+        "partially_supported": {"type": "integer", "minimum": 0},
+        "unsupported": {"type": "integer", "minimum": 0},
+        "duplicate": {"type": "integer", "minimum": 0},
+        "outside_specialist_scope": {"type": "integer", "minimum": 0},
+        "unable_to_determine": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

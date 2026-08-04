@@ -1,0 +1,337 @@
+{
+  "artifact": {
+    "artifact_id": "bc14b639-12b2-5f14-a3c1-2fb6aec3a574",
+    "artifact_type": "spec-cicd-shadow-candidate",
+    "created_at": "2026-08-03T20:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "abcb1937-39ba-5071-910d-a024bd7ae177"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-CICD-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-CICD-RELEASE-PERM-001",
+        "EVIDENCE-CICD-PUBLISH-PERM-001",
+        "EVIDENCE-CICD-ACTION-PIN-001"
+      ],
+      "rationale": "No completed pipeline run, produced artifact identity, attestation, promotion decision, failure recovery, or rollback event is admitted for this calibration slice."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 2 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 3,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 3,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-CICD-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:8dfb47eecb1c89496a2ad03682f58660d84cf25dc212554e0c52f44bafa7724b",
+        "id": "GX10-QWEN3-32B-SPEC-CICD-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:f72ee4045976e9914321c5ce04a83b1593381a91308a58807ed2588674a09960",
+        "id": "SPEC-CICD-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:b4557dd173e3aeb16ef10144372862a7d9520a90ad027f5bbb418898455420d6",
+        "id": "SPEC-CICD-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:71104bc9d94929fd3751afd46e9b00b1885339a7db3b6141822b37dce2343f05",
+        "id": "RUBRIC-SPEC-CICD-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:de9f35a84c556049b3cf2eedacec5ce33d44c00c2465b87e5b4c96451f111950",
+        "id": "TOOLCHAIN-SPEC-CICD-BUILD-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "44730da3-e527-51f6-bced-245d12376e38",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:7f437c0bb1145a15da862bd7801d0461335f74ad071ccf295da2928d13dfdf13",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:0627b77b073f801e984ec3beb69b3ae9febc11c250c8357694277f85a5691103",
+      "profile_id": "FOCUS-SPEC-CICD",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/cicd-pipeline-reviewer.md",
+      "source_specification_hash": "sha256:9fdc2b889911f97d2301caaa47c0be2670b00083a60f0e5a0d1097bea2c295d5"
+    },
+    "input_manifest_id": "abcb1937-39ba-5071-910d-a024bd7ae177",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-CICD-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-CICD-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-CICD-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "delivery_pipeline_posture",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-CICD-RELEASE-PERM-001",
+            "EVIDENCE-CICD-PUBLISH-PERM-001",
+            "EVIDENCE-CICD-ACTION-PIN-001"
+          ],
+          "statement": "Secret scope, runner isolation, actual permission use, repeatability, gate effectiveness, artifact provenance, promotion governance, and recovery behavior remain unknown without execution records.",
+          "unknown_id": "UNKNOWN-CICD-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 3
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "pipeline_evidence_only_no_release_risk_acceptance_or_product_approval",
+        "coverage": {
+          "artifacts_verified": 0,
+          "completed_runs_reviewed": 0,
+          "pipeline_definitions_reviewed": 2,
+          "promotion_events_reviewed": 0,
+          "rollback_events_reviewed": 0
+        },
+        "designation": "SPEC-CICD",
+        "measures": {
+          "effective_gate_rate": null,
+          "nondeterminism_rate": null,
+          "provenanced_artifact_coverage": null,
+          "recovery_maturity": "not_measurable",
+          "repeatability": null,
+          "verification_gap_count": 6
+        },
+        "pipelines": [
+          {
+            "action_pinning": "immutable_commit",
+            "artifact_provenance": "not_observed",
+            "auditability": "partial",
+            "build_integrity": "partially_declared",
+            "determinism": "partially_constrained",
+            "evidence_refs": [
+              "EVIDENCE-CICD-RELEASE-PERM-001",
+              "EVIDENCE-CICD-ACTION-PIN-001"
+            ],
+            "gate_effectiveness": "configured_not_demonstrated",
+            "permissions": "broad_write_observed",
+            "pipeline_definition": ".github/workflows/tag-and-release.yaml",
+            "pipeline_id": "PIPELINE-TAG-RELEASE",
+            "pipeline_stage": "release",
+            "promotion_flow": "explicit",
+            "resumability": "not_assessed",
+            "rollback_evidence": "not_observed",
+            "trigger": "push to main or release branch"
+          },
+          {
+            "action_pinning": "not_assessed",
+            "artifact_provenance": "not_observed",
+            "auditability": "partial",
+            "build_integrity": "partially_declared",
+            "determinism": "not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-CICD-PUBLISH-PERM-001"
+            ],
+            "gate_effectiveness": "configured_not_demonstrated",
+            "permissions": "least_privilege_observed",
+            "pipeline_definition": ".github/workflows/publish.yaml",
+            "pipeline_id": "PIPELINE-PUBLISH",
+            "pipeline_stage": "publish",
+            "promotion_flow": "explicit",
+            "resumability": "not_assessed",
+            "rollback_evidence": "not_observed",
+            "trigger": "reusable workflow call"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-CICD-RELEASE-PERM-001",
+              "EVIDENCE-CICD-PUBLISH-PERM-001",
+              "EVIDENCE-CICD-ACTION-PIN-001"
+            ],
+            "missing_evidence": [
+              "completed run records",
+              "artifact identities and attestations",
+              "gate outcomes",
+              "rollback events"
+            ],
+            "statement": "Secret scope, runner isolation, actual permission use, repeatability, gate effectiveness, artifact provenance, promotion governance, and recovery behavior remain unknown without execution records.",
+            "unknown_id": "UNKNOWN-CICD-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Review and narrow the tag job permissions, then retain linked run, artifact, provenance, gate, promotion, and rollback evidence.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Continuously test least privilege and bind every release decision to immutable workflow, run, artifact, attestation, and rollback records.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-CICD-RELEASE-PERM-001",
+        "EVIDENCE-CICD-PUBLISH-PERM-001",
+        "EVIDENCE-CICD-ACTION-PIN-001"
+      ],
+      "finding_id": "FINDING-CICD-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "No completed pipeline run, produced artifact identity, attestation, promotion decision, failure recovery, or rollback event is admitted for this calibration slice."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "c6e380a3-8161-45cd-9a05-b2849a5e30a6",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-CICD",
+    "display_name": "CI/CD Pipeline Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-CICD-RELEASE-PERM-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:b0e38ef39b2396cc1b21e5655059e14381fd2833d94e8e6bc69e1880e8928097",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:.github/workflows/tag-and-release.yaml"
+    },
+    {
+      "evidence_id": "EVIDENCE-CICD-PUBLISH-PERM-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:1f47488f2872d8e0d5037df954be9062bb8cbf764e5e31aacf7af393a4cdcaa3",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:.github/workflows/publish.yaml"
+    },
+    {
+      "evidence_id": "EVIDENCE-CICD-ACTION-PIN-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:b0e38ef39b2396cc1b21e5655059e14381fd2833d94e8e6bc69e1880e8928097",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:.github/workflows/tag-and-release.yaml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:1b2a4da9294d38eb38e13a087e24aa955fb1ee45151eaea838a20192e09b8dc2",
+    "output_hash": "sha256:2a752f093a630e2ca534d4a2eeeabffcac73ba978308e2097afcec9bc5a218fb",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-CICD",
+    "limitations": [
+      "Secret scope, runner isolation, actual permission use, repeatability, gate effectiveness, artifact provenance, promotion governance, and recovery behavior remain unknown without execution records.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic delivery_pipeline_posture projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-CICD-RELEASE-PERM-001",
+        "EVIDENCE-CICD-PUBLISH-PERM-001",
+        "EVIDENCE-CICD-ACTION-PIN-001"
+      ],
+      "fact": "The release workflow pins release-please to an immutable commit while its tag job declares write-all permissions; the called publish workflow defines job-scoped permissions.",
+      "observation_id": "OBS-CICD-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      ".github/workflows/publish.yaml",
+      ".github/workflows/tag-and-release.yaml"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

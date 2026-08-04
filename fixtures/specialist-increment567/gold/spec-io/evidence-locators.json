@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-5-deterministic-reference",
+    "evidence_id": "EVIDENCE-IO-EGRESS-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 47,
+    "line_fingerprint": "sha256:9d9ad3605c3964d6cdd5d158be18b089f77c4a2a13cb10932ae81378a0f6d1c9",
+    "line_start": 47,
+    "locator_hash": "sha256:c39e1e963d43c3a588ea44da7cc972319ae781c182af07daf3fa19489c585d1a",
+    "locator_id": "2ff4f17e-4661-57bf-9705-24ef97c5c4f0",
+    "locator_state": "source_located",
+    "path": "src/test/app-admin-package.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/test/app-admin-package.yaml line 47.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "        remoteGenerated: Anywhere",
+    "source_type": "configuration",
+    "symbol_or_section": "httpbin egress destination"
+  }
+]

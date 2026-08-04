@@ -1,0 +1,276 @@
+{
+  "artifact": {
+    "artifact_id": "7ec4abab-f2c6-5bd2-ae81-1876c110fc78",
+    "artifact_type": "spec-data-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "edba463f-fddb-5c7a-931b-743f5ceda130"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-DATA-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "rationale": "The configuration does not identify data ownership, classification, lineage, retention, recovery objectives, or successful restore evidence."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 5 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-DATA-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:8b4ddd0557b5535b898319a59376c291a91e95f1d4273416680cffb8ab156112",
+        "id": "GX10-QWEN3-32B-SPEC-DATA-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:2373c754dd5130990ef1747d55bca29def889cb205da3c80b243c745326cc173",
+        "id": "SPEC-DATA-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:23c7a065f08e148b4665f9d2545a56c9eb3b38a0441cafefc746824d810f6656",
+        "id": "SPEC-DATA-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:f3723c61473008650f3ce5a79d590296d77ef80907f6d7537f913b172f078ae2",
+        "id": "RUBRIC-SPEC-DATA-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:d587cf56bef15384bbf5fac66f60ddfa27ec013ad5110da4ff6195037e03a3c5",
+        "id": "TOOLCHAIN-SPEC-DATA-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "186fe2e8-5e58-51a4-a06c-5cc0560dfdd5",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:4d7e30ab2cdc6bfb98e1d34a0d5017acd53924b97c08bb33928ebf8184c80c87",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:aa08f45fc17d6340d57a73287e8a7a157746937475b8b4b127f53460ab29b72e",
+      "profile_id": "FOCUS-SPEC-DATA",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/data-architecture-information-reviewer.md",
+      "source_specification_hash": "sha256:c328264d2d25eeb0b538a7de8ab6ab3a314aad657ab3712904d0a627427a3614"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "edba463f-fddb-5c7a-931b-743f5ceda130",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-DATA-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-DATA-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-DATA-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "data_architecture",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-DATA-BACKUP-001"
+          ],
+          "statement": "Data population, semantics, lineage, retention, access, loss tolerance, and recovery effectiveness remain unknown.",
+          "unknown_id": "UNKNOWN-DATA-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "data_assessment_only_no_governance_or_product_approval",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-DATA",
+        "domain_records": [
+          {
+            "assessment_state": "insufficient_evidence",
+            "effectiveness": "configured_not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-DATA-BACKUP-001"
+            ],
+            "evidence_tier": "configuration",
+            "record_id": "RECORD-DATA-001",
+            "subject": "Velero backup storage configuration"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-DATA-BACKUP-001"
+            ],
+            "missing_evidence": [
+              "data inventory and ownership",
+              "lineage and retention records",
+              "restore test results"
+            ],
+            "statement": "Data population, semantics, lineage, retention, access, loss tolerance, and recovery effectiveness remain unknown.",
+            "unknown_id": "UNKNOWN-DATA-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain a data inventory, ownership and lineage records, retention rules, recovery objectives, and restore-test results.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Bind data stores to named owners, classifications, lifecycle policies, and tested recovery evidence.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "finding_id": "FINDING-DATA-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The configuration does not identify data ownership, classification, lineage, retention, recovery objectives, or successful restore evidence."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "b7a03aff-6262-407f-b4ce-2eadec82508d",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-DATA",
+    "display_name": "Data Architecture and Information Management Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-DATA-BACKUP-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:2389e0a2df571bd8113795f271fe8dd1fd0e76ff82fc830536696a0580b4aef6",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/velero/values/values.yaml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:5085a1c092427d2c33ed9e2aa1716e2f86cc17990a868d3d69a2455ab01292aa",
+    "output_hash": "sha256:d5c60b735bcf983b5e82ba6834f324fcf3784c717aaf84a106351948bccfd9c4",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-DATA",
+    "limitations": [
+      "Data population, semantics, lineage, retention, access, loss tolerance, and recovery effectiveness remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic data_architecture projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "fact": "The admitted Velero configuration declares a backup-storage location section.",
+      "observation_id": "OBS-DATA-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/velero/values/values.yaml"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

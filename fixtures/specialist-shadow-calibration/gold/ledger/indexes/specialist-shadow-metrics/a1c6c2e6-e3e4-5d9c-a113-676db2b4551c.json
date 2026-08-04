@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "specialist-shadow-metrics",
+  "logical_path": "specialist-shadow/metrics.json",
+  "object_hash": "sha256:6d104850915ca45b83c70b0a14549aa79ca24c96cc208c256912d83be4b60ad5",
+  "record_id": "a1c6c2e6-e3e4-5d9c-a113-676db2b4551c",
+  "retention_class": "specialist-human-shadow-calibration"
+}

@@ -216,6 +216,9 @@ class VLLMAdapter(ModelAdapter):
         api_key = os.environ.get(self.api_key_env)
         if not api_key:
             raise WorkerError(f"required model credential environment variable is unavailable: {self.api_key_env}")
+        api_key = api_key.strip()
+        if not api_key or any(ord(character) < 32 or ord(character) == 127 for character in api_key):
+            raise WorkerError(f"model credential contains invalid transport characters: {self.api_key_env}")
         response_format: dict[str, Any] = {"type": "json_object"}
         if self.use_json_schema:
             inference_schema = context.get("generation_contract")

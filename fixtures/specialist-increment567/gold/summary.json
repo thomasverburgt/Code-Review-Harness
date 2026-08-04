@@ -1,0 +1,121 @@
+{
+  "a100_production_authorized": false,
+  "candidates": [
+    {
+      "artifact_id": "1c86c066-8c98-58d9-9cbd-977fa6f9c54c",
+      "designation": "SPEC-ARCH",
+      "item_count": 4,
+      "manifest_id": "332aedbb-a63a-5a93-9595-0f8eb1dbaec6",
+      "packet_id": "94590581-d33d-5a0c-ac9f-5db17e0810af",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "24b7331d-455e-5f03-b170-0936c4d1d5a3",
+      "designation": "SPEC-INTEROP",
+      "item_count": 4,
+      "manifest_id": "278d2613-91f5-5531-845f-9d41d7254f73",
+      "packet_id": "4e842cf1-6417-5124-ba98-ac8ec1815a73",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "108eb8f2-95d1-530e-8b04-be581fec1420",
+      "designation": "SPEC-DATA",
+      "item_count": 4,
+      "manifest_id": "edba463f-fddb-5c7a-931b-743f5ceda130",
+      "packet_id": "a9629c1a-66e0-5a60-bfe7-b8373ea114bf",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "18d77756-2b87-506d-b166-69cc790efbf2",
+      "designation": "SPEC-DIAGRAM",
+      "item_count": 4,
+      "manifest_id": "477224c1-d482-53c0-8539-75aa57e422fa",
+      "packet_id": "91728a48-9389-522a-8cb5-db82d7e5a7df",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "c40d25c6-792f-5ef6-ad90-0b34cdf81923",
+      "designation": "SPEC-IO",
+      "item_count": 4,
+      "manifest_id": "0c9f576a-62b4-526a-b7e7-a3ab44128c3b",
+      "packet_id": "d100f853-569b-5a0a-8185-bfb6a5b20322",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "c2e9b7d9-0ffd-5854-bc56-3f3a8ffc3964",
+      "designation": "SPEC-OBS",
+      "item_count": 4,
+      "manifest_id": "c2e5b929-0497-58b7-a7fe-e0dca408135c",
+      "packet_id": "e78601e4-285d-516b-9444-8a19ac46dca3",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "c6bc4c21-425c-5b06-88d4-6162f434773c",
+      "designation": "SPEC-PERF",
+      "item_count": 4,
+      "manifest_id": "459a0b64-1fd2-5447-98be-f76e85163f7d",
+      "packet_id": "7c044655-9b46-5dcc-be9b-7396488e6ab1",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "bf0895b4-bb96-50d9-bdf6-1cae2e33419b",
+      "designation": "SPEC-FMECA",
+      "item_count": 4,
+      "manifest_id": "a28fcd23-b269-5dbb-8761-1989b253640b",
+      "packet_id": "c072fc69-a80e-5e27-b24a-a5123fd71d91",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "22cef1b0-4088-59fc-9d99-b48796a60b06",
+      "designation": "SPEC-RESEARCH",
+      "item_count": 4,
+      "manifest_id": "92cfbe64-a7e0-5500-98f6-86988b6eefbe",
+      "packet_id": "78de5f09-a3ac-5a25-835d-9508096407db",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "09e2e62b-0a6e-5282-ac14-c54f5d4be28f",
+      "designation": "SPEC-RISK",
+      "item_count": 4,
+      "manifest_id": "eb0ce91e-31e8-53a4-bc40-515525c99373",
+      "packet_id": "4e6f42f9-b20e-570e-b2d4-2e1fbfc718a7",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "1e78572f-275b-5e0b-a2d1-74b483213533",
+      "designation": "SPEC-SECURITY",
+      "item_count": 4,
+      "manifest_id": "c5ae1929-bc85-5b6a-aeca-73d75569d47d",
+      "packet_id": "2fb35b4d-8b8b-5c0a-b955-062cc3551dd0",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    }
+  ],
+  "deployment_authorized": false,
+  "human_review_deferred": true,
+  "increment": [
+    5,
+    6,
+    7
+  ],
+  "product_fan_in_eligible": false,
+  "scheduled": false,
+  "source_repository": "multiple_content_addressed_sources",
+  "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+  "source_revisions": [
+    "329ade01852f9e570d31cb7b19d9979152938c17",
+    "16a7129e9e19969bce5528b046b2fc94ef5af60b"
+  ],
+  "state": "candidate_packets_retained_human_review_deferred",
+  "suite": "adr0039-increment567-specialists"
+}

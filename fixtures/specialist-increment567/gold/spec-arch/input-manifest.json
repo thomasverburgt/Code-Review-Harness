@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "298ae38a-0bd3-46f1-8074-35f3356454fc",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-ARCH",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-5.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:1eb30203768d03f22c9ac0c9e6a4df76bd4d38696a5187b5333cb7d82fc64e8a",
+      "evidence_id": "EVIDENCE-ARCH-PEPR-001",
+      "path": "docs/.c4/model.c4",
+      "purpose": "Review SPEC-ARCH evidence in Pepr system namespace.",
+      "safe_for_human_review": true,
+      "source_type": "git_source"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:5bec1c1f767cfcb8bed690c09f59849a1343b0f9d70c79fe2ca6c152da766cc1",
+      "id": "GX10-QWEN3-32B-SPEC-ARCH-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:3469e1ec8b42e7cba02b3357ee2c45eae6abd16aa9e29bf37aab70dc74d8b224",
+      "id": "SPEC-ARCH-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:3071197a9d9257918f80e5461fe3b3a83b33f97477018a36948fac191bcf530f",
+      "id": "SPEC-ARCH-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:97c5a52ad4bdb5884d09c6cb25f92475ff8bf7d9b23eb2c8d821766bbd0aab7c",
+      "id": "RUBRIC-SPEC-ARCH-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:bde510bebcbe7ecd064a005414f294daaf1ffd57980b84248ceda9200c05adb9",
+      "id": "TOOLCHAIN-SPEC-ARCH-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:9531676204c0cca27eccc96aa9810ed62325dcfc8b270714a699d2c10ee3d4ad",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:c649484558f82d0037890c764b9aa070cabf8121c956b645359ba0076e0f6d4f",
+    "profile_id": "FOCUS-SPEC-ARCH",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/architecture-reviewer.md",
+    "source_specification_hash": "sha256:743fbf5d235d7ab7741d1318bdb506c1d6950e51da274ea177fe3093f72e45ad"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:2520f695ccaf4ac957d8b1a673b20c6172c2b43a17f31e3118c3c1807763e10e",
+  "manifest_id": "332aedbb-a63a-5a93-9595-0f8eb1dbaec6",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

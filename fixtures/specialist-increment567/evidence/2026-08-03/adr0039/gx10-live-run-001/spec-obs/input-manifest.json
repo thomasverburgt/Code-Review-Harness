@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "f4633c67-d94d-440e-bb32-0f243eddafb6",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-OBS",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-6.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:4fa8de051bd3d6b0f2b043b20e8c451beddee1f25836fed990c7765ee49d2942",
+      "evidence_id": "EVIDENCE-OBS-RULE-001",
+      "path": "src/vector/chart/templates/uptime-recording-rules.yaml",
+      "purpose": "Review SPEC-OBS evidence in Vector uptime recording rule.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:cb092dd7515d628b4038ef984df78663ed1857ddb8ca4ed712474e3042c6756e",
+      "id": "GX10-QWEN3-32B-SPEC-OBS-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:bf40a16b99cb31bd9e505edf3b3c24796f99928eb393847abdbdb19957ed55da",
+      "id": "SPEC-OBS-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:c6e1f09c3ad4fbdddb278e02209ade96c9ab30f01b692ce3c7f349ff0adcfc88",
+      "id": "SPEC-OBS-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:998edcf26020655346dcdc143d075a65fd065e69867c743140d57ab798176782",
+      "id": "RUBRIC-SPEC-OBS-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:1b8a31c55b1cc3dd1e7b00426f9d1da96f9cc7c0a7aa17475cfc13f60cd6f3a5",
+      "id": "TOOLCHAIN-SPEC-OBS-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:f9e5b302214bddd3c8eaca88e2e458f545738577ae11cc8a752ae19b74d41d74",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:f346df5b918f09f824378d9bdfced512fa8ace9bfa2a3d0ce999960208d0cf05",
+    "profile_id": "FOCUS-SPEC-OBS",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/observability-reviewer.md",
+    "source_specification_hash": "sha256:7f25d623de36100c3a5092049b8e132c0dc97f2aaf8be1d00a5fe0f5225254ec"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:cac0a850d5076d5096eb3eb1e74c651cf95b7ef8f70b231d75dc884fa17ef29e",
+  "manifest_id": "c2e5b929-0497-58b7-a7fe-e0dca408135c",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

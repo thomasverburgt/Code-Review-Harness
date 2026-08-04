@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-6-deterministic-reference",
+    "evidence_id": "EVIDENCE-FMECA-BACKOFF-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 68,
+    "line_fingerprint": "sha256:63d7c8dea44d4fae56dd795f085a84cd4c560e20ade3f34261f6673a0fea5173",
+    "line_start": 68,
+    "locator_hash": "sha256:a3596d405986c1320186b303ef39eb7fc15e54a812eee1eeb915546d8aea2354",
+    "locator_id": "9875b308-37ee-597a-b06e-e93c601e13f3",
+    "locator_state": "source_located",
+    "path": "src/pepr/operator/reconcilers/package-reconciler.ts",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/pepr/operator/reconcilers/package-reconciler.ts line 68.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "    const backOffSeconds = 3 ** pkg.status.retryAttempt;",
+    "source_type": "git_source",
+    "symbol_or_section": "package reconciliation backoff"
+  }
+]

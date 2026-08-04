@@ -1,0 +1,40 @@
+{
+  "a100_production_authorized": false,
+  "candidates": [
+    {
+      "artifact_id": "66a9df4c-686b-57f2-bde2-b70ff2c468d2",
+      "designation": "SPEC-CONTAINER",
+      "item_count": 4,
+      "manifest_id": "974072d8-ac07-583b-8603-6fb74f000c71",
+      "packet_id": "ab1dce8f-c6b1-5590-8a1f-11c48e3c8c55",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "bc14b639-12b2-5f14-a3c1-2fb6aec3a574",
+      "designation": "SPEC-CICD",
+      "item_count": 4,
+      "manifest_id": "abcb1937-39ba-5071-910d-a024bd7ae177",
+      "packet_id": "39526b73-8955-5c27-8f1b-0c86bdd303cd",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    },
+    {
+      "artifact_id": "0692175c-57df-59be-a5e7-ee6cc28f8c09",
+      "designation": "SPEC-IAC",
+      "item_count": 4,
+      "manifest_id": "346c6fbd-e9ed-54a3-842c-9674a0cdbf0a",
+      "packet_id": "e1f6fb0c-a534-5c00-b5f9-3ce10cf3d0cc",
+      "review_state": "deferred",
+      "reviewability": "ready_for_human_shadow_review"
+    }
+  ],
+  "deployment_authorized": false,
+  "human_review_deferred": true,
+  "increment": 2,
+  "product_fan_in_eligible": false,
+  "scheduled": false,
+  "source_repository": "https://github.com/defenseunicorns/uds-core.git",
+  "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+  "state": "candidate_packets_retained_human_review_deferred"
+}

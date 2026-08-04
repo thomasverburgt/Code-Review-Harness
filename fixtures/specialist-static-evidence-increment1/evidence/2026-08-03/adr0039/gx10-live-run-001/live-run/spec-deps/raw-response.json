@@ -1,0 +1,67 @@
+{
+  "designation": "SPEC-DEPS",
+  "graph_nodes": [
+    {
+      "node_id": "DEP-SETUPTOOLS",
+      "component_name": "setuptools",
+      "version": null,
+      "dependency_intent": "tooling",
+      "ownership_or_stewardship": null,
+      "critical_path_tags": ["build"],
+      "version_drift": "unconstrained",
+      "maintenance_signal": "not_assessed",
+      "license_risk": "not_assessed",
+      "replacement_complexity": "not_assessed",
+      "stability_trajectory": "not_assessed",
+      "evidence_refs": ["EVIDENCE-DEPS-BUILD-001"]
+    },
+    {
+      "node_id": "DEP-PYTHON-DOCX",
+      "component_name": "python-docx",
+      "version": "1.2.0",
+      "dependency_intent": "tooling",
+      "ownership_or_stewardship": null,
+      "critical_path_tags": ["documentation"],
+      "version_drift": "constrained",
+      "maintenance_signal": "not_assessed",
+      "license_risk": "not_assessed",
+      "replacement_complexity": "not_assessed",
+      "stability_trajectory": "not_assessed",
+      "evidence_refs": ["EVIDENCE-DEPS-DOCS-001"]
+    }
+  ],
+  "graph_edges": [
+    {
+      "edge_id": "EDGE-BUILD-SETUPTOOLS",
+      "from_node": "CODE-HARNESS-PROJECT-001",
+      "to_node": "DEP-SETUPTOOLS",
+      "coupling_type": "build",
+      "circularity": "not_assessed",
+      "orphan_status": "not_assessed",
+      "evidence_refs": ["EVIDENCE-DEPS-BUILD-001"]
+    }
+  ],
+  "coverage": {
+    "declared_nodes": 2,
+    "reviewed_nodes": 2,
+    "resolved_graph_available": false,
+    "runtime_loading_reviewed": false
+  },
+  "measures": {
+    "circular_count": null,
+    "orphan_count": null,
+    "duplicate_library_count": null,
+    "abandoned_exposure_count": null,
+    "critical_path_concentration": null,
+    "graph_trend": "not_measurable"
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-DEPS-001",
+      "statement": "Transitive dependency health, runtime loading, maintenance, licensing, and replacement risk are not measurable from the admitted manifest alone.",
+      "missing_evidence": ["resolved graph", "runtime loading evidence"],
+      "evidence_refs": ["EVIDENCE-DEPS-BUILD-001"]
+    }
+  ],
+  "authority_boundary": "dependency_assessment_only_no_vulnerability_release_or_product_approval"
+}

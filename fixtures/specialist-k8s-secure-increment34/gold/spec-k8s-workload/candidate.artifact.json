@@ -1,0 +1,288 @@
+{
+  "artifact": {
+    "artifact_id": "9dfcde68-b210-57c5-8497-13d01487935d",
+    "artifact_type": "spec-k8s-workload-shadow-candidate",
+    "created_at": "2026-08-03T22:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "4f9673a8-d87e-5712-9c69-fee32540ae39"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-K8S-WORKLOAD-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ],
+      "rationale": "The source manifest declares workload hardening, but no admission result, effective policy, pod status, runtime identity, or execution evidence is admitted."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increments 3 and 4 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-K8S-WORKLOAD-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:19224f9e1e56dd2b59bbb3088c03c975a51d497a75a5bae2cafa1248c529220e",
+        "id": "GX10-QWEN3-32B-SPEC-K8S-WORKLOAD-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:baf22a39c724014ae247225779ab14d466cb9d089c3a1dae89c23d36521dd269",
+        "id": "SPEC-K8S-WORKLOAD-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:a954944044ec1eeda7f8bda3789fd32cd5a6ce741b0755dac84d3f39b98e2242",
+        "id": "SPEC-K8S-WORKLOAD-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:2dcd525115e6f683d305fa9acd89219f999ef5c9d5d99d47631baae69bba8902",
+        "id": "RUBRIC-SPEC-K8S-WORKLOAD-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:668f14454faa2e803b05b79d83e86e669cdafdc31f25ad070438cd3c4a537c36",
+        "id": "TOOLCHAIN-SPEC-K8S-WORKLOAD-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "f7c0caa8-2df1-5e9d-a267-c0bede08be7a",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:7308fb935ef140955f62a58d834ed69606ff1006cef30f0e82a33e46f8f07263",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:2396756e9686ec322d9072c1b0b2d09fb33996cc5c90f61ab3883a0fcb37089b",
+      "profile_id": "FOCUS-SPEC-K8S-WORKLOAD",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/kubernetes-workload-security-reviewer.md",
+      "source_specification_hash": "sha256:7fe531f23b069f2ac9e699a0ba38adfe89550cf0c99e972f9475f4d779ed73a1"
+    },
+    "input_manifest_id": "4f9673a8-d87e-5712-9c69-fee32540ae39",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-K8S-WORKLOAD-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-K8S-WORKLOAD-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-K8S-WORKLOAD-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "kubernetes_workload_security",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-K8S-WORKLOAD-SA-001",
+            "EVIDENCE-K8S-WORKLOAD-SC-001"
+          ],
+          "statement": "Admission enforcement, mutation, effective namespace policy, runtime identity, and deployable readiness are not demonstrated by source configuration alone.",
+          "unknown_id": "UNKNOWN-K8S-WORKLOAD-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 2
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "workload_configuration_only_no_platform_runtime_release_or_product_approval",
+        "coverage": {
+          "admission_records_reviewed": 0,
+          "manifests_reviewed": 1,
+          "runtime_records_reviewed": 0
+        },
+        "designation": "SPEC-K8S-WORKLOAD",
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-K8S-WORKLOAD-SA-001",
+              "EVIDENCE-K8S-WORKLOAD-SC-001"
+            ],
+            "missing_evidence": [
+              "admission records",
+              "effective policy",
+              "runtime pod and identity evidence"
+            ],
+            "statement": "Admission enforcement, mutation, effective namespace policy, runtime identity, and deployable readiness are not demonstrated by source configuration alone.",
+            "unknown_id": "UNKNOWN-K8S-WORKLOAD-001"
+          }
+        ],
+        "workloads": [
+          {
+            "admission_effectiveness": "configured_not_demonstrated",
+            "deployment_readiness": "unable_to_determine",
+            "evidence_refs": [
+              "EVIDENCE-K8S-WORKLOAD-SA-001",
+              "EVIDENCE-K8S-WORKLOAD-SC-001"
+            ],
+            "resource_controls": "declared",
+            "runtime_effectiveness": "not_observed",
+            "security_context": "least_privilege_declared",
+            "service_account": "httpbin",
+            "workload_id": "WORKLOAD-HTTPBIN"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain admission decisions and immutable runtime observations for the exact rendered workload.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Continuously verify rendered workload identity and least-privilege controls against admission and runtime evidence.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ],
+      "finding_id": "FINDING-K8S-WORKLOAD-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The source manifest declares workload hardening, but no admission result, effective policy, pod status, runtime identity, or execution evidence is admitted."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "9106ee3d-8959-4a24-b141-c3ab1435583c",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-K8S-WORKLOAD",
+    "display_name": "Kubernetes Workload Security Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-K8S-WORKLOAD-SA-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:4f77066037aaab25f70d45bc109122338f0d883b00746090e5565f9b5ede4ba3",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/test/app-admin.yaml"
+    },
+    {
+      "evidence_id": "EVIDENCE-K8S-WORKLOAD-SC-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:4f77066037aaab25f70d45bc109122338f0d883b00746090e5565f9b5ede4ba3",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/test/app-admin.yaml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:c6ee1dfe36c3b8dad9b42e7d5a81105411845b7287c27cdf9cbba3f008ebca21",
+    "output_hash": "sha256:3a4058ddd204eb0147b9f28c1ff1a7eb3de0b22c59595d8053a85048f1b43fd0",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-K8S-WORKLOAD",
+    "limitations": [
+      "Admission enforcement, mutation, effective namespace policy, runtime identity, and deployable readiness are not demonstrated by source configuration alone.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic kubernetes_workload_security projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-K8S-WORKLOAD-SA-001",
+        "EVIDENCE-K8S-WORKLOAD-SC-001"
+      ],
+      "fact": "The admitted workload manifest names a service account and declares a container security context that disables privilege escalation, runs non-root, and drops capabilities.",
+      "observation_id": "OBS-K8S-WORKLOAD-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/test/app-admin.yaml"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

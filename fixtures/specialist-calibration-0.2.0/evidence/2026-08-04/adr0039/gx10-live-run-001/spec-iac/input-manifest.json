@@ -1,0 +1,124 @@
+{
+  "candidate": {
+    "agent_uuid": "09c72dd8-48c0-4a3b-8f48-9adcbe18df94",
+    "agent_version": "design-0.2.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-IAC",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T20:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-2.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:6645013085794585353406bb41480c0ac7ac18dddd1d60984dfb831ec5aa784f",
+      "evidence_id": "EVIDENCE-IAC-MODULE-001",
+      "path": ".github/test-infra/aws/eks/main.tf",
+      "purpose": "Review SPEC-IAC evidence in generate_kms module source.",
+      "safe_for_human_review": true,
+      "source_type": "iac"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:758fd3a64791ca409cd88e19129af3942fd4220bb590f995a126c5592825f275",
+      "evidence_id": "EVIDENCE-IAC-BACKEND-001",
+      "path": ".github/test-infra/aws/eks/versions.tf",
+      "purpose": "Review SPEC-IAC evidence in Terraform backend.",
+      "safe_for_human_review": true,
+      "source_type": "iac"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:758fd3a64791ca409cd88e19129af3942fd4220bb590f995a126c5592825f275",
+      "evidence_id": "EVIDENCE-IAC-VERSION-001",
+      "path": ".github/test-infra/aws/eks/versions.tf",
+      "purpose": "Review SPEC-IAC evidence in AWS provider constraint.",
+      "safe_for_human_review": true,
+      "source_type": "iac"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:818b3f3b8a28c0460868f67f0c5a4cc23ccfcf9c69b3e9360995641ff563c819",
+      "id": "GX10-QWEN3-32B-SPEC-IAC-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:b8d7d417e4bd55d0ae0343aaecccd349a885cbeca1b766d11e8b420e8d3ae2ae",
+      "id": "SPEC-IAC-CANDIDATE-PROMPT",
+      "version": "design-0.2.0"
+    },
+    "role_schema": {
+      "hash": "sha256:047bbb90af78210918dde49d8f3428793c89eab3902d374c06710652ec773a00",
+      "id": "SPEC-IAC-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:e4dcd608da3f6aaac0dc47ac67c6418e8ac890450c43e8f2a8ac3dd0aef60b19",
+      "id": "RUBRIC-SPEC-IAC-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:67c8f0791bb69f8763ef544e8ee4a74b5f41abac7d9378dd61d00cbf2ce0a0ec",
+      "id": "TOOLCHAIN-SPEC-IAC-BUILD-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:d553050149402f4edc0cdfd46fc240641f19a245ac49ce11147ee1a737b2bd16",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:92d3da0ca7cbf32f6c2daa8db7bdab0e3acaeb0221b73253d849290b74ff8da0",
+    "profile_id": "FOCUS-SPEC-IAC",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/infrastructure-as-code-reviewer.md",
+    "source_specification_hash": "sha256:ac0f713b2010476b5dac953afe4b34d106af22596b8d9203647eee087aef637c"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:c5f99df26926592c93246634316d4d1ae5f7c25176cbd9903c80488b990861a2",
+  "manifest_id": "346c6fbd-e9ed-54a3-842c-9674a0cdbf0a",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

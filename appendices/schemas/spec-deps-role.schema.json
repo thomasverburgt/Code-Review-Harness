@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/spec-deps-role.schema.json",
+  "title": "SPEC-DEPS Candidate Role Extension",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["designation", "graph_nodes", "graph_edges", "coverage", "measures", "unknowns", "authority_boundary"],
+  "properties": {
+    "designation": {"const": "SPEC-DEPS"},
+    "graph_nodes": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["node_id", "component_name", "version", "dependency_intent", "ownership_or_stewardship", "critical_path_tags", "version_drift", "maintenance_signal", "license_risk", "replacement_complexity", "stability_trajectory", "evidence_refs"], "properties": {
+      "node_id": {"type": "string", "minLength": 1}, "component_name": {"type": "string", "minLength": 1}, "version": {"type": ["string", "null"]},
+      "dependency_intent": {"enum": ["core", "tooling", "test", "temporary", "unknown"]}, "ownership_or_stewardship": {"type": ["string", "null"]},
+      "critical_path_tags": {"type": "array", "uniqueItems": true, "items": {"enum": ["startup", "auth", "data", "build", "documentation", "none", "unknown"]}},
+      "version_drift": {"enum": ["none_observed", "constrained", "unconstrained", "drift_observed", "unknown"]}, "maintenance_signal": {"enum": ["maintained", "stale", "abandoned", "not_assessed", "unknown"]},
+      "license_risk": {"enum": ["none_identified", "potential", "confirmed", "not_assessed", "unknown"]}, "replacement_complexity": {"enum": ["low", "moderate", "high", "not_assessed", "unknown"]},
+      "stability_trajectory": {"enum": ["improving", "stable", "degrading", "not_assessed", "unknown"]}, "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+    }}},
+    "graph_edges": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["edge_id", "from_node", "to_node", "coupling_type", "circularity", "orphan_status", "evidence_refs"], "properties": {
+      "edge_id": {"type": "string", "minLength": 1}, "from_node": {"type": "string", "minLength": 1}, "to_node": {"type": "string", "minLength": 1}, "coupling_type": {"enum": ["direct", "transitive", "runtime", "build", "optional", "unknown"]},
+      "circularity": {"enum": ["not_observed", "observed", "not_assessed", "unknown"]}, "orphan_status": {"enum": ["not_orphaned", "orphaned", "not_assessed", "unknown"]}, "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+    }}},
+    "coverage": {"type": "object", "additionalProperties": false, "required": ["declared_nodes", "reviewed_nodes", "resolved_graph_available", "runtime_loading_reviewed"], "properties": {"declared_nodes": {"type": "integer", "minimum": 0}, "reviewed_nodes": {"type": "integer", "minimum": 0}, "resolved_graph_available": {"type": "boolean"}, "runtime_loading_reviewed": {"type": "boolean"}}},
+    "measures": {"type": "object", "additionalProperties": false, "required": ["circular_count", "orphan_count", "duplicate_library_count", "abandoned_exposure_count", "critical_path_concentration", "graph_trend"], "properties": {"circular_count": {"type": ["integer", "null"], "minimum": 0}, "orphan_count": {"type": ["integer", "null"], "minimum": 0}, "duplicate_library_count": {"type": ["integer", "null"], "minimum": 0}, "abandoned_exposure_count": {"type": ["integer", "null"], "minimum": 0}, "critical_path_concentration": {"type": ["number", "null"], "minimum": 0, "maximum": 1}, "graph_trend": {"enum": ["improving", "stable", "degrading", "not_measurable"]}}},
+    "unknowns": {"type": "array", "items": {"$ref": "#/$defs/unknown"}},
+    "authority_boundary": {"const": "dependency_assessment_only_no_vulnerability_release_or_product_approval"}
+  },
+  "$defs": {"unknown": {"type": "object", "additionalProperties": false, "required": ["unknown_id", "statement", "missing_evidence", "evidence_refs"], "properties": {"unknown_id": {"type": "string", "minLength": 1}, "statement": {"type": "string", "minLength": 1}, "missing_evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}}}}
+}

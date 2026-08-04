@@ -1,0 +1,11 @@
+{
+  "a100_production_authorized": false,
+  "deployment_authorized": false,
+  "final_control_id": "17966281-69dd-5900-a8dd-feea2e653c4b",
+  "metrics_id": "a1c6c2e6-e3e4-5d9c-a113-676db2b4551c",
+  "packet_id": "8c492a1c-0e2a-52d7-99ba-be20aaa9dd65",
+  "product_fan_in_eligible": false,
+  "record_count": 9,
+  "scheduled": false,
+  "status": "persisted_and_revoked"
+}

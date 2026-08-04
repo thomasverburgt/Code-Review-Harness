@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "specialist-shadow-control",
+  "logical_path": "specialist-shadow/control-revoke.json",
+  "object_hash": "sha256:3fdb76be5c99848edd6e8eaf7ff9de839e6eb0c9c9950324c0123ae0d00bc941",
+  "record_id": "17966281-69dd-5900-a8dd-feea2e653c4b",
+  "retention_class": "specialist-human-shadow-calibration"
+}

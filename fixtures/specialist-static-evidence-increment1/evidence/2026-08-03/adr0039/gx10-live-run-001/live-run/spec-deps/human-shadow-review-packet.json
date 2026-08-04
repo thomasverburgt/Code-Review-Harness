@@ -1,0 +1,307 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "7e7d7710-885a-47c6-af0f-339ed9dad525",
+    "designation": "SPEC-DEPS",
+    "product_id": "CODE-HARNESS-PROJECT-001"
+  },
+  "candidate_artifact_hash": "sha256:8e25b097a725958f784629e61a7c32bfcdf6e6e1f3ed75a15d614bef570016ad",
+  "candidate_artifact_id": "c197edcd-9710-58b2-ab75-f738b5156eac",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:930cb00d463df5ac1e37978e75d50c029d2477575e732d3c97a7aabef0d1a655",
+    "profile_id": "FOCUS-SPEC-DEPS",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T17:05:00Z",
+  "input_manifest_hash": "sha256:9f7955ccc6b66caf780b708bf3a56a5ffd0549109e30e9afaee70cc179841f1d",
+  "input_manifest_id": "a0b12d51-539c-5ad5-aa6c-9cb21d769f85",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001",
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:870825ee5438ebb5eb0bd841a640c37be85205ddba8eb1a8d4338019a5ff5d0e",
+          "locator_id": "43ffac2d-c6b1-5967-9f07-663708fb05d4",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b7cc6d2f320c0dcec4f66c90961991fa60de0201221aac260a3d01d559962b42",
+          "locator_id": "29b620b7-1139-5181-a5cf-337848e0f5af",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-DEPS-001",
+      "statement": "The declared manifest contains one unconstrained build dependency and one exactly pinned optional documentation dependency."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001",
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:870825ee5438ebb5eb0bd841a640c37be85205ddba8eb1a8d4338019a5ff5d0e",
+          "locator_id": "43ffac2d-c6b1-5967-9f07-663708fb05d4",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b7cc6d2f320c0dcec4f66c90961991fa60de0201221aac260a3d01d559962b42",
+          "locator_id": "29b620b7-1139-5181-a5cf-337848e0f5af",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-DEPS-001",
+      "statement": "The setuptools build-system dependency is declared without a version constraint."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001",
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:870825ee5438ebb5eb0bd841a640c37be85205ddba8eb1a8d4338019a5ff5d0e",
+          "locator_id": "43ffac2d-c6b1-5967-9f07-663708fb05d4",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b7cc6d2f320c0dcec4f66c90961991fa60de0201221aac260a3d01d559962b42",
+          "locator_id": "29b620b7-1139-5181-a5cf-337848e0f5af",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-DEPS-001:CAPA",
+      "statement": "Declare and test a setuptools compatibility range."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001",
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-BUILD-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 2,
+          "line_fingerprint": "sha256:f18973a8216183c82ba7cc4c285ee472e9851ee718b7aa7743ecbe1b89058158",
+          "line_start": 2,
+          "locator_hash": "sha256:870825ee5438ebb5eb0bd841a640c37be85205ddba8eb1a8d4338019a5ff5d0e",
+          "locator_id": "43ffac2d-c6b1-5967-9f07-663708fb05d4",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 2.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "requires = [\"setuptools\"]",
+          "symbol_or_section": "build-system"
+        },
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-DEPS-DOCS-001",
+          "immutable_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9",
+          "line_end": 15,
+          "line_fingerprint": "sha256:a4d7be999c6fe5fdc41b9b1bdc48d9e4a52f65d89e594a1a64bf9fcda309a1a7",
+          "line_start": 15,
+          "locator_hash": "sha256:b7cc6d2f320c0dcec4f66c90961991fa60de0201221aac260a3d01d559962b42",
+          "locator_id": "29b620b7-1139-5181-a5cf-337848e0f5af",
+          "locator_state": "source_located",
+          "path": "pyproject.toml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+          "reproduction_steps": [
+            "Open https://github.com/thomasverburgt/Code-Review-Harness.git at ada870cc7fc557a417f4215c8e60fbf3bee367d9.",
+            "Inspect pyproject.toml line 15.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "docs = [\"python-docx==1.2.0\"]",
+          "symbol_or_section": "project.optional-dependencies"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-DEPS-001",
+      "statement": "Transitive dependency health, runtime loading, maintenance, licensing, and replacement risk are not measurable from the admitted manifest alone."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:cc0c8d7bf1f60e389d62b35ca2b1563443c7bfa528de7afc94abfe1681f21dbc",
+  "packet_id": "1cbcf9d3-1d0c-5648-860f-4178b209ac6a",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "01596885-15c9-4846-8233-450939791c35",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-K8S-PLATFORM",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T22:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-3.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:f1fea85dcf05b2511c21ad8b31ac9138a478df956dc2a206f914df51d80e87f3",
+      "evidence_id": "EVIDENCE-K8S-PLATFORM-NETPOL-001",
+      "path": ".github/test-infra/aws/eks/cluster.tf",
+      "purpose": "Review SPEC-K8S-PLATFORM evidence in EKS VPC CNI configuration.",
+      "safe_for_human_review": true,
+      "source_type": "iac"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:dc8c962b79fd34c0c2c2be392093ef287509e1d8b7b7bd599cbb2d58e6a7f69e",
+      "id": "GX10-QWEN3-32B-SPEC-K8S-PLATFORM-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:6441826ee055ace7965642074a154f3fdf7034842dffa40fc0d3b0db4e2b93a6",
+      "id": "SPEC-K8S-PLATFORM-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:1139406af61bc8a268a5d7c2e829645deecb31e137446f78398251d51b8798a8",
+      "id": "SPEC-K8S-PLATFORM-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:9f613f8b680dfca97c5974a3a80478b1f09c3c021b47faff76f85c4a14eddb5f",
+      "id": "RUBRIC-SPEC-K8S-PLATFORM-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:7643c86be8c41b2246557af1e4f78e0f92edb2a5e47ed74c5738d7366b9f7735",
+      "id": "TOOLCHAIN-SPEC-K8S-PLATFORM-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:900713361dce0ebf7d8f69bbb102e1d7665acba824191d122beb0e1dca12f228",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:bf2a7d96cc643aea8cc6f9c6720f3bc48683bdd4ab018d4b794ba3ad8dd77983",
+    "profile_id": "FOCUS-SPEC-K8S-PLATFORM",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/kubernetes-platform-security-reviewer.md",
+    "source_specification_hash": "sha256:a953b0639334402fb0719f04d0f7c3bd961734c6e11db09cf78fefcbcefd63bc"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:3cc96fd8f3110c4d6c296c65eed75312624e69babb664d202bf0b59674adc6f7",
+  "manifest_id": "09167b34-7e71-59b1-adf3-87bb418b6d96",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

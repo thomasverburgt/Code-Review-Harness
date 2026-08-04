@@ -1,0 +1,77 @@
+{
+  "designation": "SPEC-CICD",
+  "pipelines": [
+    {
+      "pipeline_id": "PIPELINE-TAG-RELEASE",
+      "pipeline_definition": ".github/workflows/tag-and-release.yaml",
+      "pipeline_stage": "release",
+      "trigger": "push to main or release branch",
+      "permissions": "broad_write_observed",
+      "action_pinning": "immutable_commit",
+      "build_integrity": "partially_declared",
+      "artifact_provenance": "not_observed",
+      "promotion_flow": "explicit",
+      "gate_effectiveness": "configured_not_demonstrated",
+      "determinism": "partially_constrained",
+      "resumability": "not_assessed",
+      "rollback_evidence": "not_observed",
+      "auditability": "partial",
+      "evidence_refs": [
+        "EVIDENCE-CICD-RELEASE-PERM-001",
+        "EVIDENCE-CICD-ACTION-PIN-001"
+      ]
+    },
+    {
+      "pipeline_id": "PIPELINE-PUBLISH",
+      "pipeline_definition": ".github/workflows/publish.yaml",
+      "pipeline_stage": "publish",
+      "trigger": "reusable workflow call",
+      "permissions": "least_privilege_observed",
+      "action_pinning": "not_assessed",
+      "build_integrity": "partially_declared",
+      "artifact_provenance": "not_observed",
+      "promotion_flow": "explicit",
+      "gate_effectiveness": "configured_not_demonstrated",
+      "determinism": "not_demonstrated",
+      "resumability": "not_assessed",
+      "rollback_evidence": "not_observed",
+      "auditability": "partial",
+      "evidence_refs": [
+        "EVIDENCE-CICD-PUBLISH-PERM-001"
+      ]
+    }
+  ],
+  "coverage": {
+    "pipeline_definitions_reviewed": 2,
+    "completed_runs_reviewed": 0,
+    "artifacts_verified": 0,
+    "promotion_events_reviewed": 0,
+    "rollback_events_reviewed": 0
+  },
+  "measures": {
+    "repeatability": null,
+    "provenanced_artifact_coverage": null,
+    "verification_gap_count": 6,
+    "effective_gate_rate": null,
+    "nondeterminism_rate": null,
+    "recovery_maturity": "not_measurable"
+  },
+  "unknowns": [
+    {
+      "unknown_id": "UNKNOWN-CICD-001",
+      "statement": "Secret scope, runner isolation, actual permission use, repeatability, gate effectiveness, artifact provenance, promotion governance, and recovery behavior remain unknown without execution records.",
+      "missing_evidence": [
+        "completed run records",
+        "artifact identities and attestations",
+        "gate outcomes",
+        "rollback events"
+      ],
+      "evidence_refs": [
+        "EVIDENCE-CICD-RELEASE-PERM-001",
+        "EVIDENCE-CICD-PUBLISH-PERM-001",
+        "EVIDENCE-CICD-ACTION-PIN-001"
+      ]
+    }
+  ],
+  "authority_boundary": "pipeline_evidence_only_no_release_risk_acceptance_or_product_approval"
+}

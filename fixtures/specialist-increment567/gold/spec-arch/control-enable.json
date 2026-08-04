@@ -1,0 +1,26 @@
+{
+  "action": "enable_calibration",
+  "authority_effect": "candidate_calibration_control_only",
+  "authority_source": "ADR-0039 Increment 5 project-owner authorization",
+  "control_hash": "sha256:725e47b7a11a5a1c038cf54c244585bfa9aa61a9d5115d24d5eb165a32100f14",
+  "control_id": "a897caab-e9d0-5055-8f89-303f947a99ab",
+  "control_version": "1.0.0",
+  "decided_at": "2026-08-03T23:00:00Z",
+  "decided_by": {
+    "authority_name": "thomasverburgt",
+    "authority_role": "project_owner"
+  },
+  "designation": "SPEC-ARCH",
+  "effects": {
+    "a100_production_authorized": false,
+    "candidate_discovery_enabled": true,
+    "deployment_authorized": false,
+    "dispatch_enabled": true,
+    "packet_export_enabled": true,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:2520f695ccaf4ac957d8b1a673b20c6172c2b43a17f31e3118c3c1807763e10e",
+  "manifest_id": "332aedbb-a63a-5a93-9595-0f8eb1dbaec6"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://code-review-harness/schemas/specialist-human-review-assignment.schema.json",
+  "title":"Specialist Human Shadow Review Assignment Manifest",
+  "type":"object","additionalProperties":false,
+  "required":["assignment_id","assignment_version","created_at","governing_decision","increment","source_run","assignments","response_schema_binding","state","authority_effect","lifecycle","assignment_hash"],
+  "properties":{
+    "assignment_id":{"type":"string","format":"uuid"},"assignment_version":{"const":"1.0.0"},"created_at":{"type":"string","format":"date-time"},
+    "governing_decision":{"const":"ADR-0039"},"increment":{"const":1},
+    "source_run":{"type":"object","additionalProperties":false,"required":["path","summary_hash"],"properties":{"path":{"type":"string","minLength":1},"summary_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}}},
+    "assignments":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"object","additionalProperties":false,"required":["designation","packet_id","packet_hash","classification","reviewer_track","minimum_reviewers","worksheet_path","response_path","status"],"properties":{"designation":{"enum":["SPEC-DEPS","SPEC-SBOM","SPEC-LINT"]},"packet_id":{"type":"string","format":"uuid"},"packet_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"},"classification":{"const":"public"},"reviewer_track":{"const":"general_engineering_intern"},"minimum_reviewers":{"type":"integer","minimum":1},"worksheet_path":{"type":"string","minLength":1},"response_path":{"type":"string","minLength":1},"status":{"enum":["awaiting_assignment","assigned","response_received","ready_for_qualified_adjudication"]}}}},
+    "response_schema_binding":{"type":"object","additionalProperties":false,"required":["path","hash"],"properties":{"path":{"const":"appendices/schemas/specialist-shadow-review-response.schema.json"},"hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}}},
+    "state":{"enum":["awaiting_human_response","responses_partial","ready_for_qualified_adjudication"]},
+    "authority_effect":{"const":"review_assignment_only"},
+    "lifecycle":{"type":"object","additionalProperties":false,"required":["comparison_only","scheduled","product_fan_in_eligible","report_eligible","deployment_authorized","a100_production_authorized"],"properties":{"comparison_only":{"const":true},"scheduled":{"const":false},"product_fan_in_eligible":{"const":false},"report_eligible":{"const":false},"deployment_authorized":{"const":false},"a100_production_authorized":{"const":false}}},
+    "assignment_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}
+  }
+}

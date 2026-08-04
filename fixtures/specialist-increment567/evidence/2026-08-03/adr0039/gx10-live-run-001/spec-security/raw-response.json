@@ -1,0 +1,58 @@
+{
+  "authority_boundary": "security_synthesis_only_no_whole_product_release_or_acceptance",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 3,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-SECURITY",
+  "domain_records": [
+    {
+      "assessment_state": "insufficient_evidence",
+      "effectiveness": "not_assessed",
+      "evidence_refs": [
+        "EVIDENCE-SECURITY-CODE-001"
+      ],
+      "evidence_tier": "retained_candidate",
+      "record_id": "RECORD-SECURITY-001",
+      "subject": "retained SPEC-SECURE-CODE unknown"
+    },
+    {
+      "assessment_state": "insufficient_evidence",
+      "effectiveness": "not_assessed",
+      "evidence_refs": [
+        "EVIDENCE-SECURITY-SECRETS-001"
+      ],
+      "evidence_tier": "retained_candidate",
+      "record_id": "RECORD-SECURITY-002",
+      "subject": "retained SPEC-SECRETS unknown"
+    },
+    {
+      "assessment_state": "insufficient_evidence",
+      "effectiveness": "not_assessed",
+      "evidence_refs": [
+        "EVIDENCE-SECURITY-COMMS-001"
+      ],
+      "evidence_tier": "retained_candidate",
+      "record_id": "RECORD-SECURITY-003",
+      "subject": "retained SPEC-COMMS unknown"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-SECURITY-CODE-001",
+        "EVIDENCE-SECURITY-SECRETS-001",
+        "EVIDENCE-SECURITY-COMMS-001"
+      ],
+      "missing_evidence": [
+        "domain-complete evidence",
+        "control-effectiveness evidence",
+        "qualified semantic adjudication"
+      ],
+      "statement": "Whole-product coverage, exploitability, exposure, control effectiveness, residual risk, and release readiness remain unknown.",
+      "unknown_id": "UNKNOWN-SECURITY-001"
+    }
+  ]
+}

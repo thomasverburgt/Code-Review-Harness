@@ -1,0 +1,150 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-COMMS-MTLS-STRICT-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 12,
+    "line_fingerprint": "sha256:32a30cb171908615aef043e0b09fb18ed72b9145b85cedf726494fdde4a58613",
+    "line_start": 12,
+    "locator_hash": "sha256:973a681b467f92b5e9c11b1520b0d0f4177c92cf61b55c9fe9ed22907cbaad28",
+    "locator_id": "c2619740-0b87-5075-af6d-9b58060885bc",
+    "locator_state": "source_located",
+    "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 12.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "    mode: STRICT",
+    "source_type": "configuration",
+    "symbol_or_section": "default mTLS posture"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-COMMS-MTLS-EXCEPTION-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 19,
+    "line_fingerprint": "sha256:095f2f041f8ea6262716e63a1f889efc8d2735b00f4ccab69ef109c46a1d9878",
+    "line_start": 19,
+    "locator_hash": "sha256:fc50690308646330e3ef27d7f4044c5cbc8a566bd5aa4354a2a0e1ee17c10716",
+    "locator_id": "29b2287a-6691-5797-85f6-028ab01f54ad",
+    "locator_state": "source_located",
+    "path": "src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/metrics-server/chart/templates/peerauthentication/metrics-api.yaml line 19.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "      mode: PERMISSIVE",
+    "source_type": "configuration",
+    "symbol_or_section": "port 10250 exception"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-COMMS-UDP-BOUNDARY-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 185,
+    "line_fingerprint": "sha256:966dd90c3d608b1e9b703a68514117aafee394010f733676ba8ff0635d760294",
+    "line_start": 185,
+    "locator_hash": "sha256:a90c469f9734419036fc47a215471262c9f751fc14a82d1f16eb0faaf4c4c3d4",
+    "locator_id": "520fcc28-eca7-5b92-9172-55eb016472bf",
+    "locator_state": "source_located",
+    "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.",
+    "source_type": "git_source",
+    "symbol_or_section": "UDP protocol contract"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T22:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-2-deterministic-reference",
+    "evidence_id": "EVIDENCE-COMMS-TOPOLOGY-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 17,
+    "line_fingerprint": "sha256:baaa1e37062b85242a00f84e4886d9eb21a0a7fe643d1ca8883f1fe2aaae843d",
+    "line_start": 17,
+    "locator_hash": "sha256:45fcaf606c701954a6d9d7ea3a1de0ae6855bda65a2753b1c911b6827e11f7b9",
+    "locator_id": "03fa86ab-d805-5705-b861-1e4eebec0c1b",
+    "locator_state": "source_located",
+    "path": "src/test/app-admin-package.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/test/app-admin-package.yaml line 17.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "        - name: httpbin",
+    "source_type": "configuration",
+    "symbol_or_section": "bounded service topology"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "a100_production_authorized": false,
+  "artifact_hash": "sha256:fe45838626cbe40098fb63c8b9ff6885f30a18d3700696c010caad0606a63a6a",
+  "artifact_id": "f63b32bc-1a85-5c94-9412-c4740edb60fd",
+  "candidate_status": "candidate",
+  "deployment_authorized": false,
+  "designation": "SPEC-COMMS",
+  "human_review_deferred": true,
+  "packet_hash": "sha256:38e0c750e19d65b045bb250a1f28de716a8eebd5a68cefe6405d3aff1698b479",
+  "packet_id": "15e4f0ac-888b-529d-8854-cdbe9e033d8c",
+  "passed": true,
+  "product_fan_in_eligible": false,
+  "raw_response_hash": "sha256:373e4d7a951bc6b7b0b901004cae1e9c6cc12fa6deb584ca0204b5a9ad97e95d",
+  "report_eligible": false,
+  "scheduled": false,
+  "semantic_acceptance": "human_review_deferred",
+  "status": "complete",
+  "suite": "adr0039-increment34-kubernetes-secure-live-calibration",
+  "test_platform": "GX-10 / approved DGX Spark-equivalent",
+  "usage": {
+    "cost_usd": 0.0,
+    "input_tokens": 2509,
+    "output_tokens": 599
+  }
+}

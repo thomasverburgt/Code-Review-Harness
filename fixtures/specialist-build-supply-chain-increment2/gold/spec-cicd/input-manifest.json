@@ -1,0 +1,124 @@
+{
+  "candidate": {
+    "agent_uuid": "c6e380a3-8161-45cd-9a05-b2849a5e30a6",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-CICD",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T20:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-2.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:b0e38ef39b2396cc1b21e5655059e14381fd2833d94e8e6bc69e1880e8928097",
+      "evidence_id": "EVIDENCE-CICD-RELEASE-PERM-001",
+      "path": ".github/workflows/tag-and-release.yaml",
+      "purpose": "Review SPEC-CICD evidence in tag-new-version permissions.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:1f47488f2872d8e0d5037df954be9062bb8cbf764e5e31aacf7af393a4cdcaa3",
+      "evidence_id": "EVIDENCE-CICD-PUBLISH-PERM-001",
+      "path": ".github/workflows/publish.yaml",
+      "purpose": "Review SPEC-CICD evidence in publish job permissions.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:b0e38ef39b2396cc1b21e5655059e14381fd2833d94e8e6bc69e1880e8928097",
+      "evidence_id": "EVIDENCE-CICD-ACTION-PIN-001",
+      "path": ".github/workflows/tag-and-release.yaml",
+      "purpose": "Review SPEC-CICD evidence in release action pin.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:8dfb47eecb1c89496a2ad03682f58660d84cf25dc212554e0c52f44bafa7724b",
+      "id": "GX10-QWEN3-32B-SPEC-CICD-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:f72ee4045976e9914321c5ce04a83b1593381a91308a58807ed2588674a09960",
+      "id": "SPEC-CICD-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:b4557dd173e3aeb16ef10144372862a7d9520a90ad027f5bbb418898455420d6",
+      "id": "SPEC-CICD-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:71104bc9d94929fd3751afd46e9b00b1885339a7db3b6141822b37dce2343f05",
+      "id": "RUBRIC-SPEC-CICD-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:de9f35a84c556049b3cf2eedacec5ce33d44c00c2465b87e5b4c96451f111950",
+      "id": "TOOLCHAIN-SPEC-CICD-BUILD-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:7f437c0bb1145a15da862bd7801d0461335f74ad071ccf295da2928d13dfdf13",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:0627b77b073f801e984ec3beb69b3ae9febc11c250c8357694277f85a5691103",
+    "profile_id": "FOCUS-SPEC-CICD",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/cicd-pipeline-reviewer.md",
+    "source_specification_hash": "sha256:9fdc2b889911f97d2301caaa47c0be2670b00083a60f0e5a0d1097bea2c295d5"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:1b2a4da9294d38eb38e13a087e24aa955fb1ee45151eaea838a20192e09b8dc2",
+  "manifest_id": "abcb1937-39ba-5071-910d-a024bd7ae177",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

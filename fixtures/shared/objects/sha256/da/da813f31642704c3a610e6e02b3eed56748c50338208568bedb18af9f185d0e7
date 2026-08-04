@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "data_assessment_only_no_governance_or_product_approval",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-DATA",
+  "domain_records": [
+    {
+      "assessment_state": "insufficient_evidence",
+      "effectiveness": "configured_not_demonstrated",
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "evidence_tier": "configuration",
+      "record_id": "RECORD-DATA-001",
+      "subject": "Velero backup storage configuration"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-DATA-BACKUP-001"
+      ],
+      "missing_evidence": [
+        "data inventory and ownership",
+        "lineage and retention records",
+        "restore test results"
+      ],
+      "statement": "Data population, semantics, lineage, retention, access, loss tolerance, and recovery effectiveness remain unknown.",
+      "unknown_id": "UNKNOWN-DATA-001"
+    }
+  ]
+}

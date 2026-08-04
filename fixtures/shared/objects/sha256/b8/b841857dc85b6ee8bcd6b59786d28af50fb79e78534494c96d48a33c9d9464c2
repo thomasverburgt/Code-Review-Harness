@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-6-deterministic-reference",
+    "evidence_id": "EVIDENCE-PERF-AUTOSCALE-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 96,
+    "line_fingerprint": "sha256:574b7cbbac3ba303819ea6131d41f1106ed0d628ab3d2d9a6056e56e39cf3993",
+    "line_start": 96,
+    "locator_hash": "sha256:5834b86d279f2c81547e720720cb4d7a563cd58b8dc1939b21eb70ebf448d93f",
+    "locator_id": "a237c76c-f5b3-5033-a6c0-70bb3ce4613d",
+    "locator_state": "source_located",
+    "path": "src/grafana/values/values.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/grafana/values/values.yaml line 96.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "  enabled: false",
+    "source_type": "configuration",
+    "symbol_or_section": "Grafana autoscaling"
+  }
+]

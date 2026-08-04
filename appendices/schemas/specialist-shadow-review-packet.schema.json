@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/specialist-shadow-review-packet.schema.json",
+  "title": "Specialist Human Shadow Review Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packet_id", "packet_version", "generated_at", "candidate", "input_manifest_id",
+    "input_manifest_hash", "candidate_artifact_id", "candidate_artifact_hash", "focus_binding",
+    "reviewability_state", "classification", "permitted_reviewer_tracks", "items",
+    "blocking_issues", "lifecycle", "authority_effect", "packet_hash"
+  ],
+  "properties": {
+    "packet_id": {"type": "string", "format": "uuid"},
+    "packet_version": {"const": "1.0.0"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["agent_uuid", "designation", "product_id"],
+      "properties": {
+        "agent_uuid": {"type": "string", "format": "uuid"},
+        "designation": {"type": "string", "pattern": "^SPEC-[A-Z0-9]+(?:-[A-Z0-9]+)*$"},
+        "product_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "input_manifest_id": {"type": "string", "format": "uuid"},
+    "input_manifest_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "candidate_artifact_id": {"type": "string", "format": "uuid"},
+    "candidate_artifact_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "focus_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile_id", "profile_version", "profile_hash"],
+      "properties": {
+        "profile_id": {"type": "string", "minLength": 1},
+        "profile_version": {"type": "string", "minLength": 1},
+        "profile_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+      }
+    },
+    "reviewability_state": {"enum": ["ready_for_human_shadow_review", "blocked_missing_locator", "blocked_unverified_locator", "blocked_access", "blocked_unsafe_content"]},
+    "classification": {"enum": ["public", "internal", "restricted"]},
+    "permitted_reviewer_tracks": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["general_engineering_intern", "restricted_domain_reviewer", "qualified_subject_matter_expert"]}
+    },
+    "items": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/reviewItem"}},
+    "blocking_issues": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["comparison_only", "scheduled", "product_fan_in_eligible", "report_eligible", "deployment_authorized", "a100_production_authorized"],
+      "properties": {
+        "comparison_only": {"const": true},
+        "scheduled": {"const": false},
+        "product_fan_in_eligible": {"const": false},
+        "report_eligible": {"const": false},
+        "deployment_authorized": {"const": false},
+        "a100_production_authorized": {"const": false}
+      }
+    },
+    "authority_effect": {"const": "review_support_only"},
+    "packet_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "reviewItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id", "source_record_id", "kind", "statement", "confidence", "confidence_meaning",
+        "evidence_refs", "locators", "reviewability", "allowed_dispositions"
+      ],
+      "properties": {
+        "item_id": {"type": "string", "minLength": 1},
+        "source_record_id": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["observation", "finding", "recommendation", "unknown", "pattern"]},
+        "statement": {"type": "string", "minLength": 1},
+        "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "confidence_meaning": {"type": "string", "minLength": 1},
+        "evidence_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "locators": {"type": "array", "items": {"$ref": "#/$defs/locator"}},
+        "reviewability": {"enum": ["ready", "blocked_missing_locator", "blocked_unverified_locator", "blocked_access", "blocked_unsafe_content"]},
+        "allowed_dispositions": {
+          "type": "array",
+          "minItems": 6,
+          "uniqueItems": true,
+          "items": {"enum": ["supported", "partially_supported", "unsupported", "duplicate", "outside_specialist_scope", "unable_to_determine"]}
+        }
+      }
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locator_id", "locator_hash", "evidence_id", "repository_uri", "immutable_revision", "path",
+        "line_start", "line_end", "symbol_or_section", "safe_excerpt", "line_fingerprint",
+        "classification", "redaction_applied", "raw_value_included", "reproduction_steps", "locator_state"
+      ],
+      "properties": {
+        "locator_id": {"type": "string", "minLength": 1},
+        "locator_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "evidence_id": {"type": "string", "minLength": 1},
+        "repository_uri": {"type": "string", "minLength": 1},
+        "immutable_revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "path": {"type": "string", "minLength": 1},
+        "line_start": {"type": ["integer", "null"], "minimum": 1},
+        "line_end": {"type": ["integer", "null"], "minimum": 1},
+        "symbol_or_section": {"type": ["string", "null"]},
+        "safe_excerpt": {"type": "string", "minLength": 1},
+        "line_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "classification": {"enum": ["public", "internal", "restricted"]},
+        "redaction_applied": {"type": "boolean"},
+        "raw_value_included": {"const": false},
+        "reproduction_steps": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "locator_state": {"enum": ["source_located", "source_partially_located", "source_inaccessible", "source_no_longer_matches", "source_locator_unverified"]}
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://code-review-harness/schemas/specialist-candidate-control-record.schema.json",
+  "title": "Specialist Candidate Calibration Control Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "control_id", "control_version", "manifest_id", "manifest_hash", "designation", "action",
+    "decided_at", "decided_by", "authority_source", "effects", "authority_effect", "control_hash"
+  ],
+  "properties": {
+    "control_id": {"type": "string", "format": "uuid"},
+    "control_version": {"const": "1.0.0"},
+    "manifest_id": {"type": "string", "format": "uuid"},
+    "manifest_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "designation": {"type": "string", "pattern": "^SPEC-[A-Z0-9]+(?:-[A-Z0-9]+)*$"},
+    "action": {"enum": ["enable_calibration", "revoke_calibration"]},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "decided_by": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority_role", "authority_name"],
+      "properties": {
+        "authority_role": {"const": "project_owner"},
+        "authority_name": {"type": "string", "minLength": 1}
+      }
+    },
+    "authority_source": {"type": "string", "minLength": 1},
+    "effects": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_discovery_enabled", "dispatch_enabled", "packet_export_enabled", "scheduled",
+        "product_fan_in_eligible", "report_eligible", "deployment_authorized", "a100_production_authorized"
+      ],
+      "properties": {
+        "candidate_discovery_enabled": {"type": "boolean"},
+        "dispatch_enabled": {"type": "boolean"},
+        "packet_export_enabled": {"type": "boolean"},
+        "scheduled": {"const": false},
+        "product_fan_in_eligible": {"const": false},
+        "report_eligible": {"const": false},
+        "deployment_authorized": {"const": false},
+        "a100_production_authorized": {"const": false}
+      }
+    },
+    "authority_effect": {"const": "candidate_calibration_control_only"},
+    "control_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

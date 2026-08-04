@@ -1,0 +1,109 @@
+{
+  "candidate": {
+    "agent_uuid": "b7eb144e-eae5-4f91-9789-b606ba2afc95",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-CONTAINER",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T20:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-2.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:68d294b60ad036736ed6a8074d438f16adef6c805e51c813ed81b1a722f771b4",
+      "evidence_id": "EVIDENCE-CONTAINER-BASE-001",
+      "path": "scripts/keycloak-crl-airgap/Dockerfile",
+      "purpose": "Review SPEC-CONTAINER evidence in base image.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:68d294b60ad036736ed6a8074d438f16adef6c805e51c813ed81b1a722f771b4",
+      "evidence_id": "EVIDENCE-CONTAINER-COPY-001",
+      "path": "scripts/keycloak-crl-airgap/Dockerfile",
+      "purpose": "Review SPEC-CONTAINER evidence in composition.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:eab4f6465f9b8d5fcb0124581ce9bec346914abe9132949bd2f31bedaf758b99",
+      "id": "GX10-QWEN3-32B-SPEC-CONTAINER-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:d241b1ef0a980f5491a4bbd82600d7146e579b0ff1b237a7cc8e00d534167759",
+      "id": "SPEC-CONTAINER-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:c9766e58a05bfe938d78f5b4ec08762cb191df34056170f980c048a3ed5474d7",
+      "id": "SPEC-CONTAINER-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:e858f02b48c1cdba032ff89c79293a048eccdd58f08eb25af78c0c813f5e7e84",
+      "id": "RUBRIC-SPEC-CONTAINER-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:5aef4fa143d28f23e701afab2398d0a6a104a9cc52e27793b13e6c89638b387c",
+      "id": "TOOLCHAIN-SPEC-CONTAINER-BUILD-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:3e9030ac978ba66db597d4689926f895a8ff680ede2e4b8915c3448772dda011",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:18c476787cb9b10dd3f47439ed17955c902ebce61f31311f139fe11da694e053",
+    "profile_id": "FOCUS-SPEC-CONTAINER",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/container-image-security-reviewer.md",
+    "source_specification_hash": "sha256:1a9f46827d89d37f73c1c97201392c1475bb4b86351b10e56a9128109da5173b"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:0af8813a5d94154ba1c82d1b35f183bd112b343b3081ae33b672a9f2ea3f1d30",
+  "manifest_id": "974072d8-ac07-583b-8603-6fb74f000c71",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

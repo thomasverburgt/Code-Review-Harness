@@ -1,0 +1,36 @@
+{
+  "authority_boundary": "reliability_assessment_only_no_resilience_or_product_approval",
+  "coverage": {
+    "external_sources_reviewed": 0,
+    "records_reviewed": 1,
+    "runtime_records_reviewed": 0,
+    "tests_reviewed": 0
+  },
+  "designation": "SPEC-FMECA",
+  "domain_records": [
+    {
+      "assessment_state": "observed_positive_control",
+      "effectiveness": "configured_not_demonstrated",
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "evidence_tier": "source_contract",
+      "record_id": "RECORD-FMECA-001",
+      "subject": "package reconciliation backoff"
+    }
+  ],
+  "unknowns": [
+    {
+      "evidence_refs": [
+        "EVIDENCE-FMECA-BACKOFF-001"
+      ],
+      "missing_evidence": [
+        "failure-mode inventory",
+        "fault-injection results",
+        "recovery and mission-effect evidence"
+      ],
+      "statement": "Failure likelihood, propagation, retry exhaustion, recovery time, control effectiveness, and mission effect remain unknown.",
+      "unknown_id": "UNKNOWN-FMECA-001"
+    }
+  ]
+}

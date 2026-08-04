@@ -1,0 +1,331 @@
+{
+  "artifact": {
+    "artifact_id": "67e63e3e-8bd9-59e0-b625-095f9b2c799d",
+    "artifact_type": "spec-deps-shadow-candidate",
+    "created_at": "2026-08-03T17:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "a0b12d51-539c-5ad5-aa6c-9cb21d769f85"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-DEPS-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001",
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "rationale": "The setuptools build-system dependency is declared without a version constraint."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 1 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-DEPS-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:5464763ee7f6ce5e28cbcf373b5b1cd54d312e98cd1cbdb4b76c2776ae62dfd0",
+        "id": "GX10-QWEN3-32B-SPEC-DEPS-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:a204c46239f4282508bb3eba01ca7b0d8b8bfd598fa0319c276c88e7fae20401",
+        "id": "SPEC-DEPS-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:346c6bf8f4a2a2c0235a024bd1482bbe031d0455136089e9f2d3d90b848c69ca",
+        "id": "SPEC-DEPS-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:3dbab424119f7ef7a4e48e996801251cae7a416a7179acac120404af3e38762e",
+        "id": "RUBRIC-SPEC-DEPS-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:681a7a0457994ffd40e472df12ba714af3804e6db1fdd95461f660a3b8f06afa",
+        "id": "TOOLCHAIN-SPEC-DEPS-STATIC-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "b66c3971-5cc3-5467-906f-7bb3693be9c3",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:68c246f5d2ea539e5ddc46db1df0f5761cedf4755ec03eee03c73b54cc371d02",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:930cb00d463df5ac1e37978e75d50c029d2477575e732d3c97a7aabef0d1a655",
+      "profile_id": "FOCUS-SPEC-DEPS",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/dependency-reviewer.md",
+      "source_specification_hash": "sha256:caf790b51d02e878504b4b8eb1b16cb8f1d4d57c1420050c6545f6d75559d91d"
+    },
+    "input_manifest_id": "a0b12d51-539c-5ad5-aa6c-9cb21d769f85",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-DEPS-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-DEPS-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-DEPS-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "dependency_health",
+        "revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-DEPS-BUILD-001",
+            "EVIDENCE-DEPS-DOCS-001"
+          ],
+          "statement": "Transitive dependency health, runtime loading, maintenance, licensing, and replacement risk are not measurable from the admitted manifest alone.",
+          "unknown_id": "UNKNOWN-DEPS-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 2
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "CODE-HARNESS-PROJECT-001",
+      "role": {
+        "authority_boundary": "dependency_assessment_only_no_vulnerability_release_or_product_approval",
+        "coverage": {
+          "declared_nodes": 2,
+          "resolved_graph_available": false,
+          "reviewed_nodes": 2,
+          "runtime_loading_reviewed": false
+        },
+        "designation": "SPEC-DEPS",
+        "graph_edges": [
+          {
+            "circularity": "not_assessed",
+            "coupling_type": "build",
+            "edge_id": "EDGE-BUILD-SETUPTOOLS",
+            "evidence_refs": [
+              "EVIDENCE-DEPS-BUILD-001"
+            ],
+            "from_node": "CODE-HARNESS-PROJECT-001",
+            "orphan_status": "not_assessed",
+            "to_node": "DEP-SETUPTOOLS"
+          }
+        ],
+        "graph_nodes": [
+          {
+            "component_name": "setuptools",
+            "critical_path_tags": [
+              "build"
+            ],
+            "dependency_intent": "tooling",
+            "evidence_refs": [
+              "EVIDENCE-DEPS-BUILD-001"
+            ],
+            "license_risk": "not_assessed",
+            "maintenance_signal": "not_assessed",
+            "node_id": "DEP-SETUPTOOLS",
+            "ownership_or_stewardship": null,
+            "replacement_complexity": "not_assessed",
+            "stability_trajectory": "not_assessed",
+            "version": null,
+            "version_drift": "unconstrained"
+          },
+          {
+            "component_name": "python-docx",
+            "critical_path_tags": [
+              "documentation"
+            ],
+            "dependency_intent": "tooling",
+            "evidence_refs": [
+              "EVIDENCE-DEPS-DOCS-001"
+            ],
+            "license_risk": "not_assessed",
+            "maintenance_signal": "not_assessed",
+            "node_id": "DEP-PYTHON-DOCX",
+            "ownership_or_stewardship": null,
+            "replacement_complexity": "not_assessed",
+            "stability_trajectory": "not_assessed",
+            "version": "1.2.0",
+            "version_drift": "constrained"
+          }
+        ],
+        "measures": {
+          "abandoned_exposure_count": null,
+          "circular_count": null,
+          "critical_path_concentration": null,
+          "duplicate_library_count": null,
+          "graph_trend": "not_measurable",
+          "orphan_count": null
+        },
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-DEPS-BUILD-001"
+            ],
+            "missing_evidence": [
+              "resolved graph",
+              "runtime loading evidence"
+            ],
+            "statement": "Transitive dependency health, runtime loading, maintenance, licensing, and replacement risk are not measurable from the admitted manifest alone.",
+            "unknown_id": "UNKNOWN-DEPS-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Declare and test a setuptools compatibility range.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Record the resolved build-tool version during clean-build reproducibility checks.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the review against the newly admitted immutable evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001",
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "finding_id": "FINDING-DEPS-001",
+      "impact": "The bounded specialist question cannot be fully answered from the admitted population.",
+      "root_cause": "missing_or_incomplete_declared_evidence",
+      "severity": "low",
+      "statement": "The setuptools build-system dependency is declared without a version constraint."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "7e7d7710-885a-47c6-af0f-339ed9dad525",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-DEPS",
+    "display_name": "Dependency Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-DEPS-BUILD-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:pyproject.toml"
+    },
+    {
+      "evidence_id": "EVIDENCE-DEPS-DOCS-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:pyproject.toml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:9f7955ccc6b66caf780b708bf3a56a5ffd0549109e30e9afaee70cc179841f1d",
+    "output_hash": "sha256:1405f54786e8aa0f3680a7292a531082d2278eecca86a3290d1a93486505f3b6",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-DEPS",
+    "limitations": [
+      "Transitive dependency health, runtime loading, maintenance, licensing, and replacement risk are not measurable from the admitted manifest alone.",
+      "No external network evidence was admitted.",
+      "Human review remains non-authoritative calibration evidence."
+    ],
+    "method": "bounded deterministic dependency_health projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-DEPS-BUILD-001",
+        "EVIDENCE-DEPS-DOCS-001"
+      ],
+      "fact": "The declared manifest contains one unconstrained build dependency and one exactly pinned optional documentation dependency.",
+      "observation_id": "OBS-DEPS-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "pyproject.toml"
+    ],
+    "product_id": "CODE-HARNESS-PROJECT-001",
+    "source_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+  }
+}

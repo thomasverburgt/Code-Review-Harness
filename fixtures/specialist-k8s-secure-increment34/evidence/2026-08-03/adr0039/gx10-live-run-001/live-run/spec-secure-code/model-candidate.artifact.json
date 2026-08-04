@@ -1,0 +1,287 @@
+{
+  "artifact": {
+    "artifact_id": "09662558-5467-5da9-a57e-8a4a92a93f83",
+    "artifact_type": "spec-secure-code-shadow-candidate",
+    "created_at": "2026-08-03T22:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "62ec4251-5d1f-5b6b-aca6-77bd27cde301"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-SECURE-CODE-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ],
+      "rationale": "The bounded source shows positive validation controls, but their completeness, bypass resistance, error behavior, and exploitability context are not established by admitted tests or execution."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increments 3 and 4 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-SECURE-CODE-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:746ed16ab493649261a04373bf0568534daed074214a7b72d6a20207749accb6",
+        "id": "GX10-QWEN3-32B-SPEC-SECURE-CODE-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:af2b1ae48d2f39dda1f8c53fffb908a9131a920c5089b9face63a24c43d65982",
+        "id": "SPEC-SECURE-CODE-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:b38e7ac2a890502da3b7528cd60f9d9796805b273d4398b493343077c7af84fb",
+        "id": "SPEC-SECURE-CODE-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:7ae7a350c551026998bca9b5deef2d0c3d19a15daef304ac1b9bb451478682a8",
+        "id": "RUBRIC-SPEC-SECURE-CODE-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:55d4af0a2266bbd3d3b5b7465347b6196eb42307da91c9ec1785e7939c41ab7b",
+        "id": "TOOLCHAIN-SPEC-SECURE-CODE-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "ba142425-d429-5c65-add2-b3011e406761",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:5905c4a3e68afb88627cb6990659219ef1001e2437e87f8a312c0ee083bc90ea",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:6da2409210b680359d7406da9e91f88467e55222e7ff575187749be2d71b085c",
+      "profile_id": "FOCUS-SPEC-SECURE-CODE",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/secure-coding-reviewer.md",
+      "source_specification_hash": "sha256:bdba4b8711ce54991d9a825a243f6a9fb2bd16773c70b66484f041397c8b570d"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "62ec4251-5d1f-5b6b-aca6-77bd27cde301",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-SECURE-CODE-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-SECURE-CODE-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-SECURE-CODE-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "secure_implementation",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-SECURE-CODE-SANITIZE-001",
+            "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+          ],
+          "statement": "Population coverage, generated-code boundaries, bypass behavior, execution-path reachability, and exploitability remain unknown.",
+          "unknown_id": "UNKNOWN-SECURE-CODE-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 2
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "implementation_quality_only_no_architecture_supply_chain_release_or_product_approval",
+        "code_assessments": [
+          {
+            "assessment_id": "CODE-VALIDATION-001",
+            "assessment_state": "positive_control_observed",
+            "evidence_refs": [
+              "EVIDENCE-SECURE-CODE-SANITIZE-001",
+              "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+            ],
+            "exploitability": "not_assessed",
+            "pattern": "input sanitization and protocol-specific incompatible-field rejection",
+            "test_support": "not_admitted"
+          }
+        ],
+        "coverage": {
+          "execution_traces_reviewed": 0,
+          "security_tests_reviewed": 0,
+          "source_files_reviewed": 1
+        },
+        "designation": "SPEC-SECURE-CODE",
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-SECURE-CODE-SANITIZE-001",
+              "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+            ],
+            "missing_evidence": [
+              "security tests",
+              "execution traces",
+              "bypass and exploit evidence"
+            ],
+            "statement": "Population coverage, generated-code boundaries, bypass behavior, execution-path reachability, and exploitability remain unknown.",
+            "unknown_id": "UNKNOWN-SECURE-CODE-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain focused positive, negative, boundary, and bypass tests for the exact validator revision.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Map trust-boundary inputs to validation requirements and continuously test failure and bypass paths.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ],
+      "finding_id": "FINDING-SECURE-CODE-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The bounded source shows positive validation controls, but their completeness, bypass resistance, error behavior, and exploitability context are not established by admitted tests or execution."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "7497bb23-2340-41d1-9c73-3f0ecd580ab4",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-SECURE-CODE",
+    "display_name": "Secure Coding Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-SECURE-CODE-SANITIZE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:f7a0a04a7bd520cc0e68844eb2a7954bb472f25f9afacbe09e359cad11320c24",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/pepr/operator/crd/validators/package-validator.ts"
+    },
+    {
+      "evidence_id": "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:f7a0a04a7bd520cc0e68844eb2a7954bb472f25f9afacbe09e359cad11320c24",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/pepr/operator/crd/validators/package-validator.ts"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:284b2c51648d679bae720de9528214184af90f8a660ef5ee45535d8173f1ded2",
+    "output_hash": "sha256:f57eea24f4698c5350ae88668341ede6357d02d4eba02d8ce97fd445549c69bd",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-SECURE-CODE",
+    "limitations": [
+      "Population coverage, generated-code boundaries, bypass behavior, execution-path reachability, and exploitability remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic secure_implementation projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-SECURE-CODE-SANITIZE-001",
+        "EVIDENCE-SECURE-CODE-UDP-VALIDATION-001"
+      ],
+      "fact": "The admitted validator sanitizes a custom gateway name and rejects fields incompatible with UDP exposure.",
+      "observation_id": "OBS-SECURE-CODE-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/pepr/operator/crd/validators/package-validator.ts"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

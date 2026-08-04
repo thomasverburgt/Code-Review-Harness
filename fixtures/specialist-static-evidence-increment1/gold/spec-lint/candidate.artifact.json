@@ -1,0 +1,300 @@
+{
+  "artifact": {
+    "artifact_id": "325ef9ff-27dc-536d-b602-a328f6b87016",
+    "artifact_type": "spec-lint-shadow-candidate",
+    "created_at": "2026-08-03T17:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "ebe39cd7-411f-5444-8a29-a19a104c5dbd"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-LINT-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ],
+      "rationale": "No completed checker execution result is admitted for this candidate evidence population."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 1 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 2,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 2,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-LINT-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:d8cb98596f3e007f6395c54caba7f8f01785d8746d3dd2ac89a206602f253f54",
+        "id": "GX10-QWEN3-32B-SPEC-LINT-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:47b127d0f43911478ed47145a80cc1053bbb440ba22d3fe1e3cdd4cb0f5d4bab",
+        "id": "SPEC-LINT-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:ed5c2e8f8f96234da8344e7494eda82f5d7e920b280c498cfab8df5aa48214fa",
+        "id": "SPEC-LINT-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:f43d87445979b91cb8097c1428c7c386eaeb4a67ad6179ad329e2c7c62013814",
+        "id": "RUBRIC-SPEC-LINT-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:4e90f07b9e1fc497629b235f9487454e920dcef676cc9ba76ffcc06645be00d0",
+        "id": "TOOLCHAIN-SPEC-LINT-STATIC-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "02f25d6b-f345-5c0b-b4e1-358258441ea4",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:19c31b27e794297b6b92ccdaa152efdb21cb6ee3bbb40da35d56c76ddd4ab6de",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:f232d343158fd3c8f52f2ee66a89204cad5a9cf11e89a1b33d6cfa8b34aaae48",
+      "profile_id": "FOCUS-SPEC-LINT",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/linter-code-quality-reviewer.md",
+      "source_specification_hash": "sha256:ec0887b337198b93f3ec13133d64375efa6e1edde12a9910f39f4a9828c22a85"
+    },
+    "input_manifest_id": "ebe39cd7-411f-5444-8a29-a19a104c5dbd",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-LINT-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-LINT-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-LINT-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "defined_quality_rules",
+        "revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-LINT-ENTRY-001",
+            "EVIDENCE-LINT-RULE-001"
+          ],
+          "statement": "Rule execution coverage, violations, suppressions, false positives, complexity, and trend are unknown without a completed result.",
+          "unknown_id": "UNKNOWN-LINT-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 2
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "CODE-HARNESS-PROJECT-001",
+      "role": {
+        "authority_boundary": "defined_quality_rule_assessment_only_no_architecture_security_or_release_approval",
+        "designation": "SPEC-LINT",
+        "executions": [],
+        "measures": {
+          "autofixable_count": 0,
+          "complexity_trend": "not_measurable",
+          "eligible_files": 0,
+          "reviewed_files": 0,
+          "suppression_count": 0,
+          "violation_count": 0
+        },
+        "quality_gate": {
+          "authority_effect": "quality_signal_only",
+          "defined": true,
+          "gate_state": "not_executed",
+          "observed_result": null,
+          "threshold": "zero structural check errors"
+        },
+        "rule_set": {
+          "configuration_refs": [
+            "pyproject.toml:project.scripts.harness-check"
+          ],
+          "evidence_refs": [
+            "EVIDENCE-LINT-ENTRY-001",
+            "EVIDENCE-LINT-RULE-001"
+          ],
+          "languages_or_frameworks": [
+            "Python",
+            "repository metadata"
+          ],
+          "rule_set_id": "REPOSITORY-STRUCTURE-CHECK",
+          "rule_version": null
+        },
+        "suppressions": [],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-LINT-ENTRY-001",
+              "EVIDENCE-LINT-RULE-001"
+            ],
+            "missing_evidence": [
+              "completed checker execution record"
+            ],
+            "statement": "Rule execution coverage, violations, suppressions, false positives, complexity, and trend are unknown without a completed result.",
+            "unknown_id": "UNKNOWN-LINT-001"
+          }
+        ],
+        "violations": []
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Execute the pinned checker against the immutable revision and retain its source population, exit code, and output.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Require a content-addressed quality-rule execution record for every candidate revision.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the review against the newly admitted immutable evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ],
+      "finding_id": "FINDING-LINT-001",
+      "impact": "The bounded specialist question cannot be fully answered from the admitted population.",
+      "root_cause": "missing_or_incomplete_declared_evidence",
+      "severity": "low",
+      "statement": "No completed checker execution result is admitted for this candidate evidence population."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "d56a9cfd-9dad-4b0c-9b58-4a516ad3ef83",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-LINT",
+    "display_name": "Linter and Code Quality Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-LINT-ENTRY-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:0d70595fea0c6fccb9b1da8f8cae5c77756fd20d910aa6e50f7c53dbb0c44b0a",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:pyproject.toml"
+    },
+    {
+      "evidence_id": "EVIDENCE-LINT-RULE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:e40c8d28559c3ebf120565f3b3eae2116832bc5335fd6817d2b22cb530c67f9b",
+      "reference": "https://github.com/thomasverburgt/Code-Review-Harness.git@ada870cc7fc557a417f4215c8e60fbf3bee367d9:tools/check_repository_structure.py"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:23bec5b8448b347dc4b69814e6db60dec39275d51fab6810eadb986daf87b694",
+    "output_hash": "sha256:976fe1b3cd85773976b546bda3c8bdbd2bb925013709562c57fe4110743cac72",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-LINT",
+    "limitations": [
+      "Rule execution coverage, violations, suppressions, false positives, complexity, and trend are unknown without a completed result.",
+      "No external network evidence was admitted.",
+      "Human review remains non-authoritative calibration evidence."
+    ],
+    "method": "bounded deterministic defined_quality_rules projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-LINT-ENTRY-001",
+        "EVIDENCE-LINT-RULE-001"
+      ],
+      "fact": "The project declares a repository-check command and implements a text-integrity rule function.",
+      "observation_id": "OBS-LINT-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "pyproject.toml",
+      "tools/check_repository_structure.py"
+    ],
+    "product_id": "CODE-HARNESS-PROJECT-001",
+    "source_revision": "ada870cc7fc557a417f4215c8e60fbf3bee367d9"
+  }
+}

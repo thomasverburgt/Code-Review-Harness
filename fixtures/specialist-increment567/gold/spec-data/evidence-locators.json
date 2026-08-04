@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-5-deterministic-reference",
+    "evidence_id": "EVIDENCE-DATA-BACKUP-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 28,
+    "line_fingerprint": "sha256:c6e7368d4cfc0a2e2e2214379d80f48cb1724315eb91b2cf1db972fd8b7c6d25",
+    "line_start": 28,
+    "locator_hash": "sha256:aeb89b263b4110fc56bd2dcc67b5b267a6d0d8ced0c8ec0c3ea84ff8c4d32414",
+    "locator_id": "d7186bc0-9c29-5597-a48a-142403765aa2",
+    "locator_state": "source_located",
+    "path": "src/velero/values/values.yaml",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/velero/values/values.yaml line 28.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "  backupStorageLocation:",
+    "source_type": "configuration",
+    "symbol_or_section": "Velero backup storage configuration"
+  }
+]

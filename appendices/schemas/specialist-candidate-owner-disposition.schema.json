@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://code-review-harness/schemas/specialist-candidate-owner-disposition.schema.json",
+  "title":"Specialist Candidate Project-Owner Disposition",
+  "type":"object","additionalProperties":false,
+  "required":["disposition_id","disposition_version","decided_at","designation","packet_binding","adjudication_binding","decision","rationale","decided_by","effects","decision_authority","disposition_hash"],
+  "properties":{
+    "disposition_id":{"type":"string","format":"uuid"},"disposition_version":{"const":"1.0.0"},"decided_at":{"type":"string","format":"date-time"},"designation":{"pattern":"^SPEC-[A-Z0-9-]+$"},
+    "packet_binding":{"$ref":"#/$defs/hashBinding"},"adjudication_binding":{"$ref":"#/$defs/hashBinding"},
+    "decision":{"enum":["revise","retain_for_more_calibration","candidate_complete","retained_only"]},"rationale":{"type":"string","minLength":1},
+    "decided_by":{"type":"object","additionalProperties":false,"required":["authority_role","authority_name"],"properties":{"authority_role":{"const":"project_owner"},"authority_name":{"type":"string","minLength":1}}},
+    "effects":{"type":"object","additionalProperties":false,"required":["candidate_complete","scheduled","product_fan_in_eligible","report_eligible","deployment_authorized","a100_production_authorized"],"properties":{"candidate_complete":{"type":"boolean"},"scheduled":{"const":false},"product_fan_in_eligible":{"const":false},"report_eligible":{"const":false},"deployment_authorized":{"const":false},"a100_production_authorized":{"const":false}}},
+    "decision_authority":{"const":"human"},"disposition_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}
+  },
+  "$defs":{"hashBinding":{"type":"object","additionalProperties":false,"required":["record_id","record_hash"],"properties":{"record_id":{"type":"string","minLength":1},"record_hash":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}}}}
+}

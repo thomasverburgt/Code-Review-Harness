@@ -1,0 +1,94 @@
+{
+  "candidate": {
+    "agent_uuid": "da0bc1ae-8e6f-4730-b29c-19ec6544cb7f",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-INTEROP",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T23:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-5.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:f4ba8a9ea016ce84b42843eca7bcc0d501c5ee7734387f9fd7adba781a06dbd4",
+      "evidence_id": "EVIDENCE-INTEROP-UDP-001",
+      "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+      "purpose": "Review SPEC-INTEROP evidence in Expose protocol contract.",
+      "safe_for_human_review": true,
+      "source_type": "git_source"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:4272f6411ad53777d1251ca2f053c27e7af4d0ba0f560b5806c29cfec09e724f",
+      "id": "GX10-QWEN3-32B-SPEC-INTEROP-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:c88b1510e0a875ac3853b66996ddee0c142765d9411bb22cd308ad8457910213",
+      "id": "SPEC-INTEROP-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:483a9408997d6d604d1d939952283d4286e76c90e5fcecb48538770dfa7b6e0c",
+      "id": "SPEC-INTEROP-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:4677a093686ea9f82abbecc02852ae99c993013cab97fe87dc13253e1a2aeb78",
+      "id": "RUBRIC-SPEC-INTEROP-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:a50d103c4b5af595fce5b2373984293a1d2de8918273cf28541ed26ef4dfb0fb",
+      "id": "TOOLCHAIN-SPEC-INTEROP-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:aa212807fb0f942a8b36e43a6608751752c654117481288e10af9c2d3d3fb02c",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:e6ba2c179cd7a30407d09af28ef8de34b7f412e22da15598ded5ae2552229613",
+    "profile_id": "FOCUS-SPEC-INTEROP",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/interoperability-integration-reviewer.md",
+    "source_specification_hash": "sha256:38aba76ca8d61f545f1383bdf3cde3b6f43323efda4c9cd40db926fe8c2778f6"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:27febf598a3f12f4cbeff8b38870463b44593b8069537465c33223a3f7ec637e",
+  "manifest_id": "278d2613-91f5-5531-845f-9d41d7254f73",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

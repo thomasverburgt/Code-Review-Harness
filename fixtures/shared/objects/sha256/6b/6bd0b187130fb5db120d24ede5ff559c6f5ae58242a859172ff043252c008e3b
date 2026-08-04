@@ -1,0 +1,109 @@
+{
+  "candidate": {
+    "agent_uuid": "9106ee3d-8959-4a24-b141-c3ab1435583c",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-K8S-WORKLOAD",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "created_at": "2026-08-03T22:00:00Z",
+  "environment": {
+    "environment_policy_version": "increment-3.0.0",
+    "execution_mode": "specialist_human_shadow_calibration",
+    "platform_class": "dgx_spark_or_equivalent"
+  },
+  "evidence_population": [
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:4f77066037aaab25f70d45bc109122338f0d883b00746090e5565f9b5ede4ba3",
+      "evidence_id": "EVIDENCE-K8S-WORKLOAD-SA-001",
+      "path": "src/test/app-admin.yaml",
+      "purpose": "Review SPEC-K8S-WORKLOAD evidence in service account.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    },
+    {
+      "admitted": true,
+      "allowed_reviewer_tracks": [
+        "general_engineering_intern",
+        "qualified_subject_matter_expert",
+        "restricted_domain_reviewer"
+      ],
+      "classification": "public",
+      "content_hash": "sha256:4f77066037aaab25f70d45bc109122338f0d883b00746090e5565f9b5ede4ba3",
+      "evidence_id": "EVIDENCE-K8S-WORKLOAD-SC-001",
+      "path": "src/test/app-admin.yaml",
+      "purpose": "Review SPEC-K8S-WORKLOAD evidence in container security context.",
+      "safe_for_human_review": true,
+      "source_type": "configuration"
+    }
+  ],
+  "execution_bindings": {
+    "model_manifest": {
+      "hash": "sha256:19224f9e1e56dd2b59bbb3088c03c975a51d497a75a5bae2cafa1248c529220e",
+      "id": "GX10-QWEN3-32B-SPEC-K8S-WORKLOAD-CALIBRATION",
+      "version": "0.1.0"
+    },
+    "prompt": {
+      "hash": "sha256:baf22a39c724014ae247225779ab14d466cb9d089c3a1dae89c23d36521dd269",
+      "id": "SPEC-K8S-WORKLOAD-CANDIDATE-PROMPT",
+      "version": "design-0.1.0"
+    },
+    "role_schema": {
+      "hash": "sha256:a954944044ec1eeda7f8bda3789fd32cd5a6ce741b0755dac84d3f39b98e2242",
+      "id": "SPEC-K8S-WORKLOAD-ROLE",
+      "version": "1.0.0"
+    },
+    "rubric": {
+      "hash": "sha256:2dcd525115e6f683d305fa9acd89219f999ef5c9d5d99d47631baae69bba8902",
+      "id": "RUBRIC-SPEC-K8S-WORKLOAD-CANDIDATE",
+      "version": "0.1.0"
+    },
+    "tool_policy": {
+      "hash": "sha256:668f14454faa2e803b05b79d83e86e669cdafdc31f25ad070438cd3c4a537c36",
+      "id": "TOOLCHAIN-SPEC-K8S-WORKLOAD-EVIDENCE",
+      "version": "0.1.0"
+    }
+  },
+  "focus_binding": {
+    "compiled_prompt_focus_hash": "sha256:7308fb935ef140955f62a58d834ed69606ff1006cef30f0e82a33e46f8f07263",
+    "compression_protected_elements": [
+      "authoritative_questions",
+      "dimensions",
+      "evidence_priorities",
+      "prohibited_conclusions",
+      "rubric_checks",
+      "evidence locators",
+      "active limitations",
+      "human authority boundaries"
+    ],
+    "profile_hash": "sha256:2396756e9686ec322d9072c1b0b2d09fb33996cc5c90f61ab3883a0fcb37089b",
+    "profile_id": "FOCUS-SPEC-K8S-WORKLOAD",
+    "profile_version": "1.0.0",
+    "source_specification": "agents/specialists/kubernetes-workload-security-reviewer.md",
+    "source_specification_hash": "sha256:7fe531f23b069f2ac9e699a0ba38adfe89550cf0c99e972f9475f4d779ed73a1"
+  },
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "retention_class": "specialist-human-shadow-calibration",
+    "scheduled": false
+  },
+  "manifest_hash": "sha256:c6ee1dfe36c3b8dad9b42e7d5a81105411845b7287c27cdf9cbba3f008ebca21",
+  "manifest_id": "4f9673a8-d87e-5712-9c69-fee32540ae39",
+  "manifest_version": "1.0.0",
+  "repository": {
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "modification_prohibited": true,
+    "read_only": true,
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git"
+  }
+}

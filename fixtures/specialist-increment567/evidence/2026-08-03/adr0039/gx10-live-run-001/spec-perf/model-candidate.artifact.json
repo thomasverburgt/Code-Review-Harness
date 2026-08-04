@@ -1,0 +1,276 @@
+{
+  "artifact": {
+    "artifact_id": "3abb6782-5334-5c69-aae9-d0fa3eac406d",
+    "artifact_type": "spec-perf-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "459a0b64-1fd2-5447-98be-f76e85163f7d"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-PERF-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-PERF-AUTOSCALE-001"
+      ],
+      "rationale": "The static setting does not establish workload shape, objectives, capacity, saturation, latency, throughput, or scaling behavior."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 6 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-PERF-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:6bf3e9e1edca16e00812a28a5d7a3ebf7cdc1cfe34dc16ab23f545fbc5e0b19c",
+        "id": "GX10-QWEN3-32B-SPEC-PERF-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:080d1c856c0627b720a151d36d2cacb921eb63b912538f409cb848c991a640ac",
+        "id": "SPEC-PERF-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:8cc966820de297fb3d2b94d14666ac15da2fd1260993f1b803d3d6c3f0f1e738",
+        "id": "SPEC-PERF-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:ac45302b10a1911f6215cbd330cd15f54a0c285cab05df7c0e35a7b11bcd4a04",
+        "id": "RUBRIC-SPEC-PERF-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:a29d66d8ab770f21ce263c494a07aad8218be4aaaeccc59fd45822fb2c4f7c9a",
+        "id": "TOOLCHAIN-SPEC-PERF-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "83a52085-3d69-5470-8181-b2f4e3eb59b5",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:c0e989d9169d100cb3fa14e246974af152c0f63232852300e2d93c295ece0856",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:8ba05f28ffdfe20515d5f4f88e266d2916b598e7830818c52e14569b90ff36e0",
+      "profile_id": "FOCUS-SPEC-PERF",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/performance-scalability-reviewer.md",
+      "source_specification_hash": "sha256:b90e8a8100c246822ee9203f9b4e4be83e86822a746fe917741bcf0764fb5822"
+    },
+    "generation_mode": "model_role_payload_deterministic_universal_projection",
+    "input_manifest_id": "459a0b64-1fd2-5447-98be-f76e85163f7d",
+    "model": "qwen3-32b",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-PERF-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-PERF-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-PERF-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "performance_scalability",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-PERF-AUTOSCALE-001"
+          ],
+          "statement": "Capacity, latency, throughput, scaling limits, bottlenecks, and A100 behavior remain unknown; GX-10 results cannot establish A100 performance.",
+          "unknown_id": "UNKNOWN-PERF-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "performance_assessment_only_no_capacity_or_product_approval",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-PERF",
+        "domain_records": [
+          {
+            "assessment_state": "bounded_concern",
+            "effectiveness": "configured_not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-PERF-AUTOSCALE-001"
+            ],
+            "evidence_tier": "configuration",
+            "record_id": "RECORD-PERF-001",
+            "subject": "Grafana autoscaling"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-PERF-AUTOSCALE-001"
+            ],
+            "missing_evidence": [
+              "workload model",
+              "performance objectives",
+              "repeatable runtime measurements"
+            ],
+            "statement": "Capacity, latency, throughput, scaling limits, bottlenecks, and A100 behavior remain unknown; GX-10 results cannot establish A100 performance.",
+            "unknown_id": "UNKNOWN-PERF-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain workload definitions and repeatable measurements across relevant resource and failure conditions.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Bind performance conclusions to versioned workloads, environments, objectives, distributions, and reproducible results.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-PERF-AUTOSCALE-001"
+      ],
+      "finding_id": "FINDING-PERF-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The static setting does not establish workload shape, objectives, capacity, saturation, latency, throughput, or scaling behavior."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "34ec9c9a-97b4-4a69-ab7c-7e2eb5f3632e",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-PERF",
+    "display_name": "Performance and Scalability Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-PERF-AUTOSCALE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:7697509de4a2f6dc27c7d157afe8468e4a54050664c2f9ac23f4da094edfa871",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/grafana/values/values.yaml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:f8285fce13cb1764acc84d0c8f2b61f817c564312ca10211e36209999f6d1c85",
+    "output_hash": "sha256:0ab2bb2c6f2281b5bf56da0dae86a091e5b84f7763035025e393e57c0d6f8b02",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-PERF",
+    "limitations": [
+      "Capacity, latency, throughput, scaling limits, bottlenecks, and A100 behavior remain unknown; GX-10 results cannot establish A100 performance.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic performance_scalability projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-PERF-AUTOSCALE-001"
+      ],
+      "fact": "The admitted Grafana values disable autoscaling in this configuration.",
+      "observation_id": "OBS-PERF-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/grafana/values/values.yaml"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

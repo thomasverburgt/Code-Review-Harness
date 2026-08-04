@@ -1,0 +1,214 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "e753f9e1-b3ff-4149-8b95-b3c073e3777f",
+    "designation": "SPEC-SECRETS",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:1374322cfbc264abf2c0fcc25f4335752f8631fbb225dad284523fdcfbb5fc2d",
+  "candidate_artifact_id": "3e93f022-8193-55d6-bc7a-7c8fcb49bcb9",
+  "classification": "internal",
+  "focus_binding": {
+    "profile_hash": "sha256:867293b95177b8482eecda5ccfc962e8e9ecd3411c9e9587198d19d289139f15",
+    "profile_id": "FOCUS-SPEC-SECRETS",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T22:05:00Z",
+  "input_manifest_hash": "sha256:9ef90469895b1fce6ac88e5e50f6f895c8c345d1c5375bffe4f47427d4b4d3e4",
+  "input_manifest_id": "941da381-5e40-5990-8881-5840ccd31512",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "internal",
+          "evidence_id": "UDS-0001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 153,
+          "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+          "line_start": 153,
+          "locator_hash": "sha256:dc1ca10c3c497f557b40c7b040740ad2eaf4161d3052461ca75ff476c9740857",
+          "locator_id": "489066aa-3e96-5e2a-a640-f2a9aa39f7f5",
+          "locator_state": "source_located",
+          "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+          "raw_value_included": false,
+          "redaction_applied": true,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open the retained redacted calibration slice.",
+            "Match evidence ID UDS-0001, source path, line 153, and the detector fingerprint.",
+            "Verify that the matched value remains omitted."
+          ],
+          "safe_excerpt": "matched value omitted",
+          "symbol_or_section": "redacted credential-like detector candidate"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-SECRETS-001",
+      "statement": "The accepted retained route records one redacted credential-like detector candidate with a source path, line, and fingerprint; the matched value is omitted."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "internal",
+          "evidence_id": "UDS-0001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 153,
+          "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+          "line_start": 153,
+          "locator_hash": "sha256:dc1ca10c3c497f557b40c7b040740ad2eaf4161d3052461ca75ff476c9740857",
+          "locator_id": "489066aa-3e96-5e2a-a640-f2a9aa39f7f5",
+          "locator_state": "source_located",
+          "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+          "raw_value_included": false,
+          "redaction_applied": true,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open the retained redacted calibration slice.",
+            "Match evidence ID UDS-0001, source path, line 153, and the detector fingerprint.",
+            "Verify that the matched value remains omitted."
+          ],
+          "safe_excerpt": "matched value omitted",
+          "symbol_or_section": "redacted credential-like detector candidate"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-SECRETS-001",
+      "statement": "The admitted redacted evidence supports only unresolved_credential_like_value and does not establish a confirmed exposure or benign classification."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "internal",
+          "evidence_id": "UDS-0001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 153,
+          "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+          "line_start": 153,
+          "locator_hash": "sha256:dc1ca10c3c497f557b40c7b040740ad2eaf4161d3052461ca75ff476c9740857",
+          "locator_id": "489066aa-3e96-5e2a-a640-f2a9aa39f7f5",
+          "locator_state": "source_located",
+          "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+          "raw_value_included": false,
+          "redaction_applied": true,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open the retained redacted calibration slice.",
+            "Match evidence ID UDS-0001, source path, line 153, and the detector fingerprint.",
+            "Verify that the matched value remains omitted."
+          ],
+          "safe_excerpt": "matched value omitted",
+          "symbol_or_section": "redacted credential-like detector candidate"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-SECRETS-001:CAPA",
+      "statement": "A restricted qualified reviewer may classify the redacted candidate using separately authorized evidence without distributing the value."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "UDS-0001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "internal",
+          "evidence_id": "UDS-0001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 153,
+          "line_fingerprint": "sha256:411fdec1c7f0f0ada4b089edf43886b0aafc6fb59d7df8ad434363c469a58bca",
+          "line_start": 153,
+          "locator_hash": "sha256:dc1ca10c3c497f557b40c7b040740ad2eaf4161d3052461ca75ff476c9740857",
+          "locator_id": "489066aa-3e96-5e2a-a640-f2a9aa39f7f5",
+          "locator_state": "source_located",
+          "path": "docs/getting-started/local-demo/integrate-your-package.mdx",
+          "raw_value_included": false,
+          "redaction_applied": true,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open the retained redacted calibration slice.",
+            "Match evidence ID UDS-0001, source path, line 153, and the detector fingerprint.",
+            "Verify that the matched value remains omitted."
+          ],
+          "safe_excerpt": "matched value omitted",
+          "symbol_or_section": "redacted credential-like detector candidate"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-SECRETS-001",
+      "statement": "Secret classification, validity, ownership, age, storage policy, and blast radius remain unknown; no raw value is admitted."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:ba4432dc3d9cae1aa45b2b41dd77eb36834c1e0135aab43ea562bc18078d102f",
+  "packet_id": "27f0caad-967a-5f7c-b3b9-5f33a25248d4",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

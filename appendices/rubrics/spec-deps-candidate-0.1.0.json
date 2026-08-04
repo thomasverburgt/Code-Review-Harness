@@ -1,0 +1,7 @@
+{
+  "rubric_id": "RUBRIC-SPEC-DEPS-CANDIDATE",
+  "version": "0.1.0",
+  "status": "candidate-comparison-only",
+  "authoritative_question": "Is the dependency graph healthy and sustainable?",
+  "required_controls": ["exact_identity_and_focus_binding", "declared_evidence_population_only", "direct_resolved_runtime_separation", "graph_node_and_edge_evidence", "honest_missing_graph_unknowns", "supportability_license_provenance_limits", "capa_migration_and_effort_uncertainty", "no_vulnerability_or_release_authority", "exact_human_review_locators", "unscheduled_downstream_ineligible"]
+}

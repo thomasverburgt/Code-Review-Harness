@@ -1,0 +1,17 @@
+{
+  "a100_production_authorized": false,
+  "deployment_authorized": false,
+  "final_state_counts": {
+    "blocked_on_evidence": 22
+  },
+  "gx10_passed": 22,
+  "human_review_pending": true,
+  "input_tokens": 53369,
+  "machine_preparation_complete": true,
+  "output_tokens": 8641,
+  "passed": true,
+  "product_fan_in_eligible": false,
+  "registered_agents": 22,
+  "scheduled": false,
+  "suite": "adr0039-increment8-cross-agent-retrospective"
+}

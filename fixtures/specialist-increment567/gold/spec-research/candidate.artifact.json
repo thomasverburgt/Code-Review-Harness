@@ -1,0 +1,275 @@
+{
+  "artifact": {
+    "artifact_id": "22cef1b0-4088-59fc-9d99-b48796a60b06",
+    "artifact_type": "spec-research-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "92cfbe64-a7e0-5500-98f6-86988b6eefbe"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-RESEARCH-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "rationale": "License and revision establish bounded provenance, but source authority, claim-specific relevance, currentness, and corroboration still require explicit evaluation."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 7 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-RESEARCH-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:8a47394074ed104ba6669dc7f46e8170fc3d9303a8435aac9fea2cc4461c91e9",
+        "id": "GX10-QWEN3-32B-SPEC-RESEARCH-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:48943d6286befc81c6452b7516a9dab190fa743571e2a65fda42f99cf88349c9",
+        "id": "SPEC-RESEARCH-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:9a3eda68c1213148562fb76dd4163511c93976540e32e0d7a1be069cfc80f344",
+        "id": "SPEC-RESEARCH-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:543e43242a3c8d0ef922e202e1c34b163e01318554187f5f3294a11b7ad05e4f",
+        "id": "RUBRIC-SPEC-RESEARCH-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:4119a3c611b32b07a3c5df942a82f968d23ad16bd02a710af85c7357603974c7",
+        "id": "TOOLCHAIN-SPEC-RESEARCH-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "4cbeaf7f-7d96-5b24-aae5-761889247eb2",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:d73cbb382187b71b3cf09aad8553489424dedd4a414e1f31324d20684d3288f2",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:abe2e4d74039a01bb98f62394627aaaa687303d60242b12d3969fa742d36dd71",
+      "profile_id": "FOCUS-SPEC-RESEARCH",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/research-product-store-agent.md",
+      "source_specification_hash": "sha256:44f8ee6657a935553a365da0d81542428f78954bd57d843a7e2b91d693dd74a4"
+    },
+    "input_manifest_id": "92cfbe64-a7e0-5500-98f6-86988b6eefbe",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-RESEARCH-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-RESEARCH-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-RESEARCH-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "research_provenance",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-RESEARCH-LICENSE-001"
+          ],
+          "statement": "Claim-specific authority, bias, currentness, completeness, and corroboration remain unknown; no network research was performed.",
+          "unknown_id": "UNKNOWN-RESEARCH-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "research_evidence_only_no_authority_or_product_approval",
+        "coverage": {
+          "external_sources_reviewed": 1,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-RESEARCH",
+        "domain_records": [
+          {
+            "assessment_state": "observed_positive_control",
+            "effectiveness": "not_assessed",
+            "evidence_refs": [
+              "EVIDENCE-RESEARCH-LICENSE-001"
+            ],
+            "evidence_tier": "external_source",
+            "record_id": "RECORD-RESEARCH-001",
+            "subject": "repository license"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-RESEARCH-LICENSE-001"
+            ],
+            "missing_evidence": [
+              "claim-specific source mapping",
+              "currency rationale",
+              "independent corroboration"
+            ],
+            "statement": "Claim-specific authority, bias, currentness, completeness, and corroboration remain unknown; no network research was performed.",
+            "unknown_id": "UNKNOWN-RESEARCH-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain claim-to-source mappings with author, license, retrieval time, revision, currency rationale, and corroboration.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Admit external research only through content-addressed, licensed, attributable, claim-scoped source records.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "finding_id": "FINDING-RESEARCH-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "License and revision establish bounded provenance, but source authority, claim-specific relevance, currentness, and corroboration still require explicit evaluation."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "55145271-c754-46bc-9da9-26a6d8dcddd7",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-RESEARCH",
+    "display_name": "Research and Product-Store Agent"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-RESEARCH-LICENSE-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:6f1e622c82a380075843bb084a7ec3b1f1d12a4a02526d75e78b0924a860aa75",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:LICENSE.md"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:5e81776b94c9aca11bbd4aa1ff03ed6de7eadc9d91355dfc8c5283131c646716",
+    "output_hash": "sha256:315d4fe2f90f98bac02f2815728f7175fc4e42c8c00c75f52b8c083d35883560",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-RESEARCH",
+    "limitations": [
+      "Claim-specific authority, bias, currentness, completeness, and corroboration remain unknown; no network research was performed.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic research_provenance projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-RESEARCH-LICENSE-001"
+      ],
+      "fact": "The admitted immutable repository includes an attributable AGPL license record.",
+      "observation_id": "OBS-RESEARCH-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "LICENSE.md"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}

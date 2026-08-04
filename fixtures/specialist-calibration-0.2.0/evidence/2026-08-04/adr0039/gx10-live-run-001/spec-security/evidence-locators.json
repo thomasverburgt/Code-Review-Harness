@@ -1,0 +1,113 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-7-deterministic-reference",
+    "evidence_id": "EVIDENCE-SECURITY-CODE-001",
+    "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+    "line_end": 155,
+    "line_fingerprint": "sha256:cc09abd36e8c48a50ed6e462d77770ec04e3360d91656e1c002b872c3834c309",
+    "line_start": 155,
+    "locator_hash": "sha256:8605025d812212a2f688beddaa7c6e310cb72cb491d170656902e940f86ae29f",
+    "locator_id": "0f9fb115-d460-58d5-9209-d6df740df56c",
+    "locator_state": "source_located",
+    "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-secure-code/candidate.artifact.json",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+    "reproduction_steps": [
+      "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+      "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-secure-code/candidate.artifact.json line 155.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "\"statement\": \"Population coverage, generated-code boundaries, bypass behavior, execution-path reachability, and exploitability remain unknown.\",",
+    "source_type": "external_record",
+    "symbol_or_section": "retained SPEC-SECURE-CODE unknown"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-7-deterministic-reference",
+    "evidence_id": "EVIDENCE-SECURITY-SECRETS-001",
+    "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+    "line_end": 153,
+    "line_fingerprint": "sha256:d04daa98f863a0c1fd92b95ed17bab4bdc505755e91b92803598e6660db765d5",
+    "line_start": 153,
+    "locator_hash": "sha256:ef15e983999ea6ac609f7eb66f54fd33192162357ae816823d5e11b5e9869798",
+    "locator_id": "f69ded4a-f1b9-5a8d-a225-2810f50dfd43",
+    "locator_state": "source_located",
+    "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-secrets/candidate.artifact.json",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+    "reproduction_steps": [
+      "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+      "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-secrets/candidate.artifact.json line 153.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "\"statement\": \"Secret classification, validity, ownership, age, storage policy, and blast radius remain unknown; no raw value is admitted.\",",
+    "source_type": "external_record",
+    "symbol_or_section": "retained SPEC-SECRETS unknown"
+  },
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-7-deterministic-reference",
+    "evidence_id": "EVIDENCE-SECURITY-COMMS-001",
+    "immutable_revision": "16a7129e9e19969bce5528b046b2fc94ef5af60b",
+    "line_end": 159,
+    "line_fingerprint": "sha256:f1c039966c2499409c1d4eeccb90993695331eef1bd83a5653b642b974bde682",
+    "line_start": 159,
+    "locator_hash": "sha256:66c487e3e450624e3c38145bef934c5883f5916835fbad12d4d597b72c3b281a",
+    "locator_id": "1604c258-47e6-5c08-a680-358f055f3b0b",
+    "locator_state": "source_located",
+    "path": "fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/thomasverburgt/Code-Review-Harness.git",
+    "reproduction_steps": [
+      "Open https://github.com/thomasverburgt/Code-Review-Harness.git at 16a7129e9e19969bce5528b046b2fc94ef5af60b.",
+      "Inspect fixtures/specialist-k8s-secure-increment34/gold/spec-comms/candidate.artifact.json line 159.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "\"statement\": \"Effective identity, encryption, authorization, exposure, lateral-movement resistance, and failure behavior are not demonstrated without runtime traffic evidence.\",",
+    "source_type": "external_record",
+    "symbol_or_section": "retained SPEC-COMMS unknown"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "classification": "internal",
+  "family": "specialist-shadow-response",
+  "logical_path": "specialist-shadow/responses/6cc5c95c-9986-5ba7-bf9e-f526a11d6286.json",
+  "object_hash": "sha256:500d79f218365d1ea03d0593da869642b7b518cea920434e37908279b8e1252b",
+  "record_id": "6cc5c95c-9986-5ba7-bf9e-f526a11d6286",
+  "retention_class": "specialist-human-shadow-calibration"
+}

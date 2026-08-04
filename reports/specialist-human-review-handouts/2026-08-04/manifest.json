@@ -1,0 +1,361 @@
+{
+  "authority_effect": "review_handout_only",
+  "generated_at": "2026-08-04",
+  "governing_decision": "ADR-0039",
+  "handout_count": 22,
+  "handouts": [
+    {
+      "classification": "public",
+      "designation": "SPEC-ARCH",
+      "display_name": "Architecture Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-arch-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:79be03afa227f03d80526ee6067598d064f5c8767748ed51bca0466d584767f1",
+      "packet_id": "97b4ee28-d5a4-551e-a21f-94b0f0260fa3",
+      "prompt": {
+        "id": "SPEC-ARCH-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-arch/design-0.2.0.prompt.txt",
+        "sha256": "sha256:6f7e545992a8def4ba9b0fde23f7c300e80f6a441f7263465433f450cbf9930c",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:3e6fe93db514036bc0a40b407adb9ea16728c3ee391beef01f82c7ce57671d95",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-arch/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-CICD",
+      "display_name": "CI/CD Pipeline Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-cicd-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:97e7305d862f2821e4e99a4599fd0bcc18af0d4b2aae1d7b0ae0722d45b6d31c",
+      "packet_id": "9443e4c3-e5bc-521b-9356-4a33ea6d685d",
+      "prompt": {
+        "id": "SPEC-CICD-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-cicd/design-0.2.0.prompt.txt",
+        "sha256": "sha256:8d57a463582de0e649cb8a13b7b9f5bd3adf6cbfbb9b440bac180f853e9c0daf",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:b4637ba40740a7bbda3824c91d6d834b20c1f3881417275da7504e2afe483610",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-cicd/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-COMMS",
+      "display_name": "Workload Communication Security Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-comms-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:8597832c30dd912f0a9febccea0b1b65c7f46ea401f1b08ee58756658ca8b026",
+      "packet_id": "cfc774c6-bd77-5b66-a3ee-ae1ed8952433",
+      "prompt": {
+        "id": "SPEC-COMMS-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-comms/design-0.2.0.prompt.txt",
+        "sha256": "sha256:ce0372d27381e71ba21e21c9b0bbd28d911e79a1970e7c287339d782150c2372",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:8a18f52db73bbe7d7aebd609d88f1b43c2dd38458d785156d53757627f6f9bfe",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-comms/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-CONTAINER",
+      "display_name": "Container and Image Security Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-container-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:bd6af28eb315a4b9837718e495d6552a7a4a55125b4111534644a476451fbe81",
+      "packet_id": "b3765f37-32f2-589a-aa44-95012043c8b7",
+      "prompt": {
+        "id": "SPEC-CONTAINER-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-container/design-0.2.0.prompt.txt",
+        "sha256": "sha256:4225c01b737cab49bb027c9cff1ab6bb15d1bb3f27697d464bf97b8d2985a679",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:53d3f9ea5a0bcf9a8ec5400509e34c8b7c8182daff53bc19e0c94a35991580c3",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-container/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-DATA",
+      "display_name": "Data Architecture and Information Management Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-data-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:1efa7f27c861ea9735b90891970c6c940b36cd79171d00401cbd314bab1cdeb5",
+      "packet_id": "69f41c24-7492-594e-ae6e-b3dc687487fd",
+      "prompt": {
+        "id": "SPEC-DATA-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-data/design-0.2.0.prompt.txt",
+        "sha256": "sha256:96005897deb59fb0a47a427a9940a568d2aff5b75558e9fae233feaf67bc3dc5",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:ec908105e80e0c31d929e61a4c3258d53f80ae6556c837fa32338cc2b481135c",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-data/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-DEPS",
+      "display_name": "Dependency Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-deps-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:4fde47014330f46551e48a0805f4266ba98659aa08e7549e9c0489476611d323",
+      "packet_id": "77cc9050-3d57-5677-b93c-740d079f521a",
+      "prompt": {
+        "id": "SPEC-DEPS-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-deps/design-0.2.0.prompt.txt",
+        "sha256": "sha256:db6342219949b615ebb4085c2d58c5a6b256073f67481285edc768d130363ff4",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:d0f915ce5d81df0b9619a4853d6ec7cb3bf8397829a420fa1aaec76534a461c0",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-deps/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-DIAGRAM",
+      "display_name": "Diagram and Design-Model Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-diagram-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:6a1d364eb71b9e66a44faf60dbf43bbf7a790a6216307f658577fcfaaf363280",
+      "packet_id": "8a1edbb5-11d3-5bc4-80c4-5ef9de6e5211",
+      "prompt": {
+        "id": "SPEC-DIAGRAM-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-diagram/design-0.2.0.prompt.txt",
+        "sha256": "sha256:a2fe77a4845925bd854109d3a449dd868dad8740c799bd5a40305ca5958d0061",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:1ae617815742dbf522646058b6b3b6e02c6cea766c95d5aaff58b233301eaf87",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-diagram/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-FMECA",
+      "display_name": "Reliability, Resilience, and FMECA Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-fmeca-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:245a6a067e5e47b216a8426af2019a06c9bd195b52683a0c703543ce92f42069",
+      "packet_id": "ccda73a3-626d-5299-b921-5da4cc5d5f9e",
+      "prompt": {
+        "id": "SPEC-FMECA-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-fmeca/design-0.2.0.prompt.txt",
+        "sha256": "sha256:894c2f7030b8f00ed16090401a580d1c1bc4a58a5daf8aa9b650e13a1457c235",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:224b263486166b6a9461b0626e9fe8f51b6411361592d7b5a5a8594bdfee83a9",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-fmeca/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-IAC",
+      "display_name": "Infrastructure-as-Code Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-iac-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:d7a90f0c716580666dbc5e3a78d4d6750cbff9b66a8d608b3792c44ace29f8a8",
+      "packet_id": "ac53b1b7-ba6d-5f78-9f53-d7796a3121a1",
+      "prompt": {
+        "id": "SPEC-IAC-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-iac/design-0.2.0.prompt.txt",
+        "sha256": "sha256:b8d7d417e4bd55d0ae0343aaecccd349a885cbeca1b766d11e8b420e8d3ae2ae",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:cc36162ebbadc45843eddd6601c4eac26fb4a7c4ddba750f6ac4037821d77bdc",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-iac/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-INTEROP",
+      "display_name": "Interoperability and Integration Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-interop-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:e2314a6c86383a10ae4c6e1b29e0469b96e3a77b61e0981562c12a90d638bab1",
+      "packet_id": "3077edec-3f06-5193-8d54-43506030d335",
+      "prompt": {
+        "id": "SPEC-INTEROP-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-interop/design-0.2.0.prompt.txt",
+        "sha256": "sha256:91cd5e53e9472181553c1444e9f9053fe7bce27d6e4810019efc21628c060929",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:723cb42a6992a73809da880b92605691ec1180e4c9c7854ac45714e06c6a5204",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-interop/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-IO",
+      "display_name": "I/O and Resource Interaction Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-io-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:3fdff97e81b8a207a03600113f259f65eb9a4e334d8fd46ea8d8139931bd058d",
+      "packet_id": "b41f58ee-4946-5f6d-8576-5d805b473cd9",
+      "prompt": {
+        "id": "SPEC-IO-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-io/design-0.2.0.prompt.txt",
+        "sha256": "sha256:c19a813738351bfef0f1223ccf0b19ab7fee5b2bc2a0442a476b8206cec114f1",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:87bbb231a65281990696b3d77d726c6bcc1453334befafb04b36f31a497998c9",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-io/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-K8S-PLATFORM",
+      "display_name": "Kubernetes Platform Security Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-k8s-platform-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:7dd1b460b748bd34e17cbb8db95fc617675fb1af077b96edf9b89f742b0e9dbb",
+      "packet_id": "8c6026de-e6d9-5157-855b-893d6c05530b",
+      "prompt": {
+        "id": "SPEC-K8S-PLATFORM-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-k8s-platform/design-0.2.0.prompt.txt",
+        "sha256": "sha256:743ad12ddc46064a6c97714fd10951d0238ec54c0ece08ff193e879a8a453359",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:362ab5e6ceb2f7bef3f9a9f1459e1445bb04705f8fed4626651a77ff387aa419",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-k8s-platform/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-K8S-WORKLOAD",
+      "display_name": "Kubernetes Workload Security Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-k8s-workload-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:cf0adc240cbb1776dabc80feb7b76e09dacfded3ceae4fe9907ccfcf38502efa",
+      "packet_id": "cf439757-2bc7-5095-b273-6b11265f55b1",
+      "prompt": {
+        "id": "SPEC-K8S-WORKLOAD-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-k8s-workload/design-0.2.0.prompt.txt",
+        "sha256": "sha256:423c117fac83c7ccd45acc7f3af85882d4ba9e30f1d3e7f446a1dee5c1a5caa9",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:2fd5872df6be5c749c8a9e27b7b5d0e8765ff7b55d8cee3a2c760a5a3808a45c",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-k8s-workload/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-LINT",
+      "display_name": "Linter and Code Quality Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-lint-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:6cab68e8678adf3534abf59b1359194ee831c44c316ceeb286ce7e30a15d81be",
+      "packet_id": "87d8be77-46e7-5bae-8811-c136d83abaa6",
+      "prompt": {
+        "id": "SPEC-LINT-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-lint/design-0.2.0.prompt.txt",
+        "sha256": "sha256:0e7c6c0c27bf01efaf3a4102d4fd9bb8ede5748ecc149647e873b8d2ebcf33c6",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:edb60717aa4bd829c29eee67d07ceede1a1f883bc64f1f6b0b7759b5a96d8791",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-lint/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-OBS",
+      "display_name": "Observability Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-obs-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:ac8aeb71e3162908f7578ca78a3025b918a4daafdca04380ed08352d61114093",
+      "packet_id": "21a9b9b4-fe02-5362-9048-f9e9c20a0cf1",
+      "prompt": {
+        "id": "SPEC-OBS-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-obs/design-0.2.0.prompt.txt",
+        "sha256": "sha256:c8359b8312fe0cac7479332799752c24008e7e1d029305805fc59e65a2693be4",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:d588557e052f3bf2003b0433c84737cbf4e4d529ba84e9eceb67981dfc388a71",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-obs/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-PERF",
+      "display_name": "Performance and Scalability Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-perf-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:df8520ca666453c83ec76d1d70a20e8301258896c556b069c3cfc1eb33dd04b3",
+      "packet_id": "92d48b8f-4d77-50fc-ad89-826f9d987a61",
+      "prompt": {
+        "id": "SPEC-PERF-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-perf/design-0.2.0.prompt.txt",
+        "sha256": "sha256:b64139aa526fcb86e7c3946524b7ff1843a232bc00065073f1ddf01aafe209a5",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:e5a6f71ffaf83dd9aa5e0c98a04d381cc1e73cf7b4900c3bf20ce593d1b041c8",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-perf/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-RESEARCH",
+      "display_name": "Research and Product-Store Agent",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-research-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:faefb154e6d885791ddca459ad76f328727ceffbde0fadef5f04a55fc736f4d2",
+      "packet_id": "42ee5075-80de-58a6-a280-9d3d77ef5d09",
+      "prompt": {
+        "id": "SPEC-RESEARCH-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-research/design-0.2.0.prompt.txt",
+        "sha256": "sha256:d3d3d4dada99a65cefe7cdc0cf4c22171ebe0cde643c40aee142221c6201d3d8",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:1afe31e707d7984880bacfc448c24e1d66bbc7122a55e706829ce5abadc65cc2",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-research/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-RISK",
+      "display_name": "Product Risk Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-risk-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:fd359187637ed4f1922b284b0080024d2b716d2c587dbacf294e2cccf1151e6e",
+      "packet_id": "bfe4062a-1353-5df3-9da5-7bbd75cdb6d1",
+      "prompt": {
+        "id": "SPEC-RISK-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-risk/design-0.2.0.prompt.txt",
+        "sha256": "sha256:91064c6e71b2b9d5bea223133c738cfd6857a6507e066044fed8a78193247aad",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:d801f5f9fd05034aa289a1b4f7d0f2409adaf761fac5c5baa89731428b0bdc12",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-risk/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-SBOM",
+      "display_name": "Software Composition and SBOM Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-sbom-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:204a8b21cc9fd4661e03f93d04aa2910831e44f149743e6ae456588e4d001b12",
+      "packet_id": "2e9052da-f42e-5573-8c68-721710abe105",
+      "prompt": {
+        "id": "SPEC-SBOM-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-sbom/design-0.2.0.prompt.txt",
+        "sha256": "sha256:97e5cc3a678ff76d89ecd8ecba0b84fa8c52990d94139fdefa5e569846368ae2",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:61d67935a97d03c19eb735def73e147cff35243ff90106d2383fad9076bc4dde",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-sbom/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "internal",
+      "designation": "SPEC-SECRETS",
+      "display_name": "Secrets Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-secrets-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:ba4432dc3d9cae1aa45b2b41dd77eb36834c1e0135aab43ea562bc18078d102f",
+      "packet_id": "27f0caad-967a-5f7c-b3b9-5f33a25248d4",
+      "prompt": {
+        "id": "SPEC-SECRETS-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-secrets/design-0.2.0.prompt.txt",
+        "sha256": "sha256:4cf984b16dcd4725bd8e9ff617817dc3e247d529802e894b28f0080efca90c3d",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:2142ebfa1bd5e16f53a29a763b3bd96fe1c073c2b961bd380a3a405cdb1f0d6a",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-secrets/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-SECURE-CODE",
+      "display_name": "Secure Coding Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-secure-code-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:12d1252953fed688ed0b30bf19acda7d9433c3c94cdcc43c7fed487214b030b2",
+      "packet_id": "9874a2a8-32a6-5ffc-ba23-d64a66bc78d5",
+      "prompt": {
+        "id": "SPEC-SECURE-CODE-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-secure-code/design-0.2.0.prompt.txt",
+        "sha256": "sha256:b7691a1cc20b4fc45f6f9cec6f0cd52c4f1b9ca1b05976bd462e7e5b73205c16",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:b982ccb3f8b126171047b949cce4e1dad9b71b7dc171ff847007e93893188d16",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-secure-code/human-shadow-review-packet.json"
+    },
+    {
+      "classification": "public",
+      "designation": "SPEC-SECURITY",
+      "display_name": "Security Posture Reviewer",
+      "document": "reports/specialist-human-review-handouts/2026-08-04/spec-security-human-shadow-review-handout.docx",
+      "packet_hash": "sha256:6a335272c9ebe4074e56a7a2c45733a0d72ccf773e37fc2e1c71078e9cfd3ef7",
+      "packet_id": "1a45bccf-418d-529d-a432-6428f935ce86",
+      "prompt": {
+        "id": "SPEC-SECURITY-CANDIDATE-PROMPT",
+        "path": "appendices/prompt-templates/candidates/spec-security/design-0.2.0.prompt.txt",
+        "sha256": "sha256:6a123d837172e506204cb5403222d266c8464bdac819c93433176acf8870405d",
+        "version": "design-0.2.0"
+      },
+      "sha256": "sha256:512fcd2d8b4f2efc39ae3577032f6ddb20aad54132331035a91ad98890c56be5",
+      "source_packet": "fixtures/specialist-calibration-0.2.0/evidence/2026-08-04/adr0039/gx10-live-run-001/spec-security/human-shadow-review-packet.json"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

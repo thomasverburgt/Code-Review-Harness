@@ -1,0 +1,215 @@
+{
+  "authority_effect": "review_support_only",
+  "blocking_issues": [],
+  "candidate": {
+    "agent_uuid": "5801b47f-df7c-47f3-9609-1ecc1fd54c15",
+    "designation": "SPEC-IO",
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001"
+  },
+  "candidate_artifact_hash": "sha256:6bdacd325d8c91fd70defe67cecd994e15ae904b1812c4cc38a67fb99a6c96fa",
+  "candidate_artifact_id": "6c5f1323-c7ca-5b20-a560-b159c697aae2",
+  "classification": "public",
+  "focus_binding": {
+    "profile_hash": "sha256:6c2b57427d7b1937e28fdf2574e4c692eb46c0d304a1708234afd5e25b75a2bc",
+    "profile_id": "FOCUS-SPEC-IO",
+    "profile_version": "1.0.0"
+  },
+  "generated_at": "2026-08-03T23:05:00Z",
+  "input_manifest_hash": "sha256:dca2b416665d70ba21367f2978470ccb09101bfa67c4ab3320bd8904b7d2b054",
+  "input_manifest_id": "0c9f576a-62b4-526a-b7e7-a3ab44128c3b",
+  "items": [
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the attributable observation within the declared evidence population",
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "item_id": "ITEM-0001",
+      "kind": "observation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-IO-EGRESS-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 47,
+          "line_fingerprint": "sha256:9d9ad3605c3964d6cdd5d158be18b089f77c4a2a13cb10932ae81378a0f6d1c9",
+          "line_start": 47,
+          "locator_hash": "sha256:c39e1e963d43c3a588ea44da7cc972319ae781c182af07daf3fa19489c585d1a",
+          "locator_id": "2ff4f17e-4661-57bf-9705-24ef97c5c4f0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 47.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        remoteGenerated: Anywhere",
+          "symbol_or_section": "httpbin egress destination"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "OBS-IO-001",
+      "statement": "The admitted package configuration declares an Anywhere-generated egress destination for the selected workload."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "assessment confidence for this bounded specialist finding, not decision confidence",
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "item_id": "ITEM-0002",
+      "kind": "finding",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-IO-EGRESS-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 47,
+          "line_fingerprint": "sha256:9d9ad3605c3964d6cdd5d158be18b089f77c4a2a13cb10932ae81378a0f6d1c9",
+          "line_start": 47,
+          "locator_hash": "sha256:c39e1e963d43c3a588ea44da7cc972319ae781c182af07daf3fa19489c585d1a",
+          "locator_id": "2ff4f17e-4661-57bf-9705-24ef97c5c4f0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 47.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        remoteGenerated: Anywhere",
+          "symbol_or_section": "httpbin egress destination"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-IO-001",
+      "statement": "The declaration identifies a broad intended interaction but does not demonstrate rendered policy, actual endpoints, data exchanged, authorization, or runtime use."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 0.98,
+      "confidence_meaning": "confidence that the recommendation addresses the bounded finding; implementation remains human-owned",
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "item_id": "ITEM-0003",
+      "kind": "recommendation",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-IO-EGRESS-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 47,
+          "line_fingerprint": "sha256:9d9ad3605c3964d6cdd5d158be18b089f77c4a2a13cb10932ae81378a0f6d1c9",
+          "line_start": 47,
+          "locator_hash": "sha256:c39e1e963d43c3a588ea44da7cc972319ae781c182af07daf3fa19489c585d1a",
+          "locator_id": "2ff4f17e-4661-57bf-9705-24ef97c5c4f0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 47.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        remoteGenerated: Anywhere",
+          "symbol_or_section": "httpbin egress destination"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "FINDING-IO-001:CAPA",
+      "statement": "Retain rendered resource policy and observed, identity-bound interaction evidence for each endpoint and data class."
+    },
+    {
+      "allowed_dispositions": [
+        "supported",
+        "partially_supported",
+        "unsupported",
+        "duplicate",
+        "outside_specialist_scope",
+        "unable_to_determine"
+      ],
+      "confidence": 1.0,
+      "confidence_meaning": "confidence in the stated evidence limitation; no missing value is imputed",
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "item_id": "ITEM-0004",
+      "kind": "unknown",
+      "locators": [
+        {
+          "classification": "public",
+          "evidence_id": "EVIDENCE-IO-EGRESS-001",
+          "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+          "line_end": 47,
+          "line_fingerprint": "sha256:9d9ad3605c3964d6cdd5d158be18b089f77c4a2a13cb10932ae81378a0f6d1c9",
+          "line_start": 47,
+          "locator_hash": "sha256:c39e1e963d43c3a588ea44da7cc972319ae781c182af07daf3fa19489c585d1a",
+          "locator_id": "2ff4f17e-4661-57bf-9705-24ef97c5c4f0",
+          "locator_state": "source_located",
+          "path": "src/test/app-admin-package.yaml",
+          "raw_value_included": false,
+          "redaction_applied": false,
+          "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+          "reproduction_steps": [
+            "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+            "Inspect src/test/app-admin-package.yaml line 47.",
+            "Compare the safe excerpt and fingerprint."
+          ],
+          "safe_excerpt": "        remoteGenerated: Anywhere",
+          "symbol_or_section": "httpbin egress destination"
+        }
+      ],
+      "reviewability": "ready",
+      "source_record_id": "UNKNOWN-IO-001",
+      "statement": "Actual endpoints, protocols, data flows, permissions, runtime use, and blast radius remain unknown."
+    }
+  ],
+  "lifecycle": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "product_fan_in_eligible": false,
+    "report_eligible": false,
+    "scheduled": false
+  },
+  "packet_hash": "sha256:3fdff97e81b8a207a03600113f259f65eb9a4e334d8fd46ea8d8139931bd058d",
+  "packet_id": "b41f58ee-4946-5f6d-8576-5d805b473cd9",
+  "packet_version": "1.0.0",
+  "permitted_reviewer_tracks": [
+    "general_engineering_intern",
+    "qualified_subject_matter_expert",
+    "restricted_domain_reviewer"
+  ],
+  "reviewability_state": "ready_for_human_shadow_review"
+}

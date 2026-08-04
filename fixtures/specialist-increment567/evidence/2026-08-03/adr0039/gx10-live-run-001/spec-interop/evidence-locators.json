@@ -1,0 +1,39 @@
+[
+  {
+    "access": {
+      "classification": "public",
+      "constraints": [
+        "read-only immutable revision"
+      ],
+      "reviewer_instructions": [
+        "Compare the exact revision, path, line, excerpt, and fingerprint after consolidated review begins."
+      ]
+    },
+    "collected_at": "2026-08-03T23:05:00Z",
+    "collection_method": "exact immutable source line",
+    "collector": "increment-5-deterministic-reference",
+    "evidence_id": "EVIDENCE-INTEROP-UDP-001",
+    "immutable_revision": "329ade01852f9e570d31cb7b19d9979152938c17",
+    "line_end": 185,
+    "line_fingerprint": "sha256:960735d30040c7ce0e598608093ccb00b9e98a9923dc2849650123e1f6f40b95",
+    "line_start": 185,
+    "locator_hash": "sha256:305a1a2a41b68f693592de2f6d936dc9a878ad7edc317163f189ba8d91d911cb",
+    "locator_id": "eba14407-3c7e-5ac0-a0c3-3ed0631569c7",
+    "locator_state": "source_located",
+    "path": "src/pepr/operator/crd/sources/package/v1alpha1.ts",
+    "redaction": {
+      "applied": false,
+      "method": "none_required_public_source",
+      "raw_value_included": false
+    },
+    "repository_uri": "https://github.com/defenseunicorns/uds-core.git",
+    "reproduction_steps": [
+      "Open https://github.com/defenseunicorns/uds-core.git at 329ade01852f9e570d31cb7b19d9979152938c17.",
+      "Inspect src/pepr/operator/crd/sources/package/v1alpha1.ts line 185.",
+      "Compare the safe excerpt and fingerprint."
+    ],
+    "safe_excerpt": "          \"The routing protocol for this expose entry. When set to `UDP`, the entry routes through Envoy Gateway instead of Istio. Hostname routing fields (`host`, `domain`, `advancedHTTP`, `match`) are invalid for UDP entries. UDP traffic is not protected by Istio AuthorizationPolicy or mTLS.\",",
+    "source_type": "git_source",
+    "symbol_or_section": "Expose protocol contract"
+  }
+]

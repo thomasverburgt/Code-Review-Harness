@@ -1,0 +1,275 @@
+{
+  "artifact": {
+    "artifact_id": "c40d25c6-792f-5ef6-ad90-0b34cdf81923",
+    "artifact_type": "spec-io-shadow-candidate",
+    "created_at": "2026-08-03T23:05:00Z",
+    "lifecycle_state": "complete",
+    "links": {
+      "children": [],
+      "parents": [
+        "0c9f576a-62b4-526a-b7e7-a3ab44128c3b"
+      ],
+      "peers": []
+    }
+  },
+  "assessments": [
+    {
+      "assessment_id": "ASM-IO-001",
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "rationale": "The declaration identifies a broad intended interaction but does not demonstrate rendered policy, actual endpoints, data exchanged, authorization, or runtime use."
+    }
+  ],
+  "confidence": {
+    "assessment": 0.98,
+    "decision": null,
+    "evidence": 1.0,
+    "provenance": [
+      {
+        "source": "ADR-0039 Increment 5 deterministic projection",
+        "version": "1.0.0"
+      }
+    ],
+    "review": null
+  },
+  "conflicts": [],
+  "consumers": [
+    "human-shadow-review-only"
+  ],
+  "coverage": {
+    "eligible": 1,
+    "inaccessible": 0,
+    "negative_evidence": 0,
+    "omitted": 0,
+    "reviewed": 1,
+    "unknown": 1
+  },
+  "decision_authority": "human",
+  "decisions_requested": [
+    {
+      "decision_context_id": "DECISION-IO-001",
+      "question": "Should the requested evidence be added for continued candidate calibration?",
+      "required_authority": "project_owner"
+    }
+  ],
+  "execution": {
+    "a100_production_authorized": false,
+    "comparison_only": true,
+    "deployment_authorized": false,
+    "execution_bindings": {
+      "model_manifest": {
+        "hash": "sha256:bfdb18c4a86280ea48bef161524b761c35d778bd27532e8baec88b25f4844772",
+        "id": "GX10-QWEN3-32B-SPEC-IO-CALIBRATION",
+        "version": "0.1.0"
+      },
+      "prompt": {
+        "hash": "sha256:184592233332e2ba43934a0b1d19cfeee02185dd397c0ba3619ada79a5f1f163",
+        "id": "SPEC-IO-CANDIDATE-PROMPT",
+        "version": "design-0.1.0"
+      },
+      "role_schema": {
+        "hash": "sha256:3c3fcfdef3f4630802a0991b2a0a0c54b76496bbce9cbc23a19c8d932bc72ce7",
+        "id": "SPEC-IO-ROLE",
+        "version": "1.0.0"
+      },
+      "rubric": {
+        "hash": "sha256:3ab5b7358a996d70481abb6f38c91ba32330b3d56425bebd707872c036355f8e",
+        "id": "RUBRIC-SPEC-IO-CANDIDATE",
+        "version": "0.1.0"
+      },
+      "tool_policy": {
+        "hash": "sha256:93adcc35fecadc059786aa7314e410531517c54f8c3a1f461053d797b9662c96",
+        "id": "TOOLCHAIN-SPEC-IO-EVIDENCE",
+        "version": "0.1.0"
+      }
+    },
+    "execution_id": "37a4a5e0-9f08-57b9-9774-fd484a3af7ad",
+    "focus_binding": {
+      "compiled_prompt_focus_hash": "sha256:2beb013f7eeecf34f56814ee4aef56a8970d5b3790fb7eb8f6d55a37d4045f81",
+      "compression_protected_elements": [
+        "authoritative_questions",
+        "dimensions",
+        "evidence_priorities",
+        "prohibited_conclusions",
+        "rubric_checks",
+        "evidence locators",
+        "active limitations",
+        "human authority boundaries"
+      ],
+      "profile_hash": "sha256:6c2b57427d7b1937e28fdf2574e4c692eb46c0d304a1708234afd5e25b75a2bc",
+      "profile_id": "FOCUS-SPEC-IO",
+      "profile_version": "1.0.0",
+      "source_specification": "agents/specialists/io-resource-interaction-reviewer.md",
+      "source_specification_hash": "sha256:17fd254fd2f87f86b076f0148bc14e1d20e0aefdbd0a0dc2f48e135a1c7ad235"
+    },
+    "input_manifest_id": "0c9f576a-62b4-526a-b7e7-a3ab44128c3b",
+    "model": "deterministic-reference-agent",
+    "product_fan_in_eligible": false,
+    "prompt_version": "design-0.1.0",
+    "rubric_version": "0.1.0",
+    "scheduled": false,
+    "settings": {
+      "temperature": 0
+    },
+    "toolchain_version": "0.1.0"
+  },
+  "extensions": {
+    "specialist": {
+      "domain_assessments": [
+        {
+          "assessment_id": "ASM-IO-001"
+        }
+      ],
+      "domain_confidence": {
+        "assessment": 0.98,
+        "evidence": 1.0
+      },
+      "domain_coverage": {
+        "reviewed_fraction": 1.0
+      },
+      "domain_findings": [
+        {
+          "finding_id": "FINDING-IO-001"
+        }
+      ],
+      "domain_observations": [
+        {
+          "observation_id": "OBS-IO-001"
+        }
+      ],
+      "domain_patterns": [],
+      "domain_scope": {
+        "domain": "resource_interactions",
+        "revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+      },
+      "domain_unknowns": [
+        {
+          "confidence": 1.0,
+          "evidence_refs": [
+            "EVIDENCE-IO-EGRESS-001"
+          ],
+          "statement": "Actual endpoints, protocols, data flows, permissions, runtime use, and blast radius remain unknown.",
+          "unknown_id": "UNKNOWN-IO-001"
+        }
+      ],
+      "eligible_population": {
+        "evidence_records": 1
+      },
+      "product_consumers": [
+        "human-shadow-review-only"
+      ],
+      "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+      "role": {
+        "authority_boundary": "resource_interaction_assessment_only_no_runtime_or_product_approval",
+        "coverage": {
+          "external_sources_reviewed": 0,
+          "records_reviewed": 1,
+          "runtime_records_reviewed": 0,
+          "tests_reviewed": 0
+        },
+        "designation": "SPEC-IO",
+        "domain_records": [
+          {
+            "assessment_state": "bounded_concern",
+            "effectiveness": "configured_not_demonstrated",
+            "evidence_refs": [
+              "EVIDENCE-IO-EGRESS-001"
+            ],
+            "evidence_tier": "configuration",
+            "record_id": "RECORD-IO-001",
+            "subject": "httpbin egress destination"
+          }
+        ],
+        "unknowns": [
+          {
+            "evidence_refs": [
+              "EVIDENCE-IO-EGRESS-001"
+            ],
+            "missing_evidence": [
+              "rendered policy",
+              "endpoint and data inventory",
+              "runtime interaction evidence"
+            ],
+            "statement": "Actual endpoints, protocols, data flows, permissions, runtime use, and blast radius remain unknown.",
+            "unknown_id": "UNKNOWN-IO-001"
+          }
+        ]
+      }
+    }
+  },
+  "findings": [
+    {
+      "capa": {
+        "corrective_action": "Retain rendered resource policy and observed, identity-bound interaction evidence for each endpoint and data class.",
+        "implementation_level": "product",
+        "owner_role": "project-maintainer",
+        "preventive_action": "Inventory external interactions and continuously reconcile declared destinations, permissions, data, and observed use.",
+        "target_horizon": "before candidate completion",
+        "validation_method": "Repeat the bounded review with immutable artifact and execution evidence."
+      },
+      "confidence": 0.98,
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "finding_id": "FINDING-IO-001",
+      "impact": "The bounded specialist question cannot be fully answered from source definitions alone.",
+      "root_cause": "missing_execution_or_artifact_evidence",
+      "severity": "low",
+      "statement": "The declaration identifies a broad intended interaction but does not demonstrate rendered policy, actual endpoints, data exchanged, authorization, or runtime use."
+    }
+  ],
+  "identity": {
+    "agent_uuid": "5801b47f-df7c-47f3-9609-1ecc1fd54c15",
+    "agent_version": "design-0.1.0",
+    "contract_version": "1.0.0",
+    "designation": "SPEC-IO",
+    "display_name": "I/O and Resource Interaction Reviewer"
+  },
+  "inputs": [
+    {
+      "evidence_id": "EVIDENCE-IO-EGRESS-001",
+      "freshness": "immutable revision",
+      "hash": "sha256:813beed77a5a843c83869037cc21c957c22b074db3a6a380816438d86e91813a",
+      "reference": "https://github.com/defenseunicorns/uds-core.git@329ade01852f9e570d31cb7b19d9979152938c17:src/test/app-admin-package.yaml"
+    }
+  ],
+  "insights": [],
+  "integrity": {
+    "attestation_ref": null,
+    "input_hash": "sha256:8bac9db38007f3f553d0804e1df84959290107bd5f8dbd3f34498ca5327515f0",
+    "output_hash": "sha256:3b5dc1df7e4a453b730999c7b246fa37deb9bf456eaca3d07f281b8247d36800",
+    "retention_class": "specialist-human-shadow-calibration",
+    "schema_validation": "passed"
+  },
+  "methodology": {
+    "focus_profile_id": "FOCUS-SPEC-IO",
+    "limitations": [
+      "Actual endpoints, protocols, data flows, permissions, runtime use, and blast radius remain unknown.",
+      "No external network, registry, pipeline execution, cloud, or runtime evidence was admitted.",
+      "Human review is deferred and all output remains non-authoritative."
+    ],
+    "method": "bounded deterministic resource_interactions projection"
+  },
+  "observations": [
+    {
+      "confidence": 1.0,
+      "evidence_refs": [
+        "EVIDENCE-IO-EGRESS-001"
+      ],
+      "fact": "The admitted package configuration declares an Anywhere-generated egress destination for the selected workload.",
+      "observation_id": "OBS-IO-001"
+    }
+  ],
+  "patterns": [],
+  "scope": {
+    "decision_context": "specialist_human_shadow_calibration",
+    "excluded": [],
+    "included": [
+      "src/test/app-admin-package.yaml"
+    ],
+    "product_id": "UDS-CORE-SPECIALIST-CALIBRATION-001",
+    "source_revision": "329ade01852f9e570d31cb7b19d9979152938c17"
+  }
+}
